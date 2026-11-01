@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#131c1e"><title>京都的一次慢旅行 · 万象人生云端漫游</title>
-<meta name="application-version" content="P0.7">
+<meta name="application-version" content="P0.7.1">
 <meta name="description" content="顺着真实照片，走进京都鸭川与先斗町。有人发现了自己喜欢的一处风景，也邀请你来看看。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="京都的一次慢旅行｜来看一眼真实的京都">
@@ -1336,7 +1336,7 @@ module.exports = QRCode;
 };
 return require('index');})();
 const KEY='wanxiang_kyoto_cloud_P01_private';
-let state={at:'welcome',mood:'放空',nickname:'',visited:[],insights:[],stamps:[],memories:[],history:[],detail:false,friendJourney:null};
+let state={at:'welcome',mood:'放空',nickname:'',visited:[],insights:[],stamps:[],memories:[],history:[],detail:false,friendJourney:null,tourOrder:[],routeTheme:null};
 try{let s=localStorage.getItem(KEY);if(s){const v=JSON.parse(s);if(v&&typeof v.at==='string'&&(SCENES[v.at]||['welcome','end'].includes(v.at)))state=Object.assign(state,v);}}catch(e){}
 
 // An unsigned shared journey carries only an optional nickname and a few scene identifiers. This is an invitation to enjoy real scenery, not a ranking or proof of travel.
@@ -1355,6 +1355,7 @@ function shareUrl(){try{const u=new URL(SHARE_URL);if(state.at==='end')u.searchP
 function recVisited(rec){return sceneKeys(rec.p)||[]}
 function recInsights(rec){return sceneKeys(rec.i)||[]}
 const AWARDS=[
+{id:'complete20',title:'京都二十景漫游纪念',test:(v,i)=>v.length===SCENE_IDS.length},
 {id:'river',title:'鸭川双景',test:(v,i)=>v.includes('riverSpring')&&v.includes('riverSummer')},
 {id:'culture',title:'京都风物',test:(v,i)=>v.includes('minamiza')&&v.includes('yuka')},
 {id:'alley',title:'街巷寻光',test:(v,i)=>v.includes('oldStreet')&&v.includes('streetLights')},
@@ -1364,7 +1365,7 @@ const AWARDS=[
 {id:'full',title:'十五景深游者',test:(v,i)=>v.length>=15}
 ];
 function awards(rec){const v=recVisited(rec),i=recInsights(rec);return AWARDS.filter(a=>a.test(v,i))}
-function recordTitle(rec){let v=recVisited(rec),i=recInsights(rec);if(v.length>=15)return '京都深度漫游者';if(i.length>=3&&v.length>=7)return '京都细节发现家';if(v.includes('oldStreet')&&v.includes('streetLights')&&v.length>=7)return '京都夜巷探索家';if(v.includes('minamiza')&&v.includes('yuka'))return '京都文化漫游者';if(v.length>=5)return '鸭川慢行者';return '京都初访者'}
+function recordTitle(rec){let v=recVisited(rec),i=recInsights(rec);if(v.length===SCENE_IDS.length)return '京都二十景漫游者';if(v.length>=15)return '京都深度漫游者';if(i.length>=3&&v.length>=7)return '京都细节发现家';if(v.includes('oldStreet')&&v.includes('streetLights')&&v.length>=7)return '京都夜巷探索家';if(v.includes('minamiza')&&v.includes('yuka'))return '京都文化漫游者';if(v.length>=5)return '鸭川慢行者';return '京都初访者'}
 function pathSummary(rec,limit=6){const v=recVisited(rec);return v.map(k=>MEDIA[k]?.name||'京都').slice(0,limit).join(' · ') + (v.length>limit?' · …':'')}
 function featuredScene(rec){
   const visited=recVisited(rec);
@@ -1401,7 +1402,7 @@ function updateNickname(value){state.nickname=nameSafe(value);save()}
 function acceptJourney(){
  if(!pendingJourney)return;
  const friend=pendingJourney;pendingJourney=null;clearJourneyQuery();
- state.friendJourney=friend;state.at='welcome';state.visited=[];state.insights=[];state.stamps=[];state.history=[];state.memories=[];state.detail=false;
+ state.friendJourney=friend;state.at='welcome';state.visited=[];state.insights=[];state.stamps=[];state.history=[];state.memories=[];state.detail=false;state.tourOrder=[];state.routeTheme=null;
  save();render();
 }
 function declineJourney(){pendingJourney=null;clearJourneyQuery();state.friendJourney=null;save();render()}
@@ -1472,24 +1473,85 @@ function showInfo(){const id=currentPlaceId(),a=MEDIA[id]||MEDIA.riverSpring;mar
 function topBar(inScene=false){return `<div class="topbar"><div class="brand">万象人生 · 京都</div><div class="topActions"><button class="round secondaryAction" onclick="zoom()">看全图</button><button class="round quietInfo" onclick="showInfo()">ⓘ 了解这里</button><button class="round quietToggle" onclick="toggleQuiet()">只看风景</button></div></div>`}
 function toggleQuiet(){const f=document.querySelector('.immersive');if(!f)return;const q=f.classList.toggle('quiet');const btn=f.querySelector('.quietToggle');if(btn){btn.textContent=q?'显示路线':'只看风景';btn.setAttribute('aria-pressed',String(q))}}
 function render(){if(pendingJourney){renderJourneyInvite();return}if(state.at==='welcome'){renderWelcome();return}if(state.at==='end'){renderEnd();return}renderScene()}
-function renderWelcome(){const a=MEDIA.riverSpring;app.innerHTML=`<main class="frame hero immersive">${photoBox(a)}${topBar()}<section class="content"><div class="eyebrow">京都 · 鸭川与先斗町 / 旅行分享版</div><h1 class="h1 introtitle">京都的<br>一次慢旅行</h1><p class="lead">沿鸭川散步，走进先斗町。按自己的节奏看一看京都。</p>${validRecord(state.friendJourney)?`<p class="friendNote">${esc(normalNickname(state.friendJourney.n))}把自己喜欢的京都风景分享给了你。现在，按自己的节奏看一看。</p>`:''}<div class="welcomeName"><label for="nickname">你的旅行昵称（可选）</label><input id="nickname" type="text" autocomplete="off" maxlength="12" placeholder="例如：山茶旅人" value="${esc(state.nickname||'')}" oninput="updateNickname(this.value)"><small>只用于你的旅行明信片，是否分享由你决定</small></div><div class="muted">今天想怎样旅行？</div><div class="moodgrid">${['放空','好奇','记录'].map(x=>`<button class="mood ${state.mood===x?'active':''}" aria-pressed="${state.mood===x}" onclick="setMood('${x}')">${x}</button>`).join('')}</div><button class="btn gold" onclick="begin()">进入京都 <span class="arr">→</span></button></section></main>`}
+function renderWelcome(){const a=MEDIA.riverSpring;app.innerHTML=`<main class="frame hero immersive">${photoBox(a)}${topBar()}<section class="content"><div class="eyebrow">京都 · 鸭川与先斗町 / 旅行分享版</div><h1 class="h1 introtitle">京都的<br>一次慢旅行</h1><p class="lead">两条完整路线，都会看遍京都20处真实风景。你可以先看鸭川，也可以先逛街巷。</p>${validRecord(state.friendJourney)?`<p class="friendNote">${esc(normalNickname(state.friendJourney.n))}把自己喜欢的京都风景分享给了你。现在，按自己的节奏看一看。</p>`:''}<div class="welcomeName"><label for="nickname">你的旅行昵称（可选）</label><input id="nickname" type="text" autocomplete="off" maxlength="12" placeholder="例如：山茶旅人" value="${esc(state.nickname||'')}" oninput="updateNickname(this.value)"><small>只用于你的旅行明信片，是否分享由你决定</small></div><div class="muted">选个心情，下一屏再选从河岸还是街巷出发：</div><div class="moodgrid">${['放空','好奇','记录'].map(x=>`<button class="mood ${state.mood===x?'active':''}" aria-pressed="${state.mood===x}" onclick="setMood('${x}')">${x}</button>`).join('')}</div><button class="btn gold" onclick="begin()">进入京都 <span class="arr">→</span></button></section></main>`}
 function setMood(m){state.mood=m;save();render()}
-function begin(){state.at='station';state.visited=[];state.insights=[];state.stamps=[];state.memories=[];state.history=[];state.detail=false;save();render()}
-function renderScene(){const k=state.at,s=SCENES[k],a=MEDIA[k];if(!s||!a){state.at='welcome';render();return}if(!state.visited.includes(k))state.visited.push(k);save();const old=state.visited.length;app.innerHTML=`<main class="frame immersive">${photoBox(a)}${topBar(true)}<div class="progress"><b style="width:${Math.min(100,Math.round(old/SCENE_IDS.length*100))}%"></b></div><section class="content"><div class="scene-index"><div class="eyebrow">${esc(s.title.split(' · ')[0])} · 京都漫游</div><div class="muted">${old}/${SCENE_IDS.length} 已探索</div></div><h1 class="h1">${esc(a.name)}</h1><p class="lead">${esc(SHORT[k]||s.location)}</p><div class="choices">${s.options.map((o,j)=>`<button class="btn" onpointerenter="preloadNext('${o[1]}')" onfocus="preloadNext('${o[1]}')" ontouchstart="preloadNext('${o[1]}')" onclick="choose(${j})"><span>${esc(o[0])}</span><span class="arr">→</span></button>`).join('')}</div><div class="bottomnav"><button class="smallbtn" onclick="back()">← 上一站</button><button class="smallbtn" onclick="gallery()">全部影像</button></div></section></main>`}
+/* P0.7.1: two themed complete itineraries; the order changes but the full set of 20 photographs never gets skipped. */
+const FULL_TOURS={
+ river:["station","riverSpring","shijoPortrait","riversideEvening","riverSummer","yuka","sanjoEast","sanjoBridge","minamiza","pontochoSouth","alleyPortrait","oldStreet","alleyRed","lantern","restaurantFront","kaiseki","pontochoNorth","streetLights","streetBw","riverNight"],
+ alley:["station","minamiza","pontochoSouth","alleyPortrait","oldStreet","alleyRed","lantern","restaurantFront","kaiseki","pontochoNorth","streetLights","streetBw","sanjoBridge","sanjoEast","yuka","riverSummer","riversideEvening","shijoPortrait","riverSpring","riverNight"]
+};
+const TOUR_LABELS={river:'先看鸭川 · 全景20站',alley:'先逛街巷 · 全景20站'};
+function validTourOrder(order){return Array.isArray(order)&&order.length===SCENE_IDS.length&&order[0]==='station'&&new Set(order).size===SCENE_IDS.length&&order.every(id=>!!SCENES[id])}
+function ensureTourOrder(){
+ if(validTourOrder(state.tourOrder))return state.tourOrder;
+ // On the route-choice screen do not choose a route for the player.
+ if(state.at==='station'&&(!state.visited||state.visited.length<=1))return null;
+ if(!SCENES[state.at])return null;
+ // Migration for unfinished P0.7 journeys: keep visited spots, append only unseen spots.
+ const visited=[...new Set((Array.isArray(state.visited)?state.visited:[]).filter(id=>!!SCENES[id]))];
+ if(!visited.includes('station'))visited.unshift('station');
+ if(visited[visited.length-1]!==state.at){const at=visited.indexOf(state.at);if(at>=0)visited.splice(at,1);visited.push(state.at)}
+ const oldStreet=visited.indexOf('oldStreet'),oldRiver=visited.indexOf('riverSpring');
+ const mode=(oldStreet>=0&&(oldRiver<0||oldStreet<oldRiver))?'alley':'river';
+ state.tourOrder=[...visited,...FULL_TOURS[mode].filter(id=>!visited.includes(id))];
+ state.routeTheme=mode;
+ save();
+ return state.tourOrder;
+}
+function nextTourStop(){const order=ensureTourOrder();if(!order)return null;const at=order.indexOf(state.at);return at>=0&&at<order.length-1?order[at+1]:'end'}
+function begin(){state.at='station';state.visited=[];state.insights=[];state.stamps=[];state.memories=[];state.history=[];state.detail=false;state.tourOrder=[];state.routeTheme=null;save();render()}
+function renderScene(){
+ const k=state.at,s=SCENES[k],a=MEDIA[k];
+ if(!s||!a){state.at='welcome';render();return}
+ if(!state.visited.includes(k))state.visited.push(k);
+ const order=ensureTourOrder(),at=order?order.indexOf(k):0,old=state.visited.length,next=order&&at>=0?(at+1<order.length?order[at+1]:'end'):null;
+ save();
+ const routeChoice=!order&&k==='station';
+ const controls=routeChoice?
+ `<button class="btn gold" onclick="choose(0)" onpointerenter="preloadNext('riverSpring')" onfocus="preloadNext('riverSpring')"><span>先沿鸭川看风景 · 完整20站</span><span class="arr">→</span></button><button class="btn" onclick="choose(1)" onpointerenter="preloadNext('minamiza')" onfocus="preloadNext('minamiza')"><span>先走进先斗町 · 完整20站</span><span class="arr">→</span></button>` :
+ `<button class="btn gold" onclick="choose(0)" ${next&&next!=='end'?`onpointerenter="preloadNext('${next}')" onfocus="preloadNext('${next}')" ontouchstart="preloadNext('${next}')"`:''}><span>${next==='end'?'已看遍20景 · 领取旅行明信片':'继续下一站 · '+esc(MEDIA[next]?.name||'京都')}</span><span class="arr">→</span></button><button class="btn secondary" onclick="showInfo()"><span>停一停，了解这一站</span><span class="arr">ⓘ</span></button>`;
+ const label=routeChoice?'两条路线均包含全部20处实景':(state.routeTheme==='alley'?'街巷优先 · 20景完整漫游':'鸭川优先 · 20景完整漫游');
+ app.innerHTML=`<main class="frame immersive">${photoBox(a)}${topBar(true)}<div class="progress"><b style="width:${Math.min(100,Math.round(old/SCENE_IDS.length*100))}%"></b></div><section class="content"><div class="scene-index"><div class="eyebrow">${String(at+1).padStart(2,'0')} / ${SCENE_IDS.length} · ${esc(label)}</div><div class="muted">${old}/${SCENE_IDS.length} 已探索</div></div><h1 class="h1">${esc(a.name)}</h1><p class="lead">${esc(SHORT[k]||s.location)}</p><div class="choices">${controls}</div><div class="bottomnav"><button class="smallbtn" onclick="back()">← 上一站</button><button class="smallbtn" onclick="gallery()">全部影像</button></div></section></main>`;
+}
 function toggleDetail(){state.detail=!state.detail;save();render()}
-function choose(n){let s=SCENES[state.at],o=s.options[n];if(!o)return;state.history.push(JSON.stringify({at:state.at,visited:[...state.visited],insights:[...(state.insights||[])],stamps:[...state.stamps],memories:[...state.memories],detail:state.detail}));if(state.history.length>20)state.history.shift();if(!state.stamps.includes(s.stamp))state.stamps.push(s.stamp);if(!state.stamps.includes(o[2]))state.stamps.push(o[2]);state.memories.push(`${s.subtitle}：${o[0]}`);if(state.memories.length>13)state.memories.shift();state.at=o[1];state.detail=false;save();render();window.scrollTo(0,0)}
-function back(){let prev=state.history.pop();if(!prev){state.at='welcome';state.detail=false}else{let s=JSON.parse(prev);state.at=s.at;state.visited=s.visited;state.insights=s.insights||[];state.stamps=s.stamps;state.memories=s.memories;state.detail=s.detail;}save();render()}
+function choose(n){
+ if(!SCENES[state.at])return;
+ const isRouteChoice=state.at==='station'&&!validTourOrder(state.tourOrder);
+ if(isRouteChoice&&n!==0&&n!==1)return;
+ if(!isRouteChoice&&n!==0)return;
+ const order=isRouteChoice?FULL_TOURS[n===0?'river':'alley']:ensureTourOrder();
+ if(!validTourOrder(order))return;
+ const here=order.indexOf(state.at),next=here>=0&&here<order.length-1?order[here+1]:'end';
+ if(here<0)return;
+ // Do not allow a completed journey unless all 20 unique scenes were seen.
+ if(next==='end'&&new Set(state.visited).size!==SCENE_IDS.length)return;
+ state.history.push(JSON.stringify({at:state.at,visited:[...state.visited],insights:[...(state.insights||[])],stamps:[...state.stamps],memories:[...state.memories],detail:state.detail,tourOrder:[...(state.tourOrder||[])],routeTheme:state.routeTheme||null}));
+ if(state.history.length>SCENE_IDS.length)state.history.shift();
+ if(isRouteChoice){state.tourOrder=[...order];state.routeTheme=n===0?'river':'alley';}
+ const scene=SCENES[state.at];
+ if(!state.stamps.includes(scene.stamp))state.stamps.push(scene.stamp);
+ if(next!=='end'&&SCENES[next]?.stamp&&!state.stamps.includes(SCENES[next].stamp))state.stamps.push(SCENES[next].stamp);
+ state.memories.push(`${scene.subtitle}：${next==='end'?'完成全部20处实景':`继续看${MEDIA[next]?.name||'京都'}`}`);
+ if(state.memories.length>13)state.memories.shift();
+ state.at=next;state.detail=false;save();render();window.scrollTo(0,0);
+}
+function back(){
+ const prev=state.history.pop();
+ if(!prev){state.at='welcome';state.detail=false;state.tourOrder=[];state.routeTheme=null}
+ else {const s=JSON.parse(prev);state.at=s.at;state.visited=s.visited;state.insights=s.insights||[];state.stamps=s.stamps;state.memories=s.memories;state.detail=s.detail;state.tourOrder=validTourOrder(s.tourOrder)?s.tourOrder:[];state.routeTheme=s.routeTheme||null;}
+ save();render();
+}
 function renderEnd(){
  const rec=recordNow(),n=recVisited(rec).length,info=recInsights(rec).length,earned=awards(rec);
  const key=featuredScene(rec),name=MEDIA[key]?.name||'鸭川',line=postcardLine(rec),title=recordTitle(rec);
  const friend=validRecord(state.friendJourney);
- app.innerHTML=`<main class="frame immersive">${photoBox(MEDIA.riverNight)}${topBar()}<section class="content"><div class="eyebrow">京都 · 我的云旅行纪念</div><div class="journal"><div class="rewardBadge">✦ ${esc(title)}</div><h2>${esc(rec.n)}，<br>你收藏了一段京都时光。</h2><p class="lead" style="margin-bottom:7px">真实的风景，不必匆忙看完。</p><div class="memorySpot"><strong>你可以分享的这一站：${esc(name)}</strong><span>${esc(line)}</span></div><p class="muted">这次你看过${n}处实景，深入了解${info}个地点。<br>走过的地方：${esc(pathSummary(rec,5))}</p><div class="achievementGrid">${earned.length?earned.slice(0,3).map(a=>`<span class="achievement">✦ ${esc(a.title)}</span>`).join(''):'<span class="muted">下一次可以换条路线，再发现不同的风景。</span>'}</div>${friend?`<p class="friendNote">从${esc(normalNickname(friend.n))}分享的一张风景开始，你也走出了一段属于自己的旅程。</p>`:''}<div class="rewardFoot">实景互动云旅行，非真实到访证明；照片来自不同时期。</div></div><div class="choices"><button class="btn gold" onclick="openPoster()">制作我的京都旅行明信片 <span class="arr">▧</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="shareLink()">分享给朋友看看 <span class="arr">↗</span></button><button class="btn secondary" onclick="copyLink()">复制旅行邀请链接 <span class="arr">⧉</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="review()">回看照片 <span class="arr">→</span></button><button class="btn secondary" onclick="restart()">再走一条路线 <span class="arr">↻</span></button></div></section></main>`
+ app.innerHTML=`<main class="frame immersive">${photoBox(MEDIA.riverNight)}${topBar()}<section class="content"><div class="eyebrow">京都 · 我的云旅行纪念</div><div class="journal"><div class="rewardBadge">✦ ${esc(title)}</div><h2>${esc(rec.n)}，<br>你收藏了一段京都时光。</h2><p class="lead" style="margin-bottom:7px">真实的风景，不必匆忙看完。</p><div class="memorySpot"><strong>你可以分享的这一站：${esc(name)}</strong><span>${esc(line)}</span></div><p class="muted">${n===SCENE_IDS.length?'完整收藏了京都20处实景。':'这次你看过'+n+'处实景。'}深入了解${info}个地点。<br>走过的地方：${esc(pathSummary(rec,5))}</p><div class="achievementGrid">${earned.length?earned.slice(0,3).map(a=>`<span class="achievement">✦ ${esc(a.title)}</span>`).join(''):'<span class="muted">下一次可以换条路线，再发现不同的风景。</span>'}</div>${friend?`<p class="friendNote">从${esc(normalNickname(friend.n))}分享的一张风景开始，你也走出了一段属于自己的旅程。</p>`:''}<div class="rewardFoot">实景互动云旅行，非真实到访证明；照片来自不同时期。</div></div><div class="choices"><button class="btn gold" onclick="openPoster()">制作我的京都旅行明信片 <span class="arr">▧</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="shareLink()">分享给朋友看看 <span class="arr">↗</span></button><button class="btn secondary" onclick="copyLink()">复制旅行邀请链接 <span class="arr">⧉</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="review()">回看照片 <span class="arr">→</span></button><button class="btn secondary" onclick="restart()">再走一条路线 <span class="arr">↻</span></button></div></section></main>`
 }
 
 function review(){gallery(true)}
 function gallery(visitedOnly=false){const keys=visitedOnly?state.visited:Object.keys(MEDIA);const items=keys.map(k=>MEDIA[k]).filter(Boolean);app.innerHTML=`<main class="frame library"><div class="libraryhead"><div class="eyebrow">京都 · 旅行相册</div><button class="round" onclick="render()">返回旅程</button></div><h2>${visitedOnly?'走过的地方':'全部实景'}</h2><div class="librarygrid">${items.map(a=>`<div class="libraryitem"><img src="${a.src}" alt="${esc(a.name)}" loading="lazy" referrerpolicy="no-referrer"><div>${esc(a.name)}</div></div>`).join('')}</div><button class="smallbtn" onclick="help()" style="margin-top:22px">关于这趟旅行</button></main>`}
 function help(){const entries=Object.values(MEDIA).map(a=>`<div>${esc(a.name)} · ${esc(a.author)} · ${esc(a.license)} · <a href="${a.page}" target="_blank" rel="noopener">来源与许可</a></div>`).join('');const z=document.createElement('div');z.className='overlay';z.innerHTML=`<button class="overlayClose">✕ 关闭</button><div class="credits"><h2 style="margin-top:0">关于这趟旅行</h2><p>这是一份京都实景互动内测作品，画面摄于不同时间，并非同一天的连续录像。</p><p>打开地点、选择方向，就能按自己的节奏浏览。</p><details><summary>照片署名与许可信息</summary>${entries}</details></div>`;z.querySelector('button').onclick=()=>z.remove();document.body.appendChild(z)}
-function restart(){if(confirm('确定要重新开始吗？这会清空当前路线与收集印记。')){state={at:'welcome',mood:state.mood,nickname:state.nickname||'',visited:[],insights:[],stamps:[],memories:[],history:[],detail:false,friendJourney:null};save();render()}}
+function restart(){if(confirm('确定要重新开始吗？这会清空当前路线与收集印记。')){state={at:'welcome',mood:state.mood,nickname:state.nickname||'',visited:[],insights:[],stamps:[],memories:[],history:[],detail:false,friendJourney:null,tourOrder:[],routeTheme:null};save();render()}}
 function downloadCard(){openPoster()}
 function travelTitle(){return recordTitle(recordNow())}
 function shortPath(){let names=state.visited.map(k=>MEDIA[k]?.name).filter(Boolean);return names.length?names.slice(0,5):['祇园四条站','鸭川']}
