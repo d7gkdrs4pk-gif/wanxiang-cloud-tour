@@ -1,16 +1,16 @@
 # 万象人生 · 云端漫游｜京都 P0.5.1
 
-此仓库预定用于单独部署京都实景互动试验版，与 `roompath-game` 的《夜楼档案》完全分离。
+此仓库已独立保存京都实景互动试验版 P0.5.1，与 `roompath-game` 的《夜楼档案》完全分离。
 
 ## 网站
 
-目标地址（**未部署，不代表现已可访问**）：`https://d7gkdrs4pk-gif.github.io/wanxiang-cloud-tour/`
+目标地址（**Pages 尚未启用，暂不能认定可以访问**）：`https://d7gkdrs4pk-gif.github.io/wanxiang-cloud-tour/`
 
 项目首页为 `index.html`，分享二维码与好友邀请使用该地址。程序为无框架、无后台的单页静态 HTML，依赖 Wikimedia 公共照片的远程缩略图服务；手机联网才能加载景色。暂不收费。
 
 ## 推荐部署
 
-创建**独立 Public 仓库** `d7gkdrs4pk-gif/wanxiang-cloud-tour`，把本目录的文件放入 `main` 根目录；仓库 Settings → Pages → Build and deployment → Source 选择 `Deploy from a branch`，Branch 选择 `main`、Folder 选择 `/(root)`，保存。
+仓库及四个文件已迁入 `main` 根目录。现在仅需在 [GitHub Pages 设置](https://github.com/d7gkdrs4pk-gif/wanxiang-cloud-tour/settings/pages) 中选择 `Deploy from a branch`，Branch 选择 `main`，Folder 选择 `/(root)` 并保存。随后核验 Pages Actions 部署是否成功及实际 HTTPS 页面。
 
 不要复制原 `roompath-game` 的 GitHub Actions 部署工作流到本仓库。避免两个项目共用 Pages 版本与发布状态。
 
