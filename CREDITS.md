@@ -18,3 +18,21 @@
 | 鸭川与先斗町夜景 | 2017-04-09 | Yiannis Theologos Michellis | https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105043_(34159633185).jpg | CC0 1.0 |
 
 **说明**：上述许可信息来自原P0.5.1内置素材数据，尚未逐张完成正式商用审批；未取得原始摄影文件，本版图片通过互联网远程加载。
+
+## P0.7 增量：8张实景照片
+
+本阶段仅扩充同一城市的真实实拍素材。不同拍摄年份为独立的时光切片，不应被误认为同日连续行程。图片通过 Wikimedia Commons 远程缩略图加载，正式出售前逐张核实商用授权、第三方权利及具体展示方式。
+
+| 景点节点 | 实拍日期 | 摄影者 | 原图尺寸 | 文件来源 | 来源页标注许可 |
+|---|---|---|---|---|---|
+| 四条大桥·向下游眺望（shijoPortrait） | 2024-08-20 | Jakub Hałun | 4765×3160 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg) | CC BY 4.0 |
+| 四条大桥·向上游回望（riversideEvening） | 2024-08-20 | Jakub Hałun | 4761×3157 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg) | CC BY 4.0 |
+| 三条大桥东侧·街与河（sanjoEast） | 2014-03-21 | Guilhem Vellut | 3968×2976 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Kamo_River_%40_Kyoto.jpg) | CC BY 2.0 |
+| 三条大桥·桥头实景（sanjoBridge） | 2014-03-17 | そらみみ | 3230×2422 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Sanjo-Ohashi_Bridge_from_east.JPG) | CC BY-SA 3.0 |
+| 先斗町·纵深小巷（alleyPortrait） | 2022-07-29 | Sergiy Galyonkin | 6271×9234 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg) | CC BY-SA 2.0 |
+| 先斗町南段·夜巷（pontochoSouth） | 2007-09-29 | matsuyuki | 2448×3264 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Pontocho_by_matsuyuki_in_Kyoto.jpg) | CC BY-SA 2.0 |
+| 先斗町北段·店前街景（pontochoNorth） | 2005-11-28 | titanium22 | 2000×3008 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Pontocho_by_titanium22_in_Kyoto.jpg) | CC BY-SA 2.0 |
+| 先斗町·餐厅门面（restaurantFront） | 2006-11-27 | James Disley | 1823×2277 | [原始照片文件页](https://commons.wikimedia.org/wiki/File:Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg) | CC BY-SA 2.0 |
+
+**地理核对备注：** `shijoPortrait`、`riversideEvening` 对应四条大桥附近双向摄影；`sanjoEast`、`sanjoBridge` 对应三条大桥区域；`alleyPortrait` 原图Exif的GPS异常，因此只按先斗町街区标注，不指认其精确门牌或方向。
+**体验边界：** 新增场景无AI生成的虚假背景；既有12张照片的来源记录保持不变；所列许可只是素材页面标注，不是已完成正式商用合规审核。
