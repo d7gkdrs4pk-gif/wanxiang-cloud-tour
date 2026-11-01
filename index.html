@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#131c1e"><title>京都的一次慢旅行 · 万象人生云端漫游</title>
-<meta name="application-version" content="P0.7.3">
+<meta name="application-version" content="P0.8-test">
 <meta name="description" content="顺着真实照片，走进京都鸭川与先斗町。有人发现了自己喜欢的一处风景，也邀请你来看看。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="京都的一次慢旅行｜来看一眼真实的京都">
@@ -88,6 +88,16 @@
 .musicPill[data-playing="true"]{border-color:rgba(236,207,149,.7);color:#ffe5ac}
 .musicPill:focus-visible{outline:2px solid #ffe0ab;outline-offset:2px}
 @media(max-width:350px){.musicPill{right:13px;top:calc(env(safe-area-inset-top,0px) + 64px)}}
+
+.trialPanel{margin:16px 0 0;padding:17px 15px;border:1px solid rgba(241,222,176,.42);border-radius:16px;background:rgba(10,29,29,.88)}
+.trialPanel h3{font-size:16px;color:#f5e2bf;margin:0 0 9px}
+.trialPanel p{font-size:12px;color:#dce7e3;line-height:1.7;margin:6px 0}
+.trialPanel strong{font-size:18px;color:#fdf8eb}
+.trialChoices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:10px 0}
+.trialChoices button{border:1px solid rgba(255,255,255,.45);color:white;background:rgba(13,33,34,.72);border-radius:10px;font-size:12px;min-height:41px;padding:7px 3px}
+.trialChoices button[aria-pressed=true]{background:#d9b778;border-color:#e9d5ac;color:#17201e;font-weight:700}
+.trialCopy{width:100%;min-height:46px;border-radius:12px;border:1px solid rgba(243,217,169,.8);background:transparent;color:#ffecd1;font-size:13px;margin-top:6px}
+.trialFoot{font-size:10px;opacity:.8;margin-top:10px}
 </style></head><body><div id="app"></div>
 <script>const MEDIA={"station": {"id": "station", "name": "祇园四条站入口", "date": "2026-06-18", "author": "HAGAT hOMSZE", "file": "JP 日本 Japan 京都 Kyoto 四條 Shijo 京阪電車 Keihan Railway 祇園四條駅 Gion-shijo Station June 2026 N13P 01.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%A2%9D_Shijo_%E4%BA%AC%E9%98%AA%E9%9B%BB%E8%BB%8A_Keihan_Railway_%E7%A5%87%E5%9C%92%E5%9B%9B%E6%A2%9D%E9%A7%85_Gion-shijo_Station_June_2026_N13P_01.jpg/1280px-JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%A2%9D_Shijo_%E4%BA%AC%E9%98%AA%E9%9B%BB%E8%BB%8A_Keihan_Railway_%E7%A5%87%E5%9C%92%E5%9B%9B%E6%A2%9D%E9%A7%85_Gion-shijo_Station_June_2026_N13P_01.jpg", "page": "https://commons.wikimedia.org/wiki/File:JP_日本_Japan_京都_Kyoto_四條_Shijo_京阪電車_Keihan_Railway_祇園四條駅_Gion-shijo_Station_June_2026_N13P_01.jpg", "license": "见来源页"}, "minamiza": {"id": "minamiza", "name": "南座剧场", "date": "2007-06-21", "author": "MichaelMaggs", "file": "Minamiza theatre, Kyoto, evening.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Minamiza_theatre%2C_Kyoto%2C_evening.jpg/960px-Minamiza_theatre%2C_Kyoto%2C_evening.jpg", "page": "https://commons.wikimedia.org/wiki/File:Minamiza_theatre,_Kyoto,_evening.jpg", "license": "CC BY-SA 2.5"}, "riverSpring": {"id": "riverSpring", "name": "四条大桥向上游眺望", "date": "2017-04-14", "author": "Saigen Jiro", "file": "Kamo River from Shijo Bridge.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Kamo_River_from_Shijo_Bridge.jpg/1280px-Kamo_River_from_Shijo_Bridge.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge.jpg", "license": "CC0 1.0"}, "riverSummer": {"id": "riverSummer", "name": "四条大桥夏日河岸", "date": "2025-07-17", "author": "武田信徳", "file": "Kamo River from Shijo Bridge 20250717.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Kamo_River_from_Shijo_Bridge_20250717.jpg/1280px-Kamo_River_from_Shijo_Bridge_20250717.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge_20250717.jpg", "license": "CC BY 4.0"}, "yuka": {"id": "yuka", "name": "鸭川夏季纳凉床", "date": "2025-06-16", "author": "MaedaAkihiko", "file": "Kyoto Kamogawa Noryo-Yuka.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Kyoto_Kamogawa_Noryo-Yuka.jpg/1280px-Kyoto_Kamogawa_Noryo-Yuka.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Kamogawa_Noryo-Yuka.jpg", "license": "CC0 1.0"}, "oldStreet": {"id": "oldStreet", "name": "先斗町旧街巷", "date": "2006-06-20", "author": "Wolfiewolf", "file": "Pontocho by Wolfiewolf in Nabeyacho, Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg/1280px-Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg", "license": "见来源页"}, "alleyRed": {"id": "alleyRed", "name": "灯笼映照的先斗町", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley, Kyoto (52406856003).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Pontocho_Alley%2C_Kyoto_%2852406856003%29.jpg/1280px-Pontocho_Alley%2C_Kyoto_%2852406856003%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley,_Kyoto_(52406856003).jpg", "license": "CC BY-SA 2.0"}, "lantern": {"id": "lantern", "name": "先斗町灯笼", "date": "2006-11-27", "author": "James Disley", "file": "Pontocho paper lantern by James Disley in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg/960px-Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}, "kaiseki": {"id": "kaiseki", "name": "先斗町餐厅前的夜巷", "date": "2006-11-27", "author": "James Disley", "file": "Pontocho kaiseki restaurant by James Disley in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg/960px-Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg", "license": "见来源页"}, "streetLights": {"id": "streetLights", "name": "先斗町灯影双巷", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley at night, Kyoto (53614869876).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Pontocho_Alley_at_night%2C_Kyoto_%2853614869876%29.jpg/1280px-Pontocho_Alley_at_night%2C_Kyoto_%2853614869876%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(53614869876).jpg", "license": "CC BY-SA 2.0"}, "streetBw": {"id": "streetBw", "name": "先斗町黑白夜巷", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley at night, Kyoto (52409569493).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Pontocho_Alley_at_night%2C_Kyoto_%2852409569493%29.jpg/960px-Pontocho_Alley_at_night%2C_Kyoto_%2852409569493%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(52409569493).jpg", "license": "CC BY-SA 2.0"}, "riverNight": {"id": "riverNight", "name": "鸭川与先斗町夜景", "date": "2017-04-09", "author": "Yiannis Theologos Michellis", "file": "Nighttime view along the Kamo River in Pontocho, Kyoto, Japan 20170409105043 (34159633185).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Nighttime_view_along_the_Kamo_River_in_Pontocho%2C_Kyoto%2C_Japan_20170409105043_%2834159633185%29.jpg/1280px-Nighttime_view_along_the_Kamo_River_in_Pontocho%2C_Kyoto%2C_Japan_20170409105043_%2834159633185%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105043_(34159633185).jpg", "license": "CC0 1.0"}, "shijoPortrait": {"id": "shijoPortrait", "name": "四条大桥·向下游眺望", "date": "2024-08-20", "author": "Jakub Hałun", "file": "Kamo River in Kyoto, 20240820 1745 5189.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg/1280px-Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg", "license": "CC BY 4.0"}, "riversideEvening": {"id": "riversideEvening", "name": "四条大桥·向上游回望", "date": "2024-08-20", "author": "Jakub Hałun", "file": "Kamo River in Kyoto, 20240820 1748 5192.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg/1280px-Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg", "license": "CC BY 4.0"}, "sanjoEast": {"id": "sanjoEast", "name": "三条大桥东侧·街与河", "date": "2014-03-21", "author": "Guilhem Vellut", "file": "Kamo River @ Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Kamo_River_%40_Kyoto.jpg/1280px-Kamo_River_%40_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_%40_Kyoto.jpg", "license": "CC BY 2.0"}, "sanjoBridge": {"id": "sanjoBridge", "name": "三条大桥·桥头实景", "date": "2014-03-17", "author": "そらみみ", "file": "Sanjo-Ohashi Bridge from east.JPG", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Sanjo-Ohashi_Bridge_from_east.JPG/1280px-Sanjo-Ohashi_Bridge_from_east.JPG", "page": "https://commons.wikimedia.org/wiki/File:Sanjo-Ohashi_Bridge_from_east.JPG", "license": "CC BY-SA 3.0"}, "alleyPortrait": {"id": "alleyPortrait", "name": "先斗町·纵深小巷", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley, Kyoto (52404468049).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg/1280px-Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg", "license": "CC BY-SA 2.0"}, "pontochoSouth": {"id": "pontochoSouth", "name": "先斗町南段·夜巷", "date": "2007-09-29", "author": "matsuyuki", "file": "Pontocho by matsuyuki in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Pontocho_by_matsuyuki_in_Kyoto.jpg/1280px-Pontocho_by_matsuyuki_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_by_matsuyuki_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}, "pontochoNorth": {"id": "pontochoNorth", "name": "先斗町北段·店前街景", "date": "2005-11-28", "author": "titanium22", "file": "Pontocho by titanium22 in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Pontocho_by_titanium22_in_Kyoto.jpg/1280px-Pontocho_by_titanium22_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_by_titanium22_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}, "restaurantFront": {"id": "restaurantFront", "name": "先斗町·餐厅门面", "date": "2006-11-27", "author": "James Disley", "file": "Pontocho French restaurant by James Disley in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg/960px-Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}};
 const ORIGINAL_PIXELS={"station": [4080, 3060], "minamiza": [1492, 1822], "riverSpring": [6010, 3990], "riverSummer": [6000, 4000], "yuka": [2722, 1815], "oldStreet": [3840, 2160], "alleyRed": [9258, 6328], "lantern": [1599, 1997], "kaiseki": [1607, 2004], "streetLights": [6280, 6098], "streetBw": [6328, 8963], "riverNight": [5312, 2988], "shijoPortrait": [4765, 3160], "riversideEvening": [4761, 3157], "sanjoEast": [3968, 2976], "sanjoBridge": [3230, 2422], "alleyPortrait": [6271, 9234], "pontochoSouth": [2448, 3264], "pontochoNorth": [2000, 3008], "restaurantFront": [1823, 2277]};
@@ -1471,6 +1481,60 @@ const KEY='wanxiang_kyoto_cloud_P01_private';
 let state={at:'welcome',mood:'放空',nickname:'',visited:[],insights:[],stamps:[],memories:[],history:[],detail:false,friendJourney:null,tourOrder:[],routeTheme:null};
 try{let s=localStorage.getItem(KEY);if(s){const v=JSON.parse(s);if(v&&typeof v.at==='string'&&(SCENES[v.at]||['welcome','end'].includes(v.at)))state=Object.assign(state,v);}}catch(e){}
 
+/* P0.8 optional local test, activated only with ?trial=p08. */
+const trialMode=new URLSearchParams(location.search).get('trial')==='p08';
+let trialLastTick=performance.now(),trialLastInput=trialLastTick;
+function trialSync(){
+ if(!trialMode)return;
+ const now=performance.now(),delta=Math.max(0,Math.min(3000,now-trialLastTick));
+ if(!document.hidden&&SCENES[state.at]&&now-trialLastInput<90000){
+  const previous=Number.isFinite(state.trialElapsedMs)?state.trialElapsedMs:0;
+  state.trialElapsedMs=Math.min(14400000,Math.max(0,previous)+delta);
+ }
+ trialLastTick=now;
+}
+function trialStart(){if(!trialMode)return;state.trialElapsedMs=0;state.trialWillingness='';trialLastTick=trialLastInput=performance.now()}
+function trialDuration(){const n=Math.max(0,Math.round((Number(state.trialElapsedMs)||0)/1000));return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}
+function trialPick(v){if(!trialMode||state.at!=='end'||!['愿意','考虑一下','暂不愿意'].includes(v))return;state.trialWillingness=v;save();renderEnd()}
+function trialPanel(){
+ const vals=['愿意','考虑一下','暂不愿意'];
+ return '<section class="trialPanel" aria-label="内测体验反馈"><h3>内测反馈 · 不影响旅行明信片</h3>'+
+  '<p>前台有效浏览约 <strong>'+trialDuration()+'</strong>（分:秒），已看 '+state.visited.length+'/20 景，主动了解 '+(state.insights||[]).length+' 处。</p>'+
+  '<p>如果这段完整体验定价9.9元，你会考虑购买吗？</p><div class="trialChoices">'+
+  vals.map(v=>'<button type="button" aria-pressed="'+(state.trialWillingness===v)+'" onclick="trialPick(&quot;'+v+'&quot;)">'+v+'</button>').join('')+
+  '</div><button type="button" class="trialCopy" onclick="trialCopy()">复制本次体验反馈</button>'+
+  '<p class="trialFoot">仅存当前浏览器，不上传服务器、也不出现在分享明信片。切到后台及闲置超过90秒不计；这不是实际订单。</p></section>';
+}
+async function trialCopy(){
+ if(!trialMode||state.at!=='end')return;
+ const lines=['《京都的一次慢旅行》P0.8内测反馈',
+ '路线：'+(state.routeTheme==='alley'?'街巷优先':'鸭川优先'),
+ '实景：'+state.visited.length+'/20',
+ '主动了解：'+(state.insights||[]).length+'处',
+ '前台活跃时长（估计）：'+trialDuration(),
+ '9.9元意愿：'+(state.trialWillingness||'未选择'),
+ '最想改进的地方：'];
+ const report=lines.join('\n');
+ try{
+  if(navigator.clipboard?.writeText&&window.isSecureContext)await navigator.clipboard.writeText(report);
+  else{
+   const area=document.createElement('textarea');area.value=report;area.style.position='fixed';area.style.opacity='0';
+   document.body.appendChild(area);area.select();const okay=document.execCommand('copy');area.remove();
+   if(!okay)throw Error('blocked');
+  }
+  toast('反馈已复制，可粘贴到聊天中');
+ }catch(e){toast('复制受限，可截图保存反馈')}
+}
+if(trialMode){
+ const touch=()=>{trialSync();trialLastInput=performance.now()};
+ document.addEventListener('pointerdown',touch,{passive:true,capture:true});
+ document.addEventListener('keydown',touch,{capture:true});
+ document.addEventListener('visibilitychange',()=>{trialSync();trialLastTick=performance.now();if(!document.hidden)trialLastInput=trialLastTick});
+ window.addEventListener('pagehide',()=>{trialSync();save()});
+ setInterval(()=>{trialSync();if(SCENES[state.at])save()},3000);
+}
+
+
 // An unsigned shared journey carries only an optional nickname and a few scene identifiers. This is an invitation to enjoy real scenery, not a ranking or proof of travel.
 function nameSafe(value){return Array.from(String(value??'').replace(/[\u0000-\u001f\u007f<>]/g,'').trim()).slice(0,8).join('')}
 function normalNickname(value){return nameSafe(value)||'京都旅人'}
@@ -1631,7 +1695,7 @@ function ensureTourOrder(){
  return state.tourOrder;
 }
 function nextTourStop(){const order=ensureTourOrder();if(!order)return null;const at=order.indexOf(state.at);return at>=0&&at<order.length-1?order[at+1]:'end'}
-function begin(){bgmStart();state.at='station';state.visited=[];state.insights=[];state.stamps=[];state.memories=[];state.history=[];state.detail=false;state.tourOrder=[];state.routeTheme=null;save();render()}
+function begin(){bgmStart();trialStart();state.at='station';state.visited=[];state.insights=[];state.stamps=[];state.memories=[];state.history=[];state.detail=false;state.tourOrder=[];state.routeTheme=null;save();render()}
 function renderScene(){
  const k=state.at,s=SCENES[k],a=MEDIA[k];
  if(!s||!a){state.at='welcome';render();return}
@@ -1665,7 +1729,7 @@ function choose(n){
  if(next!=='end'&&SCENES[next]?.stamp&&!state.stamps.includes(SCENES[next].stamp))state.stamps.push(SCENES[next].stamp);
  state.memories.push(`${scene.subtitle}：${next==='end'?'完成全部20处实景':`继续看${MEDIA[next]?.name||'京都'}`}`);
  if(state.memories.length>13)state.memories.shift();
- state.at=next;state.detail=false;save();render();window.scrollTo(0,0);
+ trialSync();state.at=next;state.detail=false;save();render();window.scrollTo(0,0);
 }
 function back(){
  const prev=state.history.pop();
@@ -1677,7 +1741,7 @@ function renderEnd(){
  const rec=recordNow(),n=recVisited(rec).length,info=recInsights(rec).length,earned=awards(rec);
  const key=featuredScene(rec),name=MEDIA[key]?.name||'鸭川',line=postcardLine(rec),title=recordTitle(rec);
  const friend=validRecord(state.friendJourney);
- app.innerHTML=`<main class="frame immersive">${photoBox(MEDIA.riverNight)}${topBar()}<section class="content"><div class="eyebrow">京都 · 我的云旅行纪念</div><div class="journal"><div class="rewardBadge">✦ ${esc(title)}</div><h2>${esc(rec.n)}，<br>你收藏了一段京都时光。</h2><p class="lead" style="margin-bottom:7px">真实的风景，不必匆忙看完。</p><div class="memorySpot"><strong>你可以分享的这一站：${esc(name)}</strong><span>${esc(line)}</span></div><p class="muted">${n===SCENE_IDS.length?'完整收藏了京都20处实景。':'这次你看过'+n+'处实景。'}深入了解${info}个地点。<br>走过的地方：${esc(pathSummary(rec,5))}</p><div class="achievementGrid">${earned.length?earned.slice(0,3).map(a=>`<span class="achievement">✦ ${esc(a.title)}</span>`).join(''):'<span class="muted">下一次可以换条路线，再发现不同的风景。</span>'}</div>${friend?`<p class="friendNote">从${esc(normalNickname(friend.n))}分享的一张风景开始，你也走出了一段属于自己的旅程。</p>`:''}<div class="rewardFoot">实景互动云旅行，非真实到访证明；照片来自不同时期。</div></div><div class="choices"><button class="btn gold" onclick="openPoster()">制作我的京都旅行明信片 <span class="arr">▧</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="shareLink()">分享给朋友看看 <span class="arr">↗</span></button><button class="btn secondary" onclick="copyLink()">复制旅行邀请链接 <span class="arr">⧉</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="review()">回看照片 <span class="arr">→</span></button><button class="btn secondary" onclick="restart()">再走一条路线 <span class="arr">↻</span></button></div></section></main>`
+ app.innerHTML=`<main class="frame immersive">${photoBox(MEDIA.riverNight)}${topBar()}<section class="content"><div class="eyebrow">京都 · 我的云旅行纪念</div><div class="journal"><div class="rewardBadge">✦ ${esc(title)}</div><h2>${esc(rec.n)}，<br>你收藏了一段京都时光。</h2><p class="lead" style="margin-bottom:7px">真实的风景，不必匆忙看完。</p><div class="memorySpot"><strong>你可以分享的这一站：${esc(name)}</strong><span>${esc(line)}</span></div><p class="muted">${n===SCENE_IDS.length?'完整收藏了京都20处实景。':'这次你看过'+n+'处实景。'}深入了解${info}个地点。<br>走过的地方：${esc(pathSummary(rec,5))}</p><div class="achievementGrid">${earned.length?earned.slice(0,3).map(a=>`<span class="achievement">✦ ${esc(a.title)}</span>`).join(''):'<span class="muted">下一次可以换条路线，再发现不同的风景。</span>'}</div>${friend?`<p class="friendNote">从${esc(normalNickname(friend.n))}分享的一张风景开始，你也走出了一段属于自己的旅程。</p>`:''}<div class="rewardFoot">实景互动云旅行，非真实到访证明；照片来自不同时期。</div></div><div class="choices"><button class="btn gold" onclick="openPoster()">制作我的京都旅行明信片 <span class="arr">▧</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="shareLink()">分享给朋友看看 <span class="arr">↗</span></button><button class="btn secondary" onclick="copyLink()">复制旅行邀请链接 <span class="arr">⧉</span></button></div><div class="sharePanel"><button class="btn secondary" onclick="review()">回看照片 <span class="arr">→</span></button><button class="btn secondary" onclick="restart()">再走一条路线 <span class="arr">↻</span></button></div>${trialMode?trialPanel():''}</section></main>`
 }
 
 function review(){gallery(true)}
