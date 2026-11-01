@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#131c1e"><title>京都的一次慢旅行 · 万象人生云端漫游</title>
-<meta name="application-version" content="P0.7.2">
+<meta name="application-version" content="P0.7.3">
 <meta name="description" content="顺着真实照片，走进京都鸭川与先斗町。有人发现了自己喜欢的一处风景，也邀请你来看看。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="京都的一次慢旅行｜来看一眼真实的京都">
@@ -82,6 +82,12 @@
 .memorySpot span{display:block;font-size:12px;line-height:1.75;color:#eff5ef}
 .friendNote{font-size:12px;line-height:1.7;color:#f1dfb7;margin:8px 0 0}
 @media(max-width:350px){.inviteVisual .inviteTitle{font-size:27px}.inviteVisual .inviteLine{font-size:13px}}
+
+/* P0.7.3: a single unobtrusive music switch, independent of scenic-only mode. */
+.musicPill{position:absolute;z-index:9;right:19px;top:calc(env(safe-area-inset-top,0px) + 67px);min-width:75px;min-height:34px;padding:7px 11px;border:1px solid rgba(255,255,255,.52);border-radius:24px;background:rgba(5,18,20,.47);color:#fff;font-size:12px;line-height:1.25;letter-spacing:.02em;box-shadow:0 3px 12px rgba(0,0,0,.18);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.musicPill[data-playing="true"]{border-color:rgba(236,207,149,.7);color:#ffe5ac}
+.musicPill:focus-visible{outline:2px solid #ffe0ab;outline-offset:2px}
+@media(max-width:350px){.musicPill{right:13px;top:calc(env(safe-area-inset-top,0px) + 64px)}}
 </style></head><body><div id="app"></div>
 <script>const MEDIA={"station": {"id": "station", "name": "祇园四条站入口", "date": "2026-06-18", "author": "HAGAT hOMSZE", "file": "JP 日本 Japan 京都 Kyoto 四條 Shijo 京阪電車 Keihan Railway 祇園四條駅 Gion-shijo Station June 2026 N13P 01.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%A2%9D_Shijo_%E4%BA%AC%E9%98%AA%E9%9B%BB%E8%BB%8A_Keihan_Railway_%E7%A5%87%E5%9C%92%E5%9B%9B%E6%A2%9D%E9%A7%85_Gion-shijo_Station_June_2026_N13P_01.jpg/1280px-JP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E5%9B%9B%E6%A2%9D_Shijo_%E4%BA%AC%E9%98%AA%E9%9B%BB%E8%BB%8A_Keihan_Railway_%E7%A5%87%E5%9C%92%E5%9B%9B%E6%A2%9D%E9%A7%85_Gion-shijo_Station_June_2026_N13P_01.jpg", "page": "https://commons.wikimedia.org/wiki/File:JP_日本_Japan_京都_Kyoto_四條_Shijo_京阪電車_Keihan_Railway_祇園四條駅_Gion-shijo_Station_June_2026_N13P_01.jpg", "license": "见来源页"}, "minamiza": {"id": "minamiza", "name": "南座剧场", "date": "2007-06-21", "author": "MichaelMaggs", "file": "Minamiza theatre, Kyoto, evening.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Minamiza_theatre%2C_Kyoto%2C_evening.jpg/960px-Minamiza_theatre%2C_Kyoto%2C_evening.jpg", "page": "https://commons.wikimedia.org/wiki/File:Minamiza_theatre,_Kyoto,_evening.jpg", "license": "CC BY-SA 2.5"}, "riverSpring": {"id": "riverSpring", "name": "四条大桥向上游眺望", "date": "2017-04-14", "author": "Saigen Jiro", "file": "Kamo River from Shijo Bridge.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Kamo_River_from_Shijo_Bridge.jpg/1280px-Kamo_River_from_Shijo_Bridge.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge.jpg", "license": "CC0 1.0"}, "riverSummer": {"id": "riverSummer", "name": "四条大桥夏日河岸", "date": "2025-07-17", "author": "武田信徳", "file": "Kamo River from Shijo Bridge 20250717.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Kamo_River_from_Shijo_Bridge_20250717.jpg/1280px-Kamo_River_from_Shijo_Bridge_20250717.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge_20250717.jpg", "license": "CC BY 4.0"}, "yuka": {"id": "yuka", "name": "鸭川夏季纳凉床", "date": "2025-06-16", "author": "MaedaAkihiko", "file": "Kyoto Kamogawa Noryo-Yuka.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Kyoto_Kamogawa_Noryo-Yuka.jpg/1280px-Kyoto_Kamogawa_Noryo-Yuka.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Kamogawa_Noryo-Yuka.jpg", "license": "CC0 1.0"}, "oldStreet": {"id": "oldStreet", "name": "先斗町旧街巷", "date": "2006-06-20", "author": "Wolfiewolf", "file": "Pontocho by Wolfiewolf in Nabeyacho, Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg/1280px-Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg", "license": "见来源页"}, "alleyRed": {"id": "alleyRed", "name": "灯笼映照的先斗町", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley, Kyoto (52406856003).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Pontocho_Alley%2C_Kyoto_%2852406856003%29.jpg/1280px-Pontocho_Alley%2C_Kyoto_%2852406856003%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley,_Kyoto_(52406856003).jpg", "license": "CC BY-SA 2.0"}, "lantern": {"id": "lantern", "name": "先斗町灯笼", "date": "2006-11-27", "author": "James Disley", "file": "Pontocho paper lantern by James Disley in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg/960px-Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}, "kaiseki": {"id": "kaiseki", "name": "先斗町餐厅前的夜巷", "date": "2006-11-27", "author": "James Disley", "file": "Pontocho kaiseki restaurant by James Disley in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg/960px-Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg", "license": "见来源页"}, "streetLights": {"id": "streetLights", "name": "先斗町灯影双巷", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley at night, Kyoto (53614869876).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Pontocho_Alley_at_night%2C_Kyoto_%2853614869876%29.jpg/1280px-Pontocho_Alley_at_night%2C_Kyoto_%2853614869876%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(53614869876).jpg", "license": "CC BY-SA 2.0"}, "streetBw": {"id": "streetBw", "name": "先斗町黑白夜巷", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley at night, Kyoto (52409569493).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Pontocho_Alley_at_night%2C_Kyoto_%2852409569493%29.jpg/960px-Pontocho_Alley_at_night%2C_Kyoto_%2852409569493%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(52409569493).jpg", "license": "CC BY-SA 2.0"}, "riverNight": {"id": "riverNight", "name": "鸭川与先斗町夜景", "date": "2017-04-09", "author": "Yiannis Theologos Michellis", "file": "Nighttime view along the Kamo River in Pontocho, Kyoto, Japan 20170409105043 (34159633185).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Nighttime_view_along_the_Kamo_River_in_Pontocho%2C_Kyoto%2C_Japan_20170409105043_%2834159633185%29.jpg/1280px-Nighttime_view_along_the_Kamo_River_in_Pontocho%2C_Kyoto%2C_Japan_20170409105043_%2834159633185%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105043_(34159633185).jpg", "license": "CC0 1.0"}, "shijoPortrait": {"id": "shijoPortrait", "name": "四条大桥·向下游眺望", "date": "2024-08-20", "author": "Jakub Hałun", "file": "Kamo River in Kyoto, 20240820 1745 5189.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg/1280px-Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto%2C_20240820_1745_5189.jpg", "license": "CC BY 4.0"}, "riversideEvening": {"id": "riversideEvening", "name": "四条大桥·向上游回望", "date": "2024-08-20", "author": "Jakub Hałun", "file": "Kamo River in Kyoto, 20240820 1748 5192.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg/1280px-Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto%2C_20240820_1748_5192.jpg", "license": "CC BY 4.0"}, "sanjoEast": {"id": "sanjoEast", "name": "三条大桥东侧·街与河", "date": "2014-03-21", "author": "Guilhem Vellut", "file": "Kamo River @ Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Kamo_River_%40_Kyoto.jpg/1280px-Kamo_River_%40_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kamo_River_%40_Kyoto.jpg", "license": "CC BY 2.0"}, "sanjoBridge": {"id": "sanjoBridge", "name": "三条大桥·桥头实景", "date": "2014-03-17", "author": "そらみみ", "file": "Sanjo-Ohashi Bridge from east.JPG", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Sanjo-Ohashi_Bridge_from_east.JPG/1280px-Sanjo-Ohashi_Bridge_from_east.JPG", "page": "https://commons.wikimedia.org/wiki/File:Sanjo-Ohashi_Bridge_from_east.JPG", "license": "CC BY-SA 3.0"}, "alleyPortrait": {"id": "alleyPortrait", "name": "先斗町·纵深小巷", "date": "2022-07-29", "author": "Sergiy Galyonkin", "file": "Pontocho Alley, Kyoto (52404468049).jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg/1280px-Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley%2C_Kyoto_%2852404468049%29.jpg", "license": "CC BY-SA 2.0"}, "pontochoSouth": {"id": "pontochoSouth", "name": "先斗町南段·夜巷", "date": "2007-09-29", "author": "matsuyuki", "file": "Pontocho by matsuyuki in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Pontocho_by_matsuyuki_in_Kyoto.jpg/1280px-Pontocho_by_matsuyuki_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_by_matsuyuki_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}, "pontochoNorth": {"id": "pontochoNorth", "name": "先斗町北段·店前街景", "date": "2005-11-28", "author": "titanium22", "file": "Pontocho by titanium22 in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Pontocho_by_titanium22_in_Kyoto.jpg/1280px-Pontocho_by_titanium22_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_by_titanium22_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}, "restaurantFront": {"id": "restaurantFront", "name": "先斗町·餐厅门面", "date": "2006-11-27", "author": "James Disley", "file": "Pontocho French restaurant by James Disley in Kyoto.jpg", "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg/960px-Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg", "page": "https://commons.wikimedia.org/wiki/File:Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg", "license": "CC BY-SA 2.0"}};
 const ORIGINAL_PIXELS={"station": [4080, 3060], "minamiza": [1492, 1822], "riverSpring": [6010, 3990], "riverSummer": [6000, 4000], "yuka": [2722, 1815], "oldStreet": [3840, 2160], "alleyRed": [9258, 6328], "lantern": [1599, 1997], "kaiseki": [1607, 2004], "streetLights": [6280, 6098], "streetBw": [6328, 8963], "riverNight": [5312, 2988], "shijoPortrait": [4765, 3160], "riversideEvening": [4761, 3157], "sanjoEast": [3968, 2976], "sanjoBridge": [3230, 2422], "alleyPortrait": [6271, 9234], "pontochoSouth": [2448, 3264], "pontochoNorth": [2000, 3008], "restaurantFront": [1823, 2277]};
@@ -1335,6 +1341,132 @@ module.exports = QRCode;
 
 };
 return require('index');})();
+
+/* P0.7.3 background music — original instrumental composition built directly with
+   Web Audio oscillators. No third-party music or streaming requests.
+   iOS Safari: AudioContext is only started from a user's real click/tap. */
+const BGM_PREF_KEY='wanxiang_kyoto_music_v1';
+let bgmEnabled=true;
+try{bgmEnabled=localStorage.getItem(BGM_PREF_KEY)!=='off'}catch(e){}
+let bgmEngine=null;
+const BGM_BEAT=60/78;
+const BGM_BAR=BGM_BEAT*4;
+const BGM_CHORDS=[
+ {root:146.83,third:220.00,fifth:293.66,air:440.00},
+ {root:123.47,third:185.00,fifth:246.94,air:369.99},
+ {root:98.00,third:146.83,fifth:196.00,air:293.66},
+ {root:110.00,third:164.81,fifth:220.00,air:329.63}
+];
+/* Original four-bar melodic phrase with subtle variations on later passes. */
+const BGM_MELODY=[
+ [[0,587.33,.65],[1.5,659.25,.37],[3.1,440,.40]],
+ [[.3,493.88,.48],[2.2,440,.42],[3.35,369.99,.27]],
+ [[0,392,.39],[1.7,493.88,.40],[3.35,587.33,.27]],
+ [[.25,440,.40],[2.15,493.88,.37],[3.5,659.25,.28]]
+];
+function bgmButton(){
+ return `<button type="button" class="musicPill" data-playing="${Boolean(bgmEngine)}" aria-pressed="${bgmEnabled}" aria-label="${bgmEnabled?'关闭':'开启'}京都背景音乐" title="原创背景音乐，可随时关闭" onclick="toggleBgm()">${bgmEnabled?'♫ 音乐开':'♪ 音乐关'}</button>`;
+}
+function bgmSync(){
+ document.querySelectorAll('.musicPill').forEach(b=>{
+  b.textContent=bgmEnabled?'♫ 音乐开':'♪ 音乐关';
+  b.setAttribute('aria-pressed',String(bgmEnabled));
+  b.setAttribute('aria-label',(bgmEnabled?'关闭':'开启')+'京都背景音乐');
+  b.dataset.playing=String(Boolean(bgmEngine));
+ });
+}
+function bgmVoice(eng,freq,at,volume,length,kind='pluck',pan=0){
+ const c=eng.ctx;
+ const out=c.createGain();
+ const spatial=(typeof c.createStereoPanner==='function')?c.createStereoPanner():null;
+ if(spatial){spatial.pan.value=pan;out.connect(spatial);spatial.connect(eng.bus)}
+ else out.connect(eng.bus);
+ out.gain.setValueAtTime(.0001,at);
+ if(kind==='pad'){
+   out.gain.linearRampToValueAtTime(volume,at+1.1);
+   out.gain.setValueAtTime(volume,at+length-1.15);
+   out.gain.exponentialRampToValueAtTime(.0001,at+length);
+ }else{
+   out.gain.linearRampToValueAtTime(volume,at+.018);
+   out.gain.exponentialRampToValueAtTime(.0001,at+length);
+ }
+ const partials=kind==='pad'?[[1,1],[.502,.18],[1.008,.12]]:[[1,1],[2,.18],[3,.09]];
+ for(const [harm,amp] of partials){
+  const osc=c.createOscillator(),g=c.createGain();
+  osc.type='sine';osc.frequency.setValueAtTime(freq*harm,at);
+  g.gain.value=amp;osc.connect(g);g.connect(out);
+  osc.start(at);osc.stop(at+length+.03);
+  osc.onended=()=>{try{osc.disconnect();g.disconnect()}catch(e){}};
+ }
+}
+function bgmScheduleBar(eng,num,at){
+ const harmony=BGM_CHORDS[Math.floor(num/2)%4];
+ if(num%2===0){
+  bgmVoice(eng,harmony.root*2,at,.021,2*BGM_BAR+.8,'pad',-.26);
+  bgmVoice(eng,harmony.fifth,at+.05,.012,2*BGM_BAR+.75,'pad',.27);
+ }
+ const melody=BGM_MELODY[num%4];
+ for(let j=0;j<melody.length;j++){
+  const [off,freq,gain]=melody[j];
+  if(num%16>=12&&j===2)continue;
+  const varied=(num%8>=4&&j===1)?freq*.998:freq;
+  bgmVoice(eng,varied,at+off*BGM_BEAT,.085*gain,2.35,'pluck',j%2?-.25:.23);
+ }
+ if(num%2===0)bgmVoice(eng,harmony.root*2,at+.02,.020,2.9,'pluck',-.14);
+ if(num%8===6)bgmVoice(eng,783.99,at+2.65*BGM_BEAT,.015,3.8,'pluck',.45);
+}
+function bgmLookAhead(eng){
+ if(bgmEngine!==eng||eng.ctx.state!=='running')return;
+ while(eng.nextAt<eng.ctx.currentTime+11){
+   bgmScheduleBar(eng,eng.bar,eng.nextAt);
+   eng.bar=(eng.bar+1)%32;
+   eng.nextAt+=BGM_BAR;
+ }
+}
+function bgmStop(){
+ const eng=bgmEngine;bgmEngine=null;
+ if(!eng)return;
+ clearInterval(eng.timer);
+ try{const now=eng.ctx.currentTime;eng.master.gain.cancelScheduledValues(now);eng.master.gain.setTargetAtTime(0,now,.08)}catch(e){}
+ setTimeout(()=>{try{eng.ctx.close().catch(()=>{})}catch(e){}},320);
+ bgmSync();
+}
+function bgmStart(){
+ if(!bgmEnabled||bgmEngine||document.hidden)return;
+ const AudioContextCtor=window.AudioContext||window.webkitAudioContext;
+ if(!AudioContextCtor){bgmEnabled=false;bgmSync();return;}
+ try{
+  const ctx=new AudioContextCtor();
+  const bus=ctx.createGain(),filter=ctx.createBiquadFilter(),master=ctx.createGain();
+  filter.type='lowpass';filter.frequency.value=3300;filter.Q.value=.45;
+  bus.connect(filter);filter.connect(master);master.connect(ctx.destination);
+  const delay=ctx.createDelay(1);delay.delayTime.value=.31;
+  const wet=ctx.createGain();wet.gain.value=.10;
+  filter.connect(delay);delay.connect(wet);wet.connect(master);
+  master.gain.setValueAtTime(.0001,ctx.currentTime);
+  master.gain.setTargetAtTime(.27,ctx.currentTime,.60);
+  const eng={ctx,bus,master,bar:0,nextAt:ctx.currentTime+.09,timer:0};
+  bgmEngine=eng;
+  const done=ctx.resume();if(done?.then)done.then(()=>{if(bgmEngine===eng)bgmLookAhead(eng)}).catch(()=>{if(bgmEngine===eng)bgmStop()});
+  eng.timer=setInterval(()=>bgmLookAhead(eng),2200);
+  bgmLookAhead(eng);
+  bgmSync();
+ }catch(err){bgmStop();bgmEnabled=false;bgmSync()}
+}
+function toggleBgm(){
+ bgmEnabled=!bgmEnabled;
+ try{localStorage.setItem(BGM_PREF_KEY,bgmEnabled?'on':'off')}catch(e){}
+ if(bgmEnabled)bgmStart();else bgmStop();
+ bgmSync();
+}
+/* Mobile browsers stop running background audio when another app is opened. */
+document.addEventListener('visibilitychange',()=>{if(document.hidden)bgmStop()});
+window.addEventListener('pagehide',()=>bgmStop());
+/* After returning from another app, resume on the next deliberate tour tap. */
+document.addEventListener('click',e=>{
+ if(bgmEnabled&&!bgmEngine&&!document.hidden&&!e.target.closest('.musicPill')&&e.target.closest('button')&&state.at!=='welcome')bgmStart();
+},true);
+
 const KEY='wanxiang_kyoto_cloud_P01_private';
 let state={at:'welcome',mood:'放空',nickname:'',visited:[],insights:[],stamps:[],memories:[],history:[],detail:false,friendJourney:null,tourOrder:[],routeTheme:null};
 try{let s=localStorage.getItem(KEY);if(s){const v=JSON.parse(s);if(v&&typeof v.at==='string'&&(SCENES[v.at]||['welcome','end'].includes(v.at)))state=Object.assign(state,v);}}catch(e){}
@@ -1470,7 +1602,7 @@ function imageError(img){
 function currentPlaceId(){if(pendingJourney)return featuredScene(pendingJourney);return state.at==='welcome'?'riverSpring':state.at==='end'?'riverNight':state.at}
 function zoom(){const id=currentPlaceId(),a=MEDIA[id]||MEDIA.riverSpring;const z=document.createElement('div');z.className='overlay photoViewer';z.innerHTML=`<button class="overlayClose" aria-label="关闭照片">✕ 关闭</button><img alt="${esc(a.name)}" src="${a.src}" data-photo-id="${id}" referrerpolicy="no-referrer" decoding="async" onload="upgradePhoto(this,'viewer')"><div class="viewerBottom"><p>${esc(a.name)}</p><button class="viewerInfoButton" type="button" aria-expanded="false">ⓘ 了解这里</button><div class="viewerIntro">${esc(PLACE_INFO[id]||'这里是京都实景漫游中的一站。')}</div></div>`;z.querySelector('.overlayClose').onclick=()=>z.remove();z.querySelector('.viewerInfoButton').onclick=()=>{const i=z.querySelector('.viewerIntro'),on=i.classList.toggle('show');if(on)markInsight(id);z.querySelector('.viewerInfoButton').textContent=on?'收起介绍':'ⓘ 了解这里';z.querySelector('.viewerInfoButton').setAttribute('aria-expanded',String(on))};document.body.appendChild(z)}
 function showInfo(){const id=currentPlaceId(),a=MEDIA[id]||MEDIA.riverSpring;markInsight(id);const z=document.createElement('div');z.className='infoSheetOverlay';z.innerHTML=`<div class="infoSheet" role="dialog" aria-modal="true" aria-label="地点介绍"><div class="eyebrow">京都 · 这一站</div><h2>${esc(a.name)}</h2><p>${esc(PLACE_INFO[id]||'这里是京都实景漫游中的一站。')}</p><button class="closeInfo" type="button">继续看风景</button></div>`;z.querySelector('.closeInfo').onclick=()=>z.remove();z.onclick=e=>{if(e.target===z)z.remove()};document.body.appendChild(z)}
-function topBar(inScene=false){return `<div class="topbar"><div class="brand">万象人生 · 京都</div><div class="topActions"><button class="round secondaryAction" onclick="zoom()">看全图</button><button class="round quietInfo" onclick="showInfo()">ⓘ 了解这里</button><button class="round quietToggle" onclick="toggleQuiet()">只看风景</button></div></div>`}
+function topBar(inScene=false){return `<div class="topbar"><div class="brand">万象人生 · 京都</div><div class="topActions"><button class="round secondaryAction" onclick="zoom()">看全图</button><button class="round quietInfo" onclick="showInfo()">ⓘ 了解这里</button><button class="round quietToggle" onclick="toggleQuiet()">只看风景</button></div></div>${bgmButton()}`}
 function toggleQuiet(){const f=document.querySelector('.immersive');if(!f)return;const q=f.classList.toggle('quiet');const btn=f.querySelector('.quietToggle');if(btn){btn.textContent=q?'显示路线':'只看风景';btn.setAttribute('aria-pressed',String(q))}}
 function render(){if(pendingJourney){renderJourneyInvite();return}if(state.at==='welcome'){renderWelcome();return}if(state.at==='end'){renderEnd();return}renderScene()}
 function renderWelcome(){const a=MEDIA.riverSpring;app.innerHTML=`<main class="frame hero immersive">${photoBox(a)}${topBar()}<section class="content"><div class="eyebrow">京都 · 鸭川与先斗町 / 旅行分享版</div><h1 class="h1 introtitle">京都的<br>一次慢旅行</h1><p class="lead">两条完整路线，都会看遍京都20处真实风景。你可以先看鸭川，也可以先逛街巷。</p>${validRecord(state.friendJourney)?`<p class="friendNote">${esc(normalNickname(state.friendJourney.n))}把自己喜欢的京都风景分享给了你。现在，按自己的节奏看一看。</p>`:''}<div class="welcomeName"><label for="nickname">你的旅行昵称（可选）</label><input id="nickname" type="text" autocomplete="off" maxlength="12" placeholder="例如：山茶旅人" value="${esc(state.nickname||'')}" oninput="updateNickname(this.value)"><small>只用于你的旅行明信片，是否分享由你决定</small></div><div class="muted">选个心情，下一屏再选从河岸还是街巷出发：</div><div class="moodgrid">${['放空','好奇','记录'].map(x=>`<button class="mood ${state.mood===x?'active':''}" aria-pressed="${state.mood===x}" onclick="setMood('${x}')">${x}</button>`).join('')}</div><button class="btn gold" onclick="begin()">进入京都 <span class="arr">→</span></button></section></main>`}
@@ -1499,7 +1631,7 @@ function ensureTourOrder(){
  return state.tourOrder;
 }
 function nextTourStop(){const order=ensureTourOrder();if(!order)return null;const at=order.indexOf(state.at);return at>=0&&at<order.length-1?order[at+1]:'end'}
-function begin(){state.at='station';state.visited=[];state.insights=[];state.stamps=[];state.memories=[];state.history=[];state.detail=false;state.tourOrder=[];state.routeTheme=null;save();render()}
+function begin(){bgmStart();state.at='station';state.visited=[];state.insights=[];state.stamps=[];state.memories=[];state.history=[];state.detail=false;state.tourOrder=[];state.routeTheme=null;save();render()}
 function renderScene(){
  const k=state.at,s=SCENES[k],a=MEDIA[k];
  if(!s||!a){state.at='welcome';render();return}
