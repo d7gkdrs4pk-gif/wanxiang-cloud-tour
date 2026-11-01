@@ -36,3 +36,14 @@
 
 **地理核对备注：** `shijoPortrait`、`riversideEvening` 对应四条大桥附近双向摄影；`sanjoEast`、`sanjoBridge` 对应三条大桥区域；`alleyPortrait` 原图Exif的GPS异常，因此只按先斗町街区标注，不指认其精确门牌或方向。
 **体验边界：** 新增场景无AI生成的虚假背景；既有12张照片的来源记录保持不变；所列许可只是素材页面标注，不是已完成正式商用合规审核。
+
+## P0.9.1｜深度探索新增实景照片（4张）
+
+此阶段只替换4个“风景发现”的图文呈现，不改变主路线20张摄影。8个探索视角中的另4张为已登记照片：riversideEvening、riverSummer、restaurantFront、alleyPortrait。新摄影取自下列Wikimedia Commons文件页；图片可能摄于不同日期。正式上架收费前仍须复核素材使用和其他权利。
+
+| 场景用途 | 摄影师 | 拍摄日期 | 来源页面 | 来源页许可 |
+|---|---|---|---|---|
+| 纳凉床·河边平台 | w00kie | 2005-07-15 | https://commons.wikimedia.org/wiki/File:Noryo_yuka_by_w00kie_in_Kyoto.jpg | CC BY 2.0 |
+| 纳凉床·用餐空间 | MissionControl | 2007-05-23 | https://commons.wikimedia.org/wiki/File:Restaurant_table_on_noryo-yuka_by_MissionControl.jpg | CC BY-SA 2.0 |
+| 鸭川·先斗町夜间临河建筑 | cloneofsnake | 2005-02-10 | https://commons.wikimedia.org/wiki/File:Kamo_river_and_Pontocho_by_cloneofsnake_in_Kyoto.jpg | CC BY-SA 2.0 |
+| 鸭川夜间水面与灯光 | Yiannis Theologos Michellis | 2017-04-09 | https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105607_(34280403006).jpg | CC0 1.0 |
