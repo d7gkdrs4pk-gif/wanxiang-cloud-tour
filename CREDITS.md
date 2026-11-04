@@ -1,23 +1,25 @@
-# 图片署名及素材信息（原型）
+# 图片署名及素材信息
 
-首版使用公开的京都实景远程照片，页面仅供内部试用/公开测试；素材商用合规须于收费前单独审查。保留每张照片文件来源、摄影师和页面所标许可供核验。
+更新日期：2026-11-04。已核对24张不同照片的原始Commons文件页作者、来源及版权许可正文，补齐下表3处“见来源页”。本轮结论仅为版权许可信息已核实；人物等第三方权利、产品内署名、明信片合成及正式交付仍须完成。当前页面保持P0.9.4-test，未启用收费。
+
+逐项证据：[24张素材许可记录 V1.0](evidence/asset-licenses-2026-11-04.json)。
 
 | 地点 | 拍摄日期 | 摄影者 | 文件页 | 页面标注许可 |
 |---|---|---|---|---|
-| 祇园四条站入口 | 2026-06-18 | HAGAT hOMSZE | https://commons.wikimedia.org/wiki/File:JP_日本_Japan_京都_Kyoto_四條_Shijo_京阪電車_Keihan_Railway_祇園四條駅_Gion-shijo_Station_June_2026_N13P_01.jpg | 见来源页 |
+| 祇园四条站入口 | 2026-06-18 | HAGAT hOMSZE | https://commons.wikimedia.org/wiki/File:JP_日本_Japan_京都_Kyoto_四條_Shijo_京阪電車_Keihan_Railway_祇園四條駅_Gion-shijo_Station_June_2026_N13P_01.jpg | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | 南座剧场 | 2007-06-21 | MichaelMaggs | https://commons.wikimedia.org/wiki/File:Minamiza_theatre,_Kyoto,_evening.jpg | CC BY-SA 2.5 |
 | 四条大桥向上游眺望 | 2017-04-14 | Saigen Jiro | https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge.jpg | CC0 1.0 |
 | 四条大桥夏日河岸 | 2025-07-17 | 武田信徳 | https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge_20250717.jpg | CC BY 4.0 |
 | 鸭川夏季纳凉床 | 2025-06-16 | MaedaAkihiko | https://commons.wikimedia.org/wiki/File:Kyoto_Kamogawa_Noryo-Yuka.jpg | CC0 1.0 |
-| 先斗町旧街巷 | 2006-06-20 | Wolfiewolf | https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg | 见来源页 |
+| 先斗町旧街巷 | 2006-06-20 | Wolfiewolf | https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) |
 | 灯笼映照的先斗町 | 2022-07-29 | Sergiy Galyonkin | https://commons.wikimedia.org/wiki/File:Pontocho_Alley,_Kyoto_(52406856003).jpg | CC BY-SA 2.0 |
 | 先斗町灯笼 | 2006-11-27 | James Disley | https://commons.wikimedia.org/wiki/File:Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg | CC BY-SA 2.0 |
-| 先斗町餐厅前的夜巷 | 2006-11-27 | James Disley | https://commons.wikimedia.org/wiki/File:Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg | 见来源页 |
+| 先斗町餐厅前的夜巷 | 2006-11-27 | James Disley | https://commons.wikimedia.org/wiki/File:Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
 | 先斗町灯影双巷 | 2022-07-29 | Sergiy Galyonkin | https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(53614869876).jpg | CC BY-SA 2.0 |
 | 先斗町黑白夜巷 | 2022-07-29 | Sergiy Galyonkin | https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(52409569493).jpg | CC BY-SA 2.0 |
 | 鸭川与先斗町夜景 | 2017-04-09 | Yiannis Theologos Michellis | https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105043_(34159633185).jpg | CC0 1.0 |
 
-**说明**：上述许可信息来自原P0.5.1内置素材数据，尚未逐张完成正式商用审批；未取得原始摄影文件，本版图片通过互联网远程加载。
+**说明**：上述原型许可记录已于2026-11-04逐张核对原始文件页；这不等于正式商用整体通过。本版仍通过互联网远程加载图片，尚未完成销售所需的素材自托管。
 
 ## P0.7 增量：8张实景照片
 
@@ -51,3 +53,15 @@
 ## P0.9.4｜祇园四条站照片的展示裁切
 
 为响应去掉照片拍摄日期的体验要求，`station` 在网页和旅行明信片中仅显示原照片上部92%，裁去底部8%的相机日期及设备标记区域。原始照片文件、摄影师 HAGAT hOMSZE、来源链接及拍摄日期记录保持不变。此调整是展示范围裁切，没有生成或重绘京都景物。其他照片没有新增裁切。
+
+
+## 2026-11-04｜销售准备核验结论与缺口
+
+- 24/24张取得原始文件页可读许可正文：CC0 1.0共5张、CC BY 4.0共3张、CC BY 2.0共3张、CC BY-SA 2.0共11张、CC BY-SA 2.5共1张、CC BY-SA 3.0共1张。
+- 补齐祇园四条站入口（CC0 1.0）、先斗町旧街巷（CC BY 2.0）、餐厅前夜巷（CC BY-SA 2.0）。原网页MEDIA中的3个旧字段尚待同步，本轮不修改页面代码。
+- MissionControl的纳凉床用餐空间照片：版权许可为CC BY-SA 2.0；文件页未见可辨认前景人物的独立肖像授权，第三方人物权仍为UNVERIFIED，不能据此认定全部商用通过。
+- 产品内help()目前只列20张主线素材，4张延伸专用图片尚未纳入。正式收费前需在产品内补全24张的作者、来源、准确许可链接和变更说明；说明保持在折叠区域，不重新压在风景主画面上。
+- 明信片是照片与文字、二维码的合成输出，需安排随图片传播的作者、来源、许可与修改说明，按实际许可处理BY-SA素材的改编。不能把所有合成明信片统一声明为完全独家版权。
+- 后续销售图片自托管须保留作者与许可记录，确认实际使用文件与核验来源一致；本轮未下载或改写照片。
+
+项目销售与托管形式见[销售与交付规格 V1.0](COMMERCIAL.md)。

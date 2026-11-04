@@ -1,0 +1,385 @@
+{
+  "version": "1.0",
+  "checked_at": "2026-11-04",
+  "code_version": "P0.9.4-test",
+  "assets": [
+    {
+      "id": "station",
+      "title": "祇园四条站入口",
+      "source": "https://commons.wikimedia.org/wiki/File:JP_日本_Japan_京都_Kyoto_四條_Shijo_京阪電車_Keihan_Railway_祇園四條駅_Gion-shijo_Station_June_2026_N13P_01.jpg",
+      "author": "HAGAT hOMSZE",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "作者自行以该许可发布。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。",
+        "网页及明信片仅显示上部92%；原始文件保留。"
+      ]
+    },
+    {
+      "id": "minamiza",
+      "title": "南座剧场",
+      "source": "https://commons.wikimedia.org/wiki/File:Minamiza_theatre,_Kyoto,_evening.jpg",
+      "author": "MichaelMaggs",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "作者自行以该许可发布。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "riverSpring",
+      "title": "四条大桥向上游眺望",
+      "source": "https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge.jpg",
+      "author": "Saigen Jiro",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "作者自行以该许可发布。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "riverSummer",
+      "title": "四条大桥夏日河岸",
+      "source": "https://commons.wikimedia.org/wiki/File:Kamo_River_from_Shijo_Bridge_20250717.jpg",
+      "author": "武田信徳",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "作者自行以该许可发布。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "yuka",
+      "title": "鸭川夏季纳凉床",
+      "source": "https://commons.wikimedia.org/wiki/File:Kyoto_Kamogawa_Noryo-Yuka.jpg",
+      "author": "MaedaAkihiko",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "作者自行以该许可发布。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "oldStreet",
+      "title": "先斗町旧街巷",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg",
+      "author": "Wolfiewolf",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "FlickreviewR于2007-09-11确认Flickr许可。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "alleyRed",
+      "title": "灯笼映照的先斗町",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley,_Kyoto_(52406856003).jpg",
+      "author": "Sergiy Galyonkin",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "FlickreviewR 2于2023-04-09确认Flickr许可。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "lantern",
+      "title": "先斗町灯笼",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_paper_lantern_by_James_Disley_in_Kyoto.jpg",
+      "author": "James Disley",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "FlickreviewR于2007-09-12确认Flickr许可。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "kaiseki",
+      "title": "先斗町餐厅前的夜巷",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_kaiseki_restaurant_by_James_Disley_in_Kyoto.jpg",
+      "author": "James Disley",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "已读取文件页许可正文，本轮未另行核实Flickr许可复核日期。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "streetLights",
+      "title": "先斗町灯影双巷",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(53614869876).jpg",
+      "author": "Sergiy Galyonkin",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "FlickreviewR 2于2024-09-20确认Flickr许可。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "streetBw",
+      "title": "先斗町黑白夜巷",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley_at_night,_Kyoto_(52409569493).jpg",
+      "author": "Sergiy Galyonkin",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "已读取文件页许可正文，本轮未另行核实Flickr许可复核日期。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "riverNight",
+      "title": "鸭川与先斗町夜景",
+      "source": "https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105043_(34159633185).jpg",
+      "author": "Yiannis Theologos Michellis",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "FlickreviewR 2于2018-12-03确认Flickr的cc-zero标注。",
+      "notes": [
+        "结论仅为文件页版权许可已核实，不代表第三方权利、商品准入和具体展示均已通过。"
+      ]
+    },
+    {
+      "id": "shijoPortrait",
+      "title": "四条大桥·向下游眺望",
+      "source": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto,_20240820_1745_5189.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "版权持有人在 Licensing 段自行发布 CC BY 4.0；不是 Flickr 转入，未见独立 Flickr 复核记录。",
+      "notes": [
+        "来源页 Author 为 Jakub Hałun；上传账户为 Jakubhal。",
+        "许可页面要求署名、链接许可，并说明修改；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "riversideEvening",
+      "title": "四条大桥·向上游回望",
+      "source": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto,_20240820_1748_5192.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "版权持有人在 Licensing 段自行发布 CC BY 4.0；不是 Flickr 转入。页面 Quality image 标志为图像质量评选，不是其他权利许可。",
+      "notes": [
+        "来源页 Author 为 Jakub Hałun；上传账户为 Jakubhal。",
+        "许可页面要求署名、链接许可，并说明修改；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "sanjoEast",
+      "title": "三条大桥东侧·街与河",
+      "source": "https://commons.wikimedia.org/wiki/File:Kamo_River_@_Kyoto.jpg",
+      "author": "Guilhem Vellut",
+      "license": "CC BY 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 2 于 2023-12-17 确认 Flickr 原图为 cc-by-2.0。复核记录的 Flickr 账户显示名为 *_*；Author 字段为 Guilhem Vellut。",
+      "notes": [
+        "Flickr 复核所列数字账户来源：https://flickr.com/photos/22539273@N00/13406133865。",
+        "许可页面要求署名、链接许可，并说明修改；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "sanjoBridge",
+      "title": "三条大桥·桥头实景",
+      "source": "https://commons.wikimedia.org/wiki/File:Sanjo-Ohashi_Bridge_from_east.JPG",
+      "author": "そらみみ",
+      "license": "CC BY-SA 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "版权持有人在 Licensing 段自行发布 CC BY-SA 3.0 Unported；不是 Flickr 转入，未见独立 Flickr 复核记录。",
+      "notes": [
+        "准确版本为 3.0 Unported，不是 2.0 或 4.0。",
+        "许可页面要求署名、链接许可、说明修改，并要求改编贡献采用相同或兼容许可；此结论仅确认版权许可。"
+      ]
+    },
+    {
+      "id": "alleyPortrait",
+      "title": "先斗町·纵深小巷",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_Alley,_Kyoto_(52404468049).jpg",
+      "author": "Sergiy Galyonkin",
+      "license": "CC BY-SA 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 2 于 2023-04-09 确认 Flickr 原图为 cc-by-sa-2.0。",
+      "notes": [
+        "原页有 GPS EXIF ambiguous 提示；本次只核验版权许可，不因此认定精确摄影门牌或朝向。",
+        "许可页面要求署名、链接许可、说明修改，并要求改编贡献采用相同或兼容许可；此结论仅确认版权许可。"
+      ]
+    },
+    {
+      "id": "pontochoSouth",
+      "title": "先斗町南段·夜巷",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_by_matsuyuki_in_Kyoto.jpg",
+      "author": "matsuyuki",
+      "license": "CC BY-SA 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 的许可复核模板记载 Riana 于 2007-10-03 07:00 UTC 确认 Flickr 当时使用所列许可。Summary 的 Reviewer InfoField 为 Opponent，不能把该字段误当成此次许可证复核人的名字。",
+      "notes": [
+        "Commons 结构化作者名另记为 Toshiyuki IMAI；展示署名可保留来源页 Author 的 matsuyuki。",
+        "许可页面要求署名、链接许可、说明修改，并要求改编贡献采用相同或兼容许可；此结论仅确认版权许可。"
+      ]
+    },
+    {
+      "id": "pontochoNorth",
+      "title": "先斗町北段·店前街景",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_by_titanium22_in_Kyoto.jpg",
+      "author": "titanium22",
+      "license": "CC BY-SA 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 于 2008-04-01 确认 Flickr 原图为 cc-by-sa-2.0。",
+      "notes": [
+        "许可页面要求署名、链接许可、说明修改，并要求改编贡献采用相同或兼容许可；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "restaurantFront",
+      "title": "先斗町·餐厅门面",
+      "source": "https://commons.wikimedia.org/wiki/File:Pontocho_French_restaurant_by_James_Disley_in_Kyoto.jpg",
+      "author": "James Disley",
+      "license": "CC BY-SA 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 于 2008-03-27 确认 Flickr 原图为 cc-by-sa-2.0。",
+      "notes": [
+        "许可页面要求署名、链接许可、说明修改，并要求改编贡献采用相同或兼容许可；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "depth_yuka_platform",
+      "title": "纳凉床·河边平台",
+      "source": "https://commons.wikimedia.org/wiki/File:Noryo_yuka_by_w00kie_in_Kyoto.jpg",
+      "author": "w00kie",
+      "license": "CC BY 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 于 2007-09-18 确认 Flickr 原图为 cc-by-2.0。",
+      "notes": [
+        "准确许可为 CC BY 2.0，没有 SA 条款。",
+        "许可页面要求署名、链接许可，并说明修改；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "depth_yuka_dining",
+      "title": "纳凉床·用餐空间",
+      "source": "https://commons.wikimedia.org/wiki/File:Restaurant_table_on_noryo-yuka_by_MissionControl.jpg",
+      "author": "MissionControl",
+      "license": "CC BY-SA 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 于 2007-09-21 确认 Flickr 原图为 cc-by-sa-2.0。此复核仅针对版权许可。",
+      "notes": [
+        "前景存在清晰人物是根代理提供的已确认情况，本轮未重新进行图像或身份审计。",
+        "本轮读取的 Commons 文件页未见人物授权书、model release、肖像商业使用许可或相应凭证；没有看到授权不等于证明授权不存在。",
+        "不得以 CC BY-SA 2.0 推定人物权已取得；此素材不能据本轮版权证据直接标为整体商用通过。",
+        "未识别、记录或关联画中人物姓名。",
+        "Commons 原页版权署名为 MissionControl；版权许可要求署名、链接许可、说明修改，并遵守相同方式共享条款。"
+      ],
+      "personality_rights": {
+        "status": "UNVERIFIED",
+        "note": "原文件页未见前景人物的model release或肖像授权文件；销售使用前需处理，不能仅据CC许可判通过。"
+      }
+    },
+    {
+      "id": "depth_night_buildings",
+      "title": "鸭川·先斗町夜间临河建筑",
+      "source": "https://commons.wikimedia.org/wiki/File:Kamo_river_and_Pontocho_by_cloneofsnake_in_Kyoto.jpg",
+      "author": "cloneofsnake",
+      "license": "CC BY-SA 2.0 Generic",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 于 2007-09-21 确认 Flickr 原图为 cc-by-sa-2.0。",
+      "notes": [
+        "许可页面要求署名、链接许可、说明修改，并要求改编贡献采用相同或兼容许可；此结论仅确认版权许可，不代表所有第三方权利均已清理。"
+      ]
+    },
+    {
+      "id": "depth_night_water",
+      "title": "鸭川夜间水面与灯光",
+      "source": "https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105607_(34280403006).jpg",
+      "author": "Yiannis Theologos Michellis",
+      "license": "CC0 1.0 Universal Public Domain Dedication",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verified_date": "2026-11-04",
+      "status": "COPYRIGHT_VERIFIED",
+      "evidence_scope": "原始Commons文件页作者、来源及版权许可正文；不等同于全部商用权利清除。",
+      "license_review": "Commons 记载 FlickreviewR 2 于 2018-12-03 确认 Flickr 原图为 cc-zero；Flickr 账户显示名为 zoonyzoozoodazoo，Author 字段为 Yiannis Theologos Michellis。",
+      "notes": [
+        "准确声明为 CC0 1.0 Universal Public Domain Dedication，非 CC BY 或 CC BY-SA。",
+        "原页明确版权层面的复制、修改、分发与商业使用可无需另行申请；此结论不构成人物、商标等其他权利的整体清理证明。"
+      ]
+    }
+  ],
+  "scope": "24张原始文件页版权许可核验；人物等第三方权利与展示义务另行处理。"
+}
