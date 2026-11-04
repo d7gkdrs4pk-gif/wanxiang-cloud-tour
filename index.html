@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#131c1e"><title>京都的一次慢旅行 · 万象人生云端漫游</title>
-<meta name="application-version" content="P0.9.4-test">
+<meta name="application-version" content="P0.9.5-test">
 <meta name="description" content="顺着真实照片，走进京都鸭川与先斗町。有人发现了自己喜欢的一处风景，也邀请你来看看。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="京都的一次慢旅行｜来看一眼真实的京都">
@@ -197,7 +197,7 @@ function pauseSummary(){const d=state.pauseChoices||{},n=pauseCount();
 }
 
 const PLACE_INFO={"station": "这里是京阪电车祇园四条站的出入口。它位于鸭川东侧，走出车站不远就能到四条大桥和南座。先看一眼站牌，再决定今天从剧场还是从河边开始。", "minamiza": "南座坐落在京都四条通，靠近鸭川东岸，是与歌舞伎演出传统相关的剧场。看一看它的屋顶线条和入口装饰，能感受到京都繁忙街道里的传统气息。", "riverSpring": "从四条大桥向上游望去，鸭川穿过京都市区。两岸有步行空间和临河建筑，远处的桥梁依次排开。这里值得做的事很简单：顺着河道把目光慢慢放远。", "riverSummer": "这也是四条大桥附近的鸭川，但拍摄于另一年的夏季。观察河岸建筑和行走空间，与刚才的春日画面对照，能看到同一条河在不同季节的细微变化。", "yuka": "鸭川西岸夏季常见的“纳凉床”，是临河餐厅设置的露天用餐平台。人们坐在河边感受夜风，也是京都颇有代表性的夏日风景。可以留意平台的支撑结构。", "oldStreet": "先斗町是一条与鸭川大致平行的狭窄街巷，分布着餐饮店铺。木格栅、门廊和曲折的透视线，让这里与宽阔的城市主干道形成鲜明对比。", "alleyRed": "镜头走进先斗町的餐厅街区。门前灯笼与街巷的纵深带来温暖的视觉层次；这张照片只是某一年的一个瞬间，不代表此时正在发生相同的活动。", "lantern": "纸灯笼是京都传统街巷里容易注意到的细节。与整条道路相比，这张特写让你看清灯笼的材质、字样和光影。旅行记忆有时就来自这样一个小物件。", "kaiseki": "先斗町的狭窄巷道两旁分布着餐饮店铺。可以观察门口的灯光、招牌与木质立面；照片记录的是过去某年的街景，不代表照片中的店铺如今仍在营业。", "streetLights": "入夜后的先斗町，灯笼与街灯映亮狭窄的街道。画面中出现的行人只是实拍经过的陌生人，故事不会为他们虚构身份。静静看看夜里的街巷方向。", "streetBw": "这一张独立的黑白摄影，把注意力放到街巷线条、行人轮廓和亮暗对比上。你可以不急着进入下一站，先观察照片中从近到远的空间层次。", "riverNight": "夜晚的鸭川呈现出与白天不同的样子：临河建筑灯光亮起，河岸步道与水面在暗处交汇。这是另一拍摄日期的实景，适合作为本次时光漫游的结尾。", "shijoPortrait": "这张鸭川实拍位于四条大桥附近，拍摄视角看向下游。右侧有沿河的木平台，河道两边是真实的城市步行空间。它与下一张照片相隔数分钟，属于同一日的两个方向。", "riversideEvening": "这张照片的拍摄点距离上一张仅数十米，但方向相反。左侧临河木平台、右侧树木与水面都是真实可见的街景。", "sanjoEast": "这张照片的来源标注拍摄地点为三条大桥东端。三条大桥位于四条大桥北侧，连着热闹的三条通，是鸭川沿岸真实可到达的位置。", "sanjoBridge": "这张实拍记录了三条大桥东侧视角。它是京都市区跨越鸭川的重要道路桥，与四条大桥是不同的地理站点。", "alleyPortrait": "照片来源文件页明确标为京都先斗町。原始Exif的GPS存在异常，因此本作品只把它作为先斗町街区的影像，不宣称它的精确门牌或方向。", "pontochoSouth": "Wikimedia资料注明拍摄地点位于先斗町四条附近的柏屋町一带。它表现的是当时的真实街巷面貌，不代表当下店铺和招牌仍然相同。", "pontochoNorth": "照片来源标注的位置为先斗町通三条下方附近。它属于历史时光切片；画面中的店铺经营状态不可据此推断为现在仍相同。", "restaurantFront": "这张先斗町照片记录一家餐厅的门面及周边街巷。我们只介绍照片可见的木质立面、招牌和灯笼，不承诺该店铺现在的名称或营业情况。"};
-const SHARE_URL='https://d7gkdrs4pk-gif.github.io/wanxiang-cloud-tour/';
+const SHARE_URL='https://wanxiang-cloud-tour.pages.dev/';
 const SCENE_IDS=Object.keys(SCENES),MOODS=['放空','好奇','记录'];
 /* Dynamic QR encoder from Kazuhiko Arase's QRCode for JavaScript (MIT).
    License: https://opensource.org/licenses/MIT ; origin http://www.d-project.com/ */
