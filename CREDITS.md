@@ -47,3 +47,7 @@
 | 纳凉床·用餐空间 | MissionControl | 2007-05-23 | https://commons.wikimedia.org/wiki/File:Restaurant_table_on_noryo-yuka_by_MissionControl.jpg | CC BY-SA 2.0 |
 | 鸭川·先斗町夜间临河建筑 | cloneofsnake | 2005-02-10 | https://commons.wikimedia.org/wiki/File:Kamo_river_and_Pontocho_by_cloneofsnake_in_Kyoto.jpg | CC BY-SA 2.0 |
 | 鸭川夜间水面与灯光 | Yiannis Theologos Michellis | 2017-04-09 | https://commons.wikimedia.org/wiki/File:Nighttime_view_along_the_Kamo_River_in_Pontocho,_Kyoto,_Japan_20170409105607_(34280403006).jpg | CC0 1.0 |
+
+## P0.9.4｜祇园四条站照片的展示裁切
+
+为响应去掉照片拍摄日期的体验要求，`station` 在网页和旅行明信片中仅显示原照片上部92%，裁去底部8%的相机日期及设备标记区域。原始照片文件、摄影师 HAGAT hOMSZE、来源链接及拍摄日期记录保持不变。此调整是展示范围裁切，没有生成或重绘京都景物。其他照片没有新增裁切。
