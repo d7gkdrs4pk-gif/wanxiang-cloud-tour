@@ -1,0 +1,15 @@
+{
+  "task_id": "8f589309-0d42-4825-b5a1-0bc2bfee8187",
+  "credits_consumed": 50.0,
+  "request": {
+    "model": "v3.1-20260211",
+    "prompt": "A single modular ancient Chinese mountain cliff terrain island for an isometric fantasy action game, broad nearly level walkable weathered stone courtyard on top, irregular layered natural granite cliffs descending beneath, worn uneven flagstones, moss in cracks, subtle carved stone borders, a few broken stone steps at the edges, detailed realistic miniature diorama craftsmanship, complete standalone terrain asset, no buildings, no trees, no characters, no text, neutral albedo, physically based materials",
+    "negative_prompt": "toy plastic, crude blocks, flat billboard, floating parts, closed passages, text, oversaturated colors",
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "face_limit": 80000
+  },
+  "bytes": 14040288
+}
