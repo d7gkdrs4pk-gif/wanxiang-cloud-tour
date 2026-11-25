@@ -1,0 +1,15 @@
+{
+  "task_id": "bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+  "credits_consumed": 50.0,
+  "request": {
+    "model": "v3.1-20260211",
+    "prompt": "A single ornate ancient Chinese mountain temple gateway, Tang dynasty fantasy miniature diorama game asset. Three open walk-through bays, layered sweeping curved dark teal glazed tile roof with sculpted bronze phoenix ridge ornaments, intricate carved dark red wooden dougong brackets, weathered granite plinth and carved steps, subtle antique gilded details, realistic stone and aged lacquer, elegant proportions, cinematic handcrafted miniature quality. Complete standalone building, rear and sides equally detailed, no terrain or surrounding scene, no text, neutral albedo without baked dramatic lighting.",
+    "negative_prompt": "toy plastic, crude blocks, flat billboard, floating parts, closed passages, text, oversaturated colors",
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "face_limit": 80000
+  },
+  "bytes": 13941544
+}
