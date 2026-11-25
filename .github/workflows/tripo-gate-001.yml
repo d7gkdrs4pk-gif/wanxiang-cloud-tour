@@ -1,0 +1,63 @@
+name: Tripo Gate 001
+on:
+  push:
+    paths:
+      - '.github/workflows/tripo-gate-001.yml'
+permissions:
+  contents: write
+concurrency:
+  group: tripo-gate-001
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate one asset
+        env:
+          TRIPO_API_KEY: ${{ secrets.TRIPO_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os,json,time,urllib.request,pathlib,struct
+          out=pathlib.Path('fengming-v2-scene-a/assets/gate-001')
+          if (out/'gate.glb').exists(): raise SystemExit('Asset already exists; no charge')
+          out.mkdir(parents=True,exist_ok=True)
+          base='https://openapi.tripo3d.com/v3'
+          def api(path,payload=None):
+              req=urllib.request.Request(base+path, data=json.dumps(payload).encode() if payload is not None else None, headers={'Authorization':'Bearer '+os.environ['TRIPO_API_KEY'],'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=60) as f: a=json.load(f)
+              if a.get('code')!=0: raise RuntimeError('API error code '+str(a.get('code')))
+              return a['data']
+          p={'model':'v3.1-20260211','prompt':'A single ornate ancient Chinese mountain temple gateway, Tang dynasty fantasy miniature diorama game asset. Three open walk-through bays, layered sweeping curved dark teal glazed tile roof with sculpted bronze phoenix ridge ornaments, intricate carved dark red wooden dougong brackets, weathered granite plinth and carved steps, subtle antique gilded details, realistic stone and aged lacquer, elegant proportions, cinematic handcrafted miniature quality. Complete standalone building, rear and sides equally detailed, no terrain or surrounding scene, no text, neutral albedo without baked dramatic lighting.','negative_prompt':'toy plastic, crude blocks, flat billboard, floating parts, closed passages, text, oversaturated colors','texture':True,'pbr':True,'texture_quality':'detailed','geometry_quality':'detailed','face_limit':80000}
+          t=api('/generation/text-to-model',p)['task_id']
+          print('Task ID:',t,flush=True)
+          for i in range(170):
+              a=api('/tasks/'+t)
+              st=a['status']
+              print(st,a.get('progress'),flush=True)
+              if st=='success': break
+              if st in ('failed','cancelled','canceled','unknown','expired'): raise SystemExit('Terminal status '+st)
+              time.sleep(5)
+          else: raise SystemExit('Polling timeout; do not resubmit automatically')
+          url=a['output']['model_url']
+          with urllib.request.urlopen(url,timeout=90) as f: data=f.read(90*1024*1024+1)
+          if len(data)>90*1024*1024 or len(data)<20 or data[:4]!=b'glTF' or struct.unpack_from('<I',data,8)[0]!=len(data): raise SystemExit('Invalid or oversized GLB')
+          (out/'gate.glb').write_bytes(data)
+          (out/'metadata.json').write_text(json.dumps({'task_id':t,'credits_consumed':a.get('credits_consumed'),'request':p,'bytes':len(data)},indent=2))
+          print('GLB verified:',len(data),'bytes; credits:',a.get('credits_consumed'))
+          PY
+      - name: Preserve generated asset
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-001
+          path: fengming-v2-scene-a/assets/gate-001/
+      - name: Save asset to repository
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/gate-001/
+          git commit -m 'Save Tripo gate-001 GLB and provenance'
+          git pull --rebase origin main
+          git push origin HEAD:main
