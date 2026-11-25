@@ -1,0 +1,30 @@
+name: Tripo API Check
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/tripo-check.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify China API authentication without generating assets
+        env:
+          TRIPO_API_KEY: ${{ secrets.TRIPO_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.error
+          key = os.environ.get('TRIPO_API_KEY', '')
+          if not key: raise SystemExit('TRIPO_API_KEY missing')
+          req = urllib.request.Request('https://openapi.tripo3d.com/v3/account/balance', headers={'Authorization': 'Bearer '+key})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  result = json.load(resp)
+          except urllib.error.HTTPError as e:
+              raise SystemExit('Tripo HTTP status: '+str(e.code)) from None
+          if result.get('code') != 0: raise SystemExit('Tripo API returned nonzero code')
+          print('Tripo API authentication verified; no generation requested.')
+          PY
