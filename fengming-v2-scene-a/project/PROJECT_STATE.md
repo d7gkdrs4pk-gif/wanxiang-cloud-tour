@@ -1,7 +1,7 @@
 # 凤鸣山门｜项目状态 V1.19
 当前正式母版：main:fengming-v2-scene-a/index.html
 版本：V2.0 H.17.2，blob 1c6b3f318fed80f4f65c622189835e655e88628e。
-PINE-004／H.20（2026-11-26）：Tripo中国API image_to_multiview已对批准参考图生成front/left/back/right四张1024×1024图；唯一任务64578e00-ce8f-475b-ab01-d899a3b82dad，成功消耗10 credits（¥0.70），GitHub run 45782981013；G0审查：正面S形主干、松针云片与根系保留明显优于PINE-002；侧/背风格初步一致，但AI推断的三维分枝拓扑真实性无法确认，判定“可用于下一轮受控几何试验”，非3D美术通过。此轮没有生成新GLB、没有改游戏、未增加服务器。对照图assets/pine-004/comparison.jpg；报告project/PINE004_MULTIVIEW_QA_V1.md；项目累计220 credits（¥15.40），历史100元预算口径剩余约¥84.60，非实时。
+PINE-004／H.20（2026-11-26）：Tripo中国API image_to_multiview已对批准参考图生成front/left/back/right四张1024×1024图；唯一任务64578e00-ce8f-475b-ab01-d899a3b82dad，成功消耗10 credits（¥0.70），GitHub run 45782981013；G0审查：正面S形主干、松针云片与根系保留明显优于PINE-002；侧/背风格初步一致，但AI推断的三维分枝拓扑真实性无法确认，判定“可用于下一轮受控几何试验”，非3D美术通过。此轮没有生成新GLB、没有改游戏、未增加服务器。对照图assets/pine-004/comparison.jpg；iPhone对照页：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/pine-004-multiview.html（Cloudflare HTML及5张PNG均HTTP 200、内容验证通过，凭证project/PINE004_PREVIEW_DEPLOY.json）；报告project/PINE004_MULTIVIEW_QA_V1.md；项目累计220 credits（¥15.40），历史100元预算口径剩余约¥84.60，非实时。
 试玩：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/?v=h172
 状态：PINE-002已生成并保存GLB（15,274,144字节，48,711三角面，60 credits约4.20元；task 246b5d7a-feda-43ab-90f1-463b203932c9）。H.18新增独立预览pine-002-preview.html，桌面四视角及移动视口Chromium加载通过、0控制台错误，批准参考图与GLB视觉对比不通过：主干偏直立、树冠稀疏且叶团有空心环，松针色偏黄绿，禁止集成。无新建模扣费，正式游戏母版仍为H.17.2；原始私人Drive文件未公开。
 下一任务：PINE-004 G1低费用三维剪影验证——若继续推进，自本轮已成功的多视图task 64578e00-ce8f-475b-ab01-d899a3b82dad复用四视图，采用Tripo H3.1多视图生成无贴图几何（标准精度，官方基础价20 credits约¥1.40），只允许单次付费、保存独立Task ID、先四面剪影验收。不通过立即停止、不买高清贴图；通过后再讨论G2材质与真机性能。严禁把PINE-001/002/003失败版本直接集成游戏。
