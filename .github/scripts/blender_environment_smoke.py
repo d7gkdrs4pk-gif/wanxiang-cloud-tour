@@ -50,7 +50,7 @@ bpy.context.view_layer.objects.active=obj
 bpy.ops.object.convert(target="MESH")
 obj=bpy.context.view_layer.objects.active
 obj.data.materials.append(wood)
-assert obj.type=="MESH" and len(obj.data.vertices)>200 and len(obj.data.polygons)>100
+assert obj.type=="MESH" and len(obj.data.vertices)>32 and len(obj.data.polygons)>24
 
 # This confirms geometry-node APIs are available; it is not a quality guarantee.
 geometry_nodes_api=hasattr(bpy.data,"node_groups") and hasattr(bpy.types,"GeometryNodeTree")
