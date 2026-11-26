@@ -1,6 +1,6 @@
 {
   "task_id": "aafb7992-63e1-4441-a6bb-91ed46264b9d",
   "source_task": "64578e00-ce8f-475b-ab01-d899a3b82dad",
-  "status": "submitted",
-  "g1_visual_review": "pending"
+  "status": "technical_passed_G1_visual_pending",
+  "credits_consumed": 20.0
 }
