@@ -1,0 +1,49 @@
+name: PINE-002 Cloudflare live preview verification
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-002-live-preview-check.yml'
+permissions:
+  contents: write
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify deployed preview and GLB endpoint without generating assets
+        run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.error,json,time,os,pathlib,datetime
+          base='https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/'
+          checks={'preview_url':base+'pine-002-preview.html','model_url':base+'assets/pine-002/pine.glb','status':'not_verified'}
+          for attempt in range(10):
+              try:
+                  req=urllib.request.Request(checks['preview_url'],headers={'User-Agent':'Mozilla/5.0 (PINE002-preview-smoke)'})
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      body=r.read(110000)
+                      preview_status=r.status
+                  if preview_status==200 and b'pine-002/pine.glb' in body and b'GLTFLoader' in body:
+                      req=urllib.request.Request(checks['model_url'],method='HEAD')
+                      with urllib.request.urlopen(req,timeout=20) as r:
+                          model_status=r.status
+                          content_length=r.headers.get('Content-Length')
+                      checks.update({'status':'passed','preview_http':preview_status,'glb_http':model_status,'glb_content_length':content_length})
+                      break
+                  checks.update({'status':'failed','reason':'Preview returned unexpected body or HTTP '+str(preview_status)})
+              except Exception as exc:
+                  checks.update({'status':'failed','reason':str(exc)[:250]})
+              time.sleep(12)
+          checks['checked_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+          p=pathlib.Path('fengming-v2-scene-a/assets/pine-002/live-preview-check.json')
+          p.write_text(json.dumps(checks,ensure_ascii=False,indent=2)+'\n')
+          print('Live preview verification:',checks)
+          PY
+      - name: Save deployment verification as independent evidence
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-002/live-preview-check.json
+          git commit -m "Record PINE-002 Cloudflare live preview HTTP validation"
+          git pull --rebase origin main
+          git push origin HEAD:main
