@@ -1,8 +1,8 @@
-# 凤鸣山门｜项目状态 V1.9
+# 凤鸣山门｜项目状态 V1.10
 当前正式母版：main:fengming-v2-scene-a/index.html
-版本：V2.0 H.15，blob 9cafa482c5f13d0e0fef54cb081d38e5beb1988e。
-试玩：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/?v=h15；测试模式追加 &test=1
+版本：V2.0 H.15.1，blob 290b2fdeecca5fc3103679d539bb465ef195524a。
+试玩：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/?v=h151
 状态：H.15调整光照、曝光、材质补光，新增角色接触阴影；实时阴影仍关闭，待实机验收。H.13桥梁专项24/24通过，导航冻结。
-下一任务：验收H.15光影、黑地形回归及性能，之后九区域差异化建设。
+下一任务：验收柔边迷雾及H.15光影，之后九区域差异化建设。
 120×120、九区域为设计目标；桥梁专项通行通过；其他边界、地图交互及怪物寻路仍需独立验收。当前角色和敌人仍是占位几何体。
 正式母版唯一；旧版本仅归档。每轮增量修改，状态变化后更新本文件。
