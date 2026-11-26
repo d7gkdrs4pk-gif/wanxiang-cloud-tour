@@ -1,0 +1,53 @@
+name: PINE-004 mobile comparison delivery check
+on:
+  push:
+    paths: ['.github/workflows/pine-004-preview-check.yml']
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Cloudflare page and 5 source images without paid API
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,urllib.error,time,datetime
+          from pathlib import Path
+          base='https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/'
+          targets={'html':'pine-004-multiview.html','reference':'assets/pine-002/reference.png',
+                   'front':'assets/pine-004/front.png','left':'assets/pine-004/left.png',
+                   'back':'assets/pine-004/back.png','right':'assets/pine-004/right.png'}
+          result={'status':'not_verified','origin':base,'checked_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'targets':{}}
+          ua='Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15'
+          for i in range(7):
+              all_ok=True
+              for key,route in targets.items():
+                  try:
+                      req=urllib.request.Request(base+route,headers={'User-Agent':ua})
+                      with urllib.request.urlopen(req,timeout=17) as response:
+                          data=response.read(10000)
+                          entry={'http':response.status,'type':response.headers.get('Content-Type')}
+                      entry['content_verified']=(b'PINE-004' in data and b'assets/pine-004/front.png' in data) if key=='html' else data.startswith(b'\x89PNG\r\n\x1a\n')
+                      if not entry['content_verified'] or entry['http']!=200:all_ok=False
+                  except Exception as e:
+                      entry={'error':str(e)[:180],'content_verified':False}
+                      all_ok=False
+                  result['targets'][key]=entry
+              if all_ok:
+                  result['status']='passed';break
+              time.sleep(9)
+          if result['status']!='passed':result['status']='unverified'
+          p=Path('fengming-v2-scene-a/project/PINE004_PREVIEW_DEPLOY.json')
+          p.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
+          print('PINE004_DELIVERY_CHECK',result['status'],result['targets'])
+          PY
+      - name: Save deployment test evidence
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/project/PINE004_PREVIEW_DEPLOY.json
+          git commit -m "Verify PINE-004 comparison viewer and four views on Cloudflare"
+          git pull --rebase origin main
+          git push origin HEAD:main
