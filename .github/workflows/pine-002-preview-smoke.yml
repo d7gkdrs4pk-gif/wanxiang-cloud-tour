@@ -5,7 +5,7 @@ on:
       - '.github/workflows/pine-002-preview-smoke.yml'
       - 'fengming-v2-scene-a/pine-002-preview.html'
 permissions:
-  contents: read
+  contents: write
 jobs:
   browser-check:
     runs-on: ubuntu-latest
@@ -66,8 +66,9 @@ jobs:
               console.log('Browser 3D loaded:',JSON.stringify(stats));
               console.log('Browser console errors:',JSON.stringify(consoleErrors.slice(-10)));
               if(consoleErrors.length)throw Error('Unexpected browser errors: '+consoleErrors.slice(-3).join('; '));
-              fs.writeFileSync(folder+'/preview-smoke.json',JSON.stringify({status:'passed',stats,angles:['front','right','back','double','mobile'],console_errors:consoleErrors.length},null,2));
+              fs.writeFileSync(folder+'/preview-smoke.json',JSON.stringify({status:'passed',run_id:process.env.GITHUB_RUN_ID,stats,angles:['front','right','back','double','mobile'],console_errors:consoleErrors.length},null,2));
             }catch(error){
+              fs.writeFileSync(folder+'/preview-smoke.json',JSON.stringify({status:'failed',run_id:process.env.GITHUB_RUN_ID,reason:error.message,console_errors:consoleErrors.slice(-12)},null,2));
               console.log('Browser failure:',error.message);
               console.log('Console errors:',JSON.stringify(consoleErrors.slice(-12)));
               console.log('HTTP server:',fs.existsSync('/tmp/pine-preview-http.log')?fs.readFileSync('/tmp/pine-preview-http.log','utf-8').slice(-2500):'none');
@@ -114,3 +115,17 @@ jobs:
             fengming-v2-scene-a/assets/pine-002/preview-smoke.json
             fengming-v2-scene-a/assets/pine-002/pine-002-contact-sheet.jpg
           if-no-files-found: ignore
+      - name: Commit only preview QA evidence and job status
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -f fengming-v2-scene-a/assets/pine-002/preview-smoke.json || true
+          git add -f fengming-v2-scene-a/assets/pine-002/proof-*.jpg || true
+          git add -f fengming-v2-scene-a/assets/pine-002/pine-002-contact-sheet.jpg || true
+          if git diff --cached --quiet; then
+            echo 'No QA evidence was generated'; exit 0
+          fi
+          git commit -m "Store PINE-002 standalone browser QA evidence"
+          git pull --rebase origin main
+          git push origin HEAD:main
