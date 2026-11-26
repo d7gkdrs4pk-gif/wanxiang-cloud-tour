@@ -5,7 +5,16 @@
   "visual_status": "NOT_YET_ART_APPROVED",
   "source": "assets/pine-005/h23/pine005-h23-refined.blend",
   "source_glb_sha256": "b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac",
-  "root_case": "removed only below z=1.03; new single anatomical root collar and five asymmetric flattening buttresses",
+  "root_case": "removed only below z=1.03; sampled exact H23 cut contour for seamless basal transition and five asymmetric ground-gripping buttresses",
+  "seam_contour": {
+    "vertices": 161,
+    "center": [
+      -0.5339,
+      0.0927
+    ],
+    "radial_min": 0.723,
+    "radial_max": 0.8677
+  },
   "previous_h24_root_artifact_cause": "not proven; floor-independent closeup and topological evidence included",
   "baseline_topology": {
     "faces": 31660,
@@ -13,7 +22,7 @@
     "nonmanifold_edges": 0
   },
   "new_topology": {
-    "faces": 38948,
+    "faces": 38862,
     "near_zero_area_faces": 0,
     "nonmanifold_edges": 0
   },
@@ -21,51 +30,51 @@
   "root_meshes_joined": 6,
   "root_base_cut_z": 1.03,
   "active_glb_meshes": 14,
-  "fused_body_faces": 38948,
+  "fused_body_faces": 38862,
   "base_voxel_size": 0.046,
   "no_canopy": true,
   "pbr_textures": false,
   "tripo_credits_added": 0,
   "production_game_modified": false,
   "outputs": {
-    "blend_bytes": 3233303,
-    "glb_bytes": 1479876,
-    "glb_sha256": "2ecfa664c450768544023945234f33978aa3f1261f225d0e2b8133c10553b16e",
+    "blend_bytes": 3228905,
+    "glb_bytes": 1476780,
+    "glb_sha256": "a23289cafe322888c2e5600135e0a5ca14bbb5514e122fca6c64c0ba5e3504a1",
     "views": {
       "front": {
-        "bytes": 540779,
-        "sha256": "af3e99587ecec8e8107c97141b25bf3aa4b6255d821078776d7cbe33965a53c2"
+        "bytes": 542280,
+        "sha256": "db37ae94f340210d3db419856458f3afbc9d016db34b81ed7fed93d8d3e7c4b8"
       },
       "right": {
-        "bytes": 559730,
-        "sha256": "40f01ef766673f314a8dd28d9178a9be774c6cd2a4a669c9e231a359f8526b4e"
+        "bytes": 560383,
+        "sha256": "f6d760720969a6c73e16f68a553a9dff7cf9507efc3942833aa473a4d1fe7cab"
       },
       "back": {
-        "bytes": 530313,
-        "sha256": "b825d1af936fce80938c3d500c3cc3e4b511d8eb53552828946253735f5820e8"
+        "bytes": 529950,
+        "sha256": "f3506be4271879c8ff7efa7b83f496db0586929b19a2ef2b704f7eb63aa9e359"
       },
       "top": {
-        "bytes": 698106,
-        "sha256": "9446448c8c8c508e0c20867edb93926eb3c1c981afe991c27a4df4328b337b75"
+        "bytes": 698318,
+        "sha256": "c6a2d24d7d16549ff22ed55bd1773db240c97c96a35a30c710c86fbff96319a9"
       },
       "root_front_close": {
-        "bytes": 696547,
-        "sha256": "b8104c076872929a39889d9cfc42f228d055f1086ac38a155c862351db86748d"
+        "bytes": 699202,
+        "sha256": "7a90d4dba67ec30e67f529b8c65cc29bad46167752a4081dda9f2c8d29297597"
       },
       "root_side_close": {
-        "bytes": 719790,
-        "sha256": "e3f6144cbb97329515eebcce9e67c9f4b52512bfad03a4926c4dee91d01a7a35"
+        "bytes": 725131,
+        "sha256": "1bc3f02ecbde3dc78850220bd754e876c5b76d9ef4ed70e8acb4bade25b689b9"
       },
       "root_no_floor": {
-        "bytes": 545770,
-        "sha256": "ee1ab96ac9a8931667483750c995bc08338d432bd9be8bb62ebb111518b90fbe"
+        "bytes": 550578,
+        "sha256": "5597c8cf218cd1a0f6196928488455f9530771511569a1b8dd2b5fff4460dbf3"
       },
       "silhouette": {
-        "bytes": 415771,
-        "sha256": "e1c85282bcacc13f6f3b0046eb4a1c9f1a8c168ef66ff8857cbebd49abaf6842"
+        "bytes": 416065,
+        "sha256": "95685bfb3f994f8e5a4e0b9aec06024d1e976e7444d1435251b115134986a5ef"
       }
     }
   },
   "evaluation_gate": "visual+watertight before any model promotion",
-  "elapsed_seconds": 27.0
+  "elapsed_seconds": 20.7
 }
