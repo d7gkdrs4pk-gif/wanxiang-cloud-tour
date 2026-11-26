@@ -90,26 +90,43 @@ jobs:
               task_id=record['task_id']
               print('Reusing already submitted task:',task_id,flush=True)
           else:
-              if intent.exists():
-                  raise SystemExit('Generation intent exists but task ID is absent; manual recovery required to avoid duplicate charges')
               balance=call('/account/balance')
               available=float(balance['balance'])
               print('Tripo available credits before submission:',available,flush=True)
               if available < 70:
                   raise SystemExit('Less than 70 credits available; paid generation not submitted')
-              intent.write_text(json.dumps({
-                  'asset':'PINE-002',
-                  'approved_image_blob_sha':expected_blob,
-                  'approved_image_bytes':len(data),
-                  'expected_credits':60,
-                  'github_run_id':os.environ.get('GITHUB_RUN_ID'),
-                  'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                  'status':'prepared_once'
-              },indent=2,ensure_ascii=False)+'\n')
-              commit([intent],'PINE-002 reserve single image-to-model submission')
-              boundary='----pine002'+uuid.uuid4().hex
-              part=(('--'+boundary+'\r\nContent-Disposition: form-data; name="file"; filename="reference.png"\r\nContent-Type: image/png\r\n\r\n').encode()+data+('\r\n--'+boundary+'--\r\n').encode())
-              file_token=call('/files',multipart=(part,boundary))['file_token']
+              if intent.exists():
+                  previous=json.loads(intent.read_text())
+                  if previous.get('github_run_id')!='45774783349' or previous.get('approved_image_blob_sha')!=expected_blob:
+                      raise SystemExit('A different generation intent exists; do not auto-create a second paid task')
+                  print('Recovering confirmed upload timeout before the first paid submission; no task ID exists',flush=True)
+              else:
+                  intent.write_text(json.dumps({
+                      'asset':'PINE-002',
+                      'approved_image_blob_sha':expected_blob,
+                      'approved_image_bytes':len(data),
+                      'expected_credits':60,
+                      'github_run_id':os.environ.get('GITHUB_RUN_ID'),
+                      'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                      'status':'prepared_once'
+                  },indent=2,ensure_ascii=False)+'\n')
+                  commit([intent],'PINE-002 reserve single image-to-model submission')
+              # Official Tripo /files/presign transfers image bytes directly to storage,
+              # avoiding the multipart request-body timeout seen in the first attempt.
+              upload=call('/files/presign',{'format':'png'})
+              put_url=upload.get('presigned_url')
+              file_token=upload.get('file_token')
+              if not isinstance(put_url,str) or not put_url.startswith('https://') or not file_token:
+                  raise SystemExit('Tripo presigned-upload response invalid; paid request not started')
+              transfer=subprocess.run([
+                  'curl','-fSs','--connect-timeout','15','--max-time','180',
+                  '--retry','2','--retry-delay','2','--retry-all-errors',
+                  '-X','PUT','-H','Content-Type: application/octet-stream',
+                  '-T',str(image),put_url
+              ],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+              if transfer.returncode!=0:
+                  raise SystemExit('Presigned storage PUT failed before paid task submission; no automatic retry')
+              print('Approved 2.77 MB reference uploaded to Tripo storage, initiating one paid model task',flush=True)
               task_id=call('/generation/image-to-model',{'input':file_token,**config})['task_id']
               print('Tripo image-to-model task submitted ONCE:',task_id,flush=True)
               marker.write_text(json.dumps({
