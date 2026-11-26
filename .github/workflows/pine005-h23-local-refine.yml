@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/pine005-h23-local-refine.yml'
+      - '.github/scripts/pine005_h23_refine.py'
 permissions:
   contents: write
 concurrency:
