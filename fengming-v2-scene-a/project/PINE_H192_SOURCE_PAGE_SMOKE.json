@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "local_checks": {
+    "4f322c60a8074877879f1dcf5b1ca134": true,
+    "526fa2b9bc344bfdb663d0a16e308b8a": true,
+    "assets/pine-002/reference.png": true,
+    "sketchfab.com/models/": true,
+    "CC Attribution": true
+  },
+  "checked_utc": "2026-11-26T08:21:13.746539+00:00",
+  "url": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/pine-h192-candidates.html",
+  "http": 200,
+  "body_bytes": 8054
+}
