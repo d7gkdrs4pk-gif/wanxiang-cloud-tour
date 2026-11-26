@@ -1,4 +1,4 @@
-name: PINE-003 visual reference QA contact sheet
+name: PINE-003 visual reference QA contact sheet H19.1-v0.2
 on:
   push:
     paths:
