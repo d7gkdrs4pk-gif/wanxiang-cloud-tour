@@ -1,6 +1,20 @@
 {
-  "status": "failed",
-  "run_id": "45777770365",
-  "reason": "page.goto: Timeout 40000ms exceeded.\nCall log:\n  - navigating to \"http://127.0.0.1:8877/fengming-v2-scene-a/pine-002-preview.html\", waiting until \"domcontentloaded\"\n",
-  "console_errors": []
+  "status": "passed",
+  "run_id": "45778232122",
+  "stats": {
+    "desktop": "ready and four angles captured",
+    "mobile": {
+      "canvas": true,
+      "ready": "模型已加载 · 1 网格缩放 5.6 × 4.6 × 6.4（预览单位）帧率 3 FPS（仅供本机参考）",
+      "buttons": 9
+    }
+  },
+  "angles": [
+    "front",
+    "right",
+    "back",
+    "double",
+    "mobile"
+  ],
+  "console_errors": 0
 }
