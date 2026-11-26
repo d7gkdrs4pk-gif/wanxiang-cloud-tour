@@ -53,7 +53,7 @@ def sample_controls(knots,steps=12):
     centers.append(vec(knots[-1][:3]));radii.append(knots[-1][3])
     return centers,radii
 asset_meshes=[]
-def loft(name,knots,material,steps=12,ring=20,rough=.011,cap=True):
+def loft(name,knots,material,steps=12,ring=20,rough=.011,cap=True,vertical_scale=1.0):
     centers,radii=sample_controls(knots,steps)
     ring_points=[];norm=None
     for i,p in enumerate(centers):
@@ -71,7 +71,9 @@ def loft(name,knots,material,steps=12,ring=20,rough=.011,cap=True):
             theta=2*pi*a/ring
             # very subtle longitudinal bark fluting; NEVER repeated rounded lumps
             groove=1+rough*(.48*sin(9*theta+.085*i)+.40*sin(13*theta-.055*i)+.15*sin(3*theta+.021*i))
-            point=p+radii[i]*groove*(cos(theta)*norm+sin(theta)*binorm)
+            offset=cos(theta)*norm+sin(theta)*binorm
+            offset.z*=vertical_scale
+            point=p+radii[i]*groove*offset
             verts.append(tuple(point))
     faces=[]
     for i in range(len(ring_points)-1):
@@ -101,17 +103,17 @@ def loft(name,knots,material,steps=12,ring=20,rough=.011,cap=True):
 # S-turn opening into a long right-leaning main bole, then tighter upper turn.
 # Front view is along -Y; X is reference image horizontal and Z is height.
 trunk=[
- (-.25,.05,.13,.72),(-.42,.10,.65,.70),(-.65,.06,1.25,.64),
- (-.79,.02,1.95,.56),(-.72,.01,2.67,.51),(-.38,.03,3.32,.44),
- (.22,.08,3.87,.375),(.95,.13,4.36,.318),
+ (-.25,.05,.13,.85),(-.42,.10,.65,.81),(-.65,.06,1.25,.74),
+ (-.82,.02,1.95,.65),(-.72,.01,2.67,.57),(-.38,.03,3.32,.485),
+ (.22,.08,3.87,.411),(.95,.13,4.36,.336),
  (1.69,.24,4.78,.275),(2.36,.28,5.25,.235),
- (2.78,.22,5.82,.19),(2.69,.14,6.40,.153),
+ (2.86,.22,5.82,.190),(2.62,.14,6.40,.153),
  (2.96,.03,6.98,.124),(3.35,-.08,7.36,.105),
  (3.66,-.12,7.64,.071)
 ]
 assert all(trunk[i][3]>=trunk[i+1][3] for i in range(len(trunk)-1))
 main,rings,radius_samples=loft("MAIN S-TRUNK — one continuously lofted mesh",trunk,bark,steps=14,ring=32,rough=.032)
-assert rings>150 and max(radius_samples)==.72
+assert rings>150 and max(radius_samples)==.85
 assert all(radius_samples[i]>=radius_samples[i+1]-1e-6 for i in range(len(radius_samples)-1))
 
 # All branch collars originate slightly inside the existing trunk and fan OUT.
@@ -173,7 +175,7 @@ roots=[
  ("right close",[(-.05,-.16,.31,.26),(.61,-.01,.19,.20),(1.16,.30,.09,.12),(1.71,.36,.05,.04)]),
  ("left forward",[(-.55,-.12,.35,.27),(-.86,-.55,.18,.19),(-1.05,-1.15,.08,.11),(-1.42,-1.61,.05,.04)]),
 ]
-for name,pts in roots:loft("ROOT "+name,pts,root_mat,steps=14,ring=17,rough=.014)
+for name,pts in roots:loft("ROOT "+name,pts,root_mat,steps=14,ring=22,rough=.017,vertical_scale=.68)
 
 # One flat studio reference ground is NOT included in GLB and not used as an
 # imaginary root rock pile. Tree geometry alone is exported.
@@ -240,6 +242,7 @@ stats={
  "production_game_changed":False,"tripo_credits":0,
  "trunk":{"construction":"single non-segmented continuous loft surface",
           "ring_count":rings,"cross_section_vertices":32,
+          "basal_radius":.85,"root_vertical_scale":.68,
           "taper_monotonic":True,"no_radial_swelling":True,
           "closed_mesh":True},
  "branches":{"major":len(branches),"secondary":len(twigs)},
