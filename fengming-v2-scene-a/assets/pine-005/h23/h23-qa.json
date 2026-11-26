@@ -1,0 +1,62 @@
+{
+  "asset": "PINE-005",
+  "stage": "H23 local organic sculpt and branch/root fuse",
+  "technical_status": "PASS",
+  "visual_status": "PENDING_HUMAN_QA",
+  "source_blend": "assets/pine-005/pine005-trunk.blend",
+  "source_reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "original_frozen_parts": {
+    "trunk": 1,
+    "branch": 7,
+    "root": 6,
+    "twig": 13
+  },
+  "production_meshes": {
+    "fused_trunk_branch_roots": 1,
+    "separate_twigs": 13
+  },
+  "voxel_size": 0.05,
+  "remeshed_faces_initial": 31660,
+  "remeshed_faces_final": 31660,
+  "geometry_bark_ridge_vertices": 16098,
+  "browser_face_cap_applied": false,
+  "remesh_joint_scope": "trunk+7 main branches+6 primary roots, no twigs",
+  "detail": "sculpted low-relief geometry; no PBR textures or needle canopy",
+  "outputs": {
+    "blend_bytes": 1727395,
+    "glb_bytes": 1217316,
+    "glb_sha256": "091ed899a1ad0f3bc59835273ff3c6ea5e89c9497772a11520b6ad1a54e7a8f4",
+    "meshes": 14,
+    "views": {
+      "front": {
+        "bytes": 521323,
+        "sha256": "12a0a254aa3b0f96b42e54d427b93f443e3edb84846d8d64a45878a8d09a728b"
+      },
+      "right": {
+        "bytes": 534866,
+        "sha256": "d9c3c8d5b9ec61f49c5dd20703e5c040d02f30c09b2447f3e1f33664d03bf646"
+      },
+      "back": {
+        "bytes": 509572,
+        "sha256": "c6a5da26e8c0950e7045cec2e99cd7a1538acb374d000a7063b5fe3e0c162b91"
+      },
+      "top": {
+        "bytes": 666695,
+        "sha256": "13fe6f09682408016607918a3ef4abaecd1cac67bce8e7e9f94bc559eeccdfb6"
+      },
+      "joint-closeup": {
+        "bytes": 570377,
+        "sha256": "3caa2e29d2756ca8ed6718066d663f901ab166c69f1cdb30e6e1671fce30cccf"
+      },
+      "silhouette": {
+        "bytes": 451681,
+        "sha256": "ecd36e0e043c9d8e4ef0c42f5814b14597002de282afa65feceb2dda9e79dc48"
+      }
+    }
+  },
+  "g1a_art_pass": false,
+  "tripo_credits": 0,
+  "formal_game_modified": false,
+  "next_gate": "compare reference / H22 / H23 visual evidence before G1-A decision",
+  "elapsed_seconds": 29.89
+}
