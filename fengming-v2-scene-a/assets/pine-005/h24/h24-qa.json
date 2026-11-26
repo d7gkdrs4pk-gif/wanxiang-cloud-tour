@@ -1,0 +1,66 @@
+{
+  "asset": "PINE-005",
+  "stage": "H24 strict incremental shape correction from H23 mother",
+  "technical_status": "PASS",
+  "visual_status": "PENDING_G1A_VISUAL_REVIEW",
+  "source_blend": "assets/pine-005/h23/pine005-h23-refined.blend",
+  "reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "original_h23_glb_sha256": "b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac",
+  "geometry_operations": {
+    "reverse_regular_grooves_vertices": 15530,
+    "largest_bark_deformation": 0.06953,
+    "root_shaping_vertices": 6946,
+    "max_root_deformation": 0.89126,
+    "bent_limb_vertices": 7453,
+    "max_limb_deformation": 0.16089
+  },
+  "protected": {
+    "no_new_trunk": true,
+    "no_new_roots": true,
+    "same_14_meshes": true,
+    "old_h23_objects_preserved_in_blend": true,
+    "new_canopy": "none",
+    "pbr_textures": "none",
+    "game_integration": false
+  },
+  "outputs": {
+    "blend_bytes": 2932772,
+    "glb_bytes": 1217384,
+    "glb_sha256": "85e9ce11eea5389ac1e151ab1300117d16cacd935f5ce2f439ba5c0c5931547b",
+    "meshes": 14,
+    "views": {
+      "front": {
+        "bytes": 646462,
+        "sha256": "4bb0817e66708bc8c9c7b56a6ba4a2565d0b8ab9afc8b186e5cb45cd7da7d339"
+      },
+      "right": {
+        "bytes": 653380,
+        "sha256": "eb1d88ee7e680457d884db1e078a9900b83c25da8ce17007ea9d705194940118"
+      },
+      "back": {
+        "bytes": 635576,
+        "sha256": "5cb9e4ab5e675a1bdcc51d14be44f13bdb4733cda1123c4abe83510e3dfb3e91"
+      },
+      "top": {
+        "bytes": 655369,
+        "sha256": "51910cfc496601d2ee19ffd36ab0dddb37c085c89b4e8f90ab0f87f33a779a4e"
+      },
+      "root-closeup": {
+        "bytes": 662507,
+        "sha256": "62caa44981370d062b35ecbf98b70a7130a79e6a6b8d00deb2264856d1d412e2"
+      },
+      "joint-closeup": {
+        "bytes": 652084,
+        "sha256": "343bf5aaeb599f6b2641831ea8b8eeb7c34fbb92202cec27376f365a796ab579"
+      },
+      "silhouette": {
+        "bytes": 459138,
+        "sha256": "1df1316c44568c6a238b1640c4fabceab894c6d26b1a606817ced4b4ab66060b"
+      }
+    }
+  },
+  "art_rule": "Continuous authentic old pine trunk, no ridged plastic tube, spike roots, or bulky glued branch collars",
+  "g1a_approved": false,
+  "new_tripo_credits": 0,
+  "elapsed_seconds": 37.66
+}
