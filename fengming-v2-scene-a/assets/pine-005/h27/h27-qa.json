@@ -1,0 +1,70 @@
+{
+  "asset": "PINE-005",
+  "phase": "H27 actual 3D refinement of H26 hero sculpt",
+  "technical_status": "PASS",
+  "visual_status": "PENDING_G1A_VISUAL_REVIEW",
+  "source": "assets/pine-005/h26/pine005-h26-hero.blend",
+  "source_reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "previous_source_glb_sha256": "7b62aaa988d540342529ada4ac42b13e8f9db81128d5b34a18a797c31af6605f",
+  "operations": {
+    "bark_3d_facet_groups_before": 306,
+    "bark_3d_facet_groups_after": 172,
+    "sculpted_core_vertices": 19781,
+    "largest_bark_deformation": 0.0265,
+    "remaining_contact_rocks": 4,
+    "recurved_secondary_twig_vertices": 2060,
+    "body_topology_before": {
+      "faces": 27488,
+      "nonmanifold_edges": 0,
+      "near_zero_faces": 0
+    },
+    "body_topology_after": {
+      "faces": 27488,
+      "nonmanifold_edges": 0,
+      "near_zero_faces": 0
+    }
+  },
+  "materials": "real retained Blender materials / NOT a finished PBR texture",
+  "leaf_canopy": "NOT BUILT",
+  "outputs": {
+    "blend_bytes": 3970987,
+    "glb_bytes": 1197216,
+    "glb_sha256": "f0ac324877d3696c3af4e8fc539fe75b2de5e817aaa2d5a2edab6688b158d5cf",
+    "gltf_meshes": 16,
+    "views": {
+      "front": {
+        "bytes": 581802,
+        "sha256": "e604b1cc8c7d30e7b30ccf5c1040e2971011c65801f1dbfc235e6781f154138a"
+      },
+      "right": {
+        "bytes": 579052,
+        "sha256": "7cb13ae5553a717c13bfbab76447bf64c445fce8b41fc97e934166cc5c95765f"
+      },
+      "back": {
+        "bytes": 567182,
+        "sha256": "aa7124c8368a0309318afa0d1e7e0010d364c93c93abba53d10844d881bb91c4"
+      },
+      "three-quarter": {
+        "bytes": 609864,
+        "sha256": "ea8be2c51b79421d7b89b8c9ce5b8988e31d85a11c5a879b9a989ad7c6df13e8"
+      },
+      "root-close": {
+        "bytes": 752407,
+        "sha256": "93c0557d9653ebd9094517970d7547ebf0af75221dc3f36c40d33ecb49a23f77"
+      },
+      "bark-close": {
+        "bytes": 761618,
+        "sha256": "82e4b45f8fe7ec1c672dd1a2ce07c683ef7deef4962e5d61cd1f9cd6b59fca01"
+      },
+      "top": {
+        "bytes": 718420,
+        "sha256": "5a8e8edc5e9d1f0dae9dd0fdeadf735fc02b759084c0ddde1bdf13c4a53fc78b"
+      }
+    }
+  },
+  "tripo_credits_added": 0,
+  "game_mother_modified": false,
+  "2d_image_substituted_for_mesh": false,
+  "asset_promotion": "BLOCKED until G1-A user visual acceptance",
+  "elapsed_seconds": 35.4
+}
