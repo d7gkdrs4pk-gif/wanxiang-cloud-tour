@@ -6,12 +6,17 @@ on:
       - 'fengming-v2-scene-a/assets/pine-004/g1-metadata.json'
 permissions:
   contents: write
+concurrency:
+  group: pine-004-g1-browser-qa
+  cancel-in-progress: false
 jobs:
   browser-check:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+      - name: Ensure existing G1 GLB is present in this checkout
+        run: test -s fengming-v2-scene-a/assets/pine-004/geometry.glb
       - name: Install headless Chromium
         run: |
           npm install --no-save --no-audit --no-fund playwright
@@ -37,7 +42,7 @@ jobs:
             try{
               const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:40000});
               if(response.status()!==200)throw Error('Preview HTTP status '+response.status());
-              await page.waitForFunction(()=>document.querySelector('#status')?.textContent?.includes('模型已加载'),{timeout:80000});
+              await page.waitForFunction(()=>document.querySelector('#status')?.textContent?.includes('模型已加载'),null,{timeout:90000});
               await page.locator('button[data-view="front"]').click();
               await page.waitForTimeout(1000);
               await page.screenshot({path:folder+'/proof-front.jpg',type:'jpeg',quality:75});
