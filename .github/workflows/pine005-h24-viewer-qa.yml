@@ -1,0 +1,123 @@
+name: H24 PINE-005 root trunk anatomy mobile QA and Cloudflare delivery
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-h24-viewer-qa.yml'
+permissions:
+  contents: write
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 11
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install headless browser
+        run: |
+          npm install --no-save --no-audit --no-fund playwright
+          npx playwright install chromium
+      - name: Confirm mobile viewer loads the actual GLB and QA controls
+        run: |
+          python3 -m http.server 8855 --bind 127.0.0.1 >/tmp/pine005-http.log 2>&1 &
+          sleep 1
+          node - <<'JS'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch({
+              headless:true,args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader',
+              '--enable-unsafe-swiftshader','--disable-dev-shm-usage','--no-sandbox']
+            });
+            const folder='fengming-v2-scene-a/assets/pine-005/h24';
+            const url='http://127.0.0.1:8855/fengming-v2-scene-a/pine-005-h24-preview.html';
+            const errors=[];
+            const out={status:'not_complete',run_id:process.env.GITHUB_RUN_ID,
+              scope:'desktop Chromium and iPhone-sized simulation, NOT physical iPhone',
+              model:'pine005-h24-refined.glb',browser_errors:[]};
+            try{
+              for(const [mode,opts] of Object.entries({
+                desktop:{viewport:{width:1050,height:750},deviceScaleFactor:1},
+                mobile:{viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true}
+              })){
+                const p=await browser.newPage(opts);
+                p.on('pageerror',e=>errors.push(mode+': '+e.message));
+                p.on('console',m=>{if(m.type()==='error')errors.push(mode+': '+m.text());});
+                const response=await p.goto(url,{waitUntil:'domcontentloaded',timeout:35000});
+                if(response.status()!==200)throw Error('Viewer HTML HTTP '+response.status());
+                await p.waitForFunction(()=>window.__PINE005_H24?.loaded===true,null,{timeout:75000});
+                const s=await p.evaluate(()=>window.__PINE005_H24);
+                if(s.meshCount<12)throw Error('Mesh count anomalous '+s.meshCount);
+                await p.locator('button[data-view="front"]').click();
+                await p.waitForTimeout(750);
+                if(mode==='desktop'){
+                  await p.screenshot({path:folder+'/viewer-desktop.jpg',type:'jpeg',quality:72});
+                  for(const angle of ['right','back','top']){
+                    await p.locator('button[data-view="'+angle+'"]').click();
+                    await p.waitForTimeout(270);
+                  }
+                  await p.locator('#double').click();
+                  await p.locator('button[data-view="front"]').click();
+                  await p.waitForTimeout(450);
+                  await p.screenshot({path:folder+'/viewer-silhouette.jpg',type:'jpeg',quality:72});
+                  if(!await p.locator('#double').evaluate(e=>e.classList.contains('on')))throw Error('Silhouette button failed');
+                  await p.locator('#ref').click();
+                  if(!await p.locator('#reference').evaluate(e=>e.classList.contains('visible')))throw Error('Reference overlay failed');
+                }else{
+                  await p.screenshot({path:folder+'/viewer-mobile.jpg',type:'jpeg',quality:69});
+                }
+                out[mode]={loaded:true,meshes:s.meshCount,views:mode==='desktop'?['front','right','back','top']:['front']};
+                await p.close();
+              }
+              if(errors.length)throw Error('Unexpected browser errors: '+errors.slice(0,4).join('; '));
+              out.status='browser_technical_passed_visual_review_pending';
+              out.browser_errors=[];
+            }catch(e){
+              out.status='failed';out.reason=e.message;out.browser_errors=errors.slice(0,12);
+            }
+            fs.writeFileSync(folder+'/viewer-smoke.json',JSON.stringify(out,null,2)+'\n');
+            console.log('PINE005_VIEWER',JSON.stringify(out));
+            await browser.close();
+            if(out.status==='failed')process.exit(1);
+          })().catch(e=>{console.error(e);process.exit(1)});
+          JS
+      - name: Check Cloudflare online page and model only
+        if: success()
+        run: |
+          python3 - <<'PY'
+          import urllib.request,time,json
+          from pathlib import Path
+          base='https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/'
+          items={'preview':'pine-005-h24-preview.html','model':'assets/pine-005/h24/pine005-h24-refined.glb'}
+          result={'status':'unverified','items':{}}
+          for i in range(6):
+              good=True
+              for key,rel in items.items():
+                  try:
+                      req=urllib.request.Request(base+rel,headers={'User-Agent':'Mozilla/5.0'})
+                      with urllib.request.urlopen(req,timeout=20) as r:
+                          data=r.read(1400000)
+                          ok=r.status==200 and (b'PINE-005' in data if key=='preview' else data.startswith(b'glTF'))
+                          result['items'][key]={'http':r.status,'ok':ok,'bytes_fetched':len(data)}
+                          if not ok:good=False
+                  except Exception as e:
+                      result['items'][key]={'error':str(e)[:220]}
+                      good=False
+              if good:
+                  result['status']='passed';break
+              time.sleep(10)
+          p=Path('fengming-v2-scene-a/assets/pine-005/h24/viewer-cloudflare.json')
+          p.write_text(json.dumps(result,indent=2)+'\n')
+          print('PINE005_CLOUDFLARE',result)
+          PY
+      - name: Commit just viewer QA diagnostics
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/h24/viewer-*.jpg || true
+          git add fengming-v2-scene-a/assets/pine-005/h24/viewer-*.json || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'H24 store trunk root geometry mobile browser and Cloudflare QA evidence'
+          git pull --rebase origin main
+          git push origin HEAD:main
