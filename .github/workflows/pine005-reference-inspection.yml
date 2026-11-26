@@ -1,0 +1,49 @@
+name: H22 inspect original approved pine reference at reduced size
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-reference-inspection.yml'
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate approved image and create exact-source QA preview
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import subprocess,base64,hashlib,json
+          source=Path('fengming-v2-scene-a/assets/pine-002/reference.png')
+          expect='9e204263823ca9f40d46737dca5c1ee0a28a73a8'
+          actual=subprocess.check_output(['git','hash-object',str(source)],text=True).strip()
+          if actual!=expect:raise SystemExit('Approved reference changed; abort!')
+          with Image.open(source) as original:
+              assert original.size==(1536,1024)
+              img=original.convert('RGB')
+              img.thumbnail((960,640))
+          root=Path('fengming-v2-scene-a/assets/pine-005')
+          root.mkdir(parents=True,exist_ok=True)
+          pic=root/'reference-inspection.jpg'
+          img.save(pic,quality=77,optimize=True)
+          (root/'reference-inspection.b64.txt').write_text(base64.b64encode(pic.read_bytes()).decode('ascii'))
+          (root/'reference-source.json').write_text(json.dumps({
+              'source':str(source),'approved_git_blob':actual,'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+              'native_size':[1536,1024],'inspection_preview':str(pic),'inspection_size':list(img.size),
+              'tripo_credits':0
+          },indent=2)+'\n')
+          PY
+      - name: Commit only source inspection evidence
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/reference-*
+          git commit -m 'H22 verify and inspect exact approved PINE reference image without model generation'
+          git pull --rebase origin main
+          git push origin HEAD:main
