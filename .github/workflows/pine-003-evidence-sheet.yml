@@ -1,0 +1,54 @@
+name: PINE-003 visual reference QA contact sheet
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-003-evidence-sheet.yml'
+permissions:
+  contents: write
+jobs:
+  visualize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare approved reference and procedural model views
+        run: |
+          python3 -m pip install --quiet --break-system-packages Pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageDraw
+          import base64
+          root=Path('fengming-v2-scene-a/assets/pine-003')
+          ref=Path('fengming-v2-scene-a/assets/pine-002/approved-reference-qa.jpg')
+          pairs=[('APPROVED REFERENCE',ref),('PINE-003 FRONT',root/'front.jpg'),
+                 ('RIGHT',root/'right.jpg'),('BACK',root/'back.jpg'),
+                 ('TOP',root/'top.jpg'),('SILHOUETTE',root/'silhouette.jpg')]
+          width,height=1220,1275
+          out=Image.new('RGB',(width,height),(26,36,40))
+          d=ImageDraw.Draw(out)
+          for i,(title,path) in enumerate(pairs):
+              if not path.exists():raise SystemExit('Required visual proof not found: '+str(path))
+              photo=Image.open(path).convert('RGB')
+              photo.thumbnail((584,380))
+              left=16+(i%2)*606;top=17+(i//2)*420
+              x=left+(584-photo.width)//2
+              y=top+28+(380-photo.height)//2
+              out.paste(photo,(x,y))
+              d.text((left+5,top+5),title,fill=(239,223,190))
+          sheet=root/'pine-003-compare-v01.jpg'
+          out.save(sheet,'JPEG',quality=78,optimize=True)
+          (root/'pine-003-compare-v01.b64.txt').write_text(base64.b64encode(sheet.read_bytes()).decode('ascii'))
+          front=root/'front.jpg'
+          (root/'front.b64.txt').write_text(base64.b64encode(front.read_bytes()).decode('ascii'))
+          print('Contact sheet bytes',sheet.stat().st_size,'reference',ref.stat().st_size)
+          PY
+      - name: Save independent QA evidence
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-003/pine-003-compare-v01.jpg
+          git add fengming-v2-scene-a/assets/pine-003/pine-003-compare-v01.b64.txt
+          git add fengming-v2-scene-a/assets/pine-003/front.b64.txt
+          git commit -m "Preserve PINE-003 visual contact sheet against approved ancient pine reference"
+          git pull --rebase origin main
+          git push origin HEAD:main
