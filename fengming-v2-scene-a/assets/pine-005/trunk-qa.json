@@ -1,0 +1,64 @@
+{
+  "asset": "PINE-005",
+  "phase": "H.22 G1-A trunk and major branches only",
+  "technical_status": "PASS",
+  "visual_status": "PENDING_HUMAN_QA",
+  "source": "assets/pine-002/reference.png",
+  "approved_reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "blender_version": "4.0.2",
+  "production_game_changed": false,
+  "tripo_credits": 0,
+  "trunk": {
+    "construction": "single non-segmented continuous loft surface",
+    "ring_count": 197,
+    "cross_section_vertices": 32,
+    "taper_monotonic": true,
+    "no_radial_swelling": true,
+    "closed_mesh": true
+  },
+  "branches": {
+    "major": 7,
+    "secondary": 13
+  },
+  "roots": {
+    "count": 6,
+    "individually_editable": true
+  },
+  "canopy": "NOT MADE; G1-B blocked until G1-A visual pass",
+  "mesh_object_count": 27,
+  "glb_mesh_count": 27,
+  "blend_bytes": 521282,
+  "glb_bytes": 609108,
+  "glb_sha256": "f2182238dbcd203676c9a7325e8eccc56accbca1de438556d34a400ce55ae218",
+  "views": {
+    "front": {
+      "bytes": 555561,
+      "sha256": "56e1d202c527d7d895da72c561a74de3c796f6afd6c579889b0e63df983c2122"
+    },
+    "right": {
+      "bytes": 589735,
+      "sha256": "4f98938db80a8900a1667801cc4c7b6cc6a85126a32c40a33ed38ce0f3076a94"
+    },
+    "back": {
+      "bytes": 541736,
+      "sha256": "fa1e65e6c0ce9460871296cc12e1af33eba9913430fb901dfd4b79f4ad3bd5d9"
+    },
+    "top": {
+      "bytes": 767281,
+      "sha256": "b66d2b806440eaa9d9546c46f7c006204066d24885a2f229f35dc0abb4a4a296"
+    }
+  },
+  "silhouette": "trunk-silhouette.png",
+  "image_resolution": [
+    850,
+    850
+  ],
+  "g1a_hard_rules": [
+    "trunk must not look like separated rope coils / fused blobs",
+    "sweeping muscular S form must match approved front reference",
+    "branch junctions need realistic attachment and tapered outward structure",
+    "roots must be distinct, not fused muddy rock mass",
+    "no tree canopy until trunk approved"
+  ],
+  "elapsed_seconds": 10.1
+}
