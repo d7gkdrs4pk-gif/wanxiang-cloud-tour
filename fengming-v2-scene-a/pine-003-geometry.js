@@ -66,10 +66,15 @@ export function createPine003(seed=20261126){
  const layers={trunk:new T.Group(),branches:new T.Group(),needleClusters:new T.Group(),rockAndRoots:new T.Group()};
  for(const [name,g] of Object.entries(layers)){g.name=name;model.add(g);}
  const woodMat=new T.MeshStandardMaterial({map:bark(),color:0xb7a48f,roughness:1,metalness:0});
- layers.trunk.add(wood(trunkPts,[.56,.54,.50,.46,.42,.37,.31,.27,.23,.18,.14,.10,.05],woodMat,95,13));
+ layers.trunk.add(wood(trunkPts,[.68,.65,.59,.54,.47,.41,.36,.30,.26,.21,.15,.10,.05],woodMat,95,13));
  for(const pts of branchPts){
-   const radii=pts.map((_,i)=>.19*Math.pow(1-i/pts.length,1.3)+.018);
+   const radii=pts.map((_,i)=>.25*Math.pow(1-i/pts.length,1.15)+.028);
    layers.branches.add(wood(pts,radii,woodMat,38,8));
+   const end=pts[pts.length-1];
+   for(let j=-1;j<=1;j++){
+     const twig=[end,[end[0]+j*.33,end[1]+.13+(j===0?.09:0),end[2]+j*.42]];
+     layers.branches.add(wood(twig,[.038,.008],woodMat,11,6));
+   }
  }
  const roots=[
   [[-.83,.24,.04],[-1.60,.15,.25],[-2.35,.03,.50]],
@@ -84,25 +89,27 @@ export function createPine003(seed=20261126){
  const gRock=new T.IcosahedronGeometry(1,1),rockMats=[0x6d7670,0x82847a,0x5a645f,0x949487].map(color=>new T.MeshStandardMaterial({color,roughness:1,flatShading:true}));
  const rockList=[[-1.67,-.18,.47,.69,.33,.54],[.76,-.19,1.03,.72,.30,.54],[1.10,-.18,-.66,.72,.34,.63],[-1.72,-.15,-.63,.72,.28,.62],[-.68,-.17,1.31,.61,.30,.52],[-2.21,-.17,.79,.62,.30,.57],[.30,-.17,-1.33,.79,.26,.54],[1.62,-.18,.33,.63,.28,.59]];
  rockList.forEach(([x,y,z,sx,sy,sz],i)=>{const m=new T.Mesh(gRock,rockMats[i%4]);m.position.set(x,y,z);m.scale.set(sx,sy,sz);m.rotation.y=i*.87;layers.rockAndRoots.add(m);});
- const needleColors=[0x163c2d,0x23523a,0x2e6042,0x3d6647,0x456d48,0x617c50,0x304d39].map(c=>new T.Color(c));
+ const needleColors=[0x204a36,0x2b5a40,0x3c6a47,0x547652,0x69855b,0x7b9162,0x30523b].map(c=>new T.Color(c));
  const blades=[];
  // Spread needles over filled elliptical pads; no ring geometry or foam spheres.
  for(const [cx,cy,cz,rx,rz] of pads){
    for(let i=0;i<690;i++){
      const angle=r()*Math.PI*2,d=Math.sqrt(r())*.98;
-     const x=cx+Math.cos(angle)*d*rx,z=cz+Math.sin(angle)*d*rz;
-     const y=cy+.12-.28*d*d+.04*Math.cos(angle*9+cx*3)+(r()-.5)*.14;
-     const normal=V(Math.cos(angle)*(.2+.6*d)+(r()-.5)*.7,.64+r()*.42,Math.sin(angle)*(.2+.6*d)+(r()-.5)*.7).normalize();
-     blades.push({p:V(x,y,z),q:new T.Quaternion().setFromUnitVectors(V(0,1,0),normal),scale:.20+r()*.18,width:.75+r()*.7,color:needleColors[Math.floor(r()*needleColors.length)]});
+     const lobe=i%5;
+     const x=cx+Math.cos(angle)*d*rx*.87+(lobe-2)*rx*.08;
+     const z=cz+Math.sin(angle)*d*rz*1.48+(lobe%3-1)*.18;
+     const y=cy+.11+.23*(1-d*d)+.095*Math.cos(angle*6+cx*2.9)+(r()-.5)*.34;
+     const normal=V(Math.cos(angle)*(.25+.68*d)+(r()-.5)*.78,.4+r()*.68,Math.sin(angle)*(.23+.66*d)+(r()-.5)*.74).normalize();
+     blades.push({p:V(x,y,z),q:new T.Quaternion().setFromUnitVectors(V(0,1,0),normal),scale:.22+r()*.22,width:.67+r()*.66,color:needleColors[Math.floor(r()*needleColors.length)]});
    }
  }
  for(let i=blades.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[blades[i],blades[j]]=[blades[j],blades[i]];}
- const foliage=new T.InstancedMesh(needleGeo(),new T.MeshStandardMaterial({color:0xffffff,roughness:.95,metalness:0,side:T.DoubleSide,flatShading:true}),blades.length);
+ const foliage=new T.InstancedMesh(needleGeo(),new T.MeshStandardMaterial({color:0xffffff,roughness:.94,metalness:0,emissive:0x102114,emissiveIntensity:.20,side:T.DoubleSide,flatShading:true}),blades.length);
  const matrix=new T.Matrix4();
  blades.forEach((b,i)=>{matrix.compose(b.p,b.q,V(b.width,b.scale,b.width));foliage.setMatrixAt(i,matrix);foliage.setColorAt(i,b.color);});
  foliage.instanceMatrix.needsUpdate=true;foliage.instanceColor.needsUpdate=true;foliage.frustumCulled=false;
  foliage.name='solid-pine-needle-bundles';layers.needleClusters.add(foliage);
- model.userData={asset:'PINE-003',version:'H.19.1-v0.1',credits:0,needles:blades.length,pads:pads.length,branches:branchPts.length,kind:'prototype-only'};
+ model.userData={asset:'PINE-003',version:'H.19.1-v0.2',credits:0,needles:blades.length,pads:pads.length,branches:branchPts.length,kind:'prototype-only'};
  return {model,layers,foliage,stats:model.userData,
   setDensity(v){foliage.count=Math.floor(blades.length*Math.max(.3,Math.min(1,Number(v))));return foliage.count;},
   setSilhouette(on){model.traverse(o=>{if(!o.isMesh)return;if(!o.userData.savedMaterial)o.userData.savedMaterial=o.material;if(on){if(!o.userData.shadowMat)o.userData.shadowMat=new T.MeshBasicMaterial({color:0x091214,side:T.DoubleSide});o.material=o.userData.shadowMat;}else o.material=o.userData.savedMaterial;});}
