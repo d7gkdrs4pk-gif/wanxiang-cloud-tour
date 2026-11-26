@@ -1,6 +1,8 @@
 {
   "task_id": "aafb7992-63e1-4441-a6bb-91ed46264b9d",
   "source_task": "64578e00-ce8f-475b-ab01-d899a3b82dad",
-  "status": "technical_passed_G1_visual_pending",
-  "credits_consumed": 20.0
+  "status": "generated_technical_passed_G1_visual_failed",
+  "credits_consumed": 20,
+  "g1_visual_review": "failed",
+  "report": "project/PINE004_G1_GEOMETRY_QA_V1.md"
 }
