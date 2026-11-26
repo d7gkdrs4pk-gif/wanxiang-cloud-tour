@@ -1,7 +1,18 @@
 {
+  "status": "passed",
+  "attempts": [
+    {
+      "host": "cloudflare",
+      "attempt": 1,
+      "preview_http": 200,
+      "html_matches": true,
+      "model_http": 200,
+      "model_content_type": "model/gltf-binary",
+      "glb_magic_ok": true
+    }
+  ],
+  "verified_host": "cloudflare",
   "preview_url": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/pine-002-preview.html",
   "model_url": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/assets/pine-002/pine.glb",
-  "status": "failed",
-  "reason": "HTTP Error 403: Forbidden",
-  "checked_utc": "2026-11-26T07:56:43.989726+00:00"
+  "checked_utc": "2026-11-26T07:57:39.387082+00:00"
 }
