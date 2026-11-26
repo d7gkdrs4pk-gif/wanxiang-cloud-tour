@@ -1,0 +1,24 @@
+{
+  "status": "browser_technical_passed_visual_review_pending",
+  "run_id": "45840902437",
+  "scope": "desktop Chromium and iPhone-sized simulation, NOT physical iPhone",
+  "model": "pine005-h25-roots.glb",
+  "browser_errors": [],
+  "desktop": {
+    "loaded": true,
+    "meshes": 14,
+    "views": [
+      "front",
+      "right",
+      "back",
+      "top"
+    ]
+  },
+  "mobile": {
+    "loaded": true,
+    "meshes": 14,
+    "views": [
+      "front"
+    ]
+  }
+}
