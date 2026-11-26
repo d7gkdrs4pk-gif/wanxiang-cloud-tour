@@ -2,7 +2,7 @@
   "asset": "PINE-005",
   "stage": "H24 strict incremental shape correction from H23 mother",
   "technical_status": "PASS",
-  "visual_status": "PENDING_G1A_VISUAL_REVIEW",
+  "visual_status": "G1A_NOT_APPROVED",
   "source_blend": "assets/pine-005/h23/pine005-h23-refined.blend",
   "reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
   "original_h23_glb_sha256": "b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac",
@@ -62,5 +62,26 @@
   "art_rule": "Continuous authentic old pine trunk, no ridged plastic tube, spike roots, or bulky glued branch collars",
   "g1a_approved": false,
   "new_tripo_credits": 0,
-  "elapsed_seconds": 37.66
+  "elapsed_seconds": 37.66,
+  "visual_review": {
+    "report": "project/PINE005_H24_VISUAL_QA_V1.md",
+    "observed": [
+      "regular_grooves_reduced_not_eliminated",
+      "primary_limbs_slightly_less_straight",
+      "radial_root_spikes_remain",
+      "root_closeup_triangular_surface_artifact_unresolved"
+    ],
+    "root_triangle_diagnosis": "unknown; mesh fold or render normal/lighting artifact possible",
+    "formal_asset_mother": "assets/pine-005/h23/pine005-h23-refined.blend",
+    "H24_model_role": "rejected_experimental_candidate",
+    "next_task": "H25 root-only topology and appearance diagnostic based on H23, no canopy or textures",
+    "allow_paid_calls": false,
+    "allow_game_integration": false
+  },
+  "viewer": {
+    "browser_qa": "assets/pine-005/h24/viewer-smoke.json",
+    "delivery_qa": "assets/pine-005/h24/viewer-cloudflare.json",
+    "run_id": "45838976275",
+    "status": "passed_mobile_sized_simulation_not_physical_iPhone"
+  }
 }
