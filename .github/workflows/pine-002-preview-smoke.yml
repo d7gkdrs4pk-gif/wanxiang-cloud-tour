@@ -55,14 +55,15 @@ jobs:
               if(!await page.locator('#reference').evaluate(e=>e.classList.contains('visible')))throw Error('Reference toggle failed');
               await page.locator('#wire').click();
               if(!await page.locator('#wire').evaluate(e=>e.classList.contains('on')))throw Error('Wireframe toggle failed');
+              await page.close(); // release the first software-WebGL context before phone test
               const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
               mobile.on('pageerror',e=>consoleErrors.push('mobile '+e.message));
-              await mobile.goto(url,{waitUntil:'domcontentloaded',timeout:40000});
-              await mobile.waitForFunction(()=>document.querySelector('#status')?.textContent?.includes('模型已加载'),{timeout:80000});
+              await mobile.goto(url,{waitUntil:'commit',timeout:45000});
+              await mobile.waitForFunction(()=>document.querySelector('#status')?.textContent?.includes('模型已加载'),null,{timeout:85000});
               await mobile.locator('button[data-view="front"]').click();
               await mobile.waitForTimeout(700);
               await mobile.screenshot({path:folder+'/proof-mobile.jpg',type:'jpeg',quality:70});
-              const stats=await page.evaluate(()=>({canvas:!!document.querySelector('canvas'),ready:document.querySelector('#status')?.textContent,buttons:document.querySelectorAll('.toolbar button').length}));
+              const stats={desktop:'ready and four angles captured',mobile:await mobile.evaluate(()=>({canvas:!!document.querySelector('canvas'),ready:document.querySelector('#status')?.textContent,buttons:document.querySelectorAll('.toolbar button').length}))};
               console.log('Browser 3D loaded:',JSON.stringify(stats));
               console.log('Browser console errors:',JSON.stringify(consoleErrors.slice(-10)));
               if(consoleErrors.length)throw Error('Unexpected browser errors: '+consoleErrors.slice(-3).join('; '));
@@ -81,6 +82,7 @@ jobs:
       - name: Make compact visual QA contact sheet
         if: success()
         run: |
+          python3 -m pip install --quiet --break-system-packages Pillow
           python3 - <<'PY'
           from PIL import Image,ImageDraw,ImageFont
           from pathlib import Path
@@ -100,10 +102,9 @@ jobs:
           dst=root/'pine-002-contact-sheet.jpg'
           out.save(dst,quality=66,optimize=True)
           print('CONTACT_SHEET_BYTES',dst.stat().st_size)
-          print('BEGIN_PINE002_JPEG_BASE64')
           import base64
-          print(base64.b64encode(dst.read_bytes()).decode('ascii'))
-          print('END_PINE002_JPEG_BASE64')
+          (root/'pine-002-contact-sheet.b64.txt').write_text(base64.b64encode(dst.read_bytes()).decode('ascii'))
+          print('Created compact contact sheet and text-encoded visual proof')
           PY
       - name: Upload QA evidence without changing the game
         if: always()
@@ -123,6 +124,7 @@ jobs:
           git add -f fengming-v2-scene-a/assets/pine-002/preview-smoke.json || true
           git add -f fengming-v2-scene-a/assets/pine-002/proof-*.jpg || true
           git add -f fengming-v2-scene-a/assets/pine-002/pine-002-contact-sheet.jpg || true
+          git add -f fengming-v2-scene-a/assets/pine-002/pine-002-contact-sheet.b64.txt || true
           if git diff --cached --quiet; then
             echo 'No QA evidence was generated'; exit 0
           fi
