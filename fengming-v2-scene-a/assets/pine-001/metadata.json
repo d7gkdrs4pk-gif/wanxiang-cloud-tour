@@ -1,0 +1,15 @@
+{
+  "task_id": "cab95052-05f5-4784-bfee-8827ec7f78c8",
+  "credits_consumed": 50.0,
+  "request": {
+    "model": "v3.1-20260211",
+    "prompt": "Single standalone ancient Chinese mountain pine, dramatic twisted weathered trunk, exposed roots, layered broad horizontal dense dark jade needle canopies, intricate bark and natural asymmetrical branching, elegant East Asian miniature landscape diorama, realistic PBR textures, complete 360 degree game prop, compact base, no ground slab, no scenery, no text, no baked lighting",
+    "negative_prompt": "plastic toy, geometric balls, flat billboard, floating branches, multiple trees, terrain, text",
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "face_limit": 80000
+  },
+  "bytes": 13081296
+}
