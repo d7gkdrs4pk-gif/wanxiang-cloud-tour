@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "run_id": "45784561052",
+  "reason": "page.waitForFunction: Timeout 30000ms exceeded.",
+  "console_errors": [
+    "console Failed to load resource: the server responded with a status of 404 (File not found)",
+    "console PINE-004 G1 GLB load failed HttpError: fetch for \"http://127.0.0.1:8877/fengming-v2-scene-a/assets/pine-004/geometry.glb\" responded with 404: File not found\n    at https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js:44921:12"
+  ]
+}
