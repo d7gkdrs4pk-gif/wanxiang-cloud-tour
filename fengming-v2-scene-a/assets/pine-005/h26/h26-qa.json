@@ -1,0 +1,76 @@
+{
+  "asset": "PINE-005",
+  "stage": "H26 new custom high-fidelity hero bole and grounded roots",
+  "technical_status": "PASS",
+  "visual_status": "PENDING_G1A_VISUAL_JUDGEMENT",
+  "reference_source": "assets/pine-002/reference.png",
+  "reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "archived_formal_source": "assets/pine-005/h23/pine005-h23-refined.blend",
+  "blender_version": "4.0.2",
+  "trunk": {
+    "construction": "new individually sculpted muscular asymmetric S-loft",
+    "basal_radius": 1.42,
+    "prior_h23_basal_radius": 0.85,
+    "extent_height": 7.7,
+    "core_faces": 27488,
+    "core_nonmanifold_edges": 0,
+    "core_zero_area_faces": 0
+  },
+  "roots": {
+    "wide_anatomical_buttresses": 6,
+    "contact_rocks": 6,
+    "fused_into_trunk": true,
+    "no_separate_sleeve_root_collars": true
+  },
+  "branches": {
+    "major": 6,
+    "twig_offshoots": 10
+  },
+  "bark": {
+    "geometry_shard_facets": 2448,
+    "colored_materials": "neutral natural bark clay (not photographic PBR texture)",
+    "flute_pattern": "none"
+  },
+  "textures": "NO NEW PBR/MAPS, G1-A GEOMETRY ONLY",
+  "foliage": "NOT STARTED until G1-A passed",
+  "glb": {
+    "bytes": 1297288,
+    "sha256": "7b62aaa988d540342529ada4ac42b13e8f9db81128d5b34a18a797c31af6605f",
+    "mesh_count": 18
+  },
+  "blend_bytes": 2866849,
+  "qa_views": {
+    "front": {
+      "bytes": 748789,
+      "sha256": "4ebb8bd963e11574c795d24a9c9fcf011ba99edd9da70ad8091b2b6b6d83b105"
+    },
+    "right": {
+      "bytes": 735604,
+      "sha256": "c447d8d259c122ffa7de430136fc9ce2aebac358f80b3ce3ecf775069c54dd3d"
+    },
+    "back": {
+      "bytes": 722835,
+      "sha256": "a2a6b40736301fe125e63ce6991a3cda8f6014c2f85a9f1010e55ae6c4d9928a"
+    },
+    "three-quarter": {
+      "bytes": 781687,
+      "sha256": "699c74913397bd8d504324c546be8f25d59d25b84856ecbc398509b3f4254ac2"
+    },
+    "root-close": {
+      "bytes": 985512,
+      "sha256": "cca829cf9da0e67f2960d9280b803efe083b73eeb0fa70e8b26784899eed774c"
+    },
+    "top": {
+      "bytes": 914370,
+      "sha256": "67b9b6ec979a9508e35580184e8db38d319a87a7279dcb3e6e1ef7d945684acf"
+    },
+    "silhouette": {
+      "bytes": 668223,
+      "sha256": "42960e92d85ccd1b476584cd992d15352538881177afd6c2709d4cc820a4043c"
+    }
+  },
+  "tripo_credits": 0,
+  "production_game_modified": false,
+  "promotion_to_formal_asset": "BLOCKED_UNTIL_VISUAL_REVIEW",
+  "elapsed_seconds": 57.5
+}
