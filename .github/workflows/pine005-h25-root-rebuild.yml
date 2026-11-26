@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/pine005-h25-root-rebuild.yml'
+      - '.github/scripts/pine005_h25_root_rebuild.py'
 permissions:
   contents: write
 concurrency:
