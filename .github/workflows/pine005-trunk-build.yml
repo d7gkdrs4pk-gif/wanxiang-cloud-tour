@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/pine005-trunk-build.yml'
+      - '.github/scripts/pine005_trunk.py'
 permissions:
   contents: write
 concurrency:
