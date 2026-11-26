@@ -56,6 +56,32 @@ bmesh.ops.bisect_plane(bm,geom=geom,dist=.0001,
     clear_inner=True,clear_outer=False)
 boundary=[e for e in bm.edges if e.is_boundary]
 assert 8<len(boundary)<600,("unexpected cut boundary",len(boundary))
+# Exact seam cross section from the PREVIOUS body's own cut contour. Matching
+# this radial profile, rather than joining an unrelated smooth cylinder, stops
+# the obvious bark-to-collar 'sleeve' line found in first H25 contact sheet.
+seam_vertices=list({v for e in boundary for v in e.verts
+                    if abs(v.co.z-cut_height)<.018})
+assert len(seam_vertices)>=12,len(seam_vertices)
+seam_cx=sum(v.co.x for v in seam_vertices)/len(seam_vertices)
+seam_cy=sum(v.co.y for v in seam_vertices)/len(seam_vertices)
+seam_profile=sorted([
+    (math.atan2(v.co.y-seam_cy,v.co.x-seam_cx)%(2*pi),
+     math.hypot(v.co.x-seam_cx,v.co.y-seam_cy))
+    for v in seam_vertices])
+assert min(r for _,r in seam_profile)>.2
+def seam_radius(theta):
+    t=theta%(2*pi)
+    vals=seam_profile
+    for i in range(len(vals)):
+        j=(i+1)%len(vals)
+        a,r=vals[i]
+        b,s=vals[j]
+        if j==0:b+=2*pi
+        needle=t if t>=a else t+2*pi
+        if a<=needle<=b:
+            f=(needle-a)/max(.00001,b-a)
+            return r*(1-f)+s*f
+    return sum(r for _,r in vals)/len(vals)
 bmesh.ops.holes_fill(bm,edges=boundary,sides=0)
 assert len(bm.faces)>5000
 bm.to_mesh(body.data);bm.free()
@@ -76,15 +102,25 @@ def stump():
     n=64
     for j,(z,r) in enumerate(zip(heights,widths)):
         shift=(-.25-.35*max(0,(z-.04)/1.40), .065)
+        match=0.0 if z<=.46 else min(1.0,(z-.46)/(.57))
+        match=match*match*(3-2*match)
+        if z>=cut_height: match=1.0
+        # At the cut, center/radius MUST match the old H23 contour exactly;
+        # below it, transition smoothly into a broad asymmetrical buttress.
+        sx=shift[0]*(1-match)+seam_cx*match
+        sy=shift[1]*(1-match)+seam_cy*match
         for k in range(n):
             theta=2*pi*k/n
-            # broad asymmetric buttress lobes (NOT a regular 6-way star).
             rside=1+.068*sin(3*theta+.30)+.044*sin(5*theta-1.12)
             rside+=.03*noise.noise(Vector((theta*.8+.7,z*.9,2.4)))
-            rr=r*rside
-            zz=z+.035*(1-z/1.45)*sin(2*theta+.2)
+            radius_old=seam_radius(theta)
+            if z<=cut_height:
+                rr=(r*rside)*(1-match)+radius_old*match
+            else:
+                rr=radius_old*(1-.15*min(1,(z-cut_height)/.36))
+            zz=z+.035*(1-match)*sin(2*theta+.2)
             zz=max(.035,zz)
-            verts.append((shift[0]+rr*cos(theta),shift[1]+rr*sin(theta),zz))
+            verts.append((sx+rr*cos(theta),sy+rr*sin(theta),zz))
         if j:
             for k in range(n):
                 a=(j-1)*n+k;b=(j-1)*n+(k+1)%n
@@ -289,7 +325,8 @@ report={
  "technical_status":technical_status,"visual_status":"NOT_YET_ART_APPROVED",
  "source":"assets/pine-005/h23/pine005-h23-refined.blend",
  "source_glb_sha256":"b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac",
- "root_case":"removed only below z=1.03; new single anatomical root collar and five asymmetric flattening buttresses",
+ "root_case":"removed only below z=1.03; sampled exact H23 cut contour for seamless basal transition and five asymmetric ground-gripping buttresses",
+ "seam_contour":{"vertices":len(seam_vertices),"center":[round(seam_cx,4),round(seam_cy,4)],"radial_min":round(min(r for _,r in seam_profile),4),"radial_max":round(max(r for _,r in seam_profile),4)},
  "previous_h24_root_artifact_cause":"not proven; floor-independent closeup and topological evidence included",
  "baseline_topology":baseline_topology,"new_topology":topo,
  "main_root_count":5,"root_meshes_joined":6,"root_base_cut_z":cut_height,
