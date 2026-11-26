@@ -1,0 +1,112 @@
+name: H26 new heroic old pine trunk and rooted rock geometry review
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-h26-hero.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine005-h26-new-hero-only
+  cancel-in-progress: false
+jobs:
+  hero:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 23
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Freeze approved image, current H23 mother and old game
+        run: |
+          test "$(git hash-object fengming-v2-scene-a/assets/pine-002/reference.png)" = "9e204263823ca9f40d46737dca5c1ee0a28a73a8"
+          python3 - <<'PY'
+          import json,hashlib,pathlib
+          root=pathlib.Path('fengming-v2-scene-a')
+          h23=root/'assets/pine-005/h23'
+          q=json.loads((h23/'h23-qa.json').read_text())
+          assert q['visual_status']=='G1A_NOT_APPROVED'
+          assert q['outputs']['glb_sha256']=='b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac'
+          assert hashlib.sha256((h23/'pine005-h23-refined.glb').read_bytes()).hexdigest()==q['outputs']['glb_sha256']
+          assert (h23/'pine005-h23-refined.blend').stat().st_size>100000
+          print('CURRENT H23 IS THE FORMAL MOTHER; H26 MUST BE AN ISOLATED VISUAL CANDIDATE')
+          PY
+      - name: Install proven Blender / EGL / NumPy
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender libegl1 python3-numpy
+      - name: Build new high-difference hero trunk/roots and render 7 real 3D views
+        run: blender -b -t 2 --python .github/scripts/pine005_h26_hero.py
+      - name: Independently verify editable Blender source, GLB and source-to-old-to-new contact sheet
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          from PIL import Image,ImageDraw,ImageFont
+          import pathlib,json,struct,hashlib,base64
+          root=pathlib.Path('fengming-v2-scene-a/assets/pine-005')
+          p=root/'h26'
+          qa=json.loads((p/'h26-qa.json').read_text())
+          assert qa['technical_status']=='PASS' and qa['visual_status']=='PENDING_G1A_VISUAL_JUDGEMENT'
+          assert qa['reference_blob']=='9e204263823ca9f40d46737dca5c1ee0a28a73a8'
+          assert qa['tripo_credits']==0 and not qa['production_game_modified']
+          assert qa['trunk']['basal_radius']>=1.3
+          assert qa['trunk']['core_nonmanifold_edges']==0
+          assert qa['trunk']['core_zero_area_faces']==0
+          assert qa['roots']['wide_anatomical_buttresses']>=5
+          assert qa['roots']['contact_rocks']>=4
+          assert qa['bark']['geometry_shard_facets']>=1000
+          assert qa['branches']['major']>=5
+          assert qa['foliage'].startswith('NOT STARTED')
+          raw=(p/'pine005-h26-hero.glb').read_bytes()
+          assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+          assert hashlib.sha256(raw).hexdigest()==qa['glb']['sha256']
+          assert qa['glb']['mesh_count']>=10
+          assert (p/'pine005-h26-hero.blend').stat().st_size>100000
+          titles=[
+            'APPROVED ANCIENT PINE REFERENCE',
+            'H25 FAILURE / PREVIOUS ROOTS',
+            'H26 NEW ROOT + TRUNK FRONT',
+            'H26 NEW THREE-QUARTER',
+            'H26 RIGHT SIDE',
+            'H26 ROOTS ON NATURAL ROCKS',
+            'H26 BACK',
+            'H26 TOP',
+            'H26 TRUE BLACK SILHOUETTE']
+          sources=[
+            pathlib.Path('fengming-v2-scene-a/assets/pine-002/reference.png'),
+            root/'h25/front.png',
+            p/'front.png',p/'three-quarter.png',
+            p/'right.png',p/'root-close.png',
+            p/'back.png',p/'top.png',p/'silhouette.png']
+          out=Image.new('RGB',(1836,1686),(31,42,43))
+          draw=ImageDraw.Draw(out)
+          for i,(label,source) in enumerate(zip(titles,sources)):
+            with Image.open(source) as im:
+              im=im.convert('RGB')
+              im.thumbnail((591,506),Image.Resampling.LANCZOS)
+              x=12+(i%3)*612+(594-im.width)//2
+              y=9+(i//3)*562+35+(507-im.height)//2
+              out.paste(im,(x,y))
+              draw.text((17+(i%3)*612,14+(i//3)*562),label,fill=(233,227,207))
+          sheet=p/'h26-contact-sheet.jpg'
+          out.save(sheet,quality=78,optimize=True)
+          (p/'h26-contact-sheet.b64.txt').write_text(base64.b64encode(sheet.read_bytes()).decode('ascii'))
+          print('H26 ONE DIFFERENT HERO DELIVERED FOR VISUAL APPROVAL, NOT ART PASS')
+          print('H26_FACES',qa['trunk']['core_faces'],'BARK',qa['bark']['geometry_shard_facets'],
+                'GLB_MB',round(qa['glb']['bytes']/1e6,2),'SHEET',sheet.stat().st_size)
+          PY
+      - name: Preserve evidence even when the build fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine005-h26-custom-hero-evidence
+          path: fengming-v2-scene-a/assets/pine-005/h26/
+          if-no-files-found: ignore
+      - name: Save only isolated H26 candidate, never overwrite H23 mother or game
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/h26/
+          git commit -m 'H26 custom heroic pine: true rock-clinging roots and fractured bark sculpt for visual QA'
+          git pull --rebase origin main
+          git push origin HEAD:main
