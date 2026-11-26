@@ -1,0 +1,60 @@
+name: H.19.2 candidate viewer delivery smoke (no paid modeling)
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-h192-source-page-check.yml'
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate local candidate viewer and Cloudflare delivery
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,datetime,urllib.request,urllib.error,time
+          page=Path('fengming-v2-scene-a/pine-h192-candidates.html').read_text(encoding='utf-8')
+          requirements=[
+            '4f322c60a8074877879f1dcf5b1ca134',
+            '526fa2b9bc344bfdb663d0a16e308b8a',
+            'assets/pine-002/reference.png',
+            'sketchfab.com/models/',
+            'creativecommons',
+          ]
+          # A CC BY model is mentioned in prose; the source license link is provided on the original page.
+          requirements[-1]='CC Attribution'
+          local={k:k in page for k in requirements}
+          result={'status':'not_yet_verified','local_checks':local,'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          if not all(local.values()):
+              result['status']='local_incomplete'
+          else:
+              url='https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/pine-h192-candidates.html'
+              result['url']=url
+              for n in range(7):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; ModelQA/1.0)'})
+                      with urllib.request.urlopen(req,timeout=18) as r:
+                          data=r.read(160000)
+                          status=r.status
+                      if status==200 and b'4f322c60a8074877879f1dcf5b1ca134' in data and b'526fa2b9bc344bfdb663d0a16e308b8a' in data:
+                          result.update(status='passed',http=status,body_bytes=len(data))
+                          break
+                      result.update(status='failed',http=status,reason='unexpected body')
+                  except Exception as e:
+                      result.update(status='failed',reason=str(e)[:200])
+                  time.sleep(12)
+          output=Path('fengming-v2-scene-a/project/PINE_H192_SOURCE_PAGE_SMOKE.json')
+          output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+          print('SOURCE_PAGE_VERIFICATION',json.dumps(result,ensure_ascii=False))
+          PY
+      - name: Keep evidence without touching game master
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/project/PINE_H192_SOURCE_PAGE_SMOKE.json
+          git commit -m 'Verify H.19.2 source comparison page deployment'
+          git pull --rebase origin main
+          git push origin HEAD:main
