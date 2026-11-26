@@ -1,0 +1,66 @@
+name: H21 Blender headless environment verification
+on:
+  push:
+    paths:
+      - '.github/workflows/blender-environment-smoke.yml'
+permissions:
+  contents: write
+concurrency:
+  group: fengming-blender-environment-check
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Blender only if unavailable on this runner
+        run: |
+          if command -v blender >/dev/null 2>&1; then
+            blender --version | head -n 2
+          else
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender
+            blender --version | head -n 2
+          fi
+      - name: Build sample, export GLB and render four views headlessly
+        run: blender -b -t 2 --python .github/scripts/blender_environment_smoke.py
+      - name: Validate test outputs independently using system Python
+        run: |
+          python3 - <<'PY'
+          import pathlib,json,struct
+          root=pathlib.Path('fengming-v2-scene-a/diagnostics/blender-smoke')
+          r=json.loads((root/'toolchain-qa.json').read_text())
+          assert r['status']=='PASS' and r['headless'] and r['geometry_nodes_api']
+          assert r['tripo_credits_spent']==0
+          assert r['gltf_mesh_count']>=2
+          for name in ('front','right','back','top'):
+              data=(root/(name+'.png')).read_bytes()
+              assert data[:8]==b'\x89PNG\r\n\x1a\n'
+              assert struct.unpack('>II',data[16:24])==(420,420)
+          raw=(root/'blender-environment-smoke.glb').read_bytes()
+          assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+          assert (root/'blender-environment-smoke.blend').stat().st_size>1024
+          print('PASS: editable .blend + GLB + 4 views + Geometry Nodes available, zero Tripo credits')
+          PY
+      - name: Upload diagnostic evidence for recovery
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fengming-h21-blender-toolchain
+          path: fengming-v2-scene-a/diagnostics/blender-smoke/
+          if-no-files-found: ignore
+      - name: Commit only diagnostics without touching production game
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/diagnostics/blender-smoke/
+          if git diff --cached --quiet; then
+            echo 'Diagnostics already tracked'; exit 0
+          fi
+          git commit -m 'H21 verify Blender CLI, GLB export, and 4-view automated renders'
+          git pull --rebase origin main
+          git push origin HEAD:main
