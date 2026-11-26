@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "origin": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/",
+  "checked_at_utc": "2026-11-26T08:29:28.633301+00:00",
+  "targets": {
+    "html": {
+      "http": 200,
+      "type": "text/html; charset=utf-8",
+      "content_verified": true
+    },
+    "reference": {
+      "http": 200,
+      "type": "image/png",
+      "content_verified": true
+    },
+    "front": {
+      "http": 200,
+      "type": "image/png",
+      "content_verified": true
+    },
+    "left": {
+      "http": 200,
+      "type": "image/png",
+      "content_verified": true
+    },
+    "back": {
+      "http": 200,
+      "type": "image/png",
+      "content_verified": true
+    },
+    "right": {
+      "http": 200,
+      "type": "image/png",
+      "content_verified": true
+    }
+  }
+}
