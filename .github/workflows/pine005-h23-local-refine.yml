@@ -1,0 +1,94 @@
+name: H23 PINE-005 precise organic trunk and joint local refinement
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-h23-local-refine.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine005-h23-local-refine-once
+  cancel-in-progress: false
+jobs:
+  refine:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 21
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Preflight original image and H22 formal PINE-005 source
+        run: |
+          test "$(git hash-object fengming-v2-scene-a/assets/pine-002/reference.png)" = "9e204263823ca9f40d46737dca5c1ee0a28a73a8"
+          test -s fengming-v2-scene-a/assets/pine-005/pine005-trunk.blend
+          test -s fengming-v2-scene-a/assets/pine-005/pine005-trunk.glb
+          python3 - <<'PY'
+          import pathlib,json,hashlib
+          p=pathlib.Path('fengming-v2-scene-a/assets/pine-005')
+          s=json.loads((p/'trunk-qa.json').read_text())
+          assert s['technical_status']=='PASS'
+          assert s['glb_sha256']==hashlib.sha256((p/'pine005-trunk.glb').read_bytes()).hexdigest()
+          assert s['trunk']['basal_radius']==.85 and s['trunk']['root_vertical_scale']==.68
+          print('H22 BASELINE CONFIRMED: no regeneration of H22 model',s['glb_sha256'])
+          PY
+      - name: Install previously verified Blender runtime
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender libegl1 python3-numpy
+      - name: Open prior Blender mother and sculpt only branch junctions/root bases/bark relief
+        run: blender -b -t 2 --python .github/scripts/pine005_h23_refine.py
+      - name: Independent H23 GLB and visual-proof validation
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          from PIL import Image,ImageDraw
+          import pathlib,json,hashlib,struct,base64
+          root=pathlib.Path('fengming-v2-scene-a/assets/pine-005')
+          p=root/'h23';r=json.loads((p/'h23-qa.json').read_text())
+          assert r['technical_status']=='PASS'
+          assert r['visual_status']=='PENDING_HUMAN_QA'
+          assert r['tripo_credits']==0 and not r['formal_game_modified']
+          assert r['original_frozen_parts']=={'trunk':1,'branch':7,'root':6,'twig':13}
+          assert r['production_meshes']['fused_trunk_branch_roots']==1
+          assert r['geometry_bark_ridge_vertices']>2000
+          assert 14<=r['outputs']['meshes']<27
+          assert 'no PBR' in r['detail']
+          raw=(p/'pine005-h23-refined.glb').read_bytes()
+          assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+          assert hashlib.sha256(raw).hexdigest()==r['outputs']['glb_sha256']
+          assert (p/'pine005-h23-refined.blend').stat().st_size>100000
+          names=['APPROVED ORIGINAL','H22 BASELINE FRONT','H23 NEW FRONT','H23 RIGHT',
+                 'H23 BACK','H23 TOP','H23 BLACK SILHOUETTE','H23 JOINT CLOSEUP']
+          paths=[pathlib.Path('fengming-v2-scene-a/assets/pine-002/reference.png'),
+                 root/'trunk-front.png',p/'front.png',p/'right.png',
+                 p/'back.png',p/'top.png',p/'silhouette.png',p/'joint-closeup.png']
+          board=Image.new('RGB',(2088,1140),(24,36,42))
+          draw=ImageDraw.Draw(board)
+          for i,(label,path) in enumerate(zip(names,paths)):
+              im=Image.open(path).convert('RGB')
+              im.thumbnail((499,520),Image.Resampling.LANCZOS)
+              x=15+(i%4)*518+(500-im.width)//2
+              y=12+(i//4)*567+29+(520-im.height)//2
+              board.paste(im,(x,y))
+              draw.text((19+(i%4)*518,13+(i//4)*567),label,fill=(238,226,202))
+          sheet=p/'h23-contact-sheet.jpg'
+          board.save(sheet,quality=77,optimize=True)
+          (p/'h23-contact-sheet.b64.txt').write_text(base64.b64encode(sheet.read_bytes()).decode('ascii'))
+          print('H23_CONTACT_SHEET',sheet.stat().st_size,'bytes')
+          print('H23_OUTPUT_SHA',r['outputs']['glb_sha256'])
+          PY
+      - name: Preserve one-shot independent outputs and failure evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine005-h23-local-sculpt-results
+          path: fengming-v2-scene-a/assets/pine-005/h23/
+          if-no-files-found: ignore
+      - name: Commit isolated new H23 assets only, leave H22 and game unchanged
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/h23/
+          git commit -m 'H23 save PINE-005 refined editable source and 8-panel real 3D sculpt review'
+          git pull --rebase origin main
+          git push origin HEAD:main
