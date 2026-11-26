@@ -1,0 +1,23 @@
+{
+  "phase": "G1",
+  "source_task": "64578e00-ce8f-475b-ab01-d899a3b82dad",
+  "one_shot": true,
+  "expected_credits": 20,
+  "request": {
+    "inputs": [
+      {
+        "task_id": "64578e00-ce8f-475b-ab01-d899a3b82dad"
+      }
+    ],
+    "model": "v3.1-20260211",
+    "texture": false,
+    "pbr": false,
+    "geometry_quality": "standard",
+    "face_limit": 50000,
+    "generate_parts": false,
+    "smart_low_poly": false,
+    "model_seed": 20261126
+  },
+  "workflow_run": "45784434081",
+  "status": "locked_before_paid_request"
+}
