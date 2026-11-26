@@ -107,6 +107,12 @@ for i,v in enumerate(old_main.data.vertices):
 kd.balance()
 # The actual surface is not textured yet; these are sculpted bark ribs
 # visible in neutral clay. Avoid periodic rings or circular "doughnuts".
+attachment_centers=(
+    Vector((.86,.10,4.36)),Vector((2.69,.16,6.36)),
+    Vector((2.82,.14,6.22)),Vector((1.66,.17,4.73)),
+    Vector((2.35,.24,5.20)),Vector((3.22,-.07,7.27)),
+    Vector((1.45,.22,4.74))
+)
 normal_sculpt_vertices=0
 for v in combined.data.vertices:
     loc=v.co
@@ -127,12 +133,6 @@ for v in combined.data.vertices:
     # Sharp sculpt noise around an attachment creates "cauliflower" lumps
     # even when the underlying union is correct. Fade bark relief in/out
     # smoothly near each attachment instead of building decorative collars.
-    attachment_centers=(
-        Vector((.86,.10,4.36)),Vector((2.69,.16,6.36)),
-        Vector((2.82,.14,6.22)),Vector((1.66,.17,4.73)),
-        Vector((2.35,.24,5.20)),Vector((3.22,-.07,7.27)),
-        Vector((1.45,.22,4.74))
-    )
     nearest_joint=min((loc-p).length for p in attachment_centers)
     x=max(0.0,min(1.0,(nearest_joint-.15)/.67))
     smooth_x=x*x*(3-2*x)
