@@ -1,0 +1,11 @@
+{
+  "asset": "PINE-004",
+  "phase": "image_to_multiview_only",
+  "allowed_paid_task_count": 1,
+  "max_expected_credits": 10,
+  "original_reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "source": "fengming-v2-scene-a/assets/pine-002/reference.png",
+  "github_run_id": "45782981013",
+  "status": "reserved_before_charge",
+  "created_utc": "2026-11-26T08:25:16.439165+00:00"
+}
