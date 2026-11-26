@@ -1,0 +1,136 @@
+name: PINE-004 G1 untextured four-view and silhouette proof
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-004-g1-qa.yml'
+      - 'fengming-v2-scene-a/assets/pine-004/g1-metadata.json'
+permissions:
+  contents: write
+jobs:
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install headless Chromium
+        run: |
+          npm install --no-save --no-audit --no-fund playwright
+          npx playwright install chromium
+      - name: Browser smoke and four-angle evidence
+        run: |
+          python3 -m http.server 8877 --bind 127.0.0.1 >/tmp/pine-preview-http.log 2>&1 &
+          sleep 2
+          node - <<'JS'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch({
+              headless:true,
+              args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--disable-dev-shm-usage','--no-sandbox']
+            });
+            const folder='fengming-v2-scene-a/assets/pine-004';
+            const consoleErrors=[];
+            const page=await browser.newPage({viewport:{width:1040,height:800},deviceScaleFactor:1});
+            page.on('pageerror',e=>consoleErrors.push('pageerror '+e.message));
+            page.on('console',m=>{if(m.type()==='error')consoleErrors.push('console '+m.text());});
+            const url='http://127.0.0.1:8877/fengming-v2-scene-a/pine-004-geometry-preview.html';
+            try{
+              const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:40000});
+              if(response.status()!==200)throw Error('Preview HTTP status '+response.status());
+              await page.waitForFunction(()=>document.querySelector('#status')?.textContent?.includes('模型已加载'),{timeout:80000});
+              await page.locator('button[data-view="front"]').click();
+              await page.waitForTimeout(1000);
+              await page.screenshot({path:folder+'/proof-front.jpg',type:'jpeg',quality:75});
+              await page.locator('button[data-view="right"]').click();
+              await page.waitForTimeout(800);
+              await page.screenshot({path:folder+'/proof-right.jpg',type:'jpeg',quality:75});
+              await page.locator('button[data-view="back"]').click();
+              await page.waitForTimeout(800);
+              await page.screenshot({path:folder+'/proof-back.jpg',type:'jpeg',quality:75});
+              await page.locator('button[data-view="top"]').click();
+              await page.waitForTimeout(800);
+              await page.screenshot({path:folder+'/proof-top.jpg',type:'jpeg',quality:76});
+              await page.locator('#double').click();
+              await page.locator('button[data-view="front"]').click();
+              await page.waitForTimeout(800);
+              await page.screenshot({path:folder+'/proof-double.jpg',type:'jpeg',quality:75});
+              await page.locator('#ref').click();
+              if(!await page.locator('#reference').evaluate(e=>e.classList.contains('visible')))throw Error('Reference toggle failed');
+              await page.locator('#wire').click();
+              if(!await page.locator('#wire').evaluate(e=>e.classList.contains('on')))throw Error('Wireframe toggle failed');
+              await page.close(); // release the first software-WebGL context before phone test
+              const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+              mobile.on('pageerror',e=>consoleErrors.push('mobile '+e.message));
+              await mobile.goto(url,{waitUntil:'commit',timeout:45000});
+              await mobile.waitForFunction(()=>document.querySelector('#status')?.textContent?.includes('模型已加载'),null,{timeout:85000});
+              await mobile.locator('button[data-view="front"]').click();
+              await mobile.waitForTimeout(700);
+              await mobile.screenshot({path:folder+'/proof-mobile.jpg',type:'jpeg',quality:70});
+              const stats={desktop:'ready and four angles captured',mobile:await mobile.evaluate(()=>({canvas:!!document.querySelector('canvas'),ready:document.querySelector('#status')?.textContent,buttons:document.querySelectorAll('.toolbar button').length}))};
+              console.log('Browser 3D loaded:',JSON.stringify(stats));
+              console.log('Browser console errors:',JSON.stringify(consoleErrors.slice(-10)));
+              if(consoleErrors.length)throw Error('Unexpected browser errors: '+consoleErrors.slice(-3).join('; '));
+              fs.writeFileSync(folder+'/g1-browser-qa.json',JSON.stringify({status:'browser_technical_passed_G1_visual_pending',run_id:process.env.GITHUB_RUN_ID,stats,angles:['front','right','back','top','silhouette','mobile'],console_errors:consoleErrors.length},null,2));
+            }catch(error){
+              fs.writeFileSync(folder+'/g1-browser-qa.json',JSON.stringify({status:'failed',run_id:process.env.GITHUB_RUN_ID,reason:error.message,console_errors:consoleErrors.slice(-12)},null,2));
+              console.log('Browser failure:',error.message);
+              console.log('Console errors:',JSON.stringify(consoleErrors.slice(-12)));
+              console.log('HTTP server:',fs.existsSync('/tmp/pine-preview-http.log')?fs.readFileSync('/tmp/pine-preview-http.log','utf-8').slice(-2500):'none');
+              await browser.close();
+              process.exit(1);
+            }
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          JS
+      - name: Make compact visual QA contact sheet
+        if: success()
+        run: |
+          python3 -m pip install --quiet --break-system-packages Pillow
+          python3 - <<'PY'
+          from PIL import Image,ImageDraw,ImageFont
+          from pathlib import Path
+          root=Path('fengming-v2-scene-a/assets/pine-004')
+          files=['proof-front.jpg','proof-right.jpg','proof-back.jpg','proof-top.jpg','proof-double.jpg']
+          labels=['FRONT','RIGHT','BACK','TOP','BLACK SILHOUETTE']
+          width=1560;height=1030
+          out=Image.new('RGB',(width,height),(27,37,43))
+          d=ImageDraw.Draw(out)
+          for i,(name,label) in enumerate(zip(files,labels)):
+              photo=Image.open(root/name).convert('RGB')
+              photo.thumbnail((495,455))
+              x=15+(i%3)*515+(495-photo.width)//2
+              y=10+(i//3)*495+24+(455-photo.height)//2
+              out.paste(photo,(x,y))
+              d.text((20+(i%3)*515,12+(i//3)*495),label,fill=(235,225,205))
+          dst=root/'pine-004-g1-contact-sheet.jpg'
+          out.save(dst,quality=66,optimize=True)
+          print('CONTACT_SHEET_BYTES',dst.stat().st_size)
+          import base64
+          (root/'pine-004-g1-contact-sheet.b64.txt').write_text(base64.b64encode(dst.read_bytes()).decode('ascii'))
+          print('Created compact contact sheet and text-encoded visual proof')
+          PY
+      - name: Upload QA evidence without changing the game
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine-004-g1-browser-proof
+          path: |
+            fengming-v2-scene-a/assets/pine-004/proof-*.jpg
+            fengming-v2-scene-a/assets/pine-004/g1-browser-qa.json
+            fengming-v2-scene-a/assets/pine-004/pine-004-g1-contact-sheet.jpg
+          if-no-files-found: ignore
+      - name: Commit only preview QA evidence and job status
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -f fengming-v2-scene-a/assets/pine-004/g1-browser-qa.json || true
+          git add -f fengming-v2-scene-a/assets/pine-004/proof-*.jpg || true
+          git add -f fengming-v2-scene-a/assets/pine-004/pine-004-g1-contact-sheet.jpg || true
+          git add -f fengming-v2-scene-a/assets/pine-004/pine-004-g1-contact-sheet.b64.txt || true
+          if git diff --cached --quiet; then
+            echo 'No QA evidence was generated'; exit 0
+          fi
+          git commit -m "Store PINE-004 G1 untextured trunk/canopy silhouette QA evidence"
+          git pull --rebase origin main
+          git push origin HEAD:main
