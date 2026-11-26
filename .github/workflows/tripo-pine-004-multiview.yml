@@ -1,0 +1,186 @@
+name: PINE-004 one-shot controlled multiview (10 credits only)
+on:
+  push:
+    paths: ['.github/workflows/tripo-pine-004-multiview.yml']
+permissions:
+  contents: write
+concurrency:
+  group: pine-004-multiview-once
+  cancel-in-progress: false
+jobs:
+  generate-multiview:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create four views only, never generate a 3D model
+        env:
+          TRIPO_API_KEY: ${{ secrets.TRIPO_API_KEY }}
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          import os,json,time,datetime,pathlib,subprocess,urllib.request,urllib.error,hashlib,struct,base64,io
+          from PIL import Image,ImageOps,ImageDraw
+          root=pathlib.Path('fengming-v2-scene-a/assets/pine-004')
+          image=pathlib.Path('fengming-v2-scene-a/assets/pine-002/reference.png')
+          root.mkdir(parents=True,exist_ok=True)
+          lock=root/'intent.json';task_path=root/'task.json';results=root/'multiview.json'
+          key=os.environ.get('TRIPO_API_KEY','')
+          blob='9e204263823ca9f40d46737dca5c1ee0a28a73a8'
+          if not key:raise SystemExit('TRIPO_API_KEY missing; no paid call')
+          if lock.exists() or task_path.exists() or results.exists():
+              raise SystemExit('PINE-004 one-shot lock already exists; never resubmit paid task')
+          if not image.is_file() or image.stat().st_size!=2771236:
+              raise SystemExit('Approved reference missing or altered; no paid call')
+          sha=subprocess.check_output(['git','hash-object',str(image)],text=True).strip()
+          if sha!=blob:raise SystemExit('Reference git SHA mismatch; no paid call')
+          with Image.open(image) as pic:
+              if pic.size!=(1536,1024) or pic.format!='PNG':
+                  raise SystemExit('Approved reference format mismatch; no paid call')
+          subprocess.run(['git','config','user.name','github-actions'],check=True)
+          subprocess.run(['git','config','user.email','github-actions@github.com'],check=True)
+          def save_commit(paths,msg):
+              subprocess.run(['git','add',*[str(p) for p in paths]],check=True)
+              diff=subprocess.run(['git','diff','--cached','--quiet'])
+              if diff.returncode==0:return
+              subprocess.run(['git','commit','-m',msg],check=True)
+              subprocess.run(['git','pull','--rebase','origin','main'],check=True)
+              subprocess.run(['git','push','origin','HEAD:main'],check=True)
+          def api(route,payload=None):
+              req=urllib.request.Request('https://openapi.tripo3d.com/v3'+route,
+                data=json.dumps(payload).encode() if payload is not None else None,
+                headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'})
+              try:
+                  with urllib.request.urlopen(req,timeout=55) as resp:res=json.load(resp)
+              except urllib.error.HTTPError as e:
+                  raise RuntimeError('Tripo API HTTP '+str(e.code)) from None
+              if res.get('code')!=0:
+                  raise RuntimeError('Tripo code '+str(res.get('code'))+' '+str(res.get('message',''))[:160])
+              return res['data']
+          balance=api('/account/balance')
+          avail=float(balance.get('balance',0))
+          print('Tripo balance before limited 10-credit test:',avail,flush=True)
+          if avail<20:raise SystemExit('Less than 20 credits available; no paid call')
+          lock.write_text(json.dumps({
+            'asset':'PINE-004','phase':'image_to_multiview_only','allowed_paid_task_count':1,
+            'max_expected_credits':10,'original_reference_blob':blob,
+            'source':'fengming-v2-scene-a/assets/pine-002/reference.png',
+            'github_run_id':os.environ.get('GITHUB_RUN_ID'),
+            'status':'reserved_before_charge',
+            'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()
+          },ensure_ascii=False,indent=2)+'\n')
+          save_commit([lock],'Lock PINE-004 to one 10-credit multiview test (no 3D generation)')
+          # Previous successful PINE-002 upload route: presigned storage PUT.
+          presign=api('/files/presign',{'format':'png'})
+          url=presign.get('presigned_url')
+          token=presign.get('file_token')
+          if not isinstance(url,str) or not url.startswith('https://') or not token:
+              raise SystemExit('Tripo presign returned invalid token; no paid call')
+          put=subprocess.run(['curl','-fSs','--connect-timeout','12','--max-time','170',
+               '--retry','1','--retry-delay','2','-X','PUT','-H',
+               'Content-Type: application/octet-stream','-T',str(image),url],
+               capture_output=True,text=True)
+          if put.returncode!=0:
+              raise SystemExit('PINE-004 reference upload failed; lock remains; no auto retry')
+          # Single charged request: only image-to-multiview. Never call any *-to-model endpoint.
+          response=api('/generation/image-to-multiview',{'input':token})
+          task_id=response.get('task_id')
+          if not isinstance(task_id,str) or len(task_id)<8:
+              raise SystemExit('Ambiguous paid request result; never resubmit automatically')
+          task_path.write_text(json.dumps({
+            'asset':'PINE-004','paid_task_id':task_id,'type':'image_to_multiview',
+            'status':'submitted','allowed_model_generation':False,
+            'reference_blob':blob,
+            'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()
+          },ensure_ascii=False,indent=2)+'\n')
+          save_commit([task_path],'Persist PINE-004 paid multiview task ID before polling')
+          print('PINE-004 one paid multiview image task:',task_id,flush=True)
+          for n in range(160):
+              a=api('/tasks/'+task_id)
+              st=a.get('status')
+              if n%6==0 or st in ['success','failed','cancelled','canceled','expired']:
+                  print('View task',task_id,'status',st,'progress',a.get('progress'),flush=True)
+              if st=='success':break
+              if st in ('failed','cancelled','canceled','expired'):
+                  raise SystemExit('Task failed; do not retry or generate model')
+              time.sleep(5)
+          else:raise SystemExit('Polling timed out. Task ID saved; query the same ID later')
+          output=a.get('output') or {}
+          if isinstance(output.get('generate_multiview_image'),dict):
+              output=output['generate_multiview_image']
+          mapping={'front':'front_view_url','left':'left_view_url',
+                   'back':'back_view_url','right':'right_view_url'}
+          paths=[];stats={};hashes=[]
+          for view,field in mapping.items():
+              link=output.get(field)
+              if not isinstance(link,str) or not link.startswith('https://'):
+                  raise SystemExit('Missing view '+view+'; task is saved; no automatic paid retry')
+              with urllib.request.urlopen(link,timeout=65) as resp:
+                  raw=resp.read(18*1024*1024+1)
+              if len(raw)>18*1024*1024:raise SystemExit('Oversized view '+view)
+              with Image.open(io.BytesIO(raw)) as im:
+                  im.load()
+                  if im.width<256 or im.height<256 or im.width>8192 or im.height>8192:
+                      raise SystemExit('Unexpected view dimensions '+view)
+                  rgb=Image.new('RGB',im.size,'white')
+                  if im.mode in ('RGBA','LA') or 'transparency' in im.info:
+                      rgba=im.convert('RGBA');rgb.paste(rgba,mask=rgba.getchannel('A'))
+                  else:rgb=im.convert('RGB')
+                  p=root/(view+'.png');rgb.save(p,optimize=True)
+                  paths.append(p)
+                  h=hashlib.sha256(p.read_bytes()).hexdigest()
+                  stats[view]={'width':rgb.width,'height':rgb.height,
+                               'sha256':h,'bytes':p.stat().st_size}
+                  hashes.append(h)
+          if len(set(hashes))<3:
+              raise SystemExit('View images duplicate; block automatic 3D; preserve task ID')
+          # Visual contact sheet: human must compare the *same* bends/roots/branches across views.
+          with Image.open(image) as ref:refs=ref.convert('RGB')
+          pairs=[('APPROVED ORIGINAL / FRONT',refs),
+                 ('TRIPO FRONT (RECONSTRUCTED)',Image.open(root/'front.png')),
+                 ('LEFT',Image.open(root/'left.png')),
+                 ('BACK',Image.open(root/'back.png')),
+                 ('RIGHT',Image.open(root/'right.png'))]
+          w,h=1500,1090
+          out=Image.new('RGB',(w,h),(31,39,42))
+          draw=ImageDraw.Draw(out)
+          for i,(label,pic) in enumerate(pairs):
+              if i==0:
+                  x,y,bw,bh=9,12,728,520
+              elif i==1:
+                  x,y,bw,bh=760,12,728,520
+              else:
+                  x=9+((i-2)%3)*500;y=552;bw,bh=484,520
+              draw.text((x+8,y+6),label,fill=(239,231,209))
+              pic=pic.convert('RGB');pic.thumbnail((bw-12,bh-41))
+              out.paste(pic,(x+(bw-pic.width)//2,y+35+(bh-40-pic.height)//2))
+          sheet=root/'comparison.jpg'
+          out.save(sheet,quality=77,optimize=True)
+          # Text copy is solely to inspect contact sheet through connected GitHub text actions.
+          b64=root/'comparison.b64.txt';b64.write_text(base64.b64encode(sheet.read_bytes()).decode('ascii'))
+          paths.extend([sheet,b64])
+          used=a.get('credits_consumed')
+          report={'asset':'PINE-004','task_id':task_id,'task_type':'image_to_multiview',
+                  'status':'images_ready_visual_review_pending','credits_consumed':used,
+                  'reference':str(image),'reference_git_blob':blob,
+                  'views':stats,'duplicate_images':len(set(hashes))!=4,
+                  'visual_shape_match':'pending_human_review','consistency_of_back_and_side':'unverified',
+                  'generate_3d_automatically':False,'model_generation_cost':0,
+                  'next_step':'G0 multi-angle fidelity review BEFORE any 3D charge'}
+          results.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          rec=json.loads(task_path.read_text());rec.update(status='images_ready_visual_review_pending',credits_consumed=used)
+          task_path.write_text(json.dumps(rec,ensure_ascii=False,indent=2)+'\n')
+          paths.extend([results,task_path])
+          save_commit(paths,'Save PINE-004 four-view images and original-versus-views QA; do not generate 3D')
+          print('Four-view generation complete; G0 visual review required, 3D not started; credits',used)
+          PY
+      - name: Backup PINE-004 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine-004-multiview-qa
+          path: fengming-v2-scene-a/assets/pine-004/
+          if-no-files-found: ignore
