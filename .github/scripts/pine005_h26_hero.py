@@ -227,7 +227,11 @@ body.data.materials.clear();body.data.materials.append(bark)
 # raised irregular chipped bark PLATES, not uniform fluting. The stony cracked
 # plates are actual polygons, visible in gray-mesh (not a pasted texture).
 plate_objs=[]
+from mathutils.bvhtree import BVHTree
 pts,rs=sample_path(TRUNK,sub=18)
+# One acceleration structure for all bark facet ray casts; do not rebuild BVH
+# for each of the thousands of facet corners.
+bvh=BVHTree.FromObject(body,bpy.context.evaluated_depsgraph_get())
 def surface_at(t,angle,extra=0):
     f=max(0,min(len(pts)-1-1e-5,t*(len(pts)-1)))
     i=int(f);a=f-i
@@ -239,8 +243,8 @@ def surface_at(t,angle,extra=0):
     direction=(axis*cos(angle)+ortho*sin(angle)).normalized()
     rad=rs[i]*(1-a)+rs[min(i+1,len(rs)-1)]*a
     origin=c+direction*(rad*2.1+.35)
-    hit,loc,nrm,idx=body.ray_cast(origin,-direction,distance=rad*3.2+1.1)
-    if not hit:
+    loc,nrm,idx,hitdist=bvh.ray_cast(origin,-direction,rad*3.2+1.1)
+    if loc is None:
         return c+direction*(rad+extra),direction
     return loc+nrm*extra,nrm
 plate_vertices=[];plate_faces=[];plate_mat_ids=[]
