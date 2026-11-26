@@ -15,25 +15,46 @@ jobs:
         run: |
           python3 - <<'PY'
           import urllib.request,urllib.error,json,time,os,pathlib,datetime
-          base='https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/'
-          checks={'preview_url':base+'pine-002-preview.html','model_url':base+'assets/pine-002/pine.glb','status':'not_verified'}
-          for attempt in range(10):
-              try:
-                  req=urllib.request.Request(checks['preview_url'],headers={'User-Agent':'Mozilla/5.0 (PINE002-preview-smoke)'})
-                  with urllib.request.urlopen(req,timeout=20) as r:
-                      body=r.read(110000)
-                      preview_status=r.status
-                  if preview_status==200 and b'pine-002/pine.glb' in body and b'GLTFLoader' in body:
-                      req=urllib.request.Request(checks['model_url'],method='HEAD')
+          roots=[
+              ('cloudflare','https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/'),
+              ('github_pages','https://d7gkdrs4pk-gif.github.io/wanxiang-cloud-tour/fengming-v2-scene-a/')
+          ]
+          checks={'status':'failed','attempts':[]}
+          ua='Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'
+          for label,base in roots:
+              for attempt in range(3):
+                  event={'host':label,'attempt':attempt+1}
+                  try:
+                      req=urllib.request.Request(base+'pine-002-preview.html',headers={'User-Agent':ua})
+                      with urllib.request.urlopen(req,timeout=15) as r:
+                          event['preview_http']=r.status
+                          body=r.read(110000)
+                      event['html_matches']=b'pine-002/pine.glb' in body and b'GLTFLoader' in body
+                      if event['preview_http']!=200 or not event['html_matches']:
+                          raise RuntimeError('Preview not the expected PINE-002 page')
+                      req=urllib.request.Request(base+'assets/pine-002/pine.glb',headers={'User-Agent':ua,'Range':'bytes=0-31'})
                       with urllib.request.urlopen(req,timeout=20) as r:
-                          model_status=r.status
-                          content_length=r.headers.get('Content-Length')
-                      checks.update({'status':'passed','preview_http':preview_status,'glb_http':model_status,'glb_content_length':content_length})
+                          event['model_http']=r.status
+                          event['model_content_type']=r.headers.get('Content-Type')
+                          signature=r.read(12)
+                      event['glb_magic_ok']=signature[:4]==b'glTF'
+                      if event['model_http'] not in (200,206) or not event['glb_magic_ok']:
+                          raise RuntimeError('GLB GET returned unexpected signature')
+                      checks.update({'status':'passed','verified_host':label,
+                          'preview_url':base+'pine-002-preview.html',
+                          'model_url':base+'assets/pine-002/pine.glb'})
+                      checks['attempts'].append(event)
                       break
-                  checks.update({'status':'failed','reason':'Preview returned unexpected body or HTTP '+str(preview_status)})
-              except Exception as exc:
-                  checks.update({'status':'failed','reason':str(exc)[:250]})
-              time.sleep(12)
+                  except urllib.error.HTTPError as exc:
+                      event['failure_stage']='model_get' if event.get('html_matches') else 'preview_get'
+                      event['error_http']=exc.code
+                      event['server']=exc.headers.get('Server')
+                  except Exception as exc:
+                      event['failure_stage']='model_get' if event.get('html_matches') else 'preview_get'
+                      event['error']=str(exc)[:180]
+                  checks['attempts'].append(event)
+                  time.sleep(4)
+              if checks['status']=='passed': break
           checks['checked_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()
           p=pathlib.Path('fengming-v2-scene-a/assets/pine-002/live-preview-check.json')
           p.write_text(json.dumps(checks,ensure_ascii=False,indent=2)+'\n')
