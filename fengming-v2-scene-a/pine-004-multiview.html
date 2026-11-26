@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#142127"><title>凤鸣山门｜PINE-004 多视角验证</title>
+<style>
+:root{font-family:system-ui,-apple-system,"PingFang SC",sans-serif;color:#f0ece1;background:#142127}
+*{box-sizing:border-box}body{margin:0}
+header{padding:24px max(15px,env(safe-area-inset-left));background:#20383b;border-bottom:1px solid #52655d}
+main{max-width:1120px;margin:auto;padding:14px}
+h1{font-size:22px;line-height:1.35;margin:0 0 10px}h2{font-size:16px;margin:0 0 9px}
+p{color:#bfcac3;font-size:13px;line-height:1.6;margin:8px 0}
+.meta{font-size:12px;color:#d8ccaa}
+.tag{display:inline-block;border:1px solid #7e8e78;color:#dfd3a6;border-radius:24px;padding:4px 10px;margin:0 5px 8px 0;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.figure{background:#223439;border-radius:12px;overflow:hidden;border:1px solid #5871697b}
+.figure>a{display:block;background:#fbfbfb;text-align:center}
+.figure img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.figure .label{display:flex;justify-content:space-between;gap:7px;align-items:center;padding:11px 12px}
+.figure .label strong{font-size:13px}.figure .label span{font-size:11px;color:#b1c0b6}
+.figure.hero{grid-column:span 2}.figure.hero img{aspect-ratio:16/9;max-height:570px}
+.info{margin-top:17px;padding:15px;background:#1b3034;border:1px solid #64847c80;border-radius:10px}
+a{color:#e1c88d}footer{font-size:12px;line-height:1.7;color:#b2c5bf;margin:22px 0 30px}
+@media(max-width:650px){header{padding:13px}h1{font-size:18px}.grid{gap:8px}.figure .label{padding:8px}.figure img{aspect-ratio:1/1}.figure.hero img{aspect-ratio:3/2}.figure .label span{font-size:10px}}
+</style></head><body>
+<header><div style="max-width:1120px;margin:auto">
+<p class="meta">FENGMING / PINE-004 / H.20</p>
+<h1>古松多角度一致性验证</h1>
+<span class="tag">原批准图已锁定</span><span class="tag">四视角图已生成</span><span class="tag">实际花费 10 credits</span>
+<p>先确认图片能否保留同一棵古松的侧倾主干、长枝、针叶与根系。<strong>这些仍是二维生成图，并不是完成的 3D 模型。</strong></p>
+</div></header><main>
+<div class="grid">
+<section class="figure hero"><div class="label"><strong>批准原始参考图</strong><span>1536 × 1024</span></div><a href="./assets/pine-002/reference.png" target="_blank" rel="noopener"><img src="./assets/pine-002/reference.png" alt="批准的原始写实古松参考图"></a></section>
+<section class="figure"><div class="label"><strong>AI 正面</strong><span>1024 × 1024</span></div><a href="./assets/pine-004/front.png" target="_blank" rel="noopener"><img src="./assets/pine-004/front.png" alt="Tripo生成的古松正面图"></a></section>
+<section class="figure"><div class="label"><strong>AI 左侧</strong><span>1024 × 1024</span></div><a href="./assets/pine-004/left.png" target="_blank" rel="noopener"><img src="./assets/pine-004/left.png" alt="Tripo生成的古松左侧图"></a></section>
+<section class="figure"><div class="label"><strong>AI 背面</strong><span>1024 × 1024</span></div><a href="./assets/pine-004/back.png" target="_blank" rel="noopener"><img src="./assets/pine-004/back.png" alt="Tripo生成的古松背面图"></a></section>
+<section class="figure"><div class="label"><strong>AI 右侧</strong><span>1024 × 1024</span></div><a href="./assets/pine-004/right.png" target="_blank" rel="noopener"><img src="./assets/pine-004/right.png" alt="Tripo生成的古松右侧图"></a></section>
+</div>
+<div class="info"><h2>本轮验收</h2>
+<p>正面树形、针叶层次与参考图接近；四面画风初步一致。仍不能从二维图像证明侧、背面的分叉数量、岩石位置和树根真实连续，只有转为三维并旋转验收才能判断。</p>
+<p><strong>判断：</strong>G0 图像阶段有条件通过，可以进入单次低费用、无贴图 3D 几何验证；G1 三维剪影和 G2 材质都未开始。</p>
+<p>详见 <a href="https://github.com/d7gkdrs4pk-gif/wanxiang-cloud-tour/blob/main/fengming-v2-scene-a/project/PINE004_MULTIVIEW_QA_V1.md" target="_blank" rel="noopener">完整质量验收报告</a>。</p></div>
+<footer>版权所有与资料边界：批准原图及 AI 生成结果均保留在项目仓库，不开放私人 Google Drive 访问。本轮未提交 GLB 建模任务，没有修改《凤鸣山门》正式游戏文件。</footer>
+</main></body></html>
