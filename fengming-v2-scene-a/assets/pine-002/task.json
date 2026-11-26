@@ -1,0 +1,17 @@
+{
+  "asset": "PINE-002",
+  "task_id": "246b5d7a-feda-43ab-90f1-463b203932c9",
+  "status": "submitted",
+  "approved_image_blob_sha": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "request": {
+    "model": "v3.1-20260211",
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "face_limit": 50000,
+    "texture_alignment": "original_image",
+    "enable_image_autofix": false
+  },
+  "created_utc": "2026-11-26T07:24:53.733971+00:00"
+}
