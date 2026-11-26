@@ -1,8 +1,8 @@
-# 凤鸣山门｜项目状态 V1.2
+# 凤鸣山门｜项目状态 V1.3
 当前正式母版：main:fengming-v2-scene-a/index.html
-版本：V2.0 H.9，blob 17dc8e6421810b3c03d3670b304ace98423bfecf。
-试玩：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/?v=h9
-状态：H.9基础地图已实现，待实机验收；H.8桥头通行未验收，原GLB护栏未切除。
+版本：V2.0 H.10，blob 52c4ce6cfb2b33543e80700c34573adf254bd912。
+试玩：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/?v=h10
+状态：H.10区域迷雾、目标标记、直线方向及探索进度已实现，H.9及H.8实机验收仍待完成。
 下一任务：联合验收地图定位、暂停恢复及桥头双向通行；若桥头失败，停止参数修补，拆分地形护栏与桥头并建立自动通行测试。
 120×120、九区域为设计目标；实际全图可达性未验收。当前角色和敌人仍是占位几何体。
 正式母版唯一；旧版本仅归档。每轮增量修改，状态变化后更新本文件。
