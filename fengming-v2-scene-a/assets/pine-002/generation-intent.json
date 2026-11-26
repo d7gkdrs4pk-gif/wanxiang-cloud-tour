@@ -1,0 +1,9 @@
+{
+  "asset": "PINE-002",
+  "approved_image_blob_sha": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "approved_image_bytes": 2771236,
+  "expected_credits": 60,
+  "github_run_id": "45774783349",
+  "created_utc": "2026-11-26T07:22:13.127347+00:00",
+  "status": "prepared_once"
+}
