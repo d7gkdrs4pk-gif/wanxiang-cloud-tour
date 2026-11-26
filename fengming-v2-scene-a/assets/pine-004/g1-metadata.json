@@ -1,14 +1,23 @@
 {
   "source_task": "64578e00-ce8f-475b-ab01-d899a3b82dad",
   "task_id": "aafb7992-63e1-4441-a6bb-91ed46264b9d",
-  "status": "technical_passed_G1_visual_pending",
-  "credits_consumed": 20.0,
+  "status": "G1_visual_failed",
+  "credits_consumed": 20,
   "bytes": 1656304,
   "sha256": "895012f4aa06ad7e41d20b1a19171435691809f49522633a6e3c1baa1a9395c7",
   "mesh_count": 1,
   "triangles": 48737,
   "textures": 0,
-  "trunk_continuity": "needs_four_view_visual_review",
-  "canopy_separation": "needs_four_view_visual_review",
-  "game_integration": "not_started"
+  "trunk_continuity": "FAIL_rope_like_fused_lumps",
+  "canopy_separation": "FAIL_foliage_pads_clumped",
+  "game_integration": "blocked",
+  "g1_decision": "NO_GO_stop_before_paid_textures",
+  "g2_texture_stage": "not_started",
+  "qa_report": "fengming-v2-scene-a/project/PINE004_G1_GEOMETRY_QA_V1.md",
+  "evidence": {
+    "contact_sheet": "fengming-v2-scene-a/assets/pine-004/pine-004-g1-contact-sheet.jpg",
+    "browser_QA": "fengming-v2-scene-a/assets/pine-004/g1-browser-qa.json",
+    "browser_run": "45784817364",
+    "basis": "front/right/back/top/silhouette actual 3D render"
+  }
 }
