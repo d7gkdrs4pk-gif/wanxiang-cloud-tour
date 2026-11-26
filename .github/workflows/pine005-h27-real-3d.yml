@@ -1,0 +1,100 @@
+name: H27 PINE-005 ACTUAL Blender GLB refinement (no image replacement)
+on:
+  push:
+    paths: ['.github/workflows/pine005-h27-real-3d.yml']
+permissions:
+  contents: write
+concurrency:
+  group: pine005-h27-real-3d
+  cancel-in-progress: false
+jobs:
+  model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Confirm current H26 actual 3D source, old mother and exact approved image
+        run: |
+          test "$(git hash-object fengming-v2-scene-a/assets/pine-002/reference.png)" = "9e204263823ca9f40d46737dca5c1ee0a28a73a8"
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          root=Path('fengming-v2-scene-a/assets/pine-005/h26')
+          q=json.loads((root/'h26-qa.json').read_text())
+          assert q['technical_status']=='PASS'
+          assert q['glb']['sha256']=='7b62aaa988d540342529ada4ac42b13e8f9db81128d5b34a18a797c31af6605f'
+          assert hashlib.sha256((root/'pine005-h26-hero.glb').read_bytes()).hexdigest()==q['glb']['sha256']
+          assert (root/'pine005-h26-hero.blend').stat().st_size>100000
+          print('H27 H26 Blender/GLB baseline confirmed; no paid generation or image substitution')
+          PY
+      - name: Install verified Blender runtime
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender libegl1 python3-numpy
+      - name: Refine the EXISTING 3D meshes and render actual viewpoints
+        run: blender -b -t 2 --python .github/scripts/pine005_h27_refine.py
+      - name: Independently verify source, GLB and side-by-side photographic source vs actual 3D
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          from PIL import Image,ImageDraw
+          from pathlib import Path
+          import hashlib,json,struct,base64
+          b=Path('fengming-v2-scene-a/assets/pine-005')
+          p=b/'h27';r=json.loads((p/'h27-qa.json').read_text())
+          assert r['technical_status']=='PASS' and r['visual_status']=='PENDING_G1A_VISUAL_REVIEW'
+          assert r['tripo_credits_added']==0 and r['game_mother_modified'] is False
+          assert r['2d_image_substituted_for_mesh'] is False
+          assert r['source']=='assets/pine-005/h26/pine005-h26-hero.blend'
+          assert r['operations']['bark_3d_facet_groups_after']<r['operations']['bark_3d_facet_groups_before']
+          assert r['operations']['remaining_contact_rocks']==4
+          assert r['operations']['body_topology_after']['nonmanifold_edges']==0
+          assert r['operations']['body_topology_after']['near_zero_faces']==0
+          raw=(p/'pine005-h27-refined.glb').read_bytes()
+          assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+          assert hashlib.sha256(raw).hexdigest()==r['outputs']['glb_sha256']
+          assert r['outputs']['gltf_meshes']>=15
+          assert (p/'pine005-h27-refined.blend').stat().st_size>100000
+          items=[
+            ('APPROVED ORIGINAL IMAGE',Path('fengming-v2-scene-a/assets/pine-002/reference.png')),
+            ('H26 REAL 3D BEFORE',b/'h26/front.png'),
+            ('H27 REAL 3D FRONT',p/'front.png'),
+            ('H27 RIGHT',p/'right.png'),
+            ('H27 THREE QUARTER',p/'three-quarter.png'),
+            ('H27 ROOTS + ROCKS',p/'root-close.png'),
+            ('H27 BARK CLOSE',p/'bark-close.png'),
+            ('H27 BACK',p/'back.png'),
+            ('H27 TOP',p/'top.png')]
+          board=Image.new('RGB',(1836,1686),(30,40,40))
+          draw=ImageDraw.Draw(board)
+          for i,(label,path) in enumerate(items):
+            with Image.open(path) as im:
+              im=im.convert('RGB')
+              im.thumbnail((593,509),Image.Resampling.LANCZOS)
+              x=12+(i%3)*612+(595-im.width)//2
+              y=12+(i//3)*562+35+(509-im.height)//2
+              board.paste(im,(x,y))
+              draw.text((17+(i%3)*612,14+(i//3)*562),label,fill=(239,225,203))
+          out=p/'h27-contact-sheet.jpg'
+          board.save(out,quality=78,optimize=True)
+          (p/'h27-contact-sheet.b64.txt').write_text(base64.b64encode(out.read_bytes()).decode('ascii'))
+          print('H27 REAL 3D VERIFIED',r['outputs']['glb_bytes'],r['outputs']['blend_bytes'],r['outputs']['glb_sha256'])
+          PY
+      - name: Preserve partial work even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine005-h27-real-blender-3d
+          path: fengming-v2-scene-a/assets/pine-005/h27/
+          if-no-files-found: ignore
+      - name: Commit only isolated Blender H27 .blend GLB images and QA
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/h27/
+          git commit -m 'H27 deliver actual refined editable 3D Blender and GLB, not a 2D concept render'
+          git pull --rebase origin main
+          git push origin HEAD:main
