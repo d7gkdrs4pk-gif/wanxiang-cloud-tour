@@ -1,0 +1,20 @@
+{
+  "status": "technical_pass_visual_pending",
+  "run_id": "45780653396",
+  "reference": "assets/pine-002/reference.png",
+  "paid_credits": 0,
+  "desktop": "passed",
+  "profile": {
+    "needles": 13110,
+    "pads": 19,
+    "branches": 8,
+    "dimensions": [
+      10.718021934783906,
+      7.612404978039018,
+      4.28589556183927
+    ],
+    "credits": 0
+  },
+  "mobile": "passed",
+  "errors": []
+}
