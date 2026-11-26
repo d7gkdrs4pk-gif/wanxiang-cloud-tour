@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-26T08:12:45.110083+00:00",
+  "endpoints": {
+    "html": {
+      "http": 200,
+      "bytes": 9676,
+      "type": "text/html; charset=utf-8",
+      "content_verified": true
+    },
+    "geometry": {
+      "http": 200,
+      "bytes": 7703,
+      "type": "application/javascript",
+      "content_verified": true
+    }
+  }
+}
