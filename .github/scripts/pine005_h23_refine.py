@@ -122,7 +122,21 @@ for v in combined.data.vertices:
         .25*math.sin(21.5*theta-.18*loc.z+.4*local_noise) +
         .18*local_noise
     )
-    amount=(.035+.017*max(0,1-loc.z/7.7))*grooves
+    amount=(.032+.013*max(0,1-loc.z/7.7))*grooves
+    # Preserve the actual organic collar geometry at branch attachment.
+    # Sharp sculpt noise around an attachment creates "cauliflower" lumps
+    # even when the underlying union is correct. Fade bark relief in/out
+    # smoothly near each attachment instead of building decorative collars.
+    attachment_centers=(
+        Vector((.86,.10,4.36)),Vector((2.69,.16,6.36)),
+        Vector((2.82,.14,6.22)),Vector((1.66,.17,4.73)),
+        Vector((2.35,.24,5.20)),Vector((3.22,-.07,7.27)),
+        Vector((1.45,.22,4.74))
+    )
+    nearest_joint=min((loc-p).length for p in attachment_centers)
+    x=max(0.0,min(1.0,(nearest_joint-.15)/.67))
+    smooth_x=x*x*(3-2*x)
+    amount*=.08+.92*smooth_x
     v.co+=v.normal*amount
     normal_sculpt_vertices+=1
 combined.data.update()
@@ -161,6 +175,8 @@ scene.render.image_settings.file_format="PNG"
 scene.render.image_settings.color_mode="RGB"
 scene.display.shading.light="STUDIO"
 scene.display.shading.color_type="MATERIAL"
+scene.display.shading.background_type="VIEWPORT"
+scene.display.shading.background_color=(.75,.76,.73)
 scene.display.shading.show_shadows=True
 if hasattr(scene.display.shading,"show_cavity"):
     scene.display.shading.show_cavity=True
