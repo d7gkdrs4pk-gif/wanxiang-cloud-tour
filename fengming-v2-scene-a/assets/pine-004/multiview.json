@@ -2,8 +2,8 @@
   "asset": "PINE-004",
   "task_id": "64578e00-ce8f-475b-ab01-d899a3b82dad",
   "task_type": "image_to_multiview",
-  "status": "images_ready_visual_review_pending",
-  "credits_consumed": 10.0,
+  "status": "G0_conditionally_suitable_for_geometry_only",
+  "credits_consumed": 10,
   "reference": "fengming-v2-scene-a/assets/pine-002/reference.png",
   "reference_git_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
   "views": {
@@ -33,9 +33,17 @@
     }
   },
   "duplicate_images": false,
-  "visual_shape_match": "pending_human_review",
-  "consistency_of_back_and_side": "unverified",
+  "visual_shape_match": "front_S_trunk_and_canopy_prelim_pass",
+  "consistency_of_back_and_side": "style_prelim_pass_topology_not_verified",
   "generate_3d_automatically": false,
   "model_generation_cost": 0,
-  "next_step": "G0 multi-angle fidelity review BEFORE any 3D charge"
+  "next_step": "G0 multi-angle fidelity review BEFORE any 3D charge",
+  "human_review": {
+    "front": "preserves broad asymmetrical S silhouette, dense needles and gripping roots; some scale/detail shifts",
+    "left_back_right": "visually related aged pine; AI-inferred branches/rocks may be topologically inconsistent",
+    "decision": "GO only for a separate single geometry-only G1 test; no 3D submitted in this turn",
+    "G1_status": "not_started",
+    "G2_status": "not_started",
+    "project_report": "project/PINE004_MULTIVIEW_QA_V1.md"
+  }
 }
