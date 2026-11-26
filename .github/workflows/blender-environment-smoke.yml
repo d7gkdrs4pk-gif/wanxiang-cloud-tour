@@ -25,6 +25,13 @@ jobs:
             sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender
             blender --version | head -n 2
           fi
+      - name: Restore EGL shared library required by headless Blender
+        run: |
+          if ! ldconfig -p | grep -q 'libEGL.so.1'; then
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libegl1
+          fi
+          ldconfig -p | grep -F 'libEGL.so.1'
       - name: Build sample, export GLB and render four views headlessly
         run: blender -b -t 2 --python .github/scripts/blender_environment_smoke.py
       - name: Validate test outputs independently using system Python
