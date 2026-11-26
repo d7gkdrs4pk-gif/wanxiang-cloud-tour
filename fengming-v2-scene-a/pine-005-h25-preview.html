@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>凤鸣山门｜PINE-005 H.25 根系局部重塑 G1-A 验收</title>
+<meta name="theme-color" content="#111d25">
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC","Microsoft Yahei",sans-serif;color:#efe8d5;background:#101b22}
+*{box-sizing:border-box}body{margin:0;overflow:hidden}#stage{position:fixed;inset:0;background:radial-gradient(ellipse 60% 65% at 50% 43%,#385253 0%,#1d343d 40%,#111d26 82%,#0a141b 100%)}
+canvas{display:block;width:100%;height:100%;touch-action:none}
+header{position:fixed;top:max(12px,env(safe-area-inset-top));left:15px;right:15px;z-index:3;display:flex;align-items:start;justify-content:space-between;gap:12px;pointer-events:none}
+header>div{background:#0b171ad9;border:1px solid #a9af9333;border-radius:14px;padding:11px 13px;backdrop-filter:blur(12px)}
+h1{font-size:16px;font-weight:650;margin:0;letter-spacing:.8px}small{display:block;font-size:11px;color:#b6bbae;line-height:1.6}
+#status{max-width:280px;text-align:right;font-size:12px;color:#e8d9b1;line-height:1.4}
+#status.error{color:#ffc1bd}
+#foot{position:fixed;z-index:3;bottom:max(12px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(97vw,780px);padding:10px;border:1px solid #9fae9350;border-radius:16px;background:#071418dd;backdrop-filter:blur(14px)}
+#foot .toolbar{display:flex;gap:5px;justify-content:center;flex-wrap:wrap}button{font-family:inherit;color:#e8e2ce;background:#1b3036;border:1px solid #71898666;border-radius:10px;padding:9px 11px;font-size:12px;min-height:38px;cursor:pointer}button.on{background:#725d38;border-color:#dfc488;color:#fff8dc}button:active{transform:scale(.97)}
+#instructions{text-align:center;color:#bbc6c0;margin:7px 0 0;font-size:11px;line-height:1.4}
+#reference{display:none;position:fixed;z-index:4;top:87px;right:15px;bottom:110px;width:min(38vw,390px);background:#101c23ed;border:1px solid #b8a97888;border-radius:14px;padding:9px;box-shadow:0 15px 50px #0008}
+#reference.visible{display:flex;flex-direction:column;gap:8px}
+#reference img{width:100%;height:calc(100% - 25px);object-fit:contain;min-height:0;border-radius:7px}
+#reference span{font-size:11px;color:#d2cfbc;text-align:center}
+#watermark{position:fixed;bottom:111px;right:12px;color:#c2c9c06b;font-size:10px;z-index:2;pointer-events:none}
+#loading{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#0a1b23e8;border:1px solid #e2c67c55;border-radius:12px;padding:16px 23px;max-width:85vw;text-align:center;z-index:2;font-size:14px}
+@media(max-width:680px){
+ header{left:8px;right:8px;top:max(7px,env(safe-area-inset-top))}
+ header>div{padding:8px}h1{font-size:13px}#status{font-size:10px;max-width:136px}
+ #foot{bottom:max(5px,env(safe-area-inset-bottom));padding:7px;width:calc(100vw - 10px);border-radius:13px}
+ button{font-size:11px;padding:7px;min-height:34px}#foot .toolbar{gap:4px}
+ #instructions{font-size:10px;margin-top:5px}
+ #reference{top:67px;right:7px;left:7px;bottom:105px;width:auto;background:#0c181ff2}
+ #watermark{display:none}
+}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+
+<!-- G1-A is a trunk quality review, not an approved photo-real game asset. -->
+</head>
+<body>
+<div id="stage"></div>
+<header>
+ <div><h1>PINE-005 · H.25 盘根重建</h1><small>凤鸣山门 · 基于 H.23 已冻结母版仅重建下部根基</small><small>更宽、更扁、非对称的贴地盘根 · 无树冠 · 待美术验收</small></div>
+ <div id="status">正在准备 3D 场景…</div>
+</header>
+<!-- H23 preserves H22 source and does not claim final G1-A art acceptance. -->
+<div id="loading">正在加载无贴图 3D 几何模型…</div>
+<aside id="reference"><img alt="批准古松高清参考图" src="./assets/pine-002/reference.png"><span>目标造型参考图 · 与左侧 3D 模型对照</span></aside>
+<div id="watermark">G1-A 严格验收：先排除尖爪/三角面异常，再评估古松真实形体</div>
+<div id="foot">
+ <div class="toolbar">
+  <button type="button" data-view="front" class="on">正面</button>
+  <button type="button" data-view="right">右侧</button>
+  <button type="button" data-view="back">背面</button>
+  <button type="button" data-view="top">俯视</button>
+  <button id="reset" type="button">全景</button>
+  <button id="spin" class="on" type="button">自动旋转</button>
+  <button id="wire" type="button">线框</button>
+  <button id="double" type="button">黑色剪影</button>
+  <button id="ref" type="button">对照参考图</button>
+ </div>
+ <p id="instructions">单指旋转 · 双指缩放；重点查看前侧与根部特写：根须是否真正贴地，不再像尖爪；正面和侧面是否连贯。没有树冠、没有付费贴图，G1-A 未自动通过。</p>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+
+const stage=document.querySelector('#stage');
+const status=document.querySelector('#status');
+const loading=document.querySelector('#loading');
+let renderer;
+try {
+ renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});
+} catch(error) {
+ loading.textContent='无法启动 WebGL：请尝试使用 iPhone Safari 或更新浏览器。';
+ status.textContent='WebGL 不可用';
+ status.classList.add('error');
+ throw error;
+}
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.12;
+stage.appendChild(renderer.domElement);
+
+const scene=new THREE.Scene();
+scene.add(new THREE.HemisphereLight(0xe1edfb,0x4e483b,2.0));
+const key=new THREE.DirectionalLight(0xffedce,3.5);key.position.set(5,9,7);scene.add(key);
+const rim=new THREE.DirectionalLight(0xa9dcd8,2.0);rim.position.set(-6,5,-5);scene.add(rim);
+try{const pmrem=new THREE.PMREMGenerator(renderer);const env=pmrem.fromScene(new RoomEnvironment(),0.05);scene.environment=env.texture;pmrem.dispose();}catch(error){console.warn('Environment map unavailable:',error);}
+const camera=new THREE.PerspectiveCamera(38,innerWidth/innerHeight,0.01,150);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=0.06;
+controls.minPolarAngle=0.16;controls.maxPolarAngle=Math.PI-0.075;
+controls.minDistance=1.8;controls.maxDistance=35;
+controls.enablePan=false;controls.autoRotate=true;controls.autoRotateSpeed=0.75;
+
+const ground=new THREE.Mesh(new THREE.CircleGeometry(5,96),new THREE.MeshStandardMaterial({color:0x25352e,roughness:1,metalness:0}));
+ground.rotation.x=-Math.PI/2;ground.position.y=-0.015;scene.add(ground);
+const grid=new THREE.GridHelper(8,16,0x7a7d6b,0x425457);
+grid.position.y=0.003;grid.material.opacity=.23;grid.material.transparent=true;scene.add(grid);
+let model=null,meshes=[],height=4.0,radius=9,wire=false,double=false;
+const materialRecords=[];
+
+function setView(which){
+ if(!model)return;
+ const t=controls.target;
+ const d=radius;
+ const offsets={
+   front:[0,.23*d,d],
+   right:[d,.23*d,0],
+   back:[0,.23*d,-d],
+   top:[.05*d,d,.05*d]
+ };
+ const o=offsets[which]||offsets.front;
+ camera.position.set(t.x+o[0],t.y+o[1],t.z+o[2]);camera.lookAt(t);
+ controls.update();
+ document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('on',b.dataset.view===which));
+}
+function markCustom(){document.querySelectorAll('[data-view]').forEach(b=>b.classList.remove('on'));}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{controls.autoRotate=false;document.querySelector('#spin').classList.remove('on');setView(b.dataset.view);}));
+document.querySelector('#reset').onclick=()=>{controls.target.set(0,height*.43,0);setView('front');};
+document.querySelector('#spin').onclick=e=>{controls.autoRotate=!controls.autoRotate;e.currentTarget.classList.toggle('on',controls.autoRotate);};
+document.querySelector('#wire').onclick=e=>{wire=!wire;e.currentTarget.classList.toggle('on',wire);for(const m of materialRecords)m.material.wireframe=wire;};
+document.querySelector('#double').onclick=e=>{double=!double;e.currentTarget.classList.toggle('on',double);for(const m of materialRecords){m.material.color.setHex(double?0x080c0d:0xb2a799);m.material.needsUpdate=true;}};
+document.querySelector('#ref').onclick=e=>{const open=document.querySelector('#reference').classList.toggle('visible');e.currentTarget.classList.toggle('on',open);};
+controls.addEventListener('start',markCustom);
+const loader=new GLTFLoader();
+const file='./assets/pine-005/h25/pine005-h25-roots.glb';
+loader.load(file,gltf=>{
+ model=gltf.scene;
+ model.updateMatrixWorld(true);
+ const box=new THREE.Box3().setFromObject(model);
+ const extent=box.getSize(new THREE.Vector3());
+ if(!Number.isFinite(extent.y)||extent.y<.001)throw new Error('模型高度无效');
+ const s=4.6/extent.y;model.scale.setScalar(s);
+ model.updateMatrixWorld(true);
+ const corrected=new THREE.Box3().setFromObject(model),min=corrected.min,max=corrected.max;
+ const center=corrected.getCenter(new THREE.Vector3());
+ model.position.set(-center.x,-min.y,-center.z);
+ scene.add(model);
+ height=corrected.getSize(new THREE.Vector3()).y;
+ const w=corrected.getSize(new THREE.Vector3());
+ const maxSize=Math.max(w.x,w.y,w.z);
+ radius=Math.min(27,Math.max(8,maxSize*1.95));
+ controls.maxDistance=Math.max(30,radius*2.2);
+ controls.target.set(0,height*.43,0);
+ const baseGrey=new THREE.MeshStandardMaterial({color:0xb2a799,roughness:.91,metalness:0,side:THREE.DoubleSide});
+ model.traverse(o=>{if(o.isMesh){
+   meshes.push(o);o.frustumCulled=true;
+   o.material=baseGrey.clone();
+   materialRecords.push({material:o.material,originalSide:o.material.side});
+ }});
+ window.__PINE005_H25={loaded:true,meshCount:meshes.length,modelPath:file,technicalOnly:true,
+   appearanceReview:"not_yet_passed",orbit:true};
+ setView('front');
+ loading.style.display='none';
+ status.innerHTML='模型已加载 · '+meshes.length+' 网格<br>缩放 '+w.x.toFixed(1)+' × '+w.y.toFixed(1)+' × '+w.z.toFixed(1)+'（预览单位）';
+},xhr=>{if(xhr.total){loading.textContent='正在加载古松模型：'+Math.min(99,Math.round(xhr.loaded/xhr.total*100))+'%';}},error=>{
+ loading.textContent='模型加载失败，请检查网络或刷新。';
+ status.textContent='GLB 无法读取';
+ status.classList.add('error');
+ console.error('PINE-005 H.25 GLB load failed',error);
+});
+window.addEventListener('resize',()=>{
+ const w=innerWidth,h=innerHeight;
+ camera.aspect=w/h;camera.updateProjectionMatrix();
+ renderer.setSize(w,h);
+ renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+});
+let prev=performance.now(),frames=0,start=prev;
+function tick(t){
+ requestAnimationFrame(tick);
+ frames++;
+ controls.update();
+ renderer.render(scene,camera);
+ if(t-start>2600){
+  const fps=Math.round(frames*1000/(t-start));
+  if(model){const previous=status.innerHTML.replace(/<br>帧率.*$/,'');status.innerHTML=previous+'<br>帧率 '+fps+' FPS（仅供本机参考）';}
+  frames=0;start=t;
+ }
+ prev=t;
+}
+requestAnimationFrame(tick);
+</script>
+</body>
+</html>
