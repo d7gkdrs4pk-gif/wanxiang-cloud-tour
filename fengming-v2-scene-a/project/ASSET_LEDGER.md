@@ -12,3 +12,6 @@ PINE-002 pine-002/pine.glb：15,274,144 bytes；48,711三角面、1网格、1材
 
 PINE-004 多视图预处理（仅四张2D图，无GLB）：task 64578e00-ce8f-475b-ab01-d899a3b82dad；Tripo中国API image_to_multiview；实际10.0 credits（¥0.70）。输出 assets/pine-004/front.png、left.png、back.png、right.png；G0视觉初步可用，但四视图拓扑同一性未证实，尚未启动G1付费建模；详见project/PINE004_MULTIVIEW_QA_V1.md。
 截至PINE-004，项目累计已记录220 credits（按¥0.07/credit折算约¥15.40）。原历史100元充值口径剩余预算约¥84.60（估算）；Tripo在本次任务创建前实测可用1219 credits，任务成功实际消耗10 credits，理论可用余额1209 credits（约¥84.63），需以新的实时余额查询为准。未追加任何3D模型费用。
+
+PINE-004 G1 无贴图三维：task aafb7992-63e1-4441-a6bb-91ed46264b9d，输入来自四视图task 64578e00-ce8f-475b-ab01-d899a3b82dad；model v3.1-20260211、texture=false、pbr=false、geometry_quality=standard、face_limit=50000。实际消耗20.0 credits（约¥1.40）；GLB 1,656,304 bytes、48,737三角面、1网格、0贴图。技术校验与浏览器加载通过，G1视觉失败：主干绳索状团块、树冠分层团块，禁止贴图与游戏集成。验收详见project/PINE004_G1_GEOMETRY_QA_V1.md，原模型和证据保留。
+项目累计240 credits，按¥0.07/credit约¥16.80；以历史100元充值预算估算剩余¥83.20，非实时现金。G1请求前经Tripo API实测1209 credits，扣除本次20 credits理论剩余1189 credits，未经新的余额查询确认。PINE-004两阶段合计30 credits（约¥2.10）：G0多视图10、G1几何20；无G2付费贴图。
