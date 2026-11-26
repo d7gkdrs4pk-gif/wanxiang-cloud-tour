@@ -1,0 +1,24 @@
+{
+  "task_id": "246b5d7a-feda-43ab-90f1-463b203932c9",
+  "credits_consumed": 60.0,
+  "request": {
+    "model": "v3.1-20260211",
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "face_limit": 50000,
+    "texture_alignment": "original_image",
+    "enable_image_autofix": false
+  },
+  "reference_blob_sha": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "glb_bytes": 15274144,
+  "glb_sha256": "bea19fe27aa8bebb15ed36e878d0703ed7fb0ba5c337f91aa1ad338e3abbeade",
+  "meshes": 1,
+  "primitives": 1,
+  "estimated_triangles": 48711,
+  "materials": 1,
+  "textures": 3,
+  "visual_review": "pending",
+  "game_integration": "not_started"
+}
