@@ -8,7 +8,7 @@
 <style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:#101d21;color:#e7e1d4}
 *{box-sizing:border-box}body{margin:0;overflow:hidden}
-#stage{position:fixed;inset:0;background:radial-gradient(ellipse at 47% 44%,#415854 0%,#253b3e 45%,#102026 100%)}
+#stage{position:fixed;inset:0;background:radial-gradient(ellipse at 47% 45%,#687a72 0%,#405952 44%,#172a2c 100%)}
 canvas{width:100%;height:100%;display:block;touch-action:none}
 header{position:fixed;top:max(11px,env(safe-area-inset-top));left:12px;right:12px;display:flex;justify-content:space-between;align-items:start;gap:12px;pointer-events:none;z-index:2}
 header>div{padding:11px 14px;background:#0e1a1de6;border:1px solid #adac8759;border-radius:12px;max-width:48%;backdrop-filter:blur(10px)}
@@ -78,9 +78,9 @@ const scene=new T.Scene();
 const hemi=new T.HemisphereLight(0xe8efdf,0x463b30,2.1);scene.add(hemi);
 const key=new T.DirectionalLight(0xffecd0,3.0);key.position.set(-6,10,7);scene.add(key);
 const rim=new T.DirectionalLight(0x9cd3c7,1.6);rim.position.set(5,6,-6);scene.add(rim);
-const ground=new T.Mesh(new T.PlaneGeometry(200,200),new T.MeshStandardMaterial({color:0x283d39,roughness:1}));
+const ground=new T.Mesh(new T.CircleGeometry(3.8,72),new T.MeshStandardMaterial({color:0x34483d,roughness:1}));
 ground.rotation.x=-Math.PI/2;ground.position.y=-.22;scene.add(ground);
-const grid=new T.GridHelper(22,22,0x6e8a7d,0x3b5950);grid.position.y=-.217;grid.material.transparent=true;grid.material.opacity=.12;scene.add(grid);
+const grid=new T.GridHelper(22,22,0x6e8a7d,0x3b5950);grid.position.y=-.217;grid.material.transparent=true;grid.material.opacity=.08;grid.visible=false;scene.add(grid);
 const camera=new T.PerspectiveCamera(37,innerWidth/innerHeight,.1,170);
 const controls=new OrbitControls(camera,renderer.domElement);
 controls.enableDamping=true;controls.enablePan=false;controls.minDistance=5;controls.maxDistance=70;
