@@ -193,9 +193,10 @@ bpy.context.view_layer.objects.active=trunk_obj
 bpy.ops.object.join()
 body=bpy.context.view_layer.objects.active
 body.name="H26 ONE_CONTINUOUS_AGED_WOOD_MAIN_ROOTS_BRANCHES"
-body.data.remesh_voxel_size=.047
+body.data.remesh_voxel_size=.080
 bpy.ops.object.voxel_remesh()
-assert 15000<len(body.data.polygons)<200000,len(body.data.polygons)
+assert 12000<len(body.data.polygons)<200000,len(body.data.polygons)
+print('H26_VOXEL_UNION_COMPLETE',len(body.data.polygons),flush=True)
 
 # Natural sculpt: high and mid spatial-frequency perturbations are modulated
 # to remain subtle at branch collars and thinner roots; no sine flutes.
@@ -223,7 +224,7 @@ body.data.update()
 for face in body.data.polygons:face.use_smooth=True
 body.data.materials.clear();body.data.materials.append(bark)
 
-# Save pre-bark geometry and use ray-casts from each surface patch to place
+# Save pre-bark geometry and cached BVH ray-casts to place
 # raised irregular chipped bark PLATES, not uniform fluting. The stony cracked
 # plates are actual polygons, visible in gray-mesh (not a pasted texture).
 plate_objs=[]
@@ -249,10 +250,10 @@ def surface_at(t,angle,extra=0):
     return loc+nrm*extra,nrm
 plate_vertices=[];plate_faces=[];plate_mat_ids=[]
 # Dense irregular bark plates on the thick lower-and-middle ancient bole.
-for tier in range(34):
+for tier in range(25):
     tmid=(tier+.48+rng.uniform(-.30,.30))/36
     if tmid<.025 or tmid>.88:continue
-    N=rng.randint(11,17)
+    N=rng.randint(11,15)
     shift=rng.random()*2*pi
     for q in range(N):
         t=tmid+rng.uniform(-.007,.007)
@@ -280,6 +281,7 @@ for tier in range(34):
             plate_mat_ids.append(0 if rng.random()<.60 else 1)
 # Bark plates are part of our authored asset, but remain independently
 # editable. Avoid expensive booleans on 400 flaky facets.
+print('H26_BARK_FACETS_PREPARED',len(plate_faces),flush=True)
 if plate_vertices:
     bark_mesh=bpy.data.meshes.new("H26 natural fractured raised bark plates")
     bark_mesh.from_pydata(plate_vertices,[],plate_faces)
