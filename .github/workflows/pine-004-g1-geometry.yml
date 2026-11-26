@@ -1,0 +1,33 @@
+name: PINE-004 G1 untextured geometry only
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-004-g1-geometry.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine-004-g1-single-paid-task
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: One-time G1 geometric test (no textures, no full game)
+        env:
+          TRIPO_API_KEY: ${{ secrets.TRIPO_API_KEY }}
+        run: python3 .github/scripts/pine004_g1.py
+      - name: Preserve technical result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine-004-g1-geometry-technical
+          path: |
+            fengming-v2-scene-a/assets/pine-004/geometry.glb
+            fengming-v2-scene-a/assets/pine-004/g1-metadata.json
+            fengming-v2-scene-a/assets/pine-004/g1-task.json
+          if-no-files-found: ignore
