@@ -1,0 +1,65 @@
+{
+  "stage": "H.21 Blender toolchain / no art acceptance",
+  "status": "PASS",
+  "blender_version": "4.0.2",
+  "blender_version_tuple": [
+    4,
+    0,
+    2
+  ],
+  "headless": true,
+  "geometry_nodes_api": true,
+  "render_engine": "BLENDER_WORKBENCH",
+  "gltf_mesh_count": 2,
+  "model_glb_bytes": 8252,
+  "model_glb_sha256": "121ad87a22dcf8a82dafbf51740483ae34c175b57812aa10342119513f858ea1",
+  "blend_bytes": 88307,
+  "views": {
+    "front": {
+      "pixels": [
+        420,
+        420
+      ],
+      "bytes": 108712,
+      "sha256": "655ceab57ae214c8f81e0c40d630c15d38dc96c0e6cb745d4b32056737bc3906"
+    },
+    "right": {
+      "pixels": [
+        420,
+        420
+      ],
+      "bytes": 99369,
+      "sha256": "468782783e1157bc4967dba7b87b3d7404f6f7dc47d4cda161ab7ddae12f125f"
+    },
+    "back": {
+      "pixels": [
+        420,
+        420
+      ],
+      "bytes": 105114,
+      "sha256": "fbb5e189d20fded928af5301bd87930e456315963c2abf185e1d4cf358d0a731"
+    },
+    "top": {
+      "pixels": [
+        420,
+        420
+      ],
+      "bytes": 94294,
+      "sha256": "c663599807e526185ea1aaa1010154d68c8bc34b7b042bef2a7d63830a980d37"
+    }
+  },
+  "elapsed_seconds": 6.5,
+  "tripo_credits_spent": 0,
+  "game_mother_modified": false,
+  "scope": "DIAGNOSTIC ONLY; PINE-005 G1 geometry art not yet built/accepted",
+  "passed_checks": [
+    "blender_cli",
+    "headless_bpy",
+    "curves_to_mesh",
+    "geometry_nodes_api",
+    "save_blend",
+    "export_glb",
+    "render_four_views",
+    "PNG_GLTF_integrity"
+  ]
+}
