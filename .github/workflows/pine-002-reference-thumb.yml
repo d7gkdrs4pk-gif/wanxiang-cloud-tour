@@ -1,0 +1,39 @@
+name: PINE-002 approved reference comparison thumbnail
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-002-reference-thumb.yml'
+permissions:
+  contents: write
+jobs:
+  prepare-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make private-source-approved reference image thumbnail from existing GitHub asset
+        run: |
+          python3 -m pip install --quiet --break-system-packages Pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import base64
+          root=Path('fengming-v2-scene-a/assets/pine-002')
+          source=root/'reference.png'
+          if source.stat().st_size!=2771236: raise SystemExit('Reference file size mismatch')
+          img=Image.open(source).convert('RGB')
+          img.thumbnail((900,630))
+          out=root/'approved-reference-qa.jpg'
+          img.save(out,quality=72,optimize=True)
+          (root/'approved-reference-qa.b64.txt').write_text(base64.b64encode(out.read_bytes()).decode())
+          print('Approved reference thumbnail',img.size,'bytes',out.stat().st_size)
+          PY
+      - name: Save only derived QA reference in GitHub
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-002/approved-reference-qa.jpg
+          git add fengming-v2-scene-a/assets/pine-002/approved-reference-qa.b64.txt
+          git commit -m "Store PINE-002 reference preview for model comparison"
+          git pull --rebase origin main
+          git push origin HEAD:main
