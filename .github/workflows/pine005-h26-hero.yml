@@ -3,11 +3,12 @@ on:
   push:
     paths:
       - '.github/workflows/pine005-h26-hero.yml'
+      - '.github/scripts/pine005_h26_hero.py'
 permissions:
   contents: write
 concurrency:
   group: pine005-h26-new-hero-only
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   hero:
     runs-on: ubuntu-24.04
