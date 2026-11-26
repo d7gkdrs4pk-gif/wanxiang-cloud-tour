@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "items": {
+    "preview": {
+      "http": 200,
+      "ok": true,
+      "bytes_fetched": 11529
+    },
+    "model": {
+      "http": 200,
+      "ok": true,
+      "bytes_fetched": 1217384
+    }
+  }
+}
