@@ -1,0 +1,199 @@
+name: Tripo PINE-002 approved-image one-shot
+on:
+  push:
+    paths:
+      - '.github/workflows/tripo-pine-002.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine-002-one-paid-task
+  cancel-in-progress: false
+jobs:
+  generate:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Upload approved image and generate only one 3D model
+        env:
+          TRIPO_API_KEY: ${{ secrets.TRIPO_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os, json, time, pathlib, struct, hashlib, urllib.request, urllib.error, subprocess, uuid, datetime
+          root = pathlib.Path('fengming-v2-scene-a/assets/pine-002')
+          image = root / 'reference.png'
+          intent = root / 'generation-intent.json'
+          marker = root / 'task.json'
+          model = root / 'pine.glb'
+          base = 'https://openapi.tripo3d.com/v3'
+          expected_blob = '9e204263823ca9f40d46737dca5c1ee0a28a73a8'
+          key = os.environ.get('TRIPO_API_KEY', '')
+          if not key:
+              raise SystemExit('Tripo API key is unavailable in GitHub Actions Secrets; no paid task submitted')
+          if not image.is_file():
+              raise SystemExit('Approved reference missing; no paid task submitted')
+          blob = subprocess.check_output(['git','hash-object',str(image)], text=True).strip()
+          data = image.read_bytes()
+          if blob != expected_blob or len(data) != 2771236 or data[:8] != b'\x89PNG\r\n\x1a\n':
+              raise SystemExit('Approved reference identity/format mismatch; no paid task submitted')
+          dims = struct.unpack('>II', data[16:24])
+          if dims != (1536,1024):
+              raise SystemExit('Reference dimensions unexpected; no paid task submitted')
+          if model.exists():
+              print('PINE-002 GLB already present; paid generation skipped')
+              raise SystemExit(0)
+
+          subprocess.run(['git','config','user.name','github-actions'],check=True)
+          subprocess.run(['git','config','user.email','github-actions@github.com'],check=True)
+          def commit(paths, message):
+              subprocess.run(['git','add',*[str(p) for p in paths]],check=True)
+              result = subprocess.run(['git','diff','--cached','--quiet'])
+              if result.returncode == 0: return
+              subprocess.run(['git','commit','-m',message],check=True)
+              subprocess.run(['git','pull','--rebase','origin','main'],check=True)
+              subprocess.run(['git','push','origin','HEAD:main'],check=True)
+
+          def call(path, payload=None, multipart=None):
+              headers = {'Authorization':'Bearer '+key}
+              if multipart is not None:
+                  data, boundary = multipart
+                  headers['Content-Type']='multipart/form-data; boundary='+boundary
+              elif payload is not None:
+                  data=json.dumps(payload,separators=(',',':')).encode()
+                  headers['Content-Type']='application/json'
+              else:
+                  data=None
+              req=urllib.request.Request(base+path, data=data,headers=headers)
+              try:
+                  with urllib.request.urlopen(req,timeout=90) as response:
+                      response_json=json.load(response)
+              except urllib.error.HTTPError as exc:
+                  raise RuntimeError('Tripo HTTP error '+str(exc.code)) from exc
+              if response_json.get('code') != 0:
+                  raise RuntimeError('Tripo API '+str(response_json.get('code'))+': '+str(response_json.get('message',''))[:200])
+              return response_json['data']
+
+          config = {
+              'model':'v3.1-20260211',
+              'texture':True,'pbr':True,
+              'texture_quality':'detailed',
+              'geometry_quality':'detailed',
+              'face_limit':50000,
+              'texture_alignment':'original_image',
+              'enable_image_autofix':False,
+          }
+          if marker.exists():
+              record=json.loads(marker.read_text())
+              task_id=record['task_id']
+              print('Reusing already submitted task:',task_id,flush=True)
+          else:
+              if intent.exists():
+                  raise SystemExit('Generation intent exists but task ID is absent; manual recovery required to avoid duplicate charges')
+              balance=call('/account/balance')
+              available=float(balance['balance'])
+              print('Tripo available credits before submission:',available,flush=True)
+              if available < 70:
+                  raise SystemExit('Less than 70 credits available; paid generation not submitted')
+              intent.write_text(json.dumps({
+                  'asset':'PINE-002',
+                  'approved_image_blob_sha':expected_blob,
+                  'approved_image_bytes':len(data),
+                  'expected_credits':60,
+                  'github_run_id':os.environ.get('GITHUB_RUN_ID'),
+                  'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  'status':'prepared_once'
+              },indent=2,ensure_ascii=False)+'\n')
+              commit([intent],'PINE-002 reserve single image-to-model submission')
+              boundary='----pine002'+uuid.uuid4().hex
+              part=(('--'+boundary+'\r\nContent-Disposition: form-data; name="file"; filename="reference.png"\r\nContent-Type: image/png\r\n\r\n').encode()+data+('\r\n--'+boundary+'--\r\n').encode())
+              file_token=call('/files',multipart=(part,boundary))['file_token']
+              task_id=call('/generation/image-to-model',{'input':file_token,**config})['task_id']
+              print('Tripo image-to-model task submitted ONCE:',task_id,flush=True)
+              marker.write_text(json.dumps({
+                  'asset':'PINE-002','task_id':task_id,'status':'submitted',
+                  'approved_image_blob_sha':expected_blob,'request':config,
+                  'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()
+              },indent=2,ensure_ascii=False)+'\n')
+              commit([marker],'PINE-002 persist Tripo paid task ID before polling')
+
+          for i in range(180):
+              task=call('/tasks/'+task_id)
+              status=task.get('status')
+              if i%4==0 or status in ('success','failed','cancelled','canceled'):
+                  print('Task:',task_id,'status:',status,'progress:',task.get('progress'),flush=True)
+              if status=='success': break
+              if status in ('failed','cancelled','canceled','banned','expired'):
+                  raise SystemExit('Tripo task ended: '+str(status)+'; no automatic resubmission')
+              time.sleep(7)
+          else:
+              raise SystemExit('Polling timed out; task ID was saved, do not resubmit')
+
+          url=task.get('output',{}).get('model_url')
+          if not isinstance(url,str) or not url.startswith('https://'):
+              raise SystemExit('No HTTPS model URL in completed task')
+          with urllib.request.urlopen(url,timeout=120) as response:
+              glb=response.read(90*1024*1024+1)
+          if len(glb)>90*1024*1024 or len(glb)<32 or glb[:4]!=b'glTF' or struct.unpack_from('<I',glb,8)[0]!=len(glb):
+              raise SystemExit('GLB header/length invalid; model not committed')
+          chunk_len,chunk_type=struct.unpack_from('<I4s',glb,12)
+          if chunk_type!=b'JSON' or chunk_len>len(glb)-20:
+              raise SystemExit('GLB JSON chunk invalid; model not committed')
+          scene=json.loads(glb[20:20+chunk_len].decode('utf-8').rstrip(' \x00'))
+          meshes=scene.get('meshes',[])
+          primitives=[p for m in meshes for p in m.get('primitives',[])]
+          if not primitives:
+              raise SystemExit('GLB contains no mesh primitives; model not committed')
+          acc=scene.get('accessors',[])
+          triangles=0
+          for primitive in primitives:
+              if primitive.get('mode',4)!=4: continue
+              ai=primitive.get('indices')
+              if isinstance(ai,int) and ai<len(acc):
+                  triangles+=int(acc[ai].get('count',0))//3
+          model.write_bytes(glb)
+          files=[model]
+          preview_url=task.get('output',{}).get('rendered_image_url')
+          if isinstance(preview_url,str) and preview_url.startswith('https://'):
+              try:
+                  with urllib.request.urlopen(preview_url,timeout=50) as response:
+                      preview=response.read(8*1024*1024+1)
+                  if len(preview)<=8*1024*1024 and preview[:8]==b'\x89PNG\r\n\x1a\n':
+                      preview_path=root/'preview.png'
+                      preview_path.write_bytes(preview)
+                      files.append(preview_path)
+              except Exception as exc:
+                  print('Preview unavailable; model GLB preserved:',type(exc).__name__)
+          credits=task.get('credits_consumed')
+          record=json.loads(marker.read_text())
+          record.update({'status':'technical_validation_passed','credits_consumed':credits,
+              'glb_bytes':len(glb),'glb_sha256':hashlib.sha256(glb).hexdigest(),
+              'meshes':len(meshes),'primitives':len(primitives),'estimated_triangles':triangles,
+              'materials':len(scene.get('materials',[])),'textures':len(scene.get('textures',[])),
+              'completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+          marker.write_text(json.dumps(record,indent=2,ensure_ascii=False)+'\n')
+          metadata=root/'metadata.json'
+          metadata.write_text(json.dumps({
+              'task_id':task_id,'credits_consumed':credits,'request':config,
+              'reference_blob_sha':expected_blob,
+              'glb_bytes':len(glb),'glb_sha256':record['glb_sha256'],
+              'meshes':record['meshes'],'primitives':record['primitives'],
+              'estimated_triangles':triangles,'materials':record['materials'],'textures':record['textures'],
+              'visual_review':'pending','game_integration':'not_started'
+          },indent=2,ensure_ascii=False)+'\n')
+          files += [marker,metadata]
+          commit(files,'Save one validated PINE-002 image-to-3D model and provenance')
+          print('PINE-002 saved, technical validation passed; visual review pending. GLB bytes:',len(glb),'credits:',credits)
+          PY
+      - name: Keep a downloadable model artifact as backup
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine-002-technical-output
+          path: |
+            fengming-v2-scene-a/assets/pine-002/pine.glb
+            fengming-v2-scene-a/assets/pine-002/metadata.json
+            fengming-v2-scene-a/assets/pine-002/preview.png
+          if-no-files-found: ignore
