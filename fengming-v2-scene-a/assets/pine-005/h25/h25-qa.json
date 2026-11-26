@@ -2,7 +2,7 @@
   "asset": "PINE-005",
   "stage": "H25 local rooted buttress reconstruction from H23",
   "technical_status": "PASS",
-  "visual_status": "NOT_YET_ART_APPROVED",
+  "visual_status": "G1A_NOT_APPROVED",
   "source": "assets/pine-005/h23/pine005-h23-refined.blend",
   "source_glb_sha256": "b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac",
   "root_case": "removed only below z=1.03; sampled exact H23 cut contour for seamless basal transition and five asymmetric ground-gripping buttresses",
@@ -76,5 +76,30 @@
     }
   },
   "evaluation_gate": "visual+watertight before any model promotion",
-  "elapsed_seconds": 20.7
+  "elapsed_seconds": 20.7,
+  "visual_review": {
+    "report": "project/PINE005_H25_ROOT_QA_V1.md",
+    "improved": [
+      "five asymmetric broader roots",
+      "manifold root-trunk union",
+      "floor-off root comparison"
+    ],
+    "failed": [
+      "smooth cuff at original H23 trunk-root junction",
+      "roots still tube-like",
+      "form still not comparable to authentic approved ancient pine"
+    ],
+    "decision": "DO NOT PROMOTE; keep formal H23 active",
+    "formal_asset_mother": "assets/pine-005/h23/pine005-h23-refined.blend",
+    "no_paid_model_retries": true,
+    "G1A_approved": false,
+    "G1B_canopy": "blocked",
+    "game_integration": "blocked"
+  },
+  "browser_qa": {
+    "run_id": "45840902437",
+    "status": "passed_simulated_mobile_and_desktop",
+    "real_iPhone": "not checked",
+    "cloudflare_preview_and_GLb_HTTP200": true
+  }
 }
