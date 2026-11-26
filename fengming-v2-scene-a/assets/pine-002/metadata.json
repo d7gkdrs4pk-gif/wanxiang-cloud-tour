@@ -1,6 +1,6 @@
 {
   "task_id": "246b5d7a-feda-43ab-90f1-463b203932c9",
-  "credits_consumed": 60.0,
+  "credits_consumed": 60,
   "request": {
     "model": "v3.1-20260211",
     "texture": true,
@@ -19,6 +19,21 @@
   "estimated_triangles": 48711,
   "materials": 1,
   "textures": 3,
-  "visual_review": "pending",
-  "game_integration": "not_started"
+  "visual_review": "failed",
+  "game_integration": "not_started",
+  "visual_review_findings": [
+    "与已核验的1536×1024原始参考图相比，主干应为大幅侧倾的粗壮S形，现GLB呈偏直立的细长盆景比例",
+    "参考图横向层叠的真实松针冠幅明显更宽，现模型叶团分散、稀疏并含多个空心圆环形状",
+    "现树冠颜色偏亮黄绿，未达到深翠、层次丰富的古松质感",
+    "树根、基部岩石和局部曲折枝条具有可参考价值，但整体造型不应直接入正式游戏"
+  ],
+  "visual_evidence": {
+    "approved_reference": "assets/pine-002/approved-reference-qa.jpg",
+    "viewpoints": "assets/pine-002/pine-002-contact-sheet.jpg",
+    "desktop_and_mobile_browser_smoke": "passed",
+    "qa_run_id": "45778232122",
+    "mobile_browser_software_renderer_fps": 3,
+    "physical_iphone_fps": "not_measured",
+    "stage": "independent_preview_only"
+  }
 }
