@@ -1,0 +1,104 @@
+name: PINE-003 standalone geometric preview QA
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-003-smoke.yml'
+permissions:
+  contents: write
+jobs:
+  test-prototype:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Playwright browser
+        run: |
+          npm install --no-save --no-audit --no-fund playwright
+          npx playwright install chromium
+      - name: Browser test and four angle captures
+        run: |
+          node --check fengming-v2-scene-a/pine-003-geometry.js
+          python3 -m http.server 8878 --bind 127.0.0.1 >/tmp/pine003-server.log 2>&1 &
+          sleep 2
+          node - <<'JS'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          const dir='fengming-v2-scene-a/assets/pine-003';
+          fs.mkdirSync(dir,{recursive:true});
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:[
+              '--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--disable-dev-shm-usage','--no-sandbox'
+            ]});
+            const errors=[];
+            const url='http://127.0.0.1:8878/fengming-v2-scene-a/pine-003-preview.html';
+            let result={status:'failed',run_id:process.env.GITHUB_RUN_ID,reference:'assets/pine-002/reference.png',paid_credits:0};
+            let page;
+            try{
+              page=await browser.newPage({viewport:{width:1120,height:800},deviceScaleFactor:1});
+              page.on('pageerror',e=>errors.push(e.message));
+              page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+              await page.goto(url,{waitUntil:'commit',timeout:45000});
+              await page.waitForFunction(()=>window.__PINE003_QA?.ready===true,null,{timeout:65000});
+              const before=await page.evaluate(()=>window.__PINE003_QA);
+              console.log('Geometry profile',JSON.stringify(before));
+              if(before.credits!==0 || before.needles<3000 || before.pads<10)throw Error('Geometry budget or needles not verified');
+              await page.locator('button[data-view="front"]').click();
+              await page.waitForTimeout(950);
+              await page.screenshot({path:dir+'/front.jpg',type:'jpeg',quality:80});
+              await page.locator('button[data-view="right"]').click();
+              await page.waitForTimeout(850);
+              await page.screenshot({path:dir+'/right.jpg',type:'jpeg',quality:78});
+              await page.locator('button[data-view="back"]').click();
+              await page.waitForTimeout(850);
+              await page.screenshot({path:dir+'/back.jpg',type:'jpeg',quality:78});
+              await page.locator('button[data-view="top"]').click();
+              await page.waitForTimeout(850);
+              await page.screenshot({path:dir+'/top.jpg',type:'jpeg',quality:78});
+              await page.locator('button[data-view="front"]').click();
+              await page.locator('#sil').click();
+              await page.waitForTimeout(750);
+              await page.screenshot({path:dir+'/silhouette.jpg',type:'jpeg',quality:79});
+              await page.locator('#sil').click();
+              await page.locator('#ref').click();
+              if(!await page.locator('#reference').evaluate(e=>e.classList.contains('open')))throw Error('Reference comparison failed');
+              await page.locator('#ref').click();
+              await page.locator('#density').fill('60');
+              if(!await page.locator('#pct').evaluate(e=>e.textContent==='60%'))throw Error('Density slider failed');
+              result.desktop='passed';result.profile={needles:before.needles,pads:before.pads,branches:before.branches,dimensions:before.dimensions,credits:before.credits};
+              await page.close();page=null;
+              // Mobile viewport runs only after the desktop software GPU context is released.
+              const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+              mobile.on('pageerror',e=>errors.push('mobile '+e.message));
+              await mobile.goto(url,{waitUntil:'commit',timeout:45000});
+              await mobile.waitForFunction(()=>window.__PINE003_QA?.ready===true,null,{timeout:70000});
+              await mobile.locator('button[data-view="front"]').click();
+              await mobile.waitForTimeout(1000);
+              await mobile.screenshot({path:dir+'/mobile.jpg',type:'jpeg',quality:74});
+              result.mobile='passed';
+              await mobile.close();
+              result.errors=errors;
+              if(errors.length)throw Error('Browser errors: '+errors.slice(0,5).join('; '));
+              result.status='technical_pass_visual_pending';
+              console.log('QA successful:',JSON.stringify(result));
+            }catch(e){
+              result.failure=e.message;result.errors=errors;
+              console.log('QA failed:',e.message);
+              console.log('Server:',fs.existsSync('/tmp/pine003-server.log')?fs.readFileSync('/tmp/pine003-server.log','utf8').slice(-1200):'none');
+              process.exitCode=1;
+            }finally{
+              fs.writeFileSync(dir+'/qa.json',JSON.stringify(result,null,2));
+              await browser.close();
+            }
+          })().catch(e=>{console.error(e);process.exit(1)});
+          JS
+      - name: Save browser evidence in GitHub
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -f fengming-v2-scene-a/assets/pine-003/qa.json || true
+          git add -f fengming-v2-scene-a/assets/pine-003/*.jpg || true
+          if git diff --cached --quiet;then exit 0;fi
+          git commit -m "Store PINE-003 zero-cost standalone prototype visual evidence"
+          git pull --rebase origin main
+          git push origin HEAD:main
