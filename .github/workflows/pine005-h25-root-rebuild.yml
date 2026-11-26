@@ -1,0 +1,99 @@
+name: H25 PINE-005 root-only corrective topology and grounded buttresses
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-h25-root-rebuild.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine005-h25-single-baseline
+  cancel-in-progress: false
+jobs:
+  root-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Preflight H23 single formal model and approved source image
+        run: |
+          test "$(git hash-object fengming-v2-scene-a/assets/pine-002/reference.png)" = "9e204263823ca9f40d46737dca5c1ee0a28a73a8"
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          root=Path('fengming-v2-scene-a/assets/pine-005/h23')
+          report=json.loads((root/'h23-qa.json').read_text())
+          assert report['visual_status']=='G1A_NOT_APPROVED'
+          assert report['outputs']['glb_sha256']=='b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac'
+          assert hashlib.sha256((root/'pine005-h23-refined.glb').read_bytes()).hexdigest()==report['outputs']['glb_sha256']
+          assert (root/'pine005-h23-refined.blend').stat().st_size>100000
+          print('H25 H23 BASELINE HASH PASS. No full-tree regeneration.')
+          PY
+      - name: Install verified Blender, EGL, NumPy
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender libegl1 python3-numpy
+      - name: Replace only original fused root base and render before-after
+        run: blender -b -t 2 --python .github/scripts/pine005_h25_root_rebuild.py
+      - name: Check root-specific topology and generate approved source comparison
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib,struct,base64
+          from PIL import Image,ImageDraw
+          base=Path('fengming-v2-scene-a/assets/pine-005')
+          p=base/'h25'
+          q=json.loads((p/'h25-qa.json').read_text())
+          assert q['source']=='assets/pine-005/h23/pine005-h23-refined.blend'
+          assert q['tripo_credits_added']==0 and not q['production_game_modified']
+          assert q['main_root_count']==5 and q['root_meshes_joined']==6
+          assert q['no_canopy'] and q['pbr_textures']==False
+          assert q['active_glb_meshes']==14
+          assert q['technical_status']=='PASS',q['new_topology']
+          raw=(p/'pine005-h25-roots.glb').read_bytes()
+          assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+          assert hashlib.sha256(raw).hexdigest()==q['outputs']['glb_sha256']
+          assert (p/'pine005-h25-roots.blend').stat().st_size>100000
+          names=['APPROVED ORIGINAL','H23 ROOT BEFORE','H24 TRIAL ROOT','H25 ROOT REBUILT',
+                 'H25 FRONT','H25 RIGHT','H25 BACK','H25 TOP',
+                 'H25 ROOT CLOSE','H25 SIDE CLOSE','H25 FLOOR-OFF ROOT','H25 SILHOUETTE']
+          paths=[
+            Path('fengming-v2-scene-a/assets/pine-002/reference.png'),
+            base/'h23/front.png',base/'h24/root-closeup.png',p/'root_front_close.png',
+            p/'front.png',p/'right.png',p/'back.png',p/'top.png',
+            p/'root_front_close.png',p/'root_side_close.png',
+            p/'root_no_floor.png',p/'silhouette.png'
+          ]
+          img=Image.new('RGB',(2096,1728),(23,34,39))
+          d=ImageDraw.Draw(img)
+          for i,(label,filename) in enumerate(zip(names,paths)):
+            with Image.open(filename) as im:
+              im=im.convert('RGB')
+              im.thumbnail((494,520),Image.Resampling.LANCZOS)
+              x=16+(i%4)*522+(498-im.width)//2
+              y=15+(i//4)*574+33+(521-im.height)//2
+              img.paste(im,(x,y))
+              d.text((18+(i%4)*522,15+(i//4)*574),label,fill=(234,222,198))
+          sheet=p/'h25-contact-sheet.jpg'
+          img.save(sheet,quality=79,optimize=True)
+          (p/'h25-contact-sheet.b64.txt').write_text(base64.b64encode(sheet.read_bytes()).decode('ascii'))
+          print('H25 ROOT-ONLY TECHNICAL PASS',q['new_topology'],q['outputs']['glb_sha256'])
+          PY
+      - name: Preserve isolated sample evidence, even on failed validation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine005-h25-root-only-evidence
+          path: fengming-v2-scene-a/assets/pine-005/h25/
+          if-no-files-found: ignore
+      - name: Commit evidence without replacing H23 formal asset or game
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/h25/
+          git commit -m 'H25 keep H23 baseline and save root-only corrected Blender GLB and visual QA'
+          git pull --rebase origin main
+          git push origin HEAD:main
