@@ -1,0 +1,49 @@
+name: PINE-003 Cloudflare preview live delivery check
+on:
+  push:
+    paths:
+      - '.github/workflows/pine-003-live-check.yml'
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify both public HTML and geometry module on the existing site
+        run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.error,json,time,datetime
+          from pathlib import Path
+          base='https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/'
+          paths={'html':'pine-003-preview.html','geometry':'pine-003-geometry.js'}
+          expected={'html':b'createPine003','geometry':b'const trunkPts'}
+          ua='Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15'
+          result={'status':'failed','checked_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'endpoints':{}}
+          for name,path in paths.items():
+              for i in range(4):
+                  try:
+                      req=urllib.request.Request(base+path,headers={'User-Agent':ua})
+                      with urllib.request.urlopen(req,timeout=22) as resp:
+                          content=resp.read(80000)
+                          row={'http':resp.status,'bytes':len(content),'type':resp.headers.get('Content-Type')}
+                      row['content_verified']=expected[name] in content
+                      result['endpoints'][name]=row
+                      if row['http']==200 and row['content_verified']:break
+                  except Exception as exc:
+                      result['endpoints'][name]={'error':str(exc)[:220]}
+                  time.sleep(7)
+          if all(result['endpoints'].get(n,{}).get('content_verified') for n in paths):
+              result['status']='passed'
+          Path('fengming-v2-scene-a/assets/pine-003/live-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+          print('PINE-003 live check:',json.dumps(result))
+          PY
+      - name: Save verified live delivery state
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-003/live-check.json
+          git commit -m "Record PINE-003 independent preview deployment verification"
+          git pull --rebase origin main
+          git push origin HEAD:main
