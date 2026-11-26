@@ -1,0 +1,99 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>凤鸣山门｜H.19.2 写实古松资产筛选</title>
+<meta name="theme-color" content="#13272c">
+<style>
+:root{font-family:-apple-system,system-ui,"PingFang SC","Microsoft YaHei",sans-serif;color:#e9e9df;background:#102025}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(165deg,#173139,#102026 75%)}
+main{max-width:1120px;margin:auto;padding:24px 18px 45px}
+h1{font-size:24px;margin:8px 0}p{line-height:1.7;color:#bfcec8;margin:10px 0 18px}
+small,.muted{color:#b2bfb6}.label{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#d4bb84}
+a{color:#e7cc8c;text-decoration:none;border-bottom:1px solid #b29665}
+.top{display:flex;align-items:start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.top small{display:block;line-height:1.6}.note{border:1px solid #778e8355;border-radius:10px;padding:11px 14px;background:#1b393a70;font-size:13px;max-width:450px;line-height:1.7}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:15px}
+.frame{border:1px solid #71827980;background:#0d1b20;border-radius:14px;overflow:hidden}
+.frame h2{font-size:15px;margin:0;padding:13px 14px;color:#e8dfc9;border-bottom:1px solid #77928a33}
+.frame img{display:block;width:100%;aspect-ratio:3/2;object-fit:contain;background:#38403b}
+#viewer{display:block;width:100%;height:430px;background:#152a30}
+.pane{padding:13px 15px}
+.pane p{font-size:13px;margin:7px 0}
+button{background:#304747;color:#f1e7d8;font-family:inherit;border:1px solid #b6a37670;border-radius:8px;padding:11px 12px;cursor:pointer;font-size:13px}
+button[aria-pressed="true"]{background:#8b7047;color:white;border-color:#e2c994}
+.buttons{display:flex;gap:8px;margin:18px 0 10px;flex-wrap:wrap}
+#viewerStatus{font-size:12px;color:#b6c6c4;margin:5px 0 12px}
+summary{cursor:pointer;color:#e8d7ab}
+footer{font-size:12px;color:#b8c9c1;margin-top:24px;border-top:1px solid #78908844;padding-top:16px}
+@media(max-width:710px){
+ main{padding:13px 8px 25px}h1{font-size:19px}
+ .grid{grid-template-columns:1fr;gap:12px}
+ #viewer{height:410px}
+ .frame h2{padding:10px}
+ .frame img{max-height:260px;object-fit:contain}
+ .note{max-width:none}
+}
+</style></head><body><main>
+<div class="top"><div>
+<span class="label">FENGMING · H.19.2 / VISUAL SOURCING</span>
+<h1>写实古松：真实第三方模型对照</h1>
+<small>零付费 / 不接入正式游戏 / 不复制第三方模型</small>
+</div><div class="note">当前目标是选择<strong>能够改造成参考图造型</strong>的真实源资产，而不是“能加载就算合格”。本页面用提供方的官方 3D 预览，实际模型文件尚未下载或取得商用使用证明。</div></div>
+<div class="grid">
+<section class="frame">
+<h2>正式目标图（已批准，不得更换）</h2>
+<img src="./assets/pine-002/reference.png" alt="批准的真实古松参考图，粗壮S形侧倾主干、横向展枝、密集松针与抓岩根系">
+<div class="pane"><p><strong>硬标准：</strong>粗壮侧倾 S 形树干；明显非对称的横展枝条；密集但不呈圆环的松针；抓岩盘根。重点观察<strong>正面剪影</strong>和枝冠纵深。</p></div>
+</section>
+<section class="frame">
+<h2 id="currentTitle">候选 A · local.yany — 老松造型</h2>
+<iframe id="viewer" title="第三方官方 Sketchfab 3D 预览" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen src="https://sketchfab.com/models/4f322c60a8074877879f1dcf5b1ca134/embed?autostart=0&ui_infos=1&ui_controls=1&ui_watermark=1"></iframe>
+<div class="pane">
+ <div class="buttons">
+ <button id="candidateA" aria-pressed="true">候选 A：侧倾老松</button>
+ <button id="candidateB" aria-pressed="false">候选 B：针叶盆景</button>
+ </div>
+ <div id="viewerStatus">第三方在线三维预览，首次加载受网络及提供方限制。</div>
+ <p id="candidateText">A 的树干与盘根较接近原图，但针叶稀疏。Sketchfab 当前资产的确切许可及可下载文件尚未取得验证，不可直接进入商用游戏。</p>
+ <p><a id="sourceLink" target="_blank" rel="noopener noreferrer" href="https://sketchfab.com/3d-models/pine-4f322c60a8074877879f1dcf5b1ca134">在 Sketchfab 官方原页面查看完整模型</a></p>
+ <p><a id="altLink" target="_blank" rel="noopener noreferrer" href="https://www.cgtrader.com/free-3d-models/plant/conifer/pine-tree-e3785164-cdd5-4fac-bc59-d72660639c09">作者在 CGTrader 的另一条免费松树素材（不可视为同一文件）</a></p>
+</div></section>
+</div>
+<section class="frame" style="margin-top:17px">
+<h2>许可、造型和使用成本：核实到哪里</h2>
+<div class="pane">
+<p><strong>A｜local.yany：</strong>通过原站的可查看三维模型和预览图判断，粗壮侧倾、根系自然，造型潜力较高；具体 Sketchfab 许可、原文件格式、下载可用性未直接取得，当前仅允许对比，不允许集成。</p>
+<p><strong>B｜lannoo.niels：</strong>官方原页明确标注下载与 CC Attribution；约 107,300 三角面。针叶与横展枝条较自然，但花盆必须移除，主干比例仍需大改，正式使用时要保存作者姓名、来源及许可链接，并进行移动端优化。</p>
+<p><strong>已排除的诱人错误路线：</strong>JadeRealms 的 Ancient Pine 实际更接近直立树，约 135,682 三角面，且禁止独立再分发；Poly Haven 的 Pine Tree 01 为直立高树，源文件规模高、面数极大，不适合直接放入当前手机游戏。这些素材名字虽然含 Pine，却不是原图的苍劲侧倾形体。</p>
+<p><strong>下一关 G1：</strong>只有获得合法可编辑的原始模型后，才能真正查看分网格结构、调整主枝并出四视角验收图；未通过之前不创建所谓“PINE-004正式资产”。</p>
+<p class="muted">本对照页只嵌入原提供方 Sketchfab 官方播放器，不抓取、镜像、缓存或上传其 3D 二进制文件；播放器在部分网络下可能被拦截，无法显示时使用原站链接。涉及账号/授权的下载不可绕过。</p>
+</div></section>
+<footer>《凤鸣山门》独立素材评估 H.19.2 · 项目正式母版仍为 V2.0 H.17.2 · 无新增 Tripo 消耗 · 视觉/许可未批准。</footer>
+</main><script>
+const data={
+ A:{
+  title:"候选 A · local.yany — 老松造型",
+  id:"4f322c60a8074877879f1dcf5b1ca134",
+  url:"https://sketchfab.com/3d-models/pine-4f322c60a8074877879f1dcf5b1ca134",
+  body:"A 的树干与盘根较接近原图，但针叶稀疏。Sketchfab 当前资产的确切许可及可下载文件尚未取得验证，不可直接进入商用游戏。"
+ },
+ B:{
+  title:"候选 B · lannoo.niels — 针叶盆景",
+  id:"526fa2b9bc344bfdb663d0a16e308b8a",
+  url:"https://sketchfab.com/3d-models/pine-bonsai-tree-526fa2b9bc344bfdb663d0a16e308b8a",
+  body:"B 的原页标注 CC Attribution，约 107,300 三角面，可编辑但需要移除花盆、改变整体比例并制作手机 LOD。尚未取得源文件，未通过 G1/G2。"
+ }
+};
+function select(which){
+ let a=data[which];
+ document.querySelector("#currentTitle").textContent=a.title;
+ document.querySelector("#viewer").src="https://sketchfab.com/models/"+a.id+"/embed?autostart=0&ui_infos=1&ui_controls=1&ui_watermark=1";
+ document.querySelector("#candidateText").textContent=a.body;
+ document.querySelector("#sourceLink").href=a.url;
+ document.querySelector("#sourceLink").textContent="打开 "+(which==="A"?"local.yany":"lannoo.niels")+" 原始模型与授权信息";
+ document.querySelector("#altLink").style.display=which==="A"?"inline":"none";
+ document.querySelector("#candidateA").setAttribute("aria-pressed",which==="A"?"true":"false");
+ document.querySelector("#candidateB").setAttribute("aria-pressed",which==="B"?"true":"false");
+}
+document.querySelector("#candidateA").onclick=()=>select("A");
+document.querySelector("#candidateB").onclick=()=>select("B");
+</script></body></html>
