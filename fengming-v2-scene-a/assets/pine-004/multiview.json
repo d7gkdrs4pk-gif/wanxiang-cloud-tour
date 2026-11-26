@@ -42,8 +42,11 @@
     "front": "preserves broad asymmetrical S silhouette, dense needles and gripping roots; some scale/detail shifts",
     "left_back_right": "visually related aged pine; AI-inferred branches/rocks may be topologically inconsistent",
     "decision": "GO only for a separate single geometry-only G1 test; no 3D submitted in this turn",
-    "G1_status": "not_started",
+    "G1_status": "failed_trunk_and_canopy_clumping",
     "G2_status": "not_started",
-    "project_report": "project/PINE004_MULTIVIEW_QA_V1.md"
+    "project_report": "project/PINE004_MULTIVIEW_QA_V1.md",
+    "G1_task_id": "aafb7992-63e1-4441-a6bb-91ed46264b9d",
+    "G1_cost_credits": 20,
+    "G1_report": "project/PINE004_G1_GEOMETRY_QA_V1.md"
   }
 }
