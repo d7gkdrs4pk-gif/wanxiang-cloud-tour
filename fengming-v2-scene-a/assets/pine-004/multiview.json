@@ -1,0 +1,41 @@
+{
+  "asset": "PINE-004",
+  "task_id": "64578e00-ce8f-475b-ab01-d899a3b82dad",
+  "task_type": "image_to_multiview",
+  "status": "images_ready_visual_review_pending",
+  "credits_consumed": 10.0,
+  "reference": "fengming-v2-scene-a/assets/pine-002/reference.png",
+  "reference_git_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
+  "views": {
+    "front": {
+      "width": 1024,
+      "height": 1024,
+      "sha256": "2fddd59c47fe74a6ca9694de1eb63c88be57fc1fbfda3a3c5b0dbe6a71543f99",
+      "bytes": 1017349
+    },
+    "left": {
+      "width": 1024,
+      "height": 1024,
+      "sha256": "0be7a350634c659cbbc7a6900063e6fbf91d35cd51ffb8681bc643ec1e3be8d2",
+      "bytes": 927574
+    },
+    "back": {
+      "width": 1024,
+      "height": 1024,
+      "sha256": "5ba7f15cdfb9dca744ce467e75ce8f647b944ca4e4b5ab97db5dc8669c117590",
+      "bytes": 1007752
+    },
+    "right": {
+      "width": 1024,
+      "height": 1024,
+      "sha256": "8b1e1e2eef4d6f1a45d416be2390b39ee9a78ccb25beed0cef5231dda700e588",
+      "bytes": 810006
+    }
+  },
+  "duplicate_images": false,
+  "visual_shape_match": "pending_human_review",
+  "consistency_of_back_and_side": "unverified",
+  "generate_3d_automatically": false,
+  "model_generation_cost": 0,
+  "next_step": "G0 multi-angle fidelity review BEFORE any 3D charge"
+}

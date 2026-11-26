@@ -2,8 +2,9 @@
   "asset": "PINE-004",
   "paid_task_id": "64578e00-ce8f-475b-ab01-d899a3b82dad",
   "type": "image_to_multiview",
-  "status": "submitted",
+  "status": "images_ready_visual_review_pending",
   "allowed_model_generation": false,
   "reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
-  "created_utc": "2026-11-26T08:25:27.289039+00:00"
+  "created_utc": "2026-11-26T08:25:27.289039+00:00",
+  "credits_consumed": 10.0
 }
