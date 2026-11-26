@@ -1,0 +1,100 @@
+name: H22 PINE-005 S-trunk first sample and five-view G1-A evidence
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-trunk-build.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine005-trunk-first-sample
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check exact approved reference and install Blender runtime
+        run: |
+          test "$(git hash-object fengming-v2-scene-a/assets/pine-002/reference.png)" = "9e204263823ca9f40d46737dca5c1ee0a28a73a8"
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender libegl1 python3-numpy
+          blender -b -t 2 --python-expr "import numpy; print('NUMPY_OK', numpy.__version__)"
+      - name: Generate PINE-005 editable S-trunk, branch skeleton and roots
+        run: blender -b -t 2 --python .github/scripts/pine005_trunk.py
+      - name: Independent integrity test and contact sheet
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          from PIL import Image,ImageOps,ImageDraw
+          from pathlib import Path
+          import json,hashlib,struct,base64
+          out=Path('fengming-v2-scene-a/assets/pine-005')
+          ref=Path('fengming-v2-scene-a/assets/pine-002/reference.png')
+          q=json.loads((out/'trunk-qa.json').read_text())
+          assert q['technical_status']=='PASS' and q['visual_status']=='PENDING_HUMAN_QA'
+          assert q['tripo_credits']==0 and not q['production_game_changed']
+          assert q['trunk']['taper_monotonic'] and q['branches']['major']>=5
+          assert q['canopy'].startswith('NOT MADE')
+          assert q['g1a_hard_rules'] and q['roots']['count']>=4
+          for key in ('front','right','back','top'):
+              png=(out/('trunk-'+key+'.png')).read_bytes()
+              assert png[:8]==b'\x89PNG\r\n\x1a\n' and struct.unpack('>II',png[16:24])==(850,850)
+          png=(out/'trunk-silhouette.png').read_bytes()
+          assert png[:8]==b'\x89PNG\r\n\x1a\n'
+          raw=(out/'pine005-trunk.glb').read_bytes()
+          assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+          assert (out/'pine005-trunk.blend').stat().st_size>5000
+          chunk,kind=struct.unpack_from('<I4s',raw,12)
+          assert kind==b'JSON' and chunk<len(raw)
+          model=json.loads(raw[20:20+chunk].decode().rstrip(' \x00'))
+          assert len(model['meshes'])>=15
+          assert not any('QA FLOOR' in x.get('name','') for x in model.get('nodes',[]))
+          names=['APPROVED / ORIGINAL','PINE-005 FRONT / CLAY','RIGHT','BACK','TOP','BLACK SILHOUETTE']
+          paths=[ref,out/'trunk-front.png',out/'trunk-right.png',
+                 out/'trunk-back.png',out/'trunk-top.png',out/'trunk-silhouette.png']
+          width,height=1560,1360
+          board=Image.new('RGB',(width,height),(24,34,40))
+          draw=ImageDraw.Draw(board)
+          for i,(label,path) in enumerate(zip(names,paths)):
+              with Image.open(path) as pic:
+                  pic=pic.convert('RGB')
+                  pic.thumbnail((498,595),Image.Resampling.LANCZOS)
+                  x=16+(i%3)*514+(498-pic.width)//2
+                  y=18+(i//3)*665+40+(595-pic.height)//2
+                  board.paste(pic,(x,y))
+                  draw.text((19+(i%3)*514,19+(i//3)*665),label,fill=(242,230,209))
+          image=out/'trunk-contact-sheet.jpg'
+          board.save(image,quality=78,optimize=True)
+          (out/'trunk-contact-sheet.b64.txt').write_text(base64.b64encode(image.read_bytes()).decode('ascii'))
+          print('PINE005_REFERENCE_3D_COMPARISON',image.stat().st_size,'bytes')
+          print('PINE005_QA',json.dumps(q,ensure_ascii=False))
+          PY
+      - name: Retain generated source, geometry and proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine005-h22-trunk-first-sample
+          path: |
+            fengming-v2-scene-a/assets/pine-005/pine005-trunk.blend
+            fengming-v2-scene-a/assets/pine-005/pine005-trunk.glb
+            fengming-v2-scene-a/assets/pine-005/trunk-*.png
+            fengming-v2-scene-a/assets/pine-005/trunk-qa.json
+            fengming-v2-scene-a/assets/pine-005/trunk-contact-sheet.jpg
+          if-no-files-found: ignore
+      - name: Commit isolated PINE-005 sample and comparison (never game master)
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/pine005-trunk.blend
+          git add fengming-v2-scene-a/assets/pine-005/pine005-trunk.glb
+          git add fengming-v2-scene-a/assets/pine-005/trunk-*.png
+          git add fengming-v2-scene-a/assets/pine-005/trunk-qa.json
+          git add fengming-v2-scene-a/assets/pine-005/trunk-contact-sheet.jpg
+          git add fengming-v2-scene-a/assets/pine-005/trunk-contact-sheet.b64.txt
+          git commit -m 'H22 store PINE-005 editable S-trunk first sample and G1-A visual evidence'
+          git pull --rebase origin main
+          git push origin HEAD:main
