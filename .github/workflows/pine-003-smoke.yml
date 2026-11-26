@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - '.github/workflows/pine-003-smoke.yml'
+      - 'fengming-v2-scene-a/pine-003-preview.html'
+      - 'fengming-v2-scene-a/pine-003-geometry.js'
 permissions:
   contents: write
 jobs:
