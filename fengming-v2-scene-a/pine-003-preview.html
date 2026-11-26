@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#112025">
+<title>PINE-003｜凤鸣山门古松 · 可控模型原型</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:#101d21;color:#e7e1d4}
+*{box-sizing:border-box}body{margin:0;overflow:hidden}
+#stage{position:fixed;inset:0;background:radial-gradient(ellipse at 47% 44%,#415854 0%,#253b3e 45%,#102026 100%)}
+canvas{width:100%;height:100%;display:block;touch-action:none}
+header{position:fixed;top:max(11px,env(safe-area-inset-top));left:12px;right:12px;display:flex;justify-content:space-between;align-items:start;gap:12px;pointer-events:none;z-index:2}
+header>div{padding:11px 14px;background:#0e1a1de6;border:1px solid #adac8759;border-radius:12px;max-width:48%;backdrop-filter:blur(10px)}
+h1{font-size:15px;font-weight:650;margin:0 0 5px;letter-spacing:.7px}
+small{display:block;font-size:11px;color:#c5c7b5;line-height:1.5}
+#status{text-align:right;line-height:1.5}
+#tools{position:fixed;bottom:max(8px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(850px,calc(100% - 12px));padding:10px;background:#0c1d21ec;border:1px solid #9aab9063;border-radius:15px;z-index:3;backdrop-filter:blur(12px)}
+nav{display:flex;gap:5px;justify-content:center;align-items:center;flex-wrap:wrap}
+button{cursor:pointer;background:#203438;color:#d5dfd2;border:1px solid #91a29866;border-radius:9px;padding:8px 10px;font-size:12px;min-height:36px;font-family:inherit}
+button.active{background:#685d40;border-color:#d4bb82;color:#fff2d1}
+#density-label{display:flex;align-items:center;gap:7px;white-space:nowrap;color:#c6cebd;font-size:11px;padding:0 8px}
+input[type=range]{width:78px;accent-color:#c1b37c}
+#notes{text-align:center;color:#b6c1b7;font-size:10.5px;line-height:1.45;margin:8px 0 0}
+#reference{display:none;position:fixed;z-index:2;top:97px;right:12px;bottom:130px;width:min(45vw,430px);background:#0f191cea;border:1px solid #8b9d8a8c;padding:7px;border-radius:13px;box-shadow:0 10px 40px #0006}
+#reference.open{display:flex;flex-direction:column}
+#reference img{width:100%;height:calc(100% - 22px);object-fit:contain;min-height:0}
+#reference p{text-align:center;margin:3px;color:#ddd9c1;font-size:11px}
+#loading{position:fixed;left:50%;top:48%;transform:translate(-50%,-50%);background:#0d2028dd;border:1px solid #c1ad7966;padding:16px 22px;border-radius:12px;z-index:1}
+@media(max-width:680px){
+ header{top:max(6px,env(safe-area-inset-top));left:7px;right:7px;gap:6px}
+ header>div{padding:7px 8px;max-width:55%}h1{font-size:12px}small{font-size:10px}
+ #tools{padding:7px 5px;bottom:max(4px,env(safe-area-inset-bottom))}
+ nav{gap:4px}button{font-size:10px;padding:6px;min-height:32px}
+ #density-label{padding:0 3px;gap:3px;font-size:10px}
+ input[type=range]{width:60px}
+ #reference{top:68px;bottom:112px;left:6px;right:6px;width:auto}
+}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="stage"></div>
+<header>
+ <div><h1>PINE-003 · 苍松临崖</h1><small>凤鸣山门 · H.19.1 免费可控原型</small><small>粗壮S形主干 / 横向分层枝冠 / 实心针叶簇</small></div>
+ <div id="status">正在准备独立预览…</div>
+</header>
+<div id="loading">构建古松骨架、树根与针叶…</div>
+<aside id="reference"><img src="./assets/pine-002/reference.png" alt="项目批准的古松高清参考图"><p>原始批准参考图（仅作比例与造型对照）</p></aside>
+<div id="tools">
+ <nav>
+  <button data-view="front" class="active">正面</button>
+  <button data-view="right">右面</button>
+  <button data-view="back">背面</button>
+  <button data-view="top">俯视</button>
+  <button id="spin">自动旋转</button>
+  <button id="sil">黑色剪影</button>
+  <button id="wire">线框</button>
+  <button id="ref">参考图</button>
+  <button id="reset">全景</button>
+  <label id="density-label">针叶密度 <input id="density" type="range" min="35" max="100" step="5" value="100"><span id="pct">100%</span></label>
+ </nav>
+ <p id="notes">单指旋转 · 双指缩放。此为独立几何原型，非AI生成的最终模型；G1剪影/G2视觉待验收，未修改正式游戏。</p>
+</div>
+<script type="module">
+import * as T from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {createPine003} from './pine-003-geometry.js';
+const status=document.querySelector('#status'),loader=document.querySelector('#loading');
+let renderer;
+try{renderer=new T.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});}
+catch(e){status.textContent='WebGL不可用';loader.textContent='浏览器无法启动3D预览';throw e;}
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=T.SRGBColorSpace;
+renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.04;
+document.querySelector('#stage').appendChild(renderer.domElement);
+const scene=new T.Scene();
+const hemi=new T.HemisphereLight(0xe8efdf,0x463b30,2.1);scene.add(hemi);
+const key=new T.DirectionalLight(0xffecd0,3.0);key.position.set(-6,10,7);scene.add(key);
+const rim=new T.DirectionalLight(0x9cd3c7,1.6);rim.position.set(5,6,-6);scene.add(rim);
+const ground=new T.Mesh(new T.PlaneGeometry(200,200),new T.MeshStandardMaterial({color:0x283d39,roughness:1}));
+ground.rotation.x=-Math.PI/2;ground.position.y=-.22;scene.add(ground);
+const grid=new T.GridHelper(22,22,0x6e8a7d,0x3b5950);grid.position.y=-.217;grid.material.transparent=true;grid.material.opacity=.12;scene.add(grid);
+const camera=new T.PerspectiveCamera(37,innerWidth/innerHeight,.1,170);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.enablePan=false;controls.minDistance=5;controls.maxDistance=70;
+controls.minPolarAngle=.1;controls.maxPolarAngle=Math.PI-.08;
+let asset;
+try {asset=createPine003();scene.add(asset.model);}
+catch(e){status.textContent='几何构建失败';loader.textContent='PINE-003 构建失败，请查看浏览器日志';console.error(e);throw e;}
+const {model,layers,stats}=asset;
+let view='front',wire=false,sil=false,spin=false,last=performance.now(),frames=0,frameStart=last,fps=0;
+const target=new T.Vector3(0,3.28,0);controls.target.copy(target);
+function distance(){
+ const width=11.3,height=7.2,fov=camera.fov*Math.PI/180;
+ const vfov=Math.tan(fov/2),fitW=width/(2*vfov*camera.aspect),fitH=height/(2*vfov);
+ return Math.min(65,Math.max(16,Math.max(fitW,fitH)*1.08));
+}
+function setView(which){
+ view=which;const d=distance(),o={front:[0,.08*d,d],right:[d,.08*d,0],back:[0,.08*d,-d],top:[0,d,.025*d]}[which]||[0,0,d];
+ camera.position.set(target.x+o[0],target.y+o[1],target.z+o[2]);controls.update();
+ document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===which));
+}
+setView('front');
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{spin=false;controls.autoRotate=false;document.querySelector('#spin').classList.remove('active');setView(b.dataset.view);});
+document.querySelector('#reset').onclick=()=>setView('front');
+document.querySelector('#spin').onclick=e=>{spin=!spin;controls.autoRotate=spin;controls.autoRotateSpeed=.68;e.target.classList.toggle('active',spin);};
+document.querySelector('#ref').onclick=e=>{const on=document.querySelector('#reference').classList.toggle('open');e.target.classList.toggle('active',on);};
+document.querySelector('#sil').onclick=e=>{sil=!sil;asset.setSilhouette(sil);e.target.classList.toggle('active',sil);};
+document.querySelector('#wire').onclick=e=>{
+ wire=!wire;e.target.classList.toggle('active',wire);
+ model.traverse(o=>{if(o.isMesh){
+   if(o.userData.savedMaterial)o.userData.savedMaterial.wireframe=wire;
+   else o.material.wireframe=wire;
+ }});
+};
+document.querySelector('#density').oninput=e=>{document.querySelector('#pct').textContent=e.target.value+'%';asset.setDensity(Number(e.target.value)/100);};
+controls.addEventListener('start',()=>document.querySelectorAll('[data-view]').forEach(b=>b.classList.remove('active')));
+const sceneBox=new T.Box3().setFromObject(model);
+const dims=sceneBox.getSize(new T.Vector3());
+const objects={wood:0,rocks:0,needles:stats.needles};
+model.traverse(o=>{if(o.isMesh&&o!==asset.foliage){if(o.parent===layers.rockAndRoots)objects.rocks++;else objects.wood++;}});
+window.__PINE003_QA={ready:true,version:stats.version,modelKind:stats.kind,needles:stats.needles,pads:stats.pads,branches:stats.branches,dimensions:dims.toArray(),objects,credits:0,view:()=>view,fps:()=>fps};
+loader.style.display='none';
+status.innerHTML='模型已加载 · '+stats.needles.toLocaleString()+' 针束实例<br>横向冠幅约 '+dims.x.toFixed(1)+' · '+stats.pads+' 冠片<br><span id="fps">帧率测试中…</span>';
+window.addEventListener('resize',()=>{
+ camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+ renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+ setView(view);
+});
+function tick(now){
+ requestAnimationFrame(tick);frames++;controls.update();renderer.render(scene,camera);
+ if(now-frameStart>2200){
+   fps=Math.round(frames*1000/(now-frameStart));
+   document.querySelector('#fps').textContent='帧率 '+fps+' FPS（仅此设备）';
+   frameStart=now;frames=0;
+ }
+}
+requestAnimationFrame(tick);
+</script>
+</body>
+</html>
