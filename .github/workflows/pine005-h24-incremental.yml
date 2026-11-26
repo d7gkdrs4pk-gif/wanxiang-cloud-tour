@@ -1,0 +1,110 @@
+name: H24 PINE-005 irregular aged trunk root and branch shape local edit
+on:
+  push:
+    paths:
+      - '.github/workflows/pine005-h24-incremental.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pine005-h24-only
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify original approved reference and only-current H23 Blender mother
+        run: |
+          test "$(git hash-object fengming-v2-scene-a/assets/pine-002/reference.png)" = "9e204263823ca9f40d46737dca5c1ee0a28a73a8"
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          root=pathlib.Path('fengming-v2-scene-a/assets/pine-005/h23')
+          q=json.loads((root/'h23-qa.json').read_text())
+          assert q['technical_status']=='PASS'
+          assert q['visual_status']=='G1A_NOT_APPROVED'
+          assert q['outputs']['glb_sha256']=='b9c32dcfdc293bc224de87f36154a8a7d4b3ed5357f1b3a1acbd0c6746ff04ac'
+          assert hashlib.sha256((root/'pine005-h23-refined.glb').read_bytes()).hexdigest()==q['outputs']['glb_sha256']
+          assert (root/'pine005-h23-refined.blend').stat().st_size>100000
+          print('H24 validated H23 current source only; no new geometry if source changed')
+          PY
+      - name: Install proven Blender software runtime and Python NumPy
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends blender libegl1 python3-numpy
+      - name: Correct existing H23 mesh in-place in memory and save new H24 copy
+        run: blender -b -t 2 --python .github/scripts/pine005_h24_refine.py
+      - name: Independent GLB, visual proof and no-payment validation
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          import pathlib,json,hashlib,struct,base64
+          from PIL import Image,ImageDraw
+          root=pathlib.Path('fengming-v2-scene-a/assets/pine-005')
+          p=root/'h24'
+          r=json.loads((p/'h24-qa.json').read_text())
+          assert r['technical_status']=='PASS' and r['visual_status']=='PENDING_G1A_VISUAL_REVIEW'
+          assert r['g1a_approved'] is False and r['new_tripo_credits']==0
+          assert r['source_blend']=='assets/pine-005/h23/pine005-h23-refined.blend'
+          assert r['reference_blob']=='9e204263823ca9f40d46737dca5c1ee0a28a73a8'
+          assert r['protected']['same_14_meshes'] and r['protected']['old_h23_objects_preserved_in_blend']
+          assert r['protected']['new_canopy']=='none'
+          assert len(r['outputs']['views'])==7
+          assert r['geometry_operations']['reverse_regular_grooves_vertices']>8500
+          assert r['geometry_operations']['root_shaping_vertices']>2000
+          for label in ('front','right','back','top','root-closeup','joint-closeup','silhouette'):
+              raw=(p/(label+'.png')).read_bytes()
+              assert raw[:8]==b'\x89PNG\r\n\x1a\n'
+              assert struct.unpack('>II',raw[16:24])==(860,860)
+          binary=(p/'pine005-h24-refined.glb').read_bytes()
+          assert binary[:4]==b'glTF' and struct.unpack_from('<I',binary,8)[0]==len(binary)
+          assert hashlib.sha256(binary).hexdigest()==r['outputs']['glb_sha256']
+          chunk,kind=struct.unpack_from('<I4s',binary,12)
+          assert kind==b'JSON' and chunk<len(binary)-20
+          data=json.loads(binary[20:20+chunk].decode().rstrip(' \x00'))
+          assert len(data['meshes'])==14
+          assert (p/'pine005-h24-refined.blend').stat().st_size>100000
+          # Real 3D visual checks against same approved original and old H23,
+          # including both root AND branch close-ups for G1-A quality.
+          labels=['APPROVED ORIGINAL','H23 OLD FRONT','H24 NEW FRONT','H24 RIGHT',
+                  'H24 BACK','H24 TOP','H24 ROOT CLOSEUP','H24 BRANCH CLOSEUP',
+                  'H24 SILHOUETTE']
+          sources=[
+            pathlib.Path('fengming-v2-scene-a/assets/pine-002/reference.png'),
+            root/'h23/front.png',p/'front.png',p/'right.png',
+            p/'back.png',p/'top.png',p/'root-closeup.png',
+            p/'joint-closeup.png',p/'silhouette.png'
+          ]
+          board=Image.new('RGB',(1860,1540),(35,47,50))
+          draw=ImageDraw.Draw(board)
+          for i,(title,path) in enumerate(zip(labels,sources)):
+              with Image.open(path) as im:
+                  im=im.convert('RGB')
+                  im.thumbnail((582,470),Image.Resampling.LANCZOS)
+                  x=12+(i%3)*620+(590-im.width)//2
+                  y=12+(i//3)*510+35+(470-im.height)//2
+                  board.paste(im,(x,y))
+                  draw.text((17+(i%3)*620,16+(i//3)*510),title,fill=(237,225,205))
+          sheet=p/'h24-contact-sheet.jpg'
+          board.save(sheet,quality=80,optimize=True)
+          (p/'h24-contact-sheet.b64.txt').write_text(base64.b64encode(sheet.read_bytes()).decode('ascii'))
+          print('H24_QA_PASS_FILE_VALIDATED',sheet.stat().st_size,r['outputs']['glb_sha256'])
+          PY
+      - name: Archive diagnostic outputs regardless of status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pine005-h24-independent-assets
+          path: fengming-v2-scene-a/assets/pine-005/h24/
+          if-no-files-found: ignore
+      - name: Commit H24 files only, no game mother or previous source overwrite
+        if: success()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fengming-v2-scene-a/assets/pine-005/h24/
+          git commit -m 'H24 preserve edited PINE-005 source, GLB and 9-view anatomy evidence'
+          git pull --rebase origin main
+          git push origin HEAD:main
