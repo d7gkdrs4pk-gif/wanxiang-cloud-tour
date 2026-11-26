@@ -2,7 +2,7 @@
   "asset": "PINE-005",
   "stage": "H23 local organic sculpt and branch/root fuse",
   "technical_status": "PASS",
-  "visual_status": "PENDING_HUMAN_QA",
+  "visual_status": "G1A_NOT_APPROVED",
   "source_blend": "assets/pine-005/pine005-trunk.blend",
   "source_reference_blob": "9e204263823ca9f40d46737dca5c1ee0a28a73a8",
   "original_frozen_parts": {
@@ -58,5 +58,25 @@
   "tripo_credits": 0,
   "formal_game_modified": false,
   "next_gate": "compare reference / H22 / H23 visual evidence before G1-A decision",
-  "elapsed_seconds": 32.41
+  "elapsed_seconds": 32.41,
+  "visual_review": {
+    "review_report": "project/PINE005_H23_VISUAL_QA_V1.md",
+    "evaluated_from": [
+      "original_reference",
+      "H22_before",
+      "H23_front",
+      "H23_right",
+      "H23_back",
+      "H23_top",
+      "H23_silhouette",
+      "H23_joint_closeup"
+    ],
+    "primary_continuity": "improved/structural_pass",
+    "organic_branch_connection": "better_than_H22_but_not_high_fidelity",
+    "bark": "too_evenly_striated_no_PBR",
+    "roots": "radial_spikes_lack_natural_rock_grip",
+    "canopy": "not_started",
+    "approved_for_game": false,
+    "next_goal": "H24 incremental fixes based only on H23 source"
+  }
 }
