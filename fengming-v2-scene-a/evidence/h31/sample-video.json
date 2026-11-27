@@ -1,11 +1,11 @@
 {
   "source": "sample-full.webm",
-  "sourceSHA256": "b27e1694b2462a7c88b3fb5e22425872c023048810ce25a3599b3040df56b0b7",
-  "clipStart": 5.310740966796875,
-  "requestedDuration": 14.764136474609375,
+  "sourceSHA256": "eda01b55d8ff16c96046be4430f3ecbeed42b706b664054035a731986857a650",
+  "clipStart": 5.195266845703125,
+  "requestedDuration": 14.77744873046875,
   "speed": 1,
   "interpolation": false,
-  "gameFPS": 8.21571518854013,
+  "gameFPS": 7.869621938862735,
   "encodingFPS": 25,
   "device": {
     "UA": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",

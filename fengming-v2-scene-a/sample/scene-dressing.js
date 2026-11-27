@@ -28,13 +28,6 @@ export function createSceneDressing({scene,groundAt,grid}) {
  const clock={value:0},leafMat=new T.MeshBasicMaterial({vertexColors:true,side:T.DoubleSide,fog:true});
  leafMat.onBeforeCompile=s=>{s.uniforms.uPlantTime=clock;s.vertexShader='attribute float aBend;uniform float uPlantTime;\n'+s.vertexShader;s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nfloat sway=sin(uPlantTime*1.25+position.x*.62+position.z*.8)*aBend*.026;transformed.x+=sway;transformed.z+=sway*.48;');};
  const leaves=new T.Mesh(leafGeo,leafMat);leaves.name='Authored curved fern leaves';leaves.raycast=()=>{};group.add(leaves);
- const rocks=[];
- const rockPositions=[[-4.5,4.0,.72],[-3.8,4.7,.42],[-6.2,1.5,.52],[3.8,1.7,.65],[4.4,-1.5,.55],[-7.5,-6.95,.41],[-6.95,-6.55,.32],[-7.1,-7.35,.30],[-8.0,-6.4,.34],[-7.9,-8.5,.34]];
- for(const [x,z,size]of rockPositions){const y=groundAt(x,z);if(y===null)continue;const g=new T.SphereGeometry(1,12,7),a=g.attributes.position,colors=[];
-  for(let i=0;i<a.count;i++){const v=new T.Vector3().fromBufferAttribute(a,i),n=v.clone().normalize();const q=1+Math.sin(v.x*8+v.y*5+v.z*4)*.065;v.multiplyScalar(q);v.x*=size;v.y*=size*.72;v.z*=size*.73;a.setXYZ(i,v.x+x,v.y+y+size*.14,v.z+z);const c=new T.Color(0x7b8975).multiplyScalar(.96+v.y*.04);if(n.y>.4)c.lerp(new T.Color(0x647c52),.16);colors.push(c.r,c.g,c.b);}
-  g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.computeVertexNormals();g.deleteAttribute('uv');rocks.push(g);
- }
- if(rocks.length){const g=mergeGeometries(rocks);rocks.forEach(q=>q.dispose());const mesh=new T.Mesh(g,new T.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0}));mesh.name='Grounded rounded courtyard stones';mesh.raycast=()=>{};group.add(mesh);}
  // A small, non-luminous footfall response gives motion a local ground cue.
  const count=10,dustPos=new Float32Array(count*3),life=new Float32Array(count);dustPos.fill(-1000);
  const dustGeo=new T.BufferGeometry();dustGeo.setAttribute('position',new T.BufferAttribute(dustPos,3));
@@ -44,7 +37,7 @@ export function createSceneDressing({scene,groundAt,grid}) {
   if(player&&moving&&footTimer<=0){footTimer=.24;const p=player.position,dx=Math.cos(player.rotation.y)*.12*(slot%2?1:-1),dz=-Math.sin(player.rotation.y)*.12*(slot%2?1:-1);slot=(slot+1)%count;dustPos[slot*3]=p.x+dx;dustPos[slot*3+1]=p.y+.035;dustPos[slot*3+2]=p.z+dz;life[slot]=.27;}
   for(let i=0;i<count;i++)if(life[i]>0){life[i]-=dt;dustPos[i*3+1]+=dt*.08;if(life[i]<=0)dustPos[i*3+1]=-1000;}dustGeo.attributes.position.needsUpdate=true;
  }
- return {group,update,stats:{leafTriangles:I.length/3,plantClumps:clumps.length,rockGroups:rocks.length,draws:3}};
+ return {group,update,stats:{leafTriangles:I.length/3,plantClumps:clumps.length,rockGroups:0,draws:2}};
 }
 
 export function createStoneLantern(){

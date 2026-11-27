@@ -23,7 +23,7 @@
     ]
   },
   "H31initial": {
-    "time": 1795761498421.5999,
+    "time": 1795761701941.5,
     "p": [
       -3.2,
       0.07841390371322632,
@@ -37,8 +37,8 @@
     ],
     "attack": null,
     "enemyHP": 3,
-    "calls": 32,
-    "triangles": 88048
+    "calls": 31,
+    "triangles": 86608
   },
   "positionMaxDiff": 0.0,
   "cameraMaxDiff": 0.0,
