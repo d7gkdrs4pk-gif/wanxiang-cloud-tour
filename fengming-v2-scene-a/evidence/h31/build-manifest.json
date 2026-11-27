@@ -1,0 +1,23 @@
+{
+  "version": "H.31",
+  "baseline": "6d83cee41a8f7a3b2edcd4ce94d8b93e9d0407d7",
+  "files": {
+    "assets/environment-031/mountain-atlas.png": "07505332166c9df98170bcac43b7eead375f8d507c2a7a442a3be04d0de485c2",
+    "assets/environment-031/stone-atlas.png": "6241aae34d178c97cbe7a45cb87d51a3faef719c65be49f3d23539a75ec5495f",
+    "assets/pine-007/pine-layer-atlas.png": "0087f3ad4b2c8562d6d2b8809dd66b03ea48eeb51f728b9179de3a338bea4b70",
+    "assets/sample-lod/gate.glb": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+    "assets/sample-lod/navigation.json": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+    "assets/sample-lod/terrain.glb": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+    "h29-compare.html": "209e00cb3f06a8b7a795c818f6066e639d25475aa35eddfbba115472b51f15ce",
+    "h30-compare.html": "58717b0c0170bfa3a722bf1fd2a84e57a5f56b72b878f1fa3b634250d1816a8c",
+    "sample-gate.html": "3d16656ea57664eff274c860c6c809395f14ef6a431b5794bd69a9e78aa20492",
+    "sample/enemy.js": "0b2d6752a500198fa6a6789082e3b8849c4886c888b699dd4a2b357d4a5f507f",
+    "sample/environment.js": "f776cc136340c59f33a56ca80deed208b6860264d609d01264dca26fffd729c6",
+    "sample/hero.js": "9fa52f1ea12db169b6a58c0b6c25c41b86248b33d0dd5a3a99ef5890cbb8dcb7",
+    "sample/main.js": "a5a340b8ba3133eb97d741b5c38ec070c0c4ed5822b112d1c3e22577ef99dcd2",
+    "sample/navigation.js": "dbb0391d19b876167758c703eeba5734b057af548dabea6b66d632f153443c1e",
+    "sample/pine-layers.js": "ff251a5cc255248c9d005ce84f7babb1deef7b29b515d14bd7dd046d8d254d23",
+    "sample/sample.css": "f1c97202bc97d5937316317c456f1b9f3077bb4b7476b14530bc813a9f449845",
+    "sample/scene-dressing.js": "9a952dbf947acf35c6b1332eaf810ecf98af943d30c8a26c2576678db515350d"
+  }
+}

@@ -123,10 +123,19 @@ export function createLayeredPine(options = {}) {
     depthTest: true, depthWrite: false, toneMapped: false,
     polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
   });
-  const contact = new T.Mesh(new T.PlaneGeometry(2.4, 1.85), contactMaterial);
-  contact.name = 'PINE-007 root contact shadow';
-  contact.rotation.x = -Math.PI / 2;
-  contact.position.y = 0.025;
+  const contactGeometry = new T.PlaneGeometry(4.25, 2.1, 16, 10);
+  contactGeometry.rotateX(-Math.PI / 2);
+  if (options.groundAt) {
+    const p=contactGeometry.attributes.position;
+    for(let i=0;i<p.count;i++){
+      const h=options.groundAt(group.position.x+p.getX(i),group.position.z+p.getZ(i));
+      p.setY(i,(h??group.position.y)-group.position.y+.018);
+    }
+    contactGeometry.computeVertexNormals();
+  }
+  const contact = new T.Mesh(contactGeometry, contactMaterial);
+  contact.name = 'PINE-007 ground-conformed root contact shadow';
+  contact.position.y = options.groundAt ? 0 : .025;
   contact.raycast = () => {};
   group.add(contact);
 

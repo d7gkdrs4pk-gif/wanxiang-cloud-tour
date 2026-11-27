@@ -1,0 +1,22 @@
+{
+  "version": "H31",
+  "authorship": "Original hand-painted game texture atlases generated for this project with OpenAI ImageGen on 2026-11-27; no Frog Ferry or Slackwater artwork copied into the game",
+  "stone-atlas.png": {
+    "size": [
+      1774,
+      887
+    ],
+    "cells": "left square: quiet temple paving; right square: mountain granite",
+    "use": "world-projected onto the original 3D terrain and real stone steps",
+    "sha256": "6241aae34d178c97cbe7a45cb87d51a3faef719c65be49f3d23539a75ec5495f"
+  },
+  "mountain-atlas.png": {
+    "size": [
+      1774,
+      887
+    ],
+    "cells": "upper strip: far mountains; lower strip: nearer mountains",
+    "use": "two separate distant world-space mountain layers; not a whole-scene background",
+    "sha256": "07505332166c9df98170bcac43b7eead375f8d507c2a7a442a3be04d0de485c2"
+  }
+}

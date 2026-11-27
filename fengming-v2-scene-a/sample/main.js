@@ -6,6 +6,7 @@ import {createHero} from './hero.js';
 import {createEnemy} from './enemy.js';
 import {createLayeredPine} from './pine-layers.js';
 import {createEnvironment} from './environment.js';
+import {createSceneDressing,createStoneLantern} from './scene-dressing.js';
 
 const $=q=>document.querySelector(q), params=new URLSearchParams(location.search), debug=params.get('debug')==='1', fxEnabled=params.get('fx')!=='0';
 const scene=new T.Scene();
@@ -15,9 +16,9 @@ renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.02;r
 document.body.prepend(renderer.domElement);
 const camera=new T.PerspectiveCamera(39,innerWidth/innerHeight,.1,160),offset=new T.Vector3(6,27,15);
 const pmrem=new T.PMREMGenerator(renderer),room=new RoomEnvironment();scene.environment=pmrem.fromScene(room,.04).texture;room.dispose();pmrem.dispose();
-scene.add(new T.AmbientLight(0xffffff,.42),new T.HemisphereLight(0xc0d8ff,0x796657,1.55));
-const sun=new T.DirectionalLight(0xc4d9ff,2.35);sun.position.set(-8,16,12);scene.add(sun);
-const rim=new T.DirectionalLight(0x8dbdff,.85);rim.position.set(5,9,-12);scene.add(rim);
+scene.add(new T.AmbientLight(0xffffff,.42),new T.HemisphereLight(0xc2d5cc,0x6c6650,1.20));
+const sun=new T.DirectionalLight(0xffedcf,2.35);sun.position.set(-8,16,12);scene.add(sun);
+const rim=new T.DirectionalLight(0xb8d6d6,.55);rim.position.set(5,9,-12);scene.add(rim);
 const stone=new T.MeshStandardMaterial({color:0x61767b,roughness:1});
 const nav=createNavigation({scene,stone});
 const env=createEnvironment({scene,renderer,camera,groundAt:nav.groundAt});
@@ -26,7 +27,7 @@ const hero=createHero();player.add(hero.group);
 const foe=createEnemy();scene.add(foe.group);
 const enemy={g:foe.group,hp:3,home:new T.Vector3(2.8,0,-6.6),hurt:0,dead:0};
 env.attachCharacterShadow(player,{size:1.05,opacity:.9});env.attachCharacterShadow(foe.group,{size:1.05,opacity:.7});
-let ready=false,terrain=null,gate=null,pine=null,attackState=null,attackCooldown=0,phoenixCooldown=0,hp=100,kills=0,impactTimer=0,elapsed=0;
+let ready=false,terrain=null,gate=null,pine=null,dressing=null,attackState=null,attackCooldown=0,phoenixCooldown=0,hp=100,kills=0,impactTimer=0,elapsed=0;
 const target=new T.Vector3(),safePos=new T.Vector3(),events=[],frameData=[];
 let flags={nearPine:false,underBranch:false,stairs:false,hit:false};
 function log(type,data={}){events.push({type,t:performance.now(),...data});if(events.length>400)events.shift();}
@@ -47,10 +48,7 @@ function updateRoof(dt,t){if(!gate)return;const head=player.position.clone().add
  roofUniforms.uCut.value=T.MathUtils.lerp(roofUniforms.uCut.value,roofTarget,1-Math.exp(-dt*12));const p=head.project(camera);roofUniforms.uHeroPixel.value.set((p.x+1)*renderer.domElement.width/2,(p.y+1)*renderer.domElement.height/2);roofUniforms.uHeroY.value=player.position.y;roofUniforms.uRatio.value=renderer.getPixelRatio();}
 const lamps=[];
 function lantern(x,z){
- const base=new T.Mesh(new T.BoxGeometry(.48,1.1,.48),stone);base.position.set(x,.55,z);scene.add(base);
- const cap=new T.Mesh(new T.BoxGeometry(.72,.15,.65),new T.MeshStandardMaterial({color:0x2b4349,roughness:1}));cap.position.set(x,1.16,z);scene.add(cap);
- const glow=new T.Mesh(new T.SphereGeometry(.17,10,8),new T.MeshStandardMaterial({color:0xd7b77b,emissive:0xd39c57,emissiveIntensity:.65,roughness:1}));glow.position.set(x,1.36,z);scene.add(glow);
- const light=new T.PointLight(0xffc18a,4,5,2);light.position.copy(glow.position);scene.add(light);lamps.push(light);
+ const {group,light}=createStoneLantern();group.position.set(x,0,z);scene.add(group);lamps.push({group,light,x,z});
 }
 lantern(-6,-5);lantern(3.3,-3.3);
 
@@ -131,7 +129,7 @@ function frame(t){
    foe.update(dt,{moving:false});
   }else{enemy.dead+=dt;foe.update(dt,{dead:true});if(enemy.dead>1.5)foe.group.visible=false;}
   camera.position.lerp(player.position.clone().add(offset),1-Math.exp(-dt*4));camera.lookAt(camera.position.clone().sub(offset));
-  pine?.update(dt,{player,camera});updateRoof(dt,t);env.update(dt);
+  pine?.update(dt,{player,camera});updateRoof(dt,t);env.update(dt);dressing?.update(dt,{player,moving});
   if(Math.hypot(player.position.x+7,player.position.z+7)<3.4&&player.position.z>-5.8&&!flags.nearPine){flags.nearPine=true;log('near-pine');}
   if(player.position.x< -5.6&&player.position.x> -7&&player.position.z< -7.6&&!flags.underBranch){flags.underBranch=true;log('under-branch');}
   if(nav.stairsAt(player.position.x,player.position.z)>.65&&!flags.stairs){flags.stairs=true;log('stairs-top',{height:player.position.y});}
@@ -147,14 +145,15 @@ function frame(t){
  if(debug){$('#debug').hidden=false;$('#debug').textContent=JSON.stringify(snapshot(),null,1);}
  requestAnimationFrame(frame);
 }
-function snapshot(){return {version:'H.30 2.5D sample',ready,position:player.position.toArray(),rotation:player.rotation.y,camera:camera.position.toArray(),FOV:camera.fov,heroHeight:1.485,guideIndex,roofCut:roofUniforms.uCut.value,target:target.toArray(),flags:{...flags},enemy:{p:enemy.g.position.toArray(),hp:enemy.hp},attack:(attackState?attackState.time/attackState.duration:null),stats:{calls:renderer.info.render.calls,triangles:renderer.info.render.triangles},pine:pine?.lastUpdate??null,events:events.slice(-40)};}
+function snapshot(){return {version:'H.31 painted gate sample',ready,position:player.position.toArray(),rotation:player.rotation.y,camera:camera.position.toArray(),FOV:camera.fov,heroHeight:1.485,guideIndex,roofCut:roofUniforms.uCut.value,target:target.toArray(),flags:{...flags},enemy:{p:enemy.g.position.toArray(),hp:enemy.hp},attack:(attackState?attackState.time/attackState.duration:null),stats:{calls:renderer.info.render.calls,triangles:renderer.info.render.triangles},pine:pine?.lastUpdate??null,events:events.slice(-40)};}
 window.__SAMPLE={snapshot,project:(x,y,z)=>{const p=new T.Vector3(x,y,z).project(camera);return [(p.x+1)*innerWidth/2,(1-p.y)*innerHeight/2]},frames:()=>frameData.slice(),events:()=>events.slice(),getStep:(x,z)=>nav.stairsAt(x,z),getGround:(x,z)=>nav.groundAt(x,z)};
 async function boot(){
  try{
   const cache=await fetch('./assets/sample-lod/navigation.json').then(r=>{if(!r.ok)throw Error('Navigation HTTP '+r.status);return r.json()});nav.installCached(cache);
   const [ter,ga]=await Promise.all([load('./assets/sample-lod/terrain.glb'),load('./assets/sample-lod/gate.glb')]);terrain=ter;gate=ga;
-  applyTransform(terrain,cache.transforms.terrain_transform);applyTransform(gate,cache.transforms.gate_transform);scene.add(terrain,gate);env.styleTerrain(terrain);env.styleGate(gate);prepareRoof(gate);env.setGroundAt(nav.groundAt);
-  pine=createLayeredPine({position:[-7,nav.groundAt(-7,-7),-7],width:6.4,height:5.6});scene.add(pine.group);await pine.ready;
+  applyTransform(terrain,cache.transforms.terrain_transform);applyTransform(gate,cache.transforms.gate_transform);scene.add(terrain,gate);env.styleTerrain(terrain);env.styleGate(gate);prepareRoof(gate);env.setGroundAt(nav.groundAt);await env.ready;
+  dressing=createSceneDressing({scene,groundAt:nav.groundAt,grid:nav.grid});for(const l of lamps)l.group.position.y=nav.groundAt(l.x,l.z)??0;
+  pine=createLayeredPine({position:[-7,nav.groundAt(-7,-7),-7],width:6.4,height:5.6,groundAt:nav.groundAt});scene.add(pine.group);await pine.ready;
   ready=true;reset();$('#loading').style.opacity='0';setTimeout(()=>$('#loading').remove(),500);document.documentElement.dataset.sampleReady='true';log('ready',{hero:hero.stats,enemy:foe.stats});
  }catch(e){console.error(e);$('#loading-note').textContent='山境未载入，点此重试';$('#loading').onclick=()=>location.reload();log('load-error',{message:e.message});}
 }

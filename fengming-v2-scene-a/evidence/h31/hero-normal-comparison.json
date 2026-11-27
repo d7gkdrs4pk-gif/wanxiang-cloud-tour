@@ -1,0 +1,211 @@
+[
+  {
+    "mode": "h30",
+    "errors": [],
+    "version": "H.31 painted gate sample",
+    "ready": true,
+    "position": [
+      -3.2,
+      0.07841390371322632,
+      -4.2
+    ],
+    "rotation": -0.6,
+    "camera": [
+      2.8,
+      27.078413903713226,
+      10.8
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "guideIndex": 0,
+    "roofCut": 0,
+    "target": [
+      -3.2,
+      0.07841390371322632,
+      -4.2
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.06296829879283905,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 32,
+      "triangles": 73559
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15580439567565918,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.49884938433165,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.45733459291049,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.614203571283845,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793044,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.464265445104555
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 3633.7999999970198
+      },
+      {
+        "type": "ready",
+        "t": 3634.099999997765,
+        "hero": {
+          "triangles": 3037,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      }
+    ]
+  },
+  {
+    "mode": "h31",
+    "errors": [],
+    "version": "H.31 painted gate sample",
+    "ready": true,
+    "position": [
+      -3.2,
+      0.07841390371322632,
+      -4.2
+    ],
+    "rotation": -0.6,
+    "camera": [
+      2.8,
+      27.078413903713226,
+      10.8
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "guideIndex": 0,
+    "roofCut": 0,
+    "target": [
+      -3.2,
+      0.07841390371322632,
+      -4.2
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.06296829879283905,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 32,
+      "triangles": 87324
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15580439567565918,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.49884938433165,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.45733459291049,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.614203571283845,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793044,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.464265445104555
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2558.599999997765
+      },
+      {
+        "type": "ready",
+        "t": 2558.699999999255,
+        "hero": {
+          "triangles": 16802,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H31 continuous cloth/weighted drape",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      }
+    ]
+  }
+]

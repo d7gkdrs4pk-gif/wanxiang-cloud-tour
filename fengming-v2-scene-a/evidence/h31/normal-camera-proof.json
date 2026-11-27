@@ -1,0 +1,48 @@
+{
+  "H30": {
+    "position": [
+      -3.2,
+      0.07841390371322632,
+      -4.2
+    ],
+    "rotation": -0.6,
+    "camera": [
+      2.8,
+      27.078413903713226,
+      10.8
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "viewport": [
+      390,
+      844
+    ],
+    "canvas": [
+      390,
+      844
+    ]
+  },
+  "H31initial": {
+    "time": 1795761498421.5999,
+    "p": [
+      -3.2,
+      0.07841390371322632,
+      -4.2
+    ],
+    "a": -0.6,
+    "c": [
+      2.8,
+      27.078413903713226,
+      10.8
+    ],
+    "attack": null,
+    "enemyHP": 3,
+    "calls": 32,
+    "triangles": 88048
+  },
+  "positionMaxDiff": 0.0,
+  "cameraMaxDiff": 0.0,
+  "FOV": 39,
+  "heroHeight": 1.485,
+  "sameCameraAndScale": true
+}
