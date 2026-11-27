@@ -1,0 +1,24 @@
+{
+  "source": "sample-full.webm",
+  "sourceSHA256": "46115d7148a3f51f094224b4b0bc3562516919f271786e7e8af7a9811c9a0410",
+  "clipStart": 4.482533447265625,
+  "requestedDuration": 14.787449462890626,
+  "speed": 1,
+  "interpolation": false,
+  "gameFPS": 10.43513050788271,
+  "encodingFPS": 25,
+  "device": {
+    "UA": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "viewport": [
+      390,
+      844
+    ],
+    "canvas": [
+      390,
+      844
+    ]
+  },
+  "physical_iPhone": false,
+  "wechat_device_test": false
+}

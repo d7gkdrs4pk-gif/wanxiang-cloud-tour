@@ -1,0 +1,19 @@
+{
+  "version": "H.30",
+  "baseline": "5dc5fa9e76511bed79f96d001f9a4587aefbf3c6",
+  "files": {
+    "assets/pine-007/pine-layer-atlas.png": "0087f3ad4b2c8562d6d2b8809dd66b03ea48eeb51f728b9179de3a338bea4b70",
+    "assets/sample-lod/gate.glb": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+    "assets/sample-lod/navigation.json": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+    "assets/sample-lod/terrain.glb": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+    "h29-compare.html": "209e00cb3f06a8b7a795c818f6066e639d25475aa35eddfbba115472b51f15ce",
+    "sample-gate.html": "61a33c71a99a938019844f2d6c96549d4b1c48bce730fba53477bf21208eab20",
+    "sample/enemy.js": "0b2d6752a500198fa6a6789082e3b8849c4886c888b699dd4a2b357d4a5f507f",
+    "sample/environment.js": "c83da6d82c34c47ce09ef4b3ba413fe396a48eb8115f00f8ade9b10f39495824",
+    "sample/hero.js": "6a6df669904efc010bd48e399cee37bebdc35a00730636a62570818a3fa3c524",
+    "sample/main.js": "74f9726821a6ef6e6699913678a6dfc20bab46fddcba82b410cebd670cd56912",
+    "sample/navigation.js": "dbb0391d19b876167758c703eeba5734b057af548dabea6b66d632f153443c1e",
+    "sample/pine-layers.js": "1eb29fbfe60fd023a8b8bf8e420dea63ac2d2cb277b5d12a91b135ccdefdb3d2",
+    "sample/sample.css": "d4b43696f6db1260e384fd1c4a484851a349a99c1326bcaf6febe074fab3246f"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "scope": "390x844 normal game cameras; fixed existing gate spawn; no camera zoom/FOV/actor overrides",
+  "intended_spawn": {
+    "xz": [
+      -3.2,
+      -4.2
+    ],
+    "yaw": -0.6,
+    "FOV": 39,
+    "offset": [
+      6,
+      27,
+      15
+    ]
+  },
+  "versions": {
+    "H29": {
+      "ready": true,
+      "position": [
+        -3.2,
+        0.07841391861438751,
+        -4.2
+      ],
+      "rotation": -0.6,
+      "camera": [
+        2.8,
+        27.078413918614388,
+        10.8
+      ],
+      "FOV": 39,
+      "aspect": 0.46208530805687204,
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        390,
+        844
+      ],
+      "pixelRatio": 1,
+      "projection": [
+        6.111237116530965,
+        0,
+        0,
+        0,
+        0,
+        2.8239128856008016,
+        0,
+        0,
+        0,
+        0,
+        -1.0012507817385865,
+        -1,
+        0,
+        0,
+        -0.20012507817385866,
+        0
+      ],
+      "worldMatrix": [
+        0.9284766908852593,
+        0,
+        -0.3713906763541037,
+        0,
+        -0.31869640430842994,
+        0.5134553180524706,
+        -0.7967410107710747,
+        0,
+        0.19069251784911848,
+        0.858116330321033,
+        0.4767312946227963,
+        0,
+        2.8,
+        27.078413918614388,
+        10.8,
+        1
+      ],
+      "viewMatrix": [
+        0.9284766908852595,
+        -0.3186964043084301,
+        0.1906925178491186,
+        0,
+        5.551115123125785e-17,
+        0.5134553180524708,
+        0.8581163303210332,
+        0,
+        -0.37139067635410383,
+        -0.7967410107710751,
+        0.47673129462279645,
+        0,
+        1.4112845701455932,
+        -4.406402782547389,
+        -28.919066214659104,
+        1.0000000000000002
+      ],
+      "heroHeight": 1.47,
+      "pine": "山门石阶迎客松-H29",
+      "pinePosition": [
+        -7,
+        0.15580445528030396,
+        -7
+      ],
+      "pineLoaded": true,
+      "gateLoaded": "真实 GLB 山门 · 75,702 三角面",
+      "terrainLoaded": "真实地形 · 12座导航桥 · 75,454 三角面",
+      "frame": 59,
+      "stats": {
+        "calls": 61,
+        "triangles": 437884
+      },
+      "url": "http://127.0.0.1:3000/h29-compare.html",
+      "pageerrors": [],
+      "failedRequests": [],
+      "source_sha256": "209e00cb3f06a8b7a795c818f6066e639d25475aa35eddfbba115472b51f15ce"
+    },
+    "H30": {
+      "version": "H.30 2.5D sample",
+      "ready": true,
+      "position": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "rotation": -0.6,
+      "camera": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "FOV": 39,
+      "heroHeight": 1.485,
+      "guideIndex": 0,
+      "roofCut": 0,
+      "target": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "flags": {
+        "nearPine": false,
+        "underBranch": false,
+        "stairs": false,
+        "hit": false
+      },
+      "enemy": {
+        "p": [
+          2.8,
+          0.06296829879283905,
+          -6.6
+        ],
+        "hp": 3
+      },
+      "attack": null,
+      "stats": {
+        "calls": 29,
+        "triangles": 69521
+      },
+      "pine": {
+        "loaded": true,
+        "root": [
+          -7,
+          0.15580439567565918,
+          -7
+        ],
+        "layers": {
+          "rear": {
+            "rootDepth": 34.49884938433165,
+            "offset": -1.05,
+            "upperRelief": 1.6,
+            "visible": true
+          },
+          "trunk": {
+            "rootDepth": 33.45733459291049,
+            "offset": 0,
+            "upperRelief": 1.6,
+            "visible": true
+          },
+          "front": {
+            "rootDepth": 32.614203571283845,
+            "offset": 0.85,
+            "upperRelief": 1.5992788652793044,
+            "visible": true
+          }
+        },
+        "playerDepth": 31.464265445104555
+      },
+      "events": [
+        {
+          "type": "reset",
+          "t": 2708.0999999996275
+        },
+        {
+          "type": "ready",
+          "t": 2708.399999999441,
+          "hero": {
+            "triangles": 3037,
+            "materials": 7,
+            "bones": 22,
+            "height": 1.485,
+            "attackDuration": 0.78,
+            "hitProgress": 0.44,
+            "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+          },
+          "enemy": {
+            "source": "original project-authored procedural mesh and animation; no third-party assets",
+            "height": 1.46,
+            "triangles": 1866,
+            "vertices": 2501,
+            "bones": 19,
+            "materials": 4,
+            "drawCalls": 4,
+            "hitDuration": 0.3,
+            "facing": "+Z"
+          }
+        }
+      ],
+      "aspect": 0.46208530805687204,
+      "viewport": [
+        390,
+        844
+      ],
+      "canvas": [
+        390,
+        844
+      ],
+      "pixelRatio": 1,
+      "projection": [
+        6.111237116530965,
+        0,
+        0,
+        0,
+        0,
+        2.8239128856008016,
+        0,
+        0,
+        0,
+        0,
+        -1.0012507817385865,
+        -1,
+        0,
+        0,
+        -0.20012507817385866,
+        0
+      ],
+      "worldMatrix": [
+        0.9284766908852593,
+        0,
+        -0.3713906763541037,
+        0,
+        -0.31869640430842994,
+        0.5134553180524706,
+        -0.7967410107710747,
+        0,
+        0.19069251784911848,
+        0.858116330321033,
+        0.4767312946227963,
+        0,
+        2.8,
+        27.078413903713226,
+        10.8,
+        1
+      ],
+      "viewMatrix": [
+        0.9284766908852595,
+        -0.3186964043084301,
+        0.1906925178491186,
+        0,
+        5.551115123125785e-17,
+        0.5134553180524708,
+        0.8581163303210332,
+        0,
+        -0.37139067635410383,
+        -0.7967410107710751,
+        0.47673129462279645,
+        0,
+        1.411284570145594,
+        -4.406402774896309,
+        -28.919066201872177,
+        1.0000000000000002
+      ],
+      "url": "http://127.0.0.1:3000/sample-gate.html",
+      "pageerrors": [],
+      "failedRequests": [],
+      "source_sha256": "61a33c71a99a938019844f2d6c96549d4b1c48bce730fba53477bf21208eab20"
+    }
+  },
+  "differences": {
+    "position_max_axis": 1.4901161193847656e-08,
+    "rotation_radians": 0.0,
+    "camera_max_axis": 1.4901161193847656e-08,
+    "projection_max_element": 0.0,
+    "view_matrix_max_element": 1.2786927072738763e-08,
+    "FOV": 0,
+    "viewport_identical": true,
+    "canvas_identical": true,
+    "actor_height_world_delta": 0.015000000000000124,
+    "actor_height_ratio": 1.0102040816326532
+  }
+}

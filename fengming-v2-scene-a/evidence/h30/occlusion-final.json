@@ -1,0 +1,59 @@
+{
+  "frontHeightFraction": 0.26,
+  "rows": [
+    {
+      "x": -6.4,
+      "z": -8.1,
+      "y": 0.13039420545101166,
+      "rootDistance": 1.2529964086141665,
+      "alonePixels": 826,
+      "frontPixels": 736,
+      "occludedPixels": 90,
+      "ratio": 0.1089588377723971
+    },
+    {
+      "x": -6.4,
+      "z": -7.4,
+      "y": 0.13837450742721558,
+      "rootDistance": 0.7211102550927977,
+      "alonePixels": 826,
+      "frontPixels": 826,
+      "occludedPixels": 0,
+      "ratio": 0
+    },
+    {
+      "x": -6.4,
+      "z": -6.5,
+      "y": 0.14701040089130402,
+      "rootDistance": 0.7810249675906651,
+      "alonePixels": 826,
+      "frontPixels": 826,
+      "occludedPixels": 0,
+      "ratio": 0
+    },
+    {
+      "x": -6.2,
+      "z": -7.4,
+      "y": -0.031188499182462692,
+      "rootDistance": 0.8944271909999159,
+      "alonePixels": 826,
+      "frontPixels": 826,
+      "occludedPixels": 0,
+      "ratio": 0
+    },
+    {
+      "x": -6.2,
+      "z": -6.5,
+      "y": -0.10386510193347931,
+      "rootDistance": 0.9433981132056602,
+      "alonePixels": 826,
+      "frontPixels": 826,
+      "occludedPixels": 0,
+      "ratio": 0
+    }
+  ],
+  "errors": [],
+  "frontWidthOffsetFraction": 0.18,
+  "scope": "normal 390x844 gameplay camera; actual actor white silhouette versus same actor plus only front tree layer black alphaTest depth occluder",
+  "test_mode": "temporary main.js routing and diagnostic poses, not claimed as touch playback"
+}

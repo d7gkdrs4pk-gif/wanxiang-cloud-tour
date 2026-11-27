@@ -1,0 +1,20 @@
+{
+  "asset": "pine-layer-atlas.png",
+  "source": "New original illustration generated for this sample, using the user-approved pine-002/reference.png; not a screenshot of H29",
+  "reference_sha256": "38fc57ce4bdf79aff16f0b54288d57ea6fcc29f14e4da99c3323566d66bd8f35",
+  "atlas_sha256": "0087f3ad4b2c8562d6d2b8809dd66b03ea48eeb51f728b9179de3a338bea4b70",
+  "size": [
+    2172,
+    724
+  ],
+  "cells": [
+    "rear canopies and twigs",
+    "S trunk roots and rock base",
+    "forward welcoming branch with crown"
+  ],
+  "alpha": true,
+  "generated_utc": "2026-11-27",
+  "generation_tool": "OpenAI ImageGen",
+  "rights": "Original generated production art from the project-approved reference; no external game art copied",
+  "runtime": "Three depth-separated alphaTest layers; root remains world(-7,groundAt(-7,-7),-7) with original.72 collision. Upper relief corrects background railing intersections without changing screen-space art."
+}

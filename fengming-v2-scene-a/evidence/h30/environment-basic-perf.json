@@ -1,0 +1,114 @@
+{
+  "scope": "cloud Chromium156 SwiftShader390x844; real static geometry, fixed-SUN MeshBasic terrain/gate; lit3D actors unchanged",
+  "frames": 114,
+  "seconds": 9.941800048828124,
+  "FPS": 11.366150942989414,
+  "median_frame_ms": 87.599853515625,
+  "p95_frame_ms": 116.199951171875,
+  "snapshot": {
+    "version": "H.30 2.5D sample",
+    "ready": true,
+    "position": [
+      -3.9943373689800867,
+      0.08799110352993011,
+      -7.170010690930561
+    ],
+    "rotation": -2.880246155856501,
+    "camera": [
+      2.005662631317627,
+      27.087991103489195,
+      7.829989310182585
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "roofCut": 0,
+    "target": [
+      -4.00807414396973,
+      0.08799110352992656,
+      -7.221372203269496
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": true,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.06296829879283905,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 28,
+      "triangles": 69465
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15580439567565918,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 32.943630032922606,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 31.898181710381103,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 31.05186640165703,
+          "offset": 0.85,
+          "upperRelief": 1.6,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.464265445657034
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 3118
+      },
+      {
+        "type": "ready",
+        "t": 3118.0999999996275,
+        "hero": {
+          "triangles": 3037,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "under-branch",
+        "t": 5630.200000000186
+      }
+    ]
+  },
+  "errors": []
+}

@@ -1,0 +1,317 @@
+{
+  "kind": "render-only LOD; source models remain unchanged for nav/height/collision",
+  "sources": {
+    "terrain": "fengming-v2-scene-a/assets/terrain-001/terrain.glb",
+    "gate": "fengming-v2-scene-a/assets/gate-001/gate.glb"
+  },
+  "assets": {
+    "terrain": {
+      "source": "fengming-v2-scene-a/assets/terrain-001/terrain.glb",
+      "source_sha256": "3a09ab2e1160ec58c157ae8dd5584a93c0bdadea594c9b0f2f7fc426b5f91542",
+      "triangles_before": 75454,
+      "bounds_blender_z_up_before": [
+        [
+          -0.4888423681259155,
+          -0.382242888212204,
+          -0.30317431688308716
+        ],
+        [
+          0.48903071880340576,
+          0.38043075799942017,
+          0.3019021451473236
+        ]
+      ],
+      "source_probe_gltf_y": 0.2533210515975952,
+      "source_normalization": {
+        "gltf_y_up_bounds": [
+          [
+            -0.4888423681259155,
+            -0.30317431688308716,
+            -0.38043075799942017
+          ],
+          [
+            0.48903071880340576,
+            0.3019021451473236,
+            0.382242888212204
+          ]
+        ],
+        "scale": 40.90510367312228,
+        "translation": [
+          -0.0038522519948204275,
+          -10.24212387818399,
+          -0.03706268711155951
+        ],
+        "matrix_column_major": [
+          40.90510367312228,
+          0,
+          0,
+          0,
+          0,
+          40.90510367312228,
+          0,
+          0,
+          0,
+          0,
+          40.90510367312228,
+          0,
+          -0.0038522519948204275,
+          -10.24212387818399,
+          -0.03706268711155951,
+          1
+        ]
+      },
+      "mobile_textures": [
+        {
+          "name": "Color_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+          "role": "baseColor",
+          "source_size": [
+            4096,
+            4096
+          ],
+          "output_size": [
+            1024,
+            1024
+          ],
+          "format": "JPEG"
+        },
+        {
+          "name": "ORM_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+          "role": "normal_or_roughness",
+          "source_size": [
+            4096,
+            4096
+          ],
+          "output_size": [
+            512,
+            512
+          ],
+          "format": "PNG"
+        },
+        {
+          "name": "NormalGL_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+          "role": "normal_or_roughness",
+          "source_size": [
+            4096,
+            4096
+          ],
+          "output_size": [
+            512,
+            512
+          ],
+          "format": "PNG"
+        }
+      ],
+      "protected_extremal_triangles": 30,
+      "decimation": {
+        "before": 75424,
+        "after": 29970,
+        "ratio": 0.3973536274925753,
+        "protected_boundary_vertices": 30
+      },
+      "clamped_extremal_coordinates": 1,
+      "triangles_after": 30000,
+      "bounds_blender_z_up_after": [
+        [
+          -0.4888423681259155,
+          -0.382242888212204,
+          -0.30317431688308716
+        ],
+        [
+          0.48903071880340576,
+          0.38043075799942017,
+          0.3019021451473236
+        ]
+      ],
+      "bounds_max_axis_delta": 0.0,
+      "material_slots": 1,
+      "bytes": 1681172,
+      "sha256": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+      "validated_embedded_images": [
+        {
+          "name": "H30_NormalGL_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+          "role": "data",
+          "mime": "image/png",
+          "dimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "H30_Color_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+          "role": "baseColor",
+          "mime": "image/jpeg",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "H30_ORM_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+          "role": "data",
+          "mime": "image/png",
+          "dimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    },
+    "gate": {
+      "source": "fengming-v2-scene-a/assets/gate-001/gate.glb",
+      "source_sha256": "70be8131371277997d6fb0c123f4b9bd4beb0810042b69aba8385030238901be",
+      "triangles_before": 75702,
+      "bounds_blender_z_up_before": [
+        [
+          -0.2833521366119385,
+          -0.4901954233646393,
+          -0.42391109466552734
+        ],
+        [
+          0.2844066321849823,
+          0.4895731210708618,
+          0.4243374168872833
+        ]
+      ],
+      "source_normalization": {
+        "gltf_y_up_bounds": [
+          [
+            -0.2833521366119385,
+            -0.42391109466552734,
+            -0.4895731210708618
+          ],
+          [
+            0.2844066321849823,
+            0.4243374168872833,
+            0.4901954233646393
+          ]
+        ],
+        "scale": 8.573453442353271,
+        "translation": [
+          -0.004520334350329426,
+          3.7843820338119087,
+          -7.802667639871385
+        ],
+        "matrix_column_major": [
+          8.573453442353271,
+          0,
+          0,
+          0,
+          0,
+          8.573453442353271,
+          0,
+          0,
+          0,
+          0,
+          8.573453442353271,
+          0,
+          -0.004520334350329426,
+          3.7843820338119087,
+          -7.802667639871385,
+          1
+        ]
+      },
+      "mobile_textures": [
+        {
+          "name": "Color_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+          "role": "baseColor",
+          "source_size": [
+            4096,
+            4096
+          ],
+          "output_size": [
+            1024,
+            1024
+          ],
+          "format": "JPEG"
+        },
+        {
+          "name": "ORM_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+          "role": "normal_or_roughness",
+          "source_size": [
+            4096,
+            4096
+          ],
+          "output_size": [
+            512,
+            512
+          ],
+          "format": "PNG"
+        },
+        {
+          "name": "NormalGL_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+          "role": "normal_or_roughness",
+          "source_size": [
+            4096,
+            4096
+          ],
+          "output_size": [
+            512,
+            512
+          ],
+          "format": "PNG"
+        }
+      ],
+      "gate_normalization_scale": 8.573453442353271,
+      "protected_world_y_below": 1.2,
+      "protected_local_z_cut": -0.3014400266110897,
+      "protected_triangles": 21419,
+      "upper_triangles_before": 54283,
+      "upper_decimation": {
+        "before": 54283,
+        "after": 11581,
+        "ratio": 0.2133448777702043,
+        "protected_boundary_vertices": 316
+      },
+      "lower_faces_exact": true,
+      "clamped_extremal_coordinates": 0,
+      "triangles_after": 33000,
+      "bounds_blender_z_up_after": [
+        [
+          -0.2833521366119385,
+          -0.4901954233646393,
+          -0.42391109466552734
+        ],
+        [
+          0.2844066321849823,
+          0.4895731210708618,
+          0.4243374168872833
+        ]
+      ],
+      "bounds_max_axis_delta": 0.0,
+      "material_slots": 1,
+      "bytes": 1969984,
+      "sha256": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+      "validated_embedded_images": [
+        {
+          "name": "H30_NormalGL_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+          "role": "data",
+          "mime": "image/png",
+          "dimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "name": "H30_Color_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+          "role": "baseColor",
+          "mime": "image/jpeg",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "H30_ORM_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+          "role": "data",
+          "mime": "image/png",
+          "dimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    }
+  },
+  "texture_policy": "original UVs; albedo mobile cap1024 JPEG90, normal/roughness cap512 PNG; original assets untouched",
+  "generator": "Blender 4.3.2"
+}

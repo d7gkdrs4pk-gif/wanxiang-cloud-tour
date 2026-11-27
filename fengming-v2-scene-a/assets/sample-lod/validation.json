@@ -1,0 +1,76 @@
+{
+  "terrain": {
+    "bytes": 1681172,
+    "sha256": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+    "images": [
+      {
+        "name": "H30_NormalGL_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+        "mime": "image/png",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 273664
+      },
+      {
+        "name": "H30_Color_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+        "mime": "image/jpeg",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 303776
+      },
+      {
+        "name": "H30_ORM_8f589309-0d42-4825-b5a1-0bc2bfee8187",
+        "mime": "image/png",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 286554
+      }
+    ],
+    "extensionsRequired": [],
+    "meshes": 1,
+    "bounds_max_axis_delta": 0.0,
+    "triangles": 30000
+  },
+  "gate": {
+    "bytes": 1969984,
+    "sha256": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+    "images": [
+      {
+        "name": "H30_NormalGL_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+        "mime": "image/png",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 215394
+      },
+      {
+        "name": "H30_Color_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+        "mime": "image/jpeg",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 314993
+      },
+      {
+        "name": "H30_ORM_bbb339b2-d95d-4d1e-a4c6-463872fd5ee2",
+        "mime": "image/png",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 421438
+      }
+    ],
+    "extensionsRequired": [],
+    "meshes": 1,
+    "bounds_max_axis_delta": 0.0,
+    "triangles": 33000
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "scope": "read-only incorporated-file provenance audit",
+  "issues": [],
+  "assets": {
+    "hero": {
+      "module": "sample/hero.js",
+      "source": "original project-authored geometry, rig, vertex colors and animation; current GAME_DESIGN male Lin Yan red/gold setting"
+    },
+    "enemy": {
+      "module": "sample/enemy.js",
+      "source": "original project-authored geometry and animation"
+    },
+    "pine": {
+      "module": "sample/pine-layers.js",
+      "source": "OpenAI ImageGen new layered illustration from project-approved pine-002/reference.png; not H29 screenshot",
+      "reference_hash_matches": true,
+      "atlas_hash_matches": true
+    },
+    "terrain_and_gate": {
+      "source": "project existing terrain-001 and gate-001; sample-only LOD and texture caps",
+      "source_hashes_match": true
+    },
+    "environment": {
+      "module": "sample/environment.js",
+      "source": "original procedural shaders, distant ridge geometry, fog and canvas shadow textures"
+    },
+    "runtime": {
+      "source": "vendored Three.js r170 and addons",
+      "license": "vendor/three/LICENSE MIT; required notice present",
+      "license_present": true
+    }
+  },
+  "external_references": "Verdant and Guizang sources studied only; no code or reserved-rights game assets imported; source boundary documented in project/SAMPLE_H30_SOURCES.md",
+  "runtime_remote_urls": "none in sample-gate importmap/modules; engine and production assets are local"
+}

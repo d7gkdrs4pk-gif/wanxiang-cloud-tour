@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "builder": ".github/scripts/build_sample_navigation.py",
+  "source_sha256": {
+    "terrain-001/terrain.glb": "3a09ab2e1160ec58c157ae8dd5584a93c0bdadea594c9b0f2f7fc426b5f91542",
+    "gate-001/gate.glb": "70be8131371277997d6fb0c123f4b9bd4beb0810042b69aba8385030238901be"
+  },
+  "validation": {
+    "H_cells": 6561,
+    "R_reachable": 2281,
+    "steps_shape": [
+      21,
+      45
+    ],
+    "step_raw_nulls": 158,
+    "step_filled_nulls": 95,
+    "step_bounds": {
+      "x": [
+        1.35,
+        2.45
+      ],
+      "z": [
+        -7.4,
+        -6.9
+      ],
+      "y": [
+        0.14,
+        1.0
+      ],
+      "normal_y_min": 0.05
+    },
+    "bounds_checked": {
+      "terrain": [
+        [
+          -20.0,
+          -22.643500876054166,
+          -15.598622283522333
+        ],
+        [
+          20.0,
+          2.107214533465822,
+          15.598622283522333
+        ]
+      ],
+      "gate": [
+        [
+          -2.433826685384108,
+          0.15,
+          -12.0
+        ],
+        [
+          2.4338266853841075,
+          7.4224191213434825,
+          -3.6
+        ]
+      ]
+    },
+    "pinePatch": {
+      "origin": [
+        -6.9,
+        -8.35
+      ],
+      "step": 0.05,
+      "shape": [
+        48,
+        25
+      ],
+      "valid": 1152,
+      "missed": 0,
+      "rejected_highest_y_above_0_60": 0,
+      "rejected_highest_normal_y_at_most_0_4": 48,
+      "minimum_accepted_normal_y": 0.5201809689392838,
+      "method": "Unfiltered highest source-terrain hit; then Y/normal acceptance; no hole fill"
+    }
+  },
+  "reference_compared": "navigation.json",
+  "reference_sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "exact_structure_and_values": true,
+  "existing_fields_preserved_exactly": true,
+  "schema_extension_pinePatch": false,
+  "byte_identical": true,
+  "output_sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "scope": "Original source GLBs rebuilt offline; not a touch-input or phone test"
+}

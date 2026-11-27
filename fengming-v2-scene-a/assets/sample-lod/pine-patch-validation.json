@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "old_cache_sha256": "efb5aff9a1b535eafa347fcda0627bc9115e045120ccd8a3db9ebdada7eb9598",
+  "updated_cache_sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "H_exactly_unchanged": true,
+  "R_exactly_unchanged": true,
+  "steps_exactly_unchanged": true,
+  "all_other_existing_fields_exactly_unchanged": true,
+  "formerly_blocked_points": [
+    {
+      "world": [
+        -6.1,
+        -7.6
+      ],
+      "four_heights": [
+        -0.0275288,
+        -0.0295013,
+        -0.0273862,
+        -0.0293587
+      ],
+      "bilinear_y": -0.027528800000000027,
+      "root_distance": 1.0816653826391969
+    },
+    {
+      "world": [
+        -6.15,
+        -7.65
+      ],
+      "four_heights": [
+        -0.025144,
+        -0.0242509,
+        -0.025699,
+        -0.0276715
+      ],
+      "bilinear_y": -0.025698999999999993,
+      "root_distance": 1.0700467279516348
+    },
+    {
+      "world": [
+        -6.2,
+        -7.75
+      ],
+      "four_heights": [
+        -0.0176904,
+        -0.0168319,
+        -0.0210859,
+        -0.0201928
+      ],
+      "bilinear_y": -0.021085899999999973,
+      "root_distance": 1.0965856099730653
+    },
+    {
+      "world": [
+        -6.24,
+        -7.82
+      ],
+      "four_heights": [
+        -0.0172553,
+        -0.0163967,
+        -0.018549,
+        -0.0176904
+      ],
+      "bilinear_y": -0.01785979999999998,
+      "root_distance": 1.118033988749895
+    },
+    {
+      "world": [
+        -6.25,
+        -7.7
+      ],
+      "four_heights": [
+        -0.021979,
+        -0.0210859,
+        -0.0218967,
+        -0.0238692
+      ],
+      "bilinear_y": -0.02189670000000002,
+      "root_distance": 1.0259142264341596
+    }
+  ],
+  "root_collision": "Runtime .72-unit blocker unchanged; builder does not alter runtime code",
+  "sampling": "Actual highest terrain intersection first; only then highestY<=.60 and highestNormalY>.4; no lower hidden floor substitution"
+}

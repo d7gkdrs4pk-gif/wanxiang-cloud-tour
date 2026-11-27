@@ -1,0 +1,4413 @@
+{
+  "version": "H30",
+  "scope": "real original-pointer touchscreen input; normal FOV39/camera offset6,27,15; no position/camera overrides",
+  "physical_iPhone": false,
+  "wechat_device_test": false,
+  "device": {
+    "UA": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "viewport": [
+      390,
+      844
+    ],
+    "canvas": [
+      390,
+      844
+    ]
+  },
+  "videoEpoch": 1795749522416.4119,
+  "start": 1795749527098.9453,
+  "end": 1795749541486.3948,
+  "steps": [
+    {
+      "name": "near-pine",
+      "desired": [
+        -5.1,
+        -4.4
+      ],
+      "distance": 0.11049731745468695,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -4.9901098457446516,
+          0.11661790311336517,
+          -4.388432322514106
+        ],
+        "rotation": -1.6748700214633832,
+        "camera": [
+          1.8200146571690508,
+          27.085765082047583,
+          10.696843808429756
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 1,
+        "roofCut": 0,
+        "target": [
+          -5.0999996869237885,
+          0.11661790311336517,
+          -4.399999656241315
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.271872425181435,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.227589101851,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.38221688772636,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.6329286170487
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          }
+        ]
+      },
+      "epoch": 1795749527868.531
+    },
+    {
+      "name": "pine-front",
+      "desired": [
+        -6.0,
+        -6.5
+      ],
+      "distance": 0.06164094807164026,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -6.03530991220079,
+          -0.10025379701341672,
+          -6.550525405288262
+        ],
+        "rotation": -4.086525483178576,
+        "camera": [
+          -0.26150932776295277,
+          27.02825531195341,
+          8.577340283296905
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 2,
+        "roofCut": 0,
+        "target": [
+          -6.03530991220079,
+          -0.10005855178350842,
+          -6.550525405288262
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 32.820457979936236,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 31.770874319835993,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 30.921211356897704,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.592364249271476
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          }
+        ]
+      },
+      "epoch": 1795749529393.0723
+    },
+    {
+      "name": "branch-entry",
+      "desired": [
+        -6.0,
+        -7.4
+      ],
+      "distance": 0.1808547303195535,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -5.9658644547019675,
+          -0.047713094914958856,
+          -7.222395951549059
+        ],
+        "rotation": -3.3010693363143346,
+        "camera": [
+          -0.05154152214213384,
+          26.934065652841596,
+          8.26590261762048
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 3,
+        "roofCut": 0,
+        "target": [
+          -5.946314579429773,
+          -0.03557464753981421,
+          -7.4115369818127395
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 32.63108688682092,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 31.581615843173648,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 30.732044045935385,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.665078724326115
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          }
+        ]
+      },
+      "epoch": 1795749529844.613
+    },
+    {
+      "name": "under-branch",
+      "desired": [
+        -6.4,
+        -8.1
+      ],
+      "distance": 0.05523110084716571,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -6.392540901967124,
+          0.1271229,
+          -8.154725098056794
+        ],
+        "rotation": -2.619113455418732,
+        "camera": [
+          -0.15301671240314882,
+          27.011782755916975,
+          7.281375159891566
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 4,
+        "roofCut": 0,
+        "target": [
+          -6.392540901967124,
+          0.12712289999999982,
+          -8.154725098056794
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 32.20897294074314,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 31.159600549422983,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 30.310108613592384,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.618868295276105
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749530629.151
+    },
+    {
+      "name": "branch-return",
+      "desired": [
+        -6.0,
+        -7.4
+      ],
+      "distance": 0.3443581434057151,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -6.16116734880228,
+          -0.02447377503318685,
+          -7.70431499570326
+        ],
+        "rotation": 0.06638373850881563,
+        "camera": [
+          -0.21817307197879032,
+          27.011944727290555,
+          7.179382542342209
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 5,
+        "roofCut": 0,
+        "target": [
+          -6.135604807370958,
+          -0.02611489835466685,
+          -7.654552925903108
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 32.14805615422514,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 31.09869163683606,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 30.24920607514014,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.429201168534647
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749531060.4426
+    },
+    {
+      "name": "exit-branch",
+      "desired": [
+        -6.0,
+        -6.5
+      ],
+      "distance": 0.31564344102442066,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -6.025324358509499,
+          -0.08919137700489338,
+          -6.8146259028240035
+        ],
+        "rotation": 0.14918959298084183,
+        "camera": [
+          -0.12503937491565448,
+          26.96308130181783,
+          7.587784045988853
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 6,
+        "roofCut": 0,
+        "target": [
+          -5.966745753739402,
+          -0.10575321654173209,
+          -6.43097161468066
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 32.318717358456446,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 31.26921881023142,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 30.41962474738259,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.205216698129945
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749531457.451
+    },
+    {
+      "name": "front-west",
+      "desired": [
+        -3.1,
+        -3.05
+      ],
+      "distance": 0.29876808938122695,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          -3.376436649054695,
+          0.25564518570899963,
+          -2.9366635526764653
+        ],
+        "rotation": 0.6379058403214222,
+        "camera": [
+          2.019903520956557,
+          27.165622640310197,
+          11.242873318442257
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 7,
+        "roofCut": 0,
+        "target": [
+          -2.996829019445767,
+          0.09527129679918289,
+          -2.4245756330757526
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69521
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.63758920537494,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.59454284263186,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75017197755413,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 30.880761766274006
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749532665.6245
+    },
+    {
+      "name": "front-center",
+      "desired": [
+        0,
+        -3.05
+      ],
+      "distance": 0.14455016153743916,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          0.13234775443064034,
+          0.11619839817285538,
+          -2.9918723723375305
+        ],
+        "rotation": 3.559685772199611,
+        "camera": [
+          6.361399053395769,
+          27.129670665607343,
+          12.473870433442631
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 8,
+        "roofCut": 0,
+        "target": [
+          0.10428176888728835,
+          0.11619839817285538,
+          -3.043735628424278
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 69717
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 36.002860445737696,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 34.97843742865464,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 34.149142605301684,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.741538757473634
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749534633.2585
+    },
+    {
+      "name": "front-east",
+      "desired": [
+        3.1,
+        -3.05
+      ],
+      "distance": 0.08268224097914623,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          3.1818375532645584,
+          0.18381419777870178,
+          -3.0617884625377605
+        ],
+        "rotation": 0.9028315945889283,
+        "camera": [
+          9.011966544023444,
+          27.182755863157414,
+          11.775493622976732
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 9,
+        "roofCut": 0,
+        "target": [
+          3.1884031663301826,
+          0.18381419777870178,
+          -3.054623520950374
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69551
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 36.206307565142076,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 35.19649601109954,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 34.37902951496987,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.353391418390324
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749536552.5688
+    },
+    {
+      "name": "side",
+      "desired": [
+        3.1,
+        -6.6
+      ],
+      "distance": 0.18895928848946966,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          3.2285619753177444,
+          0.06296829879283905,
+          -6.461517397450631
+        ],
+        "rotation": 3.1278471864601114,
+        "camera": [
+          9.217605915905223,
+          27.086569269642837,
+          9.256734212938884
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 10,
+        "roofCut": 0,
+        "target": [
+          3.2287750985517114,
+          0.06296829879283905,
+          -6.477024517568555
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8516112860421923,
+            0.06296829879283905,
+            -6.304590679152626
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69551
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.95970374480549,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.952399179649085,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 33.13696215071294,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.824841605133187
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749537946.9556
+    },
+    {
+      "name": "step-base",
+      "desired": [
+        2.5,
+        -7
+      ],
+      "distance": 0.24148464385806875,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          2.640376499748746,
+          0.006655499804764986,
+          -7.196492421068978
+        ],
+        "rotation": 3.5941397666636847,
+        "camera": [
+          8.946212551963573,
+          27.03098256820823,
+          8.225022497302097
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 11,
+        "roofCut": 0,
+        "target": [
+          2.541049693987069,
+          0.11999999999999744,
+          -7.47363470643235
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8516112860421923,
+            0.06296829879283905,
+            -6.304590679152626
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69551
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.368798585092414,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.36109737762876,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.545339257301045,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.744410899354147
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          }
+        ]
+      },
+      "epoch": 1795749538550.1255
+    },
+    {
+      "name": "step-top",
+      "desired": [
+        1.58,
+        -7
+      ],
+      "distance": 0.13123632856384093,
+      "state": {
+        "version": "H.30 2.5D sample",
+        "ready": true,
+        "position": [
+          1.6728649842503582,
+          0.7013283232719622,
+          -7.0927311632359755
+        ],
+        "rotation": 4.831068389758995,
+        "camera": [
+          8.021885023983039,
+          27.376383878991504,
+          7.869039807015276
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 11,
+        "roofCut": 0,
+        "target": [
+          1.4973505508760807,
+          0.7152564783003506,
+          -7.0717657528973366
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": true,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.526830255794235,
+            0.06910079717636108,
+            -6.600518757223714
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 69551
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.3264358556352,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.311521450494574,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.48992407490455,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.233755846332528
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 3569.899999999441
+          },
+          {
+            "type": "ready",
+            "t": 3570.199999999255,
+            "hero": {
+              "triangles": 3037,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "near-pine",
+            "t": 5192.299999999814
+          },
+          {
+            "type": "under-branch",
+            "t": 7802.799999999814
+          },
+          {
+            "type": "stairs-top",
+            "t": 17133.39999999944,
+            "height": 0.7013283232719622
+          }
+        ]
+      },
+      "epoch": 1795749539842.0942
+    }
+  ],
+  "final": {
+    "version": "H.30 2.5D sample",
+    "ready": true,
+    "position": [
+      1.5859826331356957,
+      0.715349308657676,
+      -7.082352961812391
+    ],
+    "rotation": 7.380678874600492,
+    "camera": [
+      7.587393519796328,
+      27.714252178168895,
+      7.917489711007233
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "guideIndex": 11,
+    "roofCut": 0,
+    "target": [
+      1.5859826331356957,
+      0.715349308657676,
+      -7.082352961812391
+    ],
+    "flags": {
+      "nearPine": true,
+      "underBranch": true,
+      "stairs": true,
+      "hit": true
+    },
+    "enemy": {
+      "p": [
+        2.5180007843724344,
+        0.06910079717636108,
+        -6.605040574824145
+      ],
+      "hp": 2
+    },
+    "attack": null,
+    "stats": {
+      "calls": 28,
+      "triangles": 69495
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15580439567565918,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.560587235656605,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.54169506205351,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.71687758818434,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793044,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.463518022254974
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 3569.899999999441
+      },
+      {
+        "type": "ready",
+        "t": 3570.199999999255,
+        "hero": {
+          "triangles": 3037,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "near-pine",
+        "t": 5192.299999999814
+      },
+      {
+        "type": "under-branch",
+        "t": 7802.799999999814
+      },
+      {
+        "type": "stairs-top",
+        "t": 17133.39999999944,
+        "height": 0.7013283232719622
+      },
+      {
+        "type": "swing-start",
+        "t": 17611.299999999814,
+        "p": [
+          1.5859826331356957,
+          0.715349308657676,
+          -7.082352961812391
+        ],
+        "facing": 4.83119210561557,
+        "aim": 1.0974936329410698
+      },
+      {
+        "type": "hit",
+        "t": 18253.099999999627,
+        "enemyHP": 2,
+        "attackProgress": 0.4487179487179487,
+        "player": [
+          1.5859826331356957,
+          0.715349308657676,
+          -7.082352961812391
+        ],
+        "enemy": [
+          2.642539054668657,
+          0.06910079717636108,
+          -6.541261066895466
+        ],
+        "blade": [
+          2.967592189697768,
+          1.5729331790014858,
+          -6.179934488071612
+        ],
+        "impact": [
+          2.5536113078679157,
+          1.560710264493746,
+          -6.360049675777765
+        ]
+      },
+      {
+        "type": "swing-recovered",
+        "t": 18577.599999999627
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "reset",
+      "t": 3569.899999999441
+    },
+    {
+      "type": "ready",
+      "t": 3570.199999999255,
+      "hero": {
+        "triangles": 3037,
+        "materials": 7,
+        "bones": 22,
+        "height": 1.485,
+        "attackDuration": 0.78,
+        "hitProgress": 0.44,
+        "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+      },
+      "enemy": {
+        "source": "original project-authored procedural mesh and animation; no third-party assets",
+        "height": 1.46,
+        "triangles": 1866,
+        "vertices": 2501,
+        "bones": 19,
+        "materials": 4,
+        "drawCalls": 4,
+        "hitDuration": 0.3,
+        "facing": "+Z"
+      }
+    },
+    {
+      "type": "near-pine",
+      "t": 5192.299999999814
+    },
+    {
+      "type": "under-branch",
+      "t": 7802.799999999814
+    },
+    {
+      "type": "stairs-top",
+      "t": 17133.39999999944,
+      "height": 0.7013283232719622
+    },
+    {
+      "type": "swing-start",
+      "t": 17611.299999999814,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "facing": 4.83119210561557,
+      "aim": 1.0974936329410698
+    },
+    {
+      "type": "hit",
+      "t": 18253.099999999627,
+      "enemyHP": 2,
+      "attackProgress": 0.4487179487179487,
+      "player": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "enemy": [
+        2.642539054668657,
+        0.06910079717636108,
+        -6.541261066895466
+      ],
+      "blade": [
+        2.967592189697768,
+        1.5729331790014858,
+        -6.179934488071612
+      ],
+      "impact": [
+        2.5536113078679157,
+        1.560710264493746,
+        -6.360049675777765
+      ]
+    },
+    {
+      "type": "swing-recovered",
+      "t": 18577.599999999627
+    }
+  ],
+  "errors": [],
+  "requestfailed": [],
+  "frameStats": {
+    "frames": 147,
+    "seconds": 13.9912001953125,
+    "FPS": 10.43513050788271,
+    "medianFrameMs": 89.2998046875,
+    "p95FrameMs": 176.89990234375
+  },
+  "frames": [
+    {
+      "time": 1795749526845,
+      "p": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "a": -0.6,
+      "c": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749526851.6,
+      "p": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "a": -0.6,
+      "c": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749526863.3,
+      "p": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "a": -0.6,
+      "c": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527097.4001,
+      "p": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "a": -0.6,
+      "c": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527443.5,
+      "p": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "a": -0.6,
+      "c": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527450.9001,
+      "p": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "a": -0.6,
+      "c": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527567.3,
+      "p": [
+        -3.6479749888976003,
+        0.07194080203771591,
+        -4.247155188709154
+      ],
+      "a": -1.4981853013466213,
+      "c": [
+        2.6970900994679434,
+        27.07627811657799,
+        10.789167395725437
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527653.4001,
+      "p": [
+        -4.095054922872325,
+        0.061945099383592606,
+        -4.294216161257053
+      ],
+      "a": -1.6462817104065552,
+      "c": [
+        2.4693005864348585,
+        27.071556651981385,
+        10.765189589510241
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527752,
+      "p": [
+        -4.5425823843084885,
+        0.06862729787826538,
+        -4.341324241885579
+      ],
+      "a": -1.6708147390962655,
+      "c": [
+        2.168911988709174,
+        27.07059090265552,
+        10.733569786255844
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527857.7002,
+      "p": [
+        -4.9901098457446516,
+        0.11661790311336517,
+        -4.388432322514106
+      ],
+      "a": -1.6748700214633832,
+      "c": [
+        1.8200146571690508,
+        27.085765082047583,
+        10.696843808429756
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749527968.3,
+      "p": [
+        -5.0999996869237885,
+        0.11661790311336517,
+        -4.399999656241315
+      ],
+      "a": -1.6752743846340241,
+      "c": [
+        1.4768543475523983,
+        27.09727301526347,
+        10.66072172670978
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528053,
+      "p": [
+        -5.0999996869237885,
+        0.11661790311336517,
+        -4.399999656241315
+      ],
+      "a": -1.6752743846340241,
+      "c": [
+        1.313389405280432,
+        27.10275483698378,
+        10.64351491742086
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528146.8,
+      "p": [
+        -5.349887415093183,
+        -0.12457779794931412,
+        -4.774240385332014
+      ],
+      "a": -2.407797502798013,
+      "c": [
+        1.1132633408834434,
+        27.063603848894726,
+        10.533560034045122
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528247.7002,
+      "p": [
+        -5.599775143262577,
+        -0.12457779794931412,
+        -5.148481114422713
+      ],
+      "a": -2.52888275982713,
+      "c": [
+        0.896731853464778,
+        27.001564132226246,
+        10.336475405220643
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528334.3,
+      "p": [
+        -5.807931620827683,
+        -0.09427510201931,
+        -5.460223641755267
+      ],
+      "a": -2.5475080736478612,
+      "c": [
+        0.7105700879648396,
+        26.968720636384923,
+        10.13096172941032
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528434.6,
+      "p": [
+        -6.057819348997078,
+        -0.10423950105905533,
+        -5.834464370845968
+      ],
+      "a": -2.5519767618614138,
+      "c": [
+        0.4757905009699458,
+        26.946145965137898,
+        9.84045076272603
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528501,
+      "p": [
+        -6.224494463686063,
+        -0.10219712893522971,
+        -6.084082937149464
+      ],
+      "a": -2.5525953302930504,
+      "c": [
+        0.3209099825579742,
+        26.93460207182324,
+        9.637589463909098
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528580.5,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        0.12089199297918556,
+        26.963011245558466,
+        9.364996864180819
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528674,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.036125851252154575,
+        27.014527301880758,
+        9.149182201031325
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528753.2002,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.14849041329415053,
+        27.05139304242842,
+        8.994741664506662
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528830.6,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.2290138759421058,
+        27.077812022114106,
+        8.884065428617221
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528898.3,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.27670033698973545,
+        27.09345749492751,
+        8.818522320582806
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749528989.4001,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.320892550269516,
+        27.107956538392745,
+        8.757781914487595
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529080.2002,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.35773705146347845,
+        27.120044867639443,
+        8.707140640860306
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529164.1,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.37896563605790384,
+        27.127009763667424,
+        8.677962811704553
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529238,
+      "p": [
+        -6.432650941251169,
+        0.1446234,
+        -6.395825464482018
+      ],
+      "a": -2.5528022388398077,
+      "c": [
+        -0.39153732683061904,
+        27.13113441544241,
+        8.660683532253131
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529300.3,
+      "p": [
+        -6.153371527111163,
+        -0.09636472462273053,
+        -6.504559538431335
+      ],
+      "a": -3.801833693800354,
+      "c": [
+        -0.35108082145594477,
+        27.079142944950632,
+        8.6279731317072
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529380.5,
+      "p": [
+        -6.03530991220079,
+        -0.10025379701341672,
+        -6.550525405288262
+      ],
+      "a": -4.086525483178576,
+      "c": [
+        -0.26150932776295277,
+        27.02825531195341,
+        8.577340283296905
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529464.5,
+      "p": [
+        -6.03530991220079,
+        -0.10025379701341672,
+        -6.550525405288262
+      ],
+      "a": -4.086525483178576,
+      "c": [
+        -0.19741048785382875,
+        26.99183928151382,
+        8.541106580914779
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529546.8,
+      "p": [
+        -6.03530991220079,
+        -0.10025379701341672,
+        -6.550525405288262
+      ],
+      "a": -4.086525483178576,
+      "c": [
+        -0.15142908087753207,
+        26.965716182898028,
+        8.515114275627308
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529642.2002,
+      "p": [
+        -6.03530991220079,
+        -0.10025379701341672,
+        -6.550525405288262
+      ],
+      "a": -4.086525483178576,
+      "c": [
+        -0.11852402679110548,
+        26.94702206217874,
+        8.496513752773451
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529690.8,
+      "p": [
+        -6.03530991220079,
+        -0.10025379701341672,
+        -6.550525405288262
+      ],
+      "a": -4.086525483178576,
+      "c": [
+        -0.10346712433904189,
+        26.938467888362215,
+        8.488002408059284
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529761.5,
+      "p": [
+        -6.004450405104378,
+        -0.08842105602056488,
+        -6.849084801927805
+      ],
+      "a": -3.4980227803277746,
+      "c": [
+        -0.08196630360140432,
+        26.93150433026372,
+        8.425380014709106
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529837.2002,
+      "p": [
+        -5.9658644547019675,
+        -0.047713094914958856,
+        -7.222395951549059
+      ],
+      "a": -3.3010693363143346,
+      "c": [
+        -0.05154152214213384,
+        26.934065652841596,
+        8.26590261762048
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529885.3,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        -0.03250158138750008,
+        26.93950357787059,
+        8.143325552226598
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749529951.6,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        -0.012318845472349026,
+        26.945267892276863,
+        8.013391296023787
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530032.6,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        0.006384991015767869,
+        26.950609823845227,
+        7.8929780333006665
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530091.7002,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        0.014974591689024503,
+        26.95306306700875,
+        7.837679119454159
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530176.1,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        0.0259442010358878,
+        26.95619605539324,
+        7.767057968916778
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530248.5,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        0.03381326812765137,
+        26.958443509702292,
+        7.716397771811848
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530331.3,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        0.039438804967463256,
+        26.96005019787307,
+        7.680181178179775
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530382.8,
+      "p": [
+        -5.946314579429773,
+        -0.03588088045521402,
+        -7.4115369818127395
+      ],
+      "a": -3.2675931304810657,
+      "c": [
+        0.042025942972885304,
+        26.960789100514337,
+        7.663525465404176
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530458.6,
+      "p": [
+        -6.100588633885062,
+        -0.026396507677731954,
+        -7.668479788915658
+      ],
+      "a": -2.8019194403915257,
+      "c": [
+        0.017093122158759952,
+        26.963351416722915,
+        7.599903868986405
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530589.9001,
+      "p": [
+        -6.392540901967124,
+        0.1271229,
+        -8.154725098056794
+      ],
+      "a": -2.619113455418732,
+      "c": [
+        -0.11888967206414347,
+        26.99534926852268,
+        7.343510057923981
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530599.6,
+      "p": [
+        -6.392540901967124,
+        0.1271229,
+        -8.154725098056794
+      ],
+      "a": -2.619113455418732,
+      "c": [
+        -0.13657239633985374,
+        27.00386418290128,
+        7.311315227698672
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530622.7002,
+      "p": [
+        -6.392540901967124,
+        0.1271229,
+        -8.154725098056794
+      ],
+      "a": -2.619113455418732,
+      "c": [
+        -0.15301671240314882,
+        27.011782755916975,
+        7.281375159891566
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530681.4001,
+      "p": [
+        -6.392540901967124,
+        0.1271229,
+        -8.154725098056794
+      ],
+      "a": -2.619113455418732,
+      "c": [
+        -0.2091803558301037,
+        27.03882771841903,
+        7.179118350546334
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530750.5,
+      "p": [
+        -6.392540901967124,
+        0.1271229,
+        -8.154725098056794
+      ],
+      "a": -2.619113455418732,
+      "c": [
+        -0.2520062049677559,
+        27.059450018066535,
+        7.101145583412519
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530801.8,
+      "p": [
+        -6.392540901967124,
+        0.1271229,
+        -8.154725098056794
+      ],
+      "a": -2.619113455418732,
+      "c": [
+        -0.27752683848698967,
+        27.071739188327612,
+        7.054680318751762
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749530876.4001,
+      "p": [
+        -6.255392570519935,
+        -0.01637130514649318,
+        -7.887741282664833
+      ],
+      "a": -0.456689003340082,
+      "c": [
+        -0.2798379584973804,
+        27.051339768486976,
+        7.053574505558737
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531053.3,
+      "p": [
+        -6.16116734880228,
+        -0.02447377503318685,
+        -7.70431499570326
+      ],
+      "a": 0.06638373850881563,
+      "c": [
+        -0.21817307197879032,
+        27.011944727290555,
+        7.179382542342209
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531072.7002,
+      "p": [
+        -6.16116734880228,
+        -0.02447377503318685,
+        -7.70431499570326
+      ],
+      "a": 0.06638373850881563,
+      "c": [
+        -0.21451082405092878,
+        27.009605074756756,
+        7.186854221088908
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531081.9001,
+      "p": [
+        -6.16116734880228,
+        -0.02447377503318685,
+        -7.70431499570326
+      ],
+      "a": 0.06638373850881563,
+      "c": [
+        -0.21106388918765648,
+        27.007402976470253,
+        7.193886620442114
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531154.7002,
+      "p": [
+        -6.16116734880228,
+        -0.02447377503318685,
+        -7.70431499570326
+      ],
+      "a": 0.06638373850881563,
+      "c": [
+        -0.199394715675221,
+        26.9999480438951,
+        7.2176939424590385
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531232,
+      "p": [
+        -6.16116734880228,
+        -0.02447377503318685,
+        -7.70431499570326
+      ],
+      "a": 0.06638373850881563,
+      "c": [
+        -0.18855115076661025,
+        26.99302055711278,
+        7.239816866701755
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531298,
+      "p": [
+        -6.115863711539637,
+        -0.03032536440155873,
+        -7.407603683228025
+      ],
+      "a": 0.12588983691625985,
+      "c": [
+        -0.174005247515682,
+        26.988038971045324,
+        7.306168123859723
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531373.1,
+      "p": [
+        -6.07062799577214,
+        -0.06462702501599164,
+        -7.111337215299232
+      ],
+      "a": 0.14378808159032397,
+      "c": [
+        -0.15229758642940522,
+        26.977886917248018,
+        7.426224788857686
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531447.2002,
+      "p": [
+        -6.025324358509499,
+        -0.08919137700489338,
+        -6.8146259028240035
+      ],
+      "a": 0.14918959298084183,
+      "c": [
+        -0.12503937491565448,
+        26.96308130181783,
+        7.587784045988853
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531538.8,
+      "p": [
+        -5.966745753739402,
+        -0.10575269781036668,
+        -6.43097161468066
+      ],
+      "a": 0.15113121002645627,
+      "c": [
+        -0.07650669476587524,
+        26.94114822693882,
+        7.887352077274455
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531623.7002,
+      "p": [
+        -5.966745753739402,
+        -0.10575269781036668,
+        -6.43097161468066
+      ],
+      "a": 0.15113121002645627,
+      "c": [
+        -0.04540339164881957,
+        26.9278577643635,
+        8.08052083693115
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531683.1,
+      "p": [
+        -5.966745753739402,
+        -0.10575269781036668,
+        -6.43097161468066
+      ],
+      "a": 0.15113121002645627,
+      "c": [
+        -0.026983835363360707,
+        26.91998707543556,
+        8.194916495414692
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531757.2002,
+      "p": [
+        -5.788002098367509,
+        -0.10385926401032787,
+        -6.189847729168884
+      ],
+      "a": 0.4913800904599063,
+      "c": [
+        0.019212085253183003,
+        26.9142538077063,
+        8.325812517088773
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531831.1,
+      "p": [
+        -5.565041496764194,
+        -0.11076519638299942,
+        -5.889075506161699
+      ],
+      "a": 0.6051329761998961,
+      "c": [
+        0.12243479226409391,
+        26.907171266969634,
+        8.528547866537238
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531889.5,
+      "p": [
+        -5.431050750608354,
+        -0.13803750276565552,
+        -5.708322968296802
+      ],
+      "a": 0.6245813961327287,
+      "c": [
+        0.20337413164739904,
+        26.898976307325448,
+        8.6668797156111
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749531974.3,
+      "p": [
+        -5.207554186020409,
+        -0.10625939816236496,
+        -5.4068277351381475
+      ],
+      "a": 0.6349363310288728,
+      "c": [
+        0.355939577792794,
+        26.89335908579395,
+        8.910030115724163
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532054.9001,
+      "p": [
+        -4.984325602924781,
+        -0.10053809732198715,
+        -5.105694007055231
+      ],
+      "a": 0.6372428660709325,
+      "c": [
+        0.528390750552236,
+        26.894345198555854,
+        9.16938712942748
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532132.9001,
+      "p": [
+        -4.761097019829153,
+        -0.10053809732198715,
+        -4.804560278972314
+      ],
+      "a": 0.6377578324914324,
+      "c": [
+        0.7152308778014592,
+        26.895795135097792,
+        9.440582542095234
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532189.4001,
+      "p": [
+        -4.6268382921810005,
+        0.06862729787826538,
+        -4.623446236031686
+      ],
+      "a": 0.6378457810826155,
+      "c": [
+        0.8289188095034882,
+        26.927180880972895,
+        9.602740975031171
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532268.3,
+      "p": [
+        -4.403609709085368,
+        0.06862729787826538,
+        -4.322312507948764
+      ],
+      "a": 0.6378924417558791,
+      "c": [
+        1.0318996591012644,
+        26.96726299705796,
+        9.887791613143378
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532356.2002,
+      "p": [
+        -4.180113144497426,
+        0.08975210040807724,
+        -4.020817274790117
+      ],
+      "a": 0.6379028647932338,
+      "c": [
+        1.2408894280441798,
+        27.00447104368768,
+        10.177773828488737
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532434.8,
+      "p": [
+        -3.956884561401797,
+        0.21299360692501068,
+        -3.719683546707201
+      ],
+      "a": 0.6379051864979227,
+      "c": [
+        1.4537187778872336,
+        27.047550273477917,
+        10.470644462468591
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532488.1,
+      "p": [
+        -3.8228938152459566,
+        0.21299360692501068,
+        -3.538931008842304
+      ],
+      "a": 0.637905582522545,
+      "c": [
+        1.5848466683628517,
+        27.07754006194014,
+        10.65017797091716
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532567.4001,
+      "p": [
+        -3.5996652321503233,
+        0.25564518570899963,
+        -3.237797280759381
+      ],
+      "a": 0.6379057932692527,
+      "c": [
+        1.8014341380633436,
+        27.13002535324022,
+        10.945735584065192
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532650.7002,
+      "p": [
+        -3.376436649054695,
+        0.25564518570899963,
+        -2.9366635526764653
+      ],
+      "a": 0.6379058403214222,
+      "c": [
+        2.019903520956557,
+        27.165622640310197,
+        11.242873318442257
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532741.8,
+      "p": [
+        -3.1532080659590664,
+        0.09527129679918289,
+        -2.6355298245935495
+      ],
+      "a": 0.6379058508264811,
+      "c": [
+        2.2397215333814247,
+        27.166521339911558,
+        11.541143410125342
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532804.4001,
+      "p": [
+        -2.996829019445767,
+        0.09527129679918289,
+        -2.4245756330757526
+      ],
+      "a": 0.6379058529371133,
+      "c": [
+        2.4111782396985,
+        27.149836448090102,
+        11.773466033616787
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532885.3,
+      "p": [
+        -2.996829019445767,
+        0.09527129679918289,
+        -2.4245756330757526
+      ],
+      "a": 0.6379058529371133,
+      "c": [
+        2.578933084816775,
+        27.134374149531457,
+        12.0007194891251
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749532971.2002,
+      "p": [
+        -2.6219068311326317,
+        0.10070610046386719,
+        -2.407739876172812
+      ],
+      "a": 1.3280162912698614,
+      "c": [
+        2.7812473206837134,
+        27.124117199570716,
+        12.167421186143415
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749533053.2002,
+      "p": [
+        -2.2474341898078913,
+        0.10721269994974136,
+        -2.390924306028748
+      ],
+      "a": 1.4817366115683728,
+      "c": [
+        3.032168781730368,
+        27.118481637512545,
+        12.291481946946224
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749533136.7002,
+      "p": [
+        -1.8729615484831508,
+        0.10721269994974136,
+        -2.3741087358846844
+      ],
+      "a": 1.51605683721363,
+      "c": [
+        3.3181013293686763,
+        27.11528832322838,
+        12.385152300727096
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69521
+    },
+    {
+      "time": 1795749533219.2002,
+      "p": [
+        -1.5735632542187081,
+        0.11087310314178467,
+        -2.360664354472984
+      ],
+      "a": 1.522946964971764,
+      "c": [
+        3.560964066752311,
+        27.114255747244393,
+        12.443863718471585
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 31,
+      "triangles": 69565
+    },
+    {
+      "time": 1795749533285.6,
+      "p": [
+        -1.198641065905581,
+        0.1019814983010292,
+        -2.3438285975700444
+      ],
+      "a": 1.5252588232262987,
+      "c": [
+        3.8884388460713004,
+        27.111930199985885,
+        12.502992295673884
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 32,
+      "triangles": 69577
+    },
+    {
+      "time": 1795749533381.5,
+      "p": [
+        -0.7490940775205348,
+        0.11390410363674164,
+        -2.323641838693617
+      ],
+      "a": 1.5258122134580117,
+      "c": [
+        4.304258135902011,
+        27.11081151416297,
+        12.558649580695725
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749533480.3,
+      "p": [
+        -0.2995470891354884,
+        0.11390410363674164,
+        -2.3034550798171898
+      ],
+      "a": 1.5259036882480665,
+      "c": [
+        4.731196771839439,
+        27.111831078918314,
+        12.602612944290854
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749533586.2002,
+      "p": [
+        0.14999989924955795,
+        0.12036620080471039,
+        -2.2832683209407625
+      ],
+      "a": 1.5259188089291629,
+      "c": [
+        5.165588928371007,
+        27.114644937508903,
+        12.638737637936893
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749533670.8,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        5.526801712509349,
+        27.120945407538148,
+        12.664542468680906
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749533783.8,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        5.898844762883389,
+        27.12687609294244,
+        12.690271088215319
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749533887.7002,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        6.105417741764935,
+        27.130169043447875,
+        12.704556632789771
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749533996.4001,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        6.261785330641603,
+        27.132661676964677,
+        12.715370225995386
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534129.9001,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        6.370533320104094,
+        27.134395213213246,
+        12.722890688058044
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534221.6,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        6.414327197580986,
+        27.13509332519165,
+        12.725919251581558
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534301.5,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        6.445635110988196,
+        27.13559240019089,
+        12.728084348850976
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534421.8,
+      "p": [
+        0.5249220875626932,
+        0.1368563026189804,
+        -2.266432564037822
+      ],
+      "a": 1.5259211359920746,
+      "c": [
+        6.475208718839605,
+        27.136063828871684,
+        12.730129510301792
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534499.4001,
+      "p": [
+        0.3463039785435268,
+        0.1368563026189804,
+        -2.596501740318213
+      ],
+      "a": 3.167000294842206,
+      "c": [
+        6.450256365819478,
+        27.13628862176798,
+        12.658936592640005
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534598,
+      "p": [
+        0.13234775443064034,
+        0.11619839817285538,
+        -2.9918723723375305
+      ],
+      "a": 3.559685772199611,
+      "c": [
+        6.361399053395769,
+        27.129670665607343,
+        12.473870433442631
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534738.3,
+      "p": [
+        0.13234775443064034,
+        0.11619839817285538,
+        -2.9918723723375305
+      ],
+      "a": 3.559685772199611,
+      "c": [
+        6.2667377505140145,
+        27.12410290679575,
+        12.281390316533683
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534836.9001,
+      "p": [
+        0.13234775443064034,
+        0.11619839817285538,
+        -2.9918723723375305
+      ],
+      "a": 3.559685772199611,
+      "c": [
+        6.2224320627919765,
+        27.121496948756842,
+        12.191301085846444
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749534951.2002,
+      "p": [
+        0.13234775443064034,
+        0.11619839817285538,
+        -2.9918723723375305
+      ],
+      "a": 3.559685772199611,
+      "c": [
+        6.188831109342322,
+        27.11952061841961,
+        12.122978389545501
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749535065,
+      "p": [
+        0.65196563995466,
+        0.12906059622764587,
+        -3.0678972073820763
+      ],
+      "a": 1.9417012849707462,
+      "c": [
+        6.303647654292054,
+        27.123078977872765,
+        12.060258539216896
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749535164.8,
+      "p": [
+        1.0228668384478063,
+        0.47985801100730896,
+        -3.122163434967428
+      ],
+      "a": 1.7664489890516297,
+      "c": [
+        6.483362927588777,
+        27.224180574757916,
+        12.012089948781284
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 33,
+      "triangles": 69717
+    },
+    {
+      "time": 1795749535255.9001,
+      "p": [
+        1.4685716399983997,
+        0.4757317006587982,
+        -3.187374111813692
+      ],
+      "a": 1.7243865149950595,
+      "c": [
+        6.763759566862354,
+        27.307574145749502,
+        11.95281295472853
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 32,
+      "triangles": 69577
+    },
+    {
+      "time": 1795749535363,
+      "p": [
+        1.9133859224649725,
+        0.492249995470047,
+        -3.2524544975973253
+      ],
+      "a": 1.7174510849066185,
+      "c": [
+        7.109475644636716,
+        27.365958777723208,
+        11.890021354675563
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 32,
+      "triangles": 69577
+    },
+    {
+      "time": 1795749535464.2002,
+      "p": [
+        2.433003807988992,
+        0.3956502079963684,
+        -3.328479332641871
+      ],
+      "a": 1.7162431206502797,
+      "c": [
+        7.545214300528494,
+        27.38723077262601,
+        11.816997496988554
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 30,
+      "triangles": 69553
+    },
+    {
+      "time": 1795749535572,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        7.951205299236995,
+        27.34982368135534,
+        11.752463386701583
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 30,
+      "triangles": 69553
+    },
+    {
+      "time": 1795749535666.9001,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.25669096158872,
+        27.29178808265204,
+        11.704322496125553
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 30,
+      "triangles": 69553
+    },
+    {
+      "time": 1795749535767.8,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.461464124839557,
+        27.252885657457544,
+        11.67205269213843
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749535863.7002,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.59872768105672,
+        27.226808582010268,
+        11.650421595644223
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749535965.2002,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.69081301137326,
+        27.209314382002418,
+        11.635910047782044
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536066.3,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.75241468590533,
+        27.197611410298045,
+        11.62620235986596
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536152.9001,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.787986582905743,
+        27.19085352737962,
+        11.620596653896339
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536252.4001,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.817578139017296,
+        27.185231778514957,
+        11.615933378200275
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536348.2002,
+      "p": [
+        2.877818090455565,
+        0.17378750443458557,
+        -3.393559718425504
+      ],
+      "a": 1.7161025657238376,
+      "c": [
+        8.83743804343428,
+        27.181458830762985,
+        11.612803694541709
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536546.6,
+      "p": [
+        3.1818375532645584,
+        0.18381419777870178,
+        -3.0617884625377605
+      ],
+      "a": 0.9028315945889283,
+      "c": [
+        9.011966544023444,
+        27.182755863157414,
+        11.775493622976732
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536562.3,
+      "p": [
+        3.1818375532645584,
+        0.18381419777870178,
+        -3.0617884625377605
+      ],
+      "a": 0.9028315945889283,
+      "c": [
+        9.022879654443441,
+        27.1828238542916,
+        11.785947193459565
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536833.9001,
+      "p": [
+        3.1818375532645584,
+        0.18381419777870178,
+        -3.0617884625377605
+      ],
+      "a": 0.9028315945889283,
+      "c": [
+        9.110413165249016,
+        27.183369207765523,
+        11.869794757499529
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749536846.1,
+      "p": [
+        3.1818375532645584,
+        0.18381419777870178,
+        -3.0617884625377605
+      ],
+      "a": 0.9028315945889283,
+      "c": [
+        9.115055166147167,
+        27.18339812847592,
+        11.874241288479485
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537061.9001,
+      "p": [
+        3.1818375532645584,
+        0.18381419777870178,
+        -3.0617884625377605
+      ],
+      "a": 0.9028315945889283,
+      "c": [
+        9.151830292439826,
+        27.183627245789882,
+        11.909467851752499
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537078.9001,
+      "p": [
+        3.1828702852294697,
+        0.18381419777870178,
+        -3.136931366159388
+      ],
+      "a": 1.4805045137727622,
+      "c": [
+        9.153836026651998,
+        27.18363932620506,
+        11.90646963911068
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537101.6,
+      "p": [
+        3.183903017194381,
+        0.18381419777870178,
+        -3.2120742697810067
+      ],
+      "a": 1.9081984445397313,
+      "c": [
+        9.155778887657045,
+        27.1836506260111,
+        11.898809599518534
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537189.8,
+      "p": [
+        3.1890481249477123,
+        0.17378750443458557,
+        -3.58643891536898
+      ],
+      "a": 2.8550549883019003,
+      "c": [
+        9.164863055664545,
+        27.18085851006168,
+        11.7857374537541
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537300.4001,
+      "p": [
+        3.19627106467835,
+        0.14578519761562347,
+        -4.111989283213627
+      ],
+      "a": 3.094524526923249,
+      "c": [
+        9.175780227786456,
+        27.16776756198032,
+        11.50929032544102
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537432.2002,
+      "p": [
+        3.204508184302673,
+        0.1187639981508255,
+        -4.711332682159756
+      ],
+      "a": 3.124819467791381,
+      "c": [
+        9.186645532626038,
+        27.147527089839464,
+        11.077921870818908
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537536.6,
+      "p": [
+        3.2106922080446574,
+        0.0905366986989975,
+        -5.161290188876067
+      ],
+      "a": 3.12734901134843,
+      "c": [
+        9.194114351803087,
+        27.128738500311865,
+        10.702767751881977
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537650.1,
+      "p": [
+        3.217908963751553,
+        0.10109010338783264,
+        -5.686390599213996
+      ],
+      "a": 3.1277886401548294,
+      "c": [
+        9.202185044770355,
+        27.11842579974391,
+        10.243160620075614
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537785.3,
+      "p": [
+        3.22615845142336,
+        0.06296829879283905,
+        -6.286633913173561
+      ],
+      "a": 3.1278443911585665,
+      "c": [
+        9.211095337094527,
+        27.100594018409005,
+        9.683551332057933
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749537910,
+      "p": [
+        3.2285619753177444,
+        0.06296829879283905,
+        -6.461517397450631
+      ],
+      "a": 3.1278471864601114,
+      "c": [
+        9.217605915905223,
+        27.086569269642837,
+        9.256734212938884
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538043.6,
+      "p": [
+        3.2285619753177444,
+        0.06296829879283905,
+        -6.461517397450631
+      ],
+      "a": 3.1278471864601114,
+      "c": [
+        9.222133787448083,
+        27.076815565297878,
+        8.959898379465871
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538156.5,
+      "p": [
+        3.2285619753177444,
+        0.06296829879283905,
+        -6.461517397450631
+      ],
+      "a": 3.1278471864601114,
+      "c": [
+        9.224531466303624,
+        27.07165061076024,
+        8.80271260359995
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538270,
+      "p": [
+        3.2285619753177444,
+        0.06296829879283905,
+        -6.461517397450631
+      ],
+      "a": 3.1278471864601114,
+      "c": [
+        9.226034824082856,
+        27.06841215596652,
+        8.70415626091604
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538402.6,
+      "p": [
+        2.8915042341143558,
+        0.004262799862772226,
+        -6.957715041131923
+      ],
+      "a": 3.682867403269517,
+      "c": [
+        9.128741108506006,
+        27.048600375961776,
+        8.490919473617511
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538536.5,
+      "p": [
+        2.640376499748746,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.5941397666636847,
+      "c": [
+        8.946212551963573,
+        27.03098256820823,
+        8.225022497302097
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538668.2002,
+      "p": [
+        2.5796697703518547,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.3894167269669597,
+      "c": [
+        8.80074909087235,
+        27.0209344959496,
+        8.050919630173253
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538789,
+      "p": [
+        2.557727538386031,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.2554117989290168,
+      "c": [
+        8.712094801335539,
+        27.015608508621753,
+        7.9586362906228345
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749538896.6,
+      "p": [
+        2.548223287895131,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.1916141086072076,
+      "c": [
+        8.651871767970778,
+        27.012271331269652,
+        7.900813045510406
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539024,
+      "p": [
+        2.544409390749487,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.1666161733583262,
+      "c": [
+        8.616673582108385,
+        27.010419904210835,
+        7.868733383768034
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539136.3,
+      "p": [
+        2.5423007723648223,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.150824836440055,
+      "c": [
+        8.586136699740374,
+        27.008864167887737,
+        7.841777153022874
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539274.8,
+      "p": [
+        2.5415147306947565,
+        0.006655499804764986,
+        -7.196492421068978
+      ],
+      "a": 3.1450180745523717,
+      "c": [
+        8.567749023857033,
+        27.00795034306914,
+        7.8259433177482265
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539467.1,
+      "p": [
+        2.2231777962106323,
+        0.27506053237304856,
+        -7.158466691052962
+      ],
+      "a": 4.768932854054549,
+      "c": [
+        8.441396366543188,
+        27.089478245573808,
+        7.827754535341684
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539632.1,
+      "p": [
+        1.9623569781644177,
+        0.4007638626894478,
+        -7.127311330379361
+      ],
+      "a": 4.827094539253215,
+      "c": [
+        8.263817811732666,
+        27.206389945950463,
+        7.843419744517737
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539791.5,
+      "p": [
+        1.6728649842503582,
+        0.7013283232719622,
+        -7.0927311632359755
+      ],
+      "a": 4.831068389758995,
+      "c": [
+        8.021885023983039,
+        27.376383878991504,
+        7.869039807015276
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749539991.3,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 4.83119210561557,
+      "c": [
+        7.781846202871352,
+        27.563042323274228,
+        7.895806401356339
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749540255.6,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 4.83119210561557,
+      "c": [
+        7.673989808033319,
+        27.646913368687514,
+        7.907833407464555
+      ],
+      "attack": null,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749540398.2002,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.286645790416348,
+      "c": [
+        7.634281994779273,
+        27.677790868475018,
+        7.9122612034544675
+      ],
+      "attack": 0.1923076923076923,
+      "enemyHP": 3,
+      "calls": 29,
+      "triangles": 69551
+    },
+    {
+      "time": 1795749540904.7002,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.377210699718846,
+      "c": [
+        7.6124898848216045,
+        27.694736799651892,
+        7.914691229415982
+      ],
+      "attack": 0.3846153846153846,
+      "enemyHP": 3,
+      "calls": 31,
+      "triangles": 69555
+    },
+    {
+      "time": 1795749540994,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380636359354378,
+      "c": [
+        7.59789310907732,
+        27.70608751133825,
+        7.916318907694126
+      ],
+      "attack": 0.641025641025641,
+      "enemyHP": 2,
+      "calls": 31,
+      "triangles": 69503
+    },
+    {
+      "time": 1795749541001.2002,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380674222037267,
+      "c": [
+        7.593966463917191,
+        27.709140940252144,
+        7.916756765694076
+      ],
+      "attack": 0.7692307692307692,
+      "enemyHP": 2,
+      "calls": 28,
+      "triangles": 69495
+    },
+    {
+      "time": 1795749541012.4001,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380675665497958,
+      "c": [
+        7.593453554579204,
+        27.709539787649593,
+        7.916813959926742
+      ],
+      "attack": 0.7905128205128186,
+      "enemyHP": 2,
+      "calls": 28,
+      "triangles": 69495
+    },
+    {
+      "time": 1795749541120.9001,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380678577282119,
+      "c": [
+        7.590990541541637,
+        27.711455070268094,
+        7.917088609129434
+      ],
+      "attack": 0.9187179487179469,
+      "enemyHP": 2,
+      "calls": 28,
+      "triangles": 69495
+    },
+    {
+      "time": 1795749541233.3,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380678874600492,
+      "c": [
+        7.589122619144396,
+        27.712907599850997,
+        7.917296900108517
+      ],
+      "attack": null,
+      "enemyHP": 2,
+      "calls": 28,
+      "triangles": 69495
+    },
+    {
+      "time": 1795749541338.1,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380678874600492,
+      "c": [
+        7.588087428701599,
+        27.713712582297976,
+        7.917412333614314
+      ],
+      "attack": null,
+      "enemyHP": 2,
+      "calls": 28,
+      "triangles": 69495
+    },
+    {
+      "time": 1795749541434.7002,
+      "p": [
+        1.5859826331356957,
+        0.715349308657676,
+        -7.082352961812391
+      ],
+      "a": 7.380678874600492,
+      "c": [
+        7.587393519796328,
+        27.714252178168895,
+        7.917489711007233
+      ],
+      "attack": null,
+      "enemyHP": 2,
+      "calls": 28,
+      "triangles": 69495
+    }
+  ]
+}
