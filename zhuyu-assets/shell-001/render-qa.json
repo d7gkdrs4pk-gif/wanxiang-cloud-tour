@@ -1,0 +1,218 @@
+{
+  "status": "rendered_pending_visual_review",
+  "source_file": "/workspace/scratch/ede124a337fe/shell001-work/shell.glb",
+  "blender_version": "4.3.2",
+  "render_settings": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "threads": 2,
+    "samples": 64,
+    "resolution": [
+      512,
+      512
+    ],
+    "transparent": true,
+    "denoising": false,
+    "projection": "orthographic",
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast"
+  },
+  "preservation": {
+    "mesh_data_edited": false,
+    "materials_edited": false,
+    "textures_created_or_replaced": false,
+    "source_glb_overwritten": false,
+    "normalization": "One parent Empty transforms imported root objects; imported hierarchy is retained."
+  },
+  "quality_review": {
+    "visual_pass": null,
+    "human_review_required": true,
+    "hero_status": "Candidate only; not an approved or automatically selected best view.",
+    "limits": [
+      "32 samples at 512 square are review previews by default, not production-quality acceptance.",
+      "Denoising is disabled because this Blender build has no OpenImageDenoise support.",
+      "View labels use Blender import axes, not a verified semantic front of the subject.",
+      "The material factors and textures are unchanged; lighting and view transform affect their rendered appearance.",
+      "No reference-image similarity, topology quality, watertightness, or physical manufacture suitability is certified.",
+      "Transparent background has no added floor or contact shadow; native self-shadowing is retained."
+    ]
+  },
+  "views": {
+    "front": {
+      "file": "front.png",
+      "bytes": 190931,
+      "camera_position": [
+        0.0,
+        -6.0,
+        0.0
+      ],
+      "ortho_scale": 2.440000057220459,
+      "seconds": 3.7,
+      "semantic_orientation_verified": false
+    },
+    "back": {
+      "file": "back.png",
+      "bytes": 191399,
+      "camera_position": [
+        0.0,
+        6.0,
+        0.0
+      ],
+      "ortho_scale": 2.440000295639038,
+      "seconds": 2.9,
+      "semantic_orientation_verified": false
+    },
+    "right": {
+      "file": "right.png",
+      "bytes": 227167,
+      "camera_position": [
+        6.0,
+        0.0,
+        0.0
+      ],
+      "ortho_scale": 2.3783063888549805,
+      "seconds": 5.84,
+      "semantic_orientation_verified": false
+    },
+    "left": {
+      "file": "left.png",
+      "bytes": 222478,
+      "camera_position": [
+        -6.0,
+        0.0,
+        0.0
+      ],
+      "ortho_scale": 2.3783063888549805,
+      "seconds": 4.94,
+      "semantic_orientation_verified": false
+    },
+    "top": {
+      "file": "top.png",
+      "bytes": 300336,
+      "camera_position": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "ortho_scale": 2.440000057220459,
+      "seconds": 9.09,
+      "semantic_orientation_verified": false
+    },
+    "hero": {
+      "file": "hero.png",
+      "bytes": 204656,
+      "camera_position": [
+        2.4888694286346436,
+        -4.715752601623535,
+        2.7508556842803955
+      ],
+      "ortho_scale": 3.2679951190948486,
+      "seconds": 4.75,
+      "semantic_orientation_verified": false
+    }
+  },
+  "gltf": {
+    "byte_length": 7190360,
+    "sha256": "90d9d7f2cdbe693c416722233503af55d6bc02632e6f9a1fad64a0d1bf1f08fb",
+    "asset": {
+      "generator": "https://tripo3d.ai",
+      "version": "2.0"
+    },
+    "mesh_definitions": 1,
+    "primitive_count": 1,
+    "triangles_in_mesh_definitions": 11566,
+    "triangle_count_excludes_node_instancing": true,
+    "non_triangle_primitive_modes": [],
+    "material_count": 1,
+    "texture_count": 3,
+    "image_count": 3,
+    "embedded_image_count": 3,
+    "external_image_count": 0,
+    "extensions_used": [],
+    "material_summary": [
+      {
+        "name": "tripo_material_8db92ccc-cbf0-4075-8f9b-f84f6dece190",
+        "base_color_factor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallic_factor": 1.0,
+        "roughness_factor": 1.0,
+        "has_base_color_texture": true,
+        "has_normal_texture": true,
+        "alpha_mode": "OPAQUE",
+        "double_sided": false
+      }
+    ]
+  },
+  "imported": {
+    "object_count": 1,
+    "mesh_object_count": 1,
+    "mesh_triangles_including_instances": 11566,
+    "used_material_count": 1,
+    "used_material_names": [
+      "tripo_material_8db92ccc-cbf0-4075-8f9b-f84f6dece190"
+    ],
+    "used_texture_image_count": 3,
+    "texture_images": [
+      {
+        "name": "Color_8db92ccc-cbf0-4075-8f9b-f84f6dece190",
+        "size": [
+          4096,
+          4096
+        ],
+        "channels": 4
+      },
+      {
+        "name": "NormalGL_8db92ccc-cbf0-4075-8f9b-f84f6dece190",
+        "size": [
+          4096,
+          4096
+        ],
+        "channels": 4
+      },
+      {
+        "name": "ORM_8db92ccc-cbf0-4075-8f9b-f84f6dece190",
+        "size": [
+          4096,
+          4096
+        ],
+        "channels": 4
+      }
+    ],
+    "original_bounds": {
+      "min": [
+        -0.5,
+        -0.4873577058315277,
+        -0.35738304257392883
+      ],
+      "max": [
+        0.5,
+        0.4873577058315277,
+        0.35738304257392883
+      ]
+    },
+    "normalization_scale": 2.0,
+    "normalized_bounds": {
+      "min": [
+        -1.0,
+        -0.9747154116630554,
+        -0.7147660851478577
+      ],
+      "max": [
+        1.0,
+        0.9747154116630554,
+        0.7147660851478577
+      ]
+    }
+  },
+  "checks": {
+    "all_six_requested_views_written": true,
+    "normalized_longest_extent_is_two": true,
+    "has_mesh_geometry": true,
+    "source_sha256_unchanged": true
+  },
+  "elapsed_seconds": 32.2
+}
