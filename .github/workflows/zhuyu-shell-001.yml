@@ -1,0 +1,107 @@
+name: Zhuyu shell 001 single 3D sample
+on:
+  push:
+    paths:
+      - '.github/workflows/zhuyu-shell-001.yml'
+permissions:
+  contents: write
+concurrency:
+  group: zhuyu-shell-001-single-generation
+  cancel-in-progress: false
+jobs:
+  sample:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate exactly one isolated jewelry sample
+        env:
+          TRIPO_API_KEY: ${{ secrets.TRIPO_API_KEY }}
+        run: |
+          python3 - <<'PYCODE'
+          import os, json, time, urllib.request, urllib.error, pathlib, struct, hashlib
+          
+          out = pathlib.Path('zhuyu-assets/shell-001')
+          if (out/'task.json').exists() or (out/'shell.glb').exists():
+              raise SystemExit('Sample already submitted; refusing another paid generation.')
+          key = os.environ.get('TRIPO_API_KEY', '')
+          if not key:
+              raise SystemExit('TRIPO_API_KEY missing; no generation requested.')
+          base = 'https://openapi.tripo3d.com/v3'
+          def api(path, payload=None):
+              request = urllib.request.Request(base+path,
+                  data=json.dumps(payload).encode() if payload is not None else None,
+                  headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'})
+              try:
+                  with urllib.request.urlopen(request,timeout=90) as response:
+                      data=json.load(response)
+              except urllib.error.HTTPError as error:
+                  raise RuntimeError('API HTTP '+str(error.code)+'; no automatic resubmission.') from None
+              if data.get('code') != 0:
+                  raise RuntimeError('API code '+str(data.get('code'))+'; no automatic resubmission.')
+              return data['data']
+          
+          # Verify authentication before requesting the single authorized sample.
+          api('/account/balance')
+          request = {
+              'model':'v3.1-20260211',
+              'prompt': 'One exquisite small scallop shell jewelry pendant, single complete object. Fan-shaped ivory mother-of-pearl shell with seven smooth raised radial ribs, softly iridescent blush and cream nacre, fine polished champagne-gold rim following the scalloped outer edge, a single small functional gold suspension loop at the narrow top, visibly open hole. Broad fan opens downward. Rounded convex front and gently concave finished back, real thickness, complete 360 degree geometry. Elegant delicate collectible jewelry, refined miniature craftsmanship. PBR materials: nacre is a nonmetal with soft glossy highlights, gold trim is reflective metal. Neutral unlit base color textures, no baked shadows, no baked highlights. Shell and loop only, isolated, no chain, no beads, no background, no display stand, no text.',
+              'negative_prompt': 'multiple pendants, necklace, bracelet, hands, mannequin, display base, background, text, flat image plane, opaque plastic, rough stone, thick bulky gold, gemstones, spikes, dark dirty crevices, baked lighting',
+              'texture':True, 'pbr':True,
+              'texture_quality':'detailed', 'geometry_quality':'standard', 'face_limit':12000
+          }
+          out.mkdir(parents=True, exist_ok=True)
+          (out/'request.json').write_text(json.dumps(request,ensure_ascii=False,indent=2))
+          task = api('/generation/text-to-model',request)['task_id']
+          (out/'task.json').write_text(json.dumps({'task_id':task,'status':'submitted','auto_resubmit':False},indent=2))
+          print('Single sample submitted. Task ID:',task,flush=True)
+          for attempt in range(150):
+              result = api('/tasks/'+task)
+              status = result['status']
+              (out/'task.json').write_text(json.dumps({'task_id':task,'status':status,'progress':result.get('progress'),'credits_consumed':result.get('credits_consumed'),'auto_resubmit':False},indent=2))
+              print('Task status:',status,'progress:',result.get('progress'),flush=True)
+              if status == 'success':
+                  break
+              if status in ('failed','cancelled','canceled','unknown','expired'):
+                  raise SystemExit('Terminal status '+status+'; no resubmission.')
+              time.sleep(5)
+          else:
+              raise SystemExit('Polling timeout; saved task must be resumed, not resubmitted.')
+          with urllib.request.urlopen(result['output']['model_url'],timeout=90) as response:
+              model=response.read(50*1024*1024+1)
+          assert 20 < len(model) <= 50*1024*1024, 'Invalid model size'
+          assert model[:4] == b'glTF' and struct.unpack_from('<I',model,4)[0] == 2, 'Not GLB v2'
+          assert struct.unpack_from('<I',model,8)[0] == len(model), 'Truncated GLB'
+          json_len, chunk_type = struct.unpack_from('<II',model,12)
+          assert chunk_type == 0x4e4f534a, 'Missing JSON chunk'
+          gltf = json.loads(model[20:20+json_len])
+          assert gltf.get('meshes'), 'No geometry'
+          assert gltf.get('materials'), 'No materials'
+          (out/'shell.glb').write_bytes(model)
+          meta = {'sample':'shell-001','provider':'Tripo direct API via GitHub Actions','model':request['model'],
+              'task_id':task,'credits_consumed':result.get('credits_consumed'),'bytes':len(model),
+              'sha256':hashlib.sha256(model).hexdigest(),'meshes':len(gltf.get('meshes',[])),
+              'materials':len(gltf.get('materials',[])),'textures':len(gltf.get('textures',[])),
+              'images':len(gltf.get('images',[])), 'visual_acceptance':'pending','game_integration':False}
+          (out/'metadata.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
+          print(json.dumps(meta,ensure_ascii=False))
+          PYCODE
+      - name: Preserve model and task even when generation or download fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zhuyu-shell-001
+          path: zhuyu-assets/shell-001/
+          if-no-files-found: ignore
+      - name: Save only sample files and task recovery record
+        if: always()
+        run: |
+          if [ ! -d zhuyu-assets/shell-001 ]; then exit 0; fi
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add zhuyu-assets/shell-001/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Preserve Zhuyu shell-001 model and generation provenance'
+          git pull --rebase origin main
+          git push origin HEAD:main
