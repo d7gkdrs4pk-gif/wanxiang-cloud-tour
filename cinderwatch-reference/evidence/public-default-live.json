@@ -1,0 +1,266 @@
+{
+  "url": "https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/?v=r1-a11fb9c",
+  "environment": "Cloud Linux WebKit26.5/WPE software, 844x390 native touch emulation",
+  "normalEntryWithoutQAHash": true,
+  "automaticallyLive": true,
+  "sceneRGBStddev": [
+    46.24087585540055,
+    27.046390478489556,
+    19.120784010511944
+  ],
+  "initial": {
+    "state": {
+      "version": "Cinderwatch reference 8313bb2 / R1",
+      "status": "ready",
+      "sourceCommit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+      "sourceSHA256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "sourceVerified": true,
+      "seed": 4,
+      "startFrame": 5131,
+      "currentFrame": 5131,
+      "step": 0.016666666666666666,
+      "virtualViewport": [
+        1920,
+        1080
+      ],
+      "DPR": 1,
+      "errors": [],
+      "started": 289,
+      "renderedFrames": 0,
+      "simulationSteps": 5131,
+      "interactions": 0,
+      "screen": {
+        "width": 844,
+        "height": 390,
+        "scale": 0.3611111111111111,
+        "letterboxed": true
+      },
+      "generatedAt": 1772,
+      "referenceStart": {
+        "lives": 17,
+        "gold": 23,
+        "kills": 58,
+        "wave": 4,
+        "monsters": 23,
+        "queued": 10,
+        "camera": {
+          "yaw": 0.7853981633974483,
+          "elev": 0.6632251157578452,
+          "dist": 90,
+          "x": -2.3218315971974275,
+          "y": 0.39999999999999836,
+          "z": 3.9340250403879273,
+          "zoom": 1,
+          "fx": -2.2046782079636635,
+          "fz": 4.703096116521926,
+          "sx": -2.3218315971974275,
+          "sz": 3.9340250403879273
+        }
+      },
+      "readyAt": 5941,
+      "startupMs": 5652,
+      "paused": false,
+      "firstRenderedFrame": 5131
+    },
+    "game": {
+      "t": 85.5166666666631,
+      "wave": 4,
+      "lives": 17,
+      "gold": 23,
+      "kills": 58,
+      "phase": "play",
+      "monsters": 23,
+      "queued": 10,
+      "towers": [
+        {
+          "kind": "archer",
+          "level": 1,
+          "x": 7.191657664842148,
+          "z": 6.534798447796719
+        },
+        {
+          "kind": "guard",
+          "level": 1,
+          "x": 2.8493345467549163,
+          "z": 12.5534026759852
+        },
+        {
+          "kind": "bombard",
+          "level": 0,
+          "x": 0.6362089461927007,
+          "z": 4.315367713998727
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": 4.573629091924247,
+          "z": -2.1559671974260173
+        },
+        {
+          "kind": "spire",
+          "level": 0,
+          "x": 7.762809361997536,
+          "z": 13.072100546553521
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": -2.3450748190410176,
+          "z": -0.01201506766756899
+        }
+      ],
+      "camera": {
+        "yaw": 0.7853981633974483,
+        "elev": 0.6632251157578452,
+        "dist": 90,
+        "x": -2.3218315971974275,
+        "y": 0.39999999999999836,
+        "z": 3.9340250403879273,
+        "zoom": 1,
+        "fx": -2.2046782079636635,
+        "fz": 4.703096116521926,
+        "sx": -2.3218315971974275,
+        "sz": 3.9340250403879273
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "internal": [
+        960,
+        540
+      ],
+      "draws": 251,
+      "triangles": 1011028
+    }
+  },
+  "after": {
+    "state": {
+      "version": "Cinderwatch reference 8313bb2 / R1",
+      "status": "ready",
+      "sourceCommit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+      "sourceSHA256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "sourceVerified": true,
+      "seed": 4,
+      "startFrame": 5131,
+      "currentFrame": 5162,
+      "step": 0.016666666666666666,
+      "virtualViewport": [
+        1920,
+        1080
+      ],
+      "DPR": 1,
+      "errors": [],
+      "started": 289,
+      "renderedFrames": 3,
+      "simulationSteps": 5162,
+      "interactions": 0,
+      "screen": {
+        "width": 844,
+        "height": 390,
+        "scale": 0.3611111111111111,
+        "letterboxed": true
+      },
+      "generatedAt": 1772,
+      "referenceStart": {
+        "lives": 17,
+        "gold": 23,
+        "kills": 58,
+        "wave": 4,
+        "monsters": 23,
+        "queued": 10,
+        "camera": {
+          "yaw": 0.7853981633974483,
+          "elev": 0.6632251157578452,
+          "dist": 90,
+          "x": -2.3218315971974275,
+          "y": 0.39999999999999836,
+          "z": 3.9340250403879273,
+          "zoom": 1,
+          "fx": -2.2046782079636635,
+          "fz": 4.703096116521926,
+          "sx": -2.3218315971974275,
+          "sz": 3.9340250403879273
+        }
+      },
+      "readyAt": 5941,
+      "startupMs": 5652,
+      "paused": false,
+      "firstRenderedFrame": 5131
+    },
+    "game": {
+      "t": 86.03333333332974,
+      "wave": 4,
+      "lives": 17,
+      "gold": 23,
+      "kills": 58,
+      "phase": "play",
+      "monsters": 23,
+      "queued": 10,
+      "towers": [
+        {
+          "kind": "archer",
+          "level": 1,
+          "x": 7.191657664842148,
+          "z": 6.534798447796719
+        },
+        {
+          "kind": "guard",
+          "level": 1,
+          "x": 2.8493345467549163,
+          "z": 12.5534026759852
+        },
+        {
+          "kind": "bombard",
+          "level": 0,
+          "x": 0.6362089461927007,
+          "z": 4.315367713998727
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": 4.573629091924247,
+          "z": -2.1559671974260173
+        },
+        {
+          "kind": "spire",
+          "level": 0,
+          "x": 7.762809361997536,
+          "z": 13.072100546553521
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": -2.3450748190410176,
+          "z": -0.01201506766756899
+        }
+      ],
+      "camera": {
+        "yaw": 0.7853981633974483,
+        "elev": 0.6632251157578452,
+        "dist": 90,
+        "x": -2.2618665304338705,
+        "y": 0.39999999999999836,
+        "z": 4.255548142715195,
+        "zoom": 1,
+        "fx": -2.106264718425303,
+        "fz": 5.013940208353221,
+        "sx": -2.2618665304338705,
+        "sz": 4.255548142715195
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "internal": [
+        960,
+        540
+      ],
+      "draws": 251,
+      "triangles": 1010832
+    }
+  },
+  "errors": [],
+  "physicalIPhone": false,
+  "wechatDevice": false
+}

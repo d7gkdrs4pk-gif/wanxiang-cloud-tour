@@ -17,3 +17,11 @@ seed=4，第5131个1/60秒模拟步，1920×1080虚拟画幅/DPR1，原作内部
 原作桌面按钮依赖上帧hover，host在pointerdown捕获阶段用当次触点、dt=0刷新其HUD命中，再交原作处理，避免手机点菜单无响应。载入异常/运行异常/图形上下文丢失均显示恢复按钮，恢复层可点。派生engine由build-host.py重建，仅固定DPR并转发错误，不改原作游戏代码。
 
 首轮公网已实际完成七文件SHA校验、选塔/出售/重建与模拟contextlost后点击恢复，15.24秒原速运行约2.859FPS。但首帧截图发现WebKit可能延迟呈现被全屏加载层遮住的WebGL画面。本轮已修正：先露出canvas合成层，以原作bench(0)重新提交同一帧并读回，等待合成后才ready；不推进模拟或UI随机数。最新本地首帧已确认为完整三维画面（evidence/webkit-first-fixed.json），仍为第5131帧和同一相机。公开最终版本重新打开的结果与原速实玩录像在evidence/public-smoke.json。
+
+## 最终公网重新打开（a11fb9c）
+
+生产链接带版本v=r1-a11fb9c。云WebKit844×390原生触屏，首屏完整三维画面已直接看图确认；启动6.10秒，7项实际公开HTML/JS/CSS/源代码/许可SHA与本地完全相同。选炮塔→打开菜单→出售→同位建弓塔全部通过；15.35秒连续原速记录，48渲染帧，实测3.165 FPS，中位313ms、P95 384ms。0 JS错误/0失败请求。模拟contextlost后恢复按钮可点，实际点击重新载入成功。截图与数据：evidence/public-first.png、public-after-build.png、public-smoke.json。
+
+15秒连续视频为本次公开链接的真实触屏画面，直接从录屏中截取，未变速、未做运动插帧；编码25FPS与游戏实测3.165FPS分开。evidence/cloud-touch-15s.mp4、cloud-touch-video.json。不是iPhone硬件/微信真机测试，不宣称真机流畅度通过。
+
+最终不带still测试参数的实际交付链接也已另行打开，完整三维画面存在，自动从5131继续推进，未触发错误；见evidence/public-default-live.json和public-default-live.png。

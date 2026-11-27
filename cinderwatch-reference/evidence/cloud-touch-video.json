@@ -1,0 +1,21 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "width": 844,
+      "height": 390,
+      "r_frame_rate": "25/1"
+    }
+  ],
+  "format": {
+    "duration": "14.960000"
+  },
+  "source": "public WebKit native touch recording",
+  "clipStartSeconds": 7.888808400995913,
+  "timeScaleChanged": false,
+  "simulatedOrOfflineRender": false,
+  "gameFPS": 3.1651963095157924,
+  "encoded25fpsIsNotGameFPS": true,
+  "SHA256": "f944f8be2839ff17db9bee7416bd6c64bad1239c27b1d80e40278c4e30d51600"
+}

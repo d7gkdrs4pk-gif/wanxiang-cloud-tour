@@ -1,0 +1,672 @@
+{
+  "version": "Cinderwatch Reference R1",
+  "url": "https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/",
+  "sourceCommit": "a11fb9c27618a59343f32cede3138ae1dfff3ef3",
+  "upstreamCommit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+  "HTTP": 200,
+  "firstFrameSceneRGBStddev": [
+    47.62335988426513,
+    27.944358606436168,
+    19.36709839732316
+  ],
+  "environment": "Cloud Linux WebKit26.5/WPE software GPU, 844x390 DPR1 native touch emulation with video recording",
+  "physicalIPhone": false,
+  "wechatDevice": false,
+  "startupSeconds": 6.102260705003573,
+  "hashes": [
+    {
+      "path": "index.html",
+      "SHA256": "b2cdb7169f2e8de22d96a7a8dfb9a00500ac2cb1556771f55b34ec490bf833a8",
+      "matchesLocal": true
+    },
+    {
+      "path": "replica.js",
+      "SHA256": "ef72b97e5222fc272821faf62607f41231afaabc4ea54c48c262d353fcc0639d",
+      "matchesLocal": true
+    },
+    {
+      "path": "replica.css",
+      "SHA256": "775d4a8b229c0b52680135d0eab45f5ff2298514671c0ede2627dbb76a8ef121",
+      "matchesLocal": true
+    },
+    {
+      "path": "engine.html",
+      "SHA256": "a3dc7229ea3e447a065191f7d54c46293704c2f2721a6a45cb9c73b97b00618a",
+      "matchesLocal": true
+    },
+    {
+      "path": "upstream/index.html",
+      "SHA256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "matchesLocal": true
+    },
+    {
+      "path": "upstream/LICENSE",
+      "SHA256": "2516144cbcef981347e979bd41642fa89f1b0a84b8af2811ca36ba4d2c797aea",
+      "matchesLocal": true
+    },
+    {
+      "path": "upstream/vendor/LICENSE-three.txt",
+      "SHA256": "9e12491babdd50b2527a321e60b2f2b89e41ff16ab9cd8cc543d2361bd55b497",
+      "matchesLocal": true
+    }
+  ],
+  "sourceStart": {
+    "state": {
+      "version": "Cinderwatch reference 8313bb2 / R1",
+      "status": "ready",
+      "sourceCommit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+      "sourceSHA256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "sourceVerified": true,
+      "seed": 4,
+      "startFrame": 5131,
+      "currentFrame": 5131,
+      "step": 0.016666666666666666,
+      "virtualViewport": [
+        1920,
+        1080
+      ],
+      "DPR": 1,
+      "errors": [],
+      "started": 422,
+      "renderedFrames": 0,
+      "simulationSteps": 5131,
+      "interactions": 0,
+      "screen": {
+        "width": 844,
+        "height": 390,
+        "scale": 0.3611111111111111,
+        "letterboxed": true
+      },
+      "generatedAt": 1981,
+      "referenceStart": {
+        "lives": 17,
+        "gold": 23,
+        "kills": 58,
+        "wave": 4,
+        "monsters": 23,
+        "queued": 10,
+        "camera": {
+          "yaw": 0.7853981633974483,
+          "elev": 0.6632251157578452,
+          "dist": 90,
+          "x": -2.3218315971974275,
+          "y": 0.39999999999999836,
+          "z": 3.9340250403879273,
+          "zoom": 1,
+          "fx": -2.2046782079636635,
+          "fz": 4.703096116521926,
+          "sx": -2.3218315971974275,
+          "sz": 3.9340250403879273
+        }
+      },
+      "readyAt": 6067,
+      "startupMs": 5645,
+      "paused": true,
+      "firstRenderedFrame": 5131
+    },
+    "game": {
+      "t": 85.5166666666631,
+      "wave": 4,
+      "lives": 17,
+      "gold": 23,
+      "kills": 58,
+      "phase": "play",
+      "monsters": 23,
+      "queued": 10,
+      "towers": [
+        {
+          "kind": "archer",
+          "level": 1,
+          "x": 7.191657664842148,
+          "z": 6.534798447796719
+        },
+        {
+          "kind": "guard",
+          "level": 1,
+          "x": 2.8493345467549163,
+          "z": 12.5534026759852
+        },
+        {
+          "kind": "bombard",
+          "level": 0,
+          "x": 0.6362089461927007,
+          "z": 4.315367713998727
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": 4.573629091924247,
+          "z": -2.1559671974260173
+        },
+        {
+          "kind": "spire",
+          "level": 0,
+          "x": 7.762809361997536,
+          "z": 13.072100546553521
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": -2.3450748190410176,
+          "z": -0.01201506766756899
+        }
+      ],
+      "camera": {
+        "yaw": 0.7853981633974483,
+        "elev": 0.6632251157578452,
+        "dist": 90,
+        "x": -2.3218315971974275,
+        "y": 0.39999999999999836,
+        "z": 3.9340250403879273,
+        "zoom": 1,
+        "fx": -2.2046782079636635,
+        "fz": 4.703096116521926,
+        "sx": -2.3218315971974275,
+        "sz": 3.9340250403879273
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "internal": [
+        960,
+        540
+      ],
+      "draws": 251,
+      "triangles": 1011028
+    }
+  },
+  "syntheticContextLossAndActualRetryPassed": true,
+  "nativeTouchActions": [
+    "tap bombard",
+    "open tower menu",
+    "sell bombard (6 to 5 towers)",
+    "tap same empty pad",
+    "build archer with original gold check (5 to 6 towers)"
+  ],
+  "end": {
+    "state": {
+      "version": "Cinderwatch reference 8313bb2 / R1",
+      "status": "ready",
+      "sourceCommit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+      "sourceSHA256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "sourceVerified": true,
+      "seed": 4,
+      "startFrame": 5131,
+      "currentFrame": 5844,
+      "step": 0.016666666666666666,
+      "virtualViewport": [
+        1920,
+        1080
+      ],
+      "DPR": 1,
+      "errors": [],
+      "started": 422,
+      "renderedFrames": 48,
+      "simulationSteps": 5844,
+      "interactions": 4,
+      "screen": {
+        "width": 844,
+        "height": 390,
+        "scale": 0.3611111111111111,
+        "letterboxed": true
+      },
+      "generatedAt": 1981,
+      "referenceStart": {
+        "lives": 17,
+        "gold": 23,
+        "kills": 58,
+        "wave": 4,
+        "monsters": 23,
+        "queued": 10,
+        "camera": {
+          "yaw": 0.7853981633974483,
+          "elev": 0.6632251157578452,
+          "dist": 90,
+          "x": -2.3218315971974275,
+          "y": 0.39999999999999836,
+          "z": 3.9340250403879273,
+          "zoom": 1,
+          "fx": -2.2046782079636635,
+          "fz": 4.703096116521926,
+          "sx": -2.3218315971974275,
+          "sz": 3.9340250403879273
+        }
+      },
+      "readyAt": 6067,
+      "startupMs": 5645,
+      "paused": true,
+      "firstRenderedFrame": 5131
+    },
+    "game": {
+      "t": 97.39999999999576,
+      "wave": 4,
+      "lives": 17,
+      "gold": 19,
+      "kills": 69,
+      "phase": "play",
+      "monsters": 28,
+      "queued": 0,
+      "towers": [
+        {
+          "kind": "archer",
+          "level": 1,
+          "x": 7.191657664842148,
+          "z": 6.534798447796719
+        },
+        {
+          "kind": "guard",
+          "level": 1,
+          "x": 2.8493345467549163,
+          "z": 12.5534026759852
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": 4.573629091924247,
+          "z": -2.1559671974260173
+        },
+        {
+          "kind": "spire",
+          "level": 0,
+          "x": 7.762809361997536,
+          "z": 13.072100546553521
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": -2.3450748190410176,
+          "z": -0.01201506766756899
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": 0.6362089461927007,
+          "z": 4.315367713998727
+        },
+        {
+          "kind": "bombard",
+          "level": 0,
+          "x": -1.755980486340057,
+          "z": 11.046346032381036
+        }
+      ],
+      "camera": {
+        "yaw": 0.7853981633974483,
+        "elev": 0.6632251157578452,
+        "dist": 90,
+        "x": -0.8501308128804294,
+        "y": 0.39999999999999836,
+        "z": 5.971054647487514,
+        "zoom": 1,
+        "fx": -0.7613515344573903,
+        "fz": 6.058290704303321,
+        "sx": -0.8501308128804294,
+        "sz": 5.971054647487514
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "internal": [
+        960,
+        540
+      ],
+      "draws": 243,
+      "triangles": 1016436
+    }
+  },
+  "continuousOriginalSpeedSeconds": 15.348298541000986,
+  "measuredFPS": 3.1651963095157924,
+  "renderedFrames": 48,
+  "medianFrameMs": 313,
+  "p95FrameMs": 384,
+  "errors": [],
+  "failedRequests": [],
+  "video": {
+    "rawPath": "/workspace/qa-cinderwatch/public-recordings/page@78061ad81517f4367d466a9798dcca4d.webm",
+    "continuousStartOffset": 7.888808400995913,
+    "noTimeScaleChanges": true
+  },
+  "frames": [
+    {
+      "time": 1795798739360,
+      "frame": 5139,
+      "wave": 4,
+      "draws": 255,
+      "triangles": 1011508
+    },
+    {
+      "time": 1795798739633,
+      "frame": 5154,
+      "wave": 4,
+      "draws": 254,
+      "triangles": 1011370
+    },
+    {
+      "time": 1795798739946,
+      "frame": 5169,
+      "wave": 4,
+      "draws": 235,
+      "triangles": 1018762
+    },
+    {
+      "time": 1795798740247,
+      "frame": 5184,
+      "wave": 4,
+      "draws": 237,
+      "triangles": 1019220
+    },
+    {
+      "time": 1795798740561,
+      "frame": 5199,
+      "wave": 4,
+      "draws": 241,
+      "triangles": 1017752
+    },
+    {
+      "time": 1795798740837,
+      "frame": 5214,
+      "wave": 4,
+      "draws": 241,
+      "triangles": 1020158
+    },
+    {
+      "time": 1795798741089,
+      "frame": 5229,
+      "wave": 4,
+      "draws": 241,
+      "triangles": 1018000
+    },
+    {
+      "time": 1795798741388,
+      "frame": 5244,
+      "wave": 4,
+      "draws": 243,
+      "triangles": 1015346
+    },
+    {
+      "time": 1795798741632,
+      "frame": 5259,
+      "wave": 4,
+      "draws": 249,
+      "triangles": 1015722
+    },
+    {
+      "time": 1795798741890,
+      "frame": 5274,
+      "wave": 4,
+      "draws": 260,
+      "triangles": 1023368
+    },
+    {
+      "time": 1795798742165,
+      "frame": 5289,
+      "wave": 4,
+      "draws": 266,
+      "triangles": 1025790
+    },
+    {
+      "time": 1795798742443,
+      "frame": 5304,
+      "wave": 4,
+      "draws": 270,
+      "triangles": 1021640
+    },
+    {
+      "time": 1795798742693,
+      "frame": 5319,
+      "wave": 4,
+      "draws": 275,
+      "triangles": 1020568
+    },
+    {
+      "time": 1795798742973,
+      "frame": 5334,
+      "wave": 4,
+      "draws": 279,
+      "triangles": 1017338
+    },
+    {
+      "time": 1795798743244,
+      "frame": 5349,
+      "wave": 4,
+      "draws": 278,
+      "triangles": 1015108
+    },
+    {
+      "time": 1795798743542,
+      "frame": 5364,
+      "wave": 4,
+      "draws": 232,
+      "triangles": 1015514
+    },
+    {
+      "time": 1795798743835,
+      "frame": 5379,
+      "wave": 4,
+      "draws": 233,
+      "triangles": 1015522
+    },
+    {
+      "time": 1795798744086,
+      "frame": 5394,
+      "wave": 4,
+      "draws": 232,
+      "triangles": 1012346
+    },
+    {
+      "time": 1795798744366,
+      "frame": 5409,
+      "wave": 4,
+      "draws": 232,
+      "triangles": 1013510
+    },
+    {
+      "time": 1795798744661,
+      "frame": 5424,
+      "wave": 4,
+      "draws": 232,
+      "triangles": 1011040
+    },
+    {
+      "time": 1795798744972,
+      "frame": 5439,
+      "wave": 4,
+      "draws": 232,
+      "triangles": 1013226
+    },
+    {
+      "time": 1795798745302,
+      "frame": 5454,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1012774
+    },
+    {
+      "time": 1795798745594,
+      "frame": 5469,
+      "wave": 4,
+      "draws": 230,
+      "triangles": 1014560
+    },
+    {
+      "time": 1795798745944,
+      "frame": 5484,
+      "wave": 4,
+      "draws": 230,
+      "triangles": 1013154
+    },
+    {
+      "time": 1795798746308,
+      "frame": 5499,
+      "wave": 4,
+      "draws": 230,
+      "triangles": 1013112
+    },
+    {
+      "time": 1795798746672,
+      "frame": 5514,
+      "wave": 4,
+      "draws": 230,
+      "triangles": 1013142
+    },
+    {
+      "time": 1795798747021,
+      "frame": 5529,
+      "wave": 4,
+      "draws": 229,
+      "triangles": 1017910
+    },
+    {
+      "time": 1795798747386,
+      "frame": 5544,
+      "wave": 4,
+      "draws": 229,
+      "triangles": 1017536
+    },
+    {
+      "time": 1795798747815,
+      "frame": 5559,
+      "wave": 4,
+      "draws": 229,
+      "triangles": 1017604
+    },
+    {
+      "time": 1795798748199,
+      "frame": 5574,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1015096
+    },
+    {
+      "time": 1795798748594,
+      "frame": 5589,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1015056
+    },
+    {
+      "time": 1795798748931,
+      "frame": 5604,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1013662
+    },
+    {
+      "time": 1795798749287,
+      "frame": 5619,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1013194
+    },
+    {
+      "time": 1795798749631,
+      "frame": 5634,
+      "wave": 4,
+      "draws": 230,
+      "triangles": 1012878
+    },
+    {
+      "time": 1795798749965,
+      "frame": 5649,
+      "wave": 4,
+      "draws": 229,
+      "triangles": 1012824
+    },
+    {
+      "time": 1795798750299,
+      "frame": 5664,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1019222
+    },
+    {
+      "time": 1795798750587,
+      "frame": 5679,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1019336
+    },
+    {
+      "time": 1795798750880,
+      "frame": 5694,
+      "wave": 4,
+      "draws": 231,
+      "triangles": 1021774
+    },
+    {
+      "time": 1795798751173,
+      "frame": 5709,
+      "wave": 4,
+      "draws": 230,
+      "triangles": 1021162
+    },
+    {
+      "time": 1795798751486,
+      "frame": 5724,
+      "wave": 4,
+      "draws": 234,
+      "triangles": 1020082
+    },
+    {
+      "time": 1795798751797,
+      "frame": 5739,
+      "wave": 4,
+      "draws": 234,
+      "triangles": 1020154
+    },
+    {
+      "time": 1795798752119,
+      "frame": 5754,
+      "wave": 4,
+      "draws": 240,
+      "triangles": 1018318
+    },
+    {
+      "time": 1795798752464,
+      "frame": 5769,
+      "wave": 4,
+      "draws": 249,
+      "triangles": 1019036
+    },
+    {
+      "time": 1795798752784,
+      "frame": 5784,
+      "wave": 4,
+      "draws": 252,
+      "triangles": 1016726
+    },
+    {
+      "time": 1795798753144,
+      "frame": 5799,
+      "wave": 4,
+      "draws": 255,
+      "triangles": 1017658
+    },
+    {
+      "time": 1795798753498,
+      "frame": 5814,
+      "wave": 4,
+      "draws": 259,
+      "triangles": 1018138
+    },
+    {
+      "time": 1795798753843,
+      "frame": 5829,
+      "wave": 4,
+      "draws": 259,
+      "triangles": 1018064
+    },
+    {
+      "time": 1795798754209,
+      "frame": 5844,
+      "wave": 4,
+      "draws": 243,
+      "triangles": 1016436
+    }
+  ],
+  "probeURL": "https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/?v=r1-a11fb9c#still=1",
+  "deliveryURL": "https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/?v=r1-a11fb9c",
+  "initialStillModeThenLiveNativeTouchRecording": true
+}

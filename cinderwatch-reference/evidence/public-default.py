@@ -1,0 +1,7 @@
+from playwright.sync_api import sync_playwright
+from pathlib import Path
+from PIL import Image,ImageStat
+import json,time
+out=Path('/workspace/wanxiang-cloud-tour/cinderwatch-reference/evidence');url='https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/?v=r1-a11fb9c'
+with sync_playwright()as p:
+ b=p.webkit.launch(headless=True);c=b.new_context(viewport={'width':844,'height':390},device_scale_factor=1,is_mobile=True,has_touch=True);q=c.new_page();errors=[];q.on('pageerror',lambda e:errors.append(str(e)));q.goto(url,wait_until='domcontentloaded',timeout=60000);q.wait_for_function('window.__REFERENCE?.state.status==="ready"',timeout=120000);s=q.evaluate('__REFERENCE.snapshot()');assert s['state']['paused']==False;q.wait_for_function('__REFERENCE.state.currentFrame>__REFERENCE.state.startFrame+30',timeout=15000);end=q.evaluate('__REFERENCE.snapshot()');q.screenshot(path=str(out/'public-default-live.png'));std=ImageStat.Stat(Image.open(out/'public-default-live.png').convert('RGB').crop((100,50,740,350))).stddev;assert sum(std)>55;result={'url':url,'environment':'Cloud Linux WebKit26.5/WPE software, 844x390 native touch emulation','normalEntryWithoutQAHash':True,'automaticallyLive':True,'sceneRGBStddev':std,'initial':s,'after':end,'errors':errors,'physicalIPhone':False,'wechatDevice':False};(out/'public-default-live.json').write_text(json.dumps(result,indent=2)+'\n');print('NORMAL PUBLIC ENTRY PASS',end['state']['currentFrame'],'errors',len(errors));b.close()

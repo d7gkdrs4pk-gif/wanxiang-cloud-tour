@@ -1,7 +1,9 @@
 # 凤鸣山门｜项目状态 V1.38
 当前任务调整（2026-11-27）：用户要求暂停继续微调凤鸣画面，单独做与参考视频相同的游戏场景。本轮独立入口为 /cinderwatch-reference/（Cinderwatch参考原作同版R1），不覆盖凤鸣的任何游戏入口、运行脚本或资产。凤鸣最新样关仍保留H36 gate-h36.html，H31 h31-compare.html及H29 index.html保留。
 
-已查明用户所指视频场景为kevintngo的MIT开源Cinderwatch，采用其历史提交8313bb2、seed4、5131帧开场；模型/材质/光照/相机/塔防来自署名原作，新增包装、确定性开场、横屏适配和手机按钮触控修复。不是凤鸣山门原创资产升级，也未将塔防玩法接入凤鸣。来源/26文件SHA/许可/本地同机位及真实触控记录见cinderwatch-reference/{README.md,UPSTREAM.json,THIRD_PARTY_NOTICES.md,QA.md,evidence/}。公开入口：https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/ 。
+已查明用户所指视频场景为kevintngo的MIT开源Cinderwatch，采用其历史提交8313bb2、seed4、5131帧开场；模型/材质/光照/相机/塔防来自署名原作，新增包装、确定性开场、横屏适配和手机按钮触控修复。不是凤鸣山门原创资产升级，也未将塔防玩法接入凤鸣。来源/26文件SHA/许可/本地同机位及真实触控记录见cinderwatch-reference/{README.md,UPSTREAM.json,THIRD_PARTY_NOTICES.md,QA.md,evidence/}。公开入口：https://wanxiang-cloud-tour.pages.dev/cinderwatch-reference/?v=r1-a11fb9c 。
+
+独立参考R1公网a11fb9c已重开：完整三维首帧、7项SHA、原生触屏售塔重建和实际重试均通过；15.35秒/48帧，云WebKit软件3.165FPS，非iPhone/微信真机，录像未变速。未宣称手机流畅度或凤鸣美术验收通过。
 
 以下V1.37记录保留，代表暂停前凤鸣最新可玩状态。
 
