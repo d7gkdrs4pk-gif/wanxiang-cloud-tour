@@ -81,8 +81,8 @@
       "sha256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330"
     },
     "gate-h32.html": {
-      "bytes": 6097,
-      "sha256": "8a4e2570c5a18c3b200a4300ecaaa6c1ab65984d59a7101e7b8b7389aa28a218"
+      "bytes": 6103,
+      "sha256": "1dc391d5f42e2a1aa49eddf88f62c9b283809c770a688340605c9b5dd127c56f"
     },
     "package-lock.json": {
       "bytes": 14518,
@@ -153,8 +153,8 @@
       "sha256": "765201cad2634ebe80d9fe5f8aa6fa7f3ecf25cb74a92c28a46f5296d063b059"
     },
     "sample-gate.html": {
-      "bytes": 6097,
-      "sha256": "8a4e2570c5a18c3b200a4300ecaaa6c1ab65984d59a7101e7b8b7389aa28a218"
+      "bytes": 6103,
+      "sha256": "1dc391d5f42e2a1aa49eddf88f62c9b283809c770a688340605c9b5dd127c56f"
     },
     "tools/build-sample.mjs": {
       "bytes": 2137,
