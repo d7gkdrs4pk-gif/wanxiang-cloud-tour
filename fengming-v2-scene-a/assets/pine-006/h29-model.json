@@ -1,0 +1,75 @@
+{
+  "source": "h28-gate-pine.blend",
+  "asset": "h29-gate-pine.glb",
+  "bytes": 2364996,
+  "meshes": 3,
+  "materials": 3,
+  "triangles": 54580,
+  "needle_triangles": 14014,
+  "canopy_layout": [
+    {
+      "name": "long arm main crown",
+      "c": [
+        2.5,
+        0.4,
+        4.3
+      ],
+      "scale": [
+        1.9,
+        0.82
+      ],
+      "thick": 0.5,
+      "turn": 0.32
+    },
+    {
+      "name": "small high crown",
+      "c": [
+        2.35,
+        1.65,
+        5.04
+      ],
+      "scale": [
+        1.0,
+        0.55
+      ],
+      "thick": 0.43,
+      "turn": 0.32
+    },
+    {
+      "name": "offset rear crown",
+      "c": [
+        0.0,
+        1.5,
+        3.9
+      ],
+      "scale": [
+        1.18,
+        0.65
+      ],
+      "thick": 0.46,
+      "turn": 0.27
+    },
+    {
+      "name": "short balancing tip",
+      "c": [
+        -0.55,
+        -0.35,
+        3.25
+      ],
+      "scale": [
+        0.5,
+        0.4
+      ],
+      "thick": 0.35,
+      "turn": 0.32
+    }
+  ],
+  "roots_lowered_vertices": 6473,
+  "bole_narrowed_vertices": 14632,
+  "removed_obsolete_spray_vertices": 1170,
+  "final_branch_curve": "33-section convex-hull Bezier; basal radius .24; end lifted .12",
+  "stone_detail_vertices": 1448,
+  "sha256": "2cb7a1f3e14c5d20c7c22c30b89ae34fdea5edc9b6ff25473f5c3fb5fc4f73c6",
+  "physical_phone_test": "not performed",
+  "paid_credits": 0
+}

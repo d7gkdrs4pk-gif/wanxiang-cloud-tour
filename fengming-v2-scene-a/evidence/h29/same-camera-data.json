@@ -1,0 +1,108 @@
+{
+  "pose": {
+    "reference": "evidence/h28/touch-walk-12s.mp4 frame150 at6.000s = walk-full.webm53.000s",
+    "viewport": [
+      390,
+      844
+    ],
+    "FOV": 39,
+    "camera": [
+      1.9287945909740616,
+      27.096992159130988,
+      8.109796812936388
+    ],
+    "lookAt": [
+      -4.071205409025938,
+      0.09699215913098769,
+      -6.890203187063612
+    ],
+    "player": [
+      -4.048475480570402,
+      0.1684635877609253,
+      -7.822372347832815
+    ],
+    "rotation_y": 3.111597189388185,
+    "rotation_degrees": 178.2813864967121,
+    "groundAt": 0.1684635877609253,
+    "head_screen": [
+      209.22512100504565,
+      367.23898180820515
+    ],
+    "method": "camera from707 static SIFT/raycast matches; player = recorded past-branch p plus exactly one clamped0.05s movement step at4.5 units/s (0.225units); same recorded rotation; silhouette/head aligns within subpixel",
+    "confidence": "camera fit subpixel; player final clamped step reconstructed from log and geometry, rather than telemetry recorded at exact frame",
+    "actual": {
+      "p": [
+        -4.048475480570402,
+        0.1684635877609253,
+        -7.822372347832815
+      ],
+      "a": 3.111597189388185,
+      "c": [
+        1.9287945909740616,
+        27.096992159130988,
+        8.109796812936388
+      ],
+      "hero": 0,
+      "frame": 69,
+      "opacity": 1
+    }
+  },
+  "mask_scope": "upper tree above worldY2.3 versus all loaded gate silhouette, at unchanged reference camera",
+  "results": [
+    {
+      "mode": "baseline",
+      "info": {
+        "game": {
+          "p": [
+            -4.048475480570402,
+            0.1684635877609253,
+            -7.822372347832815
+          ],
+          "a": 3.111597189388185,
+          "c": [
+            1.9287945909740616,
+            27.096992159130988,
+            8.109796812936388
+          ],
+          "hero": 0,
+          "frame": 73,
+          "opacity": 1
+        },
+        "gateTriangles": 75702,
+        "fov": 39,
+        "aspect": 0.46208530805687204
+      },
+      "upperTreeToGateMinimumPixels": 0.0,
+      "overlapPixels": 2854,
+      "errors": []
+    },
+    {
+      "mode": "revision",
+      "info": {
+        "game": {
+          "p": [
+            -4.048475480570402,
+            0.1684635877609253,
+            -7.822372347832815
+          ],
+          "a": 3.111597189388185,
+          "c": [
+            1.9287945909740616,
+            27.096992159130988,
+            8.109796812936388
+          ],
+          "hero": 0.1,
+          "frame": 67,
+          "opacity": 1
+        },
+        "gateTriangles": 75702,
+        "fov": 39,
+        "aspect": 0.46208530805687204
+      },
+      "upperTreeToGateMinimumPixels": 20.591260281974,
+      "overlapPixels": 0,
+      "errors": []
+    }
+  ],
+  "final_asset_sha256": "2cb7a1f3e14c5d20c7c22c30b89ae34fdea5edc9b6ff25473f5c3fb5fc4f73c6"
+}
