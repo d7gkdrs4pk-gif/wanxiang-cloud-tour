@@ -5,3 +5,5 @@
 云Linux WebKit26.5/WPE软件渲染，实测21.490FPS、MP4编码25FPS。iPhone/微信真机未测。15启动/恢复检查记录compatibility.json，nav/旧资源保持记录baseline-preserved.json。
 
 私有参考视频/帧未放公共仓库；场景几何和继承自有纹理来源见对应035目录。路外缘仍规整，白天试版供用户亲玩判断。
+
+最终公网已测：3.83s冷启动、19关键文件SHA一致、实际H35组件/灯0确认，触控移动/普通剑/赤凤/重来通过。源代码提交3b9520786094ac72280b957cb260f84bc7d8cc8f，详见public-smoke.json；公开对照、录像和PNG字节匹配见public-artifacts.json。

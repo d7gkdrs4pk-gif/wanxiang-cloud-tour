@@ -1,0 +1,46 @@
+{
+  "checked": [
+    {
+      "path": "gate-h34.html",
+      "bytes": 6116,
+      "sha256": "9e4ae8b42ed524604a5718696fa50f35938ddafd54f14c9e1d99e0ca347c7086",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h34.html"
+    },
+    {
+      "path": "sample/dist/game-h34.js",
+      "bytes": 1434600,
+      "sha256": "56c33711dd11070fa9f384bb71b3153cf35f903cb0b15c066765a19f724730c4",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/sample/dist/game-h34.js"
+    },
+    {
+      "path": "h31-compare.html",
+      "bytes": 1457,
+      "sha256": "ed2a59ec6ba0f4e591650739c070ae3577e6bfa6d835552ecdb4d02e643f5902",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h31-compare.html"
+    },
+    {
+      "path": "evidence/h35/sample-walk-sword.mp4",
+      "bytes": 1645224,
+      "sha256": "c794096f504cac9aaa9de495a23507c786de974bfa8c5efab2e6bf07a377d2a2",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/evidence/h35/sample-walk-sword.mp4"
+    },
+    {
+      "path": "evidence/h35/comparison-h34/normal-h34-h35-contact.png",
+      "bytes": 692417,
+      "sha256": "e0b203c6e0911fd0385decb420bf6141422959c0451b5468fce90d1d6fb1e0fb",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/evidence/h35/comparison-h34/normal-h34-h35-contact.png"
+    },
+    {
+      "path": "evidence/h35/no-fx/no-fx-actual-frames.png",
+      "bytes": 1449901,
+      "sha256": "81b1ebb50b2e9dbb8428bd1d1af69f9e6cc0077bbc2b220623a41f9b432ced06",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/evidence/h35/no-fx/no-fx-actual-frames.png"
+    }
+  ],
+  "componentChecks": {
+    "roadTriangles": 10627,
+    "gateRevision": "H35",
+    "heroAnimation": "H35 weighted stance / low outside recovery",
+    "activeLampCount": 0
+  }
+}

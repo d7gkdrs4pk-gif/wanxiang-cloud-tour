@@ -1,0 +1,448 @@
+{
+  "version": "H35",
+  "sourceCommit": "3b9520786094ac72280b957cb260f84bc7d8cc8f",
+  "url": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h35",
+  "HTTP": 200,
+  "scope": "public production URL; cloud Linux WebKit26.5/WPE software renderer; browser touchscreen simulation, not physical iPhone/ChatGPT native app/WeChat device",
+  "startupSeconds": 3.830118339996261,
+  "hashes": [
+    {
+      "path": "assets/environment-033/terrain-rock-normals.f32",
+      "bytes": 238224,
+      "sha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5"
+    },
+    {
+      "path": "assets/environment-035/road-bed-mask.png",
+      "bytes": 2601,
+      "sha256": "c292f9cd5db51228ff1e15d8c4c55b206ef94f6509f0960e0b0c5981723e44e9"
+    },
+    {
+      "path": "assets/environment-035/road-geometry.js",
+      "bytes": 1581824,
+      "sha256": "2dead79acd702f62f8deed0b01c18cda72ccad1cb645b246ea595da7a7923e49"
+    },
+    {
+      "path": "assets/environment-035/stone-kit-atlas.webp",
+      "bytes": 1130348,
+      "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a"
+    },
+    {
+      "path": "assets/gate-035/plaque-atlas.png",
+      "bytes": 9546,
+      "sha256": "12b30c30a3fa919a3c9759246ee5f7704a761cf7a2842b28bf0e70ed497b5165"
+    },
+    {
+      "path": "assets/hero-034/linyan-atlas.webp",
+      "bytes": 104184,
+      "sha256": "4b6e2edd1ec4ac53fc30c022c12b92995bdfce7ee0901ac31ad7c6a7fda1c517"
+    },
+    {
+      "path": "assets/hero-035/action.js",
+      "bytes": 7003,
+      "sha256": "602530789141311478bb476bc68d8095baa22a73ea6bf362dd03e62dfff28836"
+    },
+    {
+      "path": "assets/pine-033/pine-layer-atlas.webp",
+      "bytes": 283506,
+      "sha256": "01e35918bef3a5e5aa218d082d3ca90df0b55cdd587632977ce0c9ad1e4daeba"
+    },
+    {
+      "path": "assets/sample-ground/height.f32",
+      "bytes": 273492,
+      "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df"
+    },
+    {
+      "path": "assets/sample-ground/metadata.json",
+      "bytes": 1944,
+      "sha256": "b4db6a26a1252e59a581e2b2ba7bef60f6e1236b792b1924c3ecaa74cef7da7e"
+    },
+    {
+      "path": "assets/sample-ground/slope.bits",
+      "bytes": 8480,
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31"
+    },
+    {
+      "path": "assets/sample-lod/navigation.json",
+      "bytes": 96651,
+      "sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac"
+    },
+    {
+      "path": "assets/sample-runtime/gate.glb",
+      "bytes": 1332728,
+      "sha256": "ab35c4ea6cd9bfb308ff36aaf1c99e025e30d8be6c1fd2bd54eabcb69cac340d"
+    },
+    {
+      "path": "assets/sample-runtime/mountain-atlas.webp",
+      "bytes": 1185072,
+      "sha256": "26ff78d818605aafda582c84fc8104dd88c85aa3039f3733a975e0939f8e3590"
+    },
+    {
+      "path": "assets/sample-runtime/terrain.glb",
+      "bytes": 816528,
+      "sha256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330"
+    },
+    {
+      "path": "gate-h35.html",
+      "bytes": 6109,
+      "sha256": "9f6c9b5dff82d291efd9d7fd21f966d8584dde10b19e6d9e6c295dc3db24ff2e"
+    },
+    {
+      "path": "sample/dist/game-h35.js",
+      "bytes": 2884466,
+      "sha256": "098ee369a86f2358e0c49ae95e5785fc3f35536072947762d906cc7ec327672b"
+    },
+    {
+      "path": "sample/launch-h35.js",
+      "bytes": 3877,
+      "sha256": "245c6eaef3fec4ea5cec679d3c423e9fb33dcceb0721608dddee56c4b62e7fdc"
+    },
+    {
+      "path": "sample/sample.css",
+      "bytes": 5043,
+      "sha256": "feda8f1e245406cdb231695b34fff25f8015fca09fa5ead12488d00cd3279786"
+    }
+  ],
+  "errors": [],
+  "requestfailed": [],
+  "playable": {
+    "version": "H.35 daylight stone and weighted sword sample",
+    "ready": true,
+    "position": [
+      -5.120038732655641,
+      0.136971414822735,
+      -4.392788896353228
+    ],
+    "rotation": -1.6704580622049452,
+    "camera": [
+      0.8940426545062197,
+      27.136197476526952,
+      10.608624999649956
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0,
+      "visualMs": 1,
+      "renderMs": 10
+    },
+    "kinematics": {
+      "maxYawRadPerSec": 14
+    },
+    "blade": {
+      "base": [
+        -5.355399502101113,
+        0.9270454071972368,
+        -4.950234361819082
+      ],
+      "tip": [
+        -6.35819730788576,
+        1.2915377877590908,
+        -5.582011114498261
+      ]
+    },
+    "hero": {
+      "triangles": 9351,
+      "materials": 2,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+      "animationRevision": "H35 weighted stance / low outside recovery"
+    },
+    "environment": {
+      "revision": "H35 daylight stone-road kit",
+      "source": "Owned H33 hand-painted stone atlas copied to 035; offline-fitted actual beveled masonry; historical mountains retained; original navigation and walking heights unchanged",
+      "staticDraws": 3,
+      "shadowDirection": [
+        0.5547001962252291,
+        -0.8320502943378437
+      ],
+      "sunDirection": [
+        -0.3713906763541037,
+        0.7427813527082074,
+        0.5570860145311556
+      ],
+      "cameraUnchanged": true,
+      "staticShading": "daylight fixed SUN; batched real stone tops/bevels/sides over render-only recessed grout bed; triplanar slope rock; no static PBR/IBL/normal/ORM sampling"
+    },
+    "dressing": {
+      "leafTriangles": 1800,
+      "plantClumps": 11,
+      "rockGroups": 2,
+      "rockTriangles": 1744,
+      "road": {
+        "stones": 150,
+        "triangles": 10627,
+        "vertices": 17040,
+        "topLiftAtVertices": 0.01,
+        "minSampledTopLift": -0.0008449083150720571,
+        "maxSampledTopLift": 0.01948651759106927,
+        "topChecks": 119035,
+        "aboveTolerance": 0,
+        "independentNavCheck": {
+          "samples": 19929,
+          "minLift": -0.004543392079075781,
+          "maxLift": 0.02195916036423784,
+          "over2cm": 8,
+          "method": "final top triangle interior barycentrics queried against unchanged nav.groundAt; safeGround only filters nonwalkable decoration"
+        },
+        "layout": "single running-bond mother grid, no split bricks/no random omissions",
+        "jointWidth": 0.02,
+        "topShading": "one restrained average normal per whole slab; actual bevel and side normals retained",
+        "stoneWidth": 0.96,
+        "visibleSideBottom": -0.055,
+        "bevelWidth": 0.013,
+        "originalHeightDataUnchanged": true
+      },
+      "roadTriangles": 10627,
+      "contactTriangles": 350,
+      "rockFootprints": [
+        {
+          "key": "west",
+          "role": "near left frame, outside original z limit",
+          "min": [
+            -6.83683742364308,
+            -0.26408765474620277,
+            2.2519447449704844
+          ],
+          "max": [
+            -3.3822822811341204,
+            0.8624540501532126,
+            4.494950412759439
+          ],
+          "height": 1.1265417048994153
+        },
+        {
+          "key": "east",
+          "role": "near right frame, outside original z limit",
+          "min": [
+            1.8818717092337498,
+            -0.35541882898711974,
+            2.5856891462599316
+          ],
+          "max": [
+            5.09031277863763,
+            1.1342242408895304,
+            4.779495242665486
+          ],
+          "height": 1.4896430698766503
+        }
+      ],
+      "draws": 4,
+      "pineContactTriangles": 320
+    },
+    "daylight": {
+      "timeOfDay": "day",
+      "sunDirection": [
+        -0.3713906763541037,
+        0.7427813527082074,
+        0.5570860145311556
+      ],
+      "sunIntensity": 2.2,
+      "activeLampCount": 0,
+      "lampIntensities": [
+        0,
+        0
+      ]
+    },
+    "gateRevision": "H35",
+    "hitPause": 0,
+    "startup": {
+      "version": "H.35",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795787528919,
+      "started": 1795787526431,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795787526431,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795787526433,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795787526785,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795787527526,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795787527686,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795787528455,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795787528847,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795787528919,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795787529565,
+          "progress": 1
+        }
+      ],
+      "appSource": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/sample/dist/game-h35.js?v=098ee369a86f",
+      "readyAt": 1795787529565
+    },
+    "pathNodes": [],
+    "guideIndex": 1,
+    "roofCut": 0,
+    "target": [
+      -5.120038732655641,
+      0.136971414822735,
+      -4.392788896353228
+    ],
+    "flags": {
+      "nearPine": true,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 26,
+      "triangles": 75038
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.10090484899619,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.05466286743339,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.20770507283494,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.466960579659045
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2821
+      },
+      {
+        "type": "ready",
+        "t": 3467,
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "revision": "H33",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.34,
+          "hitPeak": 0.075,
+          "hitHoldUntil": 0.125,
+          "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 3898,
+        "screen": [
+          131,
+          392
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          -5.120038732655641,
+          0.136971414822735,
+          -4.392788896353228
+        ]
+      },
+      {
+        "type": "near-pine",
+        "t": 4237
+      },
+      {
+        "type": "swing-start",
+        "t": 4504,
+        "p": [
+          -5.120038732655641,
+          0.136971414822735,
+          -4.392788896353228
+        ],
+        "facing": -1.6704580622049452,
+        "aim": -1.6704580622049452
+      },
+      {
+        "type": "swing-recovered",
+        "t": 5295
+      }
+    ]
+  },
+  "skillChecks": {
+    "phoenixEnemyHP": 0,
+    "resetEnemyHP": 3,
+    "resetPosition": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ]
+  }
+}

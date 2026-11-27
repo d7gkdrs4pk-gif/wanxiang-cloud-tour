@@ -8,6 +8,8 @@ H.35／白天无火把山门试版（2026-11-27）：用户反馈H34视觉变化
 
 14.60秒原速正常UI完整触控穿枝→登阶→回身命中收势，HP3→2/四标记true/错误0/失败0/cut峰值0.000000；15启动恢复场景通过。云Linux WebKit26.5/WPE软件390×844DPR1实测21.490FPS，中位45ms/p95 60ms，非iPhone/微信真机。报告SAMPLE_H35_QA.md、独立SAMPLE_H35_VISUAL_REVIEW.md和evidence/h35/。作为白天试版，路缘/T形区域融合仍规整，未宣称达到参考完成度或用户美术通过。
 
+公网最终验收（源码3b95207）：冷启动3.83s，19关键资源SHA一致；新石路/门台/动作和灯0读回确认，触控移动/普通出剑/赤凤/重来通过，JS错误0/请求失败0。公开H34/H31对照和MP4/图片内容匹配。记录evidence/h35/public-smoke.json、public-artifacts.json；仍为云软件模拟，非iPhone/微信真机。
+
 以下H34及更早条目为历史记录，旧“当前”以本页顶部H35为准。
 
 H.34／角色网格与门楼可见资产重制（2026-11-27）：当前试玩 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h34.html ；H31独立对照h31-compare.html；本轮前H33对照gate-h33.html；sample-gate.html同步H34。H29完整入口保留不覆盖。
