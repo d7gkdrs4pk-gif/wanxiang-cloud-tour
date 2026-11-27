@@ -1,0 +1,680 @@
+{
+  "environment": "Linux WebKit26.5 WPE, software rendering; not a physical iPhone or ChatGPT native app",
+  "passed": true,
+  "cases": [
+    {
+      "case": "H31 ignored importmap (controlled compatibility fault)",
+      "faultInjection": true,
+      "loading": "正入山境",
+      "ready": false,
+      "errors": [
+        "Module name, 'three' does not resolve to a valid URL."
+      ]
+    },
+    {
+      "case": "H32 WebKit cold startup + touch",
+      "readySeconds": 3.0031193930008158,
+      "startup": {
+        "version": "H.32",
+        "status": "ready",
+        "phase": "playable",
+        "lastChange": 1795771593820,
+        "started": 1795771591724,
+        "errors": [],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771591724,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771591725,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771591897,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795771592599,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795771592765,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795771593383,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795771593765,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795771593820,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795771594390,
+            "progress": 1
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+        "readyAt": 1795771594390
+      },
+      "moduleScripts": 0,
+      "after": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -4.955174408537113,
+          0.12392877219658589,
+          -4.376235057852861
+        ],
+        "rotation": -1.6699464472952972,
+        "camera": [
+          1.0804881192138382,
+          27.12212701158646,
+          10.627345775829992
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "startup": {
+          "version": "H.32",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795771593820,
+          "started": 1795771591724,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795771591724,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795771591725,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795771591897,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795771592599,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795771592765,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795771593383,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795771593765,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795771593820,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795771594390,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+          "readyAt": 1795771594390
+        },
+        "pathNodes": [],
+        "guideIndex": 1,
+        "roofCut": 0,
+        "target": [
+          -4.955174408537113,
+          0.12392877219658589,
+          -4.376235057852861
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 97069
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.13296778206944,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.087067306664046,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.24038596943111,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.471226997588825
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2113
+          },
+          {
+            "type": "ready",
+            "t": 2683,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3052,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3398
+          },
+          {
+            "type": "swing-start",
+            "t": 3446,
+            "p": [
+              -4.955174408537113,
+              0.12392877219658589,
+              -4.376235057852861
+            ],
+            "facing": -1.6699464472952972,
+            "aim": -1.6699464472952972
+          },
+          {
+            "type": "swing-recovered",
+            "t": 4180
+          },
+          {
+            "type": "move-command",
+            "t": 4217,
+            "screen": [
+              200,
+              160
+            ],
+            "ok": false,
+            "reason": "outside-area",
+            "adjusted": false,
+            "nodes": 0,
+            "planningMs": 0,
+            "goal": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "case": "context lost recovery UI",
+      "actualDriverLoss": true,
+      "startup": {
+        "version": "H.32",
+        "status": "failed",
+        "phase": "画面连接已中断，请重新载入",
+        "lastChange": 1795771596168,
+        "started": 1795771591724,
+        "errors": [
+          "webglcontextlost"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771591724,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771591725,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771591897,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795771592599,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795771592765,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795771593383,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795771593765,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795771593820,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795771594390,
+            "progress": 1
+          },
+          {
+            "phase": "failed",
+            "at": 1795771596168,
+            "reason": "画面连接已中断，请重新载入"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+        "readyAt": 1795771594390
+      }
+    },
+    {
+      "case": "bundle blocked then actual Retry",
+      "failed": {
+        "version": "H.32",
+        "status": "failed",
+        "phase": "游戏程序未载入，请重试",
+        "lastChange": 1795771596527,
+        "started": 1795771596399,
+        "errors": [
+          "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+          "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771596399,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771596399,
+            "progress": 0.08
+          },
+          {
+            "phase": "failed",
+            "at": 1795771596527,
+            "reason": "游戏程序未载入，请重试"
+          },
+          {
+            "phase": "failed",
+            "at": 1795771596527,
+            "reason": "游戏程序未载入，请重试"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881"
+      },
+      "recovered": {
+        "version": "H.32",
+        "status": "ready",
+        "phase": "playable",
+        "lastChange": 1795771597869,
+        "started": 1795771596682,
+        "errors": [],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771596682,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771596683,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771596727,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795771597167,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795771597285,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795771597617,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795771597839,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795771597869,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795771598316,
+            "progress": 1
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+        "readyAt": 1795771598316
+      }
+    },
+    {
+      "case": "WebGL constructor blocked",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.32",
+        "status": "failed",
+        "phase": "当前窗口无法创建3D画面，请重试或复制地址打开",
+        "lastChange": 1795771599156,
+        "started": 1795771598969,
+        "errors": [
+          "Error creating WebGL context."
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771598969,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771598970,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771599095,
+            "progress": 0.12
+          },
+          {
+            "phase": "failed",
+            "at": 1795771599156,
+            "reason": "当前窗口无法创建3D画面，请重试或复制地址打开"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881"
+      },
+      "message": "当前窗口无法创建3D画面，请重试或复制地址打开"
+    },
+    {
+      "case": "pine resource blocked",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.32",
+        "status": "failed",
+        "phase": "场景未完整载入，请重试",
+        "lastChange": 1795771600697,
+        "started": 1795771599375,
+        "errors": [
+          "[object Event]"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771599375,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771599375,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771599523,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795771599998,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795771600103,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795771600387,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795771600669,
+            "progress": 0.78
+          },
+          {
+            "phase": "failed",
+            "at": 1795771600697,
+            "reason": "场景未完整载入，请重试"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881"
+      },
+      "message": "场景未完整载入，请重试"
+    },
+    {
+      "case": "JavaScript disabled host",
+      "faultInjection": true,
+      "noscript": "当前窗口未启用互动内容。请在系统浏览器打开下方地址。\n\n长按复制试玩地址"
+    },
+    {
+      "case": "slow bundle assistance",
+      "faultInjection": true,
+      "message": "载入较慢，可继续等待或重试",
+      "retryVisible": true
+    },
+    {
+      "case": "external launcher blocked; inline launcher succeeds",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.32",
+        "status": "ready",
+        "phase": "playable",
+        "lastChange": 1795771603390,
+        "started": 1795771601654,
+        "errors": [],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771601654,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771601655,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771601813,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795771602258,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795771602359,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795771602915,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795771603324,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795771603390,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795771603940,
+            "progress": 1
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+        "readyAt": 1795771603940
+      }
+    },
+    {
+      "case": "inline scripts blocked by CSP; external launcher succeeds",
+      "faultInjection": true,
+      "readyViaDOM": true,
+      "touchWalkHintReached": true,
+      "normalSwingCompleted": true,
+      "note": "DOM signals used; the test harness itself also obeys unsafe-eval restriction"
+    },
+    {
+      "case": "ground cache unavailable recovery UI",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.32",
+        "status": "failed",
+        "phase": "场景未完整载入，请重试",
+        "lastChange": 1795771608995,
+        "started": 1795771608169,
+        "errors": [
+          "Load failed"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795771608169,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795771608169,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795771608398,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795771608870,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795771608983,
+            "progress": 0.35
+          },
+          {
+            "phase": "failed",
+            "at": 1795771608995,
+            "reason": "场景未完整载入，请重试"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881"
+      }
+    }
+  ]
+}

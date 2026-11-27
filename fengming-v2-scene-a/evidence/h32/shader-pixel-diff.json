@@ -1,0 +1,65 @@
+{
+  "algorithm": "RGB SSIM, Gaussian sigma1.5 window11, population covariance, data_range255; full and changed-pixel region reported",
+  "positions": [
+    {
+      "id": "01-spawn",
+      "meanAbsoluteRGB": 9.11410864017499e-05,
+      "rms": 0.03355739495894325,
+      "maxRGB": 19.0,
+      "pixelsOver3": 9.11410864017499e-06,
+      "pixelsOver8": 6.0760724267833275e-06,
+      "pixelsOver16": 3.0380362133916637e-06,
+      "SSIM": 0.9999979461927097,
+      "SSIMChangedRegion": 0.9882310614723703,
+      "changedRegionFraction": 9.11410864017499e-06
+    },
+    {
+      "id": "02-pine-approach",
+      "meanAbsoluteRGB": 7.493822659699438e-05,
+      "rms": 0.029235267310234306,
+      "maxRGB": 16.0,
+      "pixelsOver3": 6.0760724267833275e-06,
+      "pixelsOver8": 6.0760724267833275e-06,
+      "pixelsOver16": 0.0,
+      "SSIM": 0.9999987437841635,
+      "SSIMChangedRegion": 0.9938386774530706,
+      "changedRegionFraction": 9.11410864017499e-06
+    },
+    {
+      "id": "03-under-branch",
+      "meanAbsoluteRGB": 4.860857941426662e-05,
+      "rms": 0.02047557074779723,
+      "maxRGB": 11.0,
+      "pixelsOver3": 6.0760724267833275e-06,
+      "pixelsOver8": 3.0380362133916637e-06,
+      "pixelsOver16": 0.0,
+      "SSIM": 0.9999991701891263,
+      "SSIMChangedRegion": 0.9938205704744022,
+      "changedRegionFraction": 6.0760724267833275e-06
+    },
+    {
+      "id": "04-courtyard",
+      "meanAbsoluteRGB": 5.367197310325272e-05,
+      "rms": 0.022116144111396493,
+      "maxRGB": 12.0,
+      "pixelsOver3": 6.0760724267833275e-06,
+      "pixelsOver8": 3.0380362133916637e-06,
+      "pixelsOver16": 0.0,
+      "SSIM": 0.9999991454217712,
+      "SSIMChangedRegion": 0.9956781474897076,
+      "changedRegionFraction": 9.11410864017499e-06
+    },
+    {
+      "id": "05-real-stairs",
+      "meanAbsoluteRGB": 0.0,
+      "rms": 0.0,
+      "maxRGB": 0.0,
+      "pixelsOver3": 0.0,
+      "pixelsOver8": 0.0,
+      "pixelsOver16": 0.0,
+      "SSIM": 1.0,
+      "SSIMChangedRegion": 1.0,
+      "changedRegionFraction": 0.0
+    }
+  ]
+}

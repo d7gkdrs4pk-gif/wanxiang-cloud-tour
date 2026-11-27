@@ -16,7 +16,7 @@
  */
 import * as T from 'three';
 
-const DEFAULT_ATLAS = new URL('../assets/pine-007/pine-layer-atlas.png', import.meta.url).href;
+const DEFAULT_ATLAS = new URL('../assets/sample-runtime/pine-atlas.webp', import.meta.url).href;
 const REFERENCE = new URL('../assets/pine-002/reference.png', import.meta.url).href;
 
 function point3(value, fallback) {
@@ -103,6 +103,9 @@ export function createLayeredPine(options = {}) {
     });
     material.alphaToCoverage = true;
     const mesh = new T.Mesh(geometry, material);
+    // Layer transforms are composed only when the root/camera changes. The
+    // renderer still updates their world matrices normally before drawing.
+    mesh.matrixAutoUpdate = false;
     mesh.name = `PINE-007 ${spec.key}`;
     mesh.frustumCulled = false;
     mesh.visible = false;
@@ -114,7 +117,18 @@ export function createLayeredPine(options = {}) {
     mesh.userData.registrationAnchor = [...spec.anchor];
     group.add(mesh);
     layers[spec.key] = mesh;
-    records.push({ mesh, spec, registeredPositions: geometry.attributes.position.array.slice() });
+    const registeredPositions = geometry.attributes.position.array.slice();
+    const reliefFactors = new Float64Array(geometry.attributes.position.count);
+    let maximumFactor = 0;
+    for (let i = 0; i < reliefFactors.length; i++) {
+      const imageHeight = (spec.offset[1] + registeredPositions[i * 3 + 1]) / height;
+      const t = T.MathUtils.clamp((imageHeight - 0.10) / 0.52, 0, 1);
+      const factor = t * t * (3 - 2 * t);
+      reliefFactors[i] = factor;
+      maximumFactor = Math.max(maximumFactor, factor);
+    }
+    geometry.attributes.position.setUsage(T.DynamicDrawUsage);
+    records.push({ mesh, spec, registeredPositions, reliefFactors, maximumFactor });
   }
 
   const contactMap = shadowTexture();
@@ -191,73 +205,120 @@ export function createLayeredPine(options = {}) {
   const reliefVertex = new T.Vector3();
   const reliefRay = new T.Vector3();
   const inverseMeshWorld = new T.Matrix4();
+  const cameraScale = new T.Vector3();
+  const layerWorld = new T.Vector3();
+  const backward = new T.Vector3();
+  const cameraFromLayer = new T.Vector3();
+  const previousRootMatrix = new T.Matrix4();
+  const previousCameraMatrix = new T.Matrix4();
+  let previousRelief = NaN;
+  let initialized = false;
 
   function update(_dt, { player, camera } = {}) {
     if (!camera || disposed) return lastUpdate;
     group.updateWorldMatrix(true, false);
     camera.updateWorldMatrix(true, false);
-    group.getWorldPosition(rootWorld);
-    group.getWorldScale(worldScale);
-    group.getWorldQuaternion(parentQuaternion);
-    camera.getWorldPosition(cameraWorld);
-    camera.getWorldQuaternion(cameraQuaternion);
+    const geometryChanged = !initialized || previousRelief !== upperRelief
+      || !previousRootMatrix.equals(group.matrixWorld)
+      || !previousCameraMatrix.equals(camera.matrixWorld);
+    if (!geometryChanged) {
+      // Player depth is diagnostic; a moving player does not deform the tree.
+      if (player?.getWorldPosition) {
+        player.getWorldPosition(playerWorld);
+        cameraSpace.copy(playerWorld).applyMatrix4(camera.matrixWorldInverse);
+        lastUpdate.playerDepth = -cameraSpace.z;
+      }
+      for (const { mesh, spec } of records) lastUpdate.layers[spec.key].visible = mesh.visible;
+      return lastUpdate;
+    }
+    previousRootMatrix.copy(group.matrixWorld);
+    previousCameraMatrix.copy(camera.matrixWorld);
+    previousRelief = upperRelief;
+    initialized = true;
+    // Decompose each world matrix once. getWorldPosition/Scale/Quaternion each
+    // recursively updated the same ancestor chain in the previous version.
+    group.matrixWorld.decompose(rootWorld, parentQuaternion, worldScale);
+    camera.matrixWorld.decompose(cameraWorld, cameraQuaternion, cameraScale);
     inverseWorld.copy(group.matrixWorld).invert();
     localQuaternion.copy(parentQuaternion).invert().multiply(cameraQuaternion);
     right.set(1, 0, 0).applyQuaternion(cameraQuaternion);
     up.set(0, 1, 0).applyQuaternion(cameraQuaternion);
+    backward.set(0, 0, 1).applyQuaternion(cameraQuaternion);
     towardCamera.subVectors(cameraWorld, rootWorld);
     const distance = Math.max(1, towardCamera.length());
     towardCamera.multiplyScalar(1 / distance);
     const uniformScale = (Math.abs(worldScale.x) + Math.abs(worldScale.y) + Math.abs(worldScale.z)) / 3;
+    const uniformRoot = worldScale.x > 0 && worldScale.y > 0 && worldScale.z > 0
+      && Math.abs(worldScale.x - worldScale.y) < 1e-10
+      && Math.abs(worldScale.x - worldScale.z) < 1e-10;
 
     // Moving along the camera-to-root ray and scaling by the distance ratio
     // preserves the painted layer registration in perspective. Their actual
     // depth separation remains real, so the player crosses each independently.
-    for (const { mesh, spec, registeredPositions } of records) {
+    for (const { mesh, spec, registeredPositions, reliefFactors, maximumFactor } of records) {
       const depth = spec.depth * uniformScale;
       const registrationScale = T.MathUtils.clamp(1 - depth / distance, 0.2, 2);
       worldPoint.copy(rootWorld).addScaledVector(towardCamera, depth)
         .addScaledVector(right, spec.offset[0] * uniformScale * registrationScale)
         .addScaledVector(up, spec.offset[1] * uniformScale * registrationScale);
-      mesh.position.copy(worldPoint.applyMatrix4(inverseWorld));
+      layerWorld.copy(worldPoint);
+      mesh.position.copy(worldPoint).applyMatrix4(inverseWorld);
       mesh.quaternion.copy(localQuaternion);
       mesh.scale.setScalar(registrationScale);
-      mesh.updateMatrixWorld();
+      mesh.updateMatrix();
       // The painted S-trunk must rise in front of the original stone rail.
       // A flat camera-facing card otherwise recedes behind that rail as its
       // pixels rise. Give middle/upper pixels bounded forward depth relief.
       // Move EACH vertex on its own camera ray, so its projected position and
       // the atlas registration stay fixed, including perspective/aspect.
       const positions = mesh.geometry.attributes.position;
-      positions.array.set(registeredPositions);
-      let maximumRelief = 0;
+      const output = positions.array;
+      const maximumRelief = upperRelief > 0 ? upperRelief * uniformScale * maximumFactor : 0;
       if (upperRelief > 0) {
-        inverseMeshWorld.copy(mesh.matrixWorld).invert();
-        for (let i = 0; i < positions.count; i++) {
-          const j = i * 3;
-          const imageHeight = (spec.offset[1] + registeredPositions[j + 1]) / height;
-          // Root and first 10% stay at their actual root depth. Upper relief
-          // eases in continuously and reaches its cap above 62% tree height.
-          const t = T.MathUtils.clamp((imageHeight - 0.10) / 0.52, 0, 1);
-          const relief = upperRelief * uniformScale * t * t * (3 - 2 * t);
-          maximumRelief = Math.max(maximumRelief, relief);
-          if (relief <= 0) continue;
-          reliefVertex.set(registeredPositions[j], registeredPositions[j + 1], registeredPositions[j + 2])
-            .applyMatrix4(mesh.matrixWorld);
-          reliefRay.subVectors(cameraWorld, reliefVertex);
-          const rayDistance = reliefRay.length();
-          reliefVertex.addScaledVector(reliefRay, Math.min(relief, rayDistance * 0.2) / rayDistance)
-            .applyMatrix4(inverseMeshWorld);
-          positions.setXYZ(i, reliefVertex.x, reliefVertex.y, reliefVertex.z);
+        if (uniformRoot) {
+          // Same ray deformation, expressed in the billboard's local basis.
+          // Uniform root scale cancels: no per-vertex world/inverse transforms
+          // and no inverse matrix per layer are needed for the actual game tree.
+          const layerScale = uniformScale * registrationScale;
+          cameraFromLayer.subVectors(cameraWorld, layerWorld);
+          const cx = cameraFromLayer.dot(right) / layerScale;
+          const cy = cameraFromLayer.dot(up) / layerScale;
+          const cz = cameraFromLayer.dot(backward) / layerScale;
+          for (let i = 0; i < positions.count; i++) {
+            const j = i * 3, x = registeredPositions[j], y = registeredPositions[j + 1], z = registeredPositions[j + 2];
+            const dx = cx - x, dy = cy - y, dz = cz - z;
+            const rayDistance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            const factor = Math.min(upperRelief * reliefFactors[i] / (registrationScale * rayDistance), 0.2);
+            output[j] = x + dx * factor;
+            output[j + 1] = y + dy * factor;
+            output[j + 2] = z + dz * factor;
+          }
+        } else {
+          // Preserve the previous exact matrix path for unusual nonuniform or
+          // mirrored parent transforms; the shipped tree uses positive scale1.
+          mesh.updateMatrixWorld();
+          inverseMeshWorld.copy(mesh.matrixWorld).invert();
+          for (let i = 0; i < positions.count; i++) {
+            const j = i * 3, relief = upperRelief * uniformScale * reliefFactors[i];
+            if (relief <= 0) {
+              output[j] = registeredPositions[j];output[j + 1] = registeredPositions[j + 1];output[j + 2] = registeredPositions[j + 2];
+              continue;
+            }
+            reliefVertex.set(registeredPositions[j], registeredPositions[j + 1], registeredPositions[j + 2]).applyMatrix4(mesh.matrixWorld);
+            reliefRay.subVectors(cameraWorld, reliefVertex);
+            const rayDistance = reliefRay.length();
+            reliefVertex.addScaledVector(reliefRay, Math.min(relief, rayDistance * 0.2) / rayDistance).applyMatrix4(inverseMeshWorld);
+            output[j] = reliefVertex.x;output[j + 1] = reliefVertex.y;output[j + 2] = reliefVertex.z;
+          }
         }
-      }
+      } else output.set(registeredPositions);
       positions.needsUpdate = true;
       mesh.userData.maximumUpperRelief = maximumRelief;
-      const center = mesh.getWorldPosition(worldPoint);
-      cameraSpace.copy(center).applyMatrix4(camera.matrixWorldInverse);
-      lastUpdate.layers[spec.key] = { rootDepth: -cameraSpace.z, offset: spec.depth, upperRelief: maximumRelief, visible: mesh.visible };
+      cameraSpace.copy(layerWorld).applyMatrix4(camera.matrixWorldInverse);
+      const diagnostic = lastUpdate.layers[spec.key] ?? (lastUpdate.layers[spec.key] = {});
+      diagnostic.rootDepth = -cameraSpace.z;diagnostic.offset = spec.depth;diagnostic.upperRelief = maximumRelief;diagnostic.visible = mesh.visible;
     }
-    lastUpdate.root = rootWorld.toArray();
+    rootWorld.toArray(lastUpdate.root);
     if (player?.getWorldPosition) {
       player.getWorldPosition(playerWorld);
       cameraSpace.copy(playerWorld).applyMatrix4(camera.matrixWorldInverse);

@@ -1,0 +1,950 @@
+{
+  "candidate": "same texture/mesh shader fast paths + single-pass planar mountains",
+  "baselinePath": "/workspace/qa-h32/environment-before-fast.js",
+  "scope": "Cloud Chromium SwiftShader 390x844 DPR1, same game actors/scene/time, FOV39 offset6,27,15; only terrain/gate static shaders and far-plane pass flag swapped",
+  "init": {
+    "snapshot": {
+      "version": "H.32 compatible gate sample",
+      "ready": true,
+      "position": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "rotation": -0.6,
+      "camera": [
+        2.8,
+        27.078413903713226,
+        10.8
+      ],
+      "FOV": 39,
+      "heroHeight": 1.485,
+      "cpu": {
+        "simMs": 0.09999999776482582,
+        "visualMs": 0,
+        "renderMs": 1.300000000745058
+      },
+      "pathNodes": [],
+      "guideIndex": 0,
+      "roofCut": 0,
+      "target": [
+        -3.2,
+        0.07841390371322632,
+        -4.2
+      ],
+      "flags": {
+        "nearPine": false,
+        "underBranch": false,
+        "stairs": false,
+        "hit": false
+      },
+      "enemy": {
+        "p": [
+          2.8,
+          0.06296829879283905,
+          -6.6
+        ],
+        "hp": 3
+      },
+      "attack": null,
+      "stats": {
+        "calls": 29,
+        "triangles": 86604
+      },
+      "pine": {
+        "loaded": true,
+        "root": [
+          -7,
+          0.15580439567565918,
+          -7
+        ],
+        "layers": {
+          "rear": {
+            "rootDepth": 34.49884938433165,
+            "offset": -1.05,
+            "upperRelief": 1.6,
+            "visible": true
+          },
+          "trunk": {
+            "rootDepth": 33.45733459291049,
+            "offset": 0,
+            "upperRelief": 1.6,
+            "visible": true
+          },
+          "front": {
+            "rootDepth": 32.614203571283845,
+            "offset": 0.85,
+            "upperRelief": 1.5992788652793042,
+            "visible": true
+          }
+        },
+        "playerDepth": 31.464265445104555
+      },
+      "events": [
+        {
+          "type": "reset",
+          "t": 2929.10000000149
+        },
+        {
+          "type": "ready",
+          "t": 3460.199999999255,
+          "hero": {
+            "triangles": 16798,
+            "materials": 7,
+            "bones": 22,
+            "height": 1.485,
+            "revision": "H31 continuous cloth/weighted drape",
+            "attackDuration": 0.78,
+            "hitProgress": 0.44,
+            "authorship": "Original geometry and animation authored in code for \u51e4\u9e23\u5c71\u95e8; no third-party character asset."
+          },
+          "enemy": {
+            "source": "original project-authored procedural mesh and animation; no third-party assets",
+            "height": 1.46,
+            "triangles": 1866,
+            "vertices": 2501,
+            "bones": 19,
+            "materials": 4,
+            "drawCalls": 4,
+            "hitDuration": 0.3,
+            "facing": "+Z"
+          }
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "position": {
+        "id": "01-spawn",
+        "x": -3.2,
+        "z": -4.2
+      },
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0.09999999776482582,
+          "visualMs": 0,
+          "renderMs": 1.300000000745058
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 86604
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2929.10000000149
+          },
+          {
+            "type": "ready",
+            "t": 3460.199999999255,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for \u51e4\u9e23\u5c71\u95e8; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "original": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1.3999999985098839,
+          2,
+          2.699999999254942,
+          2,
+          1.5,
+          2.399999998509884,
+          1.5,
+          1.800000000745058,
+          1.3999999985098839,
+          2.2000000029802322,
+          1.8999999985098839,
+          1.5,
+          1.300000000745058,
+          1.5,
+          12.5
+        ],
+        "mean": 2.506666666517655,
+        "median": 1.800000000745058,
+        "p95": 12.5,
+        "calls": 31,
+        "triangles": 86608
+      },
+      "fast": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1.0999999977648258,
+          1.300000000745058,
+          1.3999999985098839,
+          1.6000000014901161,
+          1.199999999254942,
+          1,
+          1.5,
+          1.5,
+          1.6000000014901161,
+          1.300000000745058,
+          1.199999999254942,
+          1.0999999977648258,
+          1,
+          1.199999999254942,
+          1
+        ],
+        "mean": 1.266666666418314,
+        "median": 1.199999999254942,
+        "p95": 1.6000000014901161,
+        "calls": 29,
+        "triangles": 86604
+      }
+    },
+    {
+      "position": {
+        "id": "02-pine-approach",
+        "x": -5.1,
+        "z": -4.4
+      },
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -5.1,
+          0.11661790311336517,
+          -4.4
+        ],
+        "rotation": -0.6,
+        "camera": [
+          0.9000000000000004,
+          27.116617903113365,
+          10.6
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0.09999999776482582,
+          "visualMs": 0,
+          "renderMs": 1.300000000745058
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -5.1,
+          0.11661790311336517,
+          -4.4
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 86604
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.07866962173824,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.03245602584144,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.18552121011546,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2929.10000000149
+          },
+          {
+            "type": "ready",
+            "t": 3460.199999999255,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for \u51e4\u9e23\u5c71\u95e8; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "original": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1.199999999254942,
+          1.1000000014901161,
+          0.8999999985098839,
+          2,
+          1.4000000022351742,
+          1.4000000022351742,
+          1.300000000745058,
+          1.199999999254942,
+          1.300000000745058,
+          1.0999999977648258,
+          1.300000000745058,
+          1,
+          1.800000000745058,
+          1.0999999977648258,
+          1.1000000014901161
+        ],
+        "mean": 1.2800000001986822,
+        "median": 1.199999999254942,
+        "p95": 2,
+        "calls": 31,
+        "triangles": 86608
+      },
+      "fast": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1,
+          1.300000000745058,
+          1.5,
+          4.799999997019768,
+          1.300000000745058,
+          1.0999999977648258,
+          1.300000000745058,
+          1.5,
+          1,
+          1.4000000022351742,
+          1.1000000014901161,
+          1.5,
+          1.199999999254942,
+          0.9000000022351742,
+          1.300000000745058
+        ],
+        "mean": 1.4800000001986822,
+        "median": 1.300000000745058,
+        "p95": 4.799999997019768,
+        "calls": 29,
+        "triangles": 86604
+      }
+    },
+    {
+      "position": {
+        "id": "03-under-branch",
+        "x": -6.4,
+        "z": -8.1
+      },
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -6.4,
+          0.127921,
+          -8.1
+        ],
+        "rotation": -0.6,
+        "camera": [
+          -0.40000000000000036,
+          27.127921,
+          6.9
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0.09999999776482582,
+          "visualMs": 0,
+          "renderMs": 1.300000000745058
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -6.4,
+          0.127921,
+          -8.1
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 86604
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 32.07959635711816,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 31.030349334554856,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 30.180958887717892,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104548
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2929.10000000149
+          },
+          {
+            "type": "ready",
+            "t": 3460.199999999255,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for \u51e4\u9e23\u5c71\u95e8; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "original": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          0.6999999992549419,
+          0.7999999970197678,
+          1.3999999985098839,
+          1.2000000029802322,
+          1.1000000014901161,
+          1.199999999254942,
+          1.0999999977648258,
+          1.3999999985098839,
+          1.0999999977648258,
+          1.199999999254942,
+          1.0999999977648258,
+          1.199999999254942,
+          0.9000000022351742,
+          1.0999999977648258,
+          1.199999999254942
+        ],
+        "mean": 1.1133333325386048,
+        "median": 1.1000000014901161,
+        "p95": 1.3999999985098839,
+        "calls": 31,
+        "triangles": 86608
+      },
+      "fast": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1,
+          0.7999999970197678,
+          1,
+          1.199999999254942,
+          1.199999999254942,
+          1,
+          1.199999999254942,
+          1.5,
+          1.3999999985098839,
+          1.199999999254942,
+          1.199999999254942,
+          1.199999999254942,
+          1.0999999977648258,
+          1,
+          1.4000000022351742
+        ],
+        "mean": 1.1599999994039536,
+        "median": 1.199999999254942,
+        "p95": 1.5,
+        "calls": 29,
+        "triangles": 86604
+      }
+    },
+    {
+      "position": {
+        "id": "04-courtyard",
+        "x": 0,
+        "z": -3.05
+      },
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          0,
+          0.11619839817285538,
+          -3.05
+        ],
+        "rotation": -0.6,
+        "camera": [
+          6,
+          27.116198398172855,
+          11.95
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0.09999999776482582,
+          "visualMs": 0,
+          "renderMs": 1.300000000745058
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          0,
+          0.11619839817285538,
+          -3.05
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 86604
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 35.675176955043796,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 34.648215130572616,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 33.816865082191185,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2929.10000000149
+          },
+          {
+            "type": "ready",
+            "t": 3460.199999999255,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for \u51e4\u9e23\u5c71\u95e8; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "original": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          0.5,
+          1.300000000745058,
+          1.9000000022351742,
+          2.2999999970197678,
+          1.300000000745058,
+          1.5,
+          1.5,
+          1.300000000745058,
+          1.1000000014901161,
+          1.0999999977648258,
+          1.1000000014901161,
+          1.5,
+          1.5,
+          1.8999999985098839,
+          1.8999999985098839
+        ],
+        "mean": 1.446666666616996,
+        "median": 1.5,
+        "p95": 2.2999999970197678,
+        "calls": 35,
+        "triangles": 87032
+      },
+      "fast": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1.300000000745058,
+          1.5,
+          1.1000000014901161,
+          1.8999999985098839,
+          1.1000000014901161,
+          1.199999999254942,
+          1.2000000029802322,
+          1.199999999254942,
+          1.300000000745058,
+          1.300000000745058,
+          1.5,
+          1.5,
+          1,
+          1,
+          1.3999999985098839
+        ],
+        "mean": 1.3000000002483527,
+        "median": 1.300000000745058,
+        "p95": 1.8999999985098839,
+        "calls": 33,
+        "triangles": 87028
+      }
+    },
+    {
+      "position": {
+        "id": "05-real-stairs",
+        "x": 1.58,
+        "z": -7
+      },
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          1.58,
+          0.714099286446104,
+          -7
+        ],
+        "rotation": -0.6,
+        "camera": [
+          7.58,
+          27.714099286446103,
+          8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0.09999999776482582,
+          "visualMs": 0,
+          "renderMs": 1.300000000745058
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.58,
+          0.714099286446104,
+          -7
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 87028
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.5985727246757,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.5794892111549,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75451684306665,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2929.10000000149
+          },
+          {
+            "type": "ready",
+            "t": 3460.199999999255,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for \u51e4\u9e23\u5c71\u95e8; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "original": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          0.6000000014901161,
+          0.6000000014901161,
+          1.7999999970197678,
+          2.099999997764826,
+          2,
+          1.9000000022351742,
+          1.5999999977648258,
+          1.5,
+          1.5,
+          1.800000000745058,
+          1.5,
+          1.9000000022351742,
+          1.1000000014901161,
+          1.300000000745058,
+          1
+        ],
+        "mean": 1.4800000001986822,
+        "median": 1.5,
+        "p95": 2.099999997764826,
+        "calls": 30,
+        "triangles": 86264
+      },
+      "fast": {
+        "kind": "same-scene frozen pose; render plus explicit GPU finish",
+        "samples": [
+          1.199999999254942,
+          1.199999999254942,
+          1.199999999254942,
+          1.5,
+          1.300000000745058,
+          1.0999999977648258,
+          1.199999999254942,
+          1.4000000022351742,
+          0.9000000022351742,
+          1.5,
+          1.1000000014901161,
+          1,
+          2.399999998509884,
+          1.3999999985098839,
+          1.2000000029802322
+        ],
+        "mean": 1.3066666667660078,
+        "median": 1.199999999254942,
+        "p95": 2.399999998509884,
+        "calls": 28,
+        "triangles": 86260
+      }
+    }
+  ],
+  "errors": [],
+  "archivedH31ShaderVerifiedByteEqual": true
+}

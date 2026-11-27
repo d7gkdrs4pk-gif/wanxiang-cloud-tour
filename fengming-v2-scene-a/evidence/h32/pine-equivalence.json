@@ -1,0 +1,68 @@
+{
+  "cases": 176,
+  "points": 66000,
+  "maxWorld": 0,
+  "maxPixel": 0,
+  "maxDepth": 7.105427357601002e-15,
+  "idleAttributeVersions": {
+    "before": [
+      177,
+      177,
+      177
+    ],
+    "after": [
+      177,
+      177,
+      177
+    ]
+  },
+  "timing": {
+    "oldMovingMs": 0.0183696613,
+    "newMovingMs": 0.0032059222999999974,
+    "oldIdleMs": 0.0158354864,
+    "newIdleMs": 0.00022115339999999152
+  },
+  "pass": true,
+  "worstCases": [
+    {
+      "label": "normal-route-0",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-1",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-2",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-3",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-4",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-5",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-6",
+      "world": 0,
+      "pixels": 0
+    },
+    {
+      "label": "normal-route-7",
+      "world": 0,
+      "pixels": 0
+    }
+  ]
+}

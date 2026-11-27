@@ -1,0 +1,27 @@
+{
+  "scope": "CPU-only Node/Three r170 exact ray comparison; no WebGL/GPU",
+  "source": "assets/sample-lod/gate.glb",
+  "sourceSHA256": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+  "moduleSHA256": "fb752ab82cfeaae6cd9cf53737bb9287279cedfb0d3c0d5a3a977814fc0a5eec",
+  "threeRevision": "170",
+  "nodeVersion": "v24.22.3",
+  "seed": 31231,
+  "triangles": 33000,
+  "cases": 1813,
+  "fixtureCases": 600,
+  "boundaryCases": 96,
+  "mismatches": [],
+  "buildMs": 191.87019099999998,
+  "originalMs": 1832.595173,
+  "acceleratedMs": 11.698049999999967,
+  "speedup": 156.65817576433724,
+  "averageTriangleCandidates": 7.8400441257584115,
+  "averageNodes": 13.544401544401545,
+  "stats": {
+    "meshes": 1,
+    "triangles": 33000,
+    "nodes": 8191,
+    "lastCandidates": 29,
+    "lastNodes": 93
+  }
+}

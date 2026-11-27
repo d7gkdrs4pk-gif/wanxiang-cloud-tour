@@ -1,0 +1,63 @@
+{
+  "kind": "visual ground-height refinement, never XY legality",
+  "source": "sample-lod/terrain.glb",
+  "source_sha256": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+  "original_source_sha256": "3a09ab2e1160ec58c157ae8dd5584a93c0bdadea594c9b0f2f7fc426b5f91542",
+  "navigation_sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "transform": {
+    "scale": 40.90510367312228,
+    "translation": [
+      -0.0038522519948204275,
+      -10.24212401292346,
+      -0.03706268711155951
+    ],
+    "bounds": [
+      [
+        -20.0,
+        -22.643500876054166,
+        -15.598622283522333
+      ],
+      [
+        20.0,
+        2.107214533465822,
+        15.598622283522333
+      ]
+    ]
+  },
+  "origin": [
+    -10.5,
+    -9.1
+  ],
+  "step": 0.05,
+  "cols": 321,
+  "rows": 213,
+  "format": "Float32LE; NaN=invalid",
+  "bytes": 273492,
+  "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+  "sampling": "Unfiltered actual highest LOD triangle, then require world Y<=1.05 and normalY>.05",
+  "valid": 66212,
+  "missed": 0,
+  "rejected_normal": 8,
+  "rejected_high": 2153,
+  "slope_bits": {
+    "file": "slope.bits",
+    "bytes": 8480,
+    "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31",
+    "bit_order": "little",
+    "high_gradient_cells": 675,
+    "continuous_steep_cells": 58,
+    "evidence": "Actual highest center triangle normal in (.05,.8), Y<=1.05, height within .012 of four-corner interpolation"
+  },
+  "total_binary_bytes": 281972,
+  "refinement": {
+    "max_surface_y": 1.05,
+    "edge_spread": 0.18,
+    "preserve": "stairsAt and pinePatch are caller-prioritized; true ledges use nearest, no temporal Y smoothing"
+  },
+  "original_crosscheck": {
+    "samples": 294,
+    "median_absolute_difference": 0.009487626096246473,
+    "p95_absolute_difference": 0.04230386355676452,
+    "max_absolute_difference": 0.07504593854368674
+  }
+}

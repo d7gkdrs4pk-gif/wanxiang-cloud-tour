@@ -1,0 +1,383 @@
+{
+  "scope": "same Linux WebKit software renderer/DPR1 as prior H31/H32/PBR-roof benchmark; not physical iPhone",
+  "FPS": 20.449212202480723,
+  "readySeconds": 3.5809312440032954,
+  "spawn": {
+    "version": "H.32 compatible gate sample",
+    "ready": true,
+    "position": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ],
+    "rotation": -0.6,
+    "camera": [
+      2.8,
+      27.06569194048643,
+      10.8
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0,
+      "visualMs": 0,
+      "renderMs": 16
+    },
+    "startup": {
+      "version": "H.32",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795770318380,
+      "started": 1795770316190,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795770316190,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795770316194,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795770316396,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795770317109,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795770317210,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795770317930,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795770318314,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795770318380,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795770319423,
+          "progress": 1
+        }
+      ],
+      "readyAt": 1795770319423
+    },
+    "pathNodes": [],
+    "guideIndex": 0,
+    "roofCut": 0,
+    "target": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 33,
+      "triangles": 97069
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.490341503250725,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.44884717237953,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.605732714055236,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.46426544510455
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2212
+      },
+      {
+        "type": "ready",
+        "t": 3255,
+        "hero": {
+          "triangles": 16798,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H31 continuous cloth/weighted drape",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "stairs": {
+    "version": "H.32 compatible gate sample",
+    "ready": true,
+    "position": [
+      1.5936365869267597,
+      0.7115984786059228,
+      -7.0157357377401395
+    ],
+    "rotation": 4.694890670564411,
+    "camera": [
+      7.785971977901685,
+      27.561456324183204,
+      8.04429925083268
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0,
+      "visualMs": 1,
+      "renderMs": 16
+    },
+    "startup": {
+      "version": "H.32",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795770318380,
+      "started": 1795770316190,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795770316190,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795770316194,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795770316396,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795770317109,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795770317210,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795770317930,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795770318314,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795770318380,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795770319423,
+          "progress": 1
+        }
+      ],
+      "readyAt": 1795770319423
+    },
+    "pathNodes": [
+      [
+        1.5696189146056048,
+        0.7147290449907516,
+        -7.0161527181558565
+      ]
+    ],
+    "guideIndex": 0,
+    "roofCut": 0.9092820467105875,
+    "target": [
+      1.5696189146056048,
+      0.7147290449907516,
+      -7.0161527181558565
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": true,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.5398282555542053,
+        0.02880119431566222,
+        -6.474574825213955
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 32,
+      "triangles": 96725
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.52870789744142,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.511329450668946,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.68773737471028,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.40072348832632
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2212
+      },
+      {
+        "type": "ready",
+        "t": 3255,
+        "hero": {
+          "triangles": 16798,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H31 continuous cloth/weighted drape",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 10998,
+        "screen": [
+          295,
+          497
+        ],
+        "ok": true,
+        "reason": "path",
+        "adjusted": false,
+        "nodes": 2,
+        "planningMs": 4,
+        "goal": [
+          -0.005506288324071296,
+          0.12393214611274299,
+          -3.050220244507205
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 12420,
+        "screen": [
+          307,
+          316
+        ],
+        "ok": true,
+        "reason": "path",
+        "adjusted": false,
+        "nodes": 3,
+        "planningMs": 7,
+        "goal": [
+          1.5696189146056048,
+          0.7147290449907516,
+          -7.0161527181558565
+        ]
+      },
+      {
+        "type": "stairs-top",
+        "t": 14240,
+        "height": 0.6997483749769924
+      }
+    ]
+  }
+}

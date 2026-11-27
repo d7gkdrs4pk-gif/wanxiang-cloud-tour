@@ -9,7 +9,7 @@ function buildNav(model){H.fill(NaN);R.fill(0);const a=new T.Vector3(),b=new T.V
 function baseGroundAt(x,z){const terrain=terrainHeight(x,z);for(const q of corridors){const dx=x-q.ax,dz=z-q.az,t=(dx*q.ux+dz*q.uz)/q.len,side=dx*q.uz-dz*q.ux;if(t>=0&&t<=1&&Math.abs(side)<=1.65){const deck=q.ay+(q.by-q.ay)*t;const blend=Math.min(1,t*q.len/3,(1-t)*q.len/3);return terrain!==null?terrain+(deck-terrain)*blend:deck}}return terrain}function terrainHeight(x,z){if(!ready)return Math.hypot(x,z)<8?0:null;const tile=tiles.find(q=>Math.abs(x-q.x)<=20&&Math.abs(z-q.z)<=20);if(!tile)return null;const X=Math.round((x-tile.x+20)/S),Z=Math.round((z-tile.z+20)/S),k=Z*N+X;if(X<1||X>=N-1||Z<1||Z>=N-1||!R[k])return null;for(const j of [k-1,k+1,k-N,k+N])if(!R[j])return null;return H[k]}function safeGround(x,z){if(Math.hypot(x+7,z+7)<.72)return null;if(x< -10.5||x>5.5||z< -9.1||z>1.5)return null;if(x> -2.45&&x<2.45&&z< -3.65&&z> -12&&stairsAt(x,z)===null&&!(x>=2.30&&z>=-7.40&&z<=-6.90))return null;return groundAt(x,z)} function anchor(dx,dz){let best=null;for(let z=2;z<N-2;z++)for(let x=2;x<N-2;x++){const k=z*N+x;if(!R[k]||!R[k-1]||!R[k+1]||!R[k-N]||!R[k+N])continue;const X=x*S-20,Z=z*S-20,side=Math.abs(X*dz-Z*dx);if(side>2)continue;const score=X*dx+Z*dz-side*2;if(!best||score>best.score)best={x:X,z:Z,y:H[k],score}}return best}
 function connect(a,b,dx,dz){const A=anchor(dx,dz),B=anchor(-dx,-dz);if(!A||!B)return false;const ax=a.x+A.x-dx*4,az=a.z+A.z-dz*4,bx=b.x+B.x+dx*4,bz=b.z+B.z+dz*4,len=Math.hypot(bx-ax,bz-az);if(len<1)return false;const ux=(bx-ax)/len,uz=(bz-az)/len;const ay=terrainHeight(ax,az)??A.y,by=terrainHeight(bx,bz)??B.y;corridors.push({ax,az,ay,by,ux,uz,len});const mid=new T.Vector3((ax+bx)/2,(ay+by)/2-.16,(az+bz)/2);const bridge=new T.Group();bridge.name='offscreen original corridor';bridge.visible=false;s.add(bridge);bridge.position.copy(mid);bridge.quaternion.setFromUnitVectors(new T.Vector3(0,0,1),new T.Vector3(bx-ax,by-ay,bz-az).normalize());const L=Math.hypot(len,by-ay);box(0,0,0,4,.32,L,stone,bridge);for(let i=2;i<=Math.ceil(L)-2;i++){const z=-L/2+L*i/Math.ceil(L);for(const x of [-1.9,1.9])box(x,.43,z,.18,.85,.18,stone,bridge)}for(const x of [-1.9,1.9])box(x,.86,0,.19,.18,Math.max(1,L-4),stone,bridge);return true}
 
-let gateProxy=null,stepRows=[],pinePatch=null;
+let gateProxy=null,stepRows=[],pinePatch=null,surfaceProvider=null;
 const fineRay=new T.Raycaster(new T.Vector3(),new T.Vector3(0,-1,0));
 function stairsAt(x,z){
  if(!stepRows.length||x<1.35||x>2.45||z< -7.40||z> -6.90)return null;
@@ -23,7 +23,7 @@ function pineFloorAt(x,z){
  const hs=[at(ix,iz),at(ix+1,iz),at(ix,iz+1),at(ix+1,iz+1)];if(hs.every(h=>h!==null&&Number.isFinite(h)))return T.MathUtils.lerp(T.MathUtils.lerp(hs[0],hs[1],tx),T.MathUtils.lerp(hs[2],hs[3],tx),tz);
  const h=at(Math.round(X),Math.round(Z));return h!==null&&Number.isFinite(h)?h:null;
 }
-function groundAt(x,z){const step=stairsAt(x,z);if(step!==null)return step;const fine=pineFloorAt(x,z);return fine===null?baseGroundAt(x,z):fine;}
+function groundAt(x,z){const step=stairsAt(x,z);if(step!==null)return step;const fine=pineFloorAt(x,z);if(fine!==null)return fine;const legacy=baseGroundAt(x,z);if(legacy===null||!surfaceProvider)return legacy;const h=surfaceProvider(x,z,legacy);return Number.isFinite(h)?h:legacy;}
 function normalizeTerrain(model){
  model.updateMatrixWorld(true);const b=new T.Box3().setFromObject(model),size=b.getSize(new T.Vector3()),ctr=b.getCenter(new T.Vector3());
  const k=40/Math.max(size.x,size.z);model.scale.setScalar(k);model.position.set(-ctr.x*k,-b.max.y*k,-ctr.z*k);model.updateMatrixWorld(true);
@@ -63,5 +63,5 @@ function installCached(data){
  const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(v,3));geo.setIndex(I);geo.computeVertexNormals();gateProxy=new T.Mesh(geo,new T.MeshBasicMaterial({side:T.DoubleSide}));gateProxy.updateMatrixWorld(true);
  return {regions:tiles.length,bridges:corridors.length,steps:[2.25,2.05,1.85,1.70,1.45].map(x=>({x,z:-7,y:stairsAt(x,-7)}))};
 }
-return {tiles,corridors,groundAt,safeGround,terrainHeight,baseGroundAt,stairsAt,pineFloorAt,normalizeTerrain,installTerrain,installCached,installGateSteps,pick,get ready(){return ready},get gateProxy(){return gateProxy},get grid(){return {H,R,N,S}}};
+return {setSurfaceProvider(fn){surfaceProvider=fn;},tiles,corridors,groundAt,safeGround,terrainHeight,baseGroundAt,stairsAt,pineFloorAt,normalizeTerrain,installTerrain,installCached,installGateSteps,pick,get ready(){return ready},get gateProxy(){return gateProxy},get grid(){return {H,R,N,S}}};
 }

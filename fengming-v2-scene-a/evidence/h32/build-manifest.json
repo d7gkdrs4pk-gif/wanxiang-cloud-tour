@@ -1,0 +1,176 @@
+{
+  "version": "H.32",
+  "baselineCommit": "c0fdc9aaf53ac6378b261caf44aee840bddb23ac",
+  "formalH29IndexGitBlob": "82e9ce953fc1954c7408ebbc835dbab37098aa64",
+  "build": {
+    "version": "H.32",
+    "sha256": "7227555ee88151a29d8689b40ffcc6959694e1f92cb153696dc1e07bcdb76bb2",
+    "bytes": 1747296,
+    "format": "classic IIFE",
+    "target": "Safari 15+",
+    "three": "0.170.0",
+    "runtimeImports": 0
+  },
+  "files": {
+    "assets/gate-032/README.md": {
+      "bytes": 4277,
+      "sha256": "375254e00962aaa45ecb0c30734546ed2476b513f62ec11fd9db67c769c92fb9"
+    },
+    "assets/gate-032/candidate-structure.json": {
+      "bytes": 1221,
+      "sha256": "6815d67e1de204cc68849bf49a5ca6a39de1594ae7e7be6db0771ab00ef27ae0"
+    },
+    "assets/hero-001/H30_README.md": {
+      "bytes": 2535,
+      "sha256": "a062eb15652f1279de05edf17915b3a69cc62e9e86f4ffccb122a82c84bc5d0a"
+    },
+    "assets/hero-001/README.md": {
+      "bytes": 4362,
+      "sha256": "30190cdf1ff01845dfdba01f43ead7263181f11f04974cf67141f930be32c69d"
+    },
+    "assets/hero-001/linyan-h31-baked.js": {
+      "bytes": 1061920,
+      "sha256": "b3e55f7d328db40bc091a54d61dfa7cad983b855817e63d8e872e1d20bfd21e4"
+    },
+    "assets/hero-001/manifest.json": {
+      "bytes": 8227,
+      "sha256": "71306734d4036a13b04db38b602b242b07003d21373ee7bed03f21b7690e336a"
+    },
+    "assets/sample-ground/README.md": {
+      "bytes": 1576,
+      "sha256": "1f8f0fead0c2f81c0a9883e5a4d04edbaa82d45c2a9a8833a7c2c02e6bd0e084"
+    },
+    "assets/sample-ground/height.f32": {
+      "bytes": 273492,
+      "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df"
+    },
+    "assets/sample-ground/metadata.json": {
+      "bytes": 1944,
+      "sha256": "b4db6a26a1252e59a581e2b2ba7bef60f6e1236b792b1924c3ecaa74cef7da7e"
+    },
+    "assets/sample-ground/slope.bits": {
+      "bytes": 8480,
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31"
+    },
+    "assets/sample-ground/validation.json": {
+      "bytes": 10419,
+      "sha256": "3185f171fa4e62a2a7f37a895b60d36a9714b4684ff0bafc6746eee94645d9b1"
+    },
+    "assets/sample-runtime/gate.glb": {
+      "bytes": 1332728,
+      "sha256": "ab35c4ea6cd9bfb308ff36aaf1c99e025e30d8be6c1fd2bd54eabcb69cac340d"
+    },
+    "assets/sample-runtime/manifest.json": {
+      "bytes": 3519,
+      "sha256": "c4912c39a1f354d2891fa83d708dc6c1023e7f923bd6ea512de6b642d8cfc89c"
+    },
+    "assets/sample-runtime/mountain-atlas.webp": {
+      "bytes": 1185072,
+      "sha256": "26ff78d818605aafda582c84fc8104dd88c85aa3039f3733a975e0939f8e3590"
+    },
+    "assets/sample-runtime/pine-atlas.webp": {
+      "bytes": 1139234,
+      "sha256": "ac6c8890f7a6e13337e0921ebfc74ad872171a9945858e2697f719e87976fb28"
+    },
+    "assets/sample-runtime/stone-atlas.webp": {
+      "bytes": 1426492,
+      "sha256": "609e77f923a47990ef1ae1a5cfd91a593c5eae77cd46a7b8dcda409868c3c559"
+    },
+    "assets/sample-runtime/terrain.glb": {
+      "bytes": 816528,
+      "sha256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330"
+    },
+    "gate-h32.html": {
+      "bytes": 6097,
+      "sha256": "8a4e2570c5a18c3b200a4300ecaaa6c1ab65984d59a7101e7b8b7389aa28a218"
+    },
+    "package-lock.json": {
+      "bytes": 14518,
+      "sha256": "0f2f0578c5180151bc5f3cbdb0b4d57d86914914aebcc5cf9e87405f94f2d4d9"
+    },
+    "package.json": {
+      "bytes": 192,
+      "sha256": "a311d3914c16cb78af41fc2dafa8ce062d368f9ecbd48869f56f62f63a5f595a"
+    },
+    "sample/dist/build.json": {
+      "bytes": 223,
+      "sha256": "16609276bfa1d064f490a69e59930be411c29fbefe1a348226958e91ec09219e"
+    },
+    "sample/dist/game-h32.js": {
+      "bytes": 1747296,
+      "sha256": "7227555ee88151a29d8689b40ffcc6959694e1f92cb153696dc1e07bcdb76bb2"
+    },
+    "sample/enemy.js": {
+      "bytes": 14332,
+      "sha256": "0b2d6752a500198fa6a6789082e3b8849c4886c888b699dd4a2b357d4a5f507f"
+    },
+    "sample/environment.js": {
+      "bytes": 16440,
+      "sha256": "775a2096aa377025ca0c7bdffc1fedfef935f6e41931fedd38bbcadf05be8a7e"
+    },
+    "sample/gate-roof-finish.js": {
+      "bytes": 17065,
+      "sha256": "9278c610c224e0614906d05be8890f2e40c0de374d4434876cddda45139eb574"
+    },
+    "sample/ground-surface.js": {
+      "bytes": 2554,
+      "sha256": "3ce6f5cd2103ecc3b80836606ca6b9f3806c92b539c262726269cbb6cf1127cf"
+    },
+    "sample/hero.js": {
+      "bytes": 8815,
+      "sha256": "98d51564ec6620ce7438d60efe2c5ca709075ff427b52d7812c0a42d3931c565"
+    },
+    "sample/launch.js": {
+      "bytes": 3877,
+      "sha256": "3beb45848cee4905d96ffbdb0712ac34a6aba4941fa103f1a38e1c676c2c2882"
+    },
+    "sample/main.js": {
+      "bytes": 23009,
+      "sha256": "0e4a898ced69d3afb2af007edc86cda0e8c989074097e4f4bd3f9f816cd83aa3"
+    },
+    "sample/navigation.js": {
+      "bytes": 10182,
+      "sha256": "383f4adc9dad7dd41729da052ef88852f438032282dd9a320d1fe6f26fb690b5"
+    },
+    "sample/path-planner.js": {
+      "bytes": 8558,
+      "sha256": "d572cabe5728a7bb7d2d92efaf85c2ab2583d66cbe6fabb9d06b028d37b7b35b"
+    },
+    "sample/pine-layers.js": {
+      "bytes": 16769,
+      "sha256": "15c0d462a2b2324dad8fda78e4d3f9aa1128b1603edb08c438f15843016b945a"
+    },
+    "sample/roof-occlusion.js": {
+      "bytes": 5697,
+      "sha256": "fb752ab82cfeaae6cd9cf53737bb9287279cedfb0d3c0d5a3a977814fc0a5eec"
+    },
+    "sample/sample.css": {
+      "bytes": 5043,
+      "sha256": "feda8f1e245406cdb231695b34fff25f8015fca09fa5ead12488d00cd3279786"
+    },
+    "sample/scene-dressing.js": {
+      "bytes": 5220,
+      "sha256": "765201cad2634ebe80d9fe5f8aa6fa7f3ecf25cb74a92c28a46f5296d063b059"
+    },
+    "sample-gate.html": {
+      "bytes": 6097,
+      "sha256": "8a4e2570c5a18c3b200a4300ecaaa6c1ab65984d59a7101e7b8b7389aa28a218"
+    },
+    "tools/build-sample.mjs": {
+      "bytes": 2137,
+      "sha256": "0f6e2feb38d4f5e3e8507442e6899b1c7410dce8eac13c4660d0c6527dee0fc0"
+    },
+    "tools/pack-runtime-assets.py": {
+      "bytes": 4976,
+      "sha256": "d772a77c973b266a18d8204f83fc0a993761f11ffd27dd54b6aefd1b96de09fd"
+    },
+    "tools/record-playtest.py": {
+      "bytes": 6636,
+      "sha256": "e7919e6eeeb6ee2de28534934819eed4adadc341fb9d5695d0410c17925f53ff"
+    },
+    "tools/test-startup.py": {
+      "bytes": 7903,
+      "sha256": "7675aa76a11c4428399fb94c5cc8e6e787dba5099378bf5cfb85f9c4aeafcab9"
+    }
+  }
+}

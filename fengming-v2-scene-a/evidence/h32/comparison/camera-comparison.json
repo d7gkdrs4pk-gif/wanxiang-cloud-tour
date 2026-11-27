@@ -1,0 +1,629 @@
+{
+  "environment": "Cloud Linux WebKit26.5 WPE, 390x844 DPR1, software renderer; not physical iPhone or WeChat device",
+  "physicalIPhone": false,
+  "wechatDeviceTest": false,
+  "readOnlyCapture": true,
+  "versions": [
+    {
+      "version": "H31",
+      "url": "http://127.0.0.1:3000/h31-compare.html",
+      "elapsedReadyAndCaptureSeconds": 3.0625397830008296,
+      "snapshotBeforeCapture": {
+        "version": "H.31 painted gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 31,
+          "triangles": 86608
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1652
+          },
+          {
+            "type": "ready",
+            "t": 1652,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "snapshotAfterCapture": {
+        "version": "H.31 painted gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 31,
+          "triangles": 86608
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1652
+          },
+          {
+            "type": "ready",
+            "t": 1652,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "projection": {
+        "base": [
+          194.99999999999997,
+          422.0000000000003
+        ],
+        "top": [
+          194.99999999999997,
+          391.90250993786674
+        ],
+        "referenceHeightPixels": 30.097490062133545
+      },
+      "device": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+        "viewport": [
+          390,
+          844
+        ],
+        "devicePixelRatio": 1,
+        "canvas": [
+          390,
+          844
+        ],
+        "renderer": "Apple GPU",
+        "debugPanelHidden": true,
+        "loadingHidden": true
+      },
+      "errors": [],
+      "failedRequests": [],
+      "capture": "native viewport screenshot; no teleport; no camera/scale/runtime changes"
+    },
+    {
+      "version": "H32",
+      "url": "http://127.0.0.1:3000/gate-h32.html",
+      "elapsedReadyAndCaptureSeconds": 3.5344517169978644,
+      "snapshotBeforeCapture": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "startup": {
+          "version": "H.32",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795771845873,
+          "started": 1795771844226,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795771844226,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795771844227,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795771844335,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795771844857,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795771844966,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795771845390,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795771845808,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795771845873,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795771846448,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+          "readyAt": 1795771846448
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 97069
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1697
+          },
+          {
+            "type": "ready",
+            "t": 2272,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "snapshotAfterCapture": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "startup": {
+          "version": "H.32",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795771845873,
+          "started": 1795771844226,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795771844226,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795771844227,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795771844335,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795771844857,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795771844966,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795771845390,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795771845808,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795771845873,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795771846448,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+          "readyAt": 1795771846448
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 97069
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1697
+          },
+          {
+            "type": "ready",
+            "t": 2272,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "projection": {
+        "base": [
+          194.99999999999994,
+          422.0000000000003
+        ],
+        "top": [
+          194.99999999999994,
+          391.9025099378668
+        ],
+        "referenceHeightPixels": 30.097490062133488
+      },
+      "device": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+        "viewport": [
+          390,
+          844
+        ],
+        "devicePixelRatio": 1,
+        "canvas": [
+          390,
+          844
+        ],
+        "renderer": "Apple GPU",
+        "debugPanelHidden": true,
+        "loadingHidden": true
+      },
+      "errors": [],
+      "failedRequests": [],
+      "capture": "native viewport screenshot; no teleport; no camera/scale/runtime changes"
+    }
+  ],
+  "comparison": {
+    "sameXZ": true,
+    "sameHeading": true,
+    "sameFOV": true,
+    "sameHeroReferenceHeight": true,
+    "sameNormalCameraOffset": true,
+    "groundYDeltaH32MinusH31": -0.012721963226795224,
+    "cameraPositionDeltaH32MinusH31": [
+      0.0,
+      -0.012721963226795197,
+      0.0
+    ],
+    "cameraMatricesIdenticalClaimed": false,
+    "note": "H32 terrain height-cache correction changes birth ground Y and follow-camera Y by approximately 0.01272. XZ, heading, FOV39, camera offset6/27/15 and hero reference height1.485 remain equal; world camera matrices are not numerically identical."
+  }
+}

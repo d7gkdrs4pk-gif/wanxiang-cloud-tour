@@ -1,6 +1,13 @@
-# 凤鸣山门｜项目状态 V1.32
+# 凤鸣山门｜项目状态 V1.33
 当前正式母版：main:fengming-v2-scene-a/index.html
 版本：V2.0 H.29，游戏入口 blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。
+
+
+H.32／载入与走位修复（2026-11-27）：用户反馈H.31视觉粗糙、动作卡顿，iPhone其他浏览器或ChatGPT内打开时一直停在“正入山境”；**H.31未获美术通过**。本轮在同一工程修订可玩样关，正式完整H.29 index.html原文件仍保留。当前样关使用全新文件名以避开旧预览缓存：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h32.html 。sample-gate.html同步为H.32；H.31源与旧载入链路独立保留在h31-compare.html、sample-h31/；H.29对照h29-compare.html继续可用。
+
+实际修复：启动从importmap/runtime ES modules改为本地Three单一classic bundle；内联启动器与同源外部fallback、分阶段进度、20秒协助、错误/资源失败/图形上下文丢失恢复界面，载入结束立即释放触控。人物几何离线预生成，保留原网格/骨骼/动作；去掉运行时造型计算。屋檐遮挡查询改等价BVH，视觉更新每渲染帧仅一次，地图/松冠纹理无损WebP；点击寻路和不可通行反馈。实际地形细高度替代粗网格取整造成的假顿跳，原合法通行掩码、松旁细补丁/真石阶不变。新制连续瓦面、压檐与木构，保留21403个真实低层三角；重PBR候选因云端掉帧退回，默认轻量受光版。原XZ出生位/朝向、FOV39、跟随偏移(6,27,15)、人物1.485比例保持，出生Y因贴地修正低0.01272；未放大角色或拉近镜头。
+
+最终11.80秒原速连续触屏录像已完整走近古松→穿枝→登真实侧阶→回身普通挥剑命中→收势；四项标记true，敌生命3→2、最终脚高.706984，JS错误0/失败请求0。录制环境是**云Linux WebKit26.5/WPE、390×844 DPR1、强制软件渲染**，实测18.5169FPS、帧间隔中位53ms/p95 73ms；视频编码25FPS，不当作游戏FPS。WPE兼容字符串会报告Mac Safari/Apple GPU，并非物理Apple设备。另测Chromium156/SwiftShader启动、移动、普通攻击通过。11种兼容/故障注入通过，包括无importmap旧版故障复现、下载失败重试、无JS提示、外部/内联启动分别受阻、上下文丢失等；**受控复现不是已证实用户手机的唯一根因**。未实测iPhone/ChatGPT原生窗口/微信真机，不能宣称手机流畅或Frog Ferry／Slackwater美术完成度通过。完整证据evidence/h32/，报告project/SAMPLE_H32_QA.md。
 
 H.31／美术方向重修（2026-11-27）：用户明确 H.30 “画面太粗糙”，主要对照为 Frog Ferry／Slackwater，**H.30美术不通过**，技术走通不等于完成度达标。本轮实际查看官方普通手机实机与Slackwater原30秒演示，再重修同一可玩样关。当前样版：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/sample-gate.html?v=h31 。H.30独立留档试玩：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h30-compare.html?v=h30 。H.29完整正式index.html原文件与h29-compare.html均保留。
 

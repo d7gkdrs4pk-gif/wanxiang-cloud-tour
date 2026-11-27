@@ -1,0 +1,208 @@
+{
+  "scope": "Linux Chromium156/SwiftShader; browser touch simulation, not physical phone",
+  "startupSeconds": 3.5696271999986493,
+  "errors": [],
+  "final": {
+    "version": "H.32 compatible gate sample",
+    "ready": true,
+    "position": [
+      -5.100014041996739,
+      0.13397984086112394,
+      -4.400026735268968
+    ],
+    "rotation": -1.675287928100896,
+    "camera": [
+      0.9057720866862463,
+      27.133667105339423,
+      10.60058240782404
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0.3999999985098839,
+      "visualMs": 0.19999999925494194,
+      "renderMs": 1.6000000014901161
+    },
+    "startup": {
+      "version": "H.32",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795771429724,
+      "started": 1795771426978,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795771426978,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795771426980,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795771427067,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795771427900,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795771427987,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795771429477,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795771429711,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795771429724,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795771430171,
+          "progress": 1
+        }
+      ],
+      "appSource": "http://127.0.0.1:3000/sample/dist/game-h32.js?v=7227555ee881",
+      "readyAt": 1795771430171
+    },
+    "pathNodes": [],
+    "guideIndex": 1,
+    "roofCut": 0,
+    "target": [
+      -5.100014041996739,
+      0.13397984086112394,
+      -4.400026735268968
+    ],
+    "flags": {
+      "nearPine": true,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 33,
+      "triangles": 97069
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.097128195560366,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.050894074337656,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.20394264287165,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.465390850668804
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2795.300000000745
+      },
+      {
+        "type": "ready",
+        "t": 3242.10000000149,
+        "hero": {
+          "triangles": 16798,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H31 continuous cloth/weighted drape",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.3,
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 4680.900000002235,
+        "screen": [
+          131.80029296875,
+          392.08233642578125
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 2.600000001490116,
+        "goal": [
+          -5.100014041996739,
+          0.13397984086112394,
+          -4.400026735268968
+        ]
+      },
+      {
+        "type": "near-pine",
+        "t": 5238.900000002235
+      },
+      {
+        "type": "swing-start",
+        "t": 5634,
+        "p": [
+          -5.100014041996739,
+          0.13397984086112394,
+          -4.400026735268968
+        ],
+        "facing": -1.675287928100896,
+        "aim": -1.675287928100896
+      },
+      {
+        "type": "swing-recovered",
+        "t": 6514.5
+      }
+    ]
+  }
+}

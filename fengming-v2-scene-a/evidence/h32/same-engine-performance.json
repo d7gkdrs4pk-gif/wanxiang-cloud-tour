@@ -1,0 +1,471 @@
+{
+  "scope": "same cloud Linux WebKit26.5/WPE software renderer; 390x844 DPR1 original FOV39/scale; six-second static warmed windows, serial fresh contexts; not physical iPhone",
+  "rows": [
+    {
+      "version": "H31",
+      "url": "h31-compare.html",
+      "readySeconds": 2.5676636440002767,
+      "frames": 117,
+      "spanSeconds": 5.936,
+      "FPS": 19.54177897574124,
+      "medianFrameMs": 49.0,
+      "p95FrameMs": 65,
+      "errors": [],
+      "snapshot": {
+        "version": "H.31 painted gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 31,
+          "triangles": 86608
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1984
+          },
+          {
+            "type": "ready",
+            "t": 1984,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "version": "H32",
+      "url": "gate-h32.html",
+      "readySeconds": 1.9925094229984097,
+      "frames": 143,
+      "spanSeconds": 5.967,
+      "FPS": 23.797553209317915,
+      "medianFrameMs": 41.0,
+      "p95FrameMs": 54,
+      "errors": [],
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 11
+        },
+        "startup": {
+          "version": "H.32",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795769373685,
+          "started": 1795769372506,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795769372506,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795769372506,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795769372649,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795769373110,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795769373204,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795769373432,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795769373668,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795769373685,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795769374171,
+              "progress": 1
+            }
+          ],
+          "readyAt": 1795769374171
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 86604
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1190
+          },
+          {
+            "type": "ready",
+            "t": 1675,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "version": "H32-clean-roof",
+      "url": "gate-h32.html?roofFinish=1",
+      "readySeconds": 2.701693556999089,
+      "frames": 95,
+      "spanSeconds": 5.963,
+      "FPS": 15.763877242998491,
+      "medianFrameMs": 62.0,
+      "p95FrameMs": 77,
+      "errors": [],
+      "snapshot": {
+        "version": "H.32 compatible gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "startup": {
+          "version": "H.32",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795769383164,
+          "started": 1795769381760,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795769381760,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795769381760,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795769381894,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795769382355,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795769382465,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795769382700,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795769383094,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795769383164,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795769384110,
+              "progress": 1
+            }
+          ],
+          "readyAt": 1795769384110
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 97069
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1413
+          },
+          {
+            "type": "ready",
+            "t": 2359,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "status": "passed",
+  "scope": "Pure CPU provider and actual source-LOD comparison, no temporal smoothing, unchanged navigation masks",
+  "cacheBytes": 281972,
+  "totalXY": 68373,
+  "legalChanged": 0,
+  "stairsChanged": 0,
+  "pineChanged": 0,
+  "providerBenchmarkMs": 41.677396,
+  "averageMicroseconds": 0.6095592704722624,
+  "routes": [
+    {
+      "name": "spawn-near-pine",
+      "samples": 97,
+      "old": {
+        "max": 0.04799060523509979,
+        "p95": 0.005110498517751694,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "refined": {
+        "max": 0.001684478341808765,
+        "p95": 0.00163604055220877,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "actualLOD": {
+        "max": 0.0016360387795433529,
+        "p95": 0.0016360387795432557,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "events": []
+    },
+    {
+      "name": "pine-front",
+      "samples": 116,
+      "old": {
+        "max": 0.2411957010626793,
+        "p95": 0.000857410434782574,
+        "over05": 1,
+        "over10": 1,
+        "over18": 1
+      },
+      "refined": {
+        "max": 0.1840834692120552,
+        "p95": 0.002805281631888243,
+        "over05": 1,
+        "over10": 1,
+        "over18": 1
+      },
+      "actualLOD": {
+        "max": 0.13469033977001074,
+        "p95": 0.0020401456496800113,
+        "over05": 1,
+        "over10": 1,
+        "over18": 0
+      },
+      "events": [
+        {
+          "sourceSpanWithinSixCm": 0.012240873898079485,
+          "at": [
+            -5.256521739130434,
+            -4.765217391304348
+          ],
+          "oldJump": 0.2411957010626793,
+          "refinedJump": 0.0020401471087071743,
+          "sourceJump": 0.002040145649679845
+        },
+        {
+          "sourceSpanWithinSixCm": 0.1959913722604114,
+          "at": [
+            -5.311304347826087,
+            -4.89304347826087
+          ],
+          "oldJump": 0,
+          "refinedJump": 0.1840834692120552,
+          "sourceJump": 0.13469033977001074
+        }
+      ]
+    },
+    {
+      "name": "front-west",
+      "samples": 227,
+      "old": {
+        "max": 0.1992155984044075,
+        "p95": 0.004158710178128258,
+        "over05": 4,
+        "over10": 3,
+        "over18": 1
+      },
+      "refined": {
+        "max": 0.04051344152850701,
+        "p95": 0.011046455837701669,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "actualLOD": {
+        "max": 0.12959699422139004,
+        "p95": 0.010943805696566673,
+        "over05": 1,
+        "over10": 1,
+        "over18": 0
+      },
+      "events": [
+        {
+          "sourceSpanWithinSixCm": 0.002081756738535112,
+          "at": [
+            -4.742477876106195,
+            -5.003982300884956
+          ],
+          "oldJump": 0.10763579746708274,
+          "refinedJump": 0.0003469603844975938,
+          "sourceJump": 0.00034695945642253256
+        },
+        {
+          "sourceSpanWithinSixCm": 0.03027043396375089,
+          "at": [
+            -4.524336283185841,
+            -4.744469026548672
+          ],
+          "oldJump": 0.061529597733169794,
+          "refinedJump": 0.0055890361445774285,
+          "sourceJump": 0.004819732679668769
+        },
+        {
+          "sourceSpanWithinSixCm": 0.0063160225038493,
+          "at": [
+            -3.677433628318584,
+            -3.736946902654867
+          ],
+          "oldJump": 0.1992155984044075,
+          "refinedJump": 0.0010526706753051368,
+          "sourceJump": 0.0010526704173081797
+        },
+        {
+          "sourceSpanWithinSixCm": 0.0007892983338061293,
+          "at": [
+            -3.241150442477876,
+            -3.2179203539823007
+          ],
+          "oldJump": 0.16348668932914734,
+          "refinedJump": 0.00011462203843805308,
+          "sourceJump": 0.00013562987779283664
+        }
+      ]
+    },
+    {
+      "name": "front-west-center",
+      "samples": 156,
+      "old": {
+        "max": 0.01230970025062561,
+        "p95": 0,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "refined": {
+        "max": 0.003763216733932803,
+        "p95": 0.001001575589180001,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "actualLOD": {
+        "max": 0.007003558271039226,
+        "p95": 0.0010015739462705259,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "events": []
+    },
+    {
+      "name": "front-center-east",
+      "samples": 156,
+      "old": {
+        "max": 0.3507974147796631,
+        "p95": 0,
+        "over05": 2,
+        "over10": 2,
+        "over18": 2
+      },
+      "refined": {
+        "max": 0.22577805817127228,
+        "p95": 0.013328087329864569,
+        "over05": 1,
+        "over10": 1,
+        "over18": 1
+      },
+      "actualLOD": {
+        "max": 0.16927817445414528,
+        "p95": 0.02856471525340082,
+        "over05": 1,
+        "over10": 1,
+        "over18": 0
+      },
+      "events": [
+        {
+          "sourceSpanWithinSixCm": 0.18985857700709408,
+          "at": [
+            0.76,
+            -3.05
+          ],
+          "oldJump": 0.3507974147796631,
+          "refinedJump": 0.0290266662836067,
+          "sourceJump": 0.04472524482208037
+        },
+        {
+          "sourceSpanWithinSixCm": 0.0024127896828610718,
+          "at": [
+            2.26,
+            -3.05
+          ],
+          "oldJump": 0.27169179916381836,
+          "refinedJump": 0.00014368295669553444,
+          "sourceJump": 0.00028220023919189874
+        },
+        {
+          "sourceSpanWithinSixCm": 0.25058446279550717,
+          "at": [
+            2.44,
+            -3.05
+          ],
+          "oldJump": 0,
+          "refinedJump": 0.22577805817127228,
+          "sourceJump": 0.028564715253400763
+        }
+      ]
+    },
+    {
+      "name": "side-approach",
+      "samples": 179,
+      "old": {
+        "max": 0.028227299451828003,
+        "p95": 0,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "refined": {
+        "max": 0.0017019311866064285,
+        "p95": 0.0014635106820738986,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "actualLOD": {
+        "max": 0.004870288107743592,
+        "p95": 0.0014635071554834622,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "events": []
+    },
+    {
+      "name": "plain-paving-wide",
+      "samples": 301,
+      "old": {
+        "max": 0.17517120018601418,
+        "p95": 0,
+        "over05": 3,
+        "over10": 2,
+        "over18": 0
+      },
+      "refined": {
+        "max": 0.017103037238121274,
+        "p95": 0.006470826268196561,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "actualLOD": {
+        "max": 0.02029247139118326,
+        "p95": 0.007708907275541771,
+        "over05": 0,
+        "over10": 0,
+        "over18": 0
+      },
+      "events": [
+        {
+          "sourceSpanWithinSixCm": 0.028614505020425576,
+          "at": [
+            -0.7400000000000002,
+            -2
+          ],
+          "oldJump": 0.10913710109889507,
+          "refinedJump": 0.005658203363418671,
+          "sourceJump": 0.010366229690329104
+        },
+        {
+          "sourceSpanWithinSixCm": 0.0007124184410848833,
+          "at": [
+            1.7599999999999998,
+            -2
+          ],
+          "oldJump": 0.076517004519701,
+          "refinedJump": 0.0001315563917159701,
+          "sourceJump": 5.464502967789109e-05
+        },
+        {
+          "sourceSpanWithinSixCm": 0.007432936303611581,
+          "at": [
+            2.26,
+            -2
+          ],
+          "oldJump": 0.17517120018601418,
+          "refinedJump": 0.0012388229370117188,
+          "sourceJump": 0.0012388227172685506
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "replaced": 52413,
+    "fallback": 12,
+    "edges": 232,
+    "continuousSlopes": 12
+  },
+  "source": {
+    "kind": "visual ground-height refinement, never XY legality",
+    "source": "sample-lod/terrain.glb",
+    "source_sha256": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+    "original_source_sha256": "3a09ab2e1160ec58c157ae8dd5584a93c0bdadea594c9b0f2f7fc426b5f91542",
+    "navigation_sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+    "transform": {
+      "scale": 40.90510367312228,
+      "translation": [
+        -0.0038522519948204275,
+        -10.24212401292346,
+        -0.03706268711155951
+      ],
+      "bounds": [
+        [
+          -20.0,
+          -22.643500876054166,
+          -15.598622283522333
+        ],
+        [
+          20.0,
+          2.107214533465822,
+          15.598622283522333
+        ]
+      ]
+    },
+    "origin": [
+      -10.5,
+      -9.1
+    ],
+    "step": 0.05,
+    "cols": 321,
+    "rows": 213,
+    "format": "Float32LE; NaN=invalid",
+    "bytes": 273492,
+    "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+    "sampling": "Unfiltered actual highest LOD triangle, then require world Y<=1.05 and normalY>.05",
+    "valid": 66212,
+    "missed": 0,
+    "rejected_normal": 8,
+    "rejected_high": 2153,
+    "slope_bits": {
+      "file": "slope.bits",
+      "bytes": 8480,
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31",
+      "bit_order": "little",
+      "high_gradient_cells": 675,
+      "continuous_steep_cells": 58,
+      "evidence": "Actual highest center triangle normal in (.05,.8), Y<=1.05, height within .012 of four-corner interpolation"
+    },
+    "total_binary_bytes": 281972,
+    "refinement": {
+      "max_surface_y": 1.05,
+      "edge_spread": 0.18,
+      "preserve": "stairsAt and pinePatch are caller-prioritized; true ledges use nearest, no temporal Y smoothing"
+    },
+    "original_crosscheck": {
+      "samples": 294,
+      "median_absolute_difference": 0.009487626096246473,
+      "p95_absolute_difference": 0.04230386355676452,
+      "max_absolute_difference": 0.07504593854368674
+    }
+  },
+  "rebuild_byte_identical": true,
+  "file_sha256": {
+    "height.f32": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+    "slope.bits": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31",
+    "metadata.json": "b4db6a26a1252e59a581e2b2ba7bef60f6e1236b792b1924c3ecaa74cef7da7e"
+  },
+  "unchanged_navigation_sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac"
+}

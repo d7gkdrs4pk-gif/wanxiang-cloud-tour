@@ -3,3 +3,9 @@
 #objective{left:18px;right:auto;top:auto;bottom:115px;max-width:62vw;text-align:left;font-size:13px;letter-spacing:1px;color:#d7dfd1;text-shadow:0 2px 6px #102b35,0 0 12px #102b35}
 /* H31 restrained jade-and-parchment controls, same touch targets. */
 #hud{top:max(17px,env(safe-area-inset-top));text-shadow:0 1px 4px #152e2acc}.brand{font-size:16px;color:#f0e3c6;letter-spacing:3px}.brand span{color:#d4dac6;letter-spacing:2px}.vitals{margin-top:10px;gap:9px;color:#ede4cf}.vitals i{height:4px;background:#18362fe0;box-shadow:0 0 0 1px #d4d5ad22}.vitals b{background:linear-gradient(90deg,#c0b378,#e0cb8a)}#reset{border-color:#d4d2b43d;background:#1e3f36b3;color:#e4dfc9;backdrop-filter:blur(6px)}#strike{border-color:#d9c497;background:radial-gradient(circle at 38% 25%,#7b8068e8,#304c3fe8 72%);color:#f9e8ba;box-shadow:0 5px 18px #122d2566,inset 0 0 0 4px #abc1b31a,inset 0 1px 2px #f4e3b333;text-shadow:0 1px 3px #182a24;font-weight:500}#phoenix{border-color:#bea97866;background:#29483fbb;color:#ded0a0}#hint{color:#d2d7c1;text-shadow:0 1px 4px #18392c}#objective{color:#ede5cd;text-shadow:0 2px 6px #17382b,0 0 12px #17382b}
+
+#load-progress{width:150px;height:5px;margin:12px 0 4px;accent-color:#bca875}.load-actions{display:flex;gap:10px;margin:16px 0}.load-actions button{padding:9px 16px;border:1px solid #a8b498;border-radius:6px;background:#3c554a;color:#ece4cf}#load-address,#loading noscript a{color:#e6d1a5;font-size:13px}#loading noscript p{max-width:80vw;line-height:1.7;text-align:center}#loading [hidden]{display:none!important}
+
+#loading[hidden]{display:none!important}
+
+#load-version{font-size:11px;letter-spacing:2px;color:#b5bea9;margin:2px 0 6px}

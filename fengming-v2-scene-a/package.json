@@ -1,0 +1,11 @@
+{
+  "name": "fengming-gate-sample",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-sample.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

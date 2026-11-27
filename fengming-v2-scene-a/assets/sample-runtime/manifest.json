@@ -1,0 +1,103 @@
+{
+  "models": {
+    "terrain": {
+      "source": "assets/sample-lod/terrain.glb",
+      "sourceSHA256": "81610e33c233130f36e0ae29e4e4431e7b61b87d30abadcf95c68e0b59e203bb",
+      "runtimeSHA256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330",
+      "beforeBytes": 1681172,
+      "afterBytes": 816528,
+      "geometryViewsByteIdentical": true,
+      "views": [
+        {
+          "oldView": 0,
+          "sha256": "81cad158b42c56e1daaadceae5d476ac5ddd8055d9a50fe0b065ca1810366e9f",
+          "bytes": 238224
+        },
+        {
+          "oldView": 1,
+          "sha256": "c360b051fc51a379165812b535d2f8e58734301feec4d204a8a965d9eb5003f2",
+          "bytes": 238224
+        },
+        {
+          "oldView": 2,
+          "sha256": "10eb196943db0cc1560bc888bb6072873a15ec8f39f6b83de74a152605a8886b",
+          "bytes": 158816
+        },
+        {
+          "oldView": 3,
+          "sha256": "0792ae886537cdc392b0f121b44887a250a62255e3810c67a1b4e96dca83675f",
+          "bytes": 180000
+        }
+      ],
+      "keptColorImages": 0
+    },
+    "gate": {
+      "source": "assets/sample-lod/gate.glb",
+      "sourceSHA256": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+      "runtimeSHA256": "ab35c4ea6cd9bfb308ff36aaf1c99e025e30d8be6c1fd2bd54eabcb69cac340d",
+      "beforeBytes": 1969984,
+      "afterBytes": 1332728,
+      "geometryViewsByteIdentical": true,
+      "views": [
+        {
+          "oldView": 0,
+          "sha256": "550bd1565f39d2b33e846d7300700d2746dd39bb70a62ab3f7cdffe1460fa301",
+          "bytes": 306840
+        },
+        {
+          "oldView": 1,
+          "sha256": "c6148c41127566e7a0ff0dda811e56b7fc0f0f6b423d9ee207ad611b10885115",
+          "bytes": 306840
+        },
+        {
+          "oldView": 2,
+          "sha256": "79b7b245d2e6b0887ec9f84e272010f34be69f01e514b199036d245d92b34e4b",
+          "bytes": 204560
+        },
+        {
+          "oldView": 3,
+          "sha256": "96f7fcf4d70d1d20cba0e1507cd84f3e0ff493040baab360e22a704d24298eb5",
+          "bytes": 198000
+        },
+        {
+          "oldView": 5,
+          "sha256": "cbcfafea1c118eb3094af418dc91d2a4dbffda626176b8b41f6b5497dac7a282",
+          "bytes": 314993
+        }
+      ],
+      "keptColorImages": 1
+    }
+  },
+  "images": {
+    "stone-atlas.webp": {
+      "source": "assets/environment-031/stone-atlas.png",
+      "beforeBytes": 2042358,
+      "afterBytes": 1426492,
+      "width": 1774,
+      "height": 887,
+      "decodedRGBAIdentical": true,
+      "decodedRGBASHA256": "9d9f82d3c1780321daefc9cd00403c2784e6484965779a0992688bd981ee0d56",
+      "runtimeSHA256": "609e77f923a47990ef1ae1a5cfd91a593c5eae77cd46a7b8dcda409868c3c559"
+    },
+    "mountain-atlas.webp": {
+      "source": "assets/environment-031/mountain-atlas.png",
+      "beforeBytes": 1884414,
+      "afterBytes": 1185072,
+      "width": 1774,
+      "height": 887,
+      "decodedRGBAIdentical": true,
+      "decodedRGBASHA256": "d17696fa6c14dd81cbc5a13867f057627350cb9eff8d1d4dbbe48cd08a64eff7",
+      "runtimeSHA256": "26ff78d818605aafda582c84fc8104dd88c85aa3039f3733a975e0939f8e3590"
+    },
+    "pine-atlas.webp": {
+      "source": "assets/pine-007/pine-layer-atlas.png",
+      "beforeBytes": 1781863,
+      "afterBytes": 1139234,
+      "width": 2172,
+      "height": 724,
+      "decodedRGBAIdentical": true,
+      "decodedRGBASHA256": "adb6b3a3397c244bf2e26e33a87a3dc45da33540c4c480d0f54b38a88599070e",
+      "runtimeSHA256": "ac6c8890f7a6e13337e0921ebfc74ad872171a9945858e2697f719e87976fb28"
+    }
+  }
+}

@@ -16,8 +16,8 @@ import * as T from 'three';
 const SUN=new T.Vector3(-8,16,12).normalize();
 const SHADOW_DIRECTION=new T.Vector2(8,-12).normalize();
 const _p=new T.Vector3();
-const STONE_URL=new URL('../assets/environment-031/stone-atlas.png',import.meta.url).href;
-const MOUNTAIN_URL=new URL('../assets/environment-031/mountain-atlas.png',import.meta.url).href;
+const STONE_URL=new URL('../assets/sample-runtime/stone-atlas.webp',import.meta.url).href;
+const MOUNTAIN_URL=new URL('../assets/sample-runtime/mountain-atlas.webp',import.meta.url).href;
 
 // Texture-cell padding prevents the two original paintings bleeding into each
 // other under filtering. Large joints remain readable at the normal phone view.
@@ -31,7 +31,8 @@ const STONE_GLSL=`
   return texture2D(uH31Stone,uv).rgb;
  }
  vec3 h31Rock(vec3 p,vec3 n){
-  vec3 w=pow(abs(n),vec3(5.));w/=max(.001,w.x+w.y+w.z);
+  vec3 a=abs(n),a2=a*a;
+  vec3 w=a2*a2*a;w/=max(.001,w.x+w.y+w.z);
   vec3 c=vec3(0.);
   if(w.x>.012)c+=h31Stone(p.zy/4.8,1.)*w.x;
   if(w.y>.012)c+=h31Stone(p.xz/4.8,1.)*w.y;
@@ -89,10 +90,14 @@ function markMaterial(source,kind,stoneUniform){
     h31Border=h31Rock(vH31Position,h31N);
     // Broad moss banks frame the pale activity area. A slow contour follows the
     // path edge, rather than adding random high-frequency dirt or floor clutter.
-    float h31Moss=h31Up*(.64+.16*sin(vH31Position.x*.62+vH31Position.z*.39));
-    h31Border=mix(h31Border,h31Border*vec3(.40,.66,.43),h31Moss);
+    if(h31Up>0.){
+      float h31Moss=h31Up*(.64+.16*sin(vH31Position.x*.62+vH31Position.z*.39));
+      h31Border=mix(h31Border,h31Border*vec3(.40,.66,.43),h31Moss);
+    }
    }
-   h31Paint=mix(h31Border,h31StoneColor,h31Paved);
+   if(h31Paved==1.)h31Paint=h31StoneColor;
+   else if(h31Paved==0.)h31Paint=h31Border;
+   else h31Paint=mix(h31Border,h31StoneColor,h31Paved);
    diffuseColor.rgb=h31Paint*vec3(1.08,1.025,.945);
    // All low upward ground has a continuous normal; scan micro-facets never
    // interrupt the newly painted large light masses on moss or paving.
@@ -126,7 +131,23 @@ function markMaterial(source,kind,stoneUniform){
   `;
   shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',mapCode);
  };
- m.customProgramCacheKey=()=>`h31-painted-basic-${kind}-v2`;
+ m.customProgramCacheKey=()=>`h32-painted-basic-${kind}-fast-v1`;
+ return m;
+}
+
+// Build-time only. Run the identical scenery fragment shader in its original
+// world position/normal, but rasterize each real triangle into its existing UV.
+// No gameplay camera, screenshots or flattened scene are involved in this bake.
+export function createTerrainBakeMaterial(stoneTexture) {
+ const m=markMaterial(new T.MeshBasicMaterial(),'terrain',{value:stoneTexture});
+ const originalCompile=m.onBeforeCompile;
+ m.onBeforeCompile=shader=>{
+  originalCompile(shader);
+  shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',
+   '#include <project_vertex>\ngl_Position=vec4(uv*2.-1.,0.,1.);');
+ };
+ m.side=T.DoubleSide;m.depthTest=false;m.depthWrite=false;m.fog=false;m.toneMapped=false;
+ m.customProgramCacheKey=()=> 'h31-terrain-original-UV-bake-v1';
  return m;
 }
 
@@ -135,7 +156,7 @@ function atlasPlane(texture,{width,height,x,y,z,name,opacity=1}){
  // Canvas extraction gives each layer its own transparent texture, so mipmaps
  // cannot pull opaque colour across the horizontal atlas boundary.
  const mesh=new T.Mesh(g,new T.MeshBasicMaterial({map:texture,transparent:true,
-  depthWrite:false,side:T.DoubleSide,toneMapped:false,fog:false,opacity}));
+  depthWrite:false,side:T.DoubleSide,forceSinglePass:true,toneMapped:false,fog:false,opacity}));
  mesh.position.set(x,y,z);mesh.rotation.y=Math.atan2(6,15);mesh.name=name;return mesh;
 }
 
@@ -208,7 +229,10 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
     if(!model||treated.has(model)) return;treated.add(model);
     const cache=new Map();
     model.traverse(o=>{if(o.isMesh){
-      const one=m=>{if(!m?.isMeshStandardMaterial&&!m?.isMeshBasicMaterial)return m;if(!cache.has(m)){const clone=markMaterial(m,kind,stoneUniform);cache.set(m,clone);materials.push(clone);}return cache.get(m);};
+      const one=m=>{if(!m?.isMeshStandardMaterial&&!m?.isMeshBasicMaterial)return m;if(!cache.has(m)){
+        const clone=markMaterial(m,kind,stoneUniform);
+        cache.set(m,clone);materials.push(clone);
+      }return cache.get(m);};
       o.material=Array.isArray(o.material)?o.material.map(one):one(o.material);
       o.castShadow=o.receiveShadow=false;
     }});
