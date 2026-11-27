@@ -1,0 +1,60 @@
+{
+  "source": "pine-005/h27/pine005-h27-refined.blend",
+  "asset": "h28-gate-pine.glb",
+  "bytes": 2524936,
+  "meshes": 3,
+  "materials": 3,
+  "triangles": 55375,
+  "blender_z_up_bounds": [
+    [
+      -2.4996187686920166,
+      -2.691673517227173,
+      -0.4303222596645355
+    ],
+    [
+      6.177132606506348,
+      2.6257071495056152,
+      6.115236282348633
+    ]
+  ],
+  "glTF_y_up": true,
+  "canopy_islands": 13,
+  "needle_triangles": 18977,
+  "paid_credits": 0,
+  "sha256": "568e10655de5557c4920eaf7d7e00f68a96967e899f9963df45dbcdf8592ad80",
+  "color_quantization": "standard glTF normalized UBYTE; no decoder extension",
+  "physical_phone_test": "not performed",
+  "game_camera_visual_check": "pending integration",
+  "glTF_y_up_bounds": [
+    [
+      -2.4996187686920166,
+      -0.4303222596645355,
+      -2.6257071495056152
+    ],
+    [
+      6.177132606506348,
+      6.115236282348633,
+      2.691673517227173
+    ]
+  ],
+  "scene_material_calibration": {
+    "H28 layered jade needles vertex color": [
+      0.13,
+      0.23,
+      0.11,
+      1
+    ],
+    "H28 weathered umber bark vertex color": [
+      0.14,
+      0.13,
+      0.115,
+      1
+    ],
+    "H28 slope slate vertex color": [
+      0.27,
+      0.29,
+      0.28,
+      1
+    ]
+  }
+}

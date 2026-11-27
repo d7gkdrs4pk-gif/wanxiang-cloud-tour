@@ -1,0 +1,9 @@
+{
+  "heroInstalled": false,
+  "targetMeshes": 21,
+  "pines": 8,
+  "frame": 134,
+  "groundAtRoot": 0.15580445528030396,
+  "errors": [],
+  "passed": true
+}
