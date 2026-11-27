@@ -1,0 +1,87 @@
+{
+  "file": "assets/scene-036/h36-scene-spawn.blend",
+  "SHA256": "34e268c4a3f454f044b3e17398d857bf1a2dcb4f9b74014651ac3c62dcf5d7f2",
+  "readOnly": true,
+  "linkedImagesResolvedRelativeToTheirLibraries": true,
+  "missing": [],
+  "paths": [
+    {
+      "name": "crown-atlas.png",
+      "path": "//../pine-036/art/crown-atlas.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "mountain-atlas.webp",
+      "path": "//../sample-runtime/mountain-atlas.webp",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_01_diff_2k.jpg",
+      "path": "//../environment-036/textures/rock_face_01_diff_2k.jpg",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_01_moss_albedo_2k.png",
+      "path": "//../environment-036/textures/rock_face_01_moss_albedo_2k.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_01_nor_gl_1k.png",
+      "path": "//../environment-036/textures/rock_face_01_nor_gl_1k.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_01_rough_1k.jpg",
+      "path": "//../environment-036/textures/rock_face_01_rough_1k.jpg",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_01_slate_albedo_2k.png",
+      "path": "//../environment-036/textures/rock_face_01_slate_albedo_2k.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_02_moss_albedo_2k.png",
+      "path": "//../environment-036/textures/rock_face_02_moss_albedo_2k.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_02_nor_gl_1k.png",
+      "path": "//../environment-036/textures/rock_face_02_nor_gl_1k.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_02_rough_1k.jpg",
+      "path": "//../environment-036/textures/rock_face_02_rough_1k.jpg",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "rock_face_02_slate_albedo_2k.png",
+      "path": "//../environment-036/textures/rock_face_02_slate_albedo_2k.png",
+      "library": null,
+      "exists": true
+    },
+    {
+      "name": "林砚H34_环境遮蔽",
+      "path": "//linyan-ao.png",
+      "library": "//../hero-034/linyan-h34.blend",
+      "exists": true
+    },
+    {
+      "name": "林砚H34_面部透明蒙版",
+      "path": "//linyan-alpha.png",
+      "library": "//../hero-034/linyan-h34.blend",
+      "exists": true
+    }
+  ]
+}
