@@ -1,0 +1,10 @@
+{
+  "model": "v3.1-20260211",
+  "prompt": "One exquisite small scallop shell jewelry pendant, single complete object. Fan-shaped ivory mother-of-pearl shell with seven smooth raised radial ribs, softly iridescent blush and cream nacre, fine polished champagne-gold rim following the scalloped outer edge, a single small functional gold suspension loop at the narrow top, visibly open hole. Broad fan opens downward. Rounded convex front and gently concave finished back, real thickness, complete 360 degree geometry. Elegant delicate collectible jewelry, refined miniature craftsmanship. PBR materials: nacre is a nonmetal with soft glossy highlights, gold trim is reflective metal. Neutral unlit base color textures, no baked shadows, no baked highlights. Shell and loop only, isolated, no chain, no beads, no background, no display stand, no text.",
+  "negative_prompt": "multiple pendants, necklace, bracelet, hands, mannequin, display base, background, text, flat image plane, opaque plastic, rough stone, thick bulky gold, gemstones, spikes, dark dirty crevices, baked lighting",
+  "texture": true,
+  "pbr": true,
+  "texture_quality": "detailed",
+  "geometry_quality": "standard",
+  "face_limit": 12000
+}

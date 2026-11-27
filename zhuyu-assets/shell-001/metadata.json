@@ -1,0 +1,15 @@
+{
+  "sample": "shell-001",
+  "provider": "Tripo direct API via GitHub Actions",
+  "model": "v3.1-20260211",
+  "task_id": "8db92ccc-cbf0-4075-8f9b-f84f6dece190",
+  "credits_consumed": 30.0,
+  "bytes": 7190360,
+  "sha256": "90d9d7f2cdbe693c416722233503af55d6bc02632e6f9a1fad64a0d1bf1f08fb",
+  "meshes": 1,
+  "materials": 1,
+  "textures": 3,
+  "images": 3,
+  "visual_acceptance": "pending",
+  "game_integration": false
+}
