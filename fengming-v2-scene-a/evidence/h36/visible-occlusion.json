@@ -1,0 +1,5375 @@
+{
+  "method": "actual native touch route; manual CPU alpha/geometry probe; no position/camera overrides; image screenshots remain primary for mip/AA edges",
+  "points": [
+    {
+      "name": "near",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -5.080544009146905,
+          0.13384693405529607,
+          -4.388823276270921
+        ],
+        "rotation": -1.6703119831685191,
+        "camera": [
+          1.2089042510480552,
+          27.11811014270895,
+          10.640239892968987
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 2,
+          "visualMs": 1,
+          "renderMs": 11
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 12.906818236556932
+        },
+        "blade": {
+          "base": [
+            -5.314920407886416,
+            0.9354901510020223,
+            -4.946263429237448
+          ],
+          "tip": [
+            -6.31892876364178,
+            1.296049542369905,
+            -5.578374295201509
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [
+          [
+            -5.120038732655641,
+            0.136971414822735,
+            -4.392788896353228
+          ]
+        ],
+        "guideIndex": 1,
+        "roofCut": 0,
+        "target": [
+          -5.120038732655641,
+          0.136971414822735,
+          -4.392788896353228
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 26,
+          "triangles": 65341
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 27.26756466317663,
+              "nearDepth": 24.727775504002476,
+              "farDepth": 29.80735382235078,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 29.82917979155782,
+              "nearDepth": 25.61424966277272,
+              "farDepth": 34.04410992034292,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 28.301779112123832,
+              "nearDepth": 26.76441648096,
+              "farDepth": 29.83914174328766,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 28.301779112123832,
+              "nearDepth": 26.76441648096,
+              "farDepth": 29.83914174328766
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 26.110277026866225,
+              "nearDepth": 24.727775504002476,
+              "farDepth": 27.492778549729973
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 28.765010682372832,
+              "nearDepth": 27.722667542394884,
+              "farDepth": 29.80735382235078
+            }
+          },
+          "playerDepth": 31.519812387284603,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3069,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3394
+          }
+        ]
+      },
+      "occlusion": {
+        "loaded": true,
+        "manualQA": true,
+        "totalProbes": 15,
+        "blockedProbes": 0,
+        "unknownProbes": 0,
+        "sampling": "Actual mesh rays and source alphaTest; decoded base-image nearest/bilinear alpha with texture matrix/wrap/flipY. GPU mip LOD, anisotropy and MSAA are not reproduced.",
+        "parts": {
+          "head": {
+            "heightAboveActorOrigin": 1.3,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -5.201245978961989,
+                  1.4338469340552962,
+                  -4.340542488344887
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -5.080544009146905,
+                  1.4338469340552962,
+                  -4.388823276270921
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -4.959842039331821,
+                  1.4338469340552962,
+                  -4.437104064196955
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "shoulder": {
+            "heightAboveActorOrigin": 1.05,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -5.201245978961989,
+                  1.1838469340552962,
+                  -4.340542488344887
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -5.080544009146905,
+                  1.1838469340552962,
+                  -4.388823276270921
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -4.959842039331821,
+                  1.1838469340552962,
+                  -4.437104064196955
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "chest": {
+            "heightAboveActorOrigin": 0.8,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -5.201245978961989,
+                  0.9338469340552962,
+                  -4.340542488344887
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -5.080544009146905,
+                  0.9338469340552962,
+                  -4.388823276270921
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -4.959842039331821,
+                  0.9338469340552962,
+                  -4.437104064196955
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "hips": {
+            "heightAboveActorOrigin": 0.4,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -5.201245978961989,
+                  0.533846934055296,
+                  -4.340542488344887
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -5.080544009146905,
+                  0.533846934055296,
+                  -4.388823276270921
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -4.959842039331821,
+                  0.533846934055296,
+                  -4.437104064196955
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "feet": {
+            "heightAboveActorOrigin": 0.06,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -5.201245978961989,
+                  0.19384693405529607,
+                  -4.340542488344887
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -5.080544009146905,
+                  0.19384693405529607,
+                  -4.388823276270921
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -4.959842039331821,
+                  0.19384693405529607,
+                  -4.437104064196955
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          }
+        },
+        "crownMeshes": [
+          {
+            "name": "MainCrown",
+            "uuid": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+            "layer": "MainCrown",
+            "category": "H36_Pine_FrontBranch"
+          },
+          {
+            "name": "RearCrown",
+            "uuid": "6a5a8495-5cff-4ec3-a375-65fead02d088",
+            "layer": "RearCrown",
+            "category": "H36_Pine_RearCrown"
+          },
+          {
+            "name": "TopCrown",
+            "uuid": "1f03caff-1136-498b-859b-e81a20eaae87",
+            "layer": "TopCrown",
+            "category": "H36_Pine_RearCrown"
+          }
+        ],
+        "alphaImageReadbacks": [],
+        "errors": [],
+        "playerPosition": [
+          -5.080544009146905,
+          0.13384693405529607,
+          -4.388823276270921
+        ],
+        "cameraPosition": [
+          1.2089042510480552,
+          27.11811014270895,
+          10.640239892968987
+        ],
+        "cameraRight": [
+          0.9284766908852593,
+          0,
+          -0.3713906763541037
+        ]
+      }
+    },
+    {
+      "name": "front",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -6.019961034746869,
+          -0.10320507105513926,
+          -6.493143595421557
+        ],
+        "rotation": -2.721618276460721,
+        "camera": [
+          0.11499029642809712,
+          26.91086313485,
+          8.797943410563311
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 1,
+          "renderMs": 8
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 12.906818236556932
+        },
+        "blade": {
+          "base": [
+            -5.653757875253234,
+            0.689688929221647,
+            -6.975639071315687
+          ],
+          "tip": [
+            -5.6034899433265775,
+            1.05786348087748,
+            -8.158652441710478
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [
+          [
+            -6.019961034746869,
+            -0.10320507105513926,
+            -6.493143595421557
+          ]
+        ],
+        "guideIndex": 2,
+        "roofCut": 0,
+        "target": [
+          -6.019961034746869,
+          -0.10320507105513926,
+          -6.493143595421557
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 26,
+          "triangles": 65341
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 26.00284102786964,
+              "nearDepth": 23.46305186869549,
+              "farDepth": 28.54263018704379,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 28.56445615625083,
+              "nearDepth": 24.349526027465732,
+              "farDepth": 32.77938628503593,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 27.03705547681684,
+              "nearDepth": 25.499692845653012,
+              "farDepth": 28.57441810798067,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 27.03705547681684,
+              "nearDepth": 25.499692845653012,
+              "farDepth": 28.57441810798067
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 24.845553391559235,
+              "nearDepth": 23.46305186869549,
+              "farDepth": 26.228054914422984
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 27.500287047065843,
+              "nearDepth": 26.457943907087895,
+              "farDepth": 28.54263018704379
+            }
+          },
+          "playerDepth": 31.64084209666995,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3069,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3394
+          },
+          {
+            "type": "move-command",
+            "t": 4063,
+            "screen": [
+              188,
+              353
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 6,
+            "goal": [
+              -6.019961034746869,
+              -0.10320507105513926,
+              -6.493143595421557
+            ]
+          }
+        ]
+      },
+      "occlusion": {
+        "loaded": true,
+        "manualQA": true,
+        "totalProbes": 15,
+        "blockedProbes": 0,
+        "unknownProbes": 0,
+        "sampling": "Actual mesh rays and source alphaTest; decoded base-image nearest/bilinear alpha with texture matrix/wrap/flipY. GPU mip LOD, anisotropy and MSAA are not reproduced.",
+        "parts": {
+          "head": {
+            "heightAboveActorOrigin": 1.3,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.140663004561953,
+                  1.1967949289448607,
+                  -6.444862807495523
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.019961034746869,
+                  1.1967949289448607,
+                  -6.493143595421557
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899259064931785,
+                  1.1967949289448607,
+                  -6.541424383347591
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "shoulder": {
+            "heightAboveActorOrigin": 1.05,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.140663004561953,
+                  0.9467949289448607,
+                  -6.444862807495523
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.019961034746869,
+                  0.9467949289448607,
+                  -6.493143595421557
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899259064931785,
+                  0.9467949289448607,
+                  -6.541424383347591
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "chest": {
+            "heightAboveActorOrigin": 0.8,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.140663004561953,
+                  0.6967949289448607,
+                  -6.444862807495523
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.019961034746869,
+                  0.6967949289448607,
+                  -6.493143595421557
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899259064931785,
+                  0.6967949289448607,
+                  -6.541424383347591
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "hips": {
+            "heightAboveActorOrigin": 0.4,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.140663004561953,
+                  0.29679492894486076,
+                  -6.444862807495523
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.019961034746869,
+                  0.29679492894486076,
+                  -6.493143595421557
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899259064931785,
+                  0.29679492894486076,
+                  -6.541424383347591
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "feet": {
+            "heightAboveActorOrigin": 0.06,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.140663004561953,
+                  -0.043205071055139266,
+                  -6.444862807495523
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.019961034746869,
+                  -0.043205071055139266,
+                  -6.493143595421557
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899259064931785,
+                  -0.043205071055139266,
+                  -6.541424383347591
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          }
+        },
+        "crownMeshes": [
+          {
+            "name": "MainCrown",
+            "uuid": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+            "layer": "MainCrown",
+            "category": "H36_Pine_FrontBranch"
+          },
+          {
+            "name": "RearCrown",
+            "uuid": "6a5a8495-5cff-4ec3-a375-65fead02d088",
+            "layer": "RearCrown",
+            "category": "H36_Pine_RearCrown"
+          },
+          {
+            "name": "TopCrown",
+            "uuid": "1f03caff-1136-498b-859b-e81a20eaae87",
+            "layer": "TopCrown",
+            "category": "H36_Pine_RearCrown"
+          }
+        ],
+        "alphaImageReadbacks": [],
+        "errors": [],
+        "playerPosition": [
+          -6.019961034746869,
+          -0.10320507105513926,
+          -6.493143595421557
+        ],
+        "cameraPosition": [
+          0.11499029642809712,
+          26.91086313485,
+          8.797943410563311
+        ],
+        "cameraRight": [
+          0.9284766908852593,
+          0,
+          -0.3713906763541037
+        ]
+      }
+    },
+    {
+      "name": "entry",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -6.00267131445524,
+          -0.036599072028903015,
+          -7.368222807877343
+        ],
+        "rotation": -3.1480825606252414,
+        "camera": [
+          0.0015240689047465858,
+          26.948822832268462,
+          7.8371740049937015
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 9
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 12.906818236556932
+        },
+        "blade": {
+          "base": [
+            -5.469345244084547,
+            0.7659413427271198,
+            -7.653400709799176
+          ],
+          "tip": [
+            -4.933226860654705,
+            1.1266939470121957,
+            -8.711717598755461
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [
+          [
+            -6.001985442571425,
+            -0.034503030915194785,
+            -7.402936627292053
+          ]
+        ],
+        "guideIndex": 3,
+        "roofCut": 0,
+        "target": [
+          -6.001985442571425,
+          -0.034503030915194785,
+          -7.402936627292053
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 26,
+          "triangles": 65341
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 25.55574886095003,
+              "nearDepth": 23.01595970177588,
+              "farDepth": 28.09553802012418,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 28.11736398933122,
+              "nearDepth": 23.902433860546125,
+              "farDepth": 32.33229411811632,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.58996330989723,
+              "nearDepth": 25.052600678733402,
+              "farDepth": 28.12732594106106,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.58996330989723,
+              "nearDepth": 25.052600678733402,
+              "farDepth": 28.12732594106106
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 24.398461224639625,
+              "nearDepth": 23.01595970177588,
+              "farDepth": 25.780962747503374
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 27.053194880146233,
+              "nearDepth": 26.010851740168285,
+              "farDepth": 28.09553802012418
+            }
+          },
+          "playerDepth": 31.550474859844805,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3069,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3394
+          },
+          {
+            "type": "move-command",
+            "t": 4063,
+            "screen": [
+              188,
+              353
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 6,
+            "goal": [
+              -6.019961034746869,
+              -0.10320507105513926,
+              -6.493143595421557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4982,
+            "screen": [
+              208,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.001985442571425,
+              -0.034503030915194785,
+              -7.402936627292053
+            ]
+          }
+        ]
+      },
+      "occlusion": {
+        "loaded": true,
+        "manualQA": true,
+        "totalProbes": 15,
+        "blockedProbes": 0,
+        "unknownProbes": 0,
+        "sampling": "Actual mesh rays and source alphaTest; decoded base-image nearest/bilinear alpha with texture matrix/wrap/flipY. GPU mip LOD, anisotropy and MSAA are not reproduced.",
+        "parts": {
+          "head": {
+            "heightAboveActorOrigin": 1.3,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.123373284270324,
+                  1.263400927971097,
+                  -7.319942019951309
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.00267131445524,
+                  1.263400927971097,
+                  -7.368222807877343
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.881969344640156,
+                  1.263400927971097,
+                  -7.416503595803377
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "shoulder": {
+            "heightAboveActorOrigin": 1.05,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.123373284270324,
+                  1.013400927971097,
+                  -7.319942019951309
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.00267131445524,
+                  1.013400927971097,
+                  -7.368222807877343
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.881969344640156,
+                  1.013400927971097,
+                  -7.416503595803377
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "chest": {
+            "heightAboveActorOrigin": 0.8,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.123373284270324,
+                  0.763400927971097,
+                  -7.319942019951309
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.00267131445524,
+                  0.763400927971097,
+                  -7.368222807877343
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.881969344640156,
+                  0.763400927971097,
+                  -7.416503595803377
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "hips": {
+            "heightAboveActorOrigin": 0.4,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.123373284270324,
+                  0.363400927971097,
+                  -7.319942019951309
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.00267131445524,
+                  0.363400927971097,
+                  -7.368222807877343
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.881969344640156,
+                  0.363400927971097,
+                  -7.416503595803377
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "feet": {
+            "heightAboveActorOrigin": 0.06,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.123373284270324,
+                  0.023400927971096983,
+                  -7.319942019951309
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.00267131445524,
+                  0.023400927971096983,
+                  -7.368222807877343
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.881969344640156,
+                  0.023400927971096983,
+                  -7.416503595803377
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          }
+        },
+        "crownMeshes": [
+          {
+            "name": "MainCrown",
+            "uuid": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+            "layer": "MainCrown",
+            "category": "H36_Pine_FrontBranch"
+          },
+          {
+            "name": "RearCrown",
+            "uuid": "6a5a8495-5cff-4ec3-a375-65fead02d088",
+            "layer": "RearCrown",
+            "category": "H36_Pine_RearCrown"
+          },
+          {
+            "name": "TopCrown",
+            "uuid": "1f03caff-1136-498b-859b-e81a20eaae87",
+            "layer": "TopCrown",
+            "category": "H36_Pine_RearCrown"
+          }
+        ],
+        "alphaImageReadbacks": [],
+        "errors": [],
+        "playerPosition": [
+          -6.00267131445524,
+          -0.036599072028903015,
+          -7.368222807877343
+        ],
+        "cameraPosition": [
+          0.0015240689047465858,
+          26.948822832268462,
+          7.8371740049937015
+        ],
+        "cameraRight": [
+          0.9284766908852593,
+          0,
+          -0.3713906763541037
+        ]
+      }
+    },
+    {
+      "name": "under",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -6.387336426074624,
+          0.127921,
+          -8.0759395604718
+        ],
+        "rotation": -2.6638417215849883,
+        "camera": [
+          -0.33427624243960574,
+          27.098696573791266,
+          7.033945578715198
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 12.906818236556932
+        },
+        "blade": {
+          "base": [
+            -6.048631897988489,
+            0.9304023554207532,
+            -8.577181646110471
+          ],
+          "tip": [
+            -6.0667182195518565,
+            1.2939626721047977,
+            -9.762549429165546
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [
+          [
+            -6.403798717667102,
+            0.12785491541973282,
+            -8.106227307382468
+          ]
+        ],
+        "guideIndex": 4,
+        "roofCut": 0,
+        "target": [
+          -6.403798717667102,
+          0.12785491541973282,
+          -8.106227307382468
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 26,
+          "triangles": 65341
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 25.2373992316347,
+              "nearDepth": 22.697610072460552,
+              "farDepth": 27.777188390808853,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 27.799014360015892,
+              "nearDepth": 23.584084231230797,
+              "farDepth": 32.013944488800995,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.2716136805819,
+              "nearDepth": 24.734251049418074,
+              "farDepth": 27.80897631174573,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.2716136805819,
+              "nearDepth": 24.734251049418074,
+              "farDepth": 27.80897631174573
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 24.080111595324297,
+              "nearDepth": 22.697610072460552,
+              "farDepth": 25.462613118188045
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 26.734845250830904,
+              "nearDepth": 25.692502110852956,
+              "farDepth": 27.777188390808853
+            }
+          },
+          "playerDepth": 31.501691352409892,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3069,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3394
+          },
+          {
+            "type": "move-command",
+            "t": 4063,
+            "screen": [
+              188,
+              353
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 6,
+            "goal": [
+              -6.019961034746869,
+              -0.10320507105513926,
+              -6.493143595421557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4982,
+            "screen": [
+              208,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.001985442571425,
+              -0.034503030915194785,
+              -7.402936627292053
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5549,
+            "screen": [
+              193,
+              388
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.403798717667102,
+              0.12785491541973282,
+              -8.106227307382468
+            ]
+          },
+          {
+            "type": "under-branch",
+            "t": 5616
+          }
+        ]
+      },
+      "occlusion": {
+        "loaded": true,
+        "manualQA": true,
+        "totalProbes": 15,
+        "blockedProbes": 2,
+        "unknownProbes": 0,
+        "sampling": "Actual mesh rays and source alphaTest; decoded base-image nearest/bilinear alpha with texture matrix/wrap/flipY. GPU mip LOD, anisotropy and MSAA are not reproduced.",
+        "parts": {
+          "head": {
+            "heightAboveActorOrigin": 1.3,
+            "blockedCount": 2,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.508038395889708,
+                  1.427921,
+                  -8.027658772545767
+                ],
+                "blocked": true,
+                "blockedBy": {
+                  "mesh": "MainCrown",
+                  "layer": "MainCrown",
+                  "category": "H36_Pine_FrontBranch",
+                  "alpha": 0.9568327822381217,
+                  "cutoff": 0.45,
+                  "distance": 26.30842693958494
+                },
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.30842693958494,
+                    "point": [
+                      -5.66782576051435,
+                      4.898279660108841,
+                      -5.979686042044449
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0.9568327822381217,
+                    "passesAlphaTest": true,
+                    "map": {
+                      "value": 0.9568327822381217,
+                      "uv": [
+                        0.39159141790010965,
+                        0.31543912111244965
+                      ],
+                      "sampledUV": [
+                        0.39159141790010965,
+                        0.31543912111244965
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.387336426074624,
+                  1.427921,
+                  -8.0759395604718
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.308134026929853,
+                    "point": [
+                      -5.5634539498209055,
+                      4.898279657522458,
+                      -6.021434768098612
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0.006848330933111679,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0.006848330933111679,
+                      "uv": [
+                        0.41407379419501616,
+                        0.31543912250789014
+                      ],
+                      "sampledUV": [
+                        0.41407379419501616,
+                        0.31543912250789014
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -6.26663445625954,
+                  1.427921,
+                  -8.124220348397834
+                ],
+                "blocked": true,
+                "blockedBy": {
+                  "mesh": "MainCrown",
+                  "layer": "MainCrown",
+                  "category": "H36_Pine_FrontBranch",
+                  "alpha": 0.9727461877669625,
+                  "cutoff": 0.45,
+                  "distance": 26.308321436084135
+                },
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.308321436084135,
+                    "point": [
+                      -5.45908213910312,
+                      4.898279654936083,
+                      -6.063183494162507
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0.9727461877669625,
+                    "passesAlphaTest": true,
+                    "map": {
+                      "value": 0.9727461877669625,
+                      "uv": [
+                        0.4365561704951663,
+                        0.31543912390332995
+                      ],
+                      "sampledUV": [
+                        0.4365561704951663,
+                        0.31543912390332995
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "shoulder": {
+            "heightAboveActorOrigin": 1.05,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.508038395889708,
+                  1.177921,
+                  -8.027658772545767
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.30537670636898,
+                    "point": [
+                      -5.630209855758966,
+                      4.83898346194206,
+                      -5.8879993142701785
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0,
+                      "uv": [
+                        0.39176619826890285,
+                        0.347431465067615
+                      ],
+                      "sampledUV": [
+                        0.39176619826890285,
+                        0.347431465067615
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.387336426074624,
+                  1.177921,
+                  -8.0759395604718
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.30508784942416,
+                    "point": [
+                      -5.5265691381888535,
+                      4.838983459366936,
+                      -5.929455603050201
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0,
+                      "uv": [
+                        0.41409109228299124,
+                        0.3474314664569848
+                      ],
+                      "sampledUV": [
+                        0.41409109228299124,
+                        0.3474314664569848
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -6.26663445625954,
+                  1.177921,
+                  -8.124220348397834
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.305272663713392,
+                    "point": [
+                      -5.422928420594741,
+                      4.838983456791809,
+                      -5.970911891839826
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0.009997724591496967,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0.009997724591496967,
+                      "uv": [
+                        0.4364159863022497,
+                        0.3474314678463539
+                      ],
+                      "sampledUV": [
+                        0.4364159863022497,
+                        0.3474314678463539
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "chest": {
+            "heightAboveActorOrigin": 0.8,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.508038395889708,
+                  0.927921,
+                  -8.027658772545767
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.302865105865088,
+                    "point": [
+                      -5.5931172615583895,
+                      4.780512189469942,
+                      -5.797588127591945
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0,
+                      "uv": [
+                        0.39193854710209186,
+                        0.3789787331599597
+                      ],
+                      "sampledUV": [
+                        0.39193854710209186,
+                        0.3789787331599597
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.387336426074624,
+                  0.927921,
+                  -8.0759395604718
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.30258022634885,
+                    "point": [
+                      -5.490197466181302,
+                      4.780512186906005,
+                      -5.83875604747047
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0,
+                      "uv": [
+                        0.41410814972084586,
+                        0.37897873454329234
+                      ],
+                      "sampledUV": [
+                        0.41410814972084586,
+                        0.37897873454329234
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -6.26663445625954,
+                  0.927921,
+                  -8.124220348397834
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": [
+                  {
+                    "mesh": "MainCrown",
+                    "meshUUID": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+                    "layer": "MainCrown",
+                    "category": "H36_Pine_FrontBranch",
+                    "distance": 26.30276249585811,
+                    "point": [
+                      -5.387277670780547,
+                      4.780512184342069,
+                      -5.879923967358462
+                    ],
+                    "cutoff": 0.45,
+                    "alpha": 0,
+                    "passesAlphaTest": false,
+                    "map": {
+                      "value": 0,
+                      "uv": [
+                        0.4362777523446977,
+                        0.3789787359266248
+                      ],
+                      "sampledUV": [
+                        0.4362777523446977,
+                        0.3789787359266248
+                      ],
+                      "channel": 0,
+                      "flipY": false,
+                      "filter": "bilinear base level",
+                      "matrix": [
+                        1,
+                        -0.0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "alphaMap": null,
+                    "vertexAlpha": 1,
+                    "opacity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "hips": {
+            "heightAboveActorOrigin": 0.4,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.508038395889708,
+                  0.5279210000000001,
+                  -8.027658772545767
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.387336426074624,
+                  0.5279210000000001,
+                  -8.0759395604718
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -6.26663445625954,
+                  0.5279210000000001,
+                  -8.124220348397834
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "feet": {
+            "heightAboveActorOrigin": 0.06,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.508038395889708,
+                  0.187921,
+                  -8.027658772545767
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.387336426074624,
+                  0.187921,
+                  -8.0759395604718
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -6.26663445625954,
+                  0.187921,
+                  -8.124220348397834
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          }
+        },
+        "crownMeshes": [
+          {
+            "name": "MainCrown",
+            "uuid": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+            "layer": "MainCrown",
+            "category": "H36_Pine_FrontBranch"
+          },
+          {
+            "name": "RearCrown",
+            "uuid": "6a5a8495-5cff-4ec3-a375-65fead02d088",
+            "layer": "RearCrown",
+            "category": "H36_Pine_RearCrown"
+          },
+          {
+            "name": "TopCrown",
+            "uuid": "1f03caff-1136-498b-859b-e81a20eaae87",
+            "layer": "TopCrown",
+            "category": "H36_Pine_RearCrown"
+          }
+        ],
+        "alphaImageReadbacks": [
+          {
+            "width": 1536,
+            "height": 1024,
+            "method": "one cached detached Canvas getImageData"
+          }
+        ],
+        "errors": [],
+        "playerPosition": [
+          -6.387336426074624,
+          0.127921,
+          -8.0759395604718
+        ],
+        "cameraPosition": [
+          -0.2977300203760276,
+          27.0785676881234,
+          7.1096310819135855
+        ],
+        "cameraRight": [
+          0.9284766908852593,
+          0,
+          -0.3713906763541037
+        ]
+      }
+    },
+    {
+      "name": "return",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -6.031110496242868,
+          -0.032773826053090635,
+          -7.4149517286318
+        ],
+        "rotation": -5.2700670286682785,
+        "camera": [
+          -0.11089432521812963,
+          26.99416074497945,
+          7.4386561736083205
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            -6.065699890110523,
+            0.7618725487469866,
+            -6.809539215075892
+          ],
+          "tip": [
+            -5.446041979932299,
+            1.1290313006389223,
+            -5.800173807870596
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [
+          [
+            -6.031110496242868,
+            -0.032773826053090635,
+            -7.4149517286318
+          ]
+        ],
+        "guideIndex": 5,
+        "roofCut": 0,
+        "target": [
+          -6.031110496242868,
+          -0.032773826053090635,
+          -7.4149517286318
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 26,
+          "triangles": 65341
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 25.383230795915523,
+              "nearDepth": 22.843441636741375,
+              "farDepth": 27.923019955089675,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 27.944845924296715,
+              "nearDepth": 23.72991579551162,
+              "farDepth": 32.15977605308181,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.417445244862726,
+              "nearDepth": 24.880082613698896,
+              "farDepth": 27.954807876026553,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.417445244862726,
+              "nearDepth": 24.880082613698896,
+              "farDepth": 27.954807876026553
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 24.22594315960512,
+              "nearDepth": 22.843441636741375,
+              "farDepth": 25.608444682468868
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 26.880676815111727,
+              "nearDepth": 25.83833367513378,
+              "farDepth": 27.923019955089675
+            }
+          },
+          "playerDepth": 31.40237456683921,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3069,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3394
+          },
+          {
+            "type": "move-command",
+            "t": 4063,
+            "screen": [
+              188,
+              353
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 6,
+            "goal": [
+              -6.019961034746869,
+              -0.10320507105513926,
+              -6.493143595421557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4982,
+            "screen": [
+              208,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.001985442571425,
+              -0.034503030915194785,
+              -7.402936627292053
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5549,
+            "screen": [
+              193,
+              388
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.403798717667102,
+              0.12785491541973282,
+              -8.106227307382468
+            ]
+          },
+          {
+            "type": "under-branch",
+            "t": 5616
+          },
+          {
+            "type": "move-command",
+            "t": 6201,
+            "screen": [
+              198,
+              446
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -6.031110496242868,
+              -0.032773826053090635,
+              -7.4149517286318
+            ]
+          }
+        ]
+      },
+      "occlusion": {
+        "loaded": true,
+        "manualQA": true,
+        "totalProbes": 15,
+        "blockedProbes": 0,
+        "unknownProbes": 0,
+        "sampling": "Actual mesh rays and source alphaTest; decoded base-image nearest/bilinear alpha with texture matrix/wrap/flipY. GPU mip LOD, anisotropy and MSAA are not reproduced.",
+        "parts": {
+          "head": {
+            "heightAboveActorOrigin": 1.3,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.151812466057952,
+                  1.2672261739469095,
+                  -7.366670940705766
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.031110496242868,
+                  1.2672261739469095,
+                  -7.4149517286318
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.910408526427784,
+                  1.2672261739469095,
+                  -7.4632325165578335
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "shoulder": {
+            "heightAboveActorOrigin": 1.05,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.151812466057952,
+                  1.0172261739469095,
+                  -7.366670940705766
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.031110496242868,
+                  1.0172261739469095,
+                  -7.4149517286318
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.910408526427784,
+                  1.0172261739469095,
+                  -7.4632325165578335
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "chest": {
+            "heightAboveActorOrigin": 0.8,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.151812466057952,
+                  0.7672261739469094,
+                  -7.366670940705766
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.031110496242868,
+                  0.7672261739469094,
+                  -7.4149517286318
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.910408526427784,
+                  0.7672261739469094,
+                  -7.4632325165578335
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "hips": {
+            "heightAboveActorOrigin": 0.4,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.151812466057952,
+                  0.3672261739469094,
+                  -7.366670940705766
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.031110496242868,
+                  0.3672261739469094,
+                  -7.4149517286318
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.910408526427784,
+                  0.3672261739469094,
+                  -7.4632325165578335
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "feet": {
+            "heightAboveActorOrigin": 0.06,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.151812466057952,
+                  0.027226173946909363,
+                  -7.366670940705766
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.031110496242868,
+                  0.027226173946909363,
+                  -7.4149517286318
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.910408526427784,
+                  0.027226173946909363,
+                  -7.4632325165578335
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          }
+        },
+        "crownMeshes": [
+          {
+            "name": "MainCrown",
+            "uuid": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+            "layer": "MainCrown",
+            "category": "H36_Pine_FrontBranch"
+          },
+          {
+            "name": "RearCrown",
+            "uuid": "6a5a8495-5cff-4ec3-a375-65fead02d088",
+            "layer": "RearCrown",
+            "category": "H36_Pine_RearCrown"
+          },
+          {
+            "name": "TopCrown",
+            "uuid": "1f03caff-1136-498b-859b-e81a20eaae87",
+            "layer": "TopCrown",
+            "category": "H36_Pine_RearCrown"
+          }
+        ],
+        "alphaImageReadbacks": [
+          {
+            "width": 1536,
+            "height": 1024,
+            "method": "one cached detached Canvas getImageData"
+          }
+        ],
+        "errors": [],
+        "playerPosition": [
+          -6.031110496242868,
+          -0.032773826053090635,
+          -7.4149517286318
+        ],
+        "cameraPosition": [
+          -0.13052726900610473,
+          27.00078871615891,
+          7.402632484807741
+        ],
+        "cameraRight": [
+          0.9284766908852593,
+          0,
+          -0.3713906763541037
+        ]
+      }
+    },
+    {
+      "name": "exit",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -6.0202520627385265,
+          -0.10275979589949721,
+          -6.5060165854990055
+        ],
+        "rotation": -6.244596537222341,
+        "camera": [
+          -0.03379081680797939,
+          26.917336340880606,
+          8.24471277753161
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 18
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            -6.540027160652949,
+            0.6896774111812571,
+            -6.194616131780319
+          ],
+          "tip": [
+            -7.027100955188144,
+            1.0571841597431744,
+            -5.115126479936201
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [
+          [
+            -6.020238896251337,
+            -0.1028037648519189,
+            -6.504914448352487
+          ]
+        ],
+        "guideIndex": 6,
+        "roofCut": 0,
+        "target": [
+          -6.020238896251337,
+          -0.1028037648519189,
+          -6.504914448352487
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": true,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 26,
+          "triangles": 65341
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 25.71628199067246,
+              "nearDepth": 23.17649283149831,
+              "farDepth": 28.256071149846612,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 28.27789711905365,
+              "nearDepth": 24.062966990268553,
+              "farDepth": 32.492827247838754,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.75049643961966,
+              "nearDepth": 25.213133808455833,
+              "farDepth": 28.28785907078349,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 26.75049643961966,
+              "nearDepth": 25.213133808455833,
+              "farDepth": 28.28785907078349
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 24.558994354362056,
+              "nearDepth": 23.17649283149831,
+              "farDepth": 25.941495877225805
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 27.213728009868664,
+              "nearDepth": 26.171384869890716,
+              "farDepth": 28.256071149846612
+            }
+          },
+          "playerDepth": 31.360093415676012,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3069,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 3394
+          },
+          {
+            "type": "move-command",
+            "t": 4063,
+            "screen": [
+              188,
+              353
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 6,
+            "goal": [
+              -6.019961034746869,
+              -0.10320507105513926,
+              -6.493143595421557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4982,
+            "screen": [
+              208,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.001985442571425,
+              -0.034503030915194785,
+              -7.402936627292053
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5549,
+            "screen": [
+              193,
+              388
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.403798717667102,
+              0.12785491541973282,
+              -8.106227307382468
+            ]
+          },
+          {
+            "type": "under-branch",
+            "t": 5616
+          },
+          {
+            "type": "move-command",
+            "t": 6201,
+            "screen": [
+              198,
+              446
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -6.031110496242868,
+              -0.032773826053090635,
+              -7.4149517286318
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6671,
+            "screen": [
+              183,
+              456
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -6.020238896251337,
+              -0.1028037648519189,
+              -6.504914448352487
+            ]
+          }
+        ]
+      },
+      "occlusion": {
+        "loaded": true,
+        "manualQA": true,
+        "totalProbes": 15,
+        "blockedProbes": 0,
+        "unknownProbes": 0,
+        "sampling": "Actual mesh rays and source alphaTest; decoded base-image nearest/bilinear alpha with texture matrix/wrap/flipY. GPU mip LOD, anisotropy and MSAA are not reproduced.",
+        "parts": {
+          "head": {
+            "heightAboveActorOrigin": 1.3,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.14095403255361,
+                  1.1972402041005028,
+                  -6.457735797572972
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.0202520627385265,
+                  1.1972402041005028,
+                  -6.5060165854990055
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899550092923443,
+                  1.1972402041005028,
+                  -6.554297373425039
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "shoulder": {
+            "heightAboveActorOrigin": 1.05,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.14095403255361,
+                  0.9472402041005028,
+                  -6.457735797572972
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.0202520627385265,
+                  0.9472402041005028,
+                  -6.5060165854990055
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899550092923443,
+                  0.9472402041005028,
+                  -6.554297373425039
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "chest": {
+            "heightAboveActorOrigin": 0.8,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.14095403255361,
+                  0.6972402041005028,
+                  -6.457735797572972
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.0202520627385265,
+                  0.6972402041005028,
+                  -6.5060165854990055
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899550092923443,
+                  0.6972402041005028,
+                  -6.554297373425039
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "hips": {
+            "heightAboveActorOrigin": 0.4,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.14095403255361,
+                  0.2972402041005028,
+                  -6.457735797572972
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.0202520627385265,
+                  0.2972402041005028,
+                  -6.5060165854990055
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899550092923443,
+                  0.2972402041005028,
+                  -6.554297373425039
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          },
+          "feet": {
+            "heightAboveActorOrigin": 0.06,
+            "blockedCount": 0,
+            "unknownCount": 0,
+            "probes": [
+              {
+                "offsetCameraRight": -0.13,
+                "world": [
+                  -6.14095403255361,
+                  -0.042759795899497216,
+                  -6.457735797572972
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0,
+                "world": [
+                  -6.0202520627385265,
+                  -0.042759795899497216,
+                  -6.5060165854990055
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              },
+              {
+                "offsetCameraRight": 0.13,
+                "world": [
+                  -5.899550092923443,
+                  -0.042759795899497216,
+                  -6.554297373425039
+                ],
+                "blocked": false,
+                "blockedBy": null,
+                "hits": []
+              }
+            ]
+          }
+        },
+        "crownMeshes": [
+          {
+            "name": "MainCrown",
+            "uuid": "4a1e6d06-d785-4f97-8814-d739c0008dc1",
+            "layer": "MainCrown",
+            "category": "H36_Pine_FrontBranch"
+          },
+          {
+            "name": "RearCrown",
+            "uuid": "6a5a8495-5cff-4ec3-a375-65fead02d088",
+            "layer": "RearCrown",
+            "category": "H36_Pine_RearCrown"
+          },
+          {
+            "name": "TopCrown",
+            "uuid": "1f03caff-1136-498b-859b-e81a20eaae87",
+            "layer": "TopCrown",
+            "category": "H36_Pine_RearCrown"
+          }
+        ],
+        "alphaImageReadbacks": [
+          {
+            "width": 1536,
+            "height": 1024,
+            "method": "one cached detached Canvas getImageData"
+          }
+        ],
+        "errors": [],
+        "playerPosition": [
+          -6.0202520627385265,
+          -0.10275979589949721,
+          -6.5060165854990055
+        ],
+        "cameraPosition": [
+          -0.03379081680797939,
+          26.917336340880606,
+          8.24471277753161
+        ],
+        "cameraRight": [
+          0.9284766908852593,
+          0,
+          -0.3713906763541037
+        ]
+      }
+    }
+  ],
+  "ordinaryHP": 2,
+  "awakeningHP": 0,
+  "resetHP": 3,
+  "errors": []
+}

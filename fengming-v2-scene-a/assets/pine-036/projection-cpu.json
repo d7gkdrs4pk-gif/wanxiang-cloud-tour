@@ -1,0 +1,35 @@
+{
+  "scope": "revision2 near-side source GLB CPU world projection at original calibration; art quality awaits shared Cycles render",
+  "sha256": "6b6b5de99537689ac57e08ac1032877d8af89cf5cb7131552d256f99860f6707",
+  "root_pixel": [
+    106.34802991065669,
+    297.7770950263552
+  ],
+  "tree_pixel_bounds": [
+    [
+      17.594938519685996,
+      113.1885094175907
+    ],
+    [
+      218.68980796723002,
+      330.42455317003515
+    ]
+  ],
+  "root_to_top_pixels": 184.5885856087645,
+  "world_three_bounds": [
+    [
+      -8.677693963050842,
+      -0.1330852508544922,
+      -7.892843842506409
+    ],
+    [
+      -3.3532285690307617,
+      8.236265197396278,
+      -4.736323595046997
+    ]
+  ],
+  "max_cameraRight_from_root_m": 3.058303761463766,
+  "normal_material_meshes_missing_uv": [],
+  "vertex_color_meshes": [],
+  "gltf_index_triangles": 120352
+}

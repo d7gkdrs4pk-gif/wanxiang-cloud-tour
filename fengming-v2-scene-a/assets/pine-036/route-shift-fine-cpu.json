@@ -1,0 +1,1034 @@
+{
+  "scope": "CPU-only candidate MainCrown translation; source NOT modified; three rays per body height",
+  "candidates": [
+    {
+      "delta_a": 0.62,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 2,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.62,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 1,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.62,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.64,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 1,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.64,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 1,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.64,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 2,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.66,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 1,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.66,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 2,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.66,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 2,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.68,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.68,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 1,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.68,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 1,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.7,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 1,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.7,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.7,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 2,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.72,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 1,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.72,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 1,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.72,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 1,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.74,
+      "delta_h": 0,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 3,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.74,
+      "delta_h": 0.075,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 2,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    },
+    {
+      "delta_a": 0.74,
+      "delta_h": 0.15,
+      "samples": [
+        {
+          "actor": [
+            -6.4,
+            0.12792099999999956,
+            -8.1
+          ],
+          "counts": {
+            "head": 1,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.03475020000000001,
+            -7.4
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        },
+        {
+          "actor": [
+            -6.0,
+            -0.10386510000000003,
+            -6.5
+          ],
+          "counts": {
+            "head": 0,
+            "shoulder": 0,
+            "chest": 0,
+            "hips": 0,
+            "feet": 0
+          }
+        }
+      ],
+      "under_pass": false
+    }
+  ]
+}

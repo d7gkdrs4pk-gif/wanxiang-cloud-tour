@@ -1,0 +1,70 @@
+{
+  "asset": "Pine Bark",
+  "author": "Dimitrios Savva",
+  "provider": "Poly Haven",
+  "official_asset_url": "https://polyhaven.com/a/pine_bark",
+  "official_license_url": "https://polyhaven.com/license",
+  "license": "CC0 1.0 Universal",
+  "license_verified_from_official_asset_search_result": true,
+  "retrieved_utc": "2026-11-27",
+  "resolution": "1K",
+  "files": [
+    {
+      "channel": "diff",
+      "path": "fengming-v2-scene-a/assets/pine-036/textures/pine_bark_diff_1k.jpg",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pine_bark/pine_bark_diff_1k.jpg",
+      "bytes": 837641,
+      "sha256": "89ddfbff0388d30caff902ba600cdf75eb1e651ca71ece6594b5a9b27abb47ab",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "channel": "rough",
+      "path": "fengming-v2-scene-a/assets/pine-036/textures/pine_bark_rough_1k.jpg",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pine_bark/pine_bark_rough_1k.jpg",
+      "bytes": 506697,
+      "sha256": "04f466447098d0b6d3d4abdc69ce5766d5da67eedfa076e4a3f22fe6996a60a8",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "channel": "nor_gl",
+      "path": "fengming-v2-scene-a/assets/pine-036/textures/pine_bark_nor_gl_1k.jpg",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pine_bark/pine_bark_nor_gl_1k.jpg",
+      "bytes": 1178440,
+      "sha256": "666e5f175a010f12577687dd8029125bff99110e6a97958afb295b34266437db",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "channel": "disp",
+      "path": "fengming-v2-scene-a/assets/pine-036/textures/pine_bark_disp_1k.jpg",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/pine_bark/pine_bark_disp_1k.jpg",
+      "bytes": 422426,
+      "sha256": "c60297bdf591983f2d2fa69066ba3a6556d79011780bf0f950a2f5194b5978d1",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "L"
+    }
+  ],
+  "technical_notes": "Diffuse sRGB; Roughness and OpenGL normal are Non-Color. No AO or baked lighting map supplied.",
+  "physical_width_m": 2,
+  "license_verification": {
+    "method": "Official asset and license pages opened via connected web tool, not guessed from mirror",
+    "asset_page_claim": "CC0 License, Dimitrios Savva, 2m wide",
+    "asset_url": "https://polyhaven.com/a/pine_bark",
+    "license_url": "https://polyhaven.com/license",
+    "license_summary": "All Poly Haven assets are CC0; commercial use and redistribution permitted."
+  }
+}

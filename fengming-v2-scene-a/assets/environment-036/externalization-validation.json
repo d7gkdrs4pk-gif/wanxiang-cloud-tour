@@ -1,0 +1,321 @@
+{
+  "geometryBufferHashBefore": "406083e53ae0d5e5f63f7725fe2cc967c86df89e97bef53a3f5b9fd1a05083fc",
+  "geometryBufferHashAfter": "406083e53ae0d5e5f63f7725fe2cc967c86df89e97bef53a3f5b9fd1a05083fc",
+  "geometryUVAndFaceMaterialAssignmentsUnchanged": true,
+  "materialNodesAndLinksChanged": false,
+  "originalTexturePixelsChanged": false,
+  "externalTextures": [
+    {
+      "image": "rock_face_02_rough_1k.jpg",
+      "path": "//textures/rock_face_02_rough_1k.jpg",
+      "sha256": "8744f00d5b576dfeff31d554bcf8f92b6709b95309a48f0b7d9974e18d802e81",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_01_rough_1k.jpg",
+      "path": "//textures/rock_face_01_rough_1k.jpg",
+      "sha256": "3f92aa11e001d2da1edb1280e8cff8b35d6c20b269b868cdc7d7f42afc96c176",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_01_nor_gl_1k.png",
+      "path": "//textures/rock_face_01_nor_gl_1k.png",
+      "sha256": "8a72b16484d0650367103d26a8ba4a6be79b9adc61ed80fdb124636c9442b73f",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_02_moss_albedo_2k.png",
+      "path": "//textures/rock_face_02_moss_albedo_2k.png",
+      "sha256": "1c78ad53249d91d5cdad7eae77682cce253ed6b0155f2ae78d90cacdf834eea0",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_01_moss_albedo_2k.png",
+      "path": "//textures/rock_face_01_moss_albedo_2k.png",
+      "sha256": "ae0bbc61c582ded0ca75db366d998bb27947e191239030427a354fc6e1a999dd",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_01_slate_albedo_2k.png",
+      "path": "//textures/rock_face_01_slate_albedo_2k.png",
+      "sha256": "a89b1261ba2dd73d40fdec4fd80b8da05e8df9a1637aec1c3d1fb2f5324cf214",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_02_slate_albedo_2k.png",
+      "path": "//textures/rock_face_02_slate_albedo_2k.png",
+      "sha256": "2c6e538e484a827a239f54ea58a9cb65cb7186317234bb24dba4a533eadaf303",
+      "packedBytesIdenticalToExternalFile": true
+    },
+    {
+      "image": "rock_face_02_nor_gl_1k.png",
+      "path": "//textures/rock_face_02_nor_gl_1k.png",
+      "sha256": "c154230fa7fb02aad2c08ea1d601ce6728f46c1871225c1dae44958f945374b5",
+      "packedBytesIdenticalToExternalFile": true
+    }
+  ],
+  "blendBytes": 2778380,
+  "oldGLBToSeparateGLTFAttributes": [
+    {
+      "mesh": "H36_RockBody_WestVerge",
+      "primitive": 0,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_WestVerge",
+      "primitive": 0,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_WestVerge",
+      "primitive": 0,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_WestVerge",
+      "primitive": 0,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 0,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 0,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 0,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 0,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 1,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 1,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 1,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_1_proxy",
+      "primitive": 1,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_EastVerge",
+      "primitive": 0,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_EastVerge",
+      "primitive": 0,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_EastVerge",
+      "primitive": 0,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_EastVerge",
+      "primitive": 0,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 0,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 0,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 0,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 0,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 1,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 1,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 1,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy",
+      "primitive": 1,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_RearLowRidge",
+      "primitive": 0,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_RearLowRidge",
+      "primitive": 0,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_RearLowRidge",
+      "primitive": 0,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "H36_RockBody_RearLowRidge",
+      "primitive": 0,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 0,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 0,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 0,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 0,
+      "attribute": "indices",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 1,
+      "attribute": "POSITION",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 1,
+      "attribute": "NORMAL",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 1,
+      "attribute": "TEXCOORD_0",
+      "exactBytes": true
+    },
+    {
+      "mesh": "rock_face_section_2_proxy.001",
+      "primitive": 1,
+      "attribute": "indices",
+      "exactBytes": true
+    }
+  ],
+  "allVertexIndexNormalUVAttributesExact": true,
+  "oldEmbeddedToExternalImages": [
+    {
+      "oldName": "rock_face_01_nor_gl_1k",
+      "external": "textures/source-gltf/rock_face_01_nor_gl_1k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_01_slate_albedo_2k",
+      "external": "textures/source-gltf/rock_face_01_slate_albedo_2k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_01_rough_1k",
+      "external": "textures/source-gltf/rock_face_01_rough_1k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_01_moss_albedo_2k",
+      "external": "textures/source-gltf/rock_face_01_moss_albedo_2k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_02_nor_gl_1k",
+      "external": "textures/source-gltf/rock_face_02_nor_gl_1k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_02_slate_albedo_2k",
+      "external": "textures/source-gltf/rock_face_02_slate_albedo_2k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_02_rough_1k",
+      "external": "textures/source-gltf/rock_face_02_rough_1k.png",
+      "exactEncodedImageBytes": true
+    },
+    {
+      "oldName": "rock_face_02_moss_albedo_2k",
+      "external": "textures/source-gltf/rock_face_02_moss_albedo_2k.png",
+      "exactEncodedImageBytes": true
+    }
+  ],
+  "allEncodedTextureImageBytesExact": true,
+  "materialsJSONIdentical": true
+}

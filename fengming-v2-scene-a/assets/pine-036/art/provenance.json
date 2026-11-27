@@ -1,0 +1,18 @@
+{
+  "version": "H36",
+  "kind": "original AI-authored game alpha texture atlas",
+  "generator": "OpenAI ImageGen",
+  "createdUTC": "2026-11-27",
+  "file": "crown-atlas.png",
+  "SHA256": "a148fb1c039d29f838dba2b1eacd62a65c36838d0d34fd93de978a7a849264b5",
+  "resolution": [
+    1536,
+    1024
+  ],
+  "channels": "RGBA",
+  "reference": "assets/pine-002/reference.png, approved pine shape/material reference",
+  "promptIntent": "Three independent thick welcoming-pine canopy clusters, high oblique59deg fixed gameplay view, miniature stylized PBR, soft upper-left daylight, muted forest/jade green, alpha background; no whole tree/landscape/UI. Main, top, rear clusters for separate world depth cards.",
+  "usage": "Actual runtime GLB texture via cropped UVs, not a whole-game screenshot, not H29 tree image. New ImageGen crown art replaces rejected random-needle source.",
+  "otherReferencesCopied": false,
+  "privateUserVideoIncluded": false
+}

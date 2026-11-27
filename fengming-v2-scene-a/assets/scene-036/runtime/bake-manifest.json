@@ -1,0 +1,74 @@
+{
+  "version": "H36",
+  "sourceSceneSHA256": "34e268c4a3f454f044b3e17398d857bf1a2dcb4f9b74014651ac3c62dcf5d7f2",
+  "samples": 32,
+  "cameraFOV39": true,
+  "bakedActorShadows": false,
+  "stages": [
+    {
+      "stage": "physical Cycles UV diffuse/color/direct/indirect lightmaps",
+      "objects": 5,
+      "secondsFromStart": 44.48118805885315
+    }
+  ],
+  "cards": [
+    {
+      "name": "MainCrown",
+      "category": "H36_Pine_FrontBranch",
+      "source": "new ImageGen crown-atlas.png, approved pine reference; not a render of the rejected needle source",
+      "alphaCutoff": 0.45
+    },
+    {
+      "name": "TopCrown",
+      "category": "H36_Pine_RearCrown",
+      "source": "new ImageGen crown-atlas.png, approved pine reference; not a render of the rejected needle source",
+      "alphaCutoff": 0.45
+    },
+    {
+      "name": "RearCrown",
+      "category": "H36_Pine_RearCrown",
+      "source": "new ImageGen crown-atlas.png, approved pine reference; not a render of the rejected needle source",
+      "alphaCutoff": 0.45
+    }
+  ],
+  "meshes": [
+    {
+      "sourceName": "H36_Ground_body_source",
+      "category": "H36_Ground",
+      "sourceTriangles": 6656,
+      "runtimeTriangles": 6656
+    },
+    {
+      "sourceName": "H36_Road_body_source",
+      "category": "H36_Road",
+      "sourceTriangles": 10626,
+      "runtimeTriangles": 10626
+    },
+    {
+      "sourceName": "H36_Rock_body_source",
+      "category": "H36_Rock",
+      "sourceTriangles": 50408,
+      "runtimeTriangles": 6048
+    },
+    {
+      "sourceName": "H36_Gate_body_source",
+      "category": "H36_Gate",
+      "sourceTriangles": 89838,
+      "runtimeTriangles": 10780
+    },
+    {
+      "sourceName": "H36_Gate_FIXED_035_source",
+      "category": "H36_Gate",
+      "sourceTriangles": 7886,
+      "runtimeTriangles": 7886
+    }
+  ],
+  "world": {
+    "bytes": 4844304,
+    "SHA256": "a8d80266b267023184f255f727ad0edc7eb00993e304efe21a97dbb78d721afc",
+    "opaqueTriangles": 41996,
+    "crownTriangles": 6,
+    "staticDrawsExpected": 8,
+    "seconds": 45.34822654724121
+  }
+}

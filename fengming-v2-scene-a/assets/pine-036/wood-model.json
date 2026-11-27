@@ -1,0 +1,37 @@
+{
+  "asset": "PINE-036 wood-only revision3",
+  "source": "pine-036-wood.blend",
+  "full_exploration_source": "pine-036.blend",
+  "root_three": [
+    -7,
+    0.15297318994998932,
+    -7
+  ],
+  "triangles": 23890,
+  "meshes": 5,
+  "glb_bytes": 3886272,
+  "sha256": "8134141b5be24d94754f4750d2d8f2c261757d979f42e10d511a844cb00a3b3d",
+  "world_blender_bounds": [
+    [
+      -8.115190505981445,
+      5.988556385040283,
+      -0.17014916241168976
+    ],
+    [
+      -3.9104294776916504,
+      7.921605587005615,
+      7.647182941436768
+    ]
+  ],
+  "materials": [
+    "H36_Bark",
+    "H36_Rock"
+  ],
+  "bark_source": "https://polyhaven.com/a/pine_bark",
+  "bark_license": "CC0 1.0",
+  "bark_tile_m": 2,
+  "lower_bole_radius_scale": 0.82,
+  "root_end_below_sampled_ground_m": 0.075,
+  "collision_change": false,
+  "renderer_validation": "not rendered by asset agent; shared original-camera review pending"
+}

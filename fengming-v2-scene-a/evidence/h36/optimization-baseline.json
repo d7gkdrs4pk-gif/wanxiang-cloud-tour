@@ -1,0 +1,19 @@
+{
+  "label": "H36 pre-optimization; superseded, not final delivery",
+  "frameStats": {
+    "frames": 202,
+    "seconds": 14.356,
+    "FPS": 14.001114516578435,
+    "medianFrameMs": 69,
+    "p95FrameMs": 104
+  },
+  "worldSHA256": "3aac5b87dd1430dab96bfc46a424a72f40930aa67074b05b2434c0bac2e03bfc",
+  "triangles": 111182,
+  "flags": {
+    "nearPine": true,
+    "underBranch": true,
+    "stairs": true,
+    "hit": true
+  },
+  "physical_iPhone": false
+}

@@ -1,0 +1,124 @@
+{
+  "reviewOnly": true,
+  "runtimeChanged": false,
+  "sources": [
+    {
+      "path": "sample/hero.js",
+      "sha256": "6a77d824d833f545a6037362948fed5e994d5a61a766bd56f8f343d8e1970e0e"
+    },
+    {
+      "path": "sample/enemy.js",
+      "sha256": "2ffb960badfa46e276ec1b38aca3517f689de2a6c9e3a5cbc5c8579ec9e61e7b"
+    },
+    {
+      "path": "assets/hero-035/action.js",
+      "sha256": "602530789141311478bb476bc68d8095baa22a73ea6bf362dd03e62dfff28836"
+    },
+    {
+      "path": "assets/hero-035/linyan-h35-animation.blend",
+      "sha256": "d60fe5293cc114ac8d2243dc4789feb08ae030a06d38e654ab2d3b9f274f3e74"
+    },
+    {
+      "path": "assets/hero-035/source/pose-samples.json",
+      "sha256": "f152a72258cbd36c1fae649b46a120e7bc49d454f68a7565e058e19f5476b52b"
+    },
+    {
+      "path": "assets/hero-034/linyan-h34.blend",
+      "sha256": "3ebcee4f0225d7731236725e7500211a8a83c3955787ee4a975280ea85855340"
+    },
+    {
+      "path": "assets/hero-034/linyan-atlas.webp",
+      "sha256": "4b6e2edd1ec4ac53fc30c022c12b92995bdfce7ee0901ac31ad7c6a7fda1c517"
+    }
+  ],
+  "newUtility": {
+    "path": ".github/scripts/h36_scene_actors.py",
+    "sha256": "930c042de3a7a098ba056ff86bd6bc2b4408d5d6b2bc42f4623101496da012bb"
+  },
+  "enemyExporter": {
+    "path": ".github/scripts/h36-export-enemy.mjs",
+    "sha256": "3fb2367a5637fd30f24c8ede33f6fa66f0ae25dcd3be286b2106ae138f829678"
+  },
+  "cpuAppendCheck": {
+    "hero": {
+      "bones": 22,
+      "meshes": 4,
+      "allMeshDataLinked": true,
+      "body": {
+        "min": [
+          -0.5200158953666687,
+          -0.22794029116630554,
+          0.014000000432133675
+        ],
+        "max": [
+          0.4588696360588074,
+          0.3318615257740021,
+          1.4807320833206177
+        ],
+        "height": 1.466732082888484,
+        "triangles": 8975,
+        "points": 5582
+      },
+      "all": {
+        "min": [
+          -1.0601282119750977,
+          -1.3503386974334717,
+          0.014000000432133675
+        ],
+        "max": [
+          0.4588696360588074,
+          0.3318615257740021,
+          1.4807320833206177
+        ],
+        "height": 1.466732082888484,
+        "triangles": 9351,
+        "points": 6167
+      },
+      "contactBoneMaxError": 3.5762786865234375e-07,
+      "actions": [
+        "Slash",
+        "Idle",
+        "Walk"
+      ],
+      "idleUnchangedAfterSecondActor": true
+    },
+    "enemy": {
+      "bones": 19,
+      "meshes": 1,
+      "bbox": {
+        "min": [
+          -0.42634695768356323,
+          -0.28175145387649536,
+          0.004999991971999407
+        ],
+        "max": [
+          0.3977991044521332,
+          0.19422543048858643,
+          1.4555538892745972
+        ],
+        "height": 1.4505538973025978,
+        "triangles": 1866,
+        "points": 2501
+      },
+      "actions": [
+        "EnemyIdle",
+        "EnemyHit"
+      ],
+      "actionFrames": {
+        "EnemyIdle": [
+          0.0,
+          120.0
+        ],
+        "EnemyHit": [
+          0.0,
+          20.399999618530273
+        ]
+      }
+    },
+    "libraries": [
+      "//../../wanxiang-cloud-tour/fengming-v2-scene-a/assets/hero-034/linyan-h34.blend",
+      "//../../wanxiang-cloud-tour/fengming-v2-scene-a/assets/hero-035/linyan-h35-animation.blend"
+    ]
+  },
+  "rendered": false
+}

@@ -1,0 +1,31 @@
+{
+  "revision": "H36-structure-refinement-2",
+  "cpuOnly": true,
+  "rendered": false,
+  "runtimeModified": false,
+  "fixed035Source": "assets/gate-035/source/gate-h35.blend",
+  "fixed035VertexTopologyAndWorldTransformSHA256": "d1ff2c4d06506fc12100d611b3be70e36da20cecbec7700e01f983697860a271",
+  "fixed035GeometryIdentical": true,
+  "newMeshObjects": 195,
+  "totalTrianglesIncludingExact035Lower": 97724,
+  "allNewMeshesHaveUV": true,
+  "noVertexColors": true,
+  "noSourceCameraOrLight": true,
+  "degenerateTriangleCount": 0,
+  "degenerateExamples": [],
+  "nonFiniteVertexCount": 0,
+  "files": {
+    "assets/gate-036/source/gate-h36.blend": {
+      "sha256": "4208cb79a2c29f0825a350b2d67e7c8d56b7809468e90f77d5c7d96da3e93dfd",
+      "bytes": 1437227
+    },
+    "assets/gate-036/source/gate-h36.glb": {
+      "sha256": "c8629899545e434e6d9636b034294e63f2396946545c109ee514ee30834926d4",
+      "bytes": 4970568
+    },
+    "tools/build-gate-036.py": {
+      "sha256": "175382482a307aa7b4907dee6394a06105c3790d9276b7a6e5acb6883a3122d8",
+      "bytes": 19738
+    }
+  }
+}

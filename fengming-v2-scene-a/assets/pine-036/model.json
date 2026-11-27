@@ -1,0 +1,85 @@
+{
+  "asset": "PINE-036 revision3 physical wood; random needle crowns rejected source retained",
+  "root_three": [
+    -7,
+    0.15297318994998932,
+    -7
+  ],
+  "root_blender": [
+    -7,
+    7,
+    0.15297318994998932
+  ],
+  "shader_materials": [
+    "H36_Needles",
+    "H36_Needles_YoungTips",
+    "H36_Bark",
+    "H36_Rock"
+  ],
+  "glb_bytes": 11271208,
+  "sha256": "36bcf60798bcbc33cde3dd46ba1e994b8e90d539a2ee26eff8d8fb200b474f18",
+  "triangles": 117538,
+  "meshes": 11,
+  "world_blender_bounds": [
+    [
+      -8.702980995178223,
+      4.737354755401611,
+      -0.17014916241168976
+    ],
+    [
+      -3.327821731567383,
+      7.921605587005615,
+      8.251160621643066
+    ]
+  ],
+  "groups": [
+    "RearCrown",
+    "TopCrown",
+    "Trunk",
+    "FrontBranch",
+    "MainCrown"
+  ],
+  "crowns": [
+    {
+      "name": "Main welcoming crown",
+      "group": "MainCrown",
+      "r": 1.55,
+      "a": -1.85,
+      "h": 4.3,
+      "sr": 1.25,
+      "sa": 0.92,
+      "thick": 0.72,
+      "shoots": 800
+    },
+    {
+      "name": "Small high crown",
+      "group": "TopCrown",
+      "r": 0.72,
+      "a": -1.15,
+      "h": 6.95,
+      "sr": 1.02,
+      "sa": 0.58,
+      "thick": 0.6,
+      "shoots": 550
+    },
+    {
+      "name": "Offset rear crown",
+      "group": "RearCrown",
+      "r": -0.74,
+      "a": -0.15,
+      "h": 4.6,
+      "sr": 0.83,
+      "sa": 0.65,
+      "thick": 0.58,
+      "shoots": 450
+    }
+  ],
+  "physical_bark_flakes": 260,
+  "revision": 3,
+  "revision_changes": "wood only: lower bole radius -18 percent, welcoming arm continuous taper -20 to -25 percent, buttress roots lowered and sunk into sampled slope; unchanged random-needle crowns retained as rejected exploration",
+  "png_cards": false,
+  "ellipsoid_canopies": false,
+  "vertex_light_colors": false,
+  "paid_generation": false,
+  "render_stage": "root shared Cycles lighting and calibrated camera; no independent preview claimed"
+}

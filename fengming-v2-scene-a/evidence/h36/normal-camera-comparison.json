@@ -1,0 +1,915 @@
+{
+  "viewport": [
+    390,
+    844
+  ],
+  "DPR": 1,
+  "versions": [
+    {
+      "version": "H35",
+      "state": {
+        "version": "H.35 daylight stone and weighted sword sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 19
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 0
+        },
+        "blade": {
+          "base": [
+            -3.8020249100211316,
+            0.8717551975562963,
+            -4.260910646983787
+          ],
+          "tip": [
+            -4.837423682336788,
+            1.2362471028324424,
+            -3.6841134267448234
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H35 daylight stone-road kit",
+          "source": "Owned H33 hand-painted stone atlas copied to 035; offline-fitted actual beveled masonry; historical mountains retained; original navigation and walking heights unchanged",
+          "staticDraws": 3,
+          "shadowDirection": [
+            0.5547001962252291,
+            -0.8320502943378437
+          ],
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "cameraUnchanged": true,
+          "staticShading": "daylight fixed SUN; batched real stone tops/bevels/sides over render-only recessed grout bed; triplanar slope rock; no static PBR/IBL/normal/ORM sampling"
+        },
+        "dressing": {
+          "leafTriangles": 1800,
+          "plantClumps": 11,
+          "rockGroups": 2,
+          "rockTriangles": 1744,
+          "road": {
+            "stones": 150,
+            "triangles": 10627,
+            "vertices": 17040,
+            "topLiftAtVertices": 0.01,
+            "minSampledTopLift": -0.0008449083150720571,
+            "maxSampledTopLift": 0.01948651759106927,
+            "topChecks": 119035,
+            "aboveTolerance": 0,
+            "independentNavCheck": {
+              "samples": 19929,
+              "minLift": -0.004543392079075781,
+              "maxLift": 0.02195916036423784,
+              "over2cm": 8,
+              "method": "final top triangle interior barycentrics queried against unchanged nav.groundAt; safeGround only filters nonwalkable decoration"
+            },
+            "layout": "single running-bond mother grid, no split bricks/no random omissions",
+            "jointWidth": 0.02,
+            "topShading": "one restrained average normal per whole slab; actual bevel and side normals retained",
+            "stoneWidth": 0.96,
+            "visibleSideBottom": -0.055,
+            "bevelWidth": 0.013,
+            "originalHeightDataUnchanged": true
+          },
+          "roadTriangles": 10627,
+          "contactTriangles": 350,
+          "rockFootprints": [
+            {
+              "key": "west",
+              "role": "near left frame, outside original z limit",
+              "min": [
+                -6.83683742364308,
+                -0.26408765474620277,
+                2.2519447449704844
+              ],
+              "max": [
+                -3.3822822811341204,
+                0.8624540501532126,
+                4.494950412759439
+              ],
+              "height": 1.1265417048994153
+            },
+            {
+              "key": "east",
+              "role": "near right frame, outside original z limit",
+              "min": [
+                1.8818717092337498,
+                -0.35541882898711974,
+                2.5856891462599316
+              ],
+              "max": [
+                5.09031277863763,
+                1.1342242408895304,
+                4.779495242665486
+              ],
+              "height": 1.4896430698766503
+            }
+          ],
+          "draws": 4,
+          "pineContactTriangles": 320
+        },
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": [
+            0,
+            0
+          ]
+        },
+        "gateRevision": "H35",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795150383,
+          "started": 1795795147849,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795147850,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795147851,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795148219,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795148962,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795149203,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795149955,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795150367,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795150383,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795151127,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h35.js?v=098ee369a86f",
+          "readyAt": 1795795151127
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 27,
+          "triangles": 75070
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2559
+          },
+          {
+            "type": "ready",
+            "t": 3303,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "version": "H31",
+      "state": {
+        "version": "H.31 painted gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.078413903713226,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.07841390371322632,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.06296829879283905,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 31,
+          "triangles": 86608
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15580439567565918,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.49884938433165,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.45733459291049,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.614203571283845,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793044,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464265445104555
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1424
+          },
+          {
+            "type": "ready",
+            "t": 1424,
+            "hero": {
+              "triangles": 16798,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H31 continuous cloth/weighted drape",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.3,
+              "facing": "+Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "version": "H36",
+      "state": {
+        "version": "H.36 authored layered pine and baked gate sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 1,
+          "renderMs": 16
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 0
+        },
+        "blade": {
+          "base": [
+            -3.802157640445115,
+            0.8692476087981353,
+            -4.261001452752422
+          ],
+          "tip": [
+            -4.837583317591798,
+            1.233692209835827,
+            -3.6842226390986847
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+          "animationRevision": "H35 weighted stance / low outside recovery"
+        },
+        "environment": {
+          "revision": "H36 prepared baked-world adapter",
+          "loaded": true,
+          "source": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+          "sources": {
+            "world": "http://127.0.0.1:3000/assets/scene-036/runtime/world-h36.glb",
+            "pineWood": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "pineCrowns": "New ImageGen-authored 2.5D atlas, not a render of 036 needle geometry",
+            "distant": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "distantAuthorship": "Existing project-owned H31 hand-painted mountain atlas; reused, not newly generated"
+          },
+          "coordinates": "game world XYZ / Y-up / metres / scale1",
+          "cameraUnchanged": true,
+          "navigationOwnedByCaller": true,
+          "staticShading": "World Cycles diffuse bake / drawn crown cards / owned mountains use Basic with no second SUN/tone mapping; original pine wood retains PBR lighting/normal/roughness",
+          "transparency": "OPAQUE static geometry; crown MASK/depth writes/no BLEND; distant painting and contact circles are transparent, depthWrite false",
+          "requiredNodes": [
+            "H36_Ground",
+            "H36_Road",
+            "H36_Rock",
+            "H36_Gate",
+            "H36_Pine_Trunk",
+            "H36_Pine_RearCrown",
+            "H36_Pine_FrontBranch",
+            "H36_Distant"
+          ],
+          "missingNodes": [],
+          "nodes": {
+            "H36_Ground": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6656,
+              "draws": 1
+            },
+            "H36_Road": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 10626,
+              "draws": 1
+            },
+            "H36_Rock": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 6048,
+              "draws": 1
+            },
+            "H36_Gate": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 18666,
+              "draws": 2
+            },
+            "H36_Pine_Trunk": {
+              "sourceNodes": 1,
+              "meshes": 5,
+              "triangles": 11974,
+              "draws": 5
+            },
+            "H36_Pine_RearCrown": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            },
+            "H36_Pine_FrontBranch": {
+              "sourceNodes": 1,
+              "meshes": 1,
+              "triangles": 2,
+              "draws": 1
+            },
+            "H36_Distant": {
+              "sourceNodes": 1,
+              "meshes": 2,
+              "triangles": 4,
+              "draws": 2
+            }
+          },
+          "triangles": 53980,
+          "staticDraws": 15,
+          "materials": 12,
+          "worldBounds": [
+            [
+              -36.10396914465619,
+              -32.85000038146973,
+              -49.44158765786247
+            ],
+            [
+              26.103969144656187,
+              7.975228309631348,
+              8.199999809265137
+            ]
+          ],
+          "ignoredOutsideNamedCategories": true,
+          "treeFade": false,
+          "treeRuntimeBillboard": false,
+          "treeGeometry": "New ImageGen-drawn 2.5D crown depth cards plus real-time 3D trunk/primary branches; not 036 needle-source renders",
+          "crownNodes": {
+            "MainCrown": [
+              "MainCrown"
+            ],
+            "TopCrown": [
+              "TopCrown"
+            ],
+            "RearCrown": [
+              "RearCrown"
+            ]
+          },
+          "maskedCrownMaterials": 3,
+          "liveWood": {
+            "source": "http://127.0.0.1:3000/assets/pine-036/pine-036-wood-mobile.glb",
+            "worldCoordinates": true,
+            "loaded": true,
+            "triangles": 11974,
+            "meshes": 5,
+            "materials": 2,
+            "materialTypes": [
+              "MeshStandardMaterial"
+            ],
+            "originalMaterialsAndMapsPreserved": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "staticGroundTreeShadowRemainsBaked": true,
+            "discardedWorldTrunkMeshes": 0,
+            "discardedWorldTrunkTriangles": 0
+          },
+          "roadBakeRepair": {
+            "rgbFloor": [
+              0.035,
+              0.043,
+              0.043
+            ],
+            "colorScale": [
+              0.78,
+              0.82,
+              0.8
+            ],
+            "scope": "H36_Road only, after map_fragment"
+          },
+          "distant": {
+            "source": "http://127.0.0.1:3000/assets/sample-runtime/mountain-atlas.webp",
+            "reusedOwnedAsset": true,
+            "atlasLoads": 1,
+            "planes": 2,
+            "canvasUsed": false,
+            "cameraFollowing": false,
+            "layers": [
+              {
+                "name": "H36 far owned painted valley",
+                "width": 67,
+                "height": 16.7,
+                "position": [
+                  -5,
+                  -24.5,
+                  -37
+                ],
+                "opacity": 0.87,
+                "atlasHalf": "top"
+              },
+              {
+                "name": "H36 near owned painted valley",
+                "width": 54,
+                "height": 13.5,
+                "position": [
+                  -7,
+                  -24.5,
+                  -27
+                ],
+                "opacity": 0.93,
+                "atlasHalf": "bottom"
+              }
+            ],
+            "yaw": 0.3805063771123649
+          },
+          "mutatesLightsRendererOrFog": false
+        },
+        "dressing": null,
+        "daylight": {
+          "timeOfDay": "day",
+          "sunDirection": [
+            -0.3713906763541037,
+            0.7427813527082074,
+            0.5570860145311556
+          ],
+          "sunIntensity": 2.2,
+          "activeLampCount": 0,
+          "lampIntensities": []
+        },
+        "gateRevision": "H36 authored gate, true Cycles light bake",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.35",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795795156782,
+          "started": 1795795155071,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795795155072,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795795155072,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795795155254,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795795155837,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795795156001,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795795156430,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795795156781,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795795156782,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795795157739,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h36.js?v=9bbf1b746021",
+          "readyAt": 1795795157739
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 25,
+          "triangles": 65285
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -6.213285207748413,
+                6.5203330516815186,
+                -6.51181173324585
+              ],
+              "centerDepth": 27.602156445004063,
+              "nearDepth": 25.06236728582991,
+              "farDepth": 30.141945604178215,
+              "visible": true,
+              "node": "H36_Pine_RearCrown"
+            },
+            "trunk": {
+              "min": [
+                -8.115190386772156,
+                -0.1715819090604782,
+                -7.920203983783722
+              ],
+              "max": [
+                -3.9104294776916504,
+                7.646938338875771,
+                -5.992820739746094
+              ],
+              "center": [
+                -6.012809932231903,
+                3.737678214907646,
+                -6.956512361764908
+              ],
+              "centerDepth": 30.163771573385254,
+              "nearDepth": 25.948841444600156,
+              "farDepth": 34.37870170217035,
+              "visible": true,
+              "node": "H36_Pine_Trunk"
+            },
+            "front": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 28.636370893951266,
+              "nearDepth": 27.099008262787436,
+              "farDepth": 30.173733525115093,
+              "visible": true,
+              "node": "H36_Pine_FrontBranch"
+            }
+          },
+          "crowns": {
+            "MainCrown": {
+              "min": [
+                -7.848629951477051,
+                4.723015785217285,
+                -8.016688346862793
+              ],
+              "max": [
+                -2.7345755100250244,
+                5.4829301834106445,
+                -4.980557918548584
+              ],
+              "center": [
+                -5.291602730751038,
+                5.102972984313965,
+                -6.4986231327056885
+              ],
+              "centerDepth": 28.636370893951266,
+              "nearDepth": 27.099008262787436,
+              "farDepth": 30.173733525115093
+            },
+            "TopCrown": {
+              "min": [
+                -7.764000415802002,
+                7.230717658996582,
+                -7.642630577087402
+              ],
+              "max": [
+                -3.4022889137268066,
+                7.975228309631348,
+                -4.927515029907227
+              ],
+              "center": [
+                -5.583144664764404,
+                7.602972984313965,
+                -6.2850728034973145
+              ],
+              "centerDepth": 26.44486880869366,
+              "nearDepth": 25.06236728582991,
+              "farDepth": 27.827370331557407
+            },
+            "RearCrown": {
+              "min": [
+                -9.02428150177002,
+                5.0654377937316895,
+                -8.096108436584473
+              ],
+              "max": [
+                -5.789063930511475,
+                5.64050817489624,
+                -6.052447319030762
+              ],
+              "center": [
+                -7.406672716140747,
+                5.352972984313965,
+                -7.074277877807617
+              ],
+              "centerDepth": 29.099602464200267,
+              "nearDepth": 28.05725932422232,
+              "farDepth": 30.141945604178215
+            }
+          },
+          "playerDepth": 31.46426544510455,
+          "treeFade": 1,
+          "technique": "Newly drawn ImageGen 2.5D depth crowns plus real 3D trunk/branches; no whole-tree fade"
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1725
+          },
+          {
+            "type": "ready",
+            "t": 2682,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+              "animationRevision": "H35 weighted stance / low outside recovery"
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "note": "H36/H35 exact spawn/camera/scale. H31 retains legacy +.01272 Y ground difference; XZ/FOV/offset/hero nominal height unchanged."
+}

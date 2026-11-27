@@ -1,0 +1,79 @@
+{
+  "revision": "H36-structure-refinement-2",
+  "collection": "H36_GATE",
+  "worldBounds": [
+    [
+      -2.4149999618530273,
+      -0.09000000357627869,
+      -9.764999389648438
+    ],
+    [
+      2.2200000286102295,
+      4.570799827575684,
+      -3.940000057220459
+    ]
+  ],
+  "roofWorldBounds": [
+    [
+      -2.1080000400543213,
+      2.930000066757202,
+      -9.414999961853027
+    ],
+    [
+      1.2580000162124634,
+      4.570799827575684,
+      -5.784999847412109
+    ]
+  ],
+  "surfacePeakY": 4.25,
+  "pillarSeatXZ": [
+    [
+      -1.75,
+      -8.85
+    ],
+    [
+      -1.75,
+      -6.15
+    ],
+    [
+      -0.05,
+      -8.85
+    ],
+    [
+      -0.05,
+      -6.15
+    ],
+    [
+      0.85,
+      -8.85
+    ],
+    [
+      0.85,
+      -6.15
+    ]
+  ],
+  "semanticMaterials": [
+    "H36_Roof",
+    "H36_Wood",
+    "H36_Stone",
+    "H36_Plaque"
+  ],
+  "tileConstruction": {
+    "channels": 15,
+    "rowsPerSlope": 7,
+    "panPieces": 210,
+    "coverPieces": 224,
+    "clayThickness": 0.018,
+    "overlapRise": 0.034,
+    "roundEaveEndCaps": 32
+  },
+  "plaqueText": "凤鸣山门",
+  "newFoundationInsideOriginalForbiddenFootprint": true,
+  "fixed035StairGeometryChanged": false,
+  "meshObjects": 195,
+  "noCameraOrLights": true,
+  "vertexColorLayers": 0,
+  "allNewMeshesHaveUV": true,
+  "rendered": false,
+  "scope": "Editable refined structural source for original-camera root Cycles evaluation; no art pass claim"
+}

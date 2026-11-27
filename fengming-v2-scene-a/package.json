@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node tools/build-sample.mjs"
+    "build": "node tools/build-sample-h36.mjs",
+    "build:h36": "node tools/build-sample-h36.mjs"
   },
   "devDependencies": {
     "esbuild": "0.25.12"

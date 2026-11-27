@@ -1,0 +1,39 @@
+{
+  "version": "H36",
+  "environment": "cloud Linux WebKit26.5/WPE 390x844 DPR1 software; controlled failures, not claims about the user iPhone root cause",
+  "physical_iPhone": false,
+  "wechat_device_test": false,
+  "cases": [
+    {
+      "case": "world failure",
+      "passed": true,
+      "status": "failed",
+      "message": "场景未完整载入，请重试"
+    },
+    {
+      "case": "live-wood failure",
+      "passed": true,
+      "status": "failed",
+      "message": "场景未完整载入，请重试"
+    },
+    {
+      "case": "mountain failure",
+      "passed": true,
+      "status": "failed",
+      "message": "场景未完整载入，请重试"
+    },
+    {
+      "case": "bundle failure then real retry",
+      "passed": true
+    },
+    {
+      "case": "no WebGL2 actionable failure",
+      "passed": true,
+      "message": "当前窗口无法启动3D画面，请复制地址到浏览器打开"
+    },
+    {
+      "case": "actual context loss and retry",
+      "passed": true
+    }
+  ]
+}

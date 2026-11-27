@@ -1,0 +1,131 @@
+{
+  "scope": "Nine positions along original under->exit segment; five actual triangle rays per labelled body height; CPU only, not actor rendered pixels",
+  "rows": [
+    {
+      "actor": [
+        -6.4,
+        0.12792099999999956,
+        -8.1
+      ],
+      "counts": {
+        "head": 0,
+        "shoulder": 4,
+        "chest": 5,
+        "hips": 5,
+        "feet": 3
+      }
+    },
+    {
+      "actor": [
+        -6.3500000000000005,
+        0.05775046249999999,
+        -8.0125
+      ],
+      "counts": {
+        "head": 4,
+        "shoulder": 5,
+        "chest": 5,
+        "hips": 5,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.300000000000001,
+        -0.016173200000000026,
+        -7.925
+      ],
+      "counts": {
+        "head": 5,
+        "shoulder": 5,
+        "chest": 5,
+        "hips": 5,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.25,
+        -0.017578687500000016,
+        -7.8374999999999995
+      ],
+      "counts": {
+        "head": 5,
+        "shoulder": 5,
+        "chest": 3,
+        "hips": 0,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.2,
+        -0.02077979999999998,
+        -7.75
+      ],
+      "counts": {
+        "head": 5,
+        "shoulder": 5,
+        "chest": 2,
+        "hips": 0,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.15,
+        -0.02462116249999994,
+        -7.6625
+      ],
+      "counts": {
+        "head": 5,
+        "shoulder": 2,
+        "chest": 0,
+        "hips": 0,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.1000000000000005,
+        -0.027457499999999992,
+        -7.574999999999999
+      ],
+      "counts": {
+        "head": 5,
+        "shoulder": 0,
+        "chest": 0,
+        "hips": 0,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.050000000000001,
+        -0.029694175000000038,
+        -7.4875
+      ],
+      "counts": {
+        "head": 0,
+        "shoulder": 0,
+        "chest": 0,
+        "hips": 0,
+        "feet": 0
+      }
+    },
+    {
+      "actor": [
+        -6.0,
+        -0.034750200000000064,
+        -7.3999999999999995
+      ],
+      "counts": {
+        "head": 0,
+        "shoulder": 0,
+        "chest": 0,
+        "hips": 0,
+        "feet": 0
+      }
+    }
+  ]
+}

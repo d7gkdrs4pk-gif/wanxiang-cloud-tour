@@ -1,0 +1,361 @@
+{
+  "scope": "actual MainCrown closed-needle triangles, original fixed follow camera; diagnostic body rays, not native actor mesh or rendered art acceptance",
+  "proof": [
+    {
+      "actor_three": [
+        -6.4,
+        0.12792096652073798,
+        -8.1
+      ],
+      "camera_three": [
+        -0.40000000000000036,
+        27.127920966520737,
+        6.9
+      ],
+      "points": [
+        {
+          "part": "head",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "head",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "head",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": -0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.465383052825928,
+            6.13428258895874,
+            4.757530212402344
+          ]
+        },
+        {
+          "part": "shoulder",
+          "side": 0,
+          "occluded": true,
+          "hit_blender": [
+            -5.517664432525635,
+            5.894160747528076,
+            5.062257766723633
+          ]
+        },
+        {
+          "part": "shoulder",
+          "side": 0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.634602069854736,
+            5.821033000946045,
+            5.080554962158203
+          ]
+        },
+        {
+          "part": "chest",
+          "side": -0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.4024128913879395,
+            5.972248554229736,
+            4.873373031616211
+          ]
+        },
+        {
+          "part": "chest",
+          "side": 0,
+          "occluded": true,
+          "hit_blender": [
+            -5.4881463050842285,
+            5.8203654289245605,
+            5.028406143188477
+          ]
+        },
+        {
+          "part": "chest",
+          "side": 0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.614309787750244,
+            5.7717204093933105,
+            5.004724502563477
+          ]
+        },
+        {
+          "part": "hips",
+          "side": -0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.310878276824951,
+            5.736711025238037,
+            5.037466049194336
+          ]
+        },
+        {
+          "part": "hips",
+          "side": 0,
+          "occluded": true,
+          "hit_blender": [
+            -5.446646213531494,
+            5.716614246368408,
+            4.964733123779297
+          ]
+        },
+        {
+          "part": "hips",
+          "side": 0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.54144811630249,
+            5.5946526527404785,
+            5.071109771728516
+          ]
+        },
+        {
+          "part": "feet",
+          "side": -0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.2750325202941895,
+            5.644473552703857,
+            4.724336624145508
+          ]
+        },
+        {
+          "part": "feet",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": 0.16,
+          "occluded": true,
+          "hit_blender": [
+            -5.503457069396973,
+            5.502328395843506,
+            4.760486602783203
+          ]
+        }
+      ]
+    },
+    {
+      "actor_three": [
+        -6.0,
+        -0.034750199418223215,
+        -7.4
+      ],
+      "camera_three": [
+        0.0,
+        26.965249800581777,
+        7.6
+      ],
+      "points": [
+        {
+          "part": "head",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "head",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "head",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "chest",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "chest",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "chest",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "hips",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "hips",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "hips",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        }
+      ]
+    },
+    {
+      "actor_three": [
+        -6.0,
+        -0.10386509880671507,
+        -6.5
+      ],
+      "camera_three": [
+        0.0,
+        26.896134901193285,
+        8.5
+      ],
+      "points": [
+        {
+          "part": "head",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "head",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "head",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "shoulder",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "chest",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "chest",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "chest",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "hips",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "hips",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "hips",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": -0.16,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": 0,
+          "occluded": false,
+          "hit_blender": null
+        },
+        {
+          "part": "feet",
+          "side": 0.16,
+          "occluded": false,
+          "hit_blender": null
+        }
+      ]
+    }
+  ]
+}

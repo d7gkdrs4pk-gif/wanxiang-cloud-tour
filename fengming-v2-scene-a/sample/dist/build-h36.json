@@ -1,0 +1,10 @@
+{
+  "version": "H.36",
+  "sha256": "9bbf1b746021561c8b5ab1fbcd52e10c229d4abb04d9c62142bb42f5311512b7",
+  "bytes": 1311819,
+  "format": "classic IIFE",
+  "target": "Safari15+",
+  "three": "0.170.0",
+  "runtimeImports": 0,
+  "staticWorld": "assets/scene-036/runtime/world-h36.glb"
+}

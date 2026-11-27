@@ -1,0 +1,37 @@
+{
+  "source": "pine-036-wood.blend",
+  "sourceSHA256": "8544ef707973b126ba3f419cbd85fe60d20eb9203228b33ac21859d056d9c05e",
+  "asset": "pine-036-wood-mobile.glb",
+  "SHA256": "f18dce4d2f1bf7233e44cf0981b5d97d65df8dde8f5c1c4290db50d9b9d0a9dc",
+  "bytes": 3462672,
+  "meshes": [
+    {
+      "name": "H36 fused trunk roots and principal branches",
+      "before": 16810,
+      "after": 8404
+    },
+    {
+      "name": "H36 broad torn bark physical flakes",
+      "before": 7020,
+      "after": 3510
+    },
+    {
+      "name": "H36 embedded slope stone 00",
+      "before": 20,
+      "after": 20
+    },
+    {
+      "name": "H36 embedded slope stone 01",
+      "before": 20,
+      "after": 20
+    },
+    {
+      "name": "H36 embedded slope stone 02",
+      "before": 20,
+      "after": 20
+    }
+  ],
+  "triangles": 11974,
+  "materials": "original PBR maps/normal/roughness, no baked colors",
+  "rootAndNavigationChanged": false
+}

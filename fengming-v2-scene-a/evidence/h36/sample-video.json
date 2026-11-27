@@ -1,0 +1,28 @@
+{
+  "source": "sample-full.webm",
+  "sourceSHA256": "e45b5455e33cf21ae623afff7dc73ac063232380fcea16416bec84204b54e69a",
+  "clipStart": 4.280869140625,
+  "requestedDuration": 14.898239990234375,
+  "speed": 1,
+  "interpolation": false,
+  "gameFPS": 18.444321635810997,
+  "encodingFPS": 25,
+  "device": {
+    "UA": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+    "renderer": "Apple GPU",
+    "viewport": [
+      390,
+      844
+    ],
+    "canvas": [
+      390,
+      844
+    ],
+    "host": "cloud Linux x86_64",
+    "engine": "Playwright WebKit26.5 WPE",
+    "softwareRenderingForced": true,
+    "reportedRendererIsNotPhysicalDevice": true
+  },
+  "physical_iPhone": false,
+  "wechat_device_test": false
+}

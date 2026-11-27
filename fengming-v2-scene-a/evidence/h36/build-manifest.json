@@ -1,0 +1,113 @@
+{
+  "version": "H36",
+  "build": {
+    "version": "H.36",
+    "sha256": "9bbf1b746021561c8b5ab1fbcd52e10c229d4abb04d9c62142bb42f5311512b7",
+    "bytes": 1311819,
+    "format": "classic IIFE",
+    "target": "Safari15+",
+    "three": "0.170.0",
+    "runtimeImports": 0,
+    "staticWorld": "assets/scene-036/runtime/world-h36.glb"
+  },
+  "world": {
+    "bytes": 4844304,
+    "SHA256": "a8d80266b267023184f255f727ad0edc7eb00993e304efe21a97dbb78d721afc",
+    "opaqueTriangles": 41996,
+    "crownTriangles": 6,
+    "staticDrawsExpected": 8,
+    "seconds": 45.34822654724121
+  },
+  "mobileWood": {
+    "source": "pine-036-wood.blend",
+    "sourceSHA256": "8544ef707973b126ba3f419cbd85fe60d20eb9203228b33ac21859d056d9c05e",
+    "asset": "pine-036-wood-mobile.glb",
+    "SHA256": "f18dce4d2f1bf7233e44cf0981b5d97d65df8dde8f5c1c4290db50d9b9d0a9dc",
+    "bytes": 3462672,
+    "meshes": [
+      {
+        "name": "H36 fused trunk roots and principal branches",
+        "before": 16810,
+        "after": 8404
+      },
+      {
+        "name": "H36 broad torn bark physical flakes",
+        "before": 7020,
+        "after": 3510
+      },
+      {
+        "name": "H36 embedded slope stone 00",
+        "before": 20,
+        "after": 20
+      },
+      {
+        "name": "H36 embedded slope stone 01",
+        "before": 20,
+        "after": 20
+      },
+      {
+        "name": "H36 embedded slope stone 02",
+        "before": 20,
+        "after": 20
+      }
+    ],
+    "triangles": 11974,
+    "materials": "original PBR maps/normal/roughness, no baked colors",
+    "rootAndNavigationChanged": false
+  },
+  "navSHA256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "files": {
+    "assets/hero-034/linyan-atlas.webp": {
+      "sha256": "4b6e2edd1ec4ac53fc30c022c12b92995bdfce7ee0901ac31ad7c6a7fda1c517",
+      "bytes": 104184
+    },
+    "assets/pine-036/pine-036-wood-mobile.glb": {
+      "sha256": "f18dce4d2f1bf7233e44cf0981b5d97d65df8dde8f5c1c4290db50d9b9d0a9dc",
+      "bytes": 3462672
+    },
+    "assets/sample-ground/height.f32": {
+      "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+      "bytes": 273492
+    },
+    "assets/sample-ground/metadata.json": {
+      "sha256": "b4db6a26a1252e59a581e2b2ba7bef60f6e1236b792b1924c3ecaa74cef7da7e",
+      "bytes": 1944
+    },
+    "assets/sample-ground/slope.bits": {
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31",
+      "bytes": 8480
+    },
+    "assets/sample-lod/navigation.json": {
+      "sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+      "bytes": 96651
+    },
+    "assets/sample-runtime/mountain-atlas.webp": {
+      "sha256": "26ff78d818605aafda582c84fc8104dd88c85aa3039f3733a975e0939f8e3590",
+      "bytes": 1185072
+    },
+    "assets/scene-036/runtime/world-h36.glb": {
+      "sha256": "a8d80266b267023184f255f727ad0edc7eb00993e304efe21a97dbb78d721afc",
+      "bytes": 4844304
+    },
+    "gate-h36.html": {
+      "sha256": "3bdd401c228737f5c03ad79edbf321d7d738e85efdd38dd1efd1c3e08d2be2de",
+      "bytes": 6109
+    },
+    "sample-gate.html": {
+      "sha256": "3bdd401c228737f5c03ad79edbf321d7d738e85efdd38dd1efd1c3e08d2be2de",
+      "bytes": 6109
+    },
+    "sample/dist/game-h36.js": {
+      "sha256": "9bbf1b746021561c8b5ab1fbcd52e10c229d4abb04d9c62142bb42f5311512b7",
+      "bytes": 1311819
+    },
+    "sample/launch-h36.js": {
+      "sha256": "a2167753daf308eb4c12638464bbb076cffaed7e619fa1a23dd9503a5854c6d1",
+      "bytes": 3877
+    },
+    "sample/sample.css": {
+      "sha256": "feda8f1e245406cdb231695b34fff25f8015fca09fa5ead12488d00cd3279786",
+      "bytes": 5043
+    }
+  }
+}

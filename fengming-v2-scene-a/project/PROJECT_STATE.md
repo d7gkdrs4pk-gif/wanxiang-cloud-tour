@@ -1,3 +1,17 @@
+# 凤鸣山门｜项目状态 V1.37
+当前交付试玩：main:fengming-v2-scene-a/gate-h36.html（H.36，真实PBR古松干枝＋新三层冠/实体山门/UV日光烘焙可玩版）。
+保留完整正式工程：main:fengming-v2-scene-a/index.html（V2.0 H.29），blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。
+
+H.36（2026-11-27）：用户判H35“基本没有变化”，H35美术不通过。本轮先重制真实源资产、原390×844/FOV39机位评估再接入。同一出生点/相机/比例；H35独立入口gate-h35.html、H31独立h31-compare.html保留；sample-gate同步H36。当前 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h36.html 。
+
+实际链路：sample/main-h36.js→environment-h36.js→scene-036/runtime/world-h36.glb + pine-036/pine-036-wood-mobile.glb + 自有远山atlas。三冠为新ImageGen alpha世界图层，不是H29树图或失败散针模型截图；真实三维S干/长枝/低根/CC0松树皮实时PBR；新木构门楼/短瓦/厚檐/四字匾/柱脚与实际地面、阶、岩坡使用Cycles UV光照。未覆盖角色/动作/原导航/桥梁/碰撞或扩大地图。日间无火把。失败白色顶点导出、黑斑烘焙与反向岩面均内部退回修正，LOD在UV烘焙之前完成。
+
+最终约14.90秒原速触屏完整穿枝→登阶→回身命中收势，HP3→2/四标记true/错误0/失败0。云Linux WebKit26.5/WPE软件390×844 DPR1，实测18.444FPS，中位50ms/P95 79ms，约65199tri/21draw；**不是iPhone或微信真机**。无FX六帧、实际遮挡/赤凤/重来、6启动恢复场景、4048点真阶均有数据。报告SAMPLE_H36_QA.md、独立SAMPLE_H36_VISUAL_REVIEW.md与evidence/h36/。
+
+本轮正常整屏确有明显主树/门楼变化，通行战斗可读；整体材质/地形融合仍未达到参考完成度，未宣称用户美术全通过。公网SHA与重新打开操作结果追加在本条后。
+
+以下V1.36及旧“当前”为历史，以顶部H36为准。
+
 # 凤鸣山门｜项目状态 V1.36
 当前交付试玩：main:fengming-v2-scene-a/gate-h35.html（H.35，白天无火把山门可玩试版）。
 保留完整正式工程：main:fengming-v2-scene-a/index.html（V2.0 H.29），blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。

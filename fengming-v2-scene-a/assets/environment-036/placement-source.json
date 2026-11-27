@@ -1,0 +1,114 @@
+{
+  "revision": "H36 integrated terrain-fit closed layered rock masses, source revision2, not rendered",
+  "appendCollection": "H36_ENVIRONMENT",
+  "objects": [
+    {
+      "name": "H36_RockBody_WestVerge",
+      "triangles": 108,
+      "engineBounds": [
+        [
+          -9.699999809265137,
+          -0.6244834661483765,
+          1.5299999713897705
+        ],
+        [
+          -4.300000190734863,
+          1.0117838382720947,
+          7.199999809265137
+        ]
+      ],
+      "role": "Closed terrain-fitted carrier with buried foot and real stratified ledge/shoulder"
+    },
+    {
+      "name": "H36_RockCap_WestVerge",
+      "triangles": 20174,
+      "engineBounds": [
+        [
+          -8.684727668762207,
+          0.2131996899843216,
+          2.13913631439209
+        ],
+        [
+          -4.5807271003723145,
+          1.0984853506088257,
+          6.108136177062988
+        ]
+      ],
+      "role": "Real CC0 scanned top, irregular cut edge buried below continuous closed mass"
+    },
+    {
+      "name": "H36_RockBody_EastVerge",
+      "triangles": 108,
+      "engineBounds": [
+        [
+          -0.699999988079071,
+          -0.6577571630477905,
+          1.5299999713897705
+        ],
+        [
+          5.199999809265137,
+          0.5888036489486694,
+          7.5
+        ]
+      ],
+      "role": "Closed terrain-fitted carrier with buried foot and real stratified ledge/shoulder"
+    },
+    {
+      "name": "H36_RockCap_EastVerge",
+      "triangles": 29566,
+      "engineBounds": [
+        [
+          -0.4556363523006439,
+          0.1476631909608841,
+          2.0732271671295166
+        ],
+        [
+          4.0283637046813965,
+          0.7461720705032349,
+          6.252227306365967
+        ]
+      ],
+      "role": "Real CC0 scanned top, irregular cut edge buried below continuous closed mass"
+    },
+    {
+      "name": "H36_RockBody_RearLowRidge",
+      "triangles": 88,
+      "engineBounds": [
+        [
+          -11.699999809265137,
+          -1.7671035528182983,
+          -11.399999618530273
+        ],
+        [
+          -3.799999952316284,
+          1.7914209365844727,
+          -9.149999618530273
+        ]
+      ],
+      "role": "Closed terrain-fitted carrier with buried foot and real stratified ledge/shoulder"
+    },
+    {
+      "name": "H36_RockCap_RearLowRidge",
+      "triangles": 29566,
+      "engineBounds": [
+        [
+          -10.957555770874023,
+          -0.9047736525535583,
+          -10.82638931274414
+        ],
+        [
+          -4.953555583953857,
+          1.6592332124710083,
+          -9.251388549804688
+        ]
+      ],
+      "role": "Real CC0 scanned top, irregular cut edge buried below continuous closed mass"
+    }
+  ],
+  "approach": "Actual original terrain GLB BVH after official world normalization; closed undercut/ledge/shoulder rock carrier with physical .045m bevel. Rotated real scan cap perimeter buried .045m inside that body. No floating/open photogrammetry slices.",
+  "backRidge": "Low ridge behind Z=-9.15, actual cap generally <=local ground+.6m; no elevated backdrop next to pine crown.",
+  "color": "Exact parent PBR slate RGBToBW(diff)*(.62,.77,.80); no yellow/gold moss. Original images kept unchanged; deterministic baked material operation in new *_slate/moss_albedo files.",
+  "unchanged": "Original terrain source, nav, heights, road, bridges, actor, game code untouched. Foreground bodies start Z=1.53, outside safeGround; low rear ridge stays Z<=-9.15.",
+  "license": "Official Poly Haven CC0 original full model/texture sources and API/MD5 audit retained under source/polyhaven",
+  "privateReferenceIncluded": false
+}

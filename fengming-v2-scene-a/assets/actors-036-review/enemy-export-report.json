@@ -1,0 +1,44 @@
+{
+  "kind": "Read-only serialization of actual H35 createEnemy; no redesign",
+  "source": "../../sample/enemy.js",
+  "sourceSha256": "2ffb960badfa46e276ec1b38aca3517f689de2a6c9e3a5cbc5c8579ec9e61e7b",
+  "glb": "enemy-h35-existing.glb",
+  "bytes": 227348,
+  "sha256": "7114e28b6ed3935dc9a55a271b13f997252e3f25a21edd15d292f8b4da83243f",
+  "vertices": 2501,
+  "triangles": 1866,
+  "bones": 19,
+  "materials": 4,
+  "scale": 1,
+  "checks": {
+    "POSITION": {
+      "exactBytes": true,
+      "sha256": "ffed5210a9103d01c04f6ff39529673707c78aef97841871e5ce42034f231807"
+    },
+    "NORMAL": {
+      "exactBytes": true,
+      "sha256": "33d96e729d77de358107f5e8e4cdfa38a30685480bc3204d7aae834452214ff6"
+    },
+    "COLOR_0": {
+      "exactBytes": true,
+      "sha256": "28b0af8ff3887ac0850be448f5706a88ca90af6552d1e5c53b71e4a6acbe29bd"
+    },
+    "JOINTS_0": {
+      "exactBytes": true,
+      "sha256": "44aa2223000eb2869664238b56f09ea7a90334a30dfdf0ac31549f155cfb0849"
+    },
+    "WEIGHTS_0": {
+      "exactBytes": true,
+      "sha256": "985a92229e6b6ad20d41a7511fb434e3c3926dfbcd89ba46c25adaee4da25fd8"
+    },
+    "indices": {
+      "exactBytes": true,
+      "sha256": "a0b24f2b7672628bbe22055dfa325b0bb27fa053f7e9dbdad6db486b7f0a2f9c"
+    },
+    "inverseBindMatrices": {
+      "exactBytes": true,
+      "sha256": "2be758b30398f458a341999259ed7a7ed3666f4c0cecd5a4eba83981efe0e933"
+    }
+  },
+  "sourceUnchanged": true
+}

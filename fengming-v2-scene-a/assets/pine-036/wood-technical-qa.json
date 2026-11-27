@@ -1,0 +1,14 @@
+{
+  "source_asset": "pine-036-wood.glb",
+  "sha256": "8134141b5be24d94754f4750d2d8f2c261757d979f42e10d511a844cb00a3b3d",
+  "normal_material_without_uv": [],
+  "vertex_color_attributes": [],
+  "bark_basecolor_texture": true,
+  "bark_roughness_texture": true,
+  "bark_normal_texture": true,
+  "bark_metallic_factor": 0,
+  "embedded_images": 3,
+  "no_camera_light": true,
+  "rendered_by_asset_agent": false,
+  "approval_pending": "parent shared original-camera combined crown/wood render"
+}

@@ -1,0 +1,30 @@
+{
+  "revision": 2,
+  "storage": "External relative images; standard glTF separate; no embedded >25MiB GLB in deployed source directory",
+  "exports": [
+    {
+      "file": "h36-rock-environment.blend",
+      "bytes": 2778380,
+      "sha256": "9255434694c5556354b30235139cf1b9a45e2ee26006540e56a34cbae85f3127"
+    },
+    {
+      "file": "h36-rock-environment.gltf",
+      "bytes": 14479,
+      "sha256": "4c7999b5f1c9469867baa733f7f206530f804643c07d4334aabf5353732c4153"
+    },
+    {
+      "file": "h36-rock-environment.bin",
+      "bytes": 2202708,
+      "sha256": "da5887465279beaee873a015292ad44e0738bfe53d2567097d2497f0f836ff29"
+    }
+  ],
+  "maxFile": {
+    "path": "textures/rock_face_02_slate_albedo_2k.png",
+    "bytes": 6316353
+  },
+  "coordinates": "Blender (engineX,-engineZ,engineY)",
+  "appendCollection": "H36_ENVIRONMENT",
+  "originalSourceDownloadHashes": "source/polyhaven/download-record.json",
+  "noGeometryMaterialOrTexturePixelChange": true,
+  "notRendered": true
+}
