@@ -1,0 +1,131 @@
+{
+  "seconds": 7.371204793998913,
+  "snapshot": {
+    "state": {
+      "version": "Cinderwatch reference 8313bb2 / R1",
+      "status": "ready",
+      "sourceCommit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+      "sourceSHA256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "sourceVerified": true,
+      "seed": 4,
+      "startFrame": 5131,
+      "currentFrame": 5131,
+      "step": 0.016666666666666666,
+      "virtualViewport": [
+        1920,
+        1080
+      ],
+      "DPR": 1,
+      "errors": [],
+      "started": 112,
+      "renderedFrames": 0,
+      "simulationSteps": 5131,
+      "interactions": 0,
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "scale": 1,
+        "letterboxed": true
+      },
+      "generatedAt": 1556.2000000029802,
+      "referenceStart": {
+        "lives": 17,
+        "gold": 23,
+        "kills": 58,
+        "wave": 4,
+        "monsters": 23,
+        "queued": 10,
+        "camera": {
+          "yaw": 0.7853981633974483,
+          "elev": 0.6632251157578452,
+          "dist": 90,
+          "x": -2.3218315975303283,
+          "y": 0.39999999999999836,
+          "z": 3.934025040144416,
+          "zoom": 1,
+          "fx": -2.2046782083705394,
+          "fz": 4.703096116226899,
+          "sx": -2.3218315975303283,
+          "sz": 3.934025040144416
+        }
+      },
+      "readyAt": 4850.20000000298,
+      "startupMs": 4738.20000000298,
+      "paused": true,
+      "firstRenderedFrame": 5131
+    },
+    "game": {
+      "t": 85.5166666666631,
+      "wave": 4,
+      "lives": 17,
+      "gold": 23,
+      "kills": 58,
+      "phase": "play",
+      "monsters": 23,
+      "queued": 10,
+      "towers": [
+        {
+          "kind": "archer",
+          "level": 1,
+          "x": 7.19165766484215,
+          "z": 6.534798447796719
+        },
+        {
+          "kind": "guard",
+          "level": 1,
+          "x": 2.8493345467549185,
+          "z": 12.5534026759852
+        },
+        {
+          "kind": "bombard",
+          "level": 0,
+          "x": 0.6362089461927019,
+          "z": 4.315367713998729
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": 4.573629091924247,
+          "z": -2.155967197426018
+        },
+        {
+          "kind": "spire",
+          "level": 0,
+          "x": 7.7628093619975385,
+          "z": 13.072100546553521
+        },
+        {
+          "kind": "archer",
+          "level": 0,
+          "x": -2.3450748190410176,
+          "z": -0.012015067667569879
+        }
+      ],
+      "camera": {
+        "yaw": 0.7853981633974483,
+        "elev": 0.6632251157578452,
+        "dist": 90,
+        "x": -2.3218315975303283,
+        "y": 0.39999999999999836,
+        "z": 3.934025040144416,
+        "zoom": 1,
+        "fx": -2.2046782083705394,
+        "fz": 4.703096116226899,
+        "sx": -2.3218315975303283,
+        "sz": 3.934025040144416
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "internal": [
+        960,
+        540
+      ],
+      "draws": 251,
+      "triangles": 1011028
+    }
+  },
+  "errors": [],
+  "failed": []
+}

@@ -1,0 +1,277 @@
+{
+  "project": "Cinderwatch reference restoration",
+  "original_title": "Cinderwatch",
+  "original_author": "kevintngo",
+  "repository": "https://github.com/kevintngo/cinderwatch",
+  "commit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+  "commit_url": "https://github.com/kevintngo/cinderwatch/commit/8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+  "snapshot_tree_url": "https://github.com/kevintngo/cinderwatch/tree/8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+  "license": "MIT",
+  "license_file": "upstream/LICENSE",
+  "engine_dependency": {
+    "name": "Three.js",
+    "version": "r170",
+    "license": "MIT",
+    "notice_file": "upstream/vendor/LICENSE-three.txt"
+  },
+  "snapshot": {
+    "directory": "upstream",
+    "scope": "All tracked files at the pinned commit except media/; retained files are byte-identical.",
+    "excluded_paths": [
+      "media/crumble.jpg",
+      "media/gameplay-20s.mp4",
+      "media/screenshot.jpg"
+    ],
+    "file_count": 26,
+    "index_sha256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+    "all_files_identical_to_git_show": true,
+    "missing_files": [],
+    "extra_files": []
+  },
+  "verification": {
+    "checked_at_utc": "2026-11-27T16:47:16.622692+00:00",
+    "method": "For every retained file, compare actual bytes against git show COMMIT:PATH, then compute actual-file SHA256. File set compared against git ls-tree -r --name-only COMMIT excluding media/.",
+    "source_tree_unchanged": true
+  },
+  "restoration_entry": {
+    "entry": "index.html",
+    "seed": 4,
+    "start_frame": 5131,
+    "simulation_step_seconds": 0.016666666666666666,
+    "virtual_viewport": [
+      1920,
+      1080
+    ],
+    "device_pixel_ratio": 1,
+    "aspect_ratio": "16:9",
+    "phone_presentation": "Landscape preferred; full 16:9 viewport scales to fit without cropping and is letterboxed in portrait.",
+    "reference_editing_note": "The reference recording contains edits later in the clip. Live continuous play is not claimed to reproduce every later cut at the same wall-clock second.",
+    "physical_iphone_test_claimed": false
+  },
+  "derived_engine": {
+    "path": "engine.html",
+    "source": "upstream/index.html",
+    "changes": "One 261-byte script inserted after the head opening; fixes devicePixelRatio to 1 and forwards window errors to the host. No upstream game bytes removed or changed.",
+    "insertion_offset_bytes": 39,
+    "inserted_bytes": 261,
+    "removed_bytes": 0,
+    "original_game_bytes_preserved": true,
+    "sha256_at_verification": "a3dc7229ea3e447a065191f7d54c46293704c2f2721a6a45cb9c73b97b00618a",
+    "host_files": [
+      "index.html",
+      "replica.css",
+      "replica.js"
+    ],
+    "host_boundary": "Local loading/recovery, viewport scaling, deterministic starting-state replay and host input adaptation. No claim of original authorship for the upstream scene, art, audio or game."
+  },
+  "files": [
+    {
+      "path": "upstream/.gitignore",
+      "source_path": ".gitignore",
+      "git_blob_sha1": "53e6f10dd6ddd6120f64fa3137aa375012e37a2e",
+      "sha256": "5b6b2c7ddf1dcf062bd94f530492a3393cae396d046420af1794b6eb42919ec1",
+      "bytes": 41,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/.nojekyll",
+      "source_path": ".nojekyll",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/LICENSE",
+      "source_path": "LICENSE",
+      "git_blob_sha1": "32106244ca08c57dbbfc15dfac605f45bb3a150c",
+      "sha256": "2516144cbcef981347e979bd41642fa89f1b0a84b8af2811ca36ba4d2c797aea",
+      "bytes": 1066,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/README.md",
+      "source_path": "README.md",
+      "git_blob_sha1": "783e2281163c29e1e30b2b403aa52dad29b07af2",
+      "sha256": "115a71f3c21e0df4142bf4c4b51edaa7643e088bce1a1306558b396f3750d88a",
+      "bytes": 4564,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/index.html",
+      "source_path": "index.html",
+      "git_blob_sha1": "43596ccc06efedf60d07320b9152400b781cf568",
+      "sha256": "ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532",
+      "bytes": 1005011,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/00-util.js",
+      "source_path": "src/00-util.js",
+      "git_blob_sha1": "c8121b0cdf7757d0bea1ed0c9a002cba77f9647c",
+      "sha256": "675063d8037ba3cb486e8b42f7378d9575fb0a6005201c1ab65156f6666bd1d7",
+      "bytes": 3652,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/10-gfx.js",
+      "source_path": "src/10-gfx.js",
+      "git_blob_sha1": "16c0b861e4c37440ecf74692be200d83d301b6ef",
+      "sha256": "6e92445d147602b3b93b7c46f32b14c6fb2092bf938e8a5785f747b0e05b05be",
+      "bytes": 20933,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/20-post.js",
+      "source_path": "src/20-post.js",
+      "git_blob_sha1": "d3be368ab04322b593e1ce3b0ba0c118f5d3aa78",
+      "sha256": "4aea4d103f78081ca4289f3aa2773bfc43f92e07fa497f1e804d589128761f26",
+      "bytes": 13441,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/30-layout.js",
+      "source_path": "src/30-layout.js",
+      "git_blob_sha1": "c6ea9a14e9479ac03f182a6a8853fd52032038b3",
+      "sha256": "728b793f91b4aee1d7c31569c6f51ef81dba35c4772a9fdd6d7aeb0e9c03fd61",
+      "bytes": 9669,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/31-terrain.js",
+      "source_path": "src/31-terrain.js",
+      "git_blob_sha1": "3d3afa62a50f1ca37d0690da8437c3a72e6cc8cd",
+      "sha256": "35ecc110bd3e0280a998e71202bdb786bebce02ee6a9c6e780e4598a5bb68e39",
+      "bytes": 24022,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/32-props.js",
+      "source_path": "src/32-props.js",
+      "git_blob_sha1": "7521ab8e526f3160880244b1e9d0b80230be4629",
+      "sha256": "7ed551ce684dc94324b6ca086e64a2e3320533fa1cf0c03eabde0e86c0c2058c",
+      "bytes": 32362,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/40-fx.js",
+      "source_path": "src/40-fx.js",
+      "git_blob_sha1": "a977fca2a36d13f6c28c72501196473dd3552f50",
+      "sha256": "9572ce5cece1fd17ac115b5d08f377a94f2cde70e9f153722514bd57f1ee7e21",
+      "bytes": 27168,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/50-rig.js",
+      "source_path": "src/50-rig.js",
+      "git_blob_sha1": "c005ad9b0d1157079f0d27ea726373963d413be4",
+      "sha256": "6cae623c6d856df560956e60ba3edbd5d62504f4bdca20db6cb46371835d8aad",
+      "bytes": 24742,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/60-towers.js",
+      "source_path": "src/60-towers.js",
+      "git_blob_sha1": "37081789bdd9660977388135a4ca8c5af586692d",
+      "sha256": "4913cd181f2921ec179c93d844e6c484d990d344d3130dff03730f2f43607ae9",
+      "bytes": 38147,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/61-monsters.js",
+      "source_path": "src/61-monsters.js",
+      "git_blob_sha1": "d7de39113ee31a2c887c8ac967272a14dc0df9f3",
+      "sha256": "9f55e83f82464a4bc51f8c366a5f514351c4f426f2b8dd9306a6981fa45e7432",
+      "bytes": 22630,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/62-game.js",
+      "source_path": "src/62-game.js",
+      "git_blob_sha1": "6a5c33aef1e1da5efde0c5ac783798ea98350352",
+      "sha256": "fe6c813248ecdea10ff39059da387c79b08fd84180a7221b881ed267717035a0",
+      "bytes": 14231,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/70-pixelfont.js",
+      "source_path": "src/70-pixelfont.js",
+      "git_blob_sha1": "a87a03c526faa98746977f0e59179d81bf15bb26",
+      "sha256": "ee04e01d90ac9943fd53855d9afc8d1731dce9de1cdd291593a89d9f7091c228",
+      "bytes": 13100,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/72-ui.js",
+      "source_path": "src/72-ui.js",
+      "git_blob_sha1": "cdc8cc0ed8bf9d1f06a6e601f3e87d24f12a10f8",
+      "sha256": "4a995caac6924e8b76ee8e389c7fd4c3d62dae79b19d859b6f72bca61990d8b4",
+      "bytes": 22811,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/80-audio.js",
+      "source_path": "src/80-audio.js",
+      "git_blob_sha1": "a16060a7d959c293e67d351b98e94b28e1915bbe",
+      "sha256": "0ec089b348f67f8e7c62d9540413e412d94802b0ae534815327958f3f5869d74",
+      "bytes": 38619,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/90-main.js",
+      "source_path": "src/90-main.js",
+      "git_blob_sha1": "f0054a064a4b745f8ad233ef79b9f417d54a18c2",
+      "sha256": "5c78bb03d175bea31246a144f66102ab5cf2ec7a7321223858fff3ddfb6fe9c2",
+      "bytes": 8305,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/src/shell.html",
+      "source_path": "src/shell.html",
+      "git_blob_sha1": "6fcf636002e3864395523625848d4d6c94a20790",
+      "sha256": "49dbaaf1b3a48a60a9ad28e0fc6a248d5fdbb869a599eeb210902c5f5ae89f55",
+      "bytes": 726,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/tools/build.py",
+      "source_path": "tools/build.py",
+      "git_blob_sha1": "3d596db8d34a955f5c7934d93bb9f9e49d45e958",
+      "sha256": "97b3efc5d09cc93de17e69d49a62a9034b3c8eac77e76158aef99159b9fd60a9",
+      "bytes": 1525,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/tools/cdp.js",
+      "source_path": "tools/cdp.js",
+      "git_blob_sha1": "5d5ea23539f4622c47de921443e71dffbbe11ffc",
+      "sha256": "41d370049444b5b4a2afb81e3db8759ff3f308dda8ef4b20469a1d9a3484acd7",
+      "bytes": 4402,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/tools/record.js",
+      "source_path": "tools/record.js",
+      "git_blob_sha1": "daab1b2190c8ae12ebf2a864ec925cb1eb471052",
+      "sha256": "3bf9f279cb16abe66e522ce3c7594349920702838d669f5fcabf066cb912b6f1",
+      "bytes": 9972,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/vendor/LICENSE-three.txt",
+      "source_path": "vendor/LICENSE-three.txt",
+      "git_blob_sha1": "8bb7b9b51033dc1692dfaab5a6e918e1b39f8608",
+      "sha256": "9e12491babdd50b2527a321e60b2f2b89e41ff16ab9cd8cc543d2361bd55b497",
+      "bytes": 1155,
+      "identical_to_git_show": true
+    },
+    {
+      "path": "upstream/vendor/three.module.min.js",
+      "source_path": "vendor/three.module.min.js",
+      "git_blob_sha1": "282d1087068fab752a7e59b65aaa61c8b0a4be8c",
+      "sha256": "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7",
+      "bytes": 691648,
+      "identical_to_git_show": true
+    }
+  ]
+}

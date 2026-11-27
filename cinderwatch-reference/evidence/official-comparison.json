@@ -1,0 +1,150 @@
+{
+  "result": "Same native scene, composition, camera and initial battle state; not a visual approximation. Pixel-identical claim is not made.",
+  "reference": {
+    "repository": "https://github.com/kevintngo/cinderwatch",
+    "commit": "8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5",
+    "sourcePath": "media/gameplay-20s.mp4 at official commit",
+    "localVideo": "official-8313bb2.mp4",
+    "videoSHA256": "477fa5bd7d795b258ae039bd0fc4e12f312c0f7a80e34edf9cc3c204ad0eb3af",
+    "decodedFrame": 0,
+    "videoPTSSeconds": 0,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "sourceLicense": "MIT",
+    "copyright": "Copyright (c) 2026 kevintngo",
+    "licenseURL": "https://github.com/kevintngo/cinderwatch/blob/8313bb2/LICENSE",
+    "privateUserVideoOrFrameUsed": false
+  },
+  "replica": {
+    "png": "replica-f5131-1920.png",
+    "seed": 4,
+    "simulationFrame": 5131,
+    "stepSeconds": 0.016666666666666666,
+    "camera": {
+      "yaw": 0.7853981633974483,
+      "elev": 0.6632251157578452,
+      "dist": 90,
+      "x": -2.3218315975303283,
+      "y": 0.39999999999999836,
+      "z": 3.934025040144416,
+      "zoom": 1,
+      "fx": -2.2046782083705394,
+      "fz": 4.703096116226899,
+      "sx": -2.3218315975303283,
+      "sz": 3.934025040144416
+    },
+    "referenceStart": {
+      "lives": 17,
+      "gold": 23,
+      "kills": 58,
+      "wave": 4,
+      "monsters": 23,
+      "queued": 10,
+      "camera": {
+        "yaw": 0.7853981633974483,
+        "elev": 0.6632251157578452,
+        "dist": 90,
+        "x": -2.3218315975303283,
+        "y": 0.39999999999999836,
+        "z": 3.934025040144416,
+        "zoom": 1,
+        "fx": -2.2046782083705394,
+        "fz": 4.703096116226899,
+        "sx": -2.3218315975303283,
+        "sz": 3.934025040144416
+      }
+    },
+    "viewport": [
+      1920,
+      1080
+    ],
+    "internalRender": [
+      960,
+      540
+    ]
+  },
+  "metrics": {
+    "rawFullResolutionRGBSSIM": {
+      "R": 0.885622,
+      "G": 0.911296,
+      "B": 0.843435,
+      "All": 0.880118
+    },
+    "sceneOnlyRGBSSIM": {
+      "crop": [
+        0,
+        110,
+        1920,
+        890
+      ],
+      "R": 0.887004,
+      "G": 0.914227,
+      "B": 0.841614,
+      "All": 0.880948
+    },
+    "preview640x360RGBSSIM": {
+      "scaler": "FFmpeg Lanczos; entire images equally resized, no camera/scene manipulation",
+      "R": 0.973524,
+      "G": 0.977397,
+      "B": 0.960118,
+      "All": 0.970346
+    },
+    "rawRGBPixelError": {
+      "maeRGB": [
+        3.9395785108024692,
+        3.0960715663580247,
+        4.006584201388889
+      ],
+      "maeAll": 3.680744759516461,
+      "rmseAll": 7.326772403074264,
+      "psnrRGBdB": 30.832549589893432
+    },
+    "registration": {
+      "method": "Hann-windowed luminance phase correlation, scene ROI at half sampling; no warp applied",
+      "integerPeakFullPixels": [
+        0,
+        0
+      ],
+      "estimatedSubpixelShift": [
+        -0.004441215032318856,
+        -0.007721701368958912
+      ]
+    }
+  },
+  "visualFindings": [
+    "Left cliff silhouettes, masonry bridge, stream/waterfall outlet, six tower positions, empty pads, castle wall, battlements, props, warm/cold light pools and depth-of-field bands line up.",
+    "HUD initial state matches: lives17, gold23, kills58, Wave4, 33 on road (23 spawned +10 queued).",
+    "No alternate camera, geometry, layout, asset or scale is observed."
+  ],
+  "observedDifferences": [
+    {
+      "location": "bottom-left sound button",
+      "official": "Sound on",
+      "replica": "Click for sound",
+      "cause": "Official capture enabled audio; local page awaits the user gesture."
+    },
+    {
+      "location": "fine grain, dither/colour edges, subtle flame/particle pixels",
+      "cause": "Official reference is decoded lossy H.264 video; local frame is a lossless browser PNG. YUV chroma subsampling/quantization and possible shader-backend numeric variation prevent pixel identity. A separate simulation-frame offset has not been established."
+    },
+    {
+      "location": "HUD pixel lettering",
+      "cause": "Same bitmap font and placement observed; sound-button wording differs, no font substitution detected."
+    }
+  ],
+  "limits": [
+    "SSIM is an image similarity metric, not a measured FPS, performance result or proof of gameplay.",
+    "Raw full-size SSIM remains0.880118; do not replace it with the higher preview-size score without labeling the resize.",
+    "No alignment, lighting correction, blur, crop or image retouching was applied to the delivered source panels. The scene-only and preview metrics are separately labeled."
+  ],
+  "files": {
+    "officialReferencePNG": "official-reference-first.png",
+    "replicaPNG": "replica-f5131-1920.png",
+    "sideBySidePNG": "official-replica-side-by-side.png",
+    "sourceNote": "OFFICIAL_COMPARISON_SOURCE.md",
+    "officialPNG_SHA256": "352c6d1afaaab5f03e0390cd4c6b756565932cb669c73d638da09cfb49f4381c",
+    "replicaPNG_SHA256": "417a930537e96cf02e2798e5e80774f054541359c2b2f573e4e10e3df3a9f252"
+  }
+}
