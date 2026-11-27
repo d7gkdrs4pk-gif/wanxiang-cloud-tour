@@ -16,4 +16,4 @@ seed=4，第5131个1/60秒模拟步，1920×1080虚拟画幅/DPR1，原作内部
 
 原作桌面按钮依赖上帧hover，host在pointerdown捕获阶段用当次触点、dt=0刷新其HUD命中，再交原作处理，避免手机点菜单无响应。载入异常/运行异常/图形上下文丢失均显示恢复按钮，恢复层可点。派生engine由build-host.py重建，仅固定DPR并转发错误，不改原作游戏代码。
 
-公开部署重新打开的结果与原速实玩录像随后记录在本目录evidence/public-smoke.json。当前报告中的本地验证不冒充公开链接验证。
+首轮公网已实际完成七文件SHA校验、选塔/出售/重建与模拟contextlost后点击恢复，15.24秒原速运行约2.859FPS。但首帧截图发现WebKit可能延迟呈现被全屏加载层遮住的WebGL画面。本轮已修正：先露出canvas合成层，以原作bench(0)重新提交同一帧并读回，等待合成后才ready；不推进模拟或UI随机数。最新本地首帧已确认为完整三维画面（evidence/webkit-first-fixed.json），仍为第5131帧和同一相机。公开最终版本重新打开的结果与原速实玩录像在evidence/public-smoke.json。

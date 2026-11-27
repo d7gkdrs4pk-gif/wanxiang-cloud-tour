@@ -12,7 +12,7 @@
  const pause=()=>{live=false;state.paused=true;};const resume=()=>{if(state.status!=='ready')return;live=true;last=performance.now();acc=0;state.paused=false;};
  function layout(){const w=innerWidth,h=innerHeight;scale=Math.min(w/1920,h/1080);fit.style.width=1920*scale+'px';fit.style.height=1080*scale+'px';game.style.transform='scale('+scale+')';state.screen={width:w,height:h,scale,letterboxed:true};}
  layout();addEventListener('resize',layout);if(window.visualViewport)visualViewport.addEventListener('resize',layout);
- function fail(message){if(failed)return;failed=true;live=false;if(raf)cancelAnimationFrame(raf);state.status='failed';state.errors.push(message);phase.textContent=message;cover.hidden=false;cover.style.pointerEvents='auto';$('recovery').hidden=false;}
+ function fail(message){if(failed)return;failed=true;live=false;if(raf)cancelAnimationFrame(raf);state.status='failed';state.errors.push(message);phase.textContent=message;cover.hidden=false;cover.style.pointerEvents='auto';cover.style.background='#080e17';$('recovery').hidden=false;}
  window.__referenceSourceError=message=>fail('原作画面未能启动：'+String(message).slice(0,200));
  window.__REFERENCE={state,pause,resume,frames:()=>frames.slice(),snapshot:()=>({state:{...state},game:cw?{t:cw.G.t,wave:cw.G.k,lives:cw.G.lives,gold:cw.G.gold,kills:cw.G.slain,phase:cw.G.phase,monsters:cw.G.mons.length,queued:cw.G.queue.length,towers:cw.G.towers.map(t=>({kind:t.kind,level:t.lvl,x:t.x,z:t.z})),camera:{...cw.CAM},viewport:[cw.R.dw,cw.R.dh],internal:[cw.R.iw,cw.R.ih],draws:cw.R.renderer.info.render.calls,triangles:cw.R.renderer.info.render.triangles}:null}),project:(x,y,z)=>{if(!cw)return null;const v=new cw.R.cam.position.constructor(x,y,z).project(cw.R.cam),rect=fit.getBoundingClientRect();return [rect.left+(v.x+1)*960*scale,rect.top+(1-v.y)*540*scale];}};
  const timeout=setTimeout(()=>{if(state.status!=='ready'&&!failed){phase.textContent='正在准备原作场景，较慢时可重试或从原作开局进入';$('recovery').hidden=false;}},20000);
@@ -30,6 +30,14 @@
   if(failed)return;
   state.referenceStart={lives:cw.G.lives,gold:cw.G.gold,kills:cw.G.slain,wave:cw.G.k,monsters:cw.G.mons.length,queued:cw.G.queue.length,camera:{...cw.CAM}};
   if(cw.G.lives!==17||cw.G.gold!==23||cw.G.slain!==58||cw.G.k!==4)throw Error('开场战局未对齐，请重试');
+  // WebKit may defer the WebGL surface while a fully opaque loader covers it.
+  // Expose the layer, submit the same scene again and flush it before ready.
+  // bench(0) only renders/reads the current scene; it takes no simulation step
+  // and does not call UI.draw, so the reference seed/frame stay unchanged.
+  phase.textContent='正在显示参考首帧';cover.style.background='transparent';
+  await new Promise(r=>requestAnimationFrame(r));cw.bench(0);
+  await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+  if(failed)return;
   state.status='ready';state.readyAt=performance.now();state.startupMs=state.readyAt-state.started;state.paused=params.get('still')==='1';state.firstRenderedFrame=state.currentFrame;bar.value=1;cover.hidden=true;cover.style.pointerEvents='none';clearTimeout(timeout);live=!state.paused;last=performance.now();
   // Original desktop UI resolves button hover during the preceding draw.
   // A touch has no preceding mouse hover: resolve its current position before

@@ -21,6 +21,6 @@
 
 ## 本地改动边界
 
-`engine.html` 由原作 `upstream/index.html` 派生，仅在 `<head>` 后插入261字节脚本，固定DPR1并向入口转发启动错误；实测字节比较确认原作其余字节未删改。`index.html`、`replica.css`、`replica.js` 负责载入/恢复、画幅适配、开场预跑与宿主输入适配。未修改原作场景、材质、shader或塔防游戏代码。
+`engine.html` 由原作 `upstream/index.html` 派生，仅在 `<head>` 后插入261字节脚本，固定DPR1并向入口转发启动错误；实测字节比较确认原作其余字节未删改。`index.html`、`replica.css`、`replica.js` 负责载入/恢复、画幅适配、开场预跑与宿主输入适配。未修改原作场景、材质、shader或塔防游戏代码。WebKit首帧使用原作只绘制的bench(0)接口提交并读回，不增加模拟帧或改变战局。
 
 保留原作版权与MIT许可，Three.js r170另保留其MIT声明。本文为来源和文件一致性记录，不宣称iPhone、微信真机或所有触控功能已经实测；实际操作与性能以对应测试证据另行说明。
