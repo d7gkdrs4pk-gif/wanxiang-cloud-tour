@@ -1,0 +1,26 @@
+{
+  "scope": "CPU-only visible geometry occlusion semantics; no GPU or gameplay state changes",
+  "passed": true,
+  "cases": [
+    {
+      "mode": "visible",
+      "hit": true,
+      "triangles": 12
+    },
+    {
+      "mode": "mesh-hidden",
+      "hit": false,
+      "triangles": 0
+    },
+    {
+      "mode": "parent-hidden",
+      "hit": false,
+      "triangles": 0
+    },
+    {
+      "mode": "material-hidden",
+      "hit": false,
+      "triangles": 0
+    }
+  ]
+}

@@ -1,6 +1,14 @@
-# 凤鸣山门｜项目状态 V1.35
-当前交付试玩：main:fengming-v2-scene-a/gate-h34.html（H.34，山门一屏可玩样关）。
+# 凤鸣山门｜项目状态 V1.36
+当前交付试玩：main:fengming-v2-scene-a/gate-h35.html（H.35，白天无火把山门可玩试版）。
 保留完整正式工程：main:fengming-v2-scene-a/index.html（V2.0 H.29），blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。
+
+H.35／白天无火把山门试版（2026-11-27）：用户反馈H34视觉变化仍不明显，结合其私有20秒微缩场景视频（不分发）增量制作。当前 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h35.html ；H34独立保留gate-h34.html，H31独立保留h31-compare.html，sample-gate.html同步H35，H29完整入口不覆盖。
+
+实际资产：150块真实薄倒角石路/10627tri、同批坡岩与贴根影；新厚板门台/台沿/柱石/阶帮和苔岩裙台，18416tri/4draw。原nav/高度/路线/镜头/人物比例保持，路面renderer底床退淡内凹以读厚边。035模型/生成器/独立CPU数据留档。白天主光、两石灯强度0/暖芯隐藏；无火把、无新地图/运镜。林砚复用034网格，新增承重踏步/肩胯与外侧收剑、固定握点及.44命中同步；旧034/033资产逐字节冻结保持对照。
+
+14.60秒原速正常UI完整触控穿枝→登阶→回身命中收势，HP3→2/四标记true/错误0/失败0/cut峰值0.000000；15启动恢复场景通过。云Linux WebKit26.5/WPE软件390×844DPR1实测21.490FPS，中位45ms/p95 60ms，非iPhone/微信真机。报告SAMPLE_H35_QA.md、独立SAMPLE_H35_VISUAL_REVIEW.md和evidence/h35/。作为白天试版，路缘/T形区域融合仍规整，未宣称达到参考完成度或用户美术通过。
+
+以下H34及更早条目为历史记录，旧“当前”以本页顶部H35为准。
 
 H.34／角色网格与门楼可见资产重制（2026-11-27）：当前试玩 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h34.html ；H31独立对照h31-compare.html；本轮前H33对照gate-h33.html；sample-gate.html同步H34。H29完整入口保留不覆盖。
 

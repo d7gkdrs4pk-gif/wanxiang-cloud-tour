@@ -1,0 +1,69 @@
+{
+  "version": "H35 final gate-clearance wrist",
+  "frozen": true,
+  "reusesMesh": "assets/hero-034/linyan-h34-baked.js",
+  "reusesAtlas": "assets/hero-034/linyan-atlas.webp",
+  "oldH34AssetsModified": false,
+  "attackSeconds": 0.78,
+  "hitProgress": 0.44,
+  "actorRootDisplacement": false,
+  "fixedSwordSocket": true,
+  "files": [
+    {
+      "path": "fengming-v2-scene-a/sample/hero.js",
+      "bytes": 14286,
+      "sha256": "6a77d824d833f545a6037362948fed5e994d5a61a766bd56f8f343d8e1970e0e"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-035/action.js",
+      "bytes": 7003,
+      "sha256": "602530789141311478bb476bc68d8095baa22a73ea6bf362dd03e62dfff28836"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-035/source/pose-samples.json",
+      "bytes": 484853,
+      "sha256": "f152a72258cbd36c1fae649b46a120e7bc49d454f68a7565e058e19f5476b52b"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-035/source/wrist-authoring.json",
+      "bytes": 21513,
+      "sha256": "7fec14ac49d560c98c78e0525a5823c07e34b5ac7dfcd26f9d18622ba514088d"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-035/source/recovery-guard.json",
+      "bytes": 850,
+      "sha256": "2c756525cc55057ed60fefffdc012810f908d7f04135d78ba56b267a4a94df43"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-035/source/base-wrist-track.json",
+      "bytes": 4379,
+      "sha256": "1af96f5f2322c226cf092c54c18319d7f46d69f5d49004eb3730b03bc4b543e1"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-035/linyan-h35-animation.blend",
+      "bytes": 234807,
+      "sha256": "d60fe5293cc114ac8d2243dc4789feb08ae030a06d38e654ab2d3b9f274f3e74"
+    },
+    {
+      "path": ".github/scripts/hero035-build-action.mjs",
+      "bytes": 6388,
+      "sha256": "f3e749d9df7c460ee0e231f733f36c92c8b714663b67a079bf05aecfe5945274"
+    },
+    {
+      "path": ".github/scripts/hero035-export-samples.mjs",
+      "bytes": 2631,
+      "sha256": "ec25bbd556db6213fdf9a19c156291d57e54ff8998f44a74328ac1588b112775"
+    },
+    {
+      "path": ".github/scripts/hero035-animation-mother.py",
+      "bytes": 13269,
+      "sha256": "8919c6d361ffc8dd034374077c76b2347996366308782b44d574f3ee3dc70794"
+    }
+  ],
+  "mother": "animation-mother-report.json",
+  "finalGateRayQA": "assets/gate-035/visibility-cpu.json",
+  "finalActionQA": "qa-h35/hero/final-guard/action-verification.json",
+  "finalGateBlocked": 0,
+  "finalGateSamples": 4040,
+  "finalLowStairAndSameGroundRecoveryContacts": 0
+}

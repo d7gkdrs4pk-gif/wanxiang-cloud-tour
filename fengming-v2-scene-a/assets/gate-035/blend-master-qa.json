@@ -1,0 +1,39 @@
+{
+  "revision": "H35",
+  "meshes": 4,
+  "triangles": 18416,
+  "materialSlots": 4,
+  "packedImages": [
+    {
+      "name": "Noto OFL local 凤鸣 plaque atlas",
+      "packed": true,
+      "size": [
+        512,
+        256
+      ]
+    },
+    {
+      "name": "Project original painted stone atlas",
+      "packed": true,
+      "size": [
+        1774,
+        887
+      ]
+    }
+  ],
+  "referenceCamera": {
+    "gameFOV": 39,
+    "gameOffset": [
+      6,
+      27,
+      15
+    ],
+    "blenderLocation": [
+      7.579999923706055,
+      -8.0,
+      27.714649200439453
+    ]
+  },
+  "rendered": false,
+  "scope": "Editable source master import/texture packing check only; no rendered image, GPU, game-camera or FPS acceptance"
+}

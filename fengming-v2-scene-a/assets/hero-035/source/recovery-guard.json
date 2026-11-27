@@ -1,0 +1,49 @@
+{
+  "method": "Wrist only, keep p<=.68 and p=1; brief shoulder-height diagonal while the blade turns to the outside, then lower outside guard and idle. No forward return through sentry.",
+  "directions": [
+    [
+      0.68,
+      1.002222222222222,
+      -0.4533333333333335
+    ],
+    [
+      0.7,
+      1,
+      0.65
+    ],
+    [
+      0.72,
+      -0.45,
+      0.65
+    ],
+    [
+      0.76,
+      -0.45,
+      -0.1
+    ],
+    [
+      0.88,
+      -0.45,
+      -0.1
+    ],
+    [
+      0.94,
+      -0.45,
+      0.05
+    ],
+    [
+      0.98,
+      -0.46253511617261567,
+      0.24
+    ],
+    [
+      1,
+      -0.46253511617261567,
+      0.29835257450216235
+    ]
+  ],
+  "selectedCandidateSHA256": "602530789141311478bb476bc68d8095baa22a73ea6bf362dd03e62dfff28836",
+  "gateRays": 4040,
+  "gateBlocked": 0,
+  "lowStairAndSameGroundRecoveryContacts": 0
+}

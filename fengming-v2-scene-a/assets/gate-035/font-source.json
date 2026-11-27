@@ -1,0 +1,79 @@
+{
+  "asset": "gate-035 plaque and copper-mask atlas",
+  "text": "凤鸣",
+  "canvas": {
+    "size": [
+      512,
+      256
+    ],
+    "mode": "RGBA",
+    "rgb": [
+      255,
+      255,
+      255
+    ],
+    "background_alpha": 0,
+    "coordinates": "image top-left origin; bbox maximum exclusive"
+  },
+  "font": {
+    "local_path": "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
+    "sha256": "5d9c31a059600193c9d7968a998bde886ccdc77e934006ad243b41794c496a7d",
+    "collection_index": 2,
+    "family": "Noto Serif CJK SC",
+    "style": "Regular",
+    "pixel_size": 192,
+    "name_table_copyright": "© 2017-2024 Adobe (http://www.adobe.com/)."
+  },
+  "license": {
+    "spdx": "OFL-1.1",
+    "verbatim_source_local_path": "/usr/share/doc/fonts-noto-cjk/copyright",
+    "source_sha256": "849f4ea9c214fa4ac3593b770c699f387534b11ce671264c1b10d85bdcb5997b",
+    "copied_license": "OFL-Noto-CJK.txt",
+    "copied_license_sha256": "ff9ecf3d6b3bd3cb082ddceb073bc500ffab385e62900a469e72dd8e93fb6c20",
+    "network_downloads": false,
+    "font_binary_redistributed": false
+  },
+  "render": {
+    "tool": "Pillow",
+    "version": "13.0.0",
+    "draw_text_origin": [
+      108.0,
+      -39.0
+    ],
+    "font_layout_bbox": [
+      0,
+      59,
+      384,
+      239
+    ],
+    "glyph_alpha_bbox": [
+      115,
+      20,
+      485,
+      198
+    ],
+    "glyph_alpha_center": [
+      300.0,
+      109.0
+    ],
+    "glyph_ink_height": 178,
+    "reserved_opaque_white_bbox": [
+      0,
+      192,
+      64,
+      256
+    ],
+    "reserved_white_uv_sample": [
+      0.03,
+      0.03
+    ],
+    "uv_note": "Default Three TextureLoader flipY maps UV(.03,.03) into the image lower-left white patch.",
+    "runtime_code_modified": false
+  },
+  "atlas": {
+    "file": "plaque-atlas.png",
+    "sha256": "12b30c30a3fa919a3c9759246ee5f7704a761cf7a2842b28bf0e70ed497b5165",
+    "bytes": 9546
+  },
+  "reusedUnchangedFrom": "assets/gate-034/plaque-atlas.png"
+}

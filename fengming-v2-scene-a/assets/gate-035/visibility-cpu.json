@@ -1,0 +1,159 @@
+{
+  "revision": "H35",
+  "mode": "full",
+  "actionOverride": false,
+  "scope": "CPU exact generated gate triangle rays at original FOV39/follow6,27,15; actual H35 head/chest bones and physical sword sockets. Static facing-to-sentry sampled at four original route positions, actual original cached foot heights. Cut/opacity shaders are not applied. Does not replace continuous full-scene touch video.",
+  "sources": {
+    "hero": "6a77d824d833f545a6037362948fed5e994d5a61a766bd56f8f343d8e1970e0e",
+    "action": "602530789141311478bb476bc68d8095baa22a73ea6bf362dd03e62dfff28836",
+    "gate": "764471c63bd6d253bf1622c7c21dddcab9d8746e33295a98da9d9bdee7003636",
+    "foundation": "fe83e76a31b1056dd6fc6fda3dfb696a9a4fb9b9187e7bcf7a72ac60652b1da3"
+  },
+  "hero": {
+    "triangles": 9351,
+    "materials": 2,
+    "bones": 22,
+    "height": 1.485,
+    "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+    "attackDuration": 0.78,
+    "hitProgress": 0.44,
+    "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation.",
+    "animationRevision": "H35 weighted stance / low outside recovery"
+  },
+  "primarySamples": 2020,
+  "primaryBlocked": 0,
+  "totalSamples": 4040,
+  "totalBlocked": 0,
+  "suites": [
+    {
+      "label": "gate-sentry",
+      "enemy": [
+        2.5,
+        0.02564343623816964,
+        -6.5
+      ],
+      "samples": 2020,
+      "blocked": 0,
+      "poses": [
+        {
+          "p": [
+            2.45,
+            -0.006157773546874523,
+            -7
+          ],
+          "facing": 0.09966865249116168,
+          "camera": [
+            8.45,
+            26.993842226453125,
+            8
+          ]
+        },
+        {
+          "p": [
+            2,
+            0.3984506157240635,
+            -7
+          ],
+          "facing": 0.7853981633974483,
+          "camera": [
+            8,
+            27.398450615724062,
+            8
+          ]
+        },
+        {
+          "p": [
+            1.58,
+            0.714099286446104,
+            -7
+          ],
+          "facing": 1.0729739941778953,
+          "camera": [
+            7.58,
+            27.714099286446103,
+            8
+          ]
+        },
+        {
+          "p": [
+            1.375,
+            0.7125264152783075,
+            -7.375
+          ],
+          "facing": 0.9097531579442097,
+          "camera": [
+            7.375,
+            27.712526415278308,
+            7.625
+          ]
+        }
+      ],
+      "tests": []
+    },
+    {
+      "label": "original-sentry-home",
+      "enemy": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "samples": 2020,
+      "blocked": 0,
+      "poses": [
+        {
+          "p": [
+            2.45,
+            -0.006157773546874523,
+            -7
+          ],
+          "facing": 0.7188299996216235,
+          "camera": [
+            8.45,
+            26.993842226453125,
+            8
+          ]
+        },
+        {
+          "p": [
+            2,
+            0.3984506157240635,
+            -7
+          ],
+          "facing": 1.10714871779409,
+          "camera": [
+            8,
+            27.398450615724062,
+            8
+          ]
+        },
+        {
+          "p": [
+            1.58,
+            0.714099286446104,
+            -7
+          ],
+          "facing": 1.2539718409266771,
+          "camera": [
+            7.58,
+            27.714099286446103,
+            8
+          ]
+        },
+        {
+          "p": [
+            1.375,
+            0.7125264152783075,
+            -7.375
+          ],
+          "facing": 1.0726796167945822,
+          "camera": [
+            7.375,
+            27.712526415278308,
+            7.625
+          ]
+        }
+      ],
+      "tests": []
+    }
+  ]
+}

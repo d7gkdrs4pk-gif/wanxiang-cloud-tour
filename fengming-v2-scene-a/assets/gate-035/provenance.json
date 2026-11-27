@@ -1,0 +1,35 @@
+{
+  "revision": "H35",
+  "geometry": "Original project-authored 3D dressed stone and continuous rock apron; H34 roof/columns/route retained",
+  "stone": "Shared project-owned environment-035/stone-kit-atlas.webp; versioned unchanged painting from environment-033",
+  "glyph": "Unchanged H34 Noto CJK raster; OFL-1.1 text retained; no font binary redistributed",
+  "newExternalModelsOrTextures": false,
+  "camera": {
+    "FOV": 39,
+    "offset": [
+      6,
+      27,
+      15
+    ]
+  },
+  "runtimeSources": [
+    {
+      "path": "sample/gate-roof-finish.js",
+      "sha256": "764471c63bd6d253bf1622c7c21dddcab9d8746e33295a98da9d9bdee7003636"
+    },
+    {
+      "path": "assets/gate-035/steps-data.js",
+      "sha256": "4f96a57ff28a98c93449c2a37cbb8a9c151a586d224c022bad76c40f0c199476"
+    },
+    {
+      "path": "assets/gate-035/boundary-data.js",
+      "sha256": "908e81ed824e7b8ac2f7682930c61014432fa109334f0677bd4f7a172e686c10"
+    },
+    {
+      "path": "assets/gate-035/foundation-data.js",
+      "sha256": "fe83e76a31b1056dd6fc6fda3dfb696a9a4fb9b9187e7bcf7a72ac60652b1da3"
+    }
+  ],
+  "runtimeMasterDownload": false,
+  "notes": "Actual full-scene play evidence, final animation visibility and measured FPS are tracked by the main task. This provenance is not art acceptance."
+}

@@ -1,0 +1,96 @@
+{
+  "revision": "H35 daylight stone-road kit",
+  "geometry": {
+    "authoring": "Project-authored offline running-bond block generator; real top, bevel, side and source-ledge riser triangles",
+    "editableSource": "../../tools/build-environment-035-road.mjs",
+    "runtime": "road-geometry.js, static bundled buffers; no runtime remeshing or new collisions",
+    "statistics": {
+      "stones": 150,
+      "triangles": 10627,
+      "vertices": 17040,
+      "topLiftAtVertices": 0.01,
+      "minSampledTopLift": -0.0008449083150720571,
+      "maxSampledTopLift": 0.01948651759106927,
+      "topChecks": 119035,
+      "aboveTolerance": 0,
+      "independentNavCheck": {
+        "samples": 19929,
+        "minLift": -0.004543392079075781,
+        "maxLift": 0.02195916036423784,
+        "over2cm": 8,
+        "method": "final top triangle interior barycentrics queried against unchanged nav.groundAt; safeGround only filters nonwalkable decoration"
+      },
+      "layout": "single running-bond mother grid, no split bricks/no random omissions",
+      "jointWidth": 0.02,
+      "topShading": "one restrained average normal per whole slab; actual bevel and side normals retained",
+      "stoneWidth": 0.96,
+      "visibleSideBottom": -0.055,
+      "bevelWidth": 0.013,
+      "originalHeightDataUnchanged": true
+    },
+    "walkingHeightSource": "Existing nav.groundAt after original fine surface provider; safeGround filters decorative nonwalkable foreground only",
+    "nonwalkableForeground": "Original coarse H bilinear slope, with original fine cache where available; render-only decoration outside original safeGround, excluded from the independent walking-height audit",
+    "renderOnlyBaseRecess": {
+      "maximumMeters": 0.045,
+      "outerFadeMeters": 0.2,
+      "coverageData": "road-bed-mask.png",
+      "generator": "../../tools/build-environment-035-mask.py"
+    },
+    "originalNavigationSHA256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+    "originalFineHeightsSHA256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+    "independentAudit": {
+      "tool": "../../tools/check-environment-035-height.mjs",
+      "sampleReport": "Integrated H35 evidence; this helper reads frozen runtime buffers and original nav independently",
+      "samples": 19929,
+      "liftMeters": {
+        "min": -0.004543304853280777,
+        "median": 0.009999990689343305,
+        "p99": 0.01488524575747184,
+        "max": 0.021959357958475756
+      },
+      "samplesAbove20_1mm": 8,
+      "originalNavBuffersUnchanged": true,
+      "scope": "Discrete final-triangle interior samples on original safeGround; not a mathematical proof of every point"
+    },
+    "standardGLB": {
+      "file": "source/road-kit-h35.glb",
+      "exporter": "../../tools/export-environment-035-source.mjs",
+      "vertices": 17040,
+      "triangles": 10627,
+      "bytes": 1947508,
+      "runtimeAttributesAndIndicesExactBytes": true,
+      "textureBytesExact": true,
+      "engineColorMix": "Standard GLB keeps original texture; runtime custom contrast mix is documented in its material extras"
+    }
+  },
+  "stoneTexture": {
+    "file": "stone-kit-atlas.webp",
+    "origin": "Unmodified byte copy of project-owned environment-033/handpainted-stone-atlas.webp; original H33 ImageGen edit of project-authored vector atlas",
+    "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a",
+    "historicalSourceSHA256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a",
+    "UV": "Four interior quiet-cell rectangles recorded in road-layout.json; old painted joints are not used as new physical joints"
+  },
+  "bedrock": {
+    "runtime": "rock-shapes.js",
+    "origin": "Unmodified copied H34 hand-authored/Blender-bevelled ledges; original editable source remains environment-034/hand-cut-bedrock.blend",
+    "sha256": "ced2d2ed56d8ce772b79c1efdcf2c9fdab2dac297874e68fef48d37204483711",
+    "historicalSourceSHA256": "ced2d2ed56d8ce772b79c1efdcf2c9fdab2dac297874e68fef48d37204483711"
+  },
+  "lighting": {
+    "time": "day",
+    "sunDirection": [
+      -8,
+      16,
+      12
+    ],
+    "stoneTop": "One restrained average fixed-sun normal per complete block; actual physical bevel/side normals retained",
+    "lamps": "H34 stone lantern shapes retained; warm pane, point light and flicker disabled"
+  },
+  "unchanged": [
+    "Camera FOV/offset and actor scale",
+    "Navigation legality, original cached H/R and fine heights",
+    "Original gate stairs and walking-route collision",
+    "Historical 033/034 assets"
+  ],
+  "privateReference": "Private video informs the requested road/ground relationship only; no frames/audio embedded or copied into this asset directory"
+}

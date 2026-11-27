@@ -1,4 +1,4 @@
-/** H34 open-approach single Chinese gatehouse, original project-authored geometry.
+/** H35 open-approach single Chinese gatehouse, original project-authored geometry.
  * Call ONLY after the source gate has its final world transform AND styleGate,
  * before prepareRoof / createRoofOcclusion. Existing source GLB is never edited.
  *
@@ -16,8 +16,10 @@
  * This is a candidate for NORMAL CAMERA review, not an art approval claim.
  */
 import * as T from 'three';
-import {GATE_STEP_HEIGHTS,STEP_SOURCE_SHA256} from '../assets/gate-034/steps-data.js';
-import {BOUNDARY_MARKERS} from '../assets/gate-034/boundary-data.js';
+import {GATE_STEP_HEIGHTS,STEP_SOURCE_SHA256} from '../assets/gate-035/steps-data.js';
+import {BOUNDARY_MARKERS} from '../assets/gate-035/boundary-data.js';
+import {FOUNDATION_ROCK} from '../assets/gate-035/foundation-data.js';
+const PLAQUE_URL=new URL('../assets/gate-035/plaque-atlas.png',import.meta.url).href;
 
 const clamp=T.MathUtils.clamp;
 const blend=T.MathUtils.lerp;
@@ -47,7 +49,7 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
   const lower=source.clone();lower.setIndex(kept);lower.clearGroups();lower.addGroup(0,kept.length,0);lower.computeBoundingBox();lower.computeBoundingSphere();
   original.push({mesh,geometry:source,replacement:lower,visible:mesh.visible});mesh.geometry=lower;mesh.visible=false;
  });
- const group=new T.Group();group.name='H34 single east-facing open gatehouse';
+ const group=new T.Group();group.name='H35 single east-facing open gatehouse';
  const inv=gate.matrixWorld.clone().invert();
  const litOptions={color:0xffffff,vertexColors:true,fog:false};
  let plaqueTexture=null;
@@ -61,16 +63,24 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
   new T.MeshBasicMaterial({...litOptions,map:stoneTexture}),
  ];
  if(shading==='light'){mats[0].color.setRGB(3.2,3.2,3.2);mats[1].color.setRGB(2.,2.,2.);mats[2].color.setRGB(1.7,1.7,1.7);}
- mats.forEach((m,i)=>{m.name=['H34 matte cool-grey barrel tiles','H34 deep eaves and grounded timber','H34 old bronze and inset name glyphs','H34 painted stone matched to terrain'][i];m.side=T.DoubleSide;});
+ mats.forEach((m,i)=>{m.name=['H35 matte cool-grey barrel tiles','H35 deep eaves and grounded timber','H35 old bronze and inset name glyphs','H35 painted stone matched to terrain'][i];m.side=T.DoubleSide;});
  const arrays=mats.map(()=>({p:[],n:[],c:[],uv:[],idx:[]}));
+ let dressedFloorSlabs=0,dressedRimBlocks=0,dressedStepCheeks=0;
  function add(geometry,material,color,shade=1){
   const a=arrays[material],p=geometry.attributes.position,n=geometry.attributes.normal,off=a.p.length/3,col=new T.Color(color),N=new T.Vector3(),P=new T.Vector3();
   const normalMat=new T.Matrix3().getNormalMatrix(inv);
   const uv=geometry.attributes.uv,sun=V(-8,16,12).normalize();
+  let stoneBounds=null,stoneRect=null,stoneSize=null;
+  if(material===3){
+   geometry.computeBoundingBox();stoneBounds=geometry.boundingBox;stoneSize=stoneBounds.getSize(new T.Vector3());
+   const centre=stoneBounds.getCenter(new T.Vector3()),seed=geometry.userData.stoneSeed??Math.floor(Math.abs(centre.x*17+centre.z*11+centre.y*7));
+   const rects=[[.037,.203,.808,.938],[.276,.459,.808,.932],[.141,.330,.538,.696],[.028,.208,.301,.442]];stoneRect=geometry.userData.rockSurface?[.515,.985,.02,.98]:rects[Math.abs(seed)%rects.length];
+  }
   for(let i=0;i<p.count;i++){
    P.fromBufferAttribute(p,i);const world=P.clone(),worldNormal=N.fromBufferAttribute(n,i).clone();P.applyMatrix4(inv);N.applyMatrix3(normalMat).normalize();
    const weather=material===0?(.99+.028*Math.sin(world.x*.83+world.z*.53)+.012*Math.cos(world.z*1.21+world.x*.3)):1;
-   const grain=shade*weather*(material===1?(.99+.012*Math.sin(world.x*.9+world.z*.7+world.y*2.6)):1);
+   let grain=shade*weather*(material===1?(.99+.012*Math.sin(world.x*.9+world.z*.7+world.y*2.6)):1);
+   if(material===1&&world.y>2.60&&world.y<3.15){if(worldNormal.y<-.45)grain*=.72;for(const x of [-1.75,-.05])for(const z of [-8.85,-6.15])if(Math.hypot(world.x-x,world.z-z)<.24)grain*=.87;}
    let cr=col.r*grain,cg=col.g*grain,cb=col.b*grain,U=.03,Vv=.03;
    if(material===3){
     // Same fixed sun/temperature as the terrain. On static architecture this
@@ -83,10 +93,13 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
      for(let k=0;k<2;k++){t=(surface(cfg,qx,qz)-world.y)/sun.y;qx=world.x+sun.x*t;qz=world.z+sun.z*t;}
      const edge=Math.min(cfg.hx-Math.abs(qx-cfg.x),cfg.hz-Math.abs(qz-cfg.z));ao=1-.25*clamp(edge/.20,0,1);
     }
-    cr*=blend(.46,1.20,lit)*1.08*ao;cg*=blend(.58,1.18,lit)*1.025*ao;cb*=blend(.70,1.12,lit)*.945*ao;
-    if(Math.abs(worldNormal.y)>.65){U=.002+.496*clamp((world.x+2.40)/4.90,0,1);Vv=.004+.992*clamp((world.z+9.75)/4.50,0,1);}
-    else if(Math.abs(worldNormal.x)>.65){U=.002+.496*clamp((world.z+9.75)/4.50,0,1);Vv=.08+.70*clamp(world.y/1.6,0,1);}
-    else{U=.002+.496*clamp((world.x+2.40)/4.90,0,1);Vv=.08+.70*clamp(world.y/1.6,0,1);}
+    for(const x of [-1.75,-.05])for(const z of [-8.85,-6.15])if(world.y>.69&&world.y<.88&&worldNormal.y>.45){const r=Math.hypot(world.x-x,world.z-z);ao*=.73+.27*clamp((r-.10)/.22,0,1);}
+    cr*=blend(.36,1.15,lit)*ao;cg*=blend(.46,1.14,lit)*ao;cb*=blend(.57,1.08,lit)*ao;
+    if(geometry.userData.rockSurface){const moss=.12*(1-clamp((world.y-.16)/.48,0,1));cr*=1-moss*.28;cb*=1-moss*.30;}
+    const size=stoneSize,nx=clamp((world.x-stoneBounds.min.x)/Math.max(.000001,size.x),0,1),ny=clamp((world.y-stoneBounds.min.y)/Math.max(.000001,size.y),0,1),nz=clamp((world.z-stoneBounds.min.z)/Math.max(.000001,size.z),0,1);
+    const pu=Math.abs(worldNormal.x)>.65?nz:nx,pv=Math.abs(worldNormal.y)>.65?nz:ny;
+    if(geometry.userData.rockSurface){U=.5+.5*(.02+(world.x+2.39)/4.8);Vv=.46+(world.z+5.27)/4.8;}
+    else{U=blend(stoneRect[0],stoneRect[1],.03+.94*pu);Vv=blend(stoneRect[2],stoneRect[3],.03+.94*pv);}
    }else if(material===2&&geometry.userData.plaque){U=uv.getX(i);Vv=uv.getY(i);}
    a.p.push(P.x,P.y,P.z);a.n.push(N.x,N.y,N.z);a.c.push(cr,cg,cb);a.uv.push(U,Vv);
   }
@@ -96,6 +109,16 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
  function meshData(pos,idx,material,color,shade=1){const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(pos,3));g.setIndex(idx);g.computeVertexNormals();add(g,material,color,shade);}
  function cube(w,h,d,x,y,z,mat,color){const g=new T.BoxGeometry(w,h,d,1,1,1);g.translate(x,y,z);add(g,mat,color);}
  function cylinder(r0,r1,height,x,y,z,mat,color,sides=10){const g=new T.CylinderGeometry(r1,r0,height,sides,1);g.translate(x,y,z);add(g,mat,color);}
+ // Hand-dressed block: a genuinely inset bevel shoulder, full-depth sides
+ // and a broad quiet top. It is not a coplanar textured rectangle. The bottom
+ // is hidden inside the mortar/plinth, so it does not spend triangles there.
+ function dressedStone(w,h,d,x,top,z,{bevel=.023,corner=.045,seed=0,simple=false,color=0xffffff}={}){
+  const b=Math.min(bevel,h*.30,w*.12,d*.12),cut=Math.min(corner,w*.16,d*.16),outline=simple?[[-1,-1],[1,-1],[1,1],[-1,1]]:[[-1,-1+cut/d*2],[-1+cut/w*2,-1],[1-cut/w*2,-1],[1,-1+cut/d*2],[1,1-cut/d*2],[1-cut/w*2,1],[-1+cut/w*2,1],[-1,1-cut/d*2]];
+  const pos=[],idx=[],N=outline.length,ring=(inset,y)=>{for(const [u,v]of outline)pos.push(x+u*(w*.5-inset),y,z+v*(d*.5-inset));};
+  ring(b,top);ring(0,top-b);ring(.004,top-h);pos.push(x,top,z);const centre=pos.length/3-1;
+  for(let i=0;i<N;i++){const j=(i+1)%N;idx.push(centre,j,i);for(let k=0;k<2;k++){const a=k*N+i,c=k*N+j;idx.push(a,c,a+N,c,c+N,a+N);}}
+  const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(pos,3));g.setIndex(idx);g.computeVertexNormals();g.userData.dressedStone=true;g.userData.stoneSeed=seed;add(g,3,color,.97+.025*Math.sin(seed*1.77));
+ }
  function tube(points,radii,mat,color,segments=16,sides=7){
   const path=new T.CatmullRomCurve3(points.map(p=>V(...p))),frames=path.computeFrenetFrames(segments,false),p=[],idx=[];
   for(let i=0;i<=segments;i++){
@@ -205,7 +228,7 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
  const columnFeet=[];
  for(const x of [-1.75,-.05])for(const z of [-8.85,-6.15]){
   const footY=.7145,postY=footY+.13,postTop=2.82;
-  cylinder(.20,.185,.14,x,footY+.07,z,3,0xffffff,12);
+  dressedStone(.42,.15,.42,x,footY+.14,z,{bevel:.023,corner:.075,seed:100+columnFeet.length});
   cylinder(.173,.151,.08,x,footY+.17,z,1,colors.woodDark,12);
   cylinder(.148,.13,postTop-postY,x,(postTop+postY)*.5,z,1,colors.wood,12);
   cylinder(.153,.15,.19,x,footY+.28,z,1,colors.woodDark,12);
@@ -253,14 +276,31 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
  // A coherent stone platform replaces only the visible scan. The source lower
  // geometry is kept hidden for restore; original navigation remains untouched.
  const platform={minX:-2.40,maxX:1.3495,minZ:-9.75,maxZ:-5.25,topY:.7145,bottomY:.09};
- cube(3.7495,.49,4.50,-.52525,.4695,-7.50,3,0xffffff);
- cube(3.80,.115,4.60,-.525,.1475,-7.50,3,0xd3dcdb);
- cube(3.79,.075,4.54,-.525,.650,-7.50,3,0xecf0ec);
- // Keep a tiled top mesh, so the roof's directional shadow has real sampling
- // density instead of painting a single arbitrary black rectangle on the floor.
- const fp=[],fi=[],fx=15,fz=18;
- for(let j=0;j<=fz;j++)for(let i=0;i<=fx;i++)fp.push(blend(platform.minX,platform.maxX,i/fx),platform.topY,blend(platform.minZ,platform.maxZ,j/fz));
- for(let j=0;j<fz;j++)for(let i=0;i<fx;i++){const a=j*(fx+1)+i;fi.push(a,a+fx+1,a+1,a+1,a+fx+1,a+fx+2);}meshData(fp,fi,3,0xffffff);
+ // Recessed dark mortar bed + individual thick paving and masonry courses.
+ // All dressed tops are outside the legal original stair cells. Their .02m
+ // shoulders and quiet joints are visible at the unchanged phone view.
+ cube(3.6695,.49,4.42,-.52525,.4395,-7.50,3,0x9ba7a1);
+ cube(3.80,.115,4.60,-.525,.1475,-7.50,3,0xc0cbc6);
+ const floorRows=5,floorCols=4,gap=.027;
+ for(let row=0;row<floorRows;row++){
+  const cuts=row%2?[0,.5,1.5,2.5,3.5,4]:[0,1,2,3,4],z0=blend(platform.minZ,platform.maxZ,row/floorRows),z1=blend(platform.minZ,platform.maxZ,(row+1)/floorRows);
+  for(let col=0;col<cuts.length-1;col++){
+   const x0=blend(platform.minX,platform.maxX,cuts[col]/floorCols),x1=blend(platform.minX,platform.maxX,cuts[col+1]/floorCols),seed=row*9+col;
+   dressedStone(x1-x0-gap,.085,z1-z0-gap,(x0+x1)*.5,platform.topY+.003*Math.sin(seed*1.3),(z0+z1)*.5,{bevel:.023,corner:.035+.012*Math.sin(seed*2.1),seed});dressedFloorSlabs++;
+  }
+ }
+ // Real segment joints around the low platform, with a quiet dark bed behind.
+ for(const z of [platform.minZ+.10,platform.maxZ-.10])for(let i=0;i<6;i++){
+  const x=blend(platform.minX,platform.maxX,(i+.5)/6);dressedStone(3.7495/6-.019,.425,.20,x,.6775,z,{bevel:.018,corner:0,seed:50+i,simple:true,color:0xf0f1e9});dressedRimBlocks++;
+ }
+ for(const x of [platform.minX+.10,platform.maxX-.10])for(let i=0;i<6;i++){
+  const z=blend(platform.minZ,platform.maxZ,(i+.5)/6);dressedStone(.20,.425,4.5/6-.019,x,.6775,z,{bevel:.018,corner:0,seed:70+i,simple:true,color:0xf0f1e9});dressedRimBlocks++;
+ }
+ // Side cheeks expose four broad tread/riser masses without changing a single
+ // nearest-neighbour legal top. They sit strictly outside Z[-7.4,-6.9].
+ for(const z of [-7.433,-6.867])for(const [x0,x1,top]of [[1.35,1.70,.7145],[1.725,1.875,.525],[1.90,2.065,.401],[2.10,2.30,.277]]){
+  dressedStone(x1-x0,.13,.054,(x0+x1)*.5,top,z,{bevel:.012,corner:0,seed:90+dressedStepCheeks,simple:true,color:0xebeee6});dressedStepCheeks++;
+ }
  // Restrained stone wings and two traditional drum-shaped gate piers make this
  // a mountain entrance, while leaving the entire east stair frontage open.
  for(const z of [-9.18,-5.82]){
@@ -273,6 +313,12 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
   cube(.16,.12,length,1.20,.835,mid,3,0xe5ebe5);
   cube(.22,.10,length+.09,1.20,1.045,mid,3,0xffffff);
   for(const z of [z0,z1]){cube(.22,.31,.22,1.20,.870,z,3,0xe5ebe5);cylinder(.15,.12,.07,1.20,1.06,z,3,0xffffff,8);}
+ }
+ // One connected low rock apron closes the old green gap below the plinth.
+ // It stays inside the original forbidden footprint, below actors/sword rays,
+ // and uses the rock cell of the shared stone atlas in this existing batch.
+ {
+  const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(FOUNDATION_ROCK.positions,3));g.setIndex(FOUNDATION_ROCK.indices);g.computeVertexNormals();g.userData.rockSurface=true;g.userData.stoneSeed=400;add(g,3,0xe5ebe1);
  }
  // Low, clean stone edges make the OLD non-walkable building footprint
  // visible. They sit ~.21m INSIDE it, leaving the original south bypass and
@@ -312,20 +358,20 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr',stoneTexture=nul
  const meshes=[];
  for(let mi=0;mi<arrays.length;mi++){
   const a=arrays[mi],g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(a.p,3));g.setAttribute('normal',new T.Float32BufferAttribute(a.n,3));g.setAttribute('color',new T.Float32BufferAttribute(a.c,3));g.setAttribute('uv',new T.Float32BufferAttribute(a.uv,2));g.setIndex(a.idx);g.computeBoundingBox();g.computeBoundingSphere();
-  const mesh=new T.Mesh(g,mats[mi]);mesh.name=['H34 quiet cool-grey barrel-tiled roofs','H34 thick ink eaves and grounded framework','H34 old bronze and readable name board','H34 clean painted platform, stone wings and exact stairs'][mi];mesh.castShadow=mesh.receiveShadow=false;mesh.userData.role=mi===0?'roof':'gate-structure';group.add(mesh);meshes.push(mesh);
+  const mesh=new T.Mesh(g,mats[mi]);mesh.name=['H35 quiet cool-grey barrel-tiled roofs','H35 thick ink eaves and grounded framework','H35 old bronze and readable name board','H35 clean painted platform, stone wings and exact stairs'][mi];mesh.castShadow=mesh.receiveShadow=false;mesh.userData.role=mi===0?'roof':'gate-structure';group.add(mesh);meshes.push(mesh);
  }
  gate.add(group);gate.updateMatrixWorld(true);
  const bounds=new T.Box3();
  // Used-index bounds, rather than unused upper vertices retained in lower buffers.
  gate.traverse(o=>{if(!o.visible||!o.isMesh||!o.geometry?.attributes.position)return;const p=o.geometry.attributes.position,I=o.geometry.index,n=I?I.count:p.count;for(let i=0;i<n;i++)bounds.expandByPoint(scratch.fromBufferAttribute(p,I?I.getX(i):i).applyMatrix4(o.matrixWorld));});
- const stats={candidate:true,artApproved:false,revision:'H34',shading:materialMode,nearArchitectureFog:false,materialTypes:mats.map(m=>m.type),source:'original project-authored rebuilt gatehouse and cache-exact stone stairs',sourceModel:'assets/sample-lod/gate.glb',...cutStats,newTriangles:arrays.reduce((n,a)=>n+a.idx.length/3,0),newDrawCalls:meshes.length,materials:mats.length,tileStrips,tileSegmentsPerStrip:6,eaveDepth:.20,perTileBrightFlecks:false,columnFeet,plaqueText:'凤鸣',sourceLowerHidden:true,platform,stepCells,stepSourceSHA256:STEP_SOURCE_SHA256,stoneTextureShared:!!stoneTexture,boundaryMarkers:BOUNDARY_MARKERS.map(q=>({name:q.name,a:q.a,b:q.b,visibleHeight:.3875,insideOriginalForbiddenFrame:true})),stairOpeningZ:[-7.55,-6.75],innerHeadrailX:1.10,protectY,worldBounds:[bounds.min.toArray(),bounds.max.toArray()],roofs:roofs.map(({name,x,z,hx,hz,eave,rise})=>({name,x,z,hx,hz,eave,rise}))};
+ const stats={candidate:true,artApproved:false,revision:'H35',shading:materialMode,nearArchitectureFog:false,materialTypes:mats.map(m=>m.type),source:'original project-authored rebuilt gatehouse and cache-exact stone stairs',sourceModel:'assets/sample-lod/gate.glb',...cutStats,newTriangles:arrays.reduce((n,a)=>n+a.idx.length/3,0),newDrawCalls:meshes.length,materials:mats.length,tileStrips,tileSegmentsPerStrip:6,eaveDepth:.20,perTileBrightFlecks:false,columnFeet,plaqueText:'凤鸣',sourceLowerHidden:true,platform,dressedFloorSlabs,dressedRimBlocks,dressedStepCheeks,stoneBevel:.023,foundationRock:FOUNDATION_ROCK.profile,stepCells,stepSourceSHA256:STEP_SOURCE_SHA256,stoneTextureShared:!!stoneTexture,boundaryMarkers:BOUNDARY_MARKERS.map(q=>({name:q.name,a:q.a,b:q.b,visibleHeight:.3875,insideOriginalForbiddenFrame:true})),stairOpeningZ:[-7.55,-6.75],innerHeadrailX:1.10,protectY,worldBounds:[bounds.min.toArray(),bounds.max.toArray()],roofs:roofs.map(({name,x,z,hx,hz,eave,rise})=>({name,x,z,hx,hz,eave,rise}))};
  let active=true;
  // Expose a rejectable startup barrier. The main entry awaits this before its
  // first playable frame, so a missing atlas cannot silently become a blank sign.
- const ready=typeof document==='undefined'?Promise.resolve():new T.TextureLoader().loadAsync('./assets/gate-034/plaque-atlas.png').then(texture=>{
+ const ready=typeof document==='undefined'?Promise.resolve():new T.TextureLoader().loadAsync(PLAQUE_URL).then(texture=>{
   if(!active){texture.dispose();return;}
   plaqueTexture=texture;texture.colorSpace=T.SRGBColorSpace;texture.minFilter=T.LinearMipmapLinearFilter;texture.magFilter=T.LinearFilter;texture.anisotropy=1;mats[2].map=texture;mats[2].needsUpdate=true;
- }).catch(error=>{throw new Error('H34 凤鸣 plaque atlas failed to load: assets/gate-034/plaque-atlas.png',{cause:error});});
+ }).catch(error=>{throw new Error('H35 凤鸣 plaque atlas failed to load: assets/gate-035/plaque-atlas.png',{cause:error});});
  // Keep a rejection handled until the caller reaches its explicit await. The
  // returned original promise still rejects and routes to the normal retry UI.
  ready.catch(()=>{});

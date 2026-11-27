@@ -1,6 +1,7 @@
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
-import {LEDGE_SHAPES} from '../assets/environment-034/rock-shapes.js';
+import {LEDGE_SHAPES} from '../assets/environment-035/rock-shapes.js';
+import {ROAD_KIT} from '../assets/environment-035/road-geometry.js';
 import {getEnvironmentStoneTexture} from './environment.js';
 
 const ROCK_PLACEMENTS=[
@@ -40,8 +41,8 @@ function makeBedrockEdging(groundAt,stoneTexture){
     uv.push(.502+.496*T.MathUtils.euclideanModulo(tx,1),.004+.992*T.MathUtils.euclideanModulo(ty,1));
     const facing=Math.max(0,n.dot(sun)),height=T.MathUtils.clamp((localY+.14)/(shape.height+.14),0,1);
     const ao=.73+.27*T.MathUtils.smoothstep(height,.06,.46),moss=Math.max(0,n.y-.6)*.18;
-    const shade=[.46+(.74*facing),.58+(.60*facing),.70+(.42*facing)];
-    colors.push(shade[0]*1.08*place.tint*ao*(1-moss*.30),shade[1]*1.025*place.tint*ao*(1-moss*.12),shade[2]*.945*place.tint*ao*(1-moss*.30));
+    const shade=[.36+(.79*facing),.46+(.68*facing),.57+(.51*facing)];
+    colors.push(shade[0]*place.tint*ao*(1-moss*.30),shade[1]*place.tint*ao*(1-moss*.12),shade[2]*place.tint*ao*(1-moss*.30));
    }
   }
   bounds.push({key:place.key,role:place.role,min:box.min.toArray(),max:box.max.toArray(),height:box.max.y-box.min.y});
@@ -61,31 +62,36 @@ function makeBedrockEdging(groundAt,stoneTexture){
    contactI.push(j,next,j+1,j+1,next,next+1);
   }
  }
- const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('normal',new T.Float32BufferAttribute(normals,3));g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.computeBoundingSphere();
+ const bedrockTriangles=positions.length/9;
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('normal',new T.Float32BufferAttribute(normals,3));g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.setAttribute('aStoneType',new T.Float32BufferAttribute(new Float32Array(positions.length/3).fill(1),1));
+ const rg=new T.BufferGeometry();rg.setAttribute('position',new T.Float32BufferAttribute(ROAD_KIT.p,3));rg.setAttribute('normal',new T.Float32BufferAttribute(ROAD_KIT.n,3));rg.setAttribute('uv',new T.Float32BufferAttribute(ROAD_KIT.u,2));rg.setAttribute('color',new T.Float32BufferAttribute(ROAD_KIT.c,3));rg.setAttribute('aStoneType',new T.Float32BufferAttribute(ROAD_KIT.k,1));rg.setIndex(ROAD_KIT.i);
+ const roadFlat=rg.toNonIndexed(),combined=mergeGeometries([g,roadFlat]);g.dispose();roadFlat.dispose();rg.dispose();combined.computeBoundingSphere();
  const rockMaterial=new T.MeshBasicMaterial({map:stoneTexture,color:0xffffff,vertexColors:true,fog:true,toneMapped:true});
  rockMaterial.onBeforeCompile=s=>{
   s.uniforms.uH34RockAtlas={value:stoneTexture};
-  s.vertexShader='varying vec3 vH34RockPoint;varying vec3 vH34RockNormal;\n'+s.vertexShader;
-  s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvH34RockPoint=(modelMatrix*vec4(transformed,1.)).xyz;vH34RockNormal=normalize(mat3(modelMatrix)*normal);');
-  s.fragmentShader=`uniform sampler2D uH34RockAtlas;varying vec3 vH34RockPoint;varying vec3 vH34RockNormal;
+  s.vertexShader='attribute float aStoneType;varying float vStoneType;varying vec3 vH34RockPoint;varying vec3 vH34RockNormal;\n'+s.vertexShader;
+  s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvStoneType=aStoneType;vH34RockPoint=(modelMatrix*vec4(transformed,1.)).xyz;vH34RockNormal=normalize(mat3(modelMatrix)*normal);');
+  s.fragmentShader=`uniform sampler2D uH34RockAtlas;varying float vStoneType;varying vec3 vH34RockPoint;varying vec3 vH34RockNormal;
    vec3 h34RockCell(vec2 p){vec2 t=fract(p);return texture2D(uH34RockAtlas,vec2(.502+.496*t.x,.004+.992*t.y)).rgb;}
   `+s.fragmentShader;
   s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',`
+   if(vStoneType<.5){vec3 stonePaint=texture2D(uH34RockAtlas,vMapUv).rgb;diffuseColor.rgb*=mix(vec3(.135,.174,.156),stonePaint,.42);}else{
    vec3 a=abs(normalize(vH34RockNormal)),a2=a*a,w=a2*a2*a;w/=max(.001,w.x+w.y+w.z);
    vec3 paint=vec3(0.);
    if(w.x>.012)paint+=h34RockCell((vH34RockPoint.zy+vec2(12.,18.))/vec2(20.,24.))*w.x;
    if(w.y>.012)paint+=h34RockCell((vH34RockPoint.xz+vec2(12.))/20.)*w.y;
    if(w.z>.012)paint+=h34RockCell((vH34RockPoint.xy+vec2(12.,18.))/vec2(20.,24.))*w.z;
    diffuseColor.rgb*=paint;
+   }
   `);
  };
- rockMaterial.customProgramCacheKey=()=> 'h34-hand-cut-bedrock-triplanar-v1';
- const rocks=new T.Mesh(g,rockMaterial);
- rocks.name='H34 two fitted hand-cut bedrock ledges';rocks.raycast=()=>{};
+ rockMaterial.customProgramCacheKey=()=> 'h35-road-bevel-and-verge-stone-v3';
+ const rocks=new T.Mesh(combined,rockMaterial);
+ rocks.name='H35 batched 3D stone road and fitted verge rock';rocks.raycast=()=>{};
  const sg=new T.BufferGeometry();sg.setAttribute('position',new T.Float32BufferAttribute(contactP,3));sg.setAttribute('color',new T.Float32BufferAttribute(contactC,4));sg.setIndex(contactI);sg.computeBoundingSphere();
  const contact=new T.Mesh(sg,new T.MeshBasicMaterial({vertexColors:true,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-3,toneMapped:false,fog:true}));
  contact.name='H34 narrow ground-conformed rock contact feathers';contact.renderOrder=1;contact.raycast=()=>{};
- return {rocks,contact,bounds,triangles:positions.length/9,contactTriangles:contactI.length/3};
+ return {rocks,contact,bounds,triangles:bedrockTriangles,roadTriangles:ROAD_KIT.stats.triangles,contactTriangles:contactI.length/3};
 }
 
 // Authored planting and stonework frame the playable courtyard. All roots are
@@ -151,7 +157,24 @@ export function createSceneDressing({scene,groundAt,grid,stoneTexture=getEnviron
   if(player&&moving&&footTimer<=0){footTimer=.24;const p=player.position,dx=Math.cos(player.rotation.y)*.12*(slot%2?1:-1),dz=-Math.sin(player.rotation.y)*.12*(slot%2?1:-1);slot=(slot+1)%count;dustPos[slot*3]=p.x+dx;dustPos[slot*3+1]=p.y+.035;dustPos[slot*3+2]=p.z+dz;life[slot]=.27;}
   for(let i=0;i<count;i++)if(life[i]>0){life[i]-=dt;dustPos[i*3+1]+=dt*.08;if(life[i]<=0)dustPos[i*3+1]=-1000;}dustGeo.attributes.position.needsUpdate=true;
  }
- return {group,update,stats:{leafTriangles:I.length/3,plantClumps:clumps.length,rockGroups:ROCK_PLACEMENTS.length,rockTriangles:bedrock.triangles,contactTriangles:bedrock.contactTriangles,rockFootprints:bedrock.bounds,draws:4}};
+ let adoptedPine=false;
+ function adoptPineContact(pine){
+  if(adoptedPine||!pine?.contact)return;adoptedPine=true;pine.contact.visible=false;
+  const P=[],C=[],I=[],N=16,M=10,theta=Math.atan2(6,15),co=Math.cos(theta),si=Math.sin(theta),ink=new T.Color(0x14202c);
+  for(let j=0;j<=M;j++)for(let i=0;i<=N;i++){
+   const x=(i/N-.5)*4.8,z=(j/M-.5)*2.,xx=-7+co*x+si*z,zz=-7-si*x+co*z;
+   const dx=xx+7,dz=zz+7,core=Math.pow(Math.max(0,1-(dx/.60)**2-(dz/.325)**2),1.5)*.22;
+   const band=Math.exp(-((z/.25)**2))*Math.max(0,1-(Math.abs(x)/2.35)**4)*.075;
+   const tail=Math.exp(-(((dx-.20)/.83)**2+((dz+.30)/.46)**2)*2)*.055;
+   const alpha=Math.min(.24,1-(1-core)*(1-band)*(1-tail));
+   const h=groundAt(xx,zz);P.push(xx,(Number.isFinite(h)?h:groundAt(-7,-7)??0)+.026,zz);C.push(ink.r,ink.g,ink.b,alpha);
+   if(i<N&&j<M){const a=j*(N+1)+i;I.push(a,a+N+1,a+1,a+1,a+N+1,a+N+2);}
+  }
+  const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(P,3));geometry.setAttribute('color',new T.Float32BufferAttribute(C,4));geometry.setIndex(I);
+  const old=bedrock.contact.geometry,merged=mergeGeometries([old,geometry]);old.dispose();geometry.dispose();bedrock.contact.geometry=merged;merged.computeBoundingSphere();stats.pineContactTriangles=I.length/3;stats.contactTriangles=(merged.index?.count??merged.attributes.position.count)/3;
+ }
+ const stats={leafTriangles:I.length/3,plantClumps:clumps.length,rockGroups:ROCK_PLACEMENTS.length,rockTriangles:bedrock.triangles,road:ROAD_KIT.stats,roadTriangles:bedrock.roadTriangles,contactTriangles:bedrock.contactTriangles,rockFootprints:bedrock.bounds,draws:4};
+ return {group,update,adoptPineContact,stats};
 }
 
 export function createStoneLantern(){
@@ -175,14 +198,14 @@ export function createStoneLantern(){
  const p=geometry.attributes.position,n=geometry.attributes.normal,uv=[],colors=[],sun=new T.Vector3(-8,16,12).normalize(),v=new T.Vector3();
  for(let i=0;i<p.count;i++){
   v.fromBufferAttribute(n,i).normalize();const t=Math.max(0,v.dot(sun)),ao=.86+.14*T.MathUtils.smoothstep(p.getY(i),0,.22);
-  colors.push((.46+.74*t)*1.08*ao,(.58+.60*t)*1.025*ao,(.70+.42*t)*.945*ao);
+  colors.push((.36+.79*t)*ao,(.46+.68*t)*ao,(.57+.51*t)*ao);
   const a=[Math.abs(v.x),Math.abs(v.y),Math.abs(v.z)],x=a[0]>a[2]&&a[0]>a[1]?p.getZ(i):p.getX(i),y=a[1]>=a[0]&&a[1]>=a[2]?p.getZ(i):p.getY(i);
   uv.push(.502+.496*T.MathUtils.euclideanModulo((x+12)/20,1),.004+.992*T.MathUtils.euclideanModulo((y+18)/24,1));
  }
  geometry.setAttribute('uv',new T.Float32BufferAttribute(uv,2));geometry.setAttribute('color',new T.Float32BufferAttribute(colors,3));
  const stone=new T.Mesh(geometry,new T.MeshBasicMaterial({map:getEnvironmentStoneTexture(),vertexColors:true,fog:true}));group.add(stone);
- const core=new T.Mesh(new T.BoxGeometry(.145,.25,.035),new T.MeshBasicMaterial({color:0xeac78c,toneMapped:false}));core.position.set(Math.sin(yaw)*.105,1.035,Math.cos(yaw)*.105);core.rotation.y=yaw;group.add(core);
- const light=new T.PointLight(0xffd49c,.85,2.8,2);light.position.y=1.04;group.add(light);
- group.name='H34 stone lantern with visible warm recessed window';group.userData.triangles=geometry.attributes.position.count/3+12;
+ const core=new T.Mesh(new T.BoxGeometry(.145,.25,.035),new T.MeshBasicMaterial({color:0x4d5856}));core.position.set(Math.sin(yaw)*.105,1.035,Math.cos(yaw)*.105);core.rotation.y=yaw;core.visible=false;group.add(core);
+ const light=new T.PointLight(0xffffff,0,2.8,2);light.position.y=1.04;light.visible=false;group.add(light);
+ group.name='H35 unlit daytime stone lantern';group.userData.triangles=geometry.attributes.position.count/3;
  return {group,light};
 }

@@ -1,0 +1,27 @@
+{
+  "revision": "H35",
+  "scope": "CPU physical/ready preservation only; not visual acceptance",
+  "originalSourceTrianglesPreserved": 21403,
+  "sourceAttributesAndIndicesExact": true,
+  "sourceHiddenForRendering": true,
+  "restoreExact": true,
+  "navigationCacheSHA256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "legalGridSamples": 17227,
+  "legalPointsAndHeightsUnchanged": true,
+  "stepDenseSamples": 4048,
+  "stepMaxAbsHeightErrorMetres": 1.547251211597711e-07,
+  "newTriangles": 18416,
+  "draws": 4,
+  "dressedFloorSlabs": 22,
+  "dressedRimBlocks": 24,
+  "dressedStepCheeks": 8,
+  "readyContract": {
+    "successAttachesSRGBAtlas": true,
+    "textureOwnedAndDisposedOnce": true,
+    "failureRejectsWithAssetURL": true,
+    "restoreBeforeCompletionDisposesLateTexture": true,
+    "scope": "CPU promise / loader-stub contract, not a live HTTP-failure browser test"
+  },
+  "foundationTriangles": 78,
+  "derivedFrom": "geometry-qa.json full gate reconstruction"
+}

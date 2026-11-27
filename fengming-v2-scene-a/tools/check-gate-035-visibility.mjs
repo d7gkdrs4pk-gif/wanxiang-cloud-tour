@@ -1,0 +1,33 @@
+/** CPU-only: actual H35 hero tracks against the generated 3D gate, no cut shader. */
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath,pathToFileURL} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),asset=path.join(root,'assets/gate-035');
+const T=await import(pathToFileURL(path.join(root,'vendor/three/three.module.js')).href);
+const flagValue=k=>{const i=process.argv.indexOf(k);return i<0?null:process.argv[i+1];};
+const actionOverride=flagValue('--action-file')?path.resolve(flagValue('--action-file')):null,subset=process.argv.includes('--failed-only');
+const shaFile=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+async function moduleFrom(file){const url=pathToFileURL(path.join(root,file));let s=fs.readFileSync(url,'utf8');if(file==='sample/hero.js'&&actionOverride)s=s.replace("from '../assets/hero-035/action.js'",`from '${pathToFileURL(actionOverride).href}'`);s=s.replace(/from ['"]three['"]/g,`from '${pathToFileURL(path.join(root,'vendor/three/three.module.js')).href}'`).replace(/from ['"](\.[^'"]+)['"]/g,(_,r)=>`from '${new URL(r,url).href}'`).replaceAll('import.meta.url',JSON.stringify(url.href));return import('data:text/javascript;base64,'+Buffer.from(s).toString('base64'));}
+async function main(){
+ const [{finishGateRoof},{createHero},{createNavigation},{createGroundSurface}]=await Promise.all([moduleFrom('sample/gate-roof-finish.js'),moduleFrom('sample/hero.js'),moduleFrom('sample/navigation.js'),import(pathToFileURL(path.join(root,'sample/ground-surface.js')).href)]);
+ const cache=JSON.parse(fs.readFileSync(path.join(root,'assets/sample-lod/navigation.json'))),nav=createNavigation({scene:new T.Scene(),stone:new T.MeshBasicMaterial()});nav.installCached(cache);
+ const read=n=>{const b=fs.readFileSync(path.join(root,'assets/sample-ground',n));return b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength);};const surface=createGroundSurface(read('height.f32'),JSON.parse(fs.readFileSync(path.join(root,'assets/sample-ground/metadata.json'))),read('slope.bits'));nav.setSurfaceProvider(surface.refine);
+ const gate=new T.Group(),tr=cache.transforms.gate_transform;gate.scale.setScalar(tr.scale);gate.position.fromArray(tr.translation);const f=finishGateRoof(gate,{shading:'light',stoneTexture:new T.Texture()}),hero=createHero();await hero.ready;
+ const chest=hero.body.skeleton.getBoneByName('chest'),head=hero.body.skeleton.getBoneByName('head');if(!chest||!head)throw Error('Actual hero chest/head bone names changed');
+ const previous=subset?JSON.parse(fs.readFileSync(path.join(asset,'visibility-cpu.json'))):null,failedKeys=new Set(subset?previous.suites.flatMap(s=>s.tests.map(t=>[s.label,t.hero[0],t.hero[2],t.phase,t.name].join('|'))):[]);
+ const camera=new T.PerspectiveCamera(39,390/844,.1,160),ray=new T.Raycaster(),direction=new T.Vector3(),suite=[];
+ for(const [label,fx,fz]of [['gate-sentry',2.5,-6.5],['original-sentry-home',2.8,-6.6]]){
+  const tests=[],poses=[];let samples=0;
+  for(const [x,z]of [[2.45,-7],[2.0,-7],[1.58,-7],[1.375,-7.375]]){
+   const y=nav.groundAt(x,z);if(!Number.isFinite(y))throw Error('Missing original pose ground');hero.group.position.set(x,y,z);hero.group.rotation.y=Math.atan2(fx-x,fz-z);hero.update(0,{attackProgress:null,moving:false});camera.position.set(x+6,y+27,z+15);camera.lookAt(hero.group.position);camera.updateMatrixWorld(true);poses.push({p:[x,y,z],facing:hero.group.rotation.y,camera:camera.position.toArray()});
+   for(let k=0;k<=100;k++){
+    const phase=k/100;hero.update(0,{attackProgress:phase,moving:false});hero.group.updateMatrixWorld(true);hero.body.skeleton.update();
+    const points=[['chest',chest.localToWorld(new T.Vector3(0,.02,.025))],['head',head.localToWorld(new T.Vector3(0,.08,.06))],['swordBase',hero.bladeBaseWorld().clone()],['swordTip',hero.swordTipWorld().clone()],['enemyChest',new T.Vector3(fx,(nav.groundAt(fx,fz)??0)+1.0,fz)]];
+    for(const [name,p]of points){if(subset&&!failedKeys.has([label,x,z,phase,name].join('|')))continue;samples++;direction.subVectors(p,camera.position);ray.set(camera.position,direction.clone().normalize());ray.far=direction.length()-.02;const hits=ray.intersectObjects(f.meshes,false);if(hits.length)tests.push({hero:[x,y,z],phase,name,point:p.toArray(),hit:hits[0].point.toArray(),mesh:hits[0].object.name,faceIndex:hits[0].faceIndex,triangleVertexIndices:hits[0].face?[hits[0].face.a,hits[0].face.b,hits[0].face.c]:null,triangleWorld:hits[0].face?[hits[0].face.a,hits[0].face.b,hits[0].face.c].map(i=>new T.Vector3().fromBufferAttribute(hits[0].object.geometry.attributes.position,i).applyMatrix4(hits[0].object.matrixWorld).toArray()):null});}
+   }
+  }
+  suite.push({label,enemy:[fx,nav.groundAt(fx,fz),fz],samples,blocked:tests.length,poses,tests});
+ }
+ const report={revision:'H35',mode:subset?'previous-failure-subset':'full',actionOverride:!!actionOverride,scope:'CPU exact generated gate triangle rays at original FOV39/follow6,27,15; actual H35 head/chest bones and physical sword sockets. Static facing-to-sentry sampled at four original route positions, actual original cached foot heights. Cut/opacity shaders are not applied. Does not replace continuous full-scene touch video.',sources:{hero:sha('sample/hero.js'),action:actionOverride?shaFile(actionOverride):sha('assets/hero-035/action.js'),gate:sha('sample/gate-roof-finish.js'),foundation:sha('assets/gate-035/foundation-data.js')},hero:hero.stats,primarySamples:suite[0].samples,primaryBlocked:suite[0].blocked,totalSamples:suite.reduce((n,s)=>n+s.samples,0),totalBlocked:suite.reduce((n,s)=>n+s.blocked,0),suites:suite};
+ const out=flagValue('--out')?path.resolve(flagValue('--out')):actionOverride?path.resolve(root,'../../qa-h35/gate/visibility-candidate.json'):subset?path.resolve(root,'../../qa-h35/gate/visibility-subset.json'):path.join(asset,'visibility-cpu.json');fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify(report,null,2)+'\n');if(subset&&report.totalSamples!==failedKeys.size)throw Error('Failure subset coverage incomplete');console.log(JSON.stringify({sources:report.sources,primary:report.primaryBlocked+'/'+report.primarySamples,total:report.totalBlocked+'/'+report.totalSamples,failures:suite.flatMap(s=>s.tests).slice(0,2)},null,2));f.restore();if(report.totalBlocked)process.exitCode=1;
+}
+main().catch(e=>{console.error(String(e.message).replace(/data:text\/javascript;base64,[A-Za-z0-9+/=]+/g,'[compiled module]').slice(0,500));process.exitCode=1;});

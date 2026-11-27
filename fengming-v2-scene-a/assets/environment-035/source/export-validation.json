@@ -1,0 +1,38 @@
+{
+  "format": "GLB 2.0 with embedded EXT_texture_webp and KHR_materials_unlit",
+  "file": "road-kit-h35.glb",
+  "bytes": 1947508,
+  "sha256": "18784da54a9c0e2cbffa0ea8008b74a4d4928826a80a9231df241e943cdc5f91",
+  "frozenRuntimeSourceSha256": "2dead79acd702f62f8deed0b01c18cda72ccad1cb645b246ea595da7a7923e49",
+  "vertices": 17040,
+  "triangles": 10627,
+  "accessors": {
+    "POSITION": {
+      "exactBytes": true,
+      "sha256": "4597539ad9c82dde65cfc2366993068ff169a4a34e9cfd53847e189cac9a2484",
+      "elements": 51120
+    },
+    "NORMAL": {
+      "exactBytes": true,
+      "sha256": "3640695326877b3abd58bf23a8142f9650f2588d6b3312a084593e973f036416",
+      "elements": 51120
+    },
+    "TEXCOORD_0": {
+      "exactBytes": true,
+      "sha256": "b14422cb2e6de3604e35b5eca0c9ede1de08039d0ba592f8ec8e3dfc42b8c679",
+      "elements": 34080
+    },
+    "COLOR_0": {
+      "exactBytes": true,
+      "sha256": "bdb17ae9c0b9b084c611e737fffa053a53410c629d4da15e998e3b9988412d62",
+      "elements": 51120
+    },
+    "indices": {
+      "exactBytes": true,
+      "sha256": "2fa86758ff8a3d163b973b18f4a1eee2455dad601c925b9789cf03aec985954d",
+      "elements": 31881
+    }
+  },
+  "textureBytesExact": true,
+  "runtimeArraysMutated": false
+}

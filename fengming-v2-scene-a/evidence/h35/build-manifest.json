@@ -1,0 +1,517 @@
+{
+  "version": "H.35",
+  "baselineCommit": "5b289c6d91bf9f61eb934ee256e8747816a92960",
+  "H31ArchiveCommit": "c0fdc9aaf53ac6378b261caf44aee840bddb23ac",
+  "H29IndexGitBlob": "82e9ce953fc1954c7408ebbc835dbab37098aa64",
+  "build": {
+    "version": "H.35",
+    "sha256": "098ee369a86f2358e0c49ae95e5785fc3f35536072947762d906cc7ec327672b",
+    "bytes": 2884466,
+    "format": "classic IIFE",
+    "target": "Safari 15+",
+    "three": "0.170.0",
+    "runtimeImports": 0
+  },
+  "files": {
+    "assets/environment-033/handpainted-stone-atlas.webp": {
+      "bytes": 1130348,
+      "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a"
+    },
+    "assets/environment-033/terrain-rock-normals.f32": {
+      "bytes": 238224,
+      "sha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5"
+    },
+    "assets/environment-034/README.md": {
+      "bytes": 1645,
+      "sha256": "66dd93fbb3fc5cf9a9c8f88b20a55807e7ac6c1afbeb863359cf166c444bd740"
+    },
+    "assets/environment-034/detail-polish.json": {
+      "bytes": 1481,
+      "sha256": "0f9b3a59efb0e00de447fe15bb5a9ea5f1aae7dd33a297752a52375990728066"
+    },
+    "assets/environment-034/hand-cut-bedrock.blend": {
+      "bytes": 491644,
+      "sha256": "d49cce13ac34f993aac3743816dc17903161368d382a6bcde6245bd2093aa67d"
+    },
+    "assets/environment-034/hand-cut-bedrock.glb": {
+      "bytes": 56760,
+      "sha256": "8fff883d107b843b73323462d62a126f416860cb79ddaac345e36d78dcc763a5"
+    },
+    "assets/environment-034/provenance.json": {
+      "bytes": 3529,
+      "sha256": "caa582d166d04cae88e88c5a742a7c16dd729257f61a7f3d4a579b76d8bf1d4e"
+    },
+    "assets/environment-034/rock-shapes.js": {
+      "bytes": 85561,
+      "sha256": "ced2d2ed56d8ce772b79c1efdcf2c9fdab2dac297874e68fef48d37204483711"
+    },
+    "assets/environment-035/README.md": {
+      "bytes": 900,
+      "sha256": "19d695dbd078d220968915d4f1d2bf8a068cafaf1c0ced8efdd75ce52fbf8813"
+    },
+    "assets/environment-035/provenance.json": {
+      "bytes": 4727,
+      "sha256": "11a43c15c66ad725e752fde839901e68071a13afacefccefc7c7b569fafcd91b"
+    },
+    "assets/environment-035/road-bed-mask.png": {
+      "bytes": 2601,
+      "sha256": "c292f9cd5db51228ff1e15d8c4c55b206ef94f6509f0960e0b0c5981723e44e9"
+    },
+    "assets/environment-035/road-geometry.js": {
+      "bytes": 1581824,
+      "sha256": "2dead79acd702f62f8deed0b01c18cda72ccad1cb645b246ea595da7a7923e49"
+    },
+    "assets/environment-035/road-layout.json": {
+      "bytes": 35281,
+      "sha256": "cb590602bb81a086c4977eae0fbe93d3cd6746c58d766794bd3a27e7fc250799"
+    },
+    "assets/environment-035/rock-shapes.js": {
+      "bytes": 85561,
+      "sha256": "ced2d2ed56d8ce772b79c1efdcf2c9fdab2dac297874e68fef48d37204483711"
+    },
+    "assets/environment-035/source/README.md": {
+      "bytes": 813,
+      "sha256": "7f02205c3c965e04a370fd22a9152ebbe6cb2c7338d14582d9ef3019a49494a6"
+    },
+    "assets/environment-035/source/export-validation.json": {
+      "bytes": 1229,
+      "sha256": "e2ff0e4b32710b1b1d3628a79149ab16aa22fbff1bd107042f59203149f99444"
+    },
+    "assets/environment-035/source/road-kit-h35.glb": {
+      "bytes": 1947508,
+      "sha256": "18784da54a9c0e2cbffa0ea8008b74a4d4928826a80a9231df241e943cdc5f91"
+    },
+    "assets/environment-035/stone-kit-atlas.webp": {
+      "bytes": 1130348,
+      "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a"
+    },
+    "assets/gate-035/OFL-Noto-CJK.txt": {
+      "bytes": 4666,
+      "sha256": "ff9ecf3d6b3bd3cb082ddceb073bc500ffab385e62900a469e72dd8e93fb6c20"
+    },
+    "assets/gate-035/README.md": {
+      "bytes": 5309,
+      "sha256": "b20cbc554190db5ab9a4b9dff3064cf5d18e74d23ac8cf9d3dfa713f5533c8c1"
+    },
+    "assets/gate-035/blend-master-qa.json": {
+      "bytes": 724,
+      "sha256": "c3c1c77ec314e9a6166f027f37bba76533223f986325ff7d2967cfa78e309ad7"
+    },
+    "assets/gate-035/boundary-data.js": {
+      "bytes": 1168,
+      "sha256": "908e81ed824e7b8ac2f7682930c61014432fa109334f0677bd4f7a172e686c10"
+    },
+    "assets/gate-035/font-source.json": {
+      "bytes": 1942,
+      "sha256": "2f158b4505fe1d609f4d1a8d535a9c90400034718725161b2d7b2b3587ac1492"
+    },
+    "assets/gate-035/foundation-data.js": {
+      "bytes": 2987,
+      "sha256": "fe83e76a31b1056dd6fc6fda3dfb696a9a4fb9b9187e7bcf7a72ac60652b1da3"
+    },
+    "assets/gate-035/geometry-qa.json": {
+      "bytes": 5238,
+      "sha256": "5b637be71a921534d0f7875ed3094f4958b240aaa8c3c21d71b667398d520269"
+    },
+    "assets/gate-035/glb-master-qa.json": {
+      "bytes": 792,
+      "sha256": "cf6ef50d144c80fbbb645f3fc15aa9706b34f6bdd623648256b65b7c2c570914"
+    },
+    "assets/gate-035/physical-qa.json": {
+      "bytes": 994,
+      "sha256": "0694f1425136bcd965bb6054a09f79db01f8446b06406436241c4fbad94727c3"
+    },
+    "assets/gate-035/plaque-atlas.png": {
+      "bytes": 9546,
+      "sha256": "12b30c30a3fa919a3c9759246ee5f7704a761cf7a2842b28bf0e70ed497b5165"
+    },
+    "assets/gate-035/provenance.json": {
+      "bytes": 1284,
+      "sha256": "b11f3c669d5030008ea1ea22fcdc20a784cc0bd05be97262bb718a5f33c9accc"
+    },
+    "assets/gate-035/ready-interface-qa.json": {
+      "bytes": 257,
+      "sha256": "054e69a4eda4a85b2a8d5a162a26f84e85443ab45afb129baf4a264ebd9e1c6a"
+    },
+    "assets/gate-035/source/gate-h35.blend": {
+      "bytes": 1726884,
+      "sha256": "e90d191ce4f057618a9697a953bc69fef8753afb9fde86316d4fb5e72d204418"
+    },
+    "assets/gate-035/source/gate-h35.glb": {
+      "bytes": 2443528,
+      "sha256": "24ccf9555d33a92a66b60463c946828f9f62436e52e45c20dcde89b668e76428"
+    },
+    "assets/gate-035/source/manifest.json": {
+      "bytes": 516,
+      "sha256": "a06041eac1afe7a1db273b814d266ae7fda6bac112e24075187c7acc51a6896c"
+    },
+    "assets/gate-035/step-height-qa.json": {
+      "bytes": 146579,
+      "sha256": "36fea809bb24cc8d3520f77df0176835db3550327028ba56372740584d3c9383"
+    },
+    "assets/gate-035/steps-data.js": {
+      "bytes": 16944,
+      "sha256": "4f96a57ff28a98c93449c2a37cbb8a9c151a586d224c022bad76c40f0c199476"
+    },
+    "assets/gate-035/visibility-cpu.json": {
+      "bytes": 3868,
+      "sha256": "fff4b89dfa9a2068d5b9c7a712a7549282eb48718500625c5fa047f4eebe6900"
+    },
+    "assets/hero-034/README.md": {
+      "bytes": 4679,
+      "sha256": "54e79068a1617d537e276f5800ad72c5d1d4f877aae150bd05403431f9dc2d04"
+    },
+    "assets/hero-034/asset-manifest.json": {
+      "bytes": 9652,
+      "sha256": "23f6b1ef73f0d72fe74f86b24e26f080fd73cfcf893549790059403a3ca7e548"
+    },
+    "assets/hero-034/atlas-zones.json": {
+      "bytes": 575,
+      "sha256": "508d808acc8ff0df546ebe9bc95ae4f4295efc3f6f8c27751b68cac1fd920ce9"
+    },
+    "assets/hero-034/linyan-alpha.png": {
+      "bytes": 15886,
+      "sha256": "bdea23770958f6d6b4e8a984c836c77a28dc867331e4cace68414e9761d85719"
+    },
+    "assets/hero-034/linyan-ao.png": {
+      "bytes": 707183,
+      "sha256": "77b814bbdcf1bed3255b6920d7a634a6265ee11dc9ea5db2e9f3c15cfc3d32bc"
+    },
+    "assets/hero-034/linyan-atlas-base.png": {
+      "bytes": 101316,
+      "sha256": "564e73562186b91739ab5114206ee704fe6338b67e0b74e7554d7d63070c9c7a"
+    },
+    "assets/hero-034/linyan-atlas.png": {
+      "bytes": 831427,
+      "sha256": "7dc1c75070e45570ba8ee124656a8cf51ea0f5ce6e94b38d3c4c79702c62c192"
+    },
+    "assets/hero-034/linyan-atlas.webp": {
+      "bytes": 104184,
+      "sha256": "4b6e2edd1ec4ac53fc30c022c12b92995bdfce7ee0901ac31ad7c6a7fda1c517"
+    },
+    "assets/hero-034/linyan-h34-baked.js": {
+      "bytes": 635422,
+      "sha256": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245"
+    },
+    "assets/hero-034/linyan-h34.blend": {
+      "bytes": 1509130,
+      "sha256": "3ebcee4f0225d7731236725e7500211a8a83c3955787ee4a975280ea85855340"
+    },
+    "assets/hero-034/linyan-h34.glb": {
+      "bytes": 1382672,
+      "sha256": "9303387d354ef307435c861f0df3b96574b3eb181f96c03508a7d8aca6c5dd2c"
+    },
+    "assets/hero-034/manifest.json": {
+      "bytes": 7803,
+      "sha256": "96cb527869c9811586c92946aff5b4e041ab5fde0ae1d551c6db9d2c4126c6f0"
+    },
+    "assets/hero-034/model-report.json": {
+      "bytes": 388,
+      "sha256": "d39a2d526eaf3eb180f802585d99c9bc4d4f355b644811f494a2c0358416a72c"
+    },
+    "assets/hero-034/provenance.json": {
+      "bytes": 37254,
+      "sha256": "b2b61e053feb68153efeea1ad9c1c32dcd165ddf2f901804a4004f1b08c0dc33"
+    },
+    "assets/hero-034/rig-seed.json": {
+      "bytes": 514906,
+      "sha256": "093290442b796fc4869d82159eab22781aa702b39d9517267eb40869e7fa7900"
+    },
+    "assets/hero-034/source/body-mesh.json.gz": {
+      "bytes": 740826,
+      "sha256": "97a738a8eb5500e7705dba505a5882578e0c76fa5c2f189b657a1e72e07a2962"
+    },
+    "assets/hero-034/source/cc0-male-parts.blend": {
+      "bytes": 4514576,
+      "sha256": "f603a3611bef7c7bfa0fe24f63658fdf5e3c323cc8121736259b8299ebe34ffd"
+    },
+    "assets/hero-034/source/cc0-parts-metadata.json": {
+      "bytes": 28675,
+      "sha256": "7372d7e63d9b63cf12dd48734b088afe1479a3d7bf7744b6f68c53d26964d506"
+    },
+    "assets/hero-034/source/cc0-parts-provenance.json": {
+      "bytes": 33540,
+      "sha256": "c43868e429e72378d119bfae3d7746485f19cd56798e573e645d8fcc492e3981"
+    },
+    "assets/hero-034/texture-codec.json": {
+      "bytes": 1245,
+      "sha256": "42749864beaea53975ade186e780d26f9c269c39dfe3ffea0369d252e78436c8"
+    },
+    "assets/hero-035/README.md": {
+      "bytes": 3534,
+      "sha256": "5bcc2f6bad40c4d43f01d629ed5b645ff8870af5dd6e7e4986f25d4fc38f22d8"
+    },
+    "assets/hero-035/action.js": {
+      "bytes": 7003,
+      "sha256": "602530789141311478bb476bc68d8095baa22a73ea6bf362dd03e62dfff28836"
+    },
+    "assets/hero-035/animation-mother-report.json": {
+      "bytes": 19895,
+      "sha256": "82653cb176488a6d3151fd5310a4dfc30554a0df25a1d4ef7252e0235c3bfa43"
+    },
+    "assets/hero-035/linyan-h35-animation.blend": {
+      "bytes": 234807,
+      "sha256": "d60fe5293cc114ac8d2243dc4789feb08ae030a06d38e654ab2d3b9f274f3e74"
+    },
+    "assets/hero-035/manifest.json": {
+      "bytes": 2486,
+      "sha256": "b57d8ada66605c984c817c84ff4db14c1e3a03bc53e5253d8e08048288005d84"
+    },
+    "assets/hero-035/source/base-wrist-track.json": {
+      "bytes": 4379,
+      "sha256": "1af96f5f2322c226cf092c54c18319d7f46d69f5d49004eb3730b03bc4b543e1"
+    },
+    "assets/hero-035/source/normal-pose-deltas.json": {
+      "bytes": 133808,
+      "sha256": "d2296a353dd67c214ab232b29775e0269c3555bee2de23f632c7ca85909eded7"
+    },
+    "assets/hero-035/source/pose-samples.json": {
+      "bytes": 484853,
+      "sha256": "f152a72258cbd36c1fae649b46a120e7bc49d454f68a7565e058e19f5476b52b"
+    },
+    "assets/hero-035/source/recovery-guard.json": {
+      "bytes": 850,
+      "sha256": "2c756525cc55057ed60fefffdc012810f908d7f04135d78ba56b267a4a94df43"
+    },
+    "assets/hero-035/source/wrist-authoring.json": {
+      "bytes": 21513,
+      "sha256": "7fec14ac49d560c98c78e0525a5823c07e34b5ac7dfcd26f9d18622ba514088d"
+    },
+    "assets/pine-033/depth-qa.json": {
+      "bytes": 2051,
+      "sha256": "f637529432cb555c2bd104b684e5a19f5f5c3ef70b581eeb724c193f03e3d7a2"
+    },
+    "assets/pine-033/pine-layer-atlas.png": {
+      "bytes": 975219,
+      "sha256": "7e4f4ff49cff23644e63c720512f40e61e82902b6496c88092894abfdefa396f"
+    },
+    "assets/pine-033/pine-layer-atlas.webp": {
+      "bytes": 283506,
+      "sha256": "01e35918bef3a5e5aa218d082d3ca90df0b55cdd587632977ce0c9ad1e4daeba"
+    },
+    "assets/pine-033/provenance.json": {
+      "bytes": 4682,
+      "sha256": "7c6ead047aa9d8fe1105afaabd7328155d2b98e3e576b27ede729f4b04207964"
+    },
+    "assets/pine-033/registration-qa.json": {
+      "bytes": 1620,
+      "sha256": "c743281dd1dee63ad8c04c9df7474df93723ebc8e3cef58b73dfea419491ec11"
+    },
+    "assets/sample-ground/README.md": {
+      "bytes": 1576,
+      "sha256": "1f8f0fead0c2f81c0a9883e5a4d04edbaa82d45c2a9a8833a7c2c02e6bd0e084"
+    },
+    "assets/sample-ground/height.f32": {
+      "bytes": 273492,
+      "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df"
+    },
+    "assets/sample-ground/metadata.json": {
+      "bytes": 1944,
+      "sha256": "b4db6a26a1252e59a581e2b2ba7bef60f6e1236b792b1924c3ecaa74cef7da7e"
+    },
+    "assets/sample-ground/slope.bits": {
+      "bytes": 8480,
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31"
+    },
+    "assets/sample-ground/validation.json": {
+      "bytes": 10419,
+      "sha256": "3185f171fa4e62a2a7f37a895b60d36a9714b4684ff0bafc6746eee94645d9b1"
+    },
+    "assets/sample-lod/navigation.json": {
+      "bytes": 96651,
+      "sha256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac"
+    },
+    "assets/sample-runtime/gate.glb": {
+      "bytes": 1332728,
+      "sha256": "ab35c4ea6cd9bfb308ff36aaf1c99e025e30d8be6c1fd2bd54eabcb69cac340d"
+    },
+    "assets/sample-runtime/manifest.json": {
+      "bytes": 3519,
+      "sha256": "c4912c39a1f354d2891fa83d708dc6c1023e7f923bd6ea512de6b642d8cfc89c"
+    },
+    "assets/sample-runtime/mountain-atlas.webp": {
+      "bytes": 1185072,
+      "sha256": "26ff78d818605aafda582c84fc8104dd88c85aa3039f3733a975e0939f8e3590"
+    },
+    "assets/sample-runtime/pine-atlas.webp": {
+      "bytes": 1139234,
+      "sha256": "ac6c8890f7a6e13337e0921ebfc74ad872171a9945858e2697f719e87976fb28"
+    },
+    "assets/sample-runtime/stone-atlas.webp": {
+      "bytes": 1426492,
+      "sha256": "609e77f923a47990ef1ae1a5cfd91a593c5eae77cd46a7b8dcda409868c3c559"
+    },
+    "assets/sample-runtime/terrain.glb": {
+      "bytes": 816528,
+      "sha256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330"
+    },
+    "gate-h35.html": {
+      "bytes": 6109,
+      "sha256": "9f6c9b5dff82d291efd9d7fd21f966d8584dde10b19e6d9e6c295dc3db24ff2e"
+    },
+    "sample/archive/h30-hero.js": {
+      "bytes": 19442,
+      "sha256": "6a6df669904efc010bd48e399cee37bebdc35a00730636a62570818a3fa3c524"
+    },
+    "sample/dist/build.json": {
+      "bytes": 223,
+      "sha256": "4b83d7f6323689d6943aedc9b8012824433c4dcce124afe3a6c6650458a3d94f"
+    },
+    "sample/dist/game-h32.js": {
+      "bytes": 1747296,
+      "sha256": "7227555ee88151a29d8689b40ffcc6959694e1f92cb153696dc1e07bcdb76bb2"
+    },
+    "sample/dist/game-h33.js": {
+      "bytes": 1701020,
+      "sha256": "972b17a94866715dd7bbe722be0ce223cfbbc652d25376283683bfdaa314947d"
+    },
+    "sample/dist/game-h34.js": {
+      "bytes": 1434600,
+      "sha256": "56c33711dd11070fa9f384bb71b3153cf35f903cb0b15c066765a19f724730c4"
+    },
+    "sample/dist/game-h35.js": {
+      "bytes": 2884466,
+      "sha256": "098ee369a86f2358e0c49ae95e5785fc3f35536072947762d906cc7ec327672b"
+    },
+    "sample/enemy.js": {
+      "bytes": 16019,
+      "sha256": "2ffb960badfa46e276ec1b38aca3517f689de2a6c9e3a5cbc5c8579ec9e61e7b"
+    },
+    "sample/environment.js": {
+      "bytes": 21526,
+      "sha256": "13d5039742d2dab070189ba2f2792fd6126dd39a7d084132c1c12a29a18b2d74"
+    },
+    "sample/gate-roof-finish.js": {
+      "bytes": 29701,
+      "sha256": "764471c63bd6d253bf1622c7c21dddcab9d8746e33295a98da9d9bdee7003636"
+    },
+    "sample/ground-surface.js": {
+      "bytes": 2554,
+      "sha256": "3ce6f5cd2103ecc3b80836606ca6b9f3806c92b539c262726269cbb6cf1127cf"
+    },
+    "sample/hero.js": {
+      "bytes": 14286,
+      "sha256": "6a77d824d833f545a6037362948fed5e994d5a61a766bd56f8f343d8e1970e0e"
+    },
+    "sample/launch-h35.js": {
+      "bytes": 3877,
+      "sha256": "245c6eaef3fec4ea5cec679d3c423e9fb33dcceb0721608dddee56c4b62e7fdc"
+    },
+    "sample/launch.js": {
+      "bytes": 3877,
+      "sha256": "4fb45ce0560e534a4c9e51668afc498616fb9517bee3a2e3e5b5ff525e5efc3c"
+    },
+    "sample/main.js": {
+      "bytes": 25801,
+      "sha256": "167ccdc4cdada1844ca896d0d35102015f6c0f0624fb4c6e0048cce698e423d1"
+    },
+    "sample/navigation.js": {
+      "bytes": 10182,
+      "sha256": "383f4adc9dad7dd41729da052ef88852f438032282dd9a320d1fe6f26fb690b5"
+    },
+    "sample/path-planner.js": {
+      "bytes": 8558,
+      "sha256": "d572cabe5728a7bb7d2d92efaf85c2ab2583d66cbe6fabb9d06b028d37b7b35b"
+    },
+    "sample/pine-layers.js": {
+      "bytes": 16783,
+      "sha256": "20bbae10411d8af7e18325acd2f61632afe9489927cf1b383ded6f721f40323f"
+    },
+    "sample/roof-occlusion.js": {
+      "bytes": 5754,
+      "sha256": "4331b0fefea0870e5ae78c6be763981a927dff21cc234170b799f3097d7762c7"
+    },
+    "sample/sample.css": {
+      "bytes": 5043,
+      "sha256": "feda8f1e245406cdb231695b34fff25f8015fca09fa5ead12488d00cd3279786"
+    },
+    "sample/scene-dressing.js": {
+      "bytes": 17165,
+      "sha256": "9ea55d35bf90cd28e065ee62812f1d31e9afecc7ec9baca79521b1749347945b"
+    },
+    "sample-gate.html": {
+      "bytes": 6109,
+      "sha256": "9f6c9b5dff82d291efd9d7fd21f966d8584dde10b19e6d9e6c295dc3db24ff2e"
+    },
+    "tools/build-environment-033-normals.mjs": {
+      "bytes": 3447,
+      "sha256": "8f5b494a1089f3adf1f9010382e769541213b17bc6c97357bf1028539bef5a57"
+    },
+    "tools/build-environment-034.py": {
+      "bytes": 6195,
+      "sha256": "4913d5e782cad76cf68b38ca92aee6f03f0faaf626166aa708ae7a643146c52d"
+    },
+    "tools/build-environment-035-mask.py": {
+      "bytes": 1296,
+      "sha256": "1387fcb424e6866bfd316b968e76daaa83a64a68b1cd5b93e11c1da9b8432f39"
+    },
+    "tools/build-environment-035-road.mjs": {
+      "bytes": 13937,
+      "sha256": "5ab2ea8d0f055394a74530ab67070c4a58834b13b92273da079cb54a1e656c6f"
+    },
+    "tools/build-gate-034-blend.py": {
+      "bytes": 4097,
+      "sha256": "81bef0229fd3c4777b9c43532ec9474edec7f4966129524a864ade0bdd6c599a"
+    },
+    "tools/build-gate-034.mjs": {
+      "bytes": 16148,
+      "sha256": "4cfcb2c540373b997f2b4010d993dc5d50d8376f30dc83b263c0e7844f4eeb19"
+    },
+    "tools/build-gate-035-blend.py": {
+      "bytes": 4086,
+      "sha256": "a4300d58e1ea7e76516b99bae3eb9a4d2481b797d8bf7cd5485d55d5cf4034df"
+    },
+    "tools/build-gate-035.mjs": {
+      "bytes": 17601,
+      "sha256": "346cf79883833e12b950b4a3b8f3a993718315a74b497e8f6f4e9d74c8fe8251"
+    },
+    "tools/build-sample.mjs": {
+      "bytes": 2498,
+      "sha256": "14ce62a605072dc4a24314e13d548ea4161489e640defe4bfb5ab2f1d73977ce"
+    },
+    "tools/capture-no-fx.py": {
+      "bytes": 3516,
+      "sha256": "452f0e06369782d4e6ff03b8fa81f97613f4a164274e8193235954b3895e8aa3"
+    },
+    "tools/check-environment-035-height.mjs": {
+      "bytes": 4187,
+      "sha256": "abc216cb819c9f7718cd4204147d4841089ec660a00788ed1885e88f769c24a2"
+    },
+    "tools/check-gate-035-master.py": {
+      "bytes": 2277,
+      "sha256": "965869977d992e91fa07a96c556774ce8375fff883bf0de255187bb43ee56ae9"
+    },
+    "tools/check-gate-035-visibility.mjs": {
+      "bytes": 6662,
+      "sha256": "f78b6dc5e516c451ce021600132c8f3f8cfb49275f225a6d772b18cf5e4fddba"
+    },
+    "tools/export-environment-035-source.mjs": {
+      "bytes": 6864,
+      "sha256": "408dbab13259391417f9653616e7f3bb8645fd056d7fc322747dd1de2a254609"
+    },
+    "tools/gate-035-foundation-data.mjs": {
+      "bytes": 2099,
+      "sha256": "901e67175486f47e9e83b194dba9cc4cfb5992e6c8bf9520c6157b5986bf7c19"
+    },
+    "tools/pack-runtime-assets.py": {
+      "bytes": 4976,
+      "sha256": "d772a77c973b266a18d8204f83fc0a993761f11ffd27dd54b6aefd1b96de09fd"
+    },
+    "tools/paint-environment-033.py": {
+      "bytes": 7173,
+      "sha256": "87268ff48b91926deb3319448cb370ca92ebe98ca060ad7e5de07b1000f922d4"
+    },
+    "tools/record-playtest.py": {
+      "bytes": 6951,
+      "sha256": "25ded5986b0f69a30acbed8fcbb2d735fb1fdd06ad49ea3d520512f885d6dc9e"
+    },
+    "tools/test-sample-boundary.py": {
+      "bytes": 1954,
+      "sha256": "6c684b0c802f15a18b5ac4d78294b83deb46fab4041d861b36c4bf68ce1872b8"
+    },
+    "tools/test-startup.py": {
+      "bytes": 9414,
+      "sha256": "1edc00d0f060f60228bef6977e58f0fdfb102fdcdbedde6a0d7b233c83b9ab0e"
+    }
+  }
+}

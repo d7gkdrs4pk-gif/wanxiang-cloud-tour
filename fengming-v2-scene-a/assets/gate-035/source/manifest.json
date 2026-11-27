@@ -1,0 +1,21 @@
+{
+  "revision": "H35",
+  "sourceMeshes": 4,
+  "sourceTriangles": 18416,
+  "sourceAssetsOnly": true,
+  "files": [
+    {
+      "file": "gate-h35.glb",
+      "bytes": 2443528,
+      "sha256": "24ccf9555d33a92a66b60463c946828f9f62436e52e45c20dcde89b668e76428",
+      "runtimeDownload": false
+    },
+    {
+      "file": "gate-h35.blend",
+      "bytes": 1726884,
+      "sha256": "e90d191ce4f057618a9697a953bc69fef8753afb9fde86316d4fb5e72d204418",
+      "runtimeDownload": false
+    }
+  ],
+  "provenance": "../README.md"
+}

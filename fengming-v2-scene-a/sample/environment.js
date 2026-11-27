@@ -1,24 +1,29 @@
 /**
- * H33 fixed-view environment: matte painted stone on the original 3D mesh.
+ * H35 daylight environment, used with the offline-fitted stone road kit.
  *
  * const env=createEnvironment({scene,renderer,camera,groundAt});
  * env.styleTerrain(terrain); env.styleGate(gate); await env.ready;
  * env.attachCharacterShadow(actor,{size:1.05}); env.update(dt);
  *
- * The real terrain, stairs, roof, navigation, camera and actor scale are preserved.
- * Hand-painted paving is projected in world XZ; steep rock uses three-axis mapping.
- * Only scenery uses this inexpensive fixed-sun Basic shader. Actors remain lit 3D.
- * Mountain strips are separate world-space valley planes, never camera billboards.
- * The H33 stone painting is a project-owned ImageGen edit of our authored atlas; H31 mountains are retained.
+ * Original navigation, collision, heights and camera remain authoritative.
+ * The render-only base under actual road footprints is recessed .045m; real
+ * batched tops/bevels/sides sit over that grout bed in scene-dressing.js.
+ * Original slope mesh uses the owned hand-painted rock cell and fixed SUN.
+ * Actor models remain lit 3D. Existing valley strips stay world-space planes.
  */
 import * as T from 'three';
 
 const SUN=new T.Vector3(-8,16,12).normalize();
 const SHADOW_DIRECTION=new T.Vector2(8,-12).normalize();
 const _p=new T.Vector3();
-const STONE_URL=new URL('../assets/environment-033/handpainted-stone-atlas.webp',import.meta.url).href;
+const STONE_URL=new URL('../assets/environment-035/stone-kit-atlas.webp',import.meta.url).href;
 const MOUNTAIN_URL=new URL('../assets/sample-runtime/mountain-atlas.webp',import.meta.url).href;
 const ROCK_NORMAL_URL=new URL('../assets/environment-033/terrain-rock-normals.f32',import.meta.url).href;
+const ROAD_BED_URL=new URL('../assets/environment-035/road-bed-mask.png',import.meta.url).href;
+const EMPTY_BED=new T.DataTexture(new Uint8Array([0]),1,1,T.RedFormat);EMPTY_BED.needsUpdate=true;
+const ROAD_BED_GLSL=`uniform sampler2D uH35RoadBed;
+ float h35RoadBed(vec2 p){vec2 uv=(p-vec2(-8.,-9.))/vec2(13.,18.);if(any(lessThan(uv,vec2(0.)))||any(greaterThan(uv,vec2(1.))))return 0.;return texture2D(uH35RoadBed,uv).r;}
+`;
 let sharedStoneAtlas=null;
 // createSceneDressing/architecture run after env.ready and reuse this same GPU
 // texture. The new static 3D edging does not duplicate the atlas or its download.
@@ -102,30 +107,31 @@ export function prepareTerrainRockNormals(model) {
  });
 }
 
-function markMaterial(source,kind,stoneUniform){
+function markMaterial(source,kind,stoneUniform,bedUniform={value:EMPTY_BED}){
  const m=new T.MeshBasicMaterial({color:0xffffff,map:kind==='gate'?source.map:null,
   side:source.side,transparent:source.transparent,opacity:source.opacity,
   alphaTest:source.alphaTest,fog:kind!=='gate',toneMapped:true});
  m.name=`H33 matte ${kind}`;
  m.onBeforeCompile=shader=>{
   shader.uniforms.uH31Stone=stoneUniform;
-  shader.vertexShader=(kind==='terrain'?'attribute vec3 aH33RockNormal;varying vec3 vH33RockNormal;\n':'')+'varying vec3 vH31Position;varying vec3 vH31Normal;\n'+shader.vertexShader;
+  shader.uniforms.uH35RoadBed=bedUniform;
+  shader.vertexShader=(kind==='terrain'?ROAD_BED_GLSL+'attribute vec3 aH33RockNormal;varying vec3 vH33RockNormal;\n':'')+'varying vec3 vH31Position;varying vec3 vH31Normal;\n'+shader.vertexShader;
   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',
-   '#include <begin_vertex>\nvH31Position=(modelMatrix*vec4(transformed,1.)).xyz;vH31Normal=normalize(mat3(modelMatrix)*normal);'+(kind==='terrain'?'vH33RockNormal=normalize(mat3(modelMatrix)*aH33RockNormal);':''));
-  shader.fragmentShader=(kind==='terrain'?'varying vec3 vH33RockNormal;\n':'')+STONE_GLSL+'\n'+shader.fragmentShader;
+   '#include <begin_vertex>\nvH31Position=(modelMatrix*vec4(transformed,1.)).xyz;vH31Normal=normalize(mat3(modelMatrix)*normal);'+(kind==='terrain'?'vH33RockNormal=normalize(mat3(modelMatrix)*aH33RockNormal);transformed.y-=h35RoadBed(vH31Position.xz)*.045/max(.0001,length(modelMatrix[1].xyz));':''));
+  shader.fragmentShader=(kind==='terrain'?ROAD_BED_GLSL+'varying vec3 vH33RockNormal;\n':'')+STONE_GLSL+'\n'+shader.fragmentShader;
   const mapCode=kind==='terrain'?`
    vec3 h31N=normalize(vH31Normal);
    vec3 h33SlopeN=normalize(vH33RockNormal);
    float h31Up=smoothstep(.39,.71,h31N.y)*(1.-smoothstep(1.15,2.7,vH31Position.y));
-   float h31RouteMask=h31Route(vH31Position.xz);
+   float h31RouteMask=h35RoadBed(vH31Position.xz);
    float h31Paved=h31Up*h31RouteMask;
    vec3 h31Paint;
    vec3 h31StoneColor=vec3(0.);
    vec3 h31Border=vec3(0.);
    if(h31Paved>.005){
-    h31StoneColor=h31Stone((vH31Position.xz+vec2(.8,.6))/4.5,0.);
-    // Restrain only fine painted marks; joints and slab form still lead the eye.
-    h31StoneColor=mix(vec3(.148,.180,.173),h31StoneColor,.87);
+    // Only the recessed mortar/soil bed is shaded here. Individual tops,
+    // bevels and visible .055m sides are real batched stone meshes.
+    h31StoneColor=vec3(.072,.092,.078);
    }
    if(h31Paved<.995){
     h31Border=h31Rock(vH31Position,h33SlopeN);
@@ -139,12 +145,12 @@ function markMaterial(source,kind,stoneUniform){
    if(h31Paved==1.)h31Paint=h31StoneColor;
    else if(h31Paved==0.)h31Paint=h31Border;
    else h31Paint=mix(h31Border,h31StoneColor,h31Paved);
-   diffuseColor.rgb=h31Paint*vec3(1.08,1.025,.945);
+   diffuseColor.rgb=h31Paint;
    // All low upward ground has a continuous normal; scan micro-facets never
    // interrupt the newly painted large light masses on moss or paving.
    h31N=normalize(mix(h33SlopeN,vec3(0.,1.,0.),h31Paved*.94));
    float h31Sun=clamp(dot(h31N,normalize(vec3(-8.,16.,12.))),0.,1.);
-   diffuseColor.rgb*=mix(vec3(.46,.58,.70),vec3(1.20,1.18,1.12),h31Sun)*h31GroundAO(vH31Position);
+   diffuseColor.rgb*=mix(vec3(.36,.46,.57),vec3(1.15,1.14,1.08),h31Sun)*h31GroundAO(vH31Position);
   `:`
    #include <map_fragment>
    vec3 h31Src=diffuseColor.rgb;
@@ -172,7 +178,7 @@ function markMaterial(source,kind,stoneUniform){
   `;
   shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',mapCode);
  };
- m.customProgramCacheKey=()=>`h33-matte-basic-${kind}-v3`;
+ m.customProgramCacheKey=()=>`h35-daylight-stone-${kind}-v1`;
  return m;
 }
 
@@ -230,7 +236,9 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
   const materials=[];const ownedTextures=[footTexture];
   const fallback=new T.DataTexture(new Uint8Array([103,118,114,255]),1,1,T.RGBAFormat);fallback.colorSpace=T.SRGBColorSpace;fallback.needsUpdate=true;ownedTextures.push(fallback);
   const stoneUniform={value:fallback};
+  const bedUniform={value:EMPTY_BED};
   const loader=new T.TextureLoader();
+  const bedReady=loader.loadAsync(ROAD_BED_URL).then(t=>{t.colorSpace=T.NoColorSpace;t.generateMipmaps=false;t.minFilter=T.LinearFilter;t.magFilter=T.LinearFilter;t.wrapS=t.wrapT=T.ClampToEdgeWrapping;bedUniform.value=t;ownedTextures.push(t);});
   let rockNormalField=null;const terrainNormalTargets=[];
   const installRockNormals=mesh=>{
     const count=mesh.geometry.attributes.position.count;
@@ -257,12 +265,12 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
   renderer.toneMappingExposure=.94;
   // Same light direction as H29. Lower ambient energy lets the broad shapes read.
   scene.traverse(o=>{
-    if(o.isAmbientLight) o.intensity=.35;
-    if(o.isHemisphereLight) {o.color.setHex(0xc2d5cc);o.groundColor.setHex(0x6c6650);o.intensity=1.20;}
+    if(o.isAmbientLight) o.intensity=.18;
+    if(o.isHemisphereLight) {o.color.setHex(0xbfd2de);o.groundColor.setHex(0x59625b);o.intensity=.85;}
     if(o.isDirectionalLight) {
       const alignment=o.position.clone().normalize().dot(SUN);
-      if(alignment>.90) {o.intensity=2.35;o.color.setHex(0xffedcf);}
-      else {o.intensity=.55;o.color.setHex(0xb8d6d6);}
+      if(alignment>.90) {o.intensity=2.2;o.color.setHex(0xfff1dc);}
+      else {o.intensity=.25;o.color.setHex(0xb8d2db);}
     }
     if(o.isSpotLight) o.intensity=Math.min(o.intensity,95);
   });
@@ -281,7 +289,7 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
     }
     atlas.dispose();
   });
-  const ready=Promise.all([stoneReady,mountainReady,normalReady]);
+  const ready=Promise.all([stoneReady,mountainReady,normalReady,bedReady]);
 
   function styleModel(model,kind) {
     if(!model||treated.has(model)) return;treated.add(model);
@@ -293,7 +301,7 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
     const cache=new Map();
     model.traverse(o=>{if(o.isMesh){
       const one=m=>{if(!m?.isMeshStandardMaterial&&!m?.isMeshBasicMaterial)return m;if(!cache.has(m)){
-        const clone=markMaterial(m,kind,stoneUniform);
+        const clone=markMaterial(m,kind,stoneUniform,bedUniform);
         cache.set(m,clone);materials.push(clone);
       }return cache.get(m);};
       o.material=Array.isArray(o.material)?o.material.map(one):one(o.material);
@@ -354,7 +362,7 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
     styleTerrain:model=>styleModel(model,'terrain'),styleGate,attachCharacterShadow,update,
     setGroundAt(fn){ground=fn;for(const e of shadows)conform(e);},
     refreshShadows(){for(const e of shadows)conform(e);},
-    metadata:{source:'Project-owned H33 ImageGen hand-painted edit of original vector atlas, retained H31 mountains; real 3D geometry/nav unchanged; original world shader and cool-slate contact shadows',staticDraws:3,shadowDirection:[SHADOW_DIRECTION.x,SHADOW_DIRECTION.y],sunDirection:SUN.toArray(),cameraUnchanged:true,staticShading:'world-XZ hand-painted paving, triplanar rock, semantic roof UV palette, fixed SUN; no static PBR/IBL/normal/ORM sampling'},
+    metadata:{revision:'H35 daylight stone-road kit',source:'Owned H33 hand-painted stone atlas copied to 035; offline-fitted actual beveled masonry; historical mountains retained; original navigation and walking heights unchanged',staticDraws:3,shadowDirection:[SHADOW_DIRECTION.x,SHADOW_DIRECTION.y],sunDirection:SUN.toArray(),cameraUnchanged:true,staticShading:'daylight fixed SUN; batched real stone tops/bevels/sides over render-only recessed grout bed; triplanar slope rock; no static PBR/IBL/normal/ORM sampling'},
     dispose(){group.removeFromParent();group.traverse(o=>o.geometry?.dispose());for(const m of materials)m.dispose();for(const t of ownedTextures)t.dispose();scene.background=original.background;scene.fog=original.fog;scene.environmentIntensity=original.envIntensity;renderer.toneMappingExposure=original.exposure;}
   };
 }

@@ -1,0 +1,73 @@
+{
+  "kind": "Read-only published-buffer audit against original H29 navigation plus installed fine surface provider",
+  "roadTriangles": 10627,
+  "classifiedTopTriangles": 6133,
+  "samples": 19929,
+  "liftMeters": {
+    "min": -0.004543304853280777,
+    "p01": 0.005057484886348343,
+    "median": 0.009999990689343305,
+    "p99": 0.01488524575747184,
+    "max": 0.021959357958475756
+  },
+  "absAbove20_1mm": 8,
+  "largestFailures": [
+    {
+      "x": 2.3499999999999996,
+      "z": -2.6166666666666667,
+      "lift": 0.021959357958475756
+    },
+    {
+      "x": -0.891,
+      "z": 0.6,
+      "lift": 0.02179457003815846
+    },
+    {
+      "x": 4.074999999999999,
+      "z": -3.9,
+      "lift": 0.02156336596133227
+    },
+    {
+      "x": 2.6053333333333333,
+      "z": -3.7416666666666667,
+      "lift": 0.020663752945635133
+    },
+    {
+      "x": -4.233,
+      "z": -1.5499999999999998,
+      "lift": 0.020529720706701254
+    },
+    {
+      "x": -6.994666666666666,
+      "z": -3.966666666666667,
+      "lift": 0.020383981394237916
+    },
+    {
+      "x": -4.216666666666667,
+      "z": -1.5499999999999998,
+      "lift": 0.020300923481146524
+    },
+    {
+      "x": -6.184333333333333,
+      "z": -5,
+      "lift": 0.020233183856964113
+    }
+  ],
+  "originalNavBuffersUnchanged": true,
+  "referenceSha256": {
+    "navSource": "383f4adc9dad7dd41729da052ef88852f438032282dd9a320d1fe6f26fb690b5",
+    "navigationCache": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+    "fineHeight": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+    "fineSlope": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31"
+  },
+  "runtimeSourceHash": "364f81c8567bd4d5a39f86dc135760ec981ac36a926787721df9f8225f3341b1",
+  "runtimeFiles": {
+    "sample/environment.js": "13d5039742d2dab070189ba2f2792fd6126dd39a7d084132c1c12a29a18b2d74",
+    "sample/scene-dressing.js": "9ea55d35bf90cd28e065ee62812f1d31e9afecc7ec9baca79521b1749347945b",
+    "assets/environment-035/road-geometry.js": "2dead79acd702f62f8deed0b01c18cda72ccad1cb645b246ea595da7a7923e49",
+    "assets/environment-035/road-bed-mask.png": "c292f9cd5db51228ff1e15d8c4c55b206ef94f6509f0960e0b0c5981723e44e9",
+    "assets/environment-035/stone-kit-atlas.webp": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a",
+    "assets/environment-035/rock-shapes.js": "ced2d2ed56d8ce772b79c1efdcf2c9fdab2dac297874e68fef48d37204483711"
+  },
+  "limit": "Discrete sample audit, not a proof of every surface point. Nonwalkable decorative foreground is excluded. Max ~2.2cm is under one pixel in the unchanged normal phone camera; navigation/foot positions are not modified."
+}
