@@ -1,0 +1,33 @@
+name: Runway API read-only check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: runway-api-check-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check configured credentials against the official organization GET
+        env:
+          RUNWAY_API_SECRET: ${{ secrets.RUNWAY_API_SECRET }}
+          RUNWAY_API_KEY: ${{ secrets.RUNWAY_API_KEY }}
+          RUNWAYML_API_SECRET: ${{ secrets.RUNWAYML_API_SECRET }}
+          RUNWAYML_API_KEY: ${{ secrets.RUNWAYML_API_KEY }}
+        run: python3 .github/scripts/runway_api_check.py --output runway-api-check.json
+      - name: Preserve sanitized check evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: runway-api-check-${{ github.run_id }}
+          path: runway-api-check.json
+          if-no-files-found: warn
+          retention-days: 14
