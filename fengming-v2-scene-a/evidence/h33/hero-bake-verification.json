@@ -1,0 +1,1933 @@
+{
+  "environment": {
+    "runtime": "v24.22.3",
+    "platform": "linux",
+    "arch": "x64",
+    "kind": "CPU-only Node; not iPhone or browser FPS"
+  },
+  "geometry": [
+    {
+      "mesh": "body",
+      "arrays": [
+        {
+          "attribute": "position",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 110520,
+          "sha256": "e9b198442af04dc5e427419872dc4b6ae879f4da39581f647e0715f93811aa3d",
+          "match": true
+        },
+        {
+          "attribute": "normal",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 110520,
+          "sha256": "f3978075937deb0a353d2feb5eec6faa408a5f550063ec5ad2607d4e5b7b8423",
+          "match": true
+        },
+        {
+          "attribute": "color",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 110520,
+          "sha256": "5735312861f6e8ee48d24ad2db7b9aeac85712aff8b5ad70747d6db5adc602c2",
+          "match": true
+        },
+        {
+          "attribute": "uv",
+          "type": "Float32Array",
+          "itemSize": 2,
+          "normalized": false,
+          "bytes": 73680,
+          "sha256": "51da9aa0e0939d0722898e6e707a0a1479cb9192798dc0bff1cb9576beb2985b",
+          "match": true
+        },
+        {
+          "attribute": "skinIndex",
+          "type": "Uint16Array",
+          "itemSize": 4,
+          "normalized": false,
+          "bytes": 73680,
+          "sha256": "cc98bde7edb43875a1301caf36381f786959fafa5aac564923e0a5d8bd5fba08",
+          "match": true
+        },
+        {
+          "attribute": "skinWeight",
+          "type": "Float32Array",
+          "itemSize": 4,
+          "normalized": false,
+          "bytes": 147360,
+          "sha256": "7c40ca2d3dc96ab89f80c62e5bbc98c49aad243a040332e98e65332a60a944db",
+          "match": true
+        },
+        {
+          "attribute": "index",
+          "type": "Uint16Array",
+          "itemSize": 1,
+          "normalized": false,
+          "bytes": 93900,
+          "sha256": "15b702d8ac0fdb47b9aa0784397cd770995fba0fef1c1a4d2531a46937cae442",
+          "match": true
+        }
+      ]
+    },
+    {
+      "mesh": "sword0",
+      "arrays": [
+        {
+          "attribute": "position",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 576,
+          "sha256": "f942203924de17a2824d41513788592f90f8bcf65385469ea9a7d539e35ff2d8",
+          "match": true
+        },
+        {
+          "attribute": "normal",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 576,
+          "sha256": "fff6cc13edbd94383cb0c0b53fa4642913fafc23506aeaa433d0651dab44d605",
+          "match": true
+        },
+        {
+          "attribute": "color",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 576,
+          "sha256": "664c529ae1fd7f11d8b3573b47f6f56e5150ef80c2ced7bd6b4e8bd3c2951475",
+          "match": true
+        },
+        {
+          "attribute": "index",
+          "type": "Uint16Array",
+          "itemSize": 1,
+          "normalized": false,
+          "bytes": 144,
+          "sha256": "01df634a07d7d4b26838a584a5cf90a63e1b9dc4bae15bd181fe7e589e0bf1c9",
+          "match": true
+        }
+      ]
+    },
+    {
+      "mesh": "sword1",
+      "arrays": [
+        {
+          "attribute": "position",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 5724,
+          "sha256": "84cb90675c632689266aa5cc5666bfb93da738ed9d7a9242f93ec2e52cb43660",
+          "match": true
+        },
+        {
+          "attribute": "normal",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 5724,
+          "sha256": "566356c696266dbf2dfc9929988b95043f7359d293f8ee45d4352bc3db681173",
+          "match": true
+        },
+        {
+          "attribute": "color",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 5724,
+          "sha256": "18068d42ab00896ca69fd1d9109d13af4c7cc8360ee4365ddb3e8a49a8a7a699",
+          "match": true
+        },
+        {
+          "attribute": "index",
+          "type": "Uint16Array",
+          "itemSize": 1,
+          "normalized": false,
+          "bytes": 1992,
+          "sha256": "cea4ef3a772597da4472184bd2f9f056c090db930500091a1873012a12940fdf",
+          "match": true
+        }
+      ]
+    },
+    {
+      "mesh": "sword2",
+      "arrays": [
+        {
+          "attribute": "position",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 720,
+          "sha256": "2c3158144c2f540711f0a2cc0afa57a17d518e8e22d80dbce47ad1e2b3fc4e9e",
+          "match": true
+        },
+        {
+          "attribute": "normal",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 720,
+          "sha256": "2e0f6f2418e37901e7534700be5bf3517ccc612f4ea827c159f2c09a472137e0",
+          "match": true
+        },
+        {
+          "attribute": "color",
+          "type": "Float32Array",
+          "itemSize": 3,
+          "normalized": false,
+          "bytes": 720,
+          "sha256": "d8c4fae65ae68673534a6027cbbff4b803bf7c12f7d1420220a634a98829343d",
+          "match": true
+        },
+        {
+          "attribute": "index",
+          "type": "Uint16Array",
+          "itemSize": 1,
+          "normalized": false,
+          "bytes": 120,
+          "sha256": "6d0af186622c0b1200ea19a288afae85380b856ec3375ac4bae93b592810b159",
+          "match": true
+        }
+      ]
+    }
+  ],
+  "bindings": {
+    "boneInverseSha256": "c4edc4c31952639cd37533a95a53063a38d2cc511fdd1579d3ea83c7dc2b218f",
+    "boneInverseBytesExact": true,
+    "bodyBindSha256": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+    "bodyBindBytesExact": true,
+    "bodyBindInverseBytesExact": true
+  },
+  "poses": [
+    {
+      "frame": 0,
+      "label": "default idle",
+      "dt": 0,
+      "state": {},
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8766598071678402,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5121668159499069,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 1,
+      "label": "idle 0",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8770063653508657,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5125133741329324,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 2,
+      "label": "idle 1",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8773522728764616,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5128592816585282,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 3,
+      "label": "idle 2",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8776968803087977,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5132038890908643,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 4,
+      "label": "idle 3",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8780395406529475,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5135465494350144,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 5,
+      "label": "idle 4",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.878379610569612,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5138866193516787,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 6,
+      "label": "idle 5",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8787164515829775,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5142234603650442,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 7,
+      "label": "idle 6",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8790494312794443,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5145564400615112,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 8,
+      "label": "idle 7",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8793779244949746,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5148849332770415,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 9,
+      "label": "idle 8",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8797013144888255,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5152083232708922,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 10,
+      "label": "idle 9",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8800189941014707,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5155260028835373,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 11,
+      "label": "idle 10",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8803303668945337,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5158373756766004,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 12,
+      "label": "idle 11",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.88063484827059,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5161418570526568,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 13,
+      "label": "idle 12",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8809318665707409,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5164388753528075,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 14,
+      "label": "idle 13",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8812208641478922,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.516727872929959,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 15,
+      "label": "idle 14",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8815012984137285,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.5170083071957952,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 16,
+      "label": "idle 15",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.057420017464907325,
+        1.8817726428574142,
+        -6.484110919471073
+      ],
+      "bladeBase": [
+        0.977978137148362,
+        1.517279651639481,
+        -7.060908562302976
+      ]
+    },
+    {
+      "frame": 17,
+      "label": "walk and turn 0",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.6,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.05810055899494215,
+        1.8758451785245445,
+        -6.482935168409259
+      ],
+      "bladeBase": [
+        0.9780574820100265,
+        1.5155203872849088,
+        -7.060985822659265
+      ]
+    },
+    {
+      "frame": 18,
+      "label": "walk and turn 1",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.569,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.04132462753084942,
+        1.874103724806715,
+        -6.430978901476492
+      ],
+      "bladeBase": [
+        0.9764253082199138,
+        1.5149915521235713,
+        -7.041571659139166
+      ]
+    },
+    {
+      "frame": 19,
+      "label": "walk and turn 2",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.538,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.022587276583576843,
+        1.8768795057399061,
+        -6.379416839191626
+      ],
+      "bladeBase": [
+        0.9749921787756738,
+        1.5157610086059101,
+        -7.021311426544429
+      ]
+    },
+    {
+      "frame": 20,
+      "label": "walk and turn 3",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.507,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        -0.0018887745872078199,
+        1.8840029083562995,
+        -6.328308929984974
+      ],
+      "bladeBase": [
+        0.9738486014158166,
+        1.5177944190145207,
+        -7.000192785576657
+      ]
+    },
+    {
+      "frame": 21,
+      "label": "walk and turn 4",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.476,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.020747947587640647,
+        1.8948912966639504,
+        -6.2777905996371794
+      ],
+      "bladeBase": [
+        0.9731275112461345,
+        1.5209399990018253,
+        -6.97831439916327
+      ]
+    },
+    {
+      "frame": 22,
+      "label": "walk and turn 5",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.44499999999999995,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.04527172888879638,
+        1.908722368437179,
+        -6.2280339329322825
+      ],
+      "bladeBase": [
+        0.9729704245926998,
+        1.524975559275097,
+        -6.955848137552663
+      ]
+    },
+    {
+      "frame": 23,
+      "label": "walk and turn 6",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.414,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.07159904954063523,
+        1.9245485784792238,
+        -6.179213244504943
+      ],
+      "bladeBase": [
+        0.9735056228233504,
+        1.5296377991229713,
+        -6.933010305667739
+      ]
+    },
+    {
+      "frame": 24,
+      "label": "walk and turn 7",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.383,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.09961494395041626,
+        1.9413778075266146,
+        -6.131478184730836
+      ],
+      "bladeBase": [
+        0.9748348846538054,
+        1.5346426604466603,
+        -6.910038763957015
+      ]
+    },
+    {
+      "frame": 25,
+      "label": "walk and turn 8",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.352,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.12917939885428353,
+        1.9582328731427308,
+        -6.084936459615199
+      ],
+      "bladeBase": [
+        0.9770266947786721,
+        1.5397011429282073,
+        -6.887174674609561
+      ]
+    },
+    {
+      "frame": 26,
+      "label": "walk and turn 9",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.32099999999999995,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.1601378050901512,
+        1.9741959783117757,
+        -6.039646786991666
+      ],
+      "bladeBase": [
+        0.9801144084628288,
+        1.5445325422710634,
+        -6.864648424354342
+      ]
+    },
+    {
+      "frame": 27,
+      "label": "walk and turn 10",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.29,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.19233319473854993,
+        1.988441187598034,
+        -5.995621246977846
+      ],
+      "bladeBase": [
+        0.984098044571719,
+        1.5488758083609189,
+        -6.842669474615913
+      ]
+    },
+    {
+      "frame": 28,
+      "label": "walk and turn 11",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.259,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.22561794804015567,
+        2.000256853899904,
+        -5.952835014548721
+      ],
+      "bladeBase": [
+        0.9889484872347087,
+        1.5524991305562956,
+        -6.821419788257713
+      ]
+    },
+    {
+      "frame": 29,
+      "label": "walk and turn 12",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.22799999999999998,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.2598631315877926,
+        2.0090596013535222,
+        -5.911240761418509
+      ],
+      "bladeBase": [
+        0.9946130192625485,
+        1.5552076438338032,
+        -6.801050293406929
+      ]
+    },
+    {
+      "frame": 30,
+      "label": "walk and turn 13",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.19699999999999995,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.29496436995238107,
+        2.014401443208322,
+        -5.870784819967908
+      ],
+      "bladeBase": [
+        1.0010213151583485,
+        1.5568491310626589,
+        -6.78167969413099
+      ]
+    },
+    {
+      "frame": 31,
+      "label": "walk and turn 14",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.16599999999999998,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.3308439355949633,
+        2.0159715914259726,
+        -5.831422443077592
+      ],
+      "bladeBase": [
+        1.0080912667060928,
+        1.5573176635020283,
+        -6.763394881995605
+      ]
+    },
+    {
+      "frame": 32,
+      "label": "walk and turn 15",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.135,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.367449410186232,
+        2.0135943818787623,
+        -5.793130041537549
+      ],
+      "bladeBase": [
+        1.0157342621444647,
+        1.5565552103160407,
+        -6.746252251109204
+      ]
+    },
+    {
+      "frame": 33,
+      "label": "walk and turn 16",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.10399999999999998,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.40474973928630253,
+        2.007224482485959,
+        -5.755912993794192
+      ],
+      "bladeBase": [
+        1.023859756235526,
+        1.554551326829854,
+        -6.730279352543033
+      ]
+    },
+    {
+      "frame": 34,
+      "label": "walk and turn 17",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.07299999999999995,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.4427297479476523,
+        1.9969402136784953,
+        -5.719808377999148
+      ],
+      "bladeBase": [
+        1.0323791304874748,
+        1.551341089932301,
+        -6.715476508747054
+      ]
+    },
+    {
+      "frame": 35,
+      "label": "walk and turn 18",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.041999999999999926,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.48138422601308906,
+        1.982935455147464,
+        -5.684882682312928
+      ],
+      "bladeBase": [
+        1.0412089417263632,
+        1.5470014894547466,
+        -6.7018182088985485
+      ]
+    },
+    {
+      "frame": 36,
+      "label": "walk and turn 19",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": -0.01100000000000001,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.5207125708252398,
+        1.9655103028820116,
+        -5.651225147070225
+      ],
+      "bladeBase": [
+        1.0502736963757862,
+        1.5416465137748785,
+        -6.689254290490284
+      ]
+    },
+    {
+      "frame": 37,
+      "label": "walk and turn 20",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.020000000000000018,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.5607147420434211,
+        1.9450604240335898,
+        -5.6189378479842285
+      ],
+      "bladeBase": [
+        1.0595082785716832,
+        1.5354211934475899,
+        -6.677711057261145
+      ]
+    },
+    {
+      "frame": 38,
+      "label": "walk and turn 21",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.051000000000000045,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.6013889872693948,
+        1.9220649599156745,
+        -5.588123926304754
+      ],
+      "bladeBase": [
+        1.0688601181768862,
+        1.528494892069527,
+        -6.6670925743495655
+      ]
+    },
+    {
+      "frame": 39,
+      "label": "walk and turn 22",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.08199999999999996,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.6427314813867628,
+        1.8970728509826014,
+        -5.558875503757383
+      ],
+      "bladeBase": [
+        1.0782911262962553,
+        1.5210541578798833,
+        -6.657282412950711
+      ]
+    },
+    {
+      "frame": 40,
+      "label": "walk and turn 23",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.11299999999999999,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.684737722938364,
+        1.8706875813566,
+        -5.531262789258585
+      ],
+      "bladeBase": [
+        1.087779365875617,
+        1.5132954676776078,
+        -6.648146091640039
+      ]
+    },
+    {
+      "frame": 41,
+      "label": "walk and turn 24",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.14400000000000002,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.7274052764067382,
+        1.843688307959171,
+        -5.505325701341203
+      ],
+      "bladeBase": [
+        1.0973203750811003,
+        1.5055559798657197,
+        -6.639534389577561
+      ]
+    },
+    {
+      "frame": 42,
+      "label": "walk and turn 25",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.17500000000000004,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.770737261868236,
+        1.8218977381031891,
+        -5.481069015653498
+      ],
+      "bladeBase": [
+        1.1069280290974701,
+        1.5031925921928535,
+        -6.63128760270558
+      ]
+    },
+    {
+      "frame": 43,
+      "label": "walk and turn 26",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.20600000000000007,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.814745887893748,
+        1.8005673627473222,
+        -5.458461632943548
+      ],
+      "bladeBase": [
+        1.1166348152905974,
+        1.500979626587896,
+        -6.623240695194433
+      ]
+    },
+    {
+      "frame": 44,
+      "label": "walk and turn 27",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.237,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.8594553067314595,
+        1.7802166525970737,
+        -5.437440092307258
+      ],
+      "bladeBase": [
+        1.1264914071084535,
+        1.4989612873504656,
+        -6.615229182346492
+      ]
+    },
+    {
+      "frame": 45,
+      "label": "walk and turn 28",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.268,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.9049031414925394,
+        1.7613384815765873,
+        -5.417915976946267
+      ],
+      "bladeBase": [
+        1.1365654504678113,
+        1.4971705869557848,
+        -6.607095483182334
+      ]
+    },
+    {
+      "frame": 46,
+      "label": "walk and turn 29",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.29900000000000004,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.9511401839791379,
+        1.744386558455885,
+        -5.399786426463539
+      ],
+      "bladeBase": [
+        1.1469395177186925,
+        1.495629919216196,
+        -6.598695411892092
+      ]
+    },
+    {
+      "frame": 47,
+      "label": "walk and turn 30",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.32999999999999996,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.9982279725652015,
+        1.7297646136579106,
+        -5.382946626889014
+      ],
+      "bladeBase": [
+        1.1577082330725588,
+        1.4943524696651067,
+        -6.589904442626257
+      ]
+    },
+    {
+      "frame": 48,
+      "label": "walk and turn 31",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.361,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.0462342103979239,
+        1.7178175653716834,
+        -5.367302932194137
+      ],
+      "bladeBase": [
+        1.1689746246393566,
+        1.493344231139125,
+        -6.580623381593371
+      ]
+    },
+    {
+      "frame": 49,
+      "label": "walk and turn 32",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.392,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.0952262500956946,
+        1.7088246957841158,
+        -5.352785199059648
+      ],
+      "bladeBase": [
+        1.180845808211439,
+        1.4926063309786746,
+        -6.57078310956234
+      ]
+    },
+    {
+      "frame": 50,
+      "label": "walk and turn 33",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.42299999999999993,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.1452631258841879,
+        1.7029947073646676,
+        -5.339356993854668
+      ],
+      "bladeBase": [
+        1.193428154367456,
+        1.492137349073879,
+        -6.560348109500412
+      ]
+    },
+    {
+      "frame": 51,
+      "label": "walk and turn 34",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.45400000000000007,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.1963868321863025,
+        1.7004624292364634,
+        -5.327022545765082
+      ],
+      "bladeBase": [
+        1.2068221321417292,
+        1.491935316925944,
+        -6.549318560626571
+      ]
+    },
+    {
+      "frame": 52,
+      "label": "walk and turn 35",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.485,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.248613705592869,
+        1.7012869190568864,
+        -5.315829648980911
+      ],
+      "bladeBase": [
+        1.2211170585364721,
+        1.4919991357549938,
+        -6.537730855364322
+      ]
+    },
+    {
+      "frame": 53,
+      "label": "walk and turn 36",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.5160000000000001,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.3019268447863708,
+        1.7054507541724808,
+        -5.305868126942572
+      ],
+      "bladeBase": [
+        1.2363860120963728,
+        1.4923292306096125,
+        -6.5256564755689
+      ]
+    },
+    {
+      "frame": 54,
+      "label": "walk and turn 37",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.547,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.3562704851513419,
+        1.712860409139572,
+        -5.297263923928169
+      ],
+      "bladeBase": [
+        1.2526811878963993,
+        1.492927357850145,
+        -6.513199247226555
+      ]
+    },
+    {
+      "frame": 55,
+      "label": "walk and turn 38",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.578,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.4115471231910597,
+        1.7233477454976738,
+        -5.290169341200142
+      ],
+      "bladeBase": [
+        1.2700299764369924,
+        1.493795593251452,
+        -6.500491078001442
+      ]
+    },
+    {
+      "frame": 56,
+      "label": "walk and turn 39",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": true,
+        "speed": 1
+      },
+      "yaw": 0.6090000000000001,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.4676179616617833,
+        1.7366727591362467,
+        -5.284750342548246
+      ],
+      "bladeBase": [
+        1.2884320349955711,
+        1.4949346342136136,
+        -6.4876863685461625
+      ]
+    },
+    {
+      "frame": 57,
+      "label": "physical sword 0",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.688312689087812,
+        1.8300998694687418,
+        -5.284881346287072
+      ],
+      "bladeBase": [
+        1.3700244312855736,
+        1.5080508509361719,
+        -6.439254342596075
+      ]
+    },
+    {
+      "frame": 58,
+      "label": "physical sword 0.08",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.08
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.2643705192995678,
+        1.9640582836842553,
+        -5.228476830457671
+      ],
+      "bladeBase": [
+        1.3708484632403748,
+        1.5566551907095123,
+        -6.3947894674846175
+      ]
+    },
+    {
+      "frame": 59,
+      "label": "physical sword 0.16",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.16
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.6970859078405754,
+        2.094979648858043,
+        -5.398320253580027
+      ],
+      "bladeBase": [
+        1.3757622875494433,
+        1.669491708679615,
+        -6.344871036363489
+      ]
+    },
+    {
+      "frame": 60,
+      "label": "physical sword 0.28",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.28
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        0.35209733325965376,
+        2.3539834643310162,
+        -5.997066299242466
+      ],
+      "bladeBase": [
+        1.3742703264259526,
+        1.7593630958497142,
+        -6.370146705359714
+      ]
+    },
+    {
+      "frame": 61,
+      "label": "physical sword 0.42",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.42
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        2.721977850230961,
+        1.3426859824319084,
+        -5.876083672503002
+      ],
+      "bladeBase": [
+        1.683186617614023,
+        1.553269100526492,
+        -6.519642158898562
+      ]
+    },
+    {
+      "frame": 62,
+      "label": "physical sword 0.44",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.44
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        2.8138292732018177,
+        1.2452153075343797,
+        -6.123929583146139
+      ],
+      "bladeBase": [
+        1.690419972901898,
+        1.509856799671204,
+        -6.5772687769505565
+      ]
+    },
+    {
+      "frame": 63,
+      "label": "physical sword 0.46",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.46
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        2.8888527615483595,
+        1.200118480147773,
+        -6.469018110285445
+      ],
+      "bladeBase": [
+        1.6934299211519823,
+        1.4925547217075397,
+        -6.62082482054904
+      ]
+    },
+    {
+      "frame": 64,
+      "label": "physical sword 0.5",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.5
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        2.898952141769705,
+        1.2143768128971568,
+        -6.772198595556855
+      ],
+      "bladeBase": [
+        1.687224321278399,
+        1.4618418678920204,
+        -6.682327935139906
+      ]
+    },
+    {
+      "frame": 65,
+      "label": "physical sword 0.61",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.61
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        2.544769499799903,
+        1.1815991168242161,
+        -7.774401851055227
+      ],
+      "bladeBase": [
+        1.6061693166649067,
+        1.3639389363578498,
+        -6.984856484131075
+      ]
+    },
+    {
+      "frame": 66,
+      "label": "physical sword 0.86",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.86
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        2.544910549873296,
+        1.3672688849765389,
+        -5.846129894211899
+      ],
+      "bladeBase": [
+        1.5193909534545598,
+        1.4301079404574253,
+        -6.540363868076202
+      ]
+    },
+    {
+      "frame": 67,
+      "label": "physical sword 0.999",
+      "dt": 0.07090909090909091,
+      "state": {
+        "moving": false,
+        "attackProgress": 0.999
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6907607447706234,
+        1.8686648295261339,
+        -5.286787567131485
+      ],
+      "bladeBase": [
+        1.377320209136516,
+        1.5044064519728564,
+        -6.429884616818719
+      ]
+    },
+    {
+      "frame": 68,
+      "label": "recover 0",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6905216133371128,
+        1.8688383531901007,
+        -5.2867966424954105
+      ],
+      "bladeBase": [
+        1.3772819625486254,
+        1.504350317393258,
+        -6.429875551816576
+      ]
+    },
+    {
+      "frame": 69,
+      "label": "recover 1",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6905213140414728,
+        1.8687728681701177,
+        -5.286796441732681
+      ],
+      "bladeBase": [
+        1.3772818668378362,
+        1.5042838994402836,
+        -6.429875109362265
+      ]
+    },
+    {
+      "frame": 70,
+      "label": "recover 2",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6905210542994165,
+        1.868722008258756,
+        -5.286796264211235
+      ],
+      "bladeBase": [
+        1.377281776254159,
+        1.5042322805457138,
+        -6.429874736181273
+      ]
+    },
+    {
+      "frame": 71,
+      "label": "recover 3",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.690520828989519,
+        1.8686859038696417,
+        -5.286796107550027
+      ],
+      "bladeBase": [
+        1.377281691571528,
+        1.5041955589146574,
+        -6.429874421238215
+      ]
+    },
+    {
+      "frame": 72,
+      "label": "recover 4",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6905206336330951,
+        1.868664651086513,
+        -5.286795969544443
+      ],
+      "bladeBase": [
+        1.3772816131860486,
+        1.5041738043559818,
+        -6.429874155286361
+      ]
+    },
+    {
+      "frame": 73,
+      "label": "recover 5",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6905204643175686,
+        1.8686583127329128,
+        -5.286795848169841
+      ],
+      "bladeBase": [
+        1.377281541217666,
+        1.504167058262834,
+        -6.429873930572806
+      ]
+    },
+    {
+      "frame": 74,
+      "label": "recover 6",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.690520317628146,
+        1.8686669192694292,
+        -5.286795741579557
+      ],
+      "bladeBase": [
+        1.3772814755887506,
+        1.504175333620141,
+        -6.429873740593048
+      ]
+    },
+    {
+      "frame": 75,
+      "label": "recover 7",
+      "dt": 0.016666666666666666,
+      "state": {
+        "moving": false,
+        "attackProgress": null
+      },
+      "yaw": 0.73,
+      "maxAbsoluteError": 0,
+      "skinMatrixBytesExact": true,
+      "swordTip": [
+        1.6905201905870781,
+        1.868690469560826,
+        -5.286795648098958
+      ],
+      "bladeBase": [
+        1.377281416084446,
+        1.5041986150449653,
+        -6.429873579886497
+      ]
+    }
+  ],
+  "benchmark": {
+    "firstConstructionMs": {
+      "generated": 164.032003,
+      "bakedWithFirstDecode": 4.951175000000006
+    },
+    "generatedWarm": {
+      "runs": 12,
+      "medianMs": 60.12407350000001,
+      "minMs": 35.69937200000004,
+      "maxMs": 161.13560199999995,
+      "allMs": [
+        117.194681,
+        57.86986200000001,
+        161.13560199999995,
+        66.13643300000001,
+        59.02655600000003,
+        53.29522300000008,
+        61.22159099999999,
+        157.380811,
+        83.64937799999996,
+        40.964319999999816,
+        35.69937200000004,
+        38.48839700000008
+      ]
+    },
+    "bakedWarm": {
+      "runs": 12,
+      "medianMs": 0.547253000000012,
+      "minMs": 0.22187400000007074,
+      "maxMs": 0.9689369999998689,
+      "allMs": [
+        0.6879839999999717,
+        0.5900579999999991,
+        0.532510000000002,
+        0.4840480000000298,
+        0.5619960000000219,
+        0.5746540000000095,
+        0.44970599999999195,
+        0.8976499999999987,
+        0.9689369999998689,
+        0.31327200000009725,
+        0.33948000000009415,
+        0.22187400000007074
+      ]
+    },
+    "attackFrameMatrixVisits": {
+      "generated": {
+        "updateWorldMatrix": 22,
+        "updateMatrixWorld": 0
+      },
+      "baked": {
+        "updateWorldMatrix": 22,
+        "updateMatrixWorld": 0
+      }
+    }
+  },
+  "stats": {
+    "triangles": 16026,
+    "materials": 7,
+    "bones": 22,
+    "height": 1.485,
+    "revision": "H33 swept hair / separated sword arm / split riding robe",
+    "attackDuration": 0.78,
+    "hitProgress": 0.44,
+    "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+  },
+  "maxAbsolutePoseError": 0,
+  "poseFrames": 76,
+  "passed": true,
+  "failures": []
+}

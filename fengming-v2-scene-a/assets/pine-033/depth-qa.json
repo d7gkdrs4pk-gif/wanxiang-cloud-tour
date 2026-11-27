@@ -1,0 +1,85 @@
+{
+  "atlas_sha256": "01e35918bef3a5e5aa218d082d3ca90df0b55cdd587632977ce0c9ad1e4daeba",
+  "viewport": [
+    390,
+    844
+  ],
+  "FOV": 39,
+  "cameraOffset": [
+    6,
+    27,
+    15
+  ],
+  "rootCollisionRadius": 0.72,
+  "allRootRegistrationParametersUnchanged": true,
+  "physicalPhone": false,
+  "wechatDevice": false,
+  "frontHeightFraction": 0.26,
+  "frontWidthOffsetFraction": 0.18,
+  "actorRotation": -2.665292949204713,
+  "scope": "isolated actual actor mesh excluding contact shadow; white actor vs black alphaTest front layer only; diagnostic poses at normal FOV39 camera offset6,27,15",
+  "engine": "Chromium headless SwiftShader, not physical phone",
+  "rows": [
+    {
+      "x": -6.4,
+      "z": -8.1,
+      "y": 0.127921,
+      "rootDistance": 1.2529964086141665,
+      "alonePixels": 811,
+      "frontPixels": 520,
+      "occludedPixels": 291,
+      "ratio": 0.3588162762022195
+    },
+    {
+      "x": -6.4,
+      "z": -7.4,
+      "y": 0.138187,
+      "rootDistance": 0.7211102550927977,
+      "alonePixels": 811,
+      "frontPixels": 740,
+      "occludedPixels": 71,
+      "ratio": 0.08754623921085081
+    },
+    {
+      "x": -6.4,
+      "z": -6.5,
+      "y": 0.1433201,
+      "rootDistance": 0.7810249675906651,
+      "alonePixels": 811,
+      "frontPixels": 804,
+      "occludedPixels": 7,
+      "ratio": 0.008631319358816275
+    },
+    {
+      "x": -6.2,
+      "z": -8.1,
+      "y": -0.009927799999999999,
+      "rootDistance": 1.3601470508735438,
+      "alonePixels": 811,
+      "frontPixels": 575,
+      "occludedPixels": 236,
+      "ratio": 0.2909987669543773
+    },
+    {
+      "x": -6.2,
+      "z": -7.4,
+      "y": -0.02801269999999996,
+      "rootDistance": 0.8944271909999159,
+      "alonePixels": 811,
+      "frontPixels": 756,
+      "occludedPixels": 55,
+      "ratio": 0.06781750924784218
+    },
+    {
+      "x": -6.2,
+      "z": -6.5,
+      "y": -0.0942367,
+      "rootDistance": 0.9433981132056602,
+      "alonePixels": 811,
+      "frontPixels": 811,
+      "occludedPixels": 0,
+      "ratio": 0
+    }
+  ],
+  "errors": []
+}

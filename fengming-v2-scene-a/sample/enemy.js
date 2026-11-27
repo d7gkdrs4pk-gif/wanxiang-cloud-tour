@@ -1,7 +1,7 @@
 /** 山门影煞 · original articulated enemy by this project. No downloaded art/animation.
  * Local +Z faces the target. Outer group position/rotation remains caller-owned.
  * createEnemy() -> {group, update(dt,{moving,speed,hitProgress,dead}), hit(direction), stats}.
- * Call hit() on the EXACT damage frame, or provide hitProgress in [0,1] for a .30s recoil.
+ * Call hit() on the EXACT damage frame, or provide hitProgress in [0,1] for a .34s recoil.
  * All silhouette and reaction movement is readable without emissive/trail effects.
  */
 import * as T from 'three';
@@ -15,7 +15,7 @@ export function createEnemy(){
  const materials=[
   new T.MeshStandardMaterial({color:0xffffff,vertexColors:true,roughness:.97,metalness:0}),
   new T.MeshStandardMaterial({color:0xffffff,vertexColors:true,roughness:.94,metalness:0}),
-  new T.MeshStandardMaterial({color:0xffffff,vertexColors:true,roughness:.47,metalness:.62}),
+  new T.MeshStandardMaterial({color:0xffffff,vertexColors:true,roughness:.69,metalness:.40}),
   new T.MeshStandardMaterial({color:0xffffff,vertexColors:true,roughness:.62,metalness:.08,emissive:0x255452,emissiveIntensity:.28})
  ];
  materials.forEach((m,i)=>m.name=['影煞靛布','风化青石甲','旧铁短刃与扣件','冷青面缝'][i]);
@@ -143,14 +143,23 @@ export function createEnemy(){
  for(const a of ranges)geometry.addGroup(a.start,a.count,a.material);
  geometry.computeBoundingBox();geometry.computeBoundingSphere();
  const mesh=new T.SkinnedMesh(geometry,materials);mesh.name='影煞石甲布衣骨骼网格';mesh.frustumCulled=false;mesh.castShadow=true;group.add(mesh);group.updateMatrixWorld(true);mesh.bind(new T.Skeleton(bones));
- const stats={source:'original project-authored procedural mesh and animation; no third-party assets',height:1.46,triangles:idx.length/3,vertices:p.length/3,bones:bones.length,materials:materials.length,drawCalls:4,hitDuration:.30,facing:'+Z'};
+ const stats={source:'original project-authored procedural mesh and animation; no third-party assets',revision:'H33',height:1.46,triangles:idx.length/3,vertices:p.length/3,bones:bones.length,materials:materials.length,drawCalls:4,hitDuration:.34,hitPeak:.075,hitHoldUntil:.125,hitPose:'directional torso retreat, staggered knees, independent short-blade lag; no added particles',facing:'+Z'};
  group.userData.source=stats.source;group.userData.role='enemy';group.userData.stats=stats;
- let time=0,walk=0,recoil=1,hitSide=1,deathAmount=0;
+ let time=0,walk=0,recoil=1,hitSide=1,hitPushX=0,hitPushZ=-1,deathAmount=0;
  const baseY=root.position.y;
  function resetPose(){for(const b of bones)b.rotation.set(0,0,0);hips.position.set(0,.65,0);root.position.y=baseY;}
- function hit(direction){recoil=0;hitSide=direction?.x<0?-1:1;}
+ function hit(direction){
+  recoil=0;
+  // The caller supplies a WORLD-space impact direction. Convert it to this
+  // sentry's facing, instead of always choosing a side from the world X axis.
+  const push=direction?new T.Vector3(direction.x,0,direction.z):new T.Vector3(0,0,-1);
+  if(push.lengthSq()<1e-8)push.set(0,0,-1);
+  if(direction)push.applyQuaternion(group.getWorldQuaternion(new T.Quaternion()).invert());
+  push.y=0;push.normalize();hitPushX=push.x;hitPushZ=push.z;
+  hitSide=Math.abs(push.x)>.08?(push.x<0?-1:1):1;
+ }
  function update(dt,{moving=false,speed=1,hitProgress=null,dead=false}={}){
-  time+=Math.max(0,dt);if(moving)walk+=dt*(7.3+Math.min(2,speed));recoil=Math.min(1,recoil+Math.max(0,dt)/.30);
+  time+=Math.max(0,dt);if(moving)walk+=dt*(7.3+Math.min(2,speed));recoil=Math.min(1,recoil+Math.max(0,dt)/stats.hitDuration);
   const hp=hitProgress===null?recoil:clamp(hitProgress,0,1),active=hp<1;
   resetPose();
   const step=moving?Math.sin(walk):0,bob=moving?Math.abs(Math.sin(walk))*.025:Math.sin(time*1.8)*.006;
@@ -160,14 +169,31 @@ export function createEnemy(){
   skirtR.rotation.x=-step*.12;skirtL.rotation.x=step*.12;skirtR.rotation.z=-.08-Math.abs(step)*.04;skirtL.rotation.z=.08+Math.abs(step)*.04;
   head.rotation.y=Math.sin(time*.75)*.05;
   if(active){
-   // Fast backward impulse, then controlled .30s recovery. The mask and shoulders
-   // react first, blade drops, knees absorb impact; no glowing hit-only stand-in.
-   const kick=hp<.24?smooth(hp/.24):1-smooth((hp-.24)/.76);
-   const shake=Math.sin(hp*Math.PI*7)*(1-hp)*.055;
-   hips.position.y-=kick*.075;spine.rotation.x=-kick*.24;chest.rotation.x-=kick*.29;chest.rotation.z=hitSide*kick*.13+shake;
-   head.rotation.x-=kick*.21;head.rotation.z=-hitSide*kick*.12-shake;
-   shoulderR.rotation.x+=kick*.40;shoulderL.rotation.x+=kick*.34;elbowR.rotation.x-=kick*.22;
-   kneeR.rotation.x+=kick*.18;kneeL.rotation.x+=kick*.20;
+   // Visible immediately on the actual damage frame, full recoil at 75ms,
+   // briefly held through 125ms, then a continuous eased return. The broad
+   // peak survives a low-frame-rate phone: it cannot disappear between frames.
+   const peak=stats.hitPeak/stats.hitDuration,hold=stats.hitHoldUntil/stats.hitDuration;
+   const kick=hp<peak?.25+.75*smooth(hp/peak):hp<hold?1:1-smooth((hp-hold)/(1-hold));
+   const lag=hp<.36?smooth(hp/.36):1-smooth((hp-.36)/.64);
+   const settle=Math.sin(hp*Math.PI*2)*(1-hp)*.018;
+   hips.position.x+=hitPushX*kick*.105;
+   hips.position.z+=hitPushZ*kick*.145;
+   hips.position.y-=kick*.065;
+   spine.rotation.x=-kick*.27;spine.rotation.y=hitSide*kick*.09;
+   chest.rotation.x-=kick*.40;chest.rotation.z=hitSide*kick*.18+settle;
+   head.rotation.x-=kick*.17;head.rotation.z=-hitSide*kick*.10-settle;
+   // One shoulder opens and the gripping wrist/knife lag behind the chest.
+   // This creates a distinct losing-guard silhouette without any flash effect.
+   shoulderR.rotation.x+=kick*.76;shoulderR.rotation.z=-hitSide*kick*.22;
+   shoulderL.rotation.x+=kick*.45;shoulderL.rotation.z=hitSide*kick*.34;
+   elbowR.rotation.x-=lag*.49;elbowL.rotation.x-=kick*.22;
+   wristR.rotation.z=hitSide*lag*.54;wristR.rotation.x=lag*.28;
+   thighR.rotation.x-=kick*.45;thighL.rotation.x-=kick*.52;
+   kneeR.rotation.x+=kick*.95;kneeL.rotation.x+=kick*1.08;
+   // Counter-rotate the boots against the two knee chains, keeping their soles
+   // flat while the knees compress instead of stabbing a heel into the stone.
+   ankleR.rotation.x-=kick*.50;ankleL.rotation.x-=kick*.56;
+   skirtR.rotation.x-=kick*.16;skirtL.rotation.x-=kick*.12;
   }
   deathAmount=lerp(deathAmount,dead?1:0,1-Math.exp(-Math.max(0,dt)*9));
   if(deathAmount>.001){hips.position.y-=deathAmount*.39;spine.rotation.x-=deathAmount*.27;chest.rotation.z+=deathAmount*.27;kneeR.rotation.x+=deathAmount*.9;kneeL.rotation.x+=deathAmount*.75;head.rotation.x+=deathAmount*.24;}

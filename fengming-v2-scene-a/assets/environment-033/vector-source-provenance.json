@@ -1,0 +1,44 @@
+{
+  "version": "H.33 original matte miniature environment painting revision3",
+  "asset": "matte-stone-atlas.webp",
+  "pixels": [
+    2048,
+    1024
+  ],
+  "cells": {
+    "left": "staggered broad paving slabs, designed bevel and thin cool-slate joints",
+    "right": "quiet blue-grey rock with three broad flowing strata"
+  },
+  "source": "Original vector masks and colour-field painting authored in tools/paint-environment-033.py; no external image input",
+  "palette": {
+    "paving": "warm grey-green midtones, 8 slabs/repeat",
+    "rock": "3–5 warm/cool grey broad planes with gentle strata",
+    "shadow": "cool slate"
+  },
+  "features": [
+    "low local contrast and no white flecks",
+    "large matte slab faces, unequal joints and sparse hand-cut corners",
+    "one broad low-contrast mineral wash on only half the slabs",
+    "subtle upper-left bevel under the existing SUN(-8,16,12)",
+    "no baked scene image or original-UV bake"
+  ],
+  "runtime": "lossless WebP, decoded RGBA equals generated RGB painting",
+  "rgba_sha256": "1cf2bb82cfa447c5c21e95222fb692cb6eea1978582465745352ca84cd18b44c",
+  "bytes": 47364,
+  "geometry_navigation_camera_changed": false,
+  "renderNormalField": {
+    "source": "Build-time filtering of existing render terrain normals over0.85 world-unit radius; no geometry positions, source normals, indices, nav or heights changed",
+    "sourceGLB": "assets/sample-runtime/terrain.glb",
+    "vertices": 19852,
+    "triangles": 30000,
+    "radiusWorld": 0.85,
+    "fieldBytes": 238224,
+    "fieldSha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5",
+    "positionSha256": "81cad158b42c56e1daaadceae5d476ac5ddd8055d9a50fe0b065ca1810366e9f",
+    "sourceNormalSha256": "c360b051fc51a379165812b535d2f8e58734301feec4d204a8a965d9eb5003f2",
+    "indexSha256": "0792ae886537cdc392b0f121b44887a250a62255e3810c67a1b4e96dca83675f",
+    "geometryUnchanged": true,
+    "buildMilliseconds": 103.724683
+  },
+  "shading": "Original SUN(-8,16,12); prefiltered slope normals only for rock mass, flat paving normals; cool-slate contact shadows; no added fog"
+}

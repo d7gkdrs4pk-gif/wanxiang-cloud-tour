@@ -1,0 +1,2409 @@
+{
+  "scope": "native touch walkthrough and one actual swing; fx=0; normal camera; no teleport/time pause/pose override; canvas-only readback removes DOM health bars",
+  "environment": "cloud Linux WebKit26.5/WPE software rendering, 390x844 DPR1; not iPhone/WeChat hardware",
+  "errors": [],
+  "captures": [
+    {
+      "label": "windup",
+      "snapshot": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "rotation": 6.609413482344557,
+        "camera": [
+          7.626657237183602,
+          27.70072736639456,
+          7.9980684587941955
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 16
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            1.184582513699091,
+            1.6738801415773001,
+            -6.4756683424807395
+          ],
+          "tip": [
+            0.17352568728501527,
+            2.1149252553387816,
+            -5.909238027800618
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774044103,
+          "started": 1795774042401,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774042401,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774042401,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774042571,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774043064,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774043200,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774043655,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774044063,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774044103,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774044565,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774044565
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0.9999986615522353,
+        "target": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.500948173398485,
+            0.02383205690897231,
+            -6.5215020164608655
+          ],
+          "hp": 3
+        },
+        "attack": 0.17692307692307693,
+        "stats": {
+          "calls": 32,
+          "triangles": 97921
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.600862270092556,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.582052528296416,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75730178493763,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464238792630503
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1712
+          },
+          {
+            "type": "ready",
+            "t": 2174,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2606,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3335,
+            "screen": [
+              304,
+              464
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -0.023373680708060007,
+              0.12268864007224696,
+              -3.020448676123557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4521,
+            "screen": [
+              314,
+              460
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.081446670644921,
+              0.1739302265168431,
+              -3.0725533623536005
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5746,
+            "screen": [
+              248,
+              326
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.0909190004074274,
+              0.03129860181891019,
+              -6.606856664430197
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7000,
+            "screen": [
+              182,
+              398
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.4754651661115803,
+              -0.00598019429718234,
+              -7.001194527895896
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7550,
+            "screen": [
+              160,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              1.5742360874713182,
+              0.714099286446104,
+              -7.003970504200076
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 7973,
+            "height": 0.6992217255453357
+          },
+          {
+            "type": "swing-start",
+            "t": 8895,
+            "p": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "facing": 4.677413482344557,
+            "aim": 1.0716381397926753
+          }
+        ]
+      },
+      "epoch": 1795774051383
+    },
+    {
+      "label": "sweep",
+      "snapshot": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "rotation": 7.338961319386444,
+        "camera": [
+          7.622745245554337,
+          27.703877184279992,
+          7.997827139123785
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 16
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            1.8742074124026669,
+            1.5972146369874152,
+            -6.518171255558456
+          ],
+          "tip": [
+            3.0063312145813095,
+            1.4712932218000072,
+            -6.028233000532607
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774044103,
+          "started": 1795774042401,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774042401,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774042401,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774042571,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774043064,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774043200,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774043655,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774044063,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774044103,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774044565,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774044565
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0.9999998360984673,
+        "target": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.500948173398485,
+            0.02383205690897231,
+            -6.5215020164608655
+          ],
+          "hp": 3
+        },
+        "attack": 0.40128205128205136,
+        "stats": {
+          "calls": 32,
+          "triangles": 97921
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.600862270092556,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.582052528296416,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75730178493763,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464238792630503
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1712
+          },
+          {
+            "type": "ready",
+            "t": 2174,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2606,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3335,
+            "screen": [
+              304,
+              464
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -0.023373680708060007,
+              0.12268864007224696,
+              -3.020448676123557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4521,
+            "screen": [
+              314,
+              460
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.081446670644921,
+              0.1739302265168431,
+              -3.0725533623536005
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5746,
+            "screen": [
+              248,
+              326
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.0909190004074274,
+              0.03129860181891019,
+              -6.606856664430197
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7000,
+            "screen": [
+              182,
+              398
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.4754651661115803,
+              -0.00598019429718234,
+              -7.001194527895896
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7550,
+            "screen": [
+              160,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              1.5742360874713182,
+              0.714099286446104,
+              -7.003970504200076
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 7973,
+            "height": 0.6992217255453357
+          },
+          {
+            "type": "swing-start",
+            "t": 8895,
+            "p": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "facing": 4.677413482344557,
+            "aim": 1.0716381397926753
+          }
+        ]
+      },
+      "epoch": 1795774051557
+    },
+    {
+      "label": "contact",
+      "snapshot": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "rotation": 7.348731703317713,
+        "camera": [
+          7.622128963896173,
+          27.704373395717365,
+          7.9977891224558775
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 26
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            1.863220918856645,
+            1.5014631877949105,
+            -6.641477499326302
+          ],
+          "tip": [
+            3.0730488439846573,
+            1.2361272978138018,
+            -6.582204764714324
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0.045,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774044103,
+          "started": 1795774042401,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774042401,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774042401,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774042571,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774043064,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774043200,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774043655,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774044063,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774044103,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774044565,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774044565
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0.9999999796869032,
+        "target": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.6150863322791444,
+            0.031974037363280236,
+            -6.459272757367305
+          ],
+          "hp": 2
+        },
+        "attack": 0.44,
+        "stats": {
+          "calls": 32,
+          "triangles": 97921
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.600862270092556,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.582052528296416,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75730178493763,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464238792630503
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1712
+          },
+          {
+            "type": "ready",
+            "t": 2174,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2606,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3335,
+            "screen": [
+              304,
+              464
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -0.023373680708060007,
+              0.12268864007224696,
+              -3.020448676123557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4521,
+            "screen": [
+              314,
+              460
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.081446670644921,
+              0.1739302265168431,
+              -3.0725533623536005
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5746,
+            "screen": [
+              248,
+              326
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.0909190004074274,
+              0.03129860181891019,
+              -6.606856664430197
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7000,
+            "screen": [
+              182,
+              398
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.4754651661115803,
+              -0.00598019429718234,
+              -7.001194527895896
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7550,
+            "screen": [
+              160,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              1.5742360874713182,
+              0.714099286446104,
+              -7.003970504200076
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 7973,
+            "height": 0.6992217255453357
+          },
+          {
+            "type": "swing-start",
+            "t": 8895,
+            "p": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "facing": 4.677413482344557,
+            "aim": 1.0716381397926753
+          },
+          {
+            "type": "hit",
+            "t": 9325,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "enemy": [
+              2.6150863322791444,
+              0.031974037363280236,
+              -6.459272757367305
+            ],
+            "blade": [
+              3.0730488439846573,
+              1.2361272978138018,
+              -6.582204764714324
+            ],
+            "impact": [
+              2.6541407983110283,
+              1.328000974070116,
+              -6.602728200239594
+            ]
+          }
+        ]
+      },
+      "epoch": 1795774051743
+    },
+    {
+      "label": "follow",
+      "snapshot": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "rotation": 7.354622168449533,
+        "camera": [
+          7.620630684343381,
+          27.705579765306055,
+          7.997696697838923
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 2,
+          "visualMs": 0,
+          "renderMs": 15
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            1.6556176563867755,
+            1.3619964307445909,
+            -6.988033119061469
+          ],
+          "tip": [
+            2.3140850352739024,
+            1.1787182494544481,
+            -8.022648902434453
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774044103,
+          "started": 1795774042401,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774042401,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774042401,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774042571,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774043064,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774043200,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774043655,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774044063,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774044103,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774044565,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774044565
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0.9999999968378068,
+        "target": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.6150863322791444,
+            0.031974037363280236,
+            -6.459272757367305
+          ],
+          "hp": 2
+        },
+        "attack": 0.6387179487179487,
+        "stats": {
+          "calls": 32,
+          "triangles": 97921
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.600862270092556,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.582052528296416,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75730178493763,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464238792630503
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1712
+          },
+          {
+            "type": "ready",
+            "t": 2174,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2606,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3335,
+            "screen": [
+              304,
+              464
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -0.023373680708060007,
+              0.12268864007224696,
+              -3.020448676123557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4521,
+            "screen": [
+              314,
+              460
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.081446670644921,
+              0.1739302265168431,
+              -3.0725533623536005
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5746,
+            "screen": [
+              248,
+              326
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.0909190004074274,
+              0.03129860181891019,
+              -6.606856664430197
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7000,
+            "screen": [
+              182,
+              398
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.4754651661115803,
+              -0.00598019429718234,
+              -7.001194527895896
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7550,
+            "screen": [
+              160,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              1.5742360874713182,
+              0.714099286446104,
+              -7.003970504200076
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 7973,
+            "height": 0.6992217255453357
+          },
+          {
+            "type": "swing-start",
+            "t": 8895,
+            "p": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "facing": 4.677413482344557,
+            "aim": 1.0716381397926753
+          },
+          {
+            "type": "hit",
+            "t": 9325,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "enemy": [
+              2.6150863322791444,
+              0.031974037363280236,
+              -6.459272757367305
+            ],
+            "blade": [
+              3.0730488439846573,
+              1.2361272978138018,
+              -6.582204764714324
+            ],
+            "impact": [
+              2.6541407983110283,
+              1.328000974070116,
+              -6.602728200239594
+            ]
+          }
+        ]
+      },
+      "epoch": 1795774051932
+    },
+    {
+      "label": "recover",
+      "snapshot": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "rotation": 7.354819163818347,
+        "camera": [
+          7.61975254798136,
+          27.706286814267575,
+          7.997642528096874
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 14
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            1.713144389584755,
+            1.4349938037012504,
+            -6.541625809257279
+          ],
+          "tip": [
+            2.906277851070217,
+            1.383042075132068,
+            -6.2079589679583655
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774044103,
+          "started": 1795774042401,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774042401,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774042401,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774042571,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774043064,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774043200,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774043655,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774044063,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774044103,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774044565,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774044565
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0.9999999996127691,
+        "target": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.568992075808109,
+            0.02868592974211281,
+            -6.484403804308935
+          ],
+          "hp": 2
+        },
+        "attack": 0.863076923076923,
+        "stats": {
+          "calls": 32,
+          "triangles": 97921
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.600862270092556,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.582052528296416,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75730178493763,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464238792630503
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1712
+          },
+          {
+            "type": "ready",
+            "t": 2174,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2606,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3335,
+            "screen": [
+              304,
+              464
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -0.023373680708060007,
+              0.12268864007224696,
+              -3.020448676123557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4521,
+            "screen": [
+              314,
+              460
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.081446670644921,
+              0.1739302265168431,
+              -3.0725533623536005
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5746,
+            "screen": [
+              248,
+              326
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.0909190004074274,
+              0.03129860181891019,
+              -6.606856664430197
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7000,
+            "screen": [
+              182,
+              398
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.4754651661115803,
+              -0.00598019429718234,
+              -7.001194527895896
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7550,
+            "screen": [
+              160,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              1.5742360874713182,
+              0.714099286446104,
+              -7.003970504200076
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 7973,
+            "height": 0.6992217255453357
+          },
+          {
+            "type": "swing-start",
+            "t": 8895,
+            "p": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "facing": 4.677413482344557,
+            "aim": 1.0716381397926753
+          },
+          {
+            "type": "hit",
+            "t": 9325,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "enemy": [
+              2.6150863322791444,
+              0.031974037363280236,
+              -6.459272757367305
+            ],
+            "blade": [
+              3.0730488439846573,
+              1.2361272978138018,
+              -6.582204764714324
+            ],
+            "impact": [
+              2.6541407983110283,
+              1.328000974070116,
+              -6.602728200239594
+            ]
+          }
+        ]
+      },
+      "epoch": 1795774052105
+    },
+    {
+      "label": "rest",
+      "snapshot": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "rotation": 7.354823216081452,
+        "camera": [
+          7.619313050866887,
+          27.706640684112646,
+          7.997615416766159
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 1,
+          "renderMs": 12
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14.000000000000002
+        },
+        "blade": {
+          "base": [
+            1.6189056830327646,
+            1.5103306422733778,
+            -6.397338645003077
+          ],
+          "tip": [
+            2.2970099264576382,
+            1.8748313110328607,
+            -5.425271827586153
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774044103,
+          "started": 1795774042401,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774042401,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774042401,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774042571,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774043064,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774043200,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774043655,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774044063,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774044103,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774044565,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774044565
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0.9999999999537056,
+        "target": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.5223710278345473,
+            0.025360243745945015,
+            -6.509822063215613
+          ],
+          "hp": 2
+        },
+        "attack": null,
+        "stats": {
+          "calls": 32,
+          "triangles": 97921
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.600862270092556,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.582052528296416,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75730178493763,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464238792630503
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1712
+          },
+          {
+            "type": "ready",
+            "t": 2174,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2606,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3335,
+            "screen": [
+              304,
+              464
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              -0.023373680708060007,
+              0.12268864007224696,
+              -3.020448676123557
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 4521,
+            "screen": [
+              314,
+              460
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.081446670644921,
+              0.1739302265168431,
+              -3.0725533623536005
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5746,
+            "screen": [
+              248,
+              326
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.0909190004074274,
+              0.03129860181891019,
+              -6.606856664430197
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7000,
+            "screen": [
+              182,
+              398
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.4754651661115803,
+              -0.00598019429718234,
+              -7.001194527895896
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7550,
+            "screen": [
+              160,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              1.5742360874713182,
+              0.714099286446104,
+              -7.003970504200076
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 7973,
+            "height": 0.6992217255453357
+          },
+          {
+            "type": "swing-start",
+            "t": 8895,
+            "p": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "facing": 4.677413482344557,
+            "aim": 1.0716381397926753
+          },
+          {
+            "type": "hit",
+            "t": 9325,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6188863245369738,
+              0.7069842713064673,
+              -7.002410906771069
+            ],
+            "enemy": [
+              2.6150863322791444,
+              0.031974037363280236,
+              -6.459272757367305
+            ],
+            "blade": [
+              3.0730488439846573,
+              1.2361272978138018,
+              -6.582204764714324
+            ],
+            "impact": [
+              2.6541407983110283,
+              1.328000974070116,
+              -6.602728200239594
+            ]
+          },
+          {
+            "type": "swing-recovered",
+            "t": 9876
+          }
+        ]
+      },
+      "epoch": 1795774052281
+    }
+  ],
+  "final": {
+    "version": "H.33 miniature gate art sample",
+    "ready": true,
+    "position": [
+      1.6188863245369738,
+      0.7069842713064673,
+      -7.002410906771069
+    ],
+    "rotation": 7.354823216081452,
+    "camera": [
+      7.618897984288774,
+      27.706974883225346,
+      7.9975898124859555
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0,
+      "visualMs": 1,
+      "renderMs": 14
+    },
+    "kinematics": {
+      "maxYawRadPerSec": 14.000000000000002
+    },
+    "blade": {
+      "base": [
+        1.6188931918201022,
+        1.5057090501859902,
+        -6.3973157342176314
+      ],
+      "tip": [
+        2.2969949030839456,
+        1.8702020437343658,
+        -5.4252442724231855
+      ]
+    },
+    "hero": {
+      "triangles": 16026,
+      "materials": 7,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H33 swept hair / separated sword arm / split riding robe",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+    },
+    "hitPause": 0,
+    "startup": {
+      "version": "H.33",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795774044103,
+      "started": 1795774042401,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795774042401,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795774042401,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795774042571,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795774043064,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795774043200,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795774043655,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795774044063,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795774044103,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795774044565,
+          "progress": 1
+        }
+      ],
+      "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+      "readyAt": 1795774044565
+    },
+    "pathNodes": [],
+    "guideIndex": 0,
+    "roofCut": 0.9999999999999991,
+    "target": [
+      1.6188863245369738,
+      0.7069842713064673,
+      -7.002410906771069
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": true,
+      "hit": true
+    },
+    "enemy": {
+      "p": [
+        2.4923439121905586,
+        0.023218276664648756,
+        -6.526193145223304
+      ],
+      "hp": 2
+    },
+    "attack": null,
+    "stats": {
+      "calls": 32,
+      "triangles": 97921
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.60088382095251,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.582073691024505,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.75732263346374,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.464259955358592
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 1712
+      },
+      {
+        "type": "ready",
+        "t": 2174,
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "revision": "H33",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.34,
+          "hitPeak": 0.075,
+          "hitHoldUntil": 0.125,
+          "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 2606,
+        "screen": [
+          182,
+          458
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          -3.105130010808179,
+          0.08318045905546588,
+          -3.055621480461072
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 3335,
+        "screen": [
+          304,
+          464
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 0,
+        "goal": [
+          -0.023373680708060007,
+          0.12268864007224696,
+          -3.020448676123557
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 4521,
+        "screen": [
+          314,
+          460
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          3.081446670644921,
+          0.1739302265168431,
+          -3.0725533623536005
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 5746,
+        "screen": [
+          248,
+          326
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 0,
+        "goal": [
+          3.0909190004074274,
+          0.03129860181891019,
+          -6.606856664430197
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 7000,
+        "screen": [
+          182,
+          398
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 2,
+        "goal": [
+          2.4754651661115803,
+          -0.00598019429718234,
+          -7.001194527895896
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 7550,
+        "screen": [
+          160,
+          392
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 2,
+        "goal": [
+          1.5742360874713182,
+          0.714099286446104,
+          -7.003970504200076
+        ]
+      },
+      {
+        "type": "stairs-top",
+        "t": 7973,
+        "height": 0.6992217255453357
+      },
+      {
+        "type": "swing-start",
+        "t": 8895,
+        "p": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "facing": 4.677413482344557,
+        "aim": 1.0716381397926753
+      },
+      {
+        "type": "hit",
+        "t": 9325,
+        "enemyHP": 2,
+        "attackProgress": 0.44,
+        "player": [
+          1.6188863245369738,
+          0.7069842713064673,
+          -7.002410906771069
+        ],
+        "enemy": [
+          2.6150863322791444,
+          0.031974037363280236,
+          -6.459272757367305
+        ],
+        "blade": [
+          3.0730488439846573,
+          1.2361272978138018,
+          -6.582204764714324
+        ],
+        "impact": [
+          2.6541407983110283,
+          1.328000974070116,
+          -6.602728200239594
+        ]
+      },
+      {
+        "type": "swing-recovered",
+        "t": 9876
+      }
+    ]
+  }
+}

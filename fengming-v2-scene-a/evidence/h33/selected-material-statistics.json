@@ -1,0 +1,33 @@
+{
+  "scope": "Normal390x844 gameplay image patches, selected ImageGen handpainted atlas; art comparison only",
+  "regions": {
+    "foreground_path": {
+      "h32": {
+        "meanLuma": 126.87835740774078,
+        "localEdgeMean": 3.288942045729494,
+        "localEdgeP95": 11.927800000000005,
+        "p95Luma": 142.5262
+      },
+      "h33Handpainted": {
+        "meanLuma": 111.33167245124513,
+        "localEdgeMean": 2.3368269114444713,
+        "localEdgeP95": 9.85560000000001,
+        "p95Luma": 128.57655999999997
+      }
+    },
+    "left_rock_bank": {
+      "h32": {
+        "meanLuma": 101.54070836363636,
+        "localEdgeMean": 3.351466010928962,
+        "localEdgeP95": 11.49091999999999,
+        "p95Luma": 121.25186
+      },
+      "h33Handpainted": {
+        "meanLuma": 93.94972297727271,
+        "localEdgeMean": 1.6967865516249636,
+        "localEdgeP95": 5.643000000000015,
+        "p95Luma": 113.16180999999993
+      }
+    }
+  }
+}

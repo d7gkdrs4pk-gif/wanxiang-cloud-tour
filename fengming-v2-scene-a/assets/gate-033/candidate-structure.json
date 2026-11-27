@@ -1,0 +1,94 @@
+{
+  "candidate": true,
+  "artApproved": false,
+  "revision": "H33",
+  "shading": "pbr",
+  "nearArchitectureFog": false,
+  "materialTypes": [
+    "MeshStandardMaterial",
+    "MeshStandardMaterial",
+    "MeshStandardMaterial",
+    "MeshBasicMaterial"
+  ],
+  "source": "original project-authored fitted upper gate geometry",
+  "sourceModel": "assets/sample-lod/gate.glb",
+  "sourceTriangles": 33000,
+  "retainedTriangles": 21403,
+  "removedTriangles": 11597,
+  "newTriangles": 24030,
+  "newDrawCalls": 4,
+  "materials": 4,
+  "tileStrips": 116,
+  "tileSegmentsPerStrip": 6,
+  "eaveDepth": 0.2,
+  "perTileBrightFlecks": false,
+  "columnFeet": [
+    {
+      "x": -1.25,
+      "z": -10.45,
+      "stoneContactY": 0.15,
+      "postBottomY": 0.28
+    },
+    {
+      "x": -1.25,
+      "z": -5.15,
+      "stoneContactY": 0.15,
+      "postBottomY": 0.28
+    },
+    {
+      "x": 1.25,
+      "z": -10.45,
+      "stoneContactY": 0.7,
+      "postBottomY": 0.83
+    },
+    {
+      "x": 1.25,
+      "z": -5.15,
+      "stoneContactY": 0.7,
+      "postBottomY": 0.83
+    }
+  ],
+  "plaqueText": "凤鸣",
+  "protectY": 1.2,
+  "worldBounds": [
+    [
+      -2.433826685384108,
+      0.1499999999999999,
+      -11.997500357180042
+    ],
+    [
+      2.4338266853841075,
+      7.405627847991839,
+      -3.6021968648641502
+    ]
+  ],
+  "roofs": [
+    {
+      "name": "front lower pavilion",
+      "z": -4.82,
+      "hx": 2.25,
+      "hz": 1.17,
+      "eave": 3.86,
+      "rise": 1.1
+    },
+    {
+      "name": "back lower pavilion",
+      "z": -10.78,
+      "hx": 2.25,
+      "hz": 1.17,
+      "eave": 3.86,
+      "rise": 1.1
+    },
+    {
+      "name": "upper central pavilion",
+      "z": -7.85,
+      "hx": 1.96,
+      "hz": 2.53,
+      "eave": 5.72,
+      "rise": 1.18
+    }
+  ],
+  "lower_indices_exact": true,
+  "lower_original_attributes_preserved": true,
+  "scope": "CPU geometry candidate validation, no normal-camera approval"
+}

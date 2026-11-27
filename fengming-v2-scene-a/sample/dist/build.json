@@ -1,7 +1,7 @@
 {
-  "version": "H.32",
-  "sha256": "7227555ee88151a29d8689b40ffcc6959694e1f92cb153696dc1e07bcdb76bb2",
-  "bytes": 1747296,
+  "version": "H.33",
+  "sha256": "972b17a94866715dd7bbe722be0ce223cfbbc652d25376283683bfdaa314947d",
+  "bytes": 1701020,
   "format": "classic IIFE",
   "target": "Safari 15+",
   "three": "0.170.0",

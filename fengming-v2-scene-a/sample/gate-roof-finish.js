@@ -1,4 +1,4 @@
-/** H32 OPTIONAL architectural repair candidate, original project-authored geometry.
+/** H33 coherent miniature architecture, original project-authored geometry.
  * Call ONLY after the source gate has its final world transform AND styleGate,
  * before prepareRoof / createRoofOcclusion. Existing source GLB is never edited.
  *
@@ -21,7 +21,9 @@ const clamp=T.MathUtils.clamp;
 const blend=T.MathUtils.lerp;
 const V=(x,y,z)=>new T.Vector3(x,y,z);
 const installed=new WeakMap();
-const colors={tile:0x273e44,tileLight:0x354c50,tileDark:0x1c2d33,ink:0x172e35,wood:0x352d27,woodLit:0x4b3b2e,woodDark:0x242625,gold:0x927b43,goldEdge:0xaf955b};
+// Close-value, cool grey clay. The roof reads as one hand-finished mass at the
+// original phone camera; patina never selects conspicuous pale random tiles.
+const colors={tile:0x2a3c44,tileLight:0x2f424a,tileDark:0x1e3038,ink:0x182c33,wood:0x382f29,woodLit:0x493d31,woodDark:0x232726,soffit:0x192728,stoneFoot:0x2d3b3d,gold:0x86764b,goldEdge:0xa18d60};
 
 export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
  const materialMode=shading==='light'?'light':'pbr';
@@ -43,19 +45,19 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
   const lower=source.clone();lower.setIndex(kept);lower.clearGroups();lower.addGroup(0,kept.length,0);lower.computeBoundingBox();lower.computeBoundingSphere();
   original.push({mesh,geometry:source,replacement:lower});mesh.geometry=lower;
  });
- const group=new T.Group();group.name='H32 OPTIONAL coherent curved tiled gate';
+ const group=new T.Group();group.name='H33 thick-eaved cool-grey miniature gate';
  const inv=gate.matrixWorld.clone().invert();
  const litOptions={color:0xffffff,vertexColors:true,fog:false};
  // The light path is still directional + hemisphere-lit: Lambert computes
  // diffuse lighting per vertex, rather than dropping the roof to a color plate.
  // Geometry, normals, broad patina and ink/under-eave vertex colors are shared.
  const mats=[
-  materialMode==='light'?new T.MeshLambertMaterial(litOptions):new T.MeshStandardMaterial({...litOptions,roughness:.94,metalness:.025}),
+  materialMode==='light'?new T.MeshLambertMaterial(litOptions):new T.MeshStandardMaterial({...litOptions,roughness:.99,metalness:0}),
   materialMode==='light'?new T.MeshLambertMaterial(litOptions):new T.MeshStandardMaterial({...litOptions,roughness:.98,metalness:0}),
-  new T.MeshStandardMaterial({...litOptions,roughness:.66,metalness:.40}),
+  new T.MeshStandardMaterial({...litOptions,roughness:.83,metalness:.22}),
  ];
  if(shading==='light'){mats[0].color.setRGB(3.2,3.2,3.2);mats[1].color.setRGB(2.,2.,2.);}
- mats.forEach((m,i)=>{m.name=['H32 blue-teal barrel tiles','H32 ink fascia and deep timber','H32 weathered ridge bronze'][i];m.side=T.DoubleSide;});
+ mats.forEach((m,i)=>{m.name=['H33 matte cool-grey barrel tiles','H33 deep eaves and grounded timber','H33 restrained old bronze'][i];m.side=T.DoubleSide;});
  const arrays=mats.map(()=>({p:[],n:[],c:[],idx:[]}));
  function add(geometry,material,color,shade=1){
   const a=arrays[material],p=geometry.attributes.position,n=geometry.attributes.normal,off=a.p.length/3,col=new T.Color(color),N=new T.Vector3(),P=new T.Vector3();
@@ -63,8 +65,8 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
   for(let i=0;i<p.count;i++){
    P.fromBufferAttribute(p,i);const world=P.clone();P.applyMatrix4(inv);N.fromBufferAttribute(n,i).applyMatrix3(normalMat).normalize();
    // Subtle color variation stays broad and coherent; no busy texture fragments.
-   const weather=material===0?(.97+.040*Math.sin(world.x*1.9+world.z*.73)+.022*Math.cos(world.z*3.4+world.x*.4)):1;
-   const grain=shade*weather*(.98+.018*Math.sin(world.x*13+world.z*17+world.y*8));
+   const weather=material===0?(.99+.028*Math.sin(world.x*.83+world.z*.53)+.012*Math.cos(world.z*1.21+world.x*.3)):1;
+   const grain=shade*weather*(material===1?(.99+.012*Math.sin(world.x*.9+world.z*.7+world.y*2.6)):1);
    a.p.push(P.x,P.y,P.z);a.n.push(N.x,N.y,N.z);a.c.push(col.r*grain,col.g*grain,col.b*grain);
   }
   const I=geometry.index;if(I)for(let i=0;i<I.count;i++)a.idx.push(off+I.getX(i));else for(let i=0;i<p.count;i++)a.idx.push(off+i);
@@ -105,17 +107,20 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
  let tileStrips=0;
  for(const [ri,cfg] of roofs.entries()){
   // Continuous substrate and dark underside carry honest thickness.
-  const nx=12,nz=cfg.rows,p=[],idx=[];
+  const nx=12,nz=cfg.rows,p=[],topIdx=[],underIdx=[];
   for(let side=0;side<2;side++)for(let j=0;j<=nz;j++)for(let i=0;i<=nx;i++){
-   const x=-cfg.hx+2*cfg.hx*i/nx,z=cfg.z-cfg.hz+2*cfg.hz*j/nz,y=surface(cfg,x,z)-(side?.15:0);p.push(x,y,z);
+   const x=-cfg.hx+2*cfg.hx*i/nx,z=cfg.z-cfg.hz+2*cfg.hz*j/nz,y=surface(cfg,x,z)-(side?.20:0);p.push(x,y,z);
   }
   const layer=(nx+1)*(nz+1);
   for(let j=0;j<nz;j++)for(let i=0;i<nx;i++){
-   let a=j*(nx+1)+i,b=a+nx+1;idx.push(a,b,a+1,a+1,b,b+1);a+=layer;b+=layer;idx.push(a,a+1,b,a+1,b+1,b);
+   let a=j*(nx+1)+i,b=a+nx+1;topIdx.push(a,b,a+1,a+1,b,b+1);a+=layer;b+=layer;underIdx.push(a,a+1,b,a+1,b+1,b);
   }
-  for(let j=0;j<nz;j++)for(const i of [0,nx]){const a=j*(nx+1)+i,b=a+nx+1;idx.push(a,a+layer,b,b,a+layer,b+layer);}
-  for(let i=0;i<nx;i++)for(const j of [0,nz]){const a=j*(nx+1)+i,b=a+1;idx.push(a,b,a+layer,b,b+layer,a+layer);}
-  meshData(p,idx,0,colors.tileDark);
+  for(let j=0;j<nz;j++)for(const i of [0,nx]){const a=j*(nx+1)+i,b=a+nx+1;underIdx.push(a,a+layer,b,b,a+layer,b+layer);}
+  for(let i=0;i<nx;i++)for(const j of [0,nz]){const a=j*(nx+1)+i,b=a+1;underIdx.push(a,b,a+layer,b,b+layer,a+layer);}
+  meshData(p,topIdx,0,colors.tileDark);
+  // A closed, genuinely deep soffit has its own ink-stained timber colors.
+  // It shares the existing timber batch: no shadow map or extra draw call.
+  meshData(p,underIdx,1,colors.soffit,.88);
   // Individual convex barrel strips follow the whole curved surface. They are
   // not texture stripes or simple triangular plates; the scalloped end is solid.
   for(let row=0;row<cfg.rows;row++){
@@ -139,23 +144,27 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
      // A narrow dark clay return at the exposed tile lip has actual thickness.
      const base=pos.length/3;for(let k=0;k<=cross;k++){const a=k/cross*Math.PI,z=zc-Math.cos(a)*half,x=sign*cfg.hx*u1,y=surface(cfg,x,z)+.011+Math.sin(a)*half*.69;pos.push(x,y,z);}
      for(let k=0;k<cross;k++){const a=(cross+1)+k,b=base+k;if(sign>0)ind.push(a,b,a+1,a+1,b,b+1);else ind.push(a,a+1,b,a+1,b+1,b);}
-     const tone=.94+.065*Math.sin(row*1.41+tile*.67+ri*.7);meshData(pos,ind,0,(row+tile)%11===0?colors.tileLight:colors.tile,tone);
+     const tone=.99+.018*Math.sin(row*.24+tile*.31+ri*.7);meshData(pos,ind,0,colors.tile,tone);
     }
     tileStrips++;
     const cx=sign*(cfg.hx+.012),cy=surface(cfg,sign*cfg.hx,zc)+.027,r=half*.82,cap=[cx+sign*.018,cy,zc],ci=[];
     for(let j=0;j<=8;j++){const a=j/8*Math.PI*2;cap.push(cx,cy+Math.cos(a)*r,zc+Math.sin(a)*r);if(j<8)ci.push(0,j+1,j+2);}
-    meshData(cap,ci,0,colors.tileLight,.92);
+    meshData(cap,ci,0,colors.tile,.94);
    }
   }
   // Swept fascia around the perimeter; four corners curl up as the source does.
   for(const sign of [-1,1]){
    const path=[];
-   for(let j=0;j<=12;j++){const z=cfg.z-cfg.hz+2*cfg.hz*j/12;path.push([sign*(cfg.hx+.01),surface(cfg,sign*cfg.hx,z)-.075,z]);}
-   fascia(path,.10,.16,1,colors.ink,16);
+   for(let j=0;j<=12;j++){const z=cfg.z-cfg.hz+2*cfg.hz*j/12;path.push([sign*(cfg.hx+.01),surface(cfg,sign*cfg.hx,z)-.10,z]);}
+   fascia(path,.12,.21,1,colors.ink,16);
+   // A narrow curved clay drip edge makes top/lip/soffit distinguishable even
+   // when individual tile lips collapse to a single pixel on a phone.
+   fascia(path.map(([x,y,z])=>[x,y+.083,z]),.13,.035,0,colors.tileDark,16);
   }
   for(const sign of [-1,1]){
-   const path=[];for(let j=0;j<=16;j++){const x=-cfg.hx+2*cfg.hx*j/16,z=cfg.z+sign*cfg.hz;path.push([x,surface(cfg,x,z)-.07,z]);}
-   fascia(path,.09,.14,1,colors.ink,20);
+   const path=[];for(let j=0;j<=16;j++){const x=-cfg.hx+2*cfg.hx*j/16,z=cfg.z+sign*cfg.hz;path.push([x,surface(cfg,x,z)-.10,z]);}
+   fascia(path,.085,.21,1,colors.ink,20);
+   fascia(path.map(([x,y,z])=>[x,y+.083,z]),.095,.035,0,colors.tileDark,20);
   }
   // Raised continuous ridge with small aged-bronze hooked ends; no gold balls.
   const ridgeHalf=cfg.hz*(1-cfg.hip*.68),ridgeY=cfg.eave+cfg.rise+.075;
@@ -171,13 +180,21 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
    tube(path,Array(path.length).fill(.034),1,colors.ink,16,5);
   }
  }
- // Straight deep timber grows from retained stone feet. No authored lower
- // step, collision or walkable face is changed; this is above-floor structure.
+ // Straight timber now reaches the retained stone support instead of starting
+ // at the arbitrary Y=1.2 cut. The source inner-left bases are at Y~.154; the
+ // right stone platform is at Y~.71. Feet overlap those supports a few cm, and
+ // stay within the original column footprints; original steps/nav are intact.
+ const columnFeet=[];
  for(const x of [-1.25,1.25])for(const z of [-10.45,-5.15]){
-  cylinder(.155,.14,2.40,x,2.40,z,1,colors.wood,12);
-  cylinder(.185,.18,.12,x,1.29,z,1,colors.woodDark,12);
+  const footY=x<0?.15:.70,postY=footY+.13;
+  cylinder(.205,.19,.14,x,footY+.07,z,0,colors.stoneFoot,12);
+  cylinder(.18,.16,.08,x,footY+.17,z,1,colors.woodDark,12);
+  cylinder(.155,.14,3.60-postY,x,(3.60+postY)*.5,z,1,colors.wood,12);
+  // Dark timber shoe/collar gives contact depth without a floating blob decal.
+  cylinder(.159,.156,.21,x,footY+.285,z,1,colors.woodDark,12);
   cylinder(.185,.185,.10,x,3.52,z,1,colors.woodDark,12);
-  for(const y of [1.57,3.29])cylinder(.158,.158,.036,x,y,z,2,colors.gold,12);
+  cylinder(.158,.158,.028,x,3.29,z,2,colors.gold,12);
+  columnFeet.push({x,z,stoneContactY:footY,postBottomY:postY});
  }
  for(const z of [-10.45,-5.15]){
   cube(2.94,.24,.25,0,3.54,z,1,colors.woodDark);
@@ -200,8 +217,8 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
  // warped texture islands. Their depth shadows are carried by real geometry.
  for(const cfg of roofs)for(const sign of [-1,1])for(let i=0;i<cfg.rows;i+=2){
   const z=cfg.z-cfg.hz+.13+(2*cfg.hz-.26)*(i+.5)/cfg.rows;
-  const x=sign*(cfg.hx-.16),y=surface(cfg,x,z)-.20;
-  cube(.47,.09,.083,x,y,z,1,colors.woodDark);
+  const x=sign*(cfg.hx-.16),y=surface(cfg,x,z)-.245;
+  cube(.47,.105,.083,x,y,z,1,colors.woodDark);
  }
  // A modest road-facing wooden name plaque, not an emissive HUD or an
  // external image: system CJK glyphs are rendered into a tiny local canvas.
@@ -219,14 +236,14 @@ export function finishGateRoof(gate,{protectY=1.2,shading='pbr'}={}){
  const meshes=[];
  for(let mi=0;mi<arrays.length;mi++){
   const a=arrays[mi],g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(a.p,3));g.setAttribute('normal',new T.Float32BufferAttribute(a.n,3));g.setAttribute('color',new T.Float32BufferAttribute(a.c,3));g.setIndex(a.idx);g.computeBoundingBox();g.computeBoundingSphere();
-  const mesh=new T.Mesh(g,mats[mi]);mesh.name=['H32 continuous thick barrel-tiled roofs','H32 ink cornice and curved timber framework','H32 restrained old-gold ridge hooks'][mi];mesh.castShadow=mesh.receiveShadow=false;mesh.userData.role=mi===0?'roof':'gate-structure';group.add(mesh);meshes.push(mesh);
+  const mesh=new T.Mesh(g,mats[mi]);mesh.name=['H33 quiet cool-grey barrel-tiled roofs','H33 thick ink eaves and grounded framework','H33 restrained old-bronze ridge hooks'][mi];mesh.castShadow=mesh.receiveShadow=false;mesh.userData.role=mi===0?'roof':'gate-structure';group.add(mesh);meshes.push(mesh);
  }
  if(plaqueMesh)meshes.push(plaqueMesh);
  gate.add(group);gate.updateMatrixWorld(true);
  const bounds=new T.Box3();
  // Used-index bounds, rather than unused upper vertices retained in lower buffers.
  gate.traverse(o=>{if(!o.isMesh||!o.geometry?.attributes.position)return;const p=o.geometry.attributes.position,I=o.geometry.index,n=I?I.count:p.count;for(let i=0;i<n;i++)bounds.expandByPoint(scratch.fromBufferAttribute(p,I?I.getX(i):i).applyMatrix4(o.matrixWorld));});
- const stats={candidate:true,artApproved:false,shading:materialMode,nearArchitectureFog:false,materialTypes:mats.map(m=>m.type),source:'original project-authored fitted upper gate geometry',sourceModel:'assets/sample-lod/gate.glb',...cutStats,newTriangles:arrays.reduce((n,a)=>n+a.idx.length/3,0)+(plaqueMesh?2:0),newDrawCalls:meshes.length,materials:mats.length,tileStrips,tileSegmentsPerStrip:6,plaqueText:plaqueMesh?'凤鸣':null,protectY,worldBounds:[bounds.min.toArray(),bounds.max.toArray()],roofs:roofs.map(({name,z,hx,hz,eave,rise})=>({name,z,hx,hz,eave,rise}))};
+ const stats={candidate:true,artApproved:false,revision:'H33',shading:materialMode,nearArchitectureFog:false,materialTypes:mats.map(m=>m.type),source:'original project-authored fitted upper gate geometry',sourceModel:'assets/sample-lod/gate.glb',...cutStats,newTriangles:arrays.reduce((n,a)=>n+a.idx.length/3,0)+(plaqueMesh?2:0),newDrawCalls:meshes.length,materials:mats.length,tileStrips,tileSegmentsPerStrip:6,eaveDepth:.20,perTileBrightFlecks:false,columnFeet,plaqueText:plaqueMesh?'凤鸣':null,protectY,worldBounds:[bounds.min.toArray(),bounds.max.toArray()],roofs:roofs.map(({name,z,hx,hz,eave,rise})=>({name,z,hx,hz,eave,rise}))};
  let active=true;
  function restore(){if(!active)return;active=false;for(const o of original){o.mesh.geometry=o.geometry;o.replacement.dispose();}group.removeFromParent();for(const m of meshes)m.geometry.dispose();for(const m of mats)m.dispose();plaqueTexture?.dispose();delete gate.userData.finish032Installed;delete gate.userData.roofFinishStats;installed.delete(gate);}
  const result={group,meshes,materials:mats,stats,restore};gate.userData.finish032Installed=true;gate.userData.roofFinishStats=stats;installed.set(gate,result);return result;

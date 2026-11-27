@@ -1,0 +1,286 @@
+{
+  "version": "H33 sculpted silhouette hero v1",
+  "sourceGenerator": {
+    "path": ".github/scripts/lib/linyan-h33-generator.mjs",
+    "sha256": "e44c35f1532b560b606e8bb6efb50a12ff834554a2e71f56a7909197adf951f8"
+  },
+  "encoding": "Raw original TypedArray bytes in base64; lazy cached decode; no quantization or optimization",
+  "endian": "little",
+  "module": {
+    "file": "linyan-h33-baked.js",
+    "bytes": 1007321,
+    "gzipBytes": 338816,
+    "sha256": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169"
+  },
+  "geometries": {
+    "body": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 27630,
+          "count": 9210,
+          "bytes": 110520,
+          "sha256": "e9b198442af04dc5e427419872dc4b6ae879f4da39581f647e0715f93811aa3d"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 27630,
+          "count": 9210,
+          "bytes": 110520,
+          "sha256": "f3978075937deb0a353d2feb5eec6faa408a5f550063ec5ad2607d4e5b7b8423"
+        },
+        "color": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 27630,
+          "count": 9210,
+          "bytes": 110520,
+          "sha256": "5735312861f6e8ee48d24ad2db7b9aeac85712aff8b5ad70747d6db5adc602c2"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 18420,
+          "count": 9210,
+          "bytes": 73680,
+          "sha256": "51da9aa0e0939d0722898e6e707a0a1479cb9192798dc0bff1cb9576beb2985b"
+        },
+        "skinIndex": {
+          "itemSize": 4,
+          "normalized": false,
+          "type": "Uint16Array",
+          "length": 36840,
+          "count": 9210,
+          "bytes": 73680,
+          "sha256": "cc98bde7edb43875a1301caf36381f786959fafa5aac564923e0a5d8bd5fba08"
+        },
+        "skinWeight": {
+          "itemSize": 4,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 36840,
+          "count": 9210,
+          "bytes": 147360,
+          "sha256": "7c40ca2d3dc96ab89f80c62e5bbc98c49aad243a040332e98e65332a60a944db"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 46950,
+        "count": 46950,
+        "bytes": 93900,
+        "sha256": "15b702d8ac0fdb47b9aa0784397cd770995fba0fef1c1a4d2531a46937cae442"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 32304,
+          "materialIndex": 0
+        },
+        {
+          "start": 32304,
+          "count": 4596,
+          "materialIndex": 1
+        },
+        {
+          "start": 36900,
+          "count": 3204,
+          "materialIndex": 2
+        },
+        {
+          "start": 40104,
+          "count": 792,
+          "materialIndex": 3
+        },
+        {
+          "start": 40896,
+          "count": 1860,
+          "materialIndex": 4
+        },
+        {
+          "start": 42756,
+          "count": 4194,
+          "materialIndex": 6
+        }
+      ],
+      "vertices": 9210,
+      "triangles": 15650,
+      "boundingSphere": {
+        "center": [
+          0,
+          0.7495000073686242,
+          -0.06630000472068787
+        ],
+        "radius": 0.7891380163807441
+      },
+      "boundingBox": null
+    },
+    "sword0": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 144,
+          "count": 48,
+          "bytes": 576,
+          "sha256": "f942203924de17a2824d41513788592f90f8bcf65385469ea9a7d539e35ff2d8"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 144,
+          "count": 48,
+          "bytes": 576,
+          "sha256": "fff6cc13edbd94383cb0c0b53fa4642913fafc23506aeaa433d0651dab44d605"
+        },
+        "color": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 144,
+          "count": 48,
+          "bytes": 576,
+          "sha256": "664c529ae1fd7f11d8b3573b47f6f56e5150ef80c2ced7bd6b4e8bd3c2951475"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 72,
+        "count": 72,
+        "bytes": 144,
+        "sha256": "01df634a07d7d4b26838a584a5cf90a63e1b9dc4bae15bd181fe7e589e0bf1c9"
+      },
+      "groups": [],
+      "vertices": 48,
+      "triangles": 24,
+      "boundingSphere": null,
+      "boundingBox": null
+    },
+    "sword1": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 1431,
+          "count": 477,
+          "bytes": 5724,
+          "sha256": "84cb90675c632689266aa5cc5666bfb93da738ed9d7a9242f93ec2e52cb43660"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 1431,
+          "count": 477,
+          "bytes": 5724,
+          "sha256": "566356c696266dbf2dfc9929988b95043f7359d293f8ee45d4352bc3db681173"
+        },
+        "color": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 1431,
+          "count": 477,
+          "bytes": 5724,
+          "sha256": "18068d42ab00896ca69fd1d9109d13af4c7cc8360ee4365ddb3e8a49a8a7a699"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 996,
+        "count": 996,
+        "bytes": 1992,
+        "sha256": "cea4ef3a772597da4472184bd2f9f056c090db930500091a1873012a12940fdf"
+      },
+      "groups": [],
+      "vertices": 477,
+      "triangles": 332,
+      "boundingSphere": null,
+      "boundingBox": null
+    },
+    "sword2": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 180,
+          "count": 60,
+          "bytes": 720,
+          "sha256": "2c3158144c2f540711f0a2cc0afa57a17d518e8e22d80dbce47ad1e2b3fc4e9e"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 180,
+          "count": 60,
+          "bytes": 720,
+          "sha256": "2e0f6f2418e37901e7534700be5bf3517ccc612f4ea827c159f2c09a472137e0"
+        },
+        "color": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 180,
+          "count": 60,
+          "bytes": 720,
+          "sha256": "d8c4fae65ae68673534a6027cbbff4b803bf7c12f7d1420220a634a98829343d"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 60,
+        "count": 60,
+        "bytes": 120,
+        "sha256": "6d0af186622c0b1200ea19a288afae85380b856ec3375ac4bae93b592810b159"
+      },
+      "groups": [],
+      "vertices": 60,
+      "triangles": 20,
+      "boundingSphere": null,
+      "boundingBox": null
+    }
+  },
+  "boneBind": {
+    "type": "Float64Array",
+    "matrixCount": 22,
+    "bytes": 2816,
+    "sha256": "c4edc4c31952639cd37533a95a53063a38d2cc511fdd1579d3ea83c7dc2b218f",
+    "bodyBindMatrixBytes": 128,
+    "bodyBindMatrixSha256": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+    "bodyBindMatrixInverseSha256": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+    "boneMetadataSha256": "458116834d1fdc99be8dd32c1cbe1a31cc9b8915d2227d1d0576f3579f6a7b21"
+  },
+  "stats": {
+    "triangles": 16026,
+    "materials": 7,
+    "bones": 22,
+    "height": 1.485,
+    "revision": "H33 swept hair / separated sword arm / split riding robe",
+    "attackDuration": 0.78,
+    "hitProgress": 0.44,
+    "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+  },
+  "bones": 22,
+  "materials": 7,
+  "swordParentBone": 8,
+  "totalGeometryBytes": 743496
+}

@@ -1,6 +1,13 @@
-# 凤鸣山门｜项目状态 V1.33
+# 凤鸣山门｜项目状态 V1.34
 当前正式母版：main:fengming-v2-scene-a/index.html
 版本：V2.0 H.29，游戏入口 blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。
+
+
+H.33／山门一屏可玩美术升级（2026-11-27）：从H.32最新有效启动/输入/地面修复增量制作，保留H.31独立对照与H.29正式完整入口。**当前样关** https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h33.html ；H.31对照 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h31-compare.html 。sample-gate.html同步H.33，旧?v=h31不是历史快照。
+
+实际升级：林砚新束发/肩袖/离身持剑手/分摆墨靴与实体剑格，1.485高/22骨/16026面；动作改固定手骨socket、本地腕轨道与连续起收，.44真实头肩接触姿态先显示；普通短银米剑轨，敌人.34秒受击/45ms命中顿帧。matte新三层古松与手绘石材，宽面坡光/统一接触影；厚檐与柱脚，真台阶/原导航/碰撞/地图范围保留。正常机位、人物比例不变，身体+实体剑的窄局部屋檐让出保证看清动作；敌血条移到接触点外，画外隐藏。
+
+最终原速正常UI14.68秒完整触控走近→穿枝→登阶→回身命中→收势，HP3→2、四标记true，错误0/失败请求0；云Linux WebKit26.5/WPE软件渲染390×844DPR1，实测18.415FPS，中位54ms/p95 74ms。不是iPhone/微信真机，未声称硬件流畅或参考美术完成度通过。11项启动回归与无FX六帧通过；正常整屏与无血条动作内部可读性三项基本成立，细脸/衣料及窄侧阶仍有差距。证据evidence/h33/，报告project/SAMPLE_H33_QA.md与SAMPLE_H33_VISUAL_REVIEW.md，OpenGame方法/许可记录SAMPLE_H33_SOURCES.md。
 
 
 H.32／载入与走位修复（2026-11-27）：用户反馈H.31视觉粗糙、动作卡顿，iPhone其他浏览器或ChatGPT内打开时一直停在“正入山境”；**H.31未获美术通过**。本轮在同一工程修订可玩样关，正式完整H.29 index.html原文件仍保留。当前样关使用全新文件名以避开旧预览缓存：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h32.html 。sample-gate.html同步为H.32；H.31源与旧载入链路独立保留在h31-compare.html、sample-h31/；H.29对照h29-compare.html继续可用。

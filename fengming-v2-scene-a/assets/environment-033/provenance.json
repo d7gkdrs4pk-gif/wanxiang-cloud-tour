@@ -1,0 +1,38 @@
+{
+  "source": "One ImageGen edit of H33 frozen matte-stone-atlas.webp, requested by root to replace vector flatness with tactile hand-painted stone. Original generated PNG retained. No reference-game image used.",
+  "sourceGeneratedFile": "/workspace/generated_images/exec-2874d0de-ce98-48d9-9f82-49b927e4a746.png",
+  "candidatePNG": "handpainted-stone-source.png",
+  "candidateWebP": "handpainted-stone-atlas.webp",
+  "pixels": [
+    1774,
+    887
+  ],
+  "sameTwoCellRegistration": true,
+  "losslessRGBAEqual": true,
+  "rgbaSha256": "212344e1b4de52f2593d0954da86dc724a89b5e1f021785197d773f03a0ed585",
+  "pngBytes": 1664555,
+  "webpBytes": 1130348,
+  "status": "Selected after normal390x844 FOV39 source-game comparison: carved broad stone planes and tactile mineral variation improve over frozen vector material; user art acceptance remains pending",
+  "version": "H.33 selected hand-painted tactile stone atlas",
+  "asset": "handpainted-stone-atlas.webp",
+  "sourcePNG": "handpainted-stone-source.png",
+  "vectorInput": "matte-stone-atlas.webp",
+  "vectorSourceScript": "tools/paint-environment-033.py",
+  "renderNormalField": {
+    "source": "Build-time filtering of existing render terrain normals over0.85 world-unit radius; no geometry positions, source normals, indices, nav or heights changed",
+    "sourceGLB": "assets/sample-runtime/terrain.glb",
+    "vertices": 19852,
+    "triangles": 30000,
+    "radiusWorld": 0.85,
+    "fieldBytes": 238224,
+    "fieldSha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5",
+    "positionSha256": "81cad158b42c56e1daaadceae5d476ac5ddd8055d9a50fe0b065ca1810366e9f",
+    "sourceNormalSha256": "c360b051fc51a379165812b535d2f8e58734301feec4d204a8a965d9eb5003f2",
+    "indexSha256": "0792ae886537cdc392b0f121b44887a250a62255e3810c67a1b4e96dca83675f",
+    "geometryUnchanged": true,
+    "buildMilliseconds": 92.726708
+  },
+  "geometry_navigation_camera_changed": false,
+  "shading": "Original SUN(-8,16,12), no added fog; world-projected material on actual terrain and stairs, static macro-normal field, cool-slate contact shadows",
+  "normalCameraEvidence": "/workspace/qa-h33/environment/handpainted-candidate.png and handpainted-candidate-branch.png; source game data in handpainted-candidate-data.json; zero browser errors; only texture request replaced for comparison"
+}

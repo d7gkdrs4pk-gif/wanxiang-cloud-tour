@@ -1,0 +1,82 @@
+{
+  "version": "H.33",
+  "asset": "林砚 · 男性铃师 / 独立悬铃凤刃",
+  "ownership": "Original authored project geometry, rig weights, vertex colors and local quaternion animation. No third-party production character/texture/clip.",
+  "runtime": "sample/hero.js",
+  "generator": {
+    "path": ".github/scripts/lib/linyan-h33-generator.mjs",
+    "sha256": "e44c35f1532b560b606e8bb6efb50a12ff834554a2e71f56a7909197adf951f8"
+  },
+  "bakeTool": ".github/scripts/bake-linyan-h33.mjs",
+  "verificationTool": ".github/scripts/verify-linyan-h33.mjs",
+  "baked": {
+    "file": "linyan-h33-baked.js",
+    "bytes": 1007321,
+    "gzipBytes": 338816,
+    "sha256": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169"
+  },
+  "rig": {
+    "bones": 22,
+    "inverseBindSha256": "c4edc4c31952639cd37533a95a53063a38d2cc511fdd1579d3ea83c7dc2b218f",
+    "unchangedFromH31H32": true,
+    "swordParent": "rightWrist",
+    "swordSocketFixedDuringAttack": true
+  },
+  "visualChanges": [
+    "swept tied hair and separate rear lock",
+    "narrow neck and continuous broad-shoulder / narrow-waist cloth",
+    "bent sword arm away from torso",
+    "wider asymmetric split robe with visible ink trousers and boots",
+    "matte vermilion / ivory collar / narrow old-gold accents",
+    "wider physical sword guard with diamond steel blade and tapered tip"
+  ],
+  "animation": {
+    "durationSeconds": 0.78,
+    "hitProgress": 0.44,
+    "localWristQuaternionKeys": 51,
+    "runtimeWorldWeaponAiming": false,
+    "fullBodyEntryRecoveryEnvelope": true,
+    "continuousSpinePitch": true,
+    "contactWindow": [
+      0.32,
+      0.56
+    ],
+    "contactTargetActorLocal": [
+      0,
+      0.7,
+      0.7942090417223091
+    ],
+    "contactVerification": "actual high-step enemy head triangles intersect; same-level waist/torso triangles intersect; fixed wrist socket and original 0.78/0.44 timing"
+  },
+  "fixedView": {
+    "FOV": 39,
+    "followOffset": [
+      6,
+      27,
+      15
+    ],
+    "bodyReferenceHeight": 1.485,
+    "noCameraScaleChange": true
+  },
+  "studiedReferences": [
+    {
+      "url": "https://frogferry.chirostudio.xyz/",
+      "use": "readability and coherent matte miniature art; no asset copied"
+    },
+    {
+      "url": "https://media.raea.io/made/slackwater.mp4",
+      "use": "readability, near/mid/far layers and coherent light; no asset copied"
+    },
+    {
+      "url": "https://github.com/nexu-io/opengame",
+      "use": "bone-parented weapons and continuous local pose / quaternion transitions; no asset, clip, controller or code copied"
+    }
+  ],
+  "productionThirdPartyDependencies": [
+    {
+      "name": "Three.js r170",
+      "license": "MIT",
+      "existingInProject": true
+    }
+  ]
+}

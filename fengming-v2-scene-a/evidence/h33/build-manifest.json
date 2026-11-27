@@ -1,0 +1,241 @@
+{
+  "version": "H.33",
+  "baselineCommit": "1e0e1c6df1ecbeb5bc1077eafdec1a77828687ce",
+  "H31ArchiveCommit": "c0fdc9aaf53ac6378b261caf44aee840bddb23ac",
+  "H29IndexGitBlob": "82e9ce953fc1954c7408ebbc835dbab37098aa64",
+  "build": {
+    "version": "H.33",
+    "sha256": "972b17a94866715dd7bbe722be0ce223cfbbc652d25376283683bfdaa314947d",
+    "bytes": 1701020,
+    "format": "classic IIFE",
+    "target": "Safari 15+",
+    "three": "0.170.0",
+    "runtimeImports": 0
+  },
+  "files": {
+    "assets/environment-033/handpainted-stone-atlas.webp": {
+      "bytes": 1130348,
+      "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a"
+    },
+    "assets/environment-033/handpainted-stone-source.png": {
+      "bytes": 1664555,
+      "sha256": "313c584d7ebd53801406efb2ceab44c96042489a4b1dcb3f9db75aeefa7deadf"
+    },
+    "assets/environment-033/matte-stone-atlas.webp": {
+      "bytes": 47364,
+      "sha256": "29b0a71ff383d342064d6bc88e078d41a5d79bca15c8cd26eb62e9118d763c17"
+    },
+    "assets/environment-033/provenance.json": {
+      "bytes": 2337,
+      "sha256": "6aae0c066a1ddae79985c0fe64d3eb29e48e8376b9a68e67b1a79f2efec90215"
+    },
+    "assets/environment-033/terrain-rock-normals.f32": {
+      "bytes": 238224,
+      "sha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5"
+    },
+    "assets/environment-033/terrain-rock-normals.json": {
+      "bytes": 728,
+      "sha256": "db6f322afd74169e3d6aa03791c3fb6c3267217999d90f9fbe8f6598bf536cfb"
+    },
+    "assets/environment-033/vector-source-provenance.json": {
+      "bytes": 2101,
+      "sha256": "3dfcafdb9a0ecefab20bc2b5144aafe014eeaece980aab885adb221869b1d2a5"
+    },
+    "assets/gate-033/README.md": {
+      "bytes": 4622,
+      "sha256": "7d0b4fce1873d695747f63403638e57b8673086979daa037377565f64090d0c2"
+    },
+    "assets/gate-033/candidate-structure.json": {
+      "bytes": 1910,
+      "sha256": "d466bc2d4f67f7823cbf0519f109a0cbf42c05e90ad30de30a2fa6874822f682"
+    },
+    "assets/gate-033/cpu-verification.json": {
+      "bytes": 2944,
+      "sha256": "b70b5b0eafff6910ccae877248b98de2d7eb854636c0b2525bd44de5e7f3db0d"
+    },
+    "assets/gate-033/enemy-reaction-cpu.json": {
+      "bytes": 5230,
+      "sha256": "ad07cf09e8a6d822121b45dc3a74cba0c8637d211f7c367bfd77dcacaca3fd35"
+    },
+    "assets/gate-033/working-browser-check.json": {
+      "bytes": 1408,
+      "sha256": "5cce0c51f0637700eb5c5a6f89c48128ef63f1ca545dddf85b2a9f9c04e1abe3"
+    },
+    "assets/hero-033/README.md": {
+      "bytes": 3344,
+      "sha256": "abeb8ced5e86201bf61fad3d77f9e297e0b47d8c16cb4a8f1c4710c9c5cd8d8f"
+    },
+    "assets/hero-033/linyan-h33-baked.js": {
+      "bytes": 1007321,
+      "sha256": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169"
+    },
+    "assets/hero-033/manifest.json": {
+      "bytes": 8248,
+      "sha256": "21b01eed64cd364f04a3e0b2b02b73ce1dfa4779e780a1b5407003e311fb41f1"
+    },
+    "assets/hero-033/provenance.json": {
+      "bytes": 2720,
+      "sha256": "e0519e2cf891abc7449ac0f7548ccd288ca8bb343cf51fc29e5612581af2ca1f"
+    },
+    "assets/pine-033/depth-qa.json": {
+      "bytes": 2051,
+      "sha256": "f637529432cb555c2bd104b684e5a19f5f5c3ef70b581eeb724c193f03e3d7a2"
+    },
+    "assets/pine-033/pine-layer-atlas.png": {
+      "bytes": 975219,
+      "sha256": "7e4f4ff49cff23644e63c720512f40e61e82902b6496c88092894abfdefa396f"
+    },
+    "assets/pine-033/pine-layer-atlas.webp": {
+      "bytes": 283506,
+      "sha256": "01e35918bef3a5e5aa218d082d3ca90df0b55cdd587632977ce0c9ad1e4daeba"
+    },
+    "assets/pine-033/provenance.json": {
+      "bytes": 4682,
+      "sha256": "7c6ead047aa9d8fe1105afaabd7328155d2b98e3e576b27ede729f4b04207964"
+    },
+    "assets/pine-033/registration-qa.json": {
+      "bytes": 1620,
+      "sha256": "c743281dd1dee63ad8c04c9df7474df93723ebc8e3cef58b73dfea419491ec11"
+    },
+    "assets/sample-ground/README.md": {
+      "bytes": 1576,
+      "sha256": "1f8f0fead0c2f81c0a9883e5a4d04edbaa82d45c2a9a8833a7c2c02e6bd0e084"
+    },
+    "assets/sample-ground/height.f32": {
+      "bytes": 273492,
+      "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df"
+    },
+    "assets/sample-ground/metadata.json": {
+      "bytes": 1944,
+      "sha256": "b4db6a26a1252e59a581e2b2ba7bef60f6e1236b792b1924c3ecaa74cef7da7e"
+    },
+    "assets/sample-ground/slope.bits": {
+      "bytes": 8480,
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31"
+    },
+    "assets/sample-ground/validation.json": {
+      "bytes": 10419,
+      "sha256": "3185f171fa4e62a2a7f37a895b60d36a9714b4684ff0bafc6746eee94645d9b1"
+    },
+    "assets/sample-runtime/gate.glb": {
+      "bytes": 1332728,
+      "sha256": "ab35c4ea6cd9bfb308ff36aaf1c99e025e30d8be6c1fd2bd54eabcb69cac340d"
+    },
+    "assets/sample-runtime/manifest.json": {
+      "bytes": 3519,
+      "sha256": "c4912c39a1f354d2891fa83d708dc6c1023e7f923bd6ea512de6b642d8cfc89c"
+    },
+    "assets/sample-runtime/mountain-atlas.webp": {
+      "bytes": 1185072,
+      "sha256": "26ff78d818605aafda582c84fc8104dd88c85aa3039f3733a975e0939f8e3590"
+    },
+    "assets/sample-runtime/pine-atlas.webp": {
+      "bytes": 1139234,
+      "sha256": "ac6c8890f7a6e13337e0921ebfc74ad872171a9945858e2697f719e87976fb28"
+    },
+    "assets/sample-runtime/stone-atlas.webp": {
+      "bytes": 1426492,
+      "sha256": "609e77f923a47990ef1ae1a5cfd91a593c5eae77cd46a7b8dcda409868c3c559"
+    },
+    "assets/sample-runtime/terrain.glb": {
+      "bytes": 816528,
+      "sha256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330"
+    },
+    "gate-h33.html": {
+      "bytes": 6112,
+      "sha256": "05897d5e19569479193c343d0af1818ad8b6501cd51bc7d40bf376701f9d6a4a"
+    },
+    "sample/dist/build.json": {
+      "bytes": 223,
+      "sha256": "d3e54a41acc1082ad792ffa76b95386af8647366abe840df2b4751389bc8e8e5"
+    },
+    "sample/dist/game-h33.js": {
+      "bytes": 1701020,
+      "sha256": "972b17a94866715dd7bbe722be0ce223cfbbc652d25376283683bfdaa314947d"
+    },
+    "sample/enemy.js": {
+      "bytes": 16019,
+      "sha256": "2ffb960badfa46e276ec1b38aca3517f689de2a6c9e3a5cbc5c8579ec9e61e7b"
+    },
+    "sample/environment.js": {
+      "bytes": 20147,
+      "sha256": "75ab7da054fa994af016e837220f777ba86c6b400703d3bb3da3b10cb5515758"
+    },
+    "sample/gate-roof-finish.js": {
+      "bytes": 18332,
+      "sha256": "351f32f262cb01a6d56ca4a107079b16f1cad0b50f67cc431a6a2d102f505895"
+    },
+    "sample/ground-surface.js": {
+      "bytes": 2554,
+      "sha256": "3ce6f5cd2103ecc3b80836606ca6b9f3806c92b539c262726269cbb6cf1127cf"
+    },
+    "sample/hero.js": {
+      "bytes": 13652,
+      "sha256": "d9ff09f973b160a3bb5047020e888765b9ede3449755c32769b04aed0e4eae3f"
+    },
+    "sample/launch.js": {
+      "bytes": 3877,
+      "sha256": "031425228a746a360697680729a5bbd205a1fad6090fbbc90a761b01da833aaf"
+    },
+    "sample/main.js": {
+      "bytes": 25210,
+      "sha256": "8387a177e8a8ef7f4dad4976581dcf0f4ba4171a4b9f0dc1241c9bd7c9da9847"
+    },
+    "sample/navigation.js": {
+      "bytes": 10182,
+      "sha256": "383f4adc9dad7dd41729da052ef88852f438032282dd9a320d1fe6f26fb690b5"
+    },
+    "sample/path-planner.js": {
+      "bytes": 8558,
+      "sha256": "d572cabe5728a7bb7d2d92efaf85c2ab2583d66cbe6fabb9d06b028d37b7b35b"
+    },
+    "sample/pine-layers.js": {
+      "bytes": 16783,
+      "sha256": "20bbae10411d8af7e18325acd2f61632afe9489927cf1b383ded6f721f40323f"
+    },
+    "sample/roof-occlusion.js": {
+      "bytes": 5697,
+      "sha256": "fb752ab82cfeaae6cd9cf53737bb9287279cedfb0d3c0d5a3a977814fc0a5eec"
+    },
+    "sample/sample.css": {
+      "bytes": 5043,
+      "sha256": "feda8f1e245406cdb231695b34fff25f8015fca09fa5ead12488d00cd3279786"
+    },
+    "sample/scene-dressing.js": {
+      "bytes": 5220,
+      "sha256": "765201cad2634ebe80d9fe5f8aa6fa7f3ecf25cb74a92c28a46f5296d063b059"
+    },
+    "sample-gate.html": {
+      "bytes": 6112,
+      "sha256": "05897d5e19569479193c343d0af1818ad8b6501cd51bc7d40bf376701f9d6a4a"
+    },
+    "tools/build-environment-033-normals.mjs": {
+      "bytes": 3447,
+      "sha256": "8f5b494a1089f3adf1f9010382e769541213b17bc6c97357bf1028539bef5a57"
+    },
+    "tools/build-sample.mjs": {
+      "bytes": 2245,
+      "sha256": "5fdc158a19799b5784ea83dc08f78fa828431cb51684c3b6d794a1eef2461c04"
+    },
+    "tools/capture-no-fx.py": {
+      "bytes": 3516,
+      "sha256": "946fe1eb20dd386a331de0f758465c76b576597a25f4f2a3f571d87e59d4ae80"
+    },
+    "tools/pack-runtime-assets.py": {
+      "bytes": 4976,
+      "sha256": "d772a77c973b266a18d8204f83fc0a993761f11ffd27dd54b6aefd1b96de09fd"
+    },
+    "tools/paint-environment-033.py": {
+      "bytes": 7173,
+      "sha256": "87268ff48b91926deb3319448cb370ca92ebe98ca060ad7e5de07b1000f922d4"
+    },
+    "tools/record-playtest.py": {
+      "bytes": 6831,
+      "sha256": "9a05bc7c1b12169a9f738e6d7bd0f701ff4db4063b989d1263f6248face6c10c"
+    },
+    "tools/test-startup.py": {
+      "bytes": 7903,
+      "sha256": "bb9e6ded34360e50d972526cfeaba692b8a199192cd51d55dcf866b06955352c"
+    }
+  }
+}

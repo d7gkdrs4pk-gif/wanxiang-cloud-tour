@@ -1,0 +1,710 @@
+{
+  "environment": "Linux WebKit26.5 WPE, software rendering; not a physical iPhone or ChatGPT native app",
+  "passed": true,
+  "cases": [
+    {
+      "case": "H31 ignored importmap (controlled compatibility fault)",
+      "faultInjection": true,
+      "loading": "正入山境",
+      "ready": false,
+      "errors": [
+        "Module name, 'three' does not resolve to a valid URL."
+      ]
+    },
+    {
+      "case": "H33 WebKit cold startup + touch",
+      "readySeconds": 2.2475787600014883,
+      "startup": {
+        "version": "H.33",
+        "status": "ready",
+        "phase": "playable",
+        "lastChange": 1795774083783,
+        "started": 1795774082326,
+        "errors": [],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774082326,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774082327,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774082463,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795774082970,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795774083090,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795774083399,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795774083722,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795774083783,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795774084230,
+            "progress": 1
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+        "readyAt": 1795774084230
+      },
+      "moduleScripts": 0,
+      "after": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          -4.856669722343702,
+          0.11613593528162133,
+          -4.366344314810098
+        ],
+        "rotation": -1.6694414562063125,
+        "camera": [
+          1.1689298940712132,
+          27.114932077155128,
+          10.636226113437916
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 10
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            -5.092596930102041,
+            0.9078027265229565,
+            -4.923550467589643
+          ],
+          "tip": [
+            -6.096036782075574,
+            1.2722941084620845,
+            -5.554307549169739
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795774083783,
+          "started": 1795774082326,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795774082326,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795774082327,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795774082463,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795774082970,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795774083090,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795774083399,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795774083722,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795774083783,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795774084230,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795774084230
+        },
+        "pathNodes": [],
+        "guideIndex": 1,
+        "roofCut": 0,
+        "target": [
+          -4.856669722343702,
+          0.11613593528162133,
+          -4.366344314810098
+        ],
+        "flags": {
+          "nearPine": true,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 33,
+          "triangles": 98265
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.14771883512454,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.10199193550804,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.25545111200896,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46933945368336
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1470
+          },
+          {
+            "type": "ready",
+            "t": 1917,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 2305,
+            "screen": [
+              131,
+              392
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -5.120038732655641,
+              0.136971414822735,
+              -4.392788896353228
+            ]
+          },
+          {
+            "type": "near-pine",
+            "t": 2623
+          },
+          {
+            "type": "swing-start",
+            "t": 2677,
+            "p": [
+              -4.856669722343702,
+              0.11613593528162133,
+              -4.366344314810098
+            ],
+            "facing": -1.6694414562063125,
+            "aim": -1.6694414562063125
+          },
+          {
+            "type": "swing-recovered",
+            "t": 3482
+          },
+          {
+            "type": "move-command",
+            "t": 3519,
+            "screen": [
+              200,
+              160
+            ],
+            "ok": false,
+            "reason": "outside-area",
+            "adjusted": false,
+            "nodes": 0,
+            "planningMs": 1,
+            "goal": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "case": "context lost recovery UI",
+      "actualDriverLoss": true,
+      "startup": {
+        "version": "H.33",
+        "status": "failed",
+        "phase": "画面连接已中断，请重新载入",
+        "lastChange": 1795774086112,
+        "started": 1795774082326,
+        "errors": [
+          "webglcontextlost"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774082326,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774082327,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774082463,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795774082970,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795774083090,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795774083399,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795774083722,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795774083783,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795774084230,
+            "progress": 1
+          },
+          {
+            "phase": "failed",
+            "at": 1795774086112,
+            "reason": "画面连接已中断，请重新载入"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+        "readyAt": 1795774084230
+      }
+    },
+    {
+      "case": "bundle blocked then actual Retry",
+      "failed": {
+        "version": "H.33",
+        "status": "failed",
+        "phase": "游戏程序未载入，请重试",
+        "lastChange": 1795774086472,
+        "started": 1795774086343,
+        "errors": [
+          "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774086344,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774086344,
+            "progress": 0.08
+          },
+          {
+            "phase": "failed",
+            "at": 1795774086472,
+            "reason": "游戏程序未载入，请重试"
+          },
+          {
+            "phase": "failed",
+            "at": 1795774086472,
+            "reason": "游戏程序未载入，请重试"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866"
+      },
+      "recovered": {
+        "version": "H.33",
+        "status": "ready",
+        "phase": "playable",
+        "lastChange": 1795774087970,
+        "started": 1795774086598,
+        "errors": [],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774086598,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774086598,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774086636,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795774087017,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795774087122,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795774087495,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795774087920,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795774087970,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795774088544,
+            "progress": 1
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+        "readyAt": 1795774088544
+      }
+    },
+    {
+      "case": "WebGL constructor blocked",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.33",
+        "status": "failed",
+        "phase": "当前窗口无法创建3D画面，请重试或复制地址打开",
+        "lastChange": 1795774089332,
+        "started": 1795774089107,
+        "errors": [
+          "Error creating WebGL context."
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774089108,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774089108,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774089268,
+            "progress": 0.12
+          },
+          {
+            "phase": "failed",
+            "at": 1795774089332,
+            "reason": "当前窗口无法创建3D画面，请重试或复制地址打开"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866"
+      },
+      "message": "当前窗口无法创建3D画面，请重试或复制地址打开"
+    },
+    {
+      "case": "pine resource blocked",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.33",
+        "status": "failed",
+        "phase": "场景未完整载入，请重试",
+        "lastChange": 1795774091139,
+        "started": 1795774089579,
+        "errors": [
+          "[object Event]"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774089580,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774089580,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774089739,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795774090391,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795774090489,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795774090764,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795774091109,
+            "progress": 0.78
+          },
+          {
+            "phase": "failed",
+            "at": 1795774091139,
+            "reason": "场景未完整载入，请重试"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866"
+      },
+      "message": "场景未完整载入，请重试"
+    },
+    {
+      "case": "JavaScript disabled host",
+      "faultInjection": true,
+      "noscript": "当前窗口未启用互动内容。请在系统浏览器打开下方地址。\n\n长按复制试玩地址"
+    },
+    {
+      "case": "slow bundle assistance",
+      "faultInjection": true,
+      "message": "载入较慢，可继续等待或重试",
+      "retryVisible": true
+    },
+    {
+      "case": "external launcher blocked; inline launcher succeeds",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.33",
+        "status": "ready",
+        "phase": "playable",
+        "lastChange": 1795774093558,
+        "started": 1795774092191,
+        "errors": [],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774092191,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774092192,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774092351,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795774092869,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795774092969,
+            "progress": 0.35
+          },
+          {
+            "phase": "scene",
+            "at": 1795774093234,
+            "progress": 0.5
+          },
+          {
+            "phase": "pine",
+            "at": 1795774093517,
+            "progress": 0.78
+          },
+          {
+            "phase": "first-frame",
+            "at": 1795774093558,
+            "progress": 0.92
+          },
+          {
+            "phase": "playable",
+            "at": 1795774093977,
+            "progress": 1
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+        "readyAt": 1795774093977
+      }
+    },
+    {
+      "case": "inline scripts blocked by CSP; external launcher succeeds",
+      "faultInjection": true,
+      "readyViaDOM": true,
+      "touchWalkHintReached": true,
+      "normalSwingCompleted": true,
+      "note": "DOM signals used; the test harness itself also obeys unsafe-eval restriction"
+    },
+    {
+      "case": "ground cache unavailable recovery UI",
+      "faultInjection": true,
+      "startup": {
+        "version": "H.33",
+        "status": "failed",
+        "phase": "场景未完整载入，请重试",
+        "lastChange": 1795774099799,
+        "started": 1795774099105,
+        "errors": [
+          "Load failed"
+        ],
+        "history": [
+          {
+            "phase": "webgl-check",
+            "at": 1795774099105,
+            "progress": 0.03
+          },
+          {
+            "phase": "script",
+            "at": 1795774099105,
+            "progress": 0.08
+          },
+          {
+            "phase": "renderer",
+            "at": 1795774099258,
+            "progress": 0.12
+          },
+          {
+            "phase": "hero",
+            "at": 1795774099692,
+            "progress": 0.2
+          },
+          {
+            "phase": "navigation",
+            "at": 1795774099787,
+            "progress": 0.35
+          },
+          {
+            "phase": "failed",
+            "at": 1795774099799,
+            "reason": "场景未完整载入，请重试"
+          }
+        ],
+        "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866"
+      }
+    }
+  ]
+}

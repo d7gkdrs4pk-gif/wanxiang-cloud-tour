@@ -1,0 +1,8 @@
+asset,priority,source,license_or_authorship,runtime_path
+Linyan H33 rig and physical sword,P0-focal,project-authored mesh and local bone tracks,original project work,assets/hero-033/linyan-h33-baked.js
+Layered welcoming pine,P1-landmark,imagegen repaint using approved project pine references,project production asset with provenance,assets/pine-033/pine-layer-atlas.webp
+Matte stone and rock atlas,P2-environment,ImageGen hand-painted edit of original colour-field atlas,project production asset with provenance,assets/environment-033/handpainted-stone-atlas.webp
+Curved gate and column feet,P1-landmark,original fitted 3D geometry and vertex colours,original project work,sample/gate-roof-finish.js
+Stone-armoured enemy reaction,P0-focal,existing project mesh plus original bone reaction,original project work,sample/enemy.js
+Original terrain and low stairs,P2-environment,existing formal project geometry,existing project asset unchanged,assets/sample-runtime/terrain.glb
+Distant painted mountains,P2-environment,existing H31 project painting,project production provenance environment-031,assets/sample-runtime/mountain-atlas.webp

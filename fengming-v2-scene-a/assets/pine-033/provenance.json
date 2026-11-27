@@ -1,0 +1,147 @@
+{
+  "asset": "PINE-033",
+  "phase": "H33 matte hand-painted replacement for PINE-007",
+  "technique": "new imagegen repaint of registered three-cell transparent art; real depth-separated 2.5D layers, not an exported 3D tree",
+  "generator": "image_gen.imagegen",
+  "generated_original": "/workspace/generated_images/exec-8f3bd1d9-5a91-40b0-bfe9-c89464aee6a8.png",
+  "references": [
+    {
+      "path": "assets/pine-007/pine-layer-atlas.png",
+      "sha256": "0087f3ad4b2c8562d6d2b8809dd66b03ea48eeb51f728b9179de3a338bea4b70"
+    },
+    {
+      "path": "assets/pine-002/reference.png",
+      "sha256": "38fc57ce4bdf79aff16f0b54288d57ea6fcc29f14e4da99c3323566d66bd8f35"
+    },
+    {
+      "path": "/workspace/qa-h32/gate/light-spawn.png",
+      "purpose": "matte miniature material consistency only"
+    }
+  ],
+  "dimensions": [
+    2172,
+    724
+  ],
+  "atlas_cells": {
+    "count": 3,
+    "cell_size": 724,
+    "order": [
+      "rear crowns",
+      "S trunk and low root stones",
+      "front welcoming branch"
+    ]
+  },
+  "art_direction": {
+    "finish": "quiet matte hand-painted miniature volumes, no photographic bark scales or high-frequency needle fuzz",
+    "lighting": "one upper-left soft main light corresponding to SUN(-8,16,12)",
+    "palette": "muted umber/slate-grey bark, dark ink-jade crowns, cool blue-grey rocks",
+    "registration": "existing cell object footprints and root/branch attachment points retained",
+    "background": "true RGBA transparency; no full background or generated floor shadow"
+  },
+  "runtime_constraints": {
+    "world_width": 6.4,
+    "world_height": 5.6,
+    "root": [
+      -7,
+      "groundAt(-7,-7)",
+      -7
+    ],
+    "collision_radius": 0.72,
+    "depth_offsets": [
+      -1.05,
+      0,
+      0.85
+    ],
+    "root_anchor": [
+      0.48,
+      0.97
+    ],
+    "front_anchor": [
+      0.14,
+      0.52
+    ],
+    "front_offset_fractions": [
+      0.18,
+      0.26
+    ],
+    "upperRelief": 1.6,
+    "whole_tree_fade": false
+  },
+  "files": {
+    "pine-layer-atlas.png": {
+      "bytes": 975219,
+      "sha256": "7e4f4ff49cff23644e63c720512f40e61e82902b6496c88092894abfdefa396f"
+    },
+    "pine-layer-atlas.webp": {
+      "bytes": 283506,
+      "sha256": "01e35918bef3a5e5aa218d082d3ca90df0b55cdd587632977ce0c9ad1e4daeba"
+    }
+  },
+  "notes": [
+    "Original old atlas retained unchanged.",
+    "WebP is only a packaging conversion of the newly generated RGBA PNG; no code-painted substitute image.",
+    "No H28/H29 game screenshot used as tree art.",
+    "Normal 390x844 source-preview visual and isolated actual-actor versus front-layer occlusion verified. Diagnostic poses are not claimed as native-touch playback."
+  ],
+  "encodingVerification": {
+    "png_to_webp_alpha_pixel_identical": true,
+    "webpQuality": 94,
+    "webpMethod": 6,
+    "webpExactRGB": true,
+    "opaqueMaskAtAlpha055": 390690,
+    "fullyTransparentPixels": 1105992
+  },
+  "verification": {
+    "syntax_check": "passed",
+    "normal_camera": "passed source-preview Chromium 390x844; FOV39 offset6,27,15 unchanged",
+    "screenshot": "/workspace/qa-h33/pine/pine-spawn.png",
+    "depth_parameters": "all registered root/camera layer depth unchanged from H32",
+    "new_asset_actor_mask": "passed; actual hero mesh excludes contact shadow; only black alphaTest front layer occludes white actor",
+    "gpu_status": "browser closed and GPU released to scene_art",
+    "shadow_rgb": {
+      "outer": [
+        20,
+        32,
+        44
+      ],
+      "core": [
+        16,
+        27,
+        38
+      ]
+    },
+    "shadow_opacity_or_area_changed": false,
+    "mask_scope": "isolated actual actor mesh excluding contact shadow; white actor vs black alphaTest front layer only; diagnostic poses at normal FOV39 camera offset6,27,15",
+    "engine": "Chromium headless SwiftShader, not physical phone",
+    "actor_rotation": -2.665292949204713,
+    "under": {
+      "x": -6.4,
+      "z": -8.1,
+      "y": 0.127921,
+      "rootDistance": 1.2529964086141665,
+      "alonePixels": 811,
+      "frontPixels": 520,
+      "occludedPixels": 291,
+      "ratio": 0.3588162762022195
+    },
+    "leave": {
+      "x": -6.2,
+      "z": -6.5,
+      "y": -0.0942367,
+      "rootDistance": 0.9433981132056602,
+      "alonePixels": 811,
+      "frontPixels": 811,
+      "occludedPixels": 0,
+      "ratio": 0
+    },
+    "browser_errors": [],
+    "screenshots": {
+      "spawn": "/workspace/qa-h33/pine/pine-spawn.png",
+      "under": "/workspace/qa-h33/pine/pine-under.png",
+      "leave": "/workspace/qa-h33/pine/pine-leave.png"
+    },
+    "physical_phone_test": false,
+    "wechat_device_test": false,
+    "final_art_status": "frozen after coordinated visual/depth QA"
+  }
+}

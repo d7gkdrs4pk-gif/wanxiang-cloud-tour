@@ -1,0 +1,54 @@
+{
+  "revision": "H33 working source, concurrent scene and pine still in progress",
+  "environment": "Linux Chromium156 SwiftShader, 390x844 DPR1 mobile touch simulation",
+  "elapsedWallSeconds": 20.680181925999932,
+  "errors": [],
+  "cameraFOV": 39,
+  "heroHeight": 1.485,
+  "spawn": [
+    -3.2,
+    0.0656919404864311,
+    -4.2
+  ],
+  "stairsPlayer": [
+    1.375,
+    0.7125264152783075,
+    -7.375
+  ],
+  "stairsCamera": [
+    7.3750483851147015,
+    27.71250611597181,
+    7.6250158747609795
+  ],
+  "hpBefore": 3,
+  "hpAfter": 2,
+  "hitEvent": {
+    "type": "hit",
+    "t": 19221.199999999255,
+    "enemyHP": 2,
+    "attackProgress": 0.44862179487179277,
+    "player": [
+      1.375,
+      0.7125264152783075,
+      -7.375
+    ],
+    "enemy": [
+      2.606882596615862,
+      0.01885564844925308,
+      -6.613124163473927
+    ],
+    "blade": [
+      2.6911493200399317,
+      1.5492407750124857,
+      -6.390098598111734
+    ],
+    "impact": [
+      2.5288052840872686,
+      1.546836887148998,
+      -6.475759123997948
+    ]
+  },
+  "roofCutAtStairs": 9.263356338507493e-10,
+  "fpsMeasured": false,
+  "scope": "Real touch walk to genuine stair + normal attack registers damage. This screenshot was too late to prove the 75ms enemy reaction peak. NOT final scene or iPhone/WeChat art/performance acceptance. Hero torso was occluded while head ray was clear; main owner notified to expand cutaway query."
+}

@@ -1,0 +1,14 @@
+{
+  "source": "Build-time filtering of existing render terrain normals over0.85 world-unit radius; no geometry positions, source normals, indices, nav or heights changed",
+  "sourceGLB": "assets/sample-runtime/terrain.glb",
+  "vertices": 19852,
+  "triangles": 30000,
+  "radiusWorld": 0.85,
+  "fieldBytes": 238224,
+  "fieldSha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5",
+  "positionSha256": "81cad158b42c56e1daaadceae5d476ac5ddd8055d9a50fe0b065ca1810366e9f",
+  "sourceNormalSha256": "c360b051fc51a379165812b535d2f8e58734301feec4d204a8a965d9eb5003f2",
+  "indexSha256": "0792ae886537cdc392b0f121b44887a250a62255e3810c67a1b4e96dca83675f",
+  "geometryUnchanged": true,
+  "buildMilliseconds": 155.03172
+}

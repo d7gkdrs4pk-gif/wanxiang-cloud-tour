@@ -1,6 +1,6 @@
 /**
- * PINE-007 — newly illustrated, depth-separated 2.5D pine for the sample gate.
- * Art: assets/pine-007/pine-layer-atlas.png, 2172 × 724, three 724 px cells.
+ * PINE-033 — newly illustrated, depth-separated 2.5D pine for the sample gate.
+ * Art: assets/pine-033/pine-layer-atlas.png, 2172 × 724, three 724 px cells.
  * Reference: assets/pine-002/reference.png. No H28/H29 screenshot is used.
  *
  * Usage:
@@ -16,7 +16,7 @@
  */
 import * as T from 'three';
 
-const DEFAULT_ATLAS = new URL('../assets/sample-runtime/pine-atlas.webp', import.meta.url).href;
+const DEFAULT_ATLAS = new URL('../assets/pine-033/pine-layer-atlas.webp', import.meta.url).href;
 const REFERENCE = new URL('../assets/pine-002/reference.png', import.meta.url).href;
 
 function point3(value, fallback) {
@@ -47,9 +47,9 @@ function shadowTexture() {
   canvas.width = canvas.height = 64;
   const ctx = canvas.getContext('2d');
   const gradient = ctx.createRadialGradient(32, 32, 2, 32, 32, 31);
-  gradient.addColorStop(0, 'rgba(12,22,21,0.40)');
-  gradient.addColorStop(0.45, 'rgba(12,22,21,0.21)');
-  gradient.addColorStop(1, 'rgba(12,22,21,0)');
+  gradient.addColorStop(0, 'rgba(16,27,38,0.40)');
+  gradient.addColorStop(0.45, 'rgba(20,32,44,0.21)');
+  gradient.addColorStop(1, 'rgba(20,32,44,0)');
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, 64, 64);
   return new T.CanvasTexture(canvas);
@@ -64,7 +64,7 @@ export function createLayeredPine(options = {}) {
   const alphaTest = options.alphaTest ?? 0.55;
   let upperRelief = options.upperRelief ?? 1.6;
   const group = new T.Group();
-  group.name = 'PINE-007 layered gate pine';
+  group.name = 'PINE-033 layered gate pine';
   group.position.copy(point3(options.position, [-7, 0, -7]));
   group.userData.visualTechnique = 'new illustrated atlas with independent camera-facing depth planes';
   group.userData.collisionRadius = 0.72;
@@ -106,7 +106,7 @@ export function createLayeredPine(options = {}) {
     // Layer transforms are composed only when the root/camera changes. The
     // renderer still updates their world matrices normally before drawing.
     mesh.matrixAutoUpdate = false;
-    mesh.name = `PINE-007 ${spec.key}`;
+    mesh.name = `PINE-033 ${spec.key}`;
     mesh.frustumCulled = false;
     mesh.visible = false;
     mesh.castShadow = mesh.receiveShadow = false;
@@ -148,7 +148,7 @@ export function createLayeredPine(options = {}) {
     contactGeometry.computeVertexNormals();
   }
   const contact = new T.Mesh(contactGeometry, contactMaterial);
-  contact.name = 'PINE-007 ground-conformed root contact shadow';
+  contact.name = 'PINE-033 ground-conformed root contact shadow';
   contact.position.y = options.groundAt ? 0 : .025;
   contact.raycast = () => {};
   group.add(contact);
@@ -183,7 +183,7 @@ export function createLayeredPine(options = {}) {
     ownsTexture = true;
     ready = new Promise((resolve, reject) => {
       new T.TextureLoader().load(requestedTexture, texture => resolve(applyTexture(texture)), undefined, error => {
-        group.userData.loadError = 'PINE-007 atlas could not be loaded';
+        group.userData.loadError = 'PINE-033 atlas could not be loaded';
         reject(error);
       });
     });
@@ -343,7 +343,7 @@ export function createLayeredPine(options = {}) {
     set upperRelief(value) { upperRelief = T.MathUtils.clamp(Number(value) || 0, 0, 3); },
     collision: { radius: 0.72, getCenter: () => group.getWorldPosition(new T.Vector3()) },
     provenance: {
-      technique: 'newly illustrated layered 2.5D atlas, not H29 imagery',
+      technique: 'H33 newly repainted matte layered 2.5D atlas; not a game screenshot',
       atlas: DEFAULT_ATLAS, approvedReference: REFERENCE,
       originalAtlasPixels: [2172, 724], cells: ['rear', 'trunk', 'front'],
       alphaCutoff: alphaTest, upperRelief: upperRelief, real3DTreeClaimed: false,

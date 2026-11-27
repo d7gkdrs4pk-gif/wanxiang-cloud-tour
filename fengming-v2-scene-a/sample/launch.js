@@ -1,4 +1,4 @@
-/* H32 classic-script launcher. Runs before any engine/asset initialization. */
+/* H33 classic-script launcher. Runs before any engine/asset initialization. */
 (function () {
  'use strict';
  if(window.__FM_STARTUP)return;
@@ -7,7 +7,7 @@
  var retry=document.getElementById('load-retry');
  var copy=document.getElementById('load-copy');
  var progress=document.getElementById('load-progress');
- var state={version:'H.32',status:'starting',phase:'launcher',lastChange:Date.now(),started:Date.now(),errors:[],history:[]};
+ var state={version:'H.33',status:'starting',phase:'launcher',lastChange:Date.now(),started:Date.now(),errors:[],history:[]};
  var finished=false;
  function stage(text,amount,phase){
   if(finished)return;
