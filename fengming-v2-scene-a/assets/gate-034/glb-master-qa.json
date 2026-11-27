@@ -1,0 +1,30 @@
+{
+  "revision": "H34",
+  "GLBMeshes": 4,
+  "triangles": 17402,
+  "materials": 4,
+  "embeddedImages": [
+    {
+      "name": "Noto OFL local 凤鸣 plaque atlas",
+      "mimeType": "image/png",
+      "size": [
+        512,
+        256
+      ],
+      "decoded": true,
+      "sha256": "12b30c30a3fa919a3c9759246ee5f7704a761cf7a2842b28bf0e70ed497b5165"
+    },
+    {
+      "name": "Project original painted stone atlas",
+      "mimeType": "image/webp",
+      "size": [
+        1774,
+        887
+      ],
+      "decoded": true,
+      "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a"
+    }
+  ],
+  "maxNormalSquaredLengthError": 8.66244782571357e-08,
+  "scope": "CPU GLB parse, embedded-image decode and unit-normal validation only; not a rendered image or runtime-loading claim"
+}

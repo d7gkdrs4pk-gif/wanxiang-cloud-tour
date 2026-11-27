@@ -1,0 +1,72 @@
+{
+  "revision": "H34",
+  "frontNormal": "+Z south",
+  "normalCameraRightHasPositiveX": true,
+  "textureUIncreasesWithWorldX": true,
+  "textureVIncreasesWithWorldY": true,
+  "runtimeTextureLoaderFlipY": true,
+  "expectedReading": "left 凤 -> right 鸣, upright",
+  "projected": [
+    {
+      "world": [
+        -1.649999976158142,
+        2.990000009536743,
+        -5.406000137329102
+      ],
+      "uv": [
+        0.15000000596046448,
+        1
+      ],
+      "screen": [
+        48.48179379700254,
+        397.53501907885953
+      ]
+    },
+    {
+      "world": [
+        -1.649999976158142,
+        2.369999885559082,
+        -5.406000137329102
+      ],
+      "uv": [
+        0.15000000596046448,
+        0.1599999964237213
+      ],
+      "screen": [
+        51.10635480255419,
+        410.74603355461426
+      ]
+    },
+    {
+      "world": [
+        -0.15000000596046448,
+        2.990000009536743,
+        -5.406000137329102
+      ],
+      "uv": [
+        1,
+        1
+      ],
+      "screen": [
+        104.49306325132453,
+        417.0164655863589
+      ]
+    },
+    {
+      "world": [
+        -0.15000000596046448,
+        2.369999885559082,
+        -5.406000137329102
+      ],
+      "uv": [
+        1,
+        0.1599999964237213
+      ],
+      "screen": [
+        106.13006717088427,
+        430.0035848949789
+      ]
+    }
+  ],
+  "scope": "CPU winding / UV / original normal-camera projection; actual glyph legibility still checked in live normal screen"
+}

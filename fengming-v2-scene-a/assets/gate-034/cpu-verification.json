@@ -1,0 +1,178 @@
+{
+  "revision": "H34",
+  "scope": "CPU geometry, directional lighting material invariants only; not normal-camera art approval",
+  "retainedTriangles": 21403,
+  "originalAttributesExact": true,
+  "originalOrderedIndicesExact": true,
+  "restoreOriginalReference": true,
+  "restoreIdempotent": true,
+  "finiteGeneratedAttributes": true,
+  "usedVertexNormalsUnit": true,
+  "usedVertices": 23976,
+  "sourceLowerRetainedButHidden": true,
+  "newVisibleWorldBounds": [
+    [
+      -2.424999877568689,
+      -0.012959694973566638,
+      -9.800000170339215
+    ],
+    [
+      2.3624998642609376,
+      4.5469041060480855,
+      -3.759999880762548
+    ]
+  ],
+  "sourceWorldBounds": [
+    [
+      -2.433826685384108,
+      0.1499999999999999,
+      -12
+    ],
+    [
+      2.4338266853841075,
+      7.4224191213434825,
+      -3.5999999999999988
+    ]
+  ],
+  "lightPbrGeometryAndColorsIdentical": true,
+  "geometrySha256": "62d951c6b38dfb7e627391a328fb91690e3962bc13d3300abec2bdefb7592ed9",
+  "nearMaterialFogDisabled": true,
+  "sourceSha256": {
+    "gateGLB": "8c0e7b3958c169d14641e22f6bfced40c6d271f8542d2a997b4c7b4956030c27",
+    "navigation": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac"
+  },
+  "stats": {
+    "candidate": true,
+    "artApproved": false,
+    "revision": "H34",
+    "shading": "light",
+    "nearArchitectureFog": false,
+    "materialTypes": [
+      "MeshLambertMaterial",
+      "MeshLambertMaterial",
+      "MeshLambertMaterial",
+      "MeshBasicMaterial"
+    ],
+    "source": "original project-authored rebuilt gatehouse and cache-exact stone stairs",
+    "sourceModel": "assets/sample-lod/gate.glb",
+    "sourceTriangles": 33000,
+    "retainedTriangles": 21403,
+    "removedTriangles": 11597,
+    "newTriangles": 17402,
+    "newDrawCalls": 4,
+    "materials": 4,
+    "tileStrips": 48,
+    "tileSegmentsPerStrip": 6,
+    "eaveDepth": 0.2,
+    "perTileBrightFlecks": false,
+    "columnFeet": [
+      {
+        "x": -1.75,
+        "z": -8.85,
+        "stoneContactY": 0.7145,
+        "postBottomY": 0.8445
+      },
+      {
+        "x": -1.75,
+        "z": -6.15,
+        "stoneContactY": 0.7145,
+        "postBottomY": 0.8445
+      },
+      {
+        "x": -0.05,
+        "z": -8.85,
+        "stoneContactY": 0.7145,
+        "postBottomY": 0.8445
+      },
+      {
+        "x": -0.05,
+        "z": -6.15,
+        "stoneContactY": 0.7145,
+        "postBottomY": 0.8445
+      }
+    ],
+    "plaqueText": "凤鸣",
+    "sourceLowerHidden": true,
+    "platform": {
+      "minX": -2.4,
+      "maxX": 1.3495,
+      "minZ": -9.75,
+      "maxZ": -5.25,
+      "topY": 0.7145,
+      "bottomY": 0.09
+    },
+    "stepCells": 850,
+    "stepSourceSHA256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+    "stoneTextureShared": false,
+    "boundaryMarkers": [
+      {
+        "name": "south boundary",
+        "a": [
+          -2.24,
+          -3.86
+        ],
+        "b": [
+          2.24,
+          -3.86
+        ],
+        "visibleHeight": 0.3875,
+        "insideOriginalForbiddenFrame": true
+      },
+      {
+        "name": "east south boundary",
+        "a": [
+          2.24,
+          -6.75
+        ],
+        "b": [
+          2.24,
+          -3.86
+        ],
+        "visibleHeight": 0.3875,
+        "insideOriginalForbiddenFrame": true
+      },
+      {
+        "name": "short west return",
+        "a": [
+          -2.24,
+          -5.2
+        ],
+        "b": [
+          -2.24,
+          -3.86
+        ],
+        "visibleHeight": 0.3875,
+        "insideOriginalForbiddenFrame": true
+      }
+    ],
+    "stairOpeningZ": [
+      -7.55,
+      -6.75
+    ],
+    "innerHeadrailX": 1.1,
+    "protectY": 1.2,
+    "worldBounds": [
+      [
+        -2.424999877568689,
+        -0.012959694973566638,
+        -9.800000170339215
+      ],
+      [
+        2.3624998642609376,
+        4.5469041060480855,
+        -3.759999880762548
+      ]
+    ],
+    "roofs": [
+      {
+        "name": "single east-facing Chinese gatehouse",
+        "x": -0.81,
+        "z": -7.6,
+        "hx": 1.24,
+        "hz": 2,
+        "eave": 3.05,
+        "rise": 1.1
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@
  * const roof = createRoofOcclusion(gate);
  * roof.occludes(camera.position, headWorld, player.position.y + .9);
  *
- * Equivalent to a default-layer Three Raycaster aimed at headWorld, near=0,
+ * Equivalent to a default-layer Three Raycaster over visible gate descendants, near=0,
  * far=distance-.1, followed by hits.some(h => h.point.y > minY). Boxes only
  * reject candidates; every positive result requires an exact triangle hit.
  */
@@ -20,7 +20,7 @@ export function createRoofOcclusion(gate){
  let triangleCount=0,nodeCount=0;
  const a=new T.Vector3(),b=new T.Vector3(),c=new T.Vector3(),w=new T.Vector3();
 
- gate.traverse(mesh=>{
+ gate.traverseVisible(mesh=>{
   if(!mesh.isMesh||mesh.material===undefined)return;
   if(mesh.isSkinnedMesh||mesh.isInstancedMesh||mesh.isBatchedMesh)throw Error('Roof occlusion requires static ordinary meshes');
   const geometry=mesh.geometry,position=geometry.attributes.position;
@@ -29,6 +29,7 @@ export function createRoofOcclusion(gate){
   const world=mesh.matrixWorld.clone(),inverse=world.clone().invert(),triangles=[];
   function addRange(start,end,material){
    if(!material)throw Error('Missing roof group material');
+   if(material.visible===false)return;
    for(let i=start;i<end;i+=3){
     const ia=index?index.getX(i):i,ib=index?index.getX(i+1):i+1,ic=index?index.getX(i+2):i+2;
     // getVertexPosition matches Mesh.raycast (including a static morph pose).

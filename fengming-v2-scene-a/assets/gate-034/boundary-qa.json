@@ -1,0 +1,55 @@
+{
+  "revision": "H34",
+  "purpose": "Make the original non-walkable building footprint visible; no nav/height/route changes",
+  "originalForbiddenCentreFrame": {
+    "minX": -2.45,
+    "maxX": 2.45,
+    "minZ": -12,
+    "maxZ": -3.65
+  },
+  "markerCentreInset": 0.21,
+  "southRailCentreZ": -3.86,
+  "eastRailCentreX": 2.24,
+  "railVisibleHeightAboveSampledTerrain": 0.3875,
+  "capHalfWidth": 0.1,
+  "capClearanceFromOriginalLegalCentreBoundary": 0.11,
+  "stairOpeningZ": [
+    -7.55,
+    -6.75
+  ],
+  "originalLegalStairZ": [
+    -7.4,
+    -6.9
+  ],
+  "extraOpeningMarginEachSide": 0.15,
+  "southBypassCentreZ": -3.05,
+  "southBypassToRailOuterFace": 0.71,
+  "eastBypassCentreX": 3.1,
+  "eastBypassToRailOuterFace": 0.76,
+  "innerHeadrailXRange": [
+    1.005,
+    1.195
+  ],
+  "originalStairTopLegalMinX": 1.35,
+  "innerHeadrailInsetFromLegalCentre": 0.155,
+  "navigationCacheSHA256": "718d36ecfd682b85bf57939995da29375f955dc05ada671631a9571d651349ac",
+  "terrainHeightCacheSHA256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df",
+  "navigationGridSamplesUnchanged": 17227,
+  "newTrianglesAdded": 468,
+  "finalTriangles": 17402,
+  "drawCalls": 4,
+  "liveNormalCheck": {
+    "errors": [],
+    "failedRequests": [],
+    "stairPosition": [
+      1.376256313292354,
+      0.7125264152783075,
+      -7.3737436867076465
+    ],
+    "roofCut": 0,
+    "scope": "Normal source entry + actual touch route to genuine stairs; complete native boundary tap evidence recorded by main owner"
+  },
+  "northSideExplainedByExistingHighRock": true,
+  "highGroundNorthRailPresent": false,
+  "postCaptureMinorChange": "Deleted only the high-ground east-north rail; exact full swing visibility now 0/2020 blocked; main owner records final new bundle."
+}

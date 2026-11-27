@@ -1,0 +1,21 @@
+{
+  "revision": "H34",
+  "sourceMeshes": 4,
+  "sourceTriangles": 17402,
+  "sourceAssetsOnly": true,
+  "files": [
+    {
+      "file": "gate-h34.glb",
+      "bytes": 2409756,
+      "sha256": "d020a7e0420bc7bf4cfaa479c43eb86d768e61e08c839210a990502649d65209",
+      "runtimeDownload": false
+    },
+    {
+      "file": "gate-h34.blend",
+      "bytes": 1670510,
+      "sha256": "409bf1a55b059fa2e25d934ecfb6a705f3c5f888d87d4a78caab75db1807e506",
+      "runtimeDownload": false
+    }
+  ],
+  "provenance": "../README.md"
+}

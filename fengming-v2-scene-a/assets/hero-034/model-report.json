@@ -1,0 +1,13 @@
+{
+  "bodyTriangles": 8975,
+  "rawSplitVertices": 26925,
+  "bones": 22,
+  "materials": 2,
+  "atlas": [
+    1024,
+    1024
+  ],
+  "sourceHeadHands": "VRoid HairSample_Male CC0; extracted real face/ear/backhead and curled hands, modified by project",
+  "topology": "new connected quad torso/armholes/sleeves, connected asymmetric split robe; no SDF or primitive-stack body",
+  "notes": []
+}

@@ -1,0 +1,44 @@
+{
+  "source": "Final H34 code-authored detail polish in sample/scene-dressing.js; no new image/API assets",
+  "lantern": {
+    "positions": "Original two main.js placements unchanged",
+    "body": "Real stepped stone base, tapered column, four corner piers, recessed near-side warm window and narrow four-slope stone cap",
+    "trianglesPerLamp": 196,
+    "drawCallsPerLamp": 2,
+    "sharedAtlas": "Existing H33 stone texture object",
+    "warmCoreColor": "#eac78c",
+    "pointLight": {
+      "intensity": 0.85,
+      "distance": 2.8,
+      "height": 1.04
+    },
+    "haloAdded": false
+  },
+  "planting": {
+    "clumpsBefore": 14,
+    "clumpsAfter": 11,
+    "trianglesBefore": 3528,
+    "trianglesAfter": 1800,
+    "change": "Removed three large foreground fans; remaining blades are narrow and bowed. Two clumps have actual paired fern leaflets. No added density."
+  },
+  "normalCameraCheck": {
+    "scope": "Actual source-game 390x844 touch inputs at FOV39, original offset6,27,15; no close-up substituted",
+    "images": [
+      "/workspace/qa-h34/environment/details-spawn.png",
+      "/workspace/qa-h34/environment/details-front-east.png"
+    ],
+    "record": "/workspace/qa-h34/environment/details-scene-data.json",
+    "browserErrors": 0,
+    "failedRequests": 0,
+    "device": "Cloud Chromium SwiftShader, not physical iPhone"
+  },
+  "unchanged": [
+    "hero",
+    "gate",
+    "pine",
+    "terrain XYZ",
+    "navigation",
+    "camera",
+    "lantern world placements"
+  ]
+}

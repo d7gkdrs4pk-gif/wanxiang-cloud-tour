@@ -1,0 +1,305 @@
+{
+  "version": "H.34",
+  "frozen": true,
+  "files": [
+    {
+      "path": "fengming-v2-scene-a/sample/hero.js",
+      "bytes": 14297,
+      "sha256": "226065e48305b39b68497564509bea0f688e23930d987ca96b43129bbb8135c8"
+    },
+    {
+      "path": ".github/scripts/hero034_build.py",
+      "bytes": 27025,
+      "sha256": "e6d8c18e99b8e03014f901c5a9aa431747731cdbe55f88b4cd57d5bf9650fd3f"
+    },
+    {
+      "path": ".github/scripts/hero034_finalize.py",
+      "bytes": 1539,
+      "sha256": "216aba864ae5be682c0b0f32ba7ed61b24b041ab44ea9412445f5a353b9bff76"
+    },
+    {
+      "path": ".github/scripts/hero034-atlas.py",
+      "bytes": 2365,
+      "sha256": "46e3740937cb149d34bcd8dadefbc10af69b77a7f8b7740baeb80bb017e9cb6c"
+    },
+    {
+      "path": ".github/scripts/hero034-finish-atlas.py",
+      "bytes": 1149,
+      "sha256": "d000de33c37019367ae20a2ba485be0a6e7f77c62b722dce1b6c170b2b57b518"
+    },
+    {
+      "path": ".github/scripts/lib/linyan-h34-generator.mjs",
+      "bytes": 3230,
+      "sha256": "f076d4d566548ae35e2acbf0ba7a10dde005038f355e8ef0fbce71a1575c453c"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/linyan-h34.blend",
+      "bytes": 1509130,
+      "sha256": "3ebcee4f0225d7731236725e7500211a8a83c3955787ee4a975280ea85855340"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/linyan-h34.glb",
+      "bytes": 1382672,
+      "sha256": "9303387d354ef307435c861f0df3b96574b3eb181f96c03508a7d8aca6c5dd2c"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/linyan-atlas.webp",
+      "bytes": 104184,
+      "sha256": "4b6e2edd1ec4ac53fc30c022c12b92995bdfce7ee0901ac31ad7c6a7fda1c517"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/linyan-atlas.png",
+      "bytes": 831427,
+      "sha256": "7dc1c75070e45570ba8ee124656a8cf51ea0f5ce6e94b38d3c4c79702c62c192"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/linyan-h34-baked.js",
+      "bytes": 635422,
+      "sha256": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/source/body-mesh.json.gz",
+      "bytes": 740826,
+      "sha256": "97a738a8eb5500e7705dba505a5882578e0c76fa5c2f189b657a1e72e07a2962"
+    },
+    {
+      "path": "fengming-v2-scene-a/assets/hero-034/source/cc0-male-parts.blend",
+      "bytes": 4514576,
+      "sha256": "f603a3611bef7c7bfa0fe24f63658fdf5e3c323cc8121736259b8299ebe34ffd"
+    }
+  ],
+  "runtime": "Actual evaluated Blender body geometry restored from exact indexed TypedArray + 1K RGBA atlas; no runtime modelling",
+  "glb": {
+    "bytes": 1382672,
+    "skins": 1,
+    "joints": [
+      22
+    ],
+    "animations": [
+      "Idle",
+      "Slash",
+      "Walk"
+    ],
+    "materials": 2,
+    "images": 1
+  },
+  "stats": {
+    "triangles": 9351,
+    "materials": 2,
+    "bones": 22,
+    "height": 1.485,
+    "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+    "attackDuration": 0.78,
+    "hitProgress": 0.44,
+    "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+  },
+  "indexedBodyVertices": 6992,
+  "sourceLoopVertices": 26925,
+  "normalViewEvidence": "qa-h34/hero/normal-comparison.json; H33 hero vs H34 hero in same H34 environment; FOV39/offset6,27,15/height1.485 unchanged",
+  "physicalIPhoneTest": false,
+  "wechatDeviceTest": false,
+  "actualSkinnedSize": {
+    "scope": "CPU skinning and perspective projection of every actual body vertex. Excludes sword and does not use stats.height. Geometry bounds do not measure occlusion, alpha-tested pixels, or antialiasing coverage.",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "camera": {
+      "FOV": 39,
+      "near": 0.1,
+      "far": 160,
+      "offset": [
+        6,
+        27,
+        15
+      ],
+      "position": [
+        2.8,
+        27.06569194048643,
+        10.8
+      ],
+      "lookAt": [
+        -3.2,
+        0.0656919404864311,
+        -4.2
+      ]
+    },
+    "player": {
+      "position": [
+        -3.2,
+        0.0656919404864311,
+        -4.2
+      ],
+      "yaw": -0.6
+    },
+    "h33": {
+      "canonicalIdle": {
+        "vertices": 9210,
+        "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+        "worldAABB": {
+          "min": [
+            -0.5257809874489694,
+            0.014000000432133675,
+            -0.33842577757787345
+          ],
+          "max": [
+            0.4491347052685525,
+            1.4806220815327629,
+            0.23562880144285908
+          ],
+          "sizeXYZ": [
+            0.9749156927175219,
+            1.4666220811006292,
+            0.5740545790207325
+          ],
+          "height": 1.4666220811006292,
+          "width": 0.9749156927175219,
+          "depth": 0.5740545790207325
+        },
+        "projectedPixelAABB": null
+      },
+      "normalGameIdle": {
+        "vertices": 9210,
+        "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+        "worldAABB": {
+          "min": [
+            -3.7513380391652174,
+            0.07969194091856478,
+            -4.543939522327806
+          ],
+          "max": [
+            -2.8387293817965107,
+            1.546314022019194,
+            -3.8719940250286475
+          ],
+          "sizeXYZ": [
+            0.9126086573687067,
+            1.4666220811006292,
+            0.6719454972991583
+          ],
+          "height": 1.4666220811006292,
+          "width": 0.9126086573687067,
+          "depth": 0.6719454972991583
+        },
+        "projectedPixelAABB": {
+          "min": [
+            176.81782493822553,
+            389.2918752613635
+          ],
+          "max": [
+            205.43493926689695,
+            429.0161071149182
+          ],
+          "width": 28.61711432867142,
+          "height": 39.72423185355473
+        }
+      }
+    },
+    "h34": {
+      "canonicalIdle": {
+        "vertices": 6992,
+        "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+        "worldAABB": {
+          "min": [
+            -0.5200158938534654,
+            0.014000000432133675,
+            -0.3318615445490618
+          ],
+          "max": [
+            0.4588696076259766,
+            1.4807320263056258,
+            0.22794032573460077
+          ],
+          "sizeXYZ": [
+            0.978885501479442,
+            1.4667320258734922,
+            0.5598018702836626
+          ],
+          "height": 1.4667320258734922,
+          "width": 0.978885501479442,
+          "depth": 0.5598018702836626
+        },
+        "projectedPixelAABB": null
+      },
+      "normalGameIdle": {
+        "vertices": 6992,
+        "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+        "worldAABB": {
+          "min": [
+            -3.7483905830699316,
+            0.07969194091856478,
+            -4.533095906823779
+          ],
+          "max": [
+            -2.8421525145979265,
+            1.546423966792057,
+            -3.8783087239537557
+          ],
+          "sizeXYZ": [
+            0.906238068472005,
+            1.4667320258734922,
+            0.6547871828700234
+          ],
+          "height": 1.4667320258734922,
+          "width": 0.906238068472005,
+          "depth": 0.6547871828700234
+        },
+        "projectedPixelAABB": {
+          "min": [
+            176.8437764001911,
+            389.37643799458635
+          ],
+          "max": [
+            204.84305186089523,
+            428.9295842098459
+          ],
+          "width": 27.999275460704126,
+          "height": 39.553146215259574
+        }
+      }
+    },
+    "difference": {
+      "worldAABBSizeXYZ": [
+        -0.006370588896701612,
+        0.00010994477286296878,
+        -0.017158314429134958
+      ],
+      "projectedHeightPixels": -0.17108563829515333,
+      "projectedWidthPixels": -0.6178388679672935
+    },
+    "inputIntegrity": [
+      {
+        "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/sample/hero.js",
+        "sha256": "226065e48305b39b68497564509bea0f688e23930d987ca96b43129bbb8135c8",
+        "sha256After": "226065e48305b39b68497564509bea0f688e23930d987ca96b43129bbb8135c8",
+        "unchanged": true
+      },
+      {
+        "file": "/workspace/wanxiang-cloud-tour/.github/scripts/lib/linyan-h33-runtime.mjs",
+        "sha256": "80b5cc52b33dc3740f52259f03f562e9c2c23dd704283802f6572af03644178c",
+        "sha256After": "80b5cc52b33dc3740f52259f03f562e9c2c23dd704283802f6572af03644178c",
+        "unchanged": true
+      },
+      {
+        "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/assets/hero-034/linyan-h34-baked.js",
+        "sha256": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245",
+        "sha256After": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245",
+        "unchanged": true
+      },
+      {
+        "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/assets/hero-033/linyan-h33-baked.js",
+        "sha256": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169",
+        "sha256After": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169",
+        "unchanged": true
+      },
+      {
+        "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/vendor/three/three.module.js",
+        "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+        "sha256After": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+        "unchanged": true
+      }
+    ],
+    "inputsStable": true
+  },
+  "textureCodecEvidence": "texture-codec.json"
+}

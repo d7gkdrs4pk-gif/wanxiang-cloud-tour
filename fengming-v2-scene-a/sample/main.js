@@ -5,7 +5,7 @@ import {createNavigation} from './navigation.js';
 import {createHero} from './hero.js';
 import {createEnemy} from './enemy.js';
 import {createLayeredPine} from './pine-layers.js';
-import {createEnvironment} from './environment.js';
+import {createEnvironment,getEnvironmentStoneTexture} from './environment.js';
 import {createSceneDressing,createStoneLantern} from './scene-dressing.js';
 import {createRoofOcclusion} from './roof-occlusion.js';
 import {createPathPlanner} from './path-planner.js';
@@ -34,7 +34,7 @@ const nav=createNavigation({scene,stone});
 const env=createEnvironment({scene,renderer,camera,groundAt:nav.groundAt});env.ready.catch(()=>{});
 const player=new T.Group();player.name='林砚';scene.add(player);
 startup?.stage('正在准备人物',.20,'hero');await yieldPaint();
-const hero=createHero();player.add(hero.group);
+const hero=createHero();player.add(hero.group);if(hero.ready)await hero.ready;
 const foe=createEnemy();scene.add(foe.group);
 const enemy={g:foe.group,hp:3,home:new T.Vector3(2.8,0,-6.6),hurt:0,dead:0};
 env.attachCharacterShadow(player,{size:1.05,opacity:.9});env.attachCharacterShadow(foe.group,{size:1.05,opacity:.7});
@@ -54,7 +54,7 @@ function applyTransform(model,tr){model.scale.setScalar(tr.scale);model.position
 // on the actual steps under it. No background flattening or whole-gate fade.
 const roofUniforms={uHeroPixel:{value:new T.Vector2()},uHeroY:{value:0},uCut:{value:0},uRatio:{value:1},uBladeA:{value:new T.Vector2()},uBladeB:{value:new T.Vector2()},uBladeOn:{value:0}};
 let roofTick=0,roofTarget=0;
-function prepareRoof(model){model.traverse(o=>{if(!o.isMesh)return;for(const m of (Array.isArray(o.material)?o.material:[o.material])){
+function prepareRoof(model){model.traverseVisible(o=>{if(!o.isMesh)return;for(const m of (Array.isArray(o.material)?o.material:[o.material])){
  const old=m.onBeforeCompile;m.onBeforeCompile=shader=>{old?.(shader);Object.assign(shader.uniforms,roofUniforms);shader.vertexShader='varying float vGateY;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <worldpos_vertex>','#include <worldpos_vertex>\nvGateY=(modelMatrix*vec4(transformed,1.)).y;');shader.fragmentShader='varying float vGateY;uniform vec2 uHeroPixel;uniform float uHeroY,uCut,uRatio,uBladeOn;uniform vec2 uBladeA,uBladeB;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>','if(vGateY>uHeroY+.9){float cut=1.-smoothstep(19.*uRatio,36.*uRatio,distance(gl_FragCoord.xy,uHeroPixel));vec2 ab=uBladeB-uBladeA;float along=clamp(dot(gl_FragCoord.xy-uBladeA,ab)/max(1.,dot(ab,ab)),0.,1.);float bladeCut=(1.-smoothstep(3.*uRatio,10.*uRatio,distance(gl_FragCoord.xy,uBladeA+ab*along)))*uBladeOn;diffuseColor.a*=mix(1.,.14,max(cut,bladeCut)*uCut); }\n#include <opaque_fragment>');};m.transparent=true;m.depthWrite=true;m.forceSinglePass=true;m.customProgramCacheKey=()=> 'h33-gate-body-and-blade-cutaway-2';m.needsUpdate=true;
  }})}
 function updateRoof(dt,t){if(!gate||!roofOcclusion)return;const head=player.position.clone().add(new T.Vector3(0,.8,0));if(t-roofTick>100){roofTick=t;roofTarget=[.18,.72,1.2].some(height=>roofOcclusion.occludes(camera.position,player.position.clone().add(new T.Vector3(0,height,0)),player.position.y+.9))?1:0;}
@@ -195,11 +195,11 @@ function frame(t){
   perf.visualMs=performance.now()-visualStart;
  }
  const renderStart=performance.now();renderer.render(scene,camera);perf.renderMs=performance.now()-renderStart;
- if(ready){frameData.push({time:performance.timeOrigin+performance.now(),p:player.position.toArray(),a:player.rotation.y,c:camera.position.toArray(),attack:(attackState?attackState.time/attackState.duration:null),enemyHP:enemy.hp,blade:{base:hero.bladeBaseWorld().toArray(),tip:hero.swordTipWorld().toArray()},cpu:{...perf},calls:renderer.info.render.calls,triangles:renderer.info.render.triangles});if(frameData.length>3000)frameData.shift();}
+ if(ready){frameData.push({time:performance.timeOrigin+performance.now(),p:player.position.toArray(),a:player.rotation.y,c:camera.position.toArray(),attack:(attackState?attackState.time/attackState.duration:null),enemyHP:enemy.hp,roofCut:roofUniforms.uCut.value,blade:{base:hero.bladeBaseWorld().toArray(),tip:hero.swordTipWorld().toArray()},cpu:{...perf},calls:renderer.info.render.calls,triangles:renderer.info.render.triangles});if(frameData.length>3000)frameData.shift();}
  if(debug){$('#debug').hidden=false;$('#debug').textContent=JSON.stringify(snapshot(),null,1);}
  requestAnimationFrame(frame);
 }
-function snapshot(){return {version:'H.33 miniature gate art sample',ready,position:player.position.toArray(),rotation:player.rotation.y,camera:camera.position.toArray(),FOV:camera.fov,heroHeight:1.485,cpu:{...perf},kinematics:{...motion},blade:{base:hero.bladeBaseWorld().toArray(),tip:hero.swordTipWorld().toArray()},hero:hero.stats,hitPause,startup:startup?.state,pathNodes:movePath.map(p=>p.toArray()),guideIndex,roofCut:roofUniforms.uCut.value,target:target.toArray(),flags:{...flags},enemy:{p:enemy.g.position.toArray(),hp:enemy.hp},attack:(attackState?attackState.time/attackState.duration:null),stats:{calls:renderer.info.render.calls,triangles:renderer.info.render.triangles},pine:pine?.lastUpdate??null,events:events.slice(-40)};}
+function snapshot(){return {version:'H.34 sculpted gate and Linyan sample',ready,position:player.position.toArray(),rotation:player.rotation.y,camera:camera.position.toArray(),FOV:camera.fov,heroHeight:1.485,cpu:{...perf},kinematics:{...motion},blade:{base:hero.bladeBaseWorld().toArray(),tip:hero.swordTipWorld().toArray()},hero:hero.stats,gateRevision:gate?.userData.roofFinishStats?.revision,hitPause,startup:startup?.state,pathNodes:movePath.map(p=>p.toArray()),guideIndex,roofCut:roofUniforms.uCut.value,target:target.toArray(),flags:{...flags},enemy:{p:enemy.g.position.toArray(),hp:enemy.hp},attack:(attackState?attackState.time/attackState.duration:null),stats:{calls:renderer.info.render.calls,triangles:renderer.info.render.triangles},pine:pine?.lastUpdate??null,events:events.slice(-40)};}
 window.__SAMPLE={snapshot,project:(x,y,z)=>{const p=new T.Vector3(x,y,z).project(camera);return [(p.x+1)*innerWidth/2,(1-p.y)*innerHeight/2]},frames:()=>frameData.slice(),events:()=>events.slice(),getStep:(x,z)=>nav.stairsAt(x,z),getGround:(x,z)=>nav.groundAt(x,z)};
 async function boot(){
  try{
@@ -207,7 +207,7 @@ async function boot(){
   const [cache,surface]=await Promise.all([fetch('./assets/sample-lod/navigation.json').then(r=>{if(!r.ok)throw Error('Navigation HTTP '+r.status);return r.json()}),loadGroundSurface()]);nav.installCached(cache);nav.setSurfaceProvider(surface.refine);pathPlanner=createPathPlanner(nav);
   startup?.stage('正在载入场景与光影',.50,'scene');
   const [ter,ga]=await Promise.all([load('./assets/sample-runtime/terrain.glb'),load('./assets/sample-runtime/gate.glb')]);terrain=ter;gate=ga;
-  applyTransform(terrain,cache.transforms.terrain_transform);applyTransform(gate,cache.transforms.gate_transform);scene.add(terrain,gate);env.styleTerrain(terrain);env.styleGate(gate);if(params.get('roofFinish')!=='0')finishGateRoof(gate,{shading:params.get('roofPbr')==='1'?'pbr':'light'});prepareRoof(gate);env.setGroundAt(nav.groundAt);roofOcclusion=createRoofOcclusion(gate);await env.ready;
+  applyTransform(terrain,cache.transforms.terrain_transform);applyTransform(gate,cache.transforms.gate_transform);scene.add(terrain,gate);env.styleTerrain(terrain);env.styleGate(gate);const gateFinish=params.get('roofFinish')!=='0'?finishGateRoof(gate,{shading:params.get('roofPbr')==='1'?'pbr':'light',stoneTexture:getEnvironmentStoneTexture()}):null;if(gateFinish?.ready)await gateFinish.ready;prepareRoof(gate);env.setGroundAt(nav.groundAt);roofOcclusion=createRoofOcclusion(gate);await env.ready;
   dressing=createSceneDressing({scene,groundAt:nav.groundAt,grid:nav.grid});for(const l of lamps)l.group.position.y=nav.groundAt(l.x,l.z)??0;
   startup?.stage('正在载入迎客松',.78,'pine');
   pine=createLayeredPine({position:[-7,nav.groundAt(-7,-7),-7],width:6.4,height:5.6,groundAt:nav.groundAt});scene.add(pine.group);await pine.ready;

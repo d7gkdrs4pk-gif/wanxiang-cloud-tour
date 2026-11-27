@@ -2,11 +2,11 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 from PIL import Image,ImageDraw,ImageFont
 import json,time,base64,os
-out=Path(os.environ.get('FM_QA_OUT','/tmp/fengming-no-fx-h33'));out.mkdir(parents=True,exist_ok=True)
+out=Path(os.environ.get('FM_QA_OUT','/tmp/fengming-no-fx-h34'));out.mkdir(parents=True,exist_ok=True)
 base=os.environ.get('FM_TEST_URL','http://127.0.0.1:3000/').rstrip('/')+'/'
 with sync_playwright()as pw:
  b=pw.webkit.launch(headless=True);c=b.new_context(viewport={'width':390,'height':844},device_scale_factor=1,is_mobile=True,has_touch=True,record_video_dir=str(out/'video'),record_video_size={'width':390,'height':844});p=c.new_page();errors=[];p.on('pageerror',lambda e:errors.append(str(e)))
- p.goto(base+'gate-h33.html?fx=0',wait_until='networkidle');p.wait_for_function('window.__SAMPLE?.snapshot().ready');p.wait_for_selector('#loading',state='hidden')
+ p.goto(base+'gate-h34.html?fx=0',wait_until='networkidle');p.wait_for_function('window.__SAMPLE?.snapshot().ready');p.wait_for_selector('#loading',state='hidden')
  # Navigate only through native touchscreen taps and the original ground picker.
  for x,z in [(-3.1,-3.05),(0,-3.05),(3.1,-3.05),(3.1,-6.6),(2.5,-7),(1.58,-7)]:
   p.wait_for_function('()=>{const s=__SAMPLE.snapshot();return Math.hypot(s.camera[0]-s.position[0]-6,s.camera[2]-s.position[2]-15)<.15}')

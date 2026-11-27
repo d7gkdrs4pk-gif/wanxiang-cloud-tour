@@ -1,0 +1,71 @@
+"""H34 authored bedrock control cages. Run with Blender --background --python.
+No spheres/noise-displaced primitives; wide broken slabs with asymmetric outlines,
+undercut shoulders, sculpted top slopes and real narrow bevels. Runtime geometry
+is baked here, then rigidly fitted to the existing terrain in scene-dressing.js.
+"""
+import bpy,bmesh,json,math,pathlib,hashlib
+from mathutils import Vector
+ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'assets/environment-034';OUT.mkdir(parents=True,exist_ok=True)
+bpy.context.preferences.filepaths.save_version=0
+bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
+SPECS={
+ 'west':{'outline':[[-1.80,-.80],[-.80,-1.02],[.65,-.92],[1.65,-.55],[1.85,.22],[1.20,.88],[-.25,1.00],[-1.55,.55]],'height':.82,'slope':[.035,-.065],'offset':[-.09,.035],'crown':[-.15,.01,.10,-.045,.07,-.16,-.075,.045]},
+ 'east':{'outline':[[-1.55,-.70],[-.70,-1.08],[.90,-.95],[1.65,-.20],[1.20,.98],[.05,1.05],[-1.40,.48]],'height':1.02,'slope':[-.085,.065],'offset':[.13,-.045],'crown':[-.18,-.045,.035,.16,-.075,-.16,.09]},
+ 'side':{'outline':[[-.77,-1.65],[.14,-1.83],[.78,-1.22],[.70,.08],[.56,1.62],[-.25,1.82],[-.74,1.19],[-.88,.15]],'height':.74,'slope':[.12,.045],'offset':[-.035,.07],'crown':[-.20,-.055,.065,.14,.015,-.16,-.075,.12]}
+}
+material=bpy.data.materials.new('H34 matte slate source');material.diffuse_color=(.20,.25,.25,1);material.use_nodes=True
+bs=material.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.20,.25,.25,1);bs.inputs['Roughness'].default_value=.95
+output={};objects=[]
+for si,(key,spec) in enumerate(SPECS.items()):
+ outline=spec['outline'];n=len(outline);h=spec['height'];sx,sz=spec['slope'];ox,oz=spec['offset']
+ # The four rings define a rock ledge, not a rounded mound: buried root,
+ # narrower foot, one overhanging shoulder and a sloping, broad carved cap.
+ rings=[(-.14,1.00,0.,0.),(.13,.94,-ox*.4,-oz*.4),(.70,1.025,ox*.25,oz*.25),(1.,.82,ox,oz)]
+ vertices=[]
+ for level,scale,dx,dz in rings:
+  for i,(x,z) in enumerate(outline):
+   xx=x*scale+dx;zz=z*scale+dz
+   # One interrupted corner, not a repeated scallop or procedural pebble noise.
+   cut=(-.065 if key=='east' and i==2 else .035 if key=='west' and i==6 else 0.)*max(0,level)
+   yy=level*h+sx*xx+sz*zz+cut+spec['crown'][i]*max(0,level)**2
+   vertices.append((xx,-zz,yy))
+ faces=[tuple(range(n))]
+ for r in range(len(rings)-1):
+  for i in range(n):
+   k=(i+1)%n;faces.append((r*n+k,r*n+i,(r+1)*n+i,(r+1)*n+k))
+ for i in range(1,n-1):faces.append(((len(rings)-1)*n,(len(rings)-1)*n+i+1,(len(rings)-1)*n+i))
+ mesh=bpy.data.meshes.new('H34 '+key+' hand-cut control cage');mesh.from_pydata(vertices,[],faces);mesh.update()
+ bm=bmesh.new();bm.from_mesh(mesh);bmesh.ops.recalc_face_normals(bm,faces=bm.faces);bm.to_mesh(mesh);bm.free();mesh.update()
+ ob=bpy.data.objects.new('H34 '+key+' stratified bedrock',mesh);bpy.context.collection.objects.link(ob);ob.data.materials.append(material)
+ bpy.context.view_layer.objects.active=ob;ob.select_set(True)
+ bevel=ob.modifiers.new('Actual sculpted edge bevel','BEVEL');bevel.width=.065 if key!='side' else .05;bevel.segments=3;bevel.limit_method='ANGLE';bevel.angle_limit=.20;bevel.harden_normals=True
+ weight=ob.modifiers.new('Broad face weighted normals','WEIGHTED_NORMAL');weight.keep_sharp=True;weight.weight=50
+ for poly in mesh.polygons:poly.use_smooth=True
+ if hasattr(mesh,'use_auto_smooth'):mesh.use_auto_smooth=True
+ deps=bpy.context.evaluated_depsgraph_get();ev=ob.evaluated_get(deps);me=ev.to_mesh();me.calc_loop_triangles()
+ if hasattr(me,'calc_normals_split'):me.calc_normals_split()
+ p=[];norm=[]
+ for tri in me.loop_triangles:
+  for li in tri.loops:
+   loop=me.loops[li];v=me.vertices[loop.vertex_index].co
+   vn=loop.normal if hasattr(loop,'normal') else me.corner_normals[li].vector
+   # Blender Z up -> runtime glTF/Three Y up. Geometry stays local for fitting.
+   p.extend([round(v.x,6),round(v.z,6),round(-v.y,6)])
+   norm.extend([round(vn.x,7),round(vn.z,7),round(-vn.y,7)])
+ unique={};up=[];un=[];index=[]
+ for vi in range(len(p)//3):
+  token=tuple(p[vi*3:vi*3+3]+norm[vi*3:vi*3+3])
+  if token not in unique:unique[token]=len(up)//3;up.extend(p[vi*3:vi*3+3]);un.extend(norm[vi*3:vi*3+3])
+  index.append(unique[token])
+ output[key]={'position':up,'normal':un,'index':index,'height':h,'outline':outline,'triangles':len(index)//3}
+ ev.to_mesh_clear();ob.select_set(False);ob.location.x=si*4.7;objects.append(ob)
+# Editable source library and a real glTF geometry inspection asset.
+bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'hand-cut-bedrock.blend'))
+bpy.ops.object.select_all(action='DESELECT')
+for ob in objects:ob.select_set(True)
+bpy.context.view_layer.objects.active=objects[0]
+bpy.ops.export_scene.gltf(filepath=str(OUT/'hand-cut-bedrock.glb'),export_format='GLB',use_selection=True,export_yup=True,export_apply=True)
+js='// Original H34 beveled control cages; generated by tools/build-environment-034.py.\nexport const LEDGE_SHAPES='+json.dumps({k:output[k]for k in ['west','east']},separators=(',',':'))+';\n';(OUT/'rock-shapes.js').write_text(js)
+record={'source':'Original hand-authored polygon control cages, undercut shoulder profiles and physical Blender edge bevels; no sphere primitives or external geometry','editableSource':'hand-cut-bedrock.blend','glb':'hand-cut-bedrock.glb','runtime':'rock-shapes.js bundled statically; no runtime GLB request or build-time modelling on phone','shapes':{k:{'triangles':v['triangles'],'height':v['height'],'outline':v['outline']} for k,v in output.items()},'totalTriangles':sum(v['triangles']for v in output.values()),'runtimePlacedKeys':['west','east'],'runtimeTriangles':sum(output[k]['triangles']for k in ['west','east']),'excludedCandidate':'Side ledge remains only in editable source/glb library; excluded from runtime after normal-camera art review because it looked like a separate stone pedestal','sourcePainting':'Reuses project-owned H33 handpainted-stone-atlas.webp right rock cell','originalTerrainAndNavigationModified':False}
+(OUT/'provenance.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
+print('H34 BEDROCK',json.dumps(record,ensure_ascii=False))

@@ -1,10 +1,21 @@
-/** 林砚 H33 · authored silhouette and continuous physical sword animation.
- * The original construction source lives in .github/scripts/lib/linyan-h33-generator.mjs.
+/** 林砚 H34 · Blender-authored tailored topology, CC0 male face/hands, painted atlas.
+ * The original construction source lives in .github/scripts/lib/linyan-h34-generator.mjs.
  * Geometry, vertex colors, weights, bind inverses and sword are baked offline.
  * Facing +Z. Height 1.485. Attack .78s; hit normalized .44.
  */
 import * as T from 'three';
-import {getBakedHeroData} from '../assets/hero-033/linyan-h33-baked.js';
+import {getBakedHeroData} from '../assets/hero-034/linyan-h34-baked.js';
+
+let sharedAtlas=null,sharedAtlasReady=null;
+function loadAtlas(){
+ if(sharedAtlasReady)return sharedAtlasReady;
+ if(typeof document==='undefined'){sharedAtlasReady=Promise.resolve();return sharedAtlasReady;}
+ sharedAtlasReady=new Promise((resolve,reject)=>{
+  sharedAtlas=new T.TextureLoader().load(new URL('../assets/hero-034/linyan-atlas.webp',import.meta.url).href,()=>resolve(),undefined,reject);
+  sharedAtlas.colorSpace=T.SRGBColorSpace;sharedAtlas.anisotropy=2;
+ });
+ return sharedAtlasReady;
+}
 
 const ease=t=>t*t*(3-2*t);
 const lerp=T.MathUtils.lerp;
@@ -40,11 +51,11 @@ function restoreMeshFlags(object,spec){
  restoreTransform(object,spec);
 }
 export function createHero(){
- const data=getBakedHeroData();
+ const data=getBakedHeroData(),ready=loadAtlas();
  const group=new T.Group();group.name='林砚-男主-持剑';
  const materials=data.materials.map(spec=>{
   const {type,color,emissive,...properties}=spec;
-  return new T.MeshStandardMaterial({...properties,color:new T.Color().fromArray(color),emissive:new T.Color().fromArray(emissive)});
+  return new T.MeshStandardMaterial({...properties,color:new T.Color().fromArray(color),emissive:new T.Color().fromArray(emissive),map:sharedAtlas});
  });
  const bones=data.bones.map(spec=>{const bone=new T.Bone();bone.name=spec.name;restoreTransform(bone,spec);return bone;});
  data.bones.forEach((spec,i)=>{if(spec.parent<0)group.add(bones[i]);else bones[spec.parent].add(bones[i]);});
@@ -124,5 +135,6 @@ export function createHero(){
 
  update(0,{});group.updateMatrixWorld(true);
  const stats={...data.stats};
- return {group,body,sword,update,stats,attackDuration:.78,hitProgress:.44,swordTipWorld:(out=new T.Vector3())=>sword.localToWorld(out.set(0,0,1.33)),bladeBaseWorld:(out=new T.Vector3())=>sword.localToWorld(out.set(0,0,.09)),getAttackProgress:()=>attackPhase};
+ group.userData.asset='assets/hero-034/linyan-h34.glb (offline baked exact Blender mesh)';
+ return {group,body,sword,update,stats,ready,attackDuration:.78,hitProgress:.44,swordTipWorld:(out=new T.Vector3())=>sword.localToWorld(out.set(0,0,1.33)),bladeBaseWorld:(out=new T.Vector3())=>sword.localToWorld(out.set(0,0,.09)),getAttackProgress:()=>attackPhase};
 }

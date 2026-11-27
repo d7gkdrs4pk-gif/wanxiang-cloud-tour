@@ -1,0 +1,877 @@
+{
+  "environment": "Cloud Linux WebKit26.5 WPE, 390x844 DPR1, software renderer; not physical iPhone or WeChat device",
+  "physicalIPhone": false,
+  "wechatDeviceTest": false,
+  "readOnlyCapture": true,
+  "versions": [
+    {
+      "version": "H33",
+      "url": "http://127.0.0.1:3000/gate-h33.html",
+      "elapsedReadyAndCaptureSeconds": 3.3421232760010753,
+      "snapshotBeforeCapture": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 12
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 0
+        },
+        "blade": {
+          "base": [
+            -3.8020240013096647,
+            0.8712862153065588,
+            -4.260910025300825
+          ],
+          "tip": [
+            -4.837422589417394,
+            1.2357784444269995,
+            -3.6841126790384378
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779238239,
+          "started": 1795779236622,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779236622,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779236623,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779236780,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779237213,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779237327,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779237786,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779238183,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779238239,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779238797,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795779238797
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 34,
+          "triangles": 98297
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1626
+          },
+          {
+            "type": "ready",
+            "t": 2184,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "snapshotAfterCapture": {
+        "version": "H.33 miniature gate art sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 11
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 0
+        },
+        "blade": {
+          "base": [
+            -3.802021939393707,
+            0.8658423041751236,
+            -4.260908614668223
+          ],
+          "tip": [
+            -4.837420109523105,
+            1.2303352681152342,
+            -3.684110982451474
+          ]
+        },
+        "hero": {
+          "triangles": 16026,
+          "materials": 7,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H33 swept hair / separated sword arm / split riding robe",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+        },
+        "hitPause": 0,
+        "startup": {
+          "version": "H.33",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779238239,
+          "started": 1795779236622,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779236622,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779236623,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779236780,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779237213,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779237327,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779237786,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779238183,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779238239,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779238797,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h33.js?v=972b17a94866",
+          "readyAt": 1795779238797
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 34,
+          "triangles": 98297
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1626
+          },
+          {
+            "type": "ready",
+            "t": 2184,
+            "hero": {
+              "triangles": 16026,
+              "materials": 7,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H33 swept hair / separated sword arm / split riding robe",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "Original geometry and animation authored in code for 凤鸣山门; no third-party character asset."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "projection": {
+        "base": [
+          194.99999999999994,
+          422.0000000000003
+        ],
+        "top": [
+          194.99999999999994,
+          391.9025099378668
+        ],
+        "referenceHeightPixels": 30.097490062133488
+      },
+      "device": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+        "viewport": [
+          390,
+          844
+        ],
+        "devicePixelRatio": 1,
+        "canvas": [
+          390,
+          844
+        ],
+        "renderer": "Apple GPU",
+        "debugPanelHidden": true,
+        "loadingHidden": true
+      },
+      "errors": [],
+      "failedRequests": [],
+      "capture": "native viewport screenshot; no teleport; no camera/scale/runtime changes"
+    },
+    {
+      "version": "H34",
+      "url": "http://127.0.0.1:3000/gate-h34.html",
+      "elapsedReadyAndCaptureSeconds": 2.7166865469989716,
+      "snapshotBeforeCapture": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 1,
+          "renderMs": 9
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 0
+        },
+        "blade": {
+          "base": [
+            -3.8020223487350293,
+            0.8705432640481227,
+            -4.260908894713689
+          ],
+          "tip": [
+            -4.837420601843519,
+            1.235036082108432,
+            -3.6841113192659907
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779241320,
+          "started": 1795779240136,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779240136,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779240137,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779240284,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779240761,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779240869,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779241153,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779241309,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779241320,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779241792,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779241792
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 63441
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1194
+          },
+          {
+            "type": "ready",
+            "t": 1667,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "snapshotAfterCapture": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "rotation": -0.6,
+        "camera": [
+          2.8,
+          27.06569194048643,
+          10.8
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 1,
+          "renderMs": 9
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 0
+        },
+        "blade": {
+          "base": [
+            -3.80202195987664,
+            0.8679190369317972,
+            -4.26090862868135
+          ],
+          "tip": [
+            -4.83742013415821,
+            1.232411993572264,
+            -3.684110999305255
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779241320,
+          "started": 1795779240136,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779240136,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779240137,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779240284,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779240761,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779240869,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779241153,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779241309,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779241320,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779241792,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779241792
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          -3.2,
+          0.0656919404864311,
+          -4.2
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": false,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.8,
+            0.02455228567123413,
+            -6.6
+          ],
+          "hp": 3
+        },
+        "attack": null,
+        "stats": {
+          "calls": 29,
+          "triangles": 63441
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.490341503250725,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.44884717237953,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.605732714055236,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.46426544510455
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 1194
+          },
+          {
+            "type": "ready",
+            "t": 1667,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          }
+        ]
+      },
+      "projection": {
+        "base": [
+          194.99999999999994,
+          422.0000000000003
+        ],
+        "top": [
+          194.99999999999994,
+          391.9025099378668
+        ],
+        "referenceHeightPixels": 30.097490062133488
+      },
+      "device": {
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15",
+        "viewport": [
+          390,
+          844
+        ],
+        "devicePixelRatio": 1,
+        "canvas": [
+          390,
+          844
+        ],
+        "renderer": "Apple GPU",
+        "debugPanelHidden": true,
+        "loadingHidden": true
+      },
+      "errors": [],
+      "failedRequests": [],
+      "capture": "native viewport screenshot; no teleport; no camera/scale/runtime changes"
+    }
+  ],
+  "comparison": {
+    "sameXZ": true,
+    "sameHeading": true,
+    "sameFOV": true,
+    "sameHeroReferenceHeight": true,
+    "sameNormalCameraOffset": true,
+    "groundYDeltaH34MinusH33": 0.0,
+    "cameraPositionDeltaH34MinusH33": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cameraMatricesIdenticalClaimed": false,
+    "note": "H33 and H34 retain the same refined navigation height. Actual position/camera differences are recorded above; no camera or actor-size override was applied."
+  }
+}

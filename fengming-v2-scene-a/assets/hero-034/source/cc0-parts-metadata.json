@@ -1,0 +1,967 @@
+{
+  "blend": "cc0-parts.blend",
+  "glb": "cc0-parts.glb",
+  "low_collection": "LOW",
+  "high_collection": "CC0_HIGH_ORIGINAL_UV",
+  "source": "/workspace/qa-h31-character/HairSample_Male.vrm",
+  "source_sha256": "7aeca142dabbc26ba0f5b9c998c8f3cb6df341287d67788427ac837223785a3f",
+  "license": "CC0",
+  "official_license": "https://vroid.pixiv.help/hc/en-us/articles/4402614652569-Do-VRoid-Studio-s-sample-models-come-with-conditions-of-use",
+  "facing": "Three +Z / Blender -Y",
+  "coordinate_conversion": "Blender importer B(x,-z,y); then Rz(pi) to turn original VRM0 -Z toward Three +Z",
+  "unit_scale": 1.0,
+  "bone_mapping": {
+    "head": "node16 J_Bip_C_Head",
+    "neck": "node15 J_Bip_C_Neck",
+    "left_hand": "node38 J_Bip_L_Hand plus 15 finger bones",
+    "right_hand": "node62 J_Bip_R_Hand plus 15 finger bones"
+  },
+  "low_objects": [
+    {
+      "name": "Head_Low",
+      "vertices": 1836,
+      "triangles": 2207,
+      "bbox_blender": {
+        "min": [
+          -0.11237626522779465,
+          -0.1276608556509018,
+          1.4961819648742676
+        ],
+        "max": [
+          0.11135862022638321,
+          0.09950095415115356,
+          1.7496153116226196
+        ]
+      },
+      "bbox_three_world": {
+        "min": [
+          -0.11237626522779465,
+          1.4961819648742676,
+          -0.09950095415115356
+        ],
+        "max": [
+          0.11135862022638321,
+          1.7496153116226196,
+          0.1276608556509018
+        ]
+      },
+      "material_slots": [
+        "M00_000_00_FaceBrow_00_FACE",
+        "M00_000_00_FaceMouth_00_FACE",
+        "M00_000_00_EyeIris_00_EYE",
+        "M00_000_00_EyeHighlight_00_EYE",
+        "M00_000_00_EyeWhite_00_EYE",
+        "M00_000_00_Face_00_SKIN",
+        "M00_000_00_FaceEyelash_00_FACE",
+        "M00_000_00_FaceEyeline_00_FACE",
+        "M00_000_00_EyeExtra_01_EYE",
+        "M00_001_01_Body_00_SKIN"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "source_vertex_groups": [
+        "Root",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest",
+        "J_Sec_C_Hood",
+        "J_Sec_C_Hood_end",
+        "J_Sec_L_HoodString1",
+        "J_Sec_L_HoodString2",
+        "J_Sec_L_HoodString2_end",
+        "J_Sec_R_HoodString1",
+        "J_Sec_R_HoodString2",
+        "J_Sec_R_HoodString2_end",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Head",
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye",
+        "HairJoint-82c4c5e8-c368-4b6e-a504-480e4f60cb69",
+        "HairJoint-6913a169-83d6-4677-bef5-9153b9d344b0",
+        "HairJoint-bc61f9e8-5a12-490f-91d8-adc307a33d51",
+        "HairJoint-8f43ae4e-2d2a-4f61-a26c-6397e3169d38",
+        "HairJoint-49aba0e8-6a83-47ea-9815-8f6a5c5011f4",
+        "HairJoint-339a9df3-f3b7-4ac0-a2ac-4beee1db40bc",
+        "HairJoint-d0ad1cb1-a563-4a34-9909-75e7e2d389d4",
+        "HairJoint-a39a88ff-cc9b-490a-8c17-af03ede48e69",
+        "HairJoint-ae3025ea-7a15-4b14-b090-b06fd78b1f63",
+        "HairJoint-167fcdf0-79dc-43c6-8e43-5e998fa080f7",
+        "HairJoint-6813f7c8-fd84-41ff-8372-ac83eaf2910c",
+        "HairJoint-1e5424e1-c68a-4f59-8efe-3c358d085041",
+        "HairJoint-e61a81b6-23bf-408c-b807-2ba06ec8435e",
+        "HairJoint-df0106a2-645a-4bf7-89e5-4d5b46ceadf8",
+        "HairJoint-b527190d-90df-4e57-9a86-3b3808e32454",
+        "HairJoint-4f7293a0-9c06-4bdc-952a-52532b800cae",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_LowerArm",
+        "J_Bip_L_Hand",
+        "J_Bip_L_Index1",
+        "J_Bip_L_Index2",
+        "J_Bip_L_Index3",
+        "J_Bip_L_Index3_end",
+        "J_Bip_L_Little1",
+        "J_Bip_L_Little2",
+        "J_Bip_L_Little3",
+        "J_Bip_L_Little3_end",
+        "J_Bip_L_Middle1",
+        "J_Bip_L_Middle2",
+        "J_Bip_L_Middle3",
+        "J_Bip_L_Middle3_end",
+        "J_Bip_L_Ring1",
+        "J_Bip_L_Ring2",
+        "J_Bip_L_Ring3",
+        "J_Bip_L_Ring3_end",
+        "J_Bip_L_Thumb1",
+        "J_Bip_L_Thumb2",
+        "J_Bip_L_Thumb3",
+        "J_Bip_L_Thumb3_end",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_LowerArm",
+        "J_Bip_R_Hand",
+        "J_Bip_R_Index1",
+        "J_Bip_R_Index2",
+        "J_Bip_R_Index3",
+        "J_Bip_R_Index3_end",
+        "J_Bip_R_Little1",
+        "J_Bip_R_Little2",
+        "J_Bip_R_Little3",
+        "J_Bip_R_Little3_end",
+        "J_Bip_R_Middle1",
+        "J_Bip_R_Middle2",
+        "J_Bip_R_Middle3",
+        "J_Bip_R_Middle3_end",
+        "J_Bip_R_Ring1",
+        "J_Bip_R_Ring2",
+        "J_Bip_R_Ring3",
+        "J_Bip_R_Ring3_end",
+        "J_Bip_R_Thumb1",
+        "J_Bip_R_Thumb2",
+        "J_Bip_R_Thumb3",
+        "J_Bip_R_Thumb3_end",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_L_LowerLeg",
+        "J_Bip_L_Foot",
+        "J_Bip_L_ToeBase",
+        "J_Bip_L_ToeBase_end",
+        "J_Bip_R_UpperLeg",
+        "J_Bip_R_LowerLeg",
+        "J_Bip_R_Foot",
+        "J_Bip_R_ToeBase",
+        "J_Bip_R_ToeBase_end"
+      ],
+      "shape_keys": false,
+      "armature_modifiers": 0
+    },
+    {
+      "name": "Hand_L_Low",
+      "vertices": 473,
+      "triangles": 575,
+      "bbox_blender": {
+        "min": [
+          0.5917547345161438,
+          -0.12433557212352753,
+          1.3342318534851074
+        ],
+        "max": [
+          0.7398643493652344,
+          0.009477715939283371,
+          1.4106088876724243
+        ]
+      },
+      "bbox_three_world": {
+        "min": [
+          0.5917547345161438,
+          1.3342318534851074,
+          -0.009477715939283371
+        ],
+        "max": [
+          0.7398643493652344,
+          1.4106088876724243,
+          0.12433557212352753
+        ]
+      },
+      "material_slots": [
+        "M00_001_01_Body_00_SKIN"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "source_vertex_groups": [
+        "Root",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest",
+        "J_Sec_C_Hood",
+        "J_Sec_C_Hood_end",
+        "J_Sec_L_HoodString1",
+        "J_Sec_L_HoodString2",
+        "J_Sec_L_HoodString2_end",
+        "J_Sec_R_HoodString1",
+        "J_Sec_R_HoodString2",
+        "J_Sec_R_HoodString2_end",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Head",
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye",
+        "HairJoint-82c4c5e8-c368-4b6e-a504-480e4f60cb69",
+        "HairJoint-6913a169-83d6-4677-bef5-9153b9d344b0",
+        "HairJoint-bc61f9e8-5a12-490f-91d8-adc307a33d51",
+        "HairJoint-8f43ae4e-2d2a-4f61-a26c-6397e3169d38",
+        "HairJoint-49aba0e8-6a83-47ea-9815-8f6a5c5011f4",
+        "HairJoint-339a9df3-f3b7-4ac0-a2ac-4beee1db40bc",
+        "HairJoint-d0ad1cb1-a563-4a34-9909-75e7e2d389d4",
+        "HairJoint-a39a88ff-cc9b-490a-8c17-af03ede48e69",
+        "HairJoint-ae3025ea-7a15-4b14-b090-b06fd78b1f63",
+        "HairJoint-167fcdf0-79dc-43c6-8e43-5e998fa080f7",
+        "HairJoint-6813f7c8-fd84-41ff-8372-ac83eaf2910c",
+        "HairJoint-1e5424e1-c68a-4f59-8efe-3c358d085041",
+        "HairJoint-e61a81b6-23bf-408c-b807-2ba06ec8435e",
+        "HairJoint-df0106a2-645a-4bf7-89e5-4d5b46ceadf8",
+        "HairJoint-b527190d-90df-4e57-9a86-3b3808e32454",
+        "HairJoint-4f7293a0-9c06-4bdc-952a-52532b800cae",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_LowerArm",
+        "J_Bip_L_Hand",
+        "J_Bip_L_Index1",
+        "J_Bip_L_Index2",
+        "J_Bip_L_Index3",
+        "J_Bip_L_Index3_end",
+        "J_Bip_L_Little1",
+        "J_Bip_L_Little2",
+        "J_Bip_L_Little3",
+        "J_Bip_L_Little3_end",
+        "J_Bip_L_Middle1",
+        "J_Bip_L_Middle2",
+        "J_Bip_L_Middle3",
+        "J_Bip_L_Middle3_end",
+        "J_Bip_L_Ring1",
+        "J_Bip_L_Ring2",
+        "J_Bip_L_Ring3",
+        "J_Bip_L_Ring3_end",
+        "J_Bip_L_Thumb1",
+        "J_Bip_L_Thumb2",
+        "J_Bip_L_Thumb3",
+        "J_Bip_L_Thumb3_end",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_LowerArm",
+        "J_Bip_R_Hand",
+        "J_Bip_R_Index1",
+        "J_Bip_R_Index2",
+        "J_Bip_R_Index3",
+        "J_Bip_R_Index3_end",
+        "J_Bip_R_Little1",
+        "J_Bip_R_Little2",
+        "J_Bip_R_Little3",
+        "J_Bip_R_Little3_end",
+        "J_Bip_R_Middle1",
+        "J_Bip_R_Middle2",
+        "J_Bip_R_Middle3",
+        "J_Bip_R_Middle3_end",
+        "J_Bip_R_Ring1",
+        "J_Bip_R_Ring2",
+        "J_Bip_R_Ring3",
+        "J_Bip_R_Ring3_end",
+        "J_Bip_R_Thumb1",
+        "J_Bip_R_Thumb2",
+        "J_Bip_R_Thumb3",
+        "J_Bip_R_Thumb3_end",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_L_LowerLeg",
+        "J_Bip_L_Foot",
+        "J_Bip_L_ToeBase",
+        "J_Bip_L_ToeBase_end",
+        "J_Bip_R_UpperLeg",
+        "J_Bip_R_LowerLeg",
+        "J_Bip_R_Foot",
+        "J_Bip_R_ToeBase",
+        "J_Bip_R_ToeBase_end"
+      ],
+      "shape_keys": false,
+      "armature_modifiers": 0,
+      "source_wrist_blender": [
+        0.6148946285247803,
+        -0.026354102417826653,
+        1.393779993057251
+      ],
+      "source_wrist_three_world": [
+        0.6148946285247803,
+        1.393779993057251,
+        0.026354102417826653
+      ],
+      "bbox_relative_to_source_wrist_blender": {
+        "min": [
+          -0.023139894008636475,
+          -0.09798146970570087,
+          -0.059548139572143555
+        ],
+        "max": [
+          0.1249697208404541,
+          0.035831818357110023,
+          0.01682889461517334
+        ]
+      },
+      "grip_pose": "left relaxed 25/35/20deg; thumb15/25/15deg",
+      "bbox_relative_to_source_wrist_three": {
+        "min": [
+          -0.023139894008636475,
+          -0.059548139572143555,
+          -0.035831818357110023
+        ],
+        "max": [
+          0.1249697208404541,
+          0.01682889461517334,
+          0.09798146970570087
+        ]
+      }
+    },
+    {
+      "name": "Hand_R_Low",
+      "vertices": 470,
+      "triangles": 575,
+      "bbox_blender": {
+        "min": [
+          -0.7078254222869873,
+          -0.12435593456029892,
+          1.3275563716888428
+        ],
+        "max": [
+          -0.5927725434303284,
+          0.009478935971856117,
+          1.4106101989746094
+        ]
+      },
+      "bbox_three_world": {
+        "min": [
+          -0.7078254222869873,
+          1.3275563716888428,
+          -0.009478935971856117
+        ],
+        "max": [
+          -0.5927725434303284,
+          1.4106101989746094,
+          0.12435593456029892
+        ]
+      },
+      "material_slots": [
+        "M00_001_01_Body_00_SKIN"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "source_vertex_groups": [
+        "Root",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest",
+        "J_Sec_C_Hood",
+        "J_Sec_C_Hood_end",
+        "J_Sec_L_HoodString1",
+        "J_Sec_L_HoodString2",
+        "J_Sec_L_HoodString2_end",
+        "J_Sec_R_HoodString1",
+        "J_Sec_R_HoodString2",
+        "J_Sec_R_HoodString2_end",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Head",
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye",
+        "HairJoint-82c4c5e8-c368-4b6e-a504-480e4f60cb69",
+        "HairJoint-6913a169-83d6-4677-bef5-9153b9d344b0",
+        "HairJoint-bc61f9e8-5a12-490f-91d8-adc307a33d51",
+        "HairJoint-8f43ae4e-2d2a-4f61-a26c-6397e3169d38",
+        "HairJoint-49aba0e8-6a83-47ea-9815-8f6a5c5011f4",
+        "HairJoint-339a9df3-f3b7-4ac0-a2ac-4beee1db40bc",
+        "HairJoint-d0ad1cb1-a563-4a34-9909-75e7e2d389d4",
+        "HairJoint-a39a88ff-cc9b-490a-8c17-af03ede48e69",
+        "HairJoint-ae3025ea-7a15-4b14-b090-b06fd78b1f63",
+        "HairJoint-167fcdf0-79dc-43c6-8e43-5e998fa080f7",
+        "HairJoint-6813f7c8-fd84-41ff-8372-ac83eaf2910c",
+        "HairJoint-1e5424e1-c68a-4f59-8efe-3c358d085041",
+        "HairJoint-e61a81b6-23bf-408c-b807-2ba06ec8435e",
+        "HairJoint-df0106a2-645a-4bf7-89e5-4d5b46ceadf8",
+        "HairJoint-b527190d-90df-4e57-9a86-3b3808e32454",
+        "HairJoint-4f7293a0-9c06-4bdc-952a-52532b800cae",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_LowerArm",
+        "J_Bip_L_Hand",
+        "J_Bip_L_Index1",
+        "J_Bip_L_Index2",
+        "J_Bip_L_Index3",
+        "J_Bip_L_Index3_end",
+        "J_Bip_L_Little1",
+        "J_Bip_L_Little2",
+        "J_Bip_L_Little3",
+        "J_Bip_L_Little3_end",
+        "J_Bip_L_Middle1",
+        "J_Bip_L_Middle2",
+        "J_Bip_L_Middle3",
+        "J_Bip_L_Middle3_end",
+        "J_Bip_L_Ring1",
+        "J_Bip_L_Ring2",
+        "J_Bip_L_Ring3",
+        "J_Bip_L_Ring3_end",
+        "J_Bip_L_Thumb1",
+        "J_Bip_L_Thumb2",
+        "J_Bip_L_Thumb3",
+        "J_Bip_L_Thumb3_end",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_LowerArm",
+        "J_Bip_R_Hand",
+        "J_Bip_R_Index1",
+        "J_Bip_R_Index2",
+        "J_Bip_R_Index3",
+        "J_Bip_R_Index3_end",
+        "J_Bip_R_Little1",
+        "J_Bip_R_Little2",
+        "J_Bip_R_Little3",
+        "J_Bip_R_Little3_end",
+        "J_Bip_R_Middle1",
+        "J_Bip_R_Middle2",
+        "J_Bip_R_Middle3",
+        "J_Bip_R_Middle3_end",
+        "J_Bip_R_Ring1",
+        "J_Bip_R_Ring2",
+        "J_Bip_R_Ring3",
+        "J_Bip_R_Ring3_end",
+        "J_Bip_R_Thumb1",
+        "J_Bip_R_Thumb2",
+        "J_Bip_R_Thumb3",
+        "J_Bip_R_Thumb3_end",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_L_LowerLeg",
+        "J_Bip_L_Foot",
+        "J_Bip_L_ToeBase",
+        "J_Bip_L_ToeBase_end",
+        "J_Bip_R_UpperLeg",
+        "J_Bip_R_LowerLeg",
+        "J_Bip_R_Foot",
+        "J_Bip_R_ToeBase",
+        "J_Bip_R_ToeBase_end"
+      ],
+      "shape_keys": false,
+      "armature_modifiers": 0,
+      "source_wrist_blender": [
+        -0.6159123182296753,
+        -0.026352999731898308,
+        1.3937807083129883
+      ],
+      "source_wrist_three_world": [
+        -0.6159123182296753,
+        1.3937807083129883,
+        0.026352999731898308
+      ],
+      "bbox_relative_to_source_wrist_blender": {
+        "min": [
+          -0.09191310405731201,
+          -0.09800293482840061,
+          -0.06622433662414551
+        ],
+        "max": [
+          0.023139774799346924,
+          0.035831935703754425,
+          0.016829490661621094
+        ]
+      },
+      "grip_pose": "right curled 65/85/35deg; thumb25/45/25deg",
+      "bbox_relative_to_source_wrist_three": {
+        "min": [
+          -0.09191310405731201,
+          -0.06622433662414551,
+          -0.035831935703754425
+        ],
+        "max": [
+          0.023139774799346924,
+          0.016829490661621094,
+          0.09800293482840061
+        ]
+      }
+    }
+  ],
+  "high_objects": [
+    {
+      "name": "head_high",
+      "vertices": 2481,
+      "triangles": 3396,
+      "bbox_blender": {
+        "min": [
+          -0.11237626522779465,
+          -0.1276608556509018,
+          1.4961819648742676
+        ],
+        "max": [
+          0.11135862022638321,
+          0.09950095415115356,
+          1.7496153116226196
+        ]
+      },
+      "bbox_three_world": {
+        "min": [
+          -0.11237626522779465,
+          1.4961819648742676,
+          -0.09950095415115356
+        ],
+        "max": [
+          0.11135862022638321,
+          1.7496153116226196,
+          0.1276608556509018
+        ]
+      },
+      "material_slots": [
+        "M00_000_00_FaceBrow_00_FACE",
+        "M00_000_00_FaceMouth_00_FACE",
+        "M00_000_00_EyeIris_00_EYE",
+        "M00_000_00_EyeHighlight_00_EYE",
+        "M00_000_00_EyeWhite_00_EYE",
+        "M00_000_00_Face_00_SKIN",
+        "M00_000_00_FaceEyelash_00_FACE",
+        "M00_000_00_FaceEyeline_00_FACE",
+        "M00_000_00_EyeExtra_01_EYE",
+        "M00_001_01_Body_00_SKIN"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "source_vertex_groups": [
+        "Root",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest",
+        "J_Sec_C_Hood",
+        "J_Sec_C_Hood_end",
+        "J_Sec_L_HoodString1",
+        "J_Sec_L_HoodString2",
+        "J_Sec_L_HoodString2_end",
+        "J_Sec_R_HoodString1",
+        "J_Sec_R_HoodString2",
+        "J_Sec_R_HoodString2_end",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Head",
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye",
+        "HairJoint-82c4c5e8-c368-4b6e-a504-480e4f60cb69",
+        "HairJoint-6913a169-83d6-4677-bef5-9153b9d344b0",
+        "HairJoint-bc61f9e8-5a12-490f-91d8-adc307a33d51",
+        "HairJoint-8f43ae4e-2d2a-4f61-a26c-6397e3169d38",
+        "HairJoint-49aba0e8-6a83-47ea-9815-8f6a5c5011f4",
+        "HairJoint-339a9df3-f3b7-4ac0-a2ac-4beee1db40bc",
+        "HairJoint-d0ad1cb1-a563-4a34-9909-75e7e2d389d4",
+        "HairJoint-a39a88ff-cc9b-490a-8c17-af03ede48e69",
+        "HairJoint-ae3025ea-7a15-4b14-b090-b06fd78b1f63",
+        "HairJoint-167fcdf0-79dc-43c6-8e43-5e998fa080f7",
+        "HairJoint-6813f7c8-fd84-41ff-8372-ac83eaf2910c",
+        "HairJoint-1e5424e1-c68a-4f59-8efe-3c358d085041",
+        "HairJoint-e61a81b6-23bf-408c-b807-2ba06ec8435e",
+        "HairJoint-df0106a2-645a-4bf7-89e5-4d5b46ceadf8",
+        "HairJoint-b527190d-90df-4e57-9a86-3b3808e32454",
+        "HairJoint-4f7293a0-9c06-4bdc-952a-52532b800cae",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_LowerArm",
+        "J_Bip_L_Hand",
+        "J_Bip_L_Index1",
+        "J_Bip_L_Index2",
+        "J_Bip_L_Index3",
+        "J_Bip_L_Index3_end",
+        "J_Bip_L_Little1",
+        "J_Bip_L_Little2",
+        "J_Bip_L_Little3",
+        "J_Bip_L_Little3_end",
+        "J_Bip_L_Middle1",
+        "J_Bip_L_Middle2",
+        "J_Bip_L_Middle3",
+        "J_Bip_L_Middle3_end",
+        "J_Bip_L_Ring1",
+        "J_Bip_L_Ring2",
+        "J_Bip_L_Ring3",
+        "J_Bip_L_Ring3_end",
+        "J_Bip_L_Thumb1",
+        "J_Bip_L_Thumb2",
+        "J_Bip_L_Thumb3",
+        "J_Bip_L_Thumb3_end",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_LowerArm",
+        "J_Bip_R_Hand",
+        "J_Bip_R_Index1",
+        "J_Bip_R_Index2",
+        "J_Bip_R_Index3",
+        "J_Bip_R_Index3_end",
+        "J_Bip_R_Little1",
+        "J_Bip_R_Little2",
+        "J_Bip_R_Little3",
+        "J_Bip_R_Little3_end",
+        "J_Bip_R_Middle1",
+        "J_Bip_R_Middle2",
+        "J_Bip_R_Middle3",
+        "J_Bip_R_Middle3_end",
+        "J_Bip_R_Ring1",
+        "J_Bip_R_Ring2",
+        "J_Bip_R_Ring3",
+        "J_Bip_R_Ring3_end",
+        "J_Bip_R_Thumb1",
+        "J_Bip_R_Thumb2",
+        "J_Bip_R_Thumb3",
+        "J_Bip_R_Thumb3_end",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_L_LowerLeg",
+        "J_Bip_L_Foot",
+        "J_Bip_L_ToeBase",
+        "J_Bip_L_ToeBase_end",
+        "J_Bip_R_UpperLeg",
+        "J_Bip_R_LowerLeg",
+        "J_Bip_R_Foot",
+        "J_Bip_R_ToeBase",
+        "J_Bip_R_ToeBase_end"
+      ],
+      "shape_keys": false,
+      "armature_modifiers": 0
+    },
+    {
+      "name": "left_hand_high",
+      "vertices": 790,
+      "triangles": 1151,
+      "bbox_blender": {
+        "min": [
+          0.5917547345161438,
+          -0.12408135086297989,
+          1.3636044263839722
+        ],
+        "max": [
+          0.7806820273399353,
+          0.009477716870605946,
+          1.4106088876724243
+        ]
+      },
+      "bbox_three_world": {
+        "min": [
+          0.5917547345161438,
+          1.3636044263839722,
+          -0.009477716870605946
+        ],
+        "max": [
+          0.7806820273399353,
+          1.4106088876724243,
+          0.12408135086297989
+        ]
+      },
+      "material_slots": [
+        "M00_001_01_Body_00_SKIN"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "source_vertex_groups": [
+        "Root",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest",
+        "J_Sec_C_Hood",
+        "J_Sec_C_Hood_end",
+        "J_Sec_L_HoodString1",
+        "J_Sec_L_HoodString2",
+        "J_Sec_L_HoodString2_end",
+        "J_Sec_R_HoodString1",
+        "J_Sec_R_HoodString2",
+        "J_Sec_R_HoodString2_end",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Head",
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye",
+        "HairJoint-82c4c5e8-c368-4b6e-a504-480e4f60cb69",
+        "HairJoint-6913a169-83d6-4677-bef5-9153b9d344b0",
+        "HairJoint-bc61f9e8-5a12-490f-91d8-adc307a33d51",
+        "HairJoint-8f43ae4e-2d2a-4f61-a26c-6397e3169d38",
+        "HairJoint-49aba0e8-6a83-47ea-9815-8f6a5c5011f4",
+        "HairJoint-339a9df3-f3b7-4ac0-a2ac-4beee1db40bc",
+        "HairJoint-d0ad1cb1-a563-4a34-9909-75e7e2d389d4",
+        "HairJoint-a39a88ff-cc9b-490a-8c17-af03ede48e69",
+        "HairJoint-ae3025ea-7a15-4b14-b090-b06fd78b1f63",
+        "HairJoint-167fcdf0-79dc-43c6-8e43-5e998fa080f7",
+        "HairJoint-6813f7c8-fd84-41ff-8372-ac83eaf2910c",
+        "HairJoint-1e5424e1-c68a-4f59-8efe-3c358d085041",
+        "HairJoint-e61a81b6-23bf-408c-b807-2ba06ec8435e",
+        "HairJoint-df0106a2-645a-4bf7-89e5-4d5b46ceadf8",
+        "HairJoint-b527190d-90df-4e57-9a86-3b3808e32454",
+        "HairJoint-4f7293a0-9c06-4bdc-952a-52532b800cae",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_LowerArm",
+        "J_Bip_L_Hand",
+        "J_Bip_L_Index1",
+        "J_Bip_L_Index2",
+        "J_Bip_L_Index3",
+        "J_Bip_L_Index3_end",
+        "J_Bip_L_Little1",
+        "J_Bip_L_Little2",
+        "J_Bip_L_Little3",
+        "J_Bip_L_Little3_end",
+        "J_Bip_L_Middle1",
+        "J_Bip_L_Middle2",
+        "J_Bip_L_Middle3",
+        "J_Bip_L_Middle3_end",
+        "J_Bip_L_Ring1",
+        "J_Bip_L_Ring2",
+        "J_Bip_L_Ring3",
+        "J_Bip_L_Ring3_end",
+        "J_Bip_L_Thumb1",
+        "J_Bip_L_Thumb2",
+        "J_Bip_L_Thumb3",
+        "J_Bip_L_Thumb3_end",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_LowerArm",
+        "J_Bip_R_Hand",
+        "J_Bip_R_Index1",
+        "J_Bip_R_Index2",
+        "J_Bip_R_Index3",
+        "J_Bip_R_Index3_end",
+        "J_Bip_R_Little1",
+        "J_Bip_R_Little2",
+        "J_Bip_R_Little3",
+        "J_Bip_R_Little3_end",
+        "J_Bip_R_Middle1",
+        "J_Bip_R_Middle2",
+        "J_Bip_R_Middle3",
+        "J_Bip_R_Middle3_end",
+        "J_Bip_R_Ring1",
+        "J_Bip_R_Ring2",
+        "J_Bip_R_Ring3",
+        "J_Bip_R_Ring3_end",
+        "J_Bip_R_Thumb1",
+        "J_Bip_R_Thumb2",
+        "J_Bip_R_Thumb3",
+        "J_Bip_R_Thumb3_end",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_L_LowerLeg",
+        "J_Bip_L_Foot",
+        "J_Bip_L_ToeBase",
+        "J_Bip_L_ToeBase_end",
+        "J_Bip_R_UpperLeg",
+        "J_Bip_R_LowerLeg",
+        "J_Bip_R_Foot",
+        "J_Bip_R_ToeBase",
+        "J_Bip_R_ToeBase_end"
+      ],
+      "shape_keys": false,
+      "armature_modifiers": 0,
+      "source_wrist_blender": [
+        0.6148946285247803,
+        -0.026354102417826653,
+        1.393779993057251
+      ],
+      "source_wrist_three_world": [
+        0.6148946285247803,
+        1.393779993057251,
+        0.026354102417826653
+      ],
+      "bbox_relative_to_source_wrist_blender": {
+        "min": [
+          -0.023139894008636475,
+          -0.09772724844515324,
+          -0.03017556667327881
+        ],
+        "max": [
+          0.16578739881515503,
+          0.0358318192884326,
+          0.01682889461517334
+        ]
+      },
+      "grip_pose": "original T hand",
+      "bbox_relative_to_source_wrist_three": {
+        "min": [
+          -0.023139894008636475,
+          -0.03017556667327881,
+          -0.0358318192884326
+        ],
+        "max": [
+          0.16578739881515503,
+          0.01682889461517334,
+          0.09772724844515324
+        ]
+      }
+    },
+    {
+      "name": "right_hand_high",
+      "vertices": 790,
+      "triangles": 1151,
+      "bbox_blender": {
+        "min": [
+          -0.7816996574401855,
+          -0.12410183995962143,
+          1.3636101484298706
+        ],
+        "max": [
+          -0.5927725434303284,
+          0.009478935971856117,
+          1.4106100797653198
+        ]
+      },
+      "bbox_three_world": {
+        "min": [
+          -0.7816996574401855,
+          1.3636101484298706,
+          -0.009478935971856117
+        ],
+        "max": [
+          -0.5927725434303284,
+          1.4106100797653198,
+          0.12410183995962143
+        ]
+      },
+      "material_slots": [
+        "M00_001_01_Body_00_SKIN"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "source_vertex_groups": [
+        "Root",
+        "J_Bip_C_Hips",
+        "J_Bip_C_Spine",
+        "J_Bip_C_Chest",
+        "J_Bip_C_UpperChest",
+        "J_Sec_C_Hood",
+        "J_Sec_C_Hood_end",
+        "J_Sec_L_HoodString1",
+        "J_Sec_L_HoodString2",
+        "J_Sec_L_HoodString2_end",
+        "J_Sec_R_HoodString1",
+        "J_Sec_R_HoodString2",
+        "J_Sec_R_HoodString2_end",
+        "J_Bip_C_Neck",
+        "J_Bip_C_Head",
+        "J_Adj_L_FaceEye",
+        "J_Adj_R_FaceEye",
+        "HairJoint-82c4c5e8-c368-4b6e-a504-480e4f60cb69",
+        "HairJoint-6913a169-83d6-4677-bef5-9153b9d344b0",
+        "HairJoint-bc61f9e8-5a12-490f-91d8-adc307a33d51",
+        "HairJoint-8f43ae4e-2d2a-4f61-a26c-6397e3169d38",
+        "HairJoint-49aba0e8-6a83-47ea-9815-8f6a5c5011f4",
+        "HairJoint-339a9df3-f3b7-4ac0-a2ac-4beee1db40bc",
+        "HairJoint-d0ad1cb1-a563-4a34-9909-75e7e2d389d4",
+        "HairJoint-a39a88ff-cc9b-490a-8c17-af03ede48e69",
+        "HairJoint-ae3025ea-7a15-4b14-b090-b06fd78b1f63",
+        "HairJoint-167fcdf0-79dc-43c6-8e43-5e998fa080f7",
+        "HairJoint-6813f7c8-fd84-41ff-8372-ac83eaf2910c",
+        "HairJoint-1e5424e1-c68a-4f59-8efe-3c358d085041",
+        "HairJoint-e61a81b6-23bf-408c-b807-2ba06ec8435e",
+        "HairJoint-df0106a2-645a-4bf7-89e5-4d5b46ceadf8",
+        "HairJoint-b527190d-90df-4e57-9a86-3b3808e32454",
+        "HairJoint-4f7293a0-9c06-4bdc-952a-52532b800cae",
+        "J_Bip_L_Shoulder",
+        "J_Bip_L_UpperArm",
+        "J_Bip_L_LowerArm",
+        "J_Bip_L_Hand",
+        "J_Bip_L_Index1",
+        "J_Bip_L_Index2",
+        "J_Bip_L_Index3",
+        "J_Bip_L_Index3_end",
+        "J_Bip_L_Little1",
+        "J_Bip_L_Little2",
+        "J_Bip_L_Little3",
+        "J_Bip_L_Little3_end",
+        "J_Bip_L_Middle1",
+        "J_Bip_L_Middle2",
+        "J_Bip_L_Middle3",
+        "J_Bip_L_Middle3_end",
+        "J_Bip_L_Ring1",
+        "J_Bip_L_Ring2",
+        "J_Bip_L_Ring3",
+        "J_Bip_L_Ring3_end",
+        "J_Bip_L_Thumb1",
+        "J_Bip_L_Thumb2",
+        "J_Bip_L_Thumb3",
+        "J_Bip_L_Thumb3_end",
+        "J_Bip_R_Shoulder",
+        "J_Bip_R_UpperArm",
+        "J_Bip_R_LowerArm",
+        "J_Bip_R_Hand",
+        "J_Bip_R_Index1",
+        "J_Bip_R_Index2",
+        "J_Bip_R_Index3",
+        "J_Bip_R_Index3_end",
+        "J_Bip_R_Little1",
+        "J_Bip_R_Little2",
+        "J_Bip_R_Little3",
+        "J_Bip_R_Little3_end",
+        "J_Bip_R_Middle1",
+        "J_Bip_R_Middle2",
+        "J_Bip_R_Middle3",
+        "J_Bip_R_Middle3_end",
+        "J_Bip_R_Ring1",
+        "J_Bip_R_Ring2",
+        "J_Bip_R_Ring3",
+        "J_Bip_R_Ring3_end",
+        "J_Bip_R_Thumb1",
+        "J_Bip_R_Thumb2",
+        "J_Bip_R_Thumb3",
+        "J_Bip_R_Thumb3_end",
+        "J_Bip_L_UpperLeg",
+        "J_Bip_L_LowerLeg",
+        "J_Bip_L_Foot",
+        "J_Bip_L_ToeBase",
+        "J_Bip_L_ToeBase_end",
+        "J_Bip_R_UpperLeg",
+        "J_Bip_R_LowerLeg",
+        "J_Bip_R_Foot",
+        "J_Bip_R_ToeBase",
+        "J_Bip_R_ToeBase_end"
+      ],
+      "shape_keys": false,
+      "armature_modifiers": 0,
+      "source_wrist_blender": [
+        -0.6159123182296753,
+        -0.026352999731898308,
+        1.3937807083129883
+      ],
+      "source_wrist_three_world": [
+        -0.6159123182296753,
+        1.3937807083129883,
+        0.026352999731898308
+      ],
+      "bbox_relative_to_source_wrist_blender": {
+        "min": [
+          -0.16578733921051025,
+          -0.09774884022772312,
+          -0.030170559883117676
+        ],
+        "max": [
+          0.023139774799346924,
+          0.035831935703754425,
+          0.016829371452331543
+        ]
+      },
+      "grip_pose": "original T hand",
+      "bbox_relative_to_source_wrist_three": {
+        "min": [
+          -0.16578733921051025,
+          -0.030170559883117676,
+          -0.035831935703754425
+        ],
+        "max": [
+          0.023139774799346924,
+          0.016829371452331543,
+          0.09774884022772312
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Not final Lin Yan: blue anime eyes and youthful makeup intentionally retained as editable source; parent is responsible for adult masculine resculpt and painted atlas.",
+    "No modern hair or clothing, no animation, no armature; original vertex groups retained as source bone labels.",
+    "Mesh origins at source global zero; coordinates are in source meters, without height rescaling.",
+    "High original collection hidden in viewport/render; game editable collection visible."
+  ]
+}

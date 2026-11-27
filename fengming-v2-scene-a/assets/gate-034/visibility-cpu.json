@@ -1,0 +1,16 @@
+{
+  "scope": "Exact source static triangles at unchanged39FOV and6,27,15follow offset; current hero actual socket poses, no renderer/transparent shader",
+  "hero": {
+    "triangles": 9351,
+    "materials": 2,
+    "bones": 22,
+    "height": 1.485,
+    "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+    "attackDuration": 0.78,
+    "hitProgress": 0.44,
+    "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+  },
+  "samples": 2020,
+  "blocked": 0,
+  "tests": []
+}

@@ -1,0 +1,2416 @@
+{
+  "scope": "native touch walkthrough and one actual swing; fx=0; normal camera; no teleport/time pause/pose override; canvas-only readback removes DOM health bars",
+  "environment": "cloud Linux WebKit26.5/WPE software rendering, 390x844 DPR1; not iPhone/WeChat hardware",
+  "errors": [],
+  "captures": [
+    {
+      "label": "windup",
+      "snapshot": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "rotation": 6.881208147183994,
+        "camera": [
+          7.631905442904207,
+          27.698497572813263,
+          7.98167203968105
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 7
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            1.3431783128140593,
+            1.7027875701784498,
+            -6.398718656976401
+          ],
+          "tip": [
+            0.42555296729276426,
+            2.1869172668595644,
+            -5.719614716442718
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779199389,
+          "started": 1795779197297,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779197298,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779197299,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779197500,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779198113,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779198291,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779199009,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779199374,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779199389,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779200049,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779200049
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.497554941322444,
+            0.021848314835248284,
+            -6.5437617417567715
+          ],
+          "hp": 3
+        },
+        "attack": 0.20384615384615384,
+        "stats": {
+          "calls": 27,
+          "triangles": 63065
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.593688654959834,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.57490898241539,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75018258083179,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464222624452646
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2112
+          },
+          {
+            "type": "ready",
+            "t": 2772,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3216,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3910,
+            "screen": [
+              304,
+              465
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -0.017672697951379046,
+              0.12321382494404373,
+              -3.040911030269342
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5077,
+            "screen": [
+              312,
+              461
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.091231331483762,
+              0.17409664584910178,
+              -3.047655028650997
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6239,
+            "screen": [
+              247,
+              325
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.0845111745228264,
+              0.031205449755058977,
+              -6.605897918340013
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7492,
+            "screen": [
+              183,
+              397
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.484623393933348,
+              -0.006305296464637763,
+              -7.011702250463433
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7977,
+            "screen": [
+              159,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              1.5658188339357135,
+              0.7147290449907516,
+              -7.022520300373673
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 8414,
+            "height": 0.6997483749769924
+          },
+          {
+            "type": "swing-start",
+            "t": 9181,
+            "p": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "facing": 4.655208147183992,
+            "aim": 1.0743622232165675
+          }
+        ]
+      },
+      "epoch": 1795779206581
+    },
+    {
+      "label": "sweep",
+      "snapshot": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "rotation": 7.346955195779826,
+        "camera": [
+          7.625645548876715,
+          27.70326379478319,
+          7.98110793951927
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 1,
+          "renderMs": 13
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            1.8721948148462297,
+            1.5266784968126206,
+            -6.619852748260817
+          ],
+          "tip": [
+            3.0721841000531542,
+            1.2913200912477036,
+            -6.414348158729307
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779199389,
+          "started": 1795779197297,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779197298,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779197299,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779197500,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779198113,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779198291,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779199009,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779199374,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779199389,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779200049,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779200049
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": false
+        },
+        "enemy": {
+          "p": [
+            2.497554941322444,
+            0.021848314835248284,
+            -6.5437617417567715
+          ],
+          "hp": 3
+        },
+        "attack": 0.4256410256410256,
+        "stats": {
+          "calls": 27,
+          "triangles": 63065
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.593688654959834,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.57490898241539,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75018258083179,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464222624452646
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2112
+          },
+          {
+            "type": "ready",
+            "t": 2772,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3216,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3910,
+            "screen": [
+              304,
+              465
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -0.017672697951379046,
+              0.12321382494404373,
+              -3.040911030269342
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5077,
+            "screen": [
+              312,
+              461
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.091231331483762,
+              0.17409664584910178,
+              -3.047655028650997
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6239,
+            "screen": [
+              247,
+              325
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.0845111745228264,
+              0.031205449755058977,
+              -6.605897918340013
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7492,
+            "screen": [
+              183,
+              397
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.484623393933348,
+              -0.006305296464637763,
+              -7.011702250463433
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7977,
+            "screen": [
+              159,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              1.5658188339357135,
+              0.7147290449907516,
+              -7.022520300373673
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 8414,
+            "height": 0.6997483749769924
+          },
+          {
+            "type": "swing-start",
+            "t": 9181,
+            "p": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "facing": 4.655208147183992,
+            "aim": 1.0743622232165675
+          }
+        ]
+      },
+      "epoch": 1795779206761
+    },
+    {
+      "label": "contact",
+      "snapshot": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "rotation": 7.353842725528295,
+        "camera": [
+          7.624554655836221,
+          27.70409439005423,
+          7.981009635468447
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 0,
+          "renderMs": 7
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            1.8654023207899206,
+            1.4992563420121405,
+            -6.6594487831931595
+          ],
+          "tip": [
+            3.0755551621883814,
+            1.2340448576754466,
+            -6.606600235141588
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0.045,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779199389,
+          "started": 1795779197297,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779197298,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779197299,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779197500,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779198113,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779198291,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779199009,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779199374,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779199389,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779200049,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779200049
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.611862194198337,
+            0.029967938019406663,
+            -6.481843635035339
+          ],
+          "hp": 2
+        },
+        "attack": 0.44,
+        "stats": {
+          "calls": 27,
+          "triangles": 63065
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.593688654959834,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.57490898241539,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75018258083179,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464222624452646
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2112
+          },
+          {
+            "type": "ready",
+            "t": 2772,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3216,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3910,
+            "screen": [
+              304,
+              465
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -0.017672697951379046,
+              0.12321382494404373,
+              -3.040911030269342
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5077,
+            "screen": [
+              312,
+              461
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.091231331483762,
+              0.17409664584910178,
+              -3.047655028650997
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6239,
+            "screen": [
+              247,
+              325
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.0845111745228264,
+              0.031205449755058977,
+              -6.605897918340013
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7492,
+            "screen": [
+              183,
+              397
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.484623393933348,
+              -0.006305296464637763,
+              -7.011702250463433
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7977,
+            "screen": [
+              159,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              1.5658188339357135,
+              0.7147290449907516,
+              -7.022520300373673
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 8414,
+            "height": 0.6997483749769924
+          },
+          {
+            "type": "swing-start",
+            "t": 9181,
+            "p": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "facing": 4.655208147183992,
+            "aim": 1.0743622232165675
+          },
+          {
+            "type": "hit",
+            "t": 9661,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "enemy": [
+              2.611862194198337,
+              0.029967938019406663,
+              -6.481843635035339
+            ],
+            "blade": [
+              3.0755551621883814,
+              1.2340448576754466,
+              -6.606600235141588
+            ],
+            "impact": [
+              2.6503926921744423,
+              1.3272214928072108,
+              -6.625167492480992
+            ]
+          }
+        ]
+      },
+      "epoch": 1795779206946
+    },
+    {
+      "label": "follow",
+      "snapshot": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "rotation": 7.357315843732964,
+        "camera": [
+          7.62250260108283,
+          27.705656804434753,
+          7.9808247178942375
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 1,
+          "visualMs": 1,
+          "renderMs": 9
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            1.6520353948895028,
+            1.3580287996697535,
+            -7.011405335165095
+          ],
+          "tip": [
+            2.2784879827144735,
+            1.1743478611513836,
+            -8.065643670662533
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779199389,
+          "started": 1795779197297,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779197298,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779197299,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779197500,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779198113,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779198291,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779199009,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779199374,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779199389,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779200049,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779200049
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.611862194198337,
+            0.029967938019406663,
+            -6.481843635035339
+          ],
+          "hp": 2
+        },
+        "attack": 0.6015384615384615,
+        "stats": {
+          "calls": 27,
+          "triangles": 63065
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.593688654959834,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.57490898241539,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75018258083179,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464222624452646
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2112
+          },
+          {
+            "type": "ready",
+            "t": 2772,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3216,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3910,
+            "screen": [
+              304,
+              465
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -0.017672697951379046,
+              0.12321382494404373,
+              -3.040911030269342
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5077,
+            "screen": [
+              312,
+              461
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.091231331483762,
+              0.17409664584910178,
+              -3.047655028650997
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6239,
+            "screen": [
+              247,
+              325
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.0845111745228264,
+              0.031205449755058977,
+              -6.605897918340013
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7492,
+            "screen": [
+              183,
+              397
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.484623393933348,
+              -0.006305296464637763,
+              -7.011702250463433
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7977,
+            "screen": [
+              159,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              1.5658188339357135,
+              0.7147290449907516,
+              -7.022520300373673
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 8414,
+            "height": 0.6997483749769924
+          },
+          {
+            "type": "swing-start",
+            "t": 9181,
+            "p": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "facing": 4.655208147183992,
+            "aim": 1.0743622232165675
+          },
+          {
+            "type": "hit",
+            "t": 9661,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "enemy": [
+              2.611862194198337,
+              0.029967938019406663,
+              -6.481843635035339
+            ],
+            "blade": [
+              3.0755551621883814,
+              1.2340448576754466,
+              -6.606600235141588
+            ],
+            "impact": [
+              2.6503926921744423,
+              1.3272214928072108,
+              -6.625167492480992
+            ]
+          }
+        ]
+      },
+      "epoch": 1795779207120
+    },
+    {
+      "label": "recover",
+      "snapshot": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "rotation": 7.357540364122047,
+        "camera": [
+          7.621035658044293,
+          27.706773720489274,
+          7.980692526709894
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 8
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            1.7461530457565186,
+            1.3947965987049729,
+            -6.688699283258244
+          ],
+          "tip": [
+            2.9783734807004243,
+            1.2628986134258162,
+            -6.645853966291839
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779199389,
+          "started": 1795779197297,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779197298,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779197299,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779197500,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779198113,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779198291,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779199009,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779199374,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779199389,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779200049,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779200049
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.611862194198337,
+            0.029967938019406663,
+            -6.481843635035339
+          ],
+          "hp": 2
+        },
+        "attack": 0.8041025641025639,
+        "stats": {
+          "calls": 27,
+          "triangles": 63065
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.593688654959834,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.57490898241539,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75018258083179,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464222624452646
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2112
+          },
+          {
+            "type": "ready",
+            "t": 2772,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3216,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3910,
+            "screen": [
+              304,
+              465
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -0.017672697951379046,
+              0.12321382494404373,
+              -3.040911030269342
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5077,
+            "screen": [
+              312,
+              461
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.091231331483762,
+              0.17409664584910178,
+              -3.047655028650997
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6239,
+            "screen": [
+              247,
+              325
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.0845111745228264,
+              0.031205449755058977,
+              -6.605897918340013
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7492,
+            "screen": [
+              183,
+              397
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.484623393933348,
+              -0.006305296464637763,
+              -7.011702250463433
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7977,
+            "screen": [
+              159,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              1.5658188339357135,
+              0.7147290449907516,
+              -7.022520300373673
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 8414,
+            "height": 0.6997483749769924
+          },
+          {
+            "type": "swing-start",
+            "t": 9181,
+            "p": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "facing": 4.655208147183992,
+            "aim": 1.0743622232165675
+          },
+          {
+            "type": "hit",
+            "t": 9661,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "enemy": [
+              2.611862194198337,
+              0.029967938019406663,
+              -6.481843635035339
+            ],
+            "blade": [
+              3.0755551621883814,
+              1.2340448576754466,
+              -6.606600235141588
+            ],
+            "impact": [
+              2.6503926921744423,
+              1.3272214928072108,
+              -6.625167492480992
+            ]
+          }
+        ]
+      },
+      "epoch": 1795779207276
+    },
+    {
+      "label": "rest",
+      "snapshot": {
+        "version": "H.34 sculpted gate and Linyan sample",
+        "ready": true,
+        "position": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "rotation": 7.35754736387187,
+        "camera": [
+          7.620211110001718,
+          27.707401523288894,
+          7.980618223905059
+        ],
+        "FOV": 39,
+        "heroHeight": 1.485,
+        "cpu": {
+          "simMs": 0,
+          "visualMs": 0,
+          "renderMs": 8
+        },
+        "kinematics": {
+          "maxYawRadPerSec": 14
+        },
+        "blade": {
+          "base": [
+            1.6210427208662075,
+            1.505100481487659,
+            -6.414394490951948
+          ],
+          "tip": [
+            2.301793267062004,
+            1.8696034908853574,
+            -5.444179952824351
+          ]
+        },
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "gateRevision": "H34",
+        "hitPause": 0,
+        "startup": {
+          "version": "H.34",
+          "status": "ready",
+          "phase": "playable",
+          "lastChange": 1795779199389,
+          "started": 1795779197297,
+          "errors": [],
+          "history": [
+            {
+              "phase": "webgl-check",
+              "at": 1795779197298,
+              "progress": 0.03
+            },
+            {
+              "phase": "script",
+              "at": 1795779197299,
+              "progress": 0.08
+            },
+            {
+              "phase": "renderer",
+              "at": 1795779197500,
+              "progress": 0.12
+            },
+            {
+              "phase": "hero",
+              "at": 1795779198113,
+              "progress": 0.2
+            },
+            {
+              "phase": "navigation",
+              "at": 1795779198291,
+              "progress": 0.35
+            },
+            {
+              "phase": "scene",
+              "at": 1795779199009,
+              "progress": 0.5
+            },
+            {
+              "phase": "pine",
+              "at": 1795779199374,
+              "progress": 0.78
+            },
+            {
+              "phase": "first-frame",
+              "at": 1795779199389,
+              "progress": 0.92
+            },
+            {
+              "phase": "playable",
+              "at": 1795779200049,
+              "progress": 1
+            }
+          ],
+          "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+          "readyAt": 1795779200049
+        },
+        "pathNodes": [],
+        "guideIndex": 0,
+        "roofCut": 0,
+        "target": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "flags": {
+          "nearPine": false,
+          "underBranch": false,
+          "stairs": true,
+          "hit": true
+        },
+        "enemy": {
+          "p": [
+            2.52164739308244,
+            0.02355968128102991,
+            -6.530711310032408
+          ],
+          "hp": 2
+        },
+        "attack": null,
+        "stats": {
+          "calls": 27,
+          "triangles": 63065
+        },
+        "pine": {
+          "loaded": true,
+          "root": [
+            -7,
+            0.15297318994998932,
+            -7
+          ],
+          "layers": {
+            "rear": {
+              "rootDepth": 34.593688654959834,
+              "offset": -1.05,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "trunk": {
+              "rootDepth": 33.57490898241539,
+              "offset": 0,
+              "upperRelief": 1.6,
+              "visible": true
+            },
+            "front": {
+              "rootDepth": 32.75018258083179,
+              "offset": 0.85,
+              "upperRelief": 1.5992788652793042,
+              "visible": true
+            }
+          },
+          "playerDepth": 31.464222624452646
+        },
+        "events": [
+          {
+            "type": "reset",
+            "t": 2112
+          },
+          {
+            "type": "ready",
+            "t": 2772,
+            "hero": {
+              "triangles": 9351,
+              "materials": 2,
+              "bones": 22,
+              "height": 1.485,
+              "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+              "attackDuration": 0.78,
+              "hitProgress": 0.44,
+              "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+            },
+            "enemy": {
+              "source": "original project-authored procedural mesh and animation; no third-party assets",
+              "revision": "H33",
+              "height": 1.46,
+              "triangles": 1866,
+              "vertices": 2501,
+              "bones": 19,
+              "materials": 4,
+              "drawCalls": 4,
+              "hitDuration": 0.34,
+              "hitPeak": 0.075,
+              "hitHoldUntil": 0.125,
+              "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+              "facing": "+Z"
+            }
+          },
+          {
+            "type": "move-command",
+            "t": 3216,
+            "screen": [
+              182,
+              458
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -3.105130010808179,
+              0.08318045905546588,
+              -3.055621480461072
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 3910,
+            "screen": [
+              304,
+              465
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              -0.017672697951379046,
+              0.12321382494404373,
+              -3.040911030269342
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 5077,
+            "screen": [
+              312,
+              461
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 0,
+            "goal": [
+              3.091231331483762,
+              0.17409664584910178,
+              -3.047655028650997
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 6239,
+            "screen": [
+              247,
+              325
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              3.0845111745228264,
+              0.031205449755058977,
+              -6.605897918340013
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7492,
+            "screen": [
+              183,
+              397
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 2,
+            "goal": [
+              2.484623393933348,
+              -0.006305296464637763,
+              -7.011702250463433
+            ]
+          },
+          {
+            "type": "move-command",
+            "t": 7977,
+            "screen": [
+              159,
+              390
+            ],
+            "ok": true,
+            "reason": "direct",
+            "adjusted": false,
+            "nodes": 1,
+            "planningMs": 1,
+            "goal": [
+              1.5658188339357135,
+              0.7147290449907516,
+              -7.022520300373673
+            ]
+          },
+          {
+            "type": "stairs-top",
+            "t": 8414,
+            "height": 0.6997483749769924
+          },
+          {
+            "type": "swing-start",
+            "t": 9181,
+            "p": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "facing": 4.655208147183992,
+            "aim": 1.0743622232165675
+          },
+          {
+            "type": "hit",
+            "t": 9661,
+            "enemyHP": 2,
+            "attackProgress": 0.44,
+            "player": [
+              1.6193712676362333,
+              0.7080409710361044,
+              -7.019457457122793
+            ],
+            "enemy": [
+              2.611862194198337,
+              0.029967938019406663,
+              -6.481843635035339
+            ],
+            "blade": [
+              3.0755551621883814,
+              1.2340448576754466,
+              -6.606600235141588
+            ],
+            "impact": [
+              2.6503926921744423,
+              1.3272214928072108,
+              -6.625167492480992
+            ]
+          },
+          {
+            "type": "swing-recovered",
+            "t": 10161
+          }
+        ]
+      },
+      "epoch": 1795779207446
+    }
+  ],
+  "final": {
+    "version": "H.34 sculpted gate and Linyan sample",
+    "ready": true,
+    "position": [
+      1.6193712676362333,
+      0.7080409710361044,
+      -7.019457457122793
+    ],
+    "rotation": 7.35754736387187,
+    "camera": [
+      7.619422748708644,
+      27.70800177385205,
+      7.980547182010257
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0,
+      "visualMs": 0,
+      "renderMs": 8
+    },
+    "kinematics": {
+      "maxYawRadPerSec": 14
+    },
+    "blade": {
+      "base": [
+        1.6210265280901939,
+        1.5140543868144527,
+        -6.414364597503728
+      ],
+      "tip": [
+        2.3017737916987766,
+        1.8785473967632915,
+        -5.444143999501469
+      ]
+    },
+    "hero": {
+      "triangles": 9351,
+      "materials": 2,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+    },
+    "gateRevision": "H34",
+    "hitPause": 0,
+    "startup": {
+      "version": "H.34",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795779199389,
+      "started": 1795779197297,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795779197298,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795779197299,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795779197500,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795779198113,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795779198291,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795779199009,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795779199374,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795779199389,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795779200049,
+          "progress": 1
+        }
+      ],
+      "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+      "readyAt": 1795779200049
+    },
+    "pathNodes": [],
+    "guideIndex": 0,
+    "roofCut": 0,
+    "target": [
+      1.6193712676362333,
+      0.7080409710361044,
+      -7.019457457122793
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": true,
+      "hit": true
+    },
+    "enemy": {
+      "p": [
+        2.491048220774124,
+        0.02138612075983395,
+        -6.547286310908607
+      ],
+      "hp": 2
+    },
+    "attack": null,
+    "stats": {
+      "calls": 27,
+      "triangles": 63065
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.593710296761465,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.574930195998775,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.75020344776231,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.464243838036033
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2112
+      },
+      {
+        "type": "ready",
+        "t": 2772,
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "revision": "H33",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.34,
+          "hitPeak": 0.075,
+          "hitHoldUntil": 0.125,
+          "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 3216,
+        "screen": [
+          182,
+          458
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          -3.105130010808179,
+          0.08318045905546588,
+          -3.055621480461072
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 3910,
+        "screen": [
+          304,
+          465
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          -0.017672697951379046,
+          0.12321382494404373,
+          -3.040911030269342
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 5077,
+        "screen": [
+          312,
+          461
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 0,
+        "goal": [
+          3.091231331483762,
+          0.17409664584910178,
+          -3.047655028650997
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 6239,
+        "screen": [
+          247,
+          325
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          3.0845111745228264,
+          0.031205449755058977,
+          -6.605897918340013
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 7492,
+        "screen": [
+          183,
+          397
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 2,
+        "goal": [
+          2.484623393933348,
+          -0.006305296464637763,
+          -7.011702250463433
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 7977,
+        "screen": [
+          159,
+          390
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          1.5658188339357135,
+          0.7147290449907516,
+          -7.022520300373673
+        ]
+      },
+      {
+        "type": "stairs-top",
+        "t": 8414,
+        "height": 0.6997483749769924
+      },
+      {
+        "type": "swing-start",
+        "t": 9181,
+        "p": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "facing": 4.655208147183992,
+        "aim": 1.0743622232165675
+      },
+      {
+        "type": "hit",
+        "t": 9661,
+        "enemyHP": 2,
+        "attackProgress": 0.44,
+        "player": [
+          1.6193712676362333,
+          0.7080409710361044,
+          -7.019457457122793
+        ],
+        "enemy": [
+          2.611862194198337,
+          0.029967938019406663,
+          -6.481843635035339
+        ],
+        "blade": [
+          3.0755551621883814,
+          1.2340448576754466,
+          -6.606600235141588
+        ],
+        "impact": [
+          2.6503926921744423,
+          1.3272214928072108,
+          -6.625167492480992
+        ]
+      },
+      {
+        "type": "swing-recovered",
+        "t": 10161
+      }
+    ]
+  }
+}

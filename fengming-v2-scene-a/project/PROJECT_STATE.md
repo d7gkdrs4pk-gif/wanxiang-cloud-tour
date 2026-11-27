@@ -1,6 +1,17 @@
-# 凤鸣山门｜项目状态 V1.34
-当前正式母版：main:fengming-v2-scene-a/index.html
-版本：V2.0 H.29，游戏入口 blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。
+# 凤鸣山门｜项目状态 V1.35
+当前交付试玩：main:fengming-v2-scene-a/gate-h34.html（H.34，山门一屏可玩样关）。
+保留完整正式工程：main:fengming-v2-scene-a/index.html（V2.0 H.29），blob 82e9ce953fc1954c7408ebbc835dbab37098aa64。
+
+H.34／角色网格与门楼可见资产重制（2026-11-27）：当前试玩 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h34.html ；H31独立对照h31-compare.html；本轮前H33对照gate-h33.html；sample-gate.html同步H34。H29完整入口保留不覆盖。
+
+实际换模：林砚Blender连续衣形+明确CC0脸手局部、22骨/9351tri/2材质/1K atlas，母版Blend+GLB3clip与运行离线网格相对应；真实身体投影H33→H34高差-.17px，未改相机/缩小角色。门楼重制为单门楼/可见南向门匾/干净台体/真逐级阶，17402tri/4draw；原破损lower保留但隐藏，新阶4048点误差<1.55e-7，17227导航样点不变。保留原松分层/位置/.72碰撞，新增路线外两组实体前景岩体，否决不成功侧岩与3D松支架。正常路线屋檐cut峰值0.000000。
+
+14.68秒原速正常UI连续触屏完整穿枝→登阶→回身命中收势，四标记true、HP3→2、错误0/失败请求0。云Linux WebKit26.5/WPE软件390×844DPR1实测24.112FPS、中位40ms/p95 51ms；非iPhone/微信真机。13启动故障/恢复检查与无FX六帧通过。角色网格/构图真实改变，不宣称已获用户或参考美术完成度验收。报告SAMPLE_H34_QA.md、独立SAMPLE_H34_VISUAL_REVIEW.md与evidence/h34/。
+
+GitHub Runway API只读检测已建立并实际运行，四常见Secret映射为空，未发出生成/未收费，待具体Secret名称/位置；不能用聊天插件权限判项目API。资产本轮由上述实际Blender/CC0/自制流程完成。
+
+以下H.33及更早条目为历史记录，旧“当前”描述以本页顶部H.34为准。
+
 
 
 H.33／山门一屏可玩美术升级（2026-11-27）：从H.32最新有效启动/输入/地面修复增量制作，保留H.31独立对照与H.29正式完整入口。**当前样关** https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h33.html ；H.31对照 https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h31-compare.html 。sample-gate.html同步H.33，旧?v=h31不是历史快照。

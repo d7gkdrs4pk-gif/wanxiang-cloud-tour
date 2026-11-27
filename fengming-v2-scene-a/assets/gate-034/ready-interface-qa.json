@@ -1,0 +1,7 @@
+{
+  "successAttachesSRGBAtlas": true,
+  "textureOwnedAndDisposedOnce": true,
+  "failureRejectsWithAssetURL": true,
+  "restoreBeforeCompletionDisposesLateTexture": true,
+  "scope": "CPU promise / loader-stub contract, not a live HTTP-failure browser test"
+}

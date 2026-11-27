@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-11-27T10:40:45.949753+00:00",
+  "request": {
+    "method": "GET",
+    "url": "https://api.dev.runwayml.com/v1/organization",
+    "api_version": "2024-11-06"
+  },
+  "secret_present": {
+    "RUNWAYML_API_SECRET": false,
+    "RUNWAY_API_SECRET": false,
+    "RUNWAY_API_KEY": false,
+    "RUNWAYML_API_KEY": false
+  },
+  "secret_presence_scope": "Only the four names mapped into this workflow job; not a GitHub Secrets inventory.",
+  "attempts": [],
+  "healthy": false,
+  "generation_requested": false,
+  "mesh_generation_tested": false,
+  "status": "no_mapped_secret_available",
+  "github_run": "https://github.com/d7gkdrs4pk-gif/wanxiang-cloud-tour/actions/runs/45984088983"
+}

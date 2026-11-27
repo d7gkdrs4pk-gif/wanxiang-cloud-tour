@@ -1,0 +1,469 @@
+{
+  "scope": "native touchscreen input on final build; original blocked rectangle unchanged; no teleport/camera override",
+  "desiredBlockedWorld": [
+    0,
+    -4.2
+  ],
+  "approach": {
+    "version": "H.34 sculpted gate and Linyan sample",
+    "ready": true,
+    "position": [
+      -0.005506288324071296,
+      0.12393214611274299,
+      -3.050220244507205
+    ],
+    "rotation": 1.3443143012469425,
+    "camera": [
+      5.072542426331853,
+      27.098060019227738,
+      11.714531536376805
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 0,
+      "visualMs": 1,
+      "renderMs": 8
+    },
+    "kinematics": {
+      "maxYawRadPerSec": 14
+    },
+    "blade": {
+      "base": [
+        0.1806332370302675,
+        0.9456320416182673,
+        -2.464971982577029
+      ],
+      "tip": [
+        1.085136157294956,
+        1.357045597920624,
+        -1.7232083053028595
+      ]
+    },
+    "hero": {
+      "triangles": 9351,
+      "materials": 2,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+    },
+    "gateRevision": "H34",
+    "hitPause": 0,
+    "startup": {
+      "version": "H.34",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795779245410,
+      "started": 1795779244057,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795779244057,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795779244057,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795779244206,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795779244756,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795779244867,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795779245173,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795779245402,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795779245410,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795779245920,
+          "progress": 1
+        }
+      ],
+      "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+      "readyAt": 1795779245920
+    },
+    "pathNodes": [
+      [
+        -0.005506288324071296,
+        0.12393214611274299,
+        -3.050220244507205
+      ]
+    ],
+    "guideIndex": 0,
+    "roofCut": 0,
+    "target": [
+      -0.005506288324071296,
+      0.12393214611274299,
+      -3.050220244507205
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 32,
+      "triangles": 63693
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 35.37760090121292,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 34.345965389835015,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 33.51083188062433,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.154104750531022
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 1363
+      },
+      {
+        "type": "ready",
+        "t": 1874,
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "revision": "H33",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.34,
+          "hitPeak": 0.075,
+          "hitHoldUntil": 0.125,
+          "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 2313,
+        "screen": [
+          295,
+          497
+        ],
+        "ok": true,
+        "reason": "path",
+        "adjusted": false,
+        "nodes": 2,
+        "planningMs": 4,
+        "goal": [
+          -0.005506288324071296,
+          0.12393214611274299,
+          -3.050220244507205
+        ]
+      }
+    ]
+  },
+  "probe": {
+    "version": "H.34 sculpted gate and Linyan sample",
+    "ready": true,
+    "position": [
+      0,
+      0.09423356130719185,
+      -3.625
+    ],
+    "rotation": 2.936649060234367,
+    "camera": [
+      5.938319664030617,
+      27.110099885279414,
+      11.683077227950973
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 1,
+      "visualMs": 1,
+      "renderMs": 15
+    },
+    "kinematics": {
+      "maxYawRadPerSec": 14
+    },
+    "blade": {
+      "base": [
+        0.5771231712726421,
+        0.9069797879494506,
+        -3.817436882828782
+      ],
+      "tip": [
+        1.3018694401979047,
+        1.310476416919948,
+        -4.739138198922209
+      ]
+    },
+    "hero": {
+      "triangles": 9351,
+      "materials": 2,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+    },
+    "gateRevision": "H34",
+    "hitPause": 0,
+    "startup": {
+      "version": "H.34",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795779245410,
+      "started": 1795779244057,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795779244057,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795779244057,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795779244206,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795779244756,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795779244867,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795779245173,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795779245402,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795779245410,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795779245920,
+          "progress": 1
+        }
+      ],
+      "appSource": "http://127.0.0.1:3000/sample/dist/game-h34.js?v=56c33711dd11",
+      "readyAt": 1795779245920
+    },
+    "pathNodes": [
+      [
+        0,
+        0.09423356130719185,
+        -3.625
+      ]
+    ],
+    "guideIndex": 0,
+    "roofCut": 0,
+    "target": [
+      0,
+      0.09423356130719185,
+      -3.625
+    ],
+    "flags": {
+      "nearPine": false,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 32,
+      "triangles": 63693
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 35.534008671274464,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 34.50639898368476,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 33.67452447468357,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.61298867396437
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 1363
+      },
+      {
+        "type": "ready",
+        "t": 1874,
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "revision": "H33",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.34,
+          "hitPeak": 0.075,
+          "hitHoldUntil": 0.125,
+          "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 2313,
+        "screen": [
+          295,
+          497
+        ],
+        "ok": true,
+        "reason": "path",
+        "adjusted": false,
+        "nodes": 2,
+        "planningMs": 4,
+        "goal": [
+          -0.005506288324071296,
+          0.12393214611274299,
+          -3.050220244507205
+        ]
+      },
+      {
+        "type": "move-command",
+        "t": 3619,
+        "screen": [
+          215,
+          390
+        ],
+        "ok": true,
+        "reason": "nearby-ground",
+        "adjusted": true,
+        "nodes": 1,
+        "planningMs": 1,
+        "goal": [
+          0,
+          0.09423356130719185,
+          -3.625
+        ]
+      }
+    ]
+  },
+  "errors": [],
+  "failedRequests": []
+}

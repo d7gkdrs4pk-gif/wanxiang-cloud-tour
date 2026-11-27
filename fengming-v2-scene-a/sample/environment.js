@@ -19,6 +19,10 @@ const _p=new T.Vector3();
 const STONE_URL=new URL('../assets/environment-033/handpainted-stone-atlas.webp',import.meta.url).href;
 const MOUNTAIN_URL=new URL('../assets/sample-runtime/mountain-atlas.webp',import.meta.url).href;
 const ROCK_NORMAL_URL=new URL('../assets/environment-033/terrain-rock-normals.f32',import.meta.url).href;
+let sharedStoneAtlas=null;
+// createSceneDressing/architecture run after env.ready and reuse this same GPU
+// texture. The new static 3D edging does not duplicate the atlas or its download.
+export function getEnvironmentStoneTexture(){return sharedStoneAtlas;}
 
 // Texture-cell padding prevents the two original paintings bleeding into each
 // other under filtering. Large joints remain readable at the normal phone view.
@@ -193,7 +197,7 @@ function atlasPlane(texture,{width,height,x,y,z,name,opacity=1}){
  // Canvas extraction gives each layer its own transparent texture, so mipmaps
  // cannot pull opaque colour across the horizontal atlas boundary.
  const mesh=new T.Mesh(g,new T.MeshBasicMaterial({map:texture,transparent:true,
-  depthWrite:false,side:T.DoubleSide,forceSinglePass:true,toneMapped:false,fog:false,opacity}));
+  color:0xd0e0e5,depthWrite:false,side:T.DoubleSide,forceSinglePass:true,toneMapped:false,fog:false,opacity}));
  mesh.position.set(x,y,z);mesh.rotation.y=Math.atan2(6,15);mesh.name=name;return mesh;
 }
 
@@ -238,7 +242,13 @@ export function createEnvironment({scene, renderer, camera, groundAt=()=>0}={}) 
   const normalReady=fetch(ROCK_NORMAL_URL).then(r=>{if(!r.ok)throw Error('H33 rock normal HTTP '+r.status);return r.arrayBuffer();}).then(b=>{
     rockNormalField=new Float32Array(b);for(const mesh of terrainNormalTargets)installRockNormals(mesh);
   });
-  const stoneReady=loader.loadAsync(STONE_URL).then(t=>{t.colorSpace=T.SRGBColorSpace;t.wrapS=t.wrapT=T.ClampToEdgeWrapping;t.anisotropy=2;t.minFilter=T.LinearMipmapLinearFilter;stoneUniform.value=t;ownedTextures.push(t);});
+  const stoneReady=new Promise((resolve,reject)=>{
+    const t=loader.load(STONE_URL,()=>{stoneUniform.value=t;resolve();},undefined,reject);
+    t.colorSpace=T.SRGBColorSpace;t.wrapS=t.wrapT=T.ClampToEdgeWrapping;t.anisotropy=2;t.minFilter=T.LinearMipmapLinearFilter;
+    // Return the stable Texture immediately; architecture may create its map
+    // before env.ready, while the same image finishes loading in parallel.
+    sharedStoneAtlas=t;ownedTextures.push(t);
+  });
   const original={background:scene.background, fog:scene.fog, exposure:renderer.toneMappingExposure, envIntensity:scene.environmentIntensity};
 
   scene.background=new T.Color(0x728995);

@@ -1,0 +1,52 @@
+{
+  "environment": "Linux Chromium156 SwiftShader mobile-touch 390x844 DPR1; not iPhone/WeChat",
+  "errors": [],
+  "failedRequests": [],
+  "wallSeconds": 11.77780424199591,
+  "spawn": {
+    "position": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ],
+    "rotation": -0.6,
+    "camera": [
+      2.8,
+      27.06569194048643,
+      10.8
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485
+  },
+  "stairs": {
+    "position": [
+      1.376256313292354,
+      0.7125264152783075,
+      -7.3737436867076465
+    ],
+    "rotation": 4.056815771055689,
+    "camera": [
+      7.39623513259396,
+      27.70412436760088,
+      7.632308237520217
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "roofCut": 0,
+    "hero": {
+      "triangles": 9351,
+      "materials": 2,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+    }
+  },
+  "fpsMeasured": false,
+  "iphoneOrWechatDeviceTest": false,
+  "scope": "Final original-collision boundary markers and unobstructed stair normal-camera check only; no FPS measurement",
+  "images": "Final full frames /workspace/qa-h34/gate/boundary-spawn.png and boundary-stairs.png; main final evidence supersedes module-only capture.",
+  "minorFinalChangeAfterThisCapture": "Deleted only the east-north low rail on existing high rock. No building/character/nav changes. Final asset 17402tri; complete 2020-line swing ray audit now 0 blocked. Main final bundle capture supersedes these module frames."
+}

@@ -1,0 +1,49 @@
+{
+  "codecNote": "Current production WebP was encoded quality94 and is lossy RGB; alpha is lossless. Source PNG and GLB pixels can be exact even if file hashes differ. No production files were modified.",
+  "images": {
+    "glb": {
+      "size": [
+        1024,
+        1024
+      ],
+      "decodedRGBAsha256": "2d05923689fa75886fd3e0919d6bcfdebdfd022b28a28cc4ad1294392ef0d4d6"
+    },
+    "sourcePNG": {
+      "size": [
+        1024,
+        1024
+      ],
+      "decodedRGBAsha256": "2d05923689fa75886fd3e0919d6bcfdebdfd022b28a28cc4ad1294392ef0d4d6"
+    },
+    "runtimeWebP": {
+      "size": [
+        1024,
+        1024
+      ],
+      "decodedRGBAsha256": "cc9c6080821beff202c78195a284d1f30e022bbacc2538c65f1ac5036c1674ff"
+    }
+  },
+  "sourceEqualsGLBRGBA": true,
+  "sourceEqualsRuntimeWebPRGBA": false,
+  "absoluteDifference": {
+    "channelMeans": [
+      1.3802976608276367,
+      0.8060789108276367,
+      1.1595420837402344,
+      0.0
+    ],
+    "channelRMS": [
+      2.276454326544305,
+      1.319065566069531,
+      1.8242333879230699,
+      0.0
+    ],
+    "channelMax": [
+      46,
+      21,
+      51,
+      0
+    ]
+  },
+  "selectedRuntimeCodec": "Existing quality94 WebP retained for mobile budget; lossless candidate not promoted"
+}

@@ -1,0 +1,203 @@
+{
+  "scope": "CPU skinning and perspective projection of every actual body vertex. Excludes sword and does not use stats.height. Geometry bounds do not measure occlusion, alpha-tested pixels, or antialiasing coverage.",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "camera": {
+    "FOV": 39,
+    "near": 0.1,
+    "far": 160,
+    "offset": [
+      6,
+      27,
+      15
+    ],
+    "position": [
+      2.8,
+      27.06569194048643,
+      10.8
+    ],
+    "lookAt": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ]
+  },
+  "player": {
+    "position": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ],
+    "yaw": -0.6
+  },
+  "h33": {
+    "canonicalIdle": {
+      "vertices": 9210,
+      "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+      "worldAABB": {
+        "min": [
+          -0.5257809874489694,
+          0.014000000432133675,
+          -0.33842577757787345
+        ],
+        "max": [
+          0.4491347052685525,
+          1.4806220815327629,
+          0.23562880144285908
+        ],
+        "sizeXYZ": [
+          0.9749156927175219,
+          1.4666220811006292,
+          0.5740545790207325
+        ],
+        "height": 1.4666220811006292,
+        "width": 0.9749156927175219,
+        "depth": 0.5740545790207325
+      },
+      "projectedPixelAABB": null
+    },
+    "normalGameIdle": {
+      "vertices": 9210,
+      "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+      "worldAABB": {
+        "min": [
+          -3.7513380391652174,
+          0.07969194091856478,
+          -4.543939522327806
+        ],
+        "max": [
+          -2.8387293817965107,
+          1.546314022019194,
+          -3.8719940250286475
+        ],
+        "sizeXYZ": [
+          0.9126086573687067,
+          1.4666220811006292,
+          0.6719454972991583
+        ],
+        "height": 1.4666220811006292,
+        "width": 0.9126086573687067,
+        "depth": 0.6719454972991583
+      },
+      "projectedPixelAABB": {
+        "min": [
+          176.81782493822553,
+          389.2918752613635
+        ],
+        "max": [
+          205.43493926689695,
+          429.0161071149182
+        ],
+        "width": 28.61711432867142,
+        "height": 39.72423185355473
+      }
+    }
+  },
+  "h34": {
+    "canonicalIdle": {
+      "vertices": 6992,
+      "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+      "worldAABB": {
+        "min": [
+          -0.5200158938534654,
+          0.014000000432133675,
+          -0.3318615445490618
+        ],
+        "max": [
+          0.4588696076259766,
+          1.4807320263056258,
+          0.22794032573460077
+        ],
+        "sizeXYZ": [
+          0.978885501479442,
+          1.4667320258734922,
+          0.5598018702836626
+        ],
+        "height": 1.4667320258734922,
+        "width": 0.978885501479442,
+        "depth": 0.5598018702836626
+      },
+      "projectedPixelAABB": null
+    },
+    "normalGameIdle": {
+      "vertices": 6992,
+      "pose": "createHero(); update(0, {}); body only, independent sword excluded",
+      "worldAABB": {
+        "min": [
+          -3.7483905830699316,
+          0.07969194091856478,
+          -4.533095906823779
+        ],
+        "max": [
+          -2.8421525145979265,
+          1.546423966792057,
+          -3.8783087239537557
+        ],
+        "sizeXYZ": [
+          0.906238068472005,
+          1.4667320258734922,
+          0.6547871828700234
+        ],
+        "height": 1.4667320258734922,
+        "width": 0.906238068472005,
+        "depth": 0.6547871828700234
+      },
+      "projectedPixelAABB": {
+        "min": [
+          176.8437764001911,
+          389.37643799458635
+        ],
+        "max": [
+          204.84305186089523,
+          428.9295842098459
+        ],
+        "width": 27.999275460704126,
+        "height": 39.553146215259574
+      }
+    }
+  },
+  "difference": {
+    "worldAABBSizeXYZ": [
+      -0.006370588896701612,
+      0.00010994477286296878,
+      -0.017158314429134958
+    ],
+    "projectedHeightPixels": -0.17108563829515333,
+    "projectedWidthPixels": -0.6178388679672935
+  },
+  "inputIntegrity": [
+    {
+      "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/sample/hero.js",
+      "sha256": "226065e48305b39b68497564509bea0f688e23930d987ca96b43129bbb8135c8",
+      "sha256After": "226065e48305b39b68497564509bea0f688e23930d987ca96b43129bbb8135c8",
+      "unchanged": true
+    },
+    {
+      "file": "/workspace/wanxiang-cloud-tour/.github/scripts/lib/linyan-h33-runtime.mjs",
+      "sha256": "80b5cc52b33dc3740f52259f03f562e9c2c23dd704283802f6572af03644178c",
+      "sha256After": "80b5cc52b33dc3740f52259f03f562e9c2c23dd704283802f6572af03644178c",
+      "unchanged": true
+    },
+    {
+      "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/assets/hero-034/linyan-h34-baked.js",
+      "sha256": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245",
+      "sha256After": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245",
+      "unchanged": true
+    },
+    {
+      "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/assets/hero-033/linyan-h33-baked.js",
+      "sha256": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169",
+      "sha256After": "8b7313c279952c833e4a9296c60b5c203d0798c18509be068a6dc9f490c8d169",
+      "unchanged": true
+    },
+    {
+      "file": "/workspace/wanxiang-cloud-tour/fengming-v2-scene-a/vendor/three/three.module.js",
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+      "sha256After": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+      "unchanged": true
+    }
+  ],
+  "inputsStable": true
+}

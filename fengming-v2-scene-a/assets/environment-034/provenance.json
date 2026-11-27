@@ -1,0 +1,166 @@
+{
+  "source": "Original hand-authored polygon control cages, undercut shoulder profiles and physical Blender edge bevels; no sphere primitives or external geometry",
+  "editableSource": "hand-cut-bedrock.blend",
+  "glb": "hand-cut-bedrock.glb",
+  "runtime": "rock-shapes.js bundled statically; no runtime GLB request or build-time modelling on phone",
+  "shapes": {
+    "west": {
+      "triangles": 956,
+      "height": 0.82,
+      "outline": [
+        [
+          -1.8,
+          -0.8
+        ],
+        [
+          -0.8,
+          -1.02
+        ],
+        [
+          0.65,
+          -0.92
+        ],
+        [
+          1.65,
+          -0.55
+        ],
+        [
+          1.85,
+          0.22
+        ],
+        [
+          1.2,
+          0.88
+        ],
+        [
+          -0.25,
+          1.0
+        ],
+        [
+          -1.55,
+          0.55
+        ]
+      ]
+    },
+    "east": {
+      "triangles": 788,
+      "height": 1.02,
+      "outline": [
+        [
+          -1.55,
+          -0.7
+        ],
+        [
+          -0.7,
+          -1.08
+        ],
+        [
+          0.9,
+          -0.95
+        ],
+        [
+          1.65,
+          -0.2
+        ],
+        [
+          1.2,
+          0.98
+        ],
+        [
+          0.05,
+          1.05
+        ],
+        [
+          -1.4,
+          0.48
+        ]
+      ]
+    },
+    "side": {
+      "triangles": 820,
+      "height": 0.74,
+      "outline": [
+        [
+          -0.77,
+          -1.65
+        ],
+        [
+          0.14,
+          -1.83
+        ],
+        [
+          0.78,
+          -1.22
+        ],
+        [
+          0.7,
+          0.08
+        ],
+        [
+          0.56,
+          1.62
+        ],
+        [
+          -0.25,
+          1.82
+        ],
+        [
+          -0.74,
+          1.19
+        ],
+        [
+          -0.88,
+          0.15
+        ]
+      ]
+    }
+  },
+  "totalTriangles": 2564,
+  "sourcePainting": "Reuses project-owned H33 handpainted-stone-atlas.webp right rock cell",
+  "originalTerrainAndNavigationModified": false,
+  "runtimePlacedKeys": [
+    "west",
+    "east"
+  ],
+  "runtimeTriangles": 1744,
+  "excludedCandidate": "The third side ledge remains in editable source/glb inspection library only. It is excluded from runtime after normal-camera review because its closed contour read as a separate pedestal.",
+  "runtimeGeometryBytes": 85561,
+  "addedStaticDrawCalls": 2,
+  "contact": "Narrow0.12–0.32m conformed edge feathers, not full black planes",
+  "textureSharing": "getEnvironmentStoneTexture() shares the existing terrain atlas object, with continuous world-space triplanar sampling",
+  "placementSource": "sample/scene-dressing.js ROCK_PLACEMENTS; original walkable rectangle unchanged",
+  "placementValidation": [
+    {
+      "key": "west",
+      "role": "near left frame, outside original z limit",
+      "min": [
+        -6.845251805663558,
+        -0.21818995430908816,
+        2.234973952162032
+      ],
+      "max": [
+        -3.388664552227833,
+        0.8534611041315143,
+        4.483275465265738
+      ],
+      "height": 1.0716510584406025,
+      "clearanceToPlayableBounds": 0.734973952162032
+    },
+    {
+      "key": "east",
+      "role": "near right frame, outside original z limit",
+      "min": [
+        1.8841183160674801,
+        -0.35971397660448556,
+        2.583592147813798
+      ],
+      "max": [
+        5.092211712586356,
+        1.14260343933002,
+        4.777088690555095
+      ],
+      "height": 1.5023174159345056,
+      "clearanceToPlayableBounds": 1.083592147813798
+    }
+  ]
+}

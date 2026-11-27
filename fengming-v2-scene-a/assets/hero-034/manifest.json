@@ -1,0 +1,263 @@
+{
+  "version": "H34 Blender tailored male hero v1",
+  "sourceGenerator": {
+    "path": ".github/scripts/lib/linyan-h34-generator.mjs",
+    "sha256": "f076d4d566548ae35e2acbf0ba7a10dde005038f355e8ef0fbce71a1575c453c"
+  },
+  "encoding": "Raw original TypedArray bytes in base64; lazy cached decode; no quantization or optimization",
+  "endian": "little",
+  "module": {
+    "file": "linyan-h34-baked.js",
+    "bytes": 635422,
+    "gzipBytes": 229081,
+    "sha256": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245"
+  },
+  "geometries": {
+    "body": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 20976,
+          "count": 6992,
+          "bytes": 83904,
+          "sha256": "807d9509ff5442c1ad4ea8633370272547b7e508b21ed32a030652d7b6173af7"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 20976,
+          "count": 6992,
+          "bytes": 83904,
+          "sha256": "0b979d9dabbc37bebc89a7cca4472d01ef63195bcb5655eb18a2efbb3f0cf1e8"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 13984,
+          "count": 6992,
+          "bytes": 55936,
+          "sha256": "46adc04718597c94e54c5bb3d1fd852c77984a131854a4c8d1354927474eaa20"
+        },
+        "skinIndex": {
+          "itemSize": 4,
+          "normalized": false,
+          "type": "Uint16Array",
+          "length": 27968,
+          "count": 6992,
+          "bytes": 55936,
+          "sha256": "43b974b04d2085c8b744440f799ef338a0f98bbc2d716c2a5b4e3b2b82e8ebff"
+        },
+        "skinWeight": {
+          "itemSize": 4,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 27968,
+          "count": 6992,
+          "bytes": 111872,
+          "sha256": "3803584051edca2296d92be5ef3cd7c36281556c0ef599d3e410401c0bfd7fa2"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 26925,
+        "count": 26925,
+        "bytes": 53850,
+        "sha256": "d9524df8002cd886423b91ce01ee11532f7e8e0150a99d52dedc541dcc339ab1"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 26925,
+          "materialIndex": 0
+        }
+      ],
+      "vertices": 6992,
+      "triangles": 8975,
+      "boundingSphere": {
+        "center": [
+          0,
+          0.7495000073686242,
+          -0.066600002348423
+        ],
+        "radius": 0.7881924086729823
+      },
+      "boundingBox": {
+        "min": [
+          -0.3771234452724457,
+          0.014000000432133675,
+          -0.33820000290870667
+        ],
+        "max": [
+          0.3771234452724457,
+          1.4850000143051147,
+          0.20499999821186066
+        ]
+      }
+    },
+    "sword0": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 144,
+          "count": 48,
+          "bytes": 576,
+          "sha256": "f942203924de17a2824d41513788592f90f8bcf65385469ea9a7d539e35ff2d8"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 144,
+          "count": 48,
+          "bytes": 576,
+          "sha256": "fff6cc13edbd94383cb0c0b53fa4642913fafc23506aeaa433d0651dab44d605"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 96,
+          "count": 48,
+          "bytes": 384,
+          "sha256": "f5ebc15d60e20ff1e1592a5a4eba9b92244d8a2229d506d900e5569475913f1e"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 72,
+        "count": 72,
+        "bytes": 144,
+        "sha256": "01df634a07d7d4b26838a584a5cf90a63e1b9dc4bae15bd181fe7e589e0bf1c9"
+      },
+      "groups": [],
+      "vertices": 48,
+      "triangles": 24,
+      "boundingSphere": null,
+      "boundingBox": null
+    },
+    "sword1": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 1431,
+          "count": 477,
+          "bytes": 5724,
+          "sha256": "84cb90675c632689266aa5cc5666bfb93da738ed9d7a9242f93ec2e52cb43660"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 1431,
+          "count": 477,
+          "bytes": 5724,
+          "sha256": "566356c696266dbf2dfc9929988b95043f7359d293f8ee45d4352bc3db681173"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 954,
+          "count": 477,
+          "bytes": 3816,
+          "sha256": "cac9f6f2c0671905fc8c48c001ac6b109773a154fbb71b7769826bc1a205bcbb"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 996,
+        "count": 996,
+        "bytes": 1992,
+        "sha256": "cea4ef3a772597da4472184bd2f9f056c090db930500091a1873012a12940fdf"
+      },
+      "groups": [],
+      "vertices": 477,
+      "triangles": 332,
+      "boundingSphere": null,
+      "boundingBox": null
+    },
+    "sword2": {
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 180,
+          "count": 60,
+          "bytes": 720,
+          "sha256": "2c3158144c2f540711f0a2cc0afa57a17d518e8e22d80dbce47ad1e2b3fc4e9e"
+        },
+        "normal": {
+          "itemSize": 3,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 180,
+          "count": 60,
+          "bytes": 720,
+          "sha256": "2e0f6f2418e37901e7534700be5bf3517ccc612f4ea827c159f2c09a472137e0"
+        },
+        "uv": {
+          "itemSize": 2,
+          "normalized": false,
+          "type": "Float32Array",
+          "length": 120,
+          "count": 60,
+          "bytes": 480,
+          "sha256": "6afa8598f12472855e6c3dd566ece56c229535172250058d759d8ba8c46db133"
+        }
+      },
+      "index": {
+        "itemSize": 1,
+        "normalized": false,
+        "type": "Uint16Array",
+        "length": 60,
+        "count": 60,
+        "bytes": 120,
+        "sha256": "6d0af186622c0b1200ea19a288afae85380b856ec3375ac4bae93b592810b159"
+      },
+      "groups": [],
+      "vertices": 60,
+      "triangles": 20,
+      "boundingSphere": null,
+      "boundingBox": null
+    }
+  },
+  "boneBind": {
+    "type": "Float64Array",
+    "matrixCount": 22,
+    "bytes": 2816,
+    "sha256": "c4edc4c31952639cd37533a95a53063a38d2cc511fdd1579d3ea83c7dc2b218f",
+    "bodyBindMatrixBytes": 128,
+    "bodyBindMatrixSha256": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+    "bodyBindMatrixInverseSha256": "ccc7977ae7987f37c2235e57c320a5142d6b58413825b6457a4a1c9fe469ac1c",
+    "boneMetadataSha256": "458116834d1fdc99be8dd32c1cbe1a31cc9b8915d2227d1d0576f3579f6a7b21"
+  },
+  "stats": {
+    "triangles": 9351,
+    "materials": 2,
+    "bones": 22,
+    "height": 1.485,
+    "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+    "attackDuration": 0.78,
+    "hitProgress": 0.44,
+    "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+  },
+  "bones": 22,
+  "materials": 2,
+  "swordParentBone": 8,
+  "totalGeometryBytes": 466378
+}
