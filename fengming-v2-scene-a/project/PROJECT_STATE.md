@@ -8,6 +8,8 @@ H.34／角色网格与门楼可见资产重制（2026-11-27）：当前试玩 ht
 
 14.68秒原速正常UI连续触屏完整穿枝→登阶→回身命中收势，四标记true、HP3→2、错误0/失败请求0。云Linux WebKit26.5/WPE软件390×844DPR1实测24.112FPS、中位40ms/p95 51ms；非iPhone/微信真机。13启动故障/恢复检查与无FX六帧通过。角色网格/构图真实改变，不宣称已获用户或参考美术完成度验收。报告SAMPLE_H34_QA.md、独立SAMPLE_H34_VISUAL_REVIEW.md与evidence/h34/。
 
+公网验收（源代码提交816d05e）：H34入口冷启动3.35s，15项关键资源与冻结构建SHA一致，原生触控走近松树/普通剑收势/赤凤/重来通过，错误0/失败请求0；同为云Linux WebKit，非iPhone/微信真机。公开录像、H31对照与对比图内容一致。证据evidence/h34/public-smoke.json、public-artifacts.json。
+
 GitHub Runway API只读检测已建立并实际运行，四常见Secret映射为空，未发出生成/未收费，待具体Secret名称/位置；不能用聊天插件权限判项目API。资产本轮由上述实际Blender/CC0/自制流程完成。
 
 以下H.33及更早条目为历史记录，旧“当前”描述以本页顶部H.34为准。

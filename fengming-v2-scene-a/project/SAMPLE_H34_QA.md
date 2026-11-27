@@ -26,7 +26,7 @@ H.31留档：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h31-compa
 
 实际录制环境：云Linux x86_64、Playwright WebKit26.5/WPE、强制软件渲染，390×844DPR1，344帧/14.225s，**24.112FPS**；帧间隔中位40ms、p95 51ms。MP4编码25FPS与游戏FPS分开。WPE的Mac Safari/Apple GPU字符串不是物理Apple硬件；本轮**没有iPhone/ChatGPT客户端/微信真机或原生微信开发者工具实测**，不能据此宣称真机流畅通过。
 
-无FX图通过实际touch走到石阶后一次按剑，在rAF读取真实渲染canvas，剥DOM血条用于动作判断，未传送/冻结/摆姿势。实际阶段：[{'label': 'windup', 'progress': 0.20384615384615384}, {'label': 'sweep', 'progress': 0.4256410256410256}, {'label': 'contact', 'progress': 0.44}, {'label': 'follow', 'progress': 0.6015384615384615}, {'label': 'recover', 'progress': 0.8041025641025639}, {'label': 'rest', 'progress': None}]。采样读回有开销，不作为性能样本。普通伤害仍2.6范围/单次1HP/.44同步，45ms命中顿帧保留。赤凤与重来在最终公网另测。
+无FX图通过实际touch走到石阶后一次按剑，在rAF读取真实渲染canvas，剥DOM血条用于动作判断，未传送/冻结/摆姿势。实际阶段：[{'label': 'windup', 'progress': 0.20384615384615384}, {'label': 'sweep', 'progress': 0.4256410256410256}, {'label': 'contact', 'progress': 0.44}, {'label': 'follow', 'progress': 0.6015384615384615}, {'label': 'recover', 'progress': 0.8041025641025639}, {'label': 'rest', 'progress': None}]。采样读回有开销，不作为性能样本。普通伤害仍2.6范围/单次1HP/.44同步，45ms命中顿帧保留。最终公网已以原生touch实测赤凤令敌HP降至0、重来恢复HP3及出生点。
 
 13项启动回归通过，包括旧importmap失效复现、当前classic冷启动/触控/单次click回退、真实context loss、bundle失败后原生重试、WebGL构造失败、松图失败、禁JS静态提示、20s慢载入、外部启动器受阻、CSP禁内联、地面缓存失败，以及新角色图集/新门匾图集失败。新资源不到齐不标记可玩；启动链保持本地Three单包，不依赖运行时importmap。
 
@@ -40,4 +40,4 @@ H.31留档：https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h31-compa
 
 许可及来源：hero-034/provenance.json、CC0官方FAQ记录；gate-034/font-source.json与OFL-Noto-CJK.txt；environment-034/provenance.json。继承Three.js MIT，原参考游戏图/模型/代码未作为素材导入。源工具均在.github/scripts/与tools/，真实editable母版在对应source或资产目录。
 
-本轮执行构建：npm run build（依赖由package-lock.json锁定），Three r170 classic IIFE，1,434,600字节，SHA256 56c33711dd11070fa9f384bb71b3153cf35f903cb0b15c066765a19f724730c4。源/运行资源hash见evidence/h34/build-manifest.json。H29 index blob82e9ce953fc1954c7408ebbc835dbab37098aa64保持；H31源与c0fdc9a逐字节一致。最终公网核验结果另保留qa-h34/public-smoke.json。
+本轮执行构建：npm run build（依赖由package-lock.json锁定），Three r170 classic IIFE，1,434,600字节，SHA256 56c33711dd11070fa9f384bb71b3153cf35f903cb0b15c066765a19f724730c4。源/运行资源hash见evidence/h34/build-manifest.json。H29 index blob82e9ce953fc1954c7408ebbc835dbab37098aa64保持；H31源与c0fdc9a逐字节一致。最终公网核验见[evidence/h34/public-smoke.json](../evidence/h34/public-smoke.json)：源代码提交816d05ef17bcbff226e66e828abc19c47cf21ac1，冷启动3.35s，15项公开资源SHA256逐项与本地一致；触控走近松树、一次普通挥剑收势、赤凤及重来通过，错误0/请求失败0。H31入口、MP4、整屏对照和无FX连续帧的公开下载也逐字节匹配，记录public-artifacts.json。这些仍为云端WebKit触控模拟，非物理iPhone/微信。

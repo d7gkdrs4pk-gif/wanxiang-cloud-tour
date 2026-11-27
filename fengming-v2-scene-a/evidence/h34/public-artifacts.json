@@ -1,0 +1,28 @@
+{
+  "checked": [
+    {
+      "path": "h31-compare.html",
+      "bytes": 1457,
+      "sha256": "ed2a59ec6ba0f4e591650739c070ae3577e6bfa6d835552ecdb4d02e643f5902",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/h31-compare.html"
+    },
+    {
+      "path": "evidence/h34/sample-walk-sword.mp4",
+      "bytes": 1583633,
+      "sha256": "d062aed5e27013ec4e5edd626adf7569d3bc09ab5bb44f8fee3ab1d8ebf51a62",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/evidence/h34/sample-walk-sword.mp4"
+    },
+    {
+      "path": "evidence/h34/comparison/normal-h31-h34-contact.png",
+      "bytes": 855807,
+      "sha256": "914a5f00819e897999290f3efe213f615363b5e5b559adf44a0b2c66bcbf1d5e",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/evidence/h34/comparison/normal-h31-h34-contact.png"
+    },
+    {
+      "path": "evidence/h34/no-fx/no-fx-actual-frames.png",
+      "bytes": 1503938,
+      "sha256": "bb64771f47c2c9d5d1c387ca9219135be5af65f30d55f6d44a4b12010e5ddfe6",
+      "URL": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/evidence/h34/no-fx/no-fx-actual-frames.png"
+    }
+  ]
+}

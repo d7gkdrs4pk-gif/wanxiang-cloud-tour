@@ -1,0 +1,345 @@
+{
+  "version": "H34",
+  "skillChecks": {
+    "phoenixEnemyHP": 0,
+    "resetEnemyHP": 3,
+    "resetPosition": [
+      -3.2,
+      0.0656919404864311,
+      -4.2
+    ]
+  },
+  "commit": "816d05ef17bcbff226e66e828abc19c47cf21ac1",
+  "url": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/gate-h34",
+  "HTTP": 200,
+  "scope": "public production URL; cloud Linux WebKit26.5/WPE software renderer; browser touchscreen simulation, not physical iPhone/ChatGPT native app/WeChat device",
+  "startupSeconds": 3.3514848049962893,
+  "hashes": [
+    {
+      "path": "gate-h34.html",
+      "http": 200,
+      "bytes": 6116,
+      "sha256": "9e4ae8b42ed524604a5718696fa50f35938ddafd54f14c9e1d99e0ca347c7086"
+    },
+    {
+      "path": "sample/launch.js",
+      "http": 200,
+      "bytes": 3877,
+      "sha256": "4fb45ce0560e534a4c9e51668afc498616fb9517bee3a2e3e5b5ff525e5efc3c"
+    },
+    {
+      "path": "sample/sample.css",
+      "http": 200,
+      "bytes": 5043,
+      "sha256": "feda8f1e245406cdb231695b34fff25f8015fca09fa5ead12488d00cd3279786"
+    },
+    {
+      "path": "sample/dist/game-h34.js",
+      "http": 200,
+      "bytes": 1434600,
+      "sha256": "56c33711dd11070fa9f384bb71b3153cf35f903cb0b15c066765a19f724730c4"
+    },
+    {
+      "path": "assets/sample-runtime/terrain.glb",
+      "http": 200,
+      "bytes": 816528,
+      "sha256": "22d63ad8bbce2e74309c7b6bb37ec66851ded3fa1e14838c6b50bdcf7c640330"
+    },
+    {
+      "path": "assets/sample-runtime/gate.glb",
+      "http": 200,
+      "bytes": 1332728,
+      "sha256": "ab35c4ea6cd9bfb308ff36aaf1c99e025e30d8be6c1fd2bd54eabcb69cac340d"
+    },
+    {
+      "path": "assets/pine-033/pine-layer-atlas.webp",
+      "http": 200,
+      "bytes": 283506,
+      "sha256": "01e35918bef3a5e5aa218d082d3ca90df0b55cdd587632977ce0c9ad1e4daeba"
+    },
+    {
+      "path": "assets/environment-033/handpainted-stone-atlas.webp",
+      "http": 200,
+      "bytes": 1130348,
+      "sha256": "dec6c60e72d604b3013a0cdab0c74aae4a90778e6f7168ef0ad9b1b7390bc56a"
+    },
+    {
+      "path": "assets/environment-033/terrain-rock-normals.f32",
+      "http": 200,
+      "bytes": 238224,
+      "sha256": "68418c74c76ae6cd7c3e5ab2d15726efa34500bb7aae785f638d5493e0fbaad5"
+    },
+    {
+      "path": "assets/sample-ground/height.f32",
+      "http": 200,
+      "bytes": 273492,
+      "sha256": "aab34ef16405ec6afac84824d99dd33c241ff4dceabadcae8d88eecf484945df"
+    },
+    {
+      "path": "assets/sample-ground/slope.bits",
+      "http": 200,
+      "bytes": 8480,
+      "sha256": "5cd882bbea146f92b7456a9547b2332ed97566364f8d73ba013063e82f4e9f31"
+    },
+    {
+      "path": "assets/hero-034/linyan-atlas.webp",
+      "http": 200,
+      "bytes": 104184,
+      "sha256": "4b6e2edd1ec4ac53fc30c022c12b92995bdfce7ee0901ac31ad7c6a7fda1c517"
+    },
+    {
+      "path": "assets/hero-034/linyan-h34-baked.js",
+      "http": 200,
+      "bytes": 635422,
+      "sha256": "de0a299a9b2b01186c6075fcc91704d212f879da72a5b47ec56994de73ca8245"
+    },
+    {
+      "path": "assets/gate-034/plaque-atlas.png",
+      "http": 200,
+      "bytes": 9546,
+      "sha256": "12b30c30a3fa919a3c9759246ee5f7704a761cf7a2842b28bf0e70ed497b5165"
+    },
+    {
+      "path": "assets/environment-034/rock-shapes.js",
+      "http": 200,
+      "bytes": 85561,
+      "sha256": "ced2d2ed56d8ce772b79c1efdcf2c9fdab2dac297874e68fef48d37204483711"
+    }
+  ],
+  "errors": [],
+  "requestfailed": [],
+  "final": {
+    "version": "H.34 sculpted gate and Linyan sample",
+    "ready": true,
+    "position": [
+      -5.120038732655641,
+      0.136971414822735,
+      -4.392788896353228
+    ],
+    "rotation": -1.6704490117718875,
+    "camera": [
+      0.8922853452946852,
+      27.136293846063595,
+      10.608448550238972
+    ],
+    "FOV": 39,
+    "heroHeight": 1.485,
+    "cpu": {
+      "simMs": 1,
+      "visualMs": 0,
+      "renderMs": 8
+    },
+    "kinematics": {
+      "maxYawRadPerSec": 14
+    },
+    "blade": {
+      "base": [
+        -5.355404612128209,
+        0.9270437973177048,
+        -4.9502322206930405
+      ],
+      "tip": [
+        -6.358208071695922,
+        1.2915364073350566,
+        -5.581999866842923
+      ]
+    },
+    "hero": {
+      "triangles": 9351,
+      "materials": 2,
+      "bones": 22,
+      "height": 1.485,
+      "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+      "attackDuration": 0.78,
+      "hitProgress": 0.44,
+      "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+    },
+    "gateRevision": "H34",
+    "hitPause": 0,
+    "startup": {
+      "version": "H.34",
+      "status": "ready",
+      "phase": "playable",
+      "lastChange": 1795779445504,
+      "started": 1795779443249,
+      "errors": [],
+      "history": [
+        {
+          "phase": "webgl-check",
+          "at": 1795779443249,
+          "progress": 0.03
+        },
+        {
+          "phase": "script",
+          "at": 1795779443250,
+          "progress": 0.08
+        },
+        {
+          "phase": "renderer",
+          "at": 1795779443446,
+          "progress": 0.12
+        },
+        {
+          "phase": "hero",
+          "at": 1795779444179,
+          "progress": 0.2
+        },
+        {
+          "phase": "navigation",
+          "at": 1795779444311,
+          "progress": 0.35
+        },
+        {
+          "phase": "scene",
+          "at": 1795779445099,
+          "progress": 0.5
+        },
+        {
+          "phase": "pine",
+          "at": 1795779445450,
+          "progress": 0.78
+        },
+        {
+          "phase": "first-frame",
+          "at": 1795779445504,
+          "progress": 0.92
+        },
+        {
+          "phase": "playable",
+          "at": 1795779446060,
+          "progress": 1
+        }
+      ],
+      "appSource": "https://wanxiang-cloud-tour.pages.dev/fengming-v2-scene-a/sample/dist/game-h34.js?v=56c33711dd11",
+      "readyAt": 1795779446060
+    },
+    "pathNodes": [],
+    "guideIndex": 1,
+    "roofCut": 0,
+    "target": [
+      -5.120038732655641,
+      0.136971414822735,
+      -4.392788896353228
+    ],
+    "flags": {
+      "nearPine": true,
+      "underBranch": false,
+      "stairs": false,
+      "hit": false
+    },
+    "enemy": {
+      "p": [
+        2.8,
+        0.02455228567123413,
+        -6.6
+      ],
+      "hp": 3
+    },
+    "attack": null,
+    "stats": {
+      "calls": 28,
+      "triangles": 63409
+    },
+    "pine": {
+      "loaded": true,
+      "root": [
+        -7,
+        0.15297318994998932,
+        -7
+      ],
+      "layers": {
+        "rear": {
+          "rootDepth": 34.10057133782425,
+          "offset": -1.05,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "trunk": {
+          "rootDepth": 33.05432633903221,
+          "offset": 0,
+          "upperRelief": 1.6,
+          "visible": true
+        },
+        "front": {
+          "rootDepth": 32.20736610191484,
+          "offset": 0.85,
+          "upperRelief": 1.5992788652793042,
+          "visible": true
+        }
+      },
+      "playerDepth": 31.46662405125786
+    },
+    "events": [
+      {
+        "type": "reset",
+        "t": 2434
+      },
+      {
+        "type": "ready",
+        "t": 2990,
+        "hero": {
+          "triangles": 9351,
+          "materials": 2,
+          "bones": 22,
+          "height": 1.485,
+          "revision": "H34 Blender quad-tailored body / CC0 authored male head and hands / 1K painted AO atlas",
+          "attackDuration": 0.78,
+          "hitProgress": 0.44,
+          "authorship": "New project-authored Blender continuous quad clothing, hair and boots; modified CC0 VRoid HairSample_Male face/ears/backhead/hands; existing project-owned skeleton and local animation."
+        },
+        "enemy": {
+          "source": "original project-authored procedural mesh and animation; no third-party assets",
+          "revision": "H33",
+          "height": 1.46,
+          "triangles": 1866,
+          "vertices": 2501,
+          "bones": 19,
+          "materials": 4,
+          "drawCalls": 4,
+          "hitDuration": 0.34,
+          "hitPeak": 0.075,
+          "hitHoldUntil": 0.125,
+          "hitPose": "directional torso retreat, staggered knees, independent short-blade lag; no added particles",
+          "facing": "+Z"
+        }
+      },
+      {
+        "type": "move-command",
+        "t": 3359,
+        "screen": [
+          131,
+          392
+        ],
+        "ok": true,
+        "reason": "direct",
+        "adjusted": false,
+        "nodes": 1,
+        "planningMs": 2,
+        "goal": [
+          -5.120038732655641,
+          0.136971414822735,
+          -4.392788896353228
+        ]
+      },
+      {
+        "type": "near-pine",
+        "t": 3669
+      },
+      {
+        "type": "swing-start",
+        "t": 3989,
+        "p": [
+          -5.120038732655641,
+          0.136971414822735,
+          -4.392788896353228
+        ],
+        "facing": -1.6704490117718875,
+        "aim": -1.6704490117718875
+      },
+      {
+        "type": "swing-recovered",
+        "t": 4790
+      }
+    ]
+  }
+}
