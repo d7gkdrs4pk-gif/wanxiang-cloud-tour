@@ -24,6 +24,10 @@
 <section id="choice-panel" class="modal" hidden aria-label="选择修为提升"><div class="choice-wrap"><small class="eyebrow">林间有灵 · 助君前行</small><h2 id="choice-title">林间赐福</h2><p>择一修行，即刻生效</p><div id="choices"></div></div></section>
 <section id="pause-panel" class="modal" hidden><div class="paper"><small class="eyebrow">且听风吟</small><h2>暂歇片刻</h2><p>左侧拖动走位，右侧按钮出剑或施法。<br>拾取灵光提升修为，击败古木灵鹿。</p><button id="resume" class="primary">继续试炼</button><button id="restart-pause" class="secondary">重新开始</button></div></section>
 <section id="result-panel" class="modal" hidden><div class="paper"><small class="eyebrow">雾林试炼 · 壹</small><h2 id="result-title">林海复明</h2><p id="result-copy"></p><div id="result-stats"></div><button id="restart" class="primary">再入林海</button></div></section>
-<section id="loading"><div><svg class="loading-mark" viewBox="0 0 48 48"><path d="M24 3 30 17 45 24 30 30 24 45 18 30 3 24 18 17Z"/></svg><p class="eyebrow">林海初境</p><h2>雾林试炼</h2><p id="load-status">正在铺开林间古径…</p><div class="load-track"><i id="load-progress"></i></div><button id="retry" class="secondary" hidden>重新载入</button></div></section>
+<section id="loading"><div><svg class="loading-mark" viewBox="0 0 48 48"><path d="M24 3 30 17 45 24 30 30 24 45 18 30 3 24 18 17Z"/></svg><p class="eyebrow">林海初境</p><h2>雾林试炼</h2><p id="load-status">正在铺开林间古径…</p><div class="load-track"><i id="load-progress"></i></div><button id="retry" class="secondary" hidden onclick="location.reload()">重新载入</button></div></section>
+<script>
+// Recovery is available even if the entry module or one of its imports fails.
+(()=>{const recover=()=>{if(window.__FOREST?.snapshot().ready)return;document.getElementById('load-status').textContent='林间画卷载入较慢，请重试';document.getElementById('retry').hidden=false;};window.addEventListener('error',recover,true);setTimeout(recover,18000);})();
+</script>
 <script type="module" src="main.js?v=f1"></script>
 </body></html>
