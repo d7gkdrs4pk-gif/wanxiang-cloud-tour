@@ -1,0 +1,108 @@
+{
+  "asset": "Original forest swordsman supplementary opposite-walk and windup keyposes",
+  "createdUTC": "2026-11-28",
+  "tool": "OpenAI image_gen.imagegen",
+  "exactModelIdentifier": "not exposed by tool",
+  "referenceImage": "atlas.png",
+  "referenceSHA256": "1b351c70547d051c8f7e9093a0a1ca22d3e857dc2dd6f7a6824fdda2c8ecf131",
+  "externalGameAssetsUsed": false,
+  "ROAssetsUsed": false,
+  "generationAttempts": [
+    {
+      "id": "exec-7b773208-aa55-4e0a-aae6-d8b067eee0da",
+      "result": "Rejected as second walk step: lead leg too similar to original. Windup/identity useful as edit reference."
+    },
+    {
+      "id": "exec-698bb193-46b6-4d7b-80a1-840a5646a75f",
+      "result": "Final targeted leg correction, preserving adult male identity and outfit. Packaged for runtime review."
+    }
+  ],
+  "requestedLayout": {
+    "columns": 4,
+    "rows": 2,
+    "directions": [
+      "front",
+      "back",
+      "left",
+      "right"
+    ],
+    "rowsDescription": [
+      "alternate/opposite walking step",
+      "right-hand sword windup"
+    ]
+  },
+  "originalGeneratedPNG": {
+    "file": "supplement-source.png",
+    "pixels": [
+      1774,
+      887
+    ],
+    "sha256": "2c71cc319c1eedaf51d7ab8a6af5eec9dc4bba1dbef0a18d4280f7e9e124ab00"
+  },
+  "runtimeLayout": {
+    "pixels": [
+      1776,
+      888
+    ],
+    "cell": [
+      444,
+      444
+    ],
+    "referenceHeight": 396,
+    "CSSBodyHeight": 62
+  },
+  "technicalProcessing": [
+    "Cropped source mathematical grid at nearest integer edges; copied every cropped pixel unchanged into equal444px cells.",
+    "Added at most1 transparent row/column per source cell. No repaint, mirror, alpha cleanup or character rescale.",
+    "Lossless exact=True WebP verified decoded RGBA-identical to normalized PNG.",
+    "Stored manual boot-ground anchors per cell.",
+    "62px QA contact sheet compares old walk/new step/windup; it is not a game capture."
+  ],
+  "QA": {
+    "status": "ready for runtime animation review",
+    "identityAndOutfit": "Consistent at62px; no obvious redesign.",
+    "frontBackStep": "Changed lead boot visible.",
+    "profileStep": "Trailing boot raised and leg spacing changed; actual game cadence remains to be reviewed.",
+    "windup": "Hand/guard and diagonal sword separate from torso in all four directions.",
+    "notClaimed": "No browser/GPU/game animation test by this asset task."
+  },
+  "oldRuntimeIntegrity": [
+    {
+      "file": "atlas.webp",
+      "sha256": "5d74d1558f2c56eea00b96aa285ca94229a4e2b6bf5ace40da717332af65b84f",
+      "unchanged": true
+    },
+    {
+      "file": "atlas.json",
+      "sha256": "700e5a39b3947157b636fa7bebb6c28a70dee72359f592a74dc8158f9d9b1ea8",
+      "unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "name": "supplement.png",
+      "bytes": 1219133,
+      "sha256": "e15e77e24f45d2f504879294ff1f182118339576b66bdaf695f2cbb0bf50b900"
+    },
+    {
+      "name": "supplement.webp",
+      "bytes": 823162,
+      "sha256": "592e22a72ac250a4e088bc87faa42d2a252252bde9b46fe1feabfaa9755cd761"
+    },
+    {
+      "name": "supplement.json",
+      "bytes": 5091,
+      "sha256": "54f5cb225bdd025af58cd4db4d8f246d1c379e6f36618177785c84ccc361cb74"
+    },
+    {
+      "name": "build-supplement.py",
+      "bytes": 3983,
+      "sha256": "3e099b0af278edc19e3cb0a2da621a15b112cb45c1a19ad8752f52f850fb3deb"
+    },
+    {
+      "name": "supplement-preview-62px.png",
+      "bytes": 49647,
+      "sha256": "03bd8e9b26290b77eda55695106ce5d5f5f8aacaaa1d27d6a1d6ac6e456a5f9f"
+    }
+  ]
+}

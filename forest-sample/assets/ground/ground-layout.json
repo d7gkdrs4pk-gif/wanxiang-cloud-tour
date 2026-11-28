@@ -1,0 +1,146 @@
+{
+  "imagePixels": [
+    1254,
+    1254
+  ],
+  "worldPixels": [
+    1536,
+    1536
+  ],
+  "coordinateSystem": "World XY, image upper-left origin, +X right/+Y down; no perspective warping or source upscaling",
+  "imageToWorldScale": 1.2248803827751196,
+  "recommendedSpawn": [
+    768,
+    1120
+  ],
+  "safeWalkableCoreRectangle": [
+    280,
+    270,
+    1280,
+    1260
+  ],
+  "suggestedWalkablePolygon": [
+    [
+      261,
+      215
+    ],
+    [
+      522,
+      131
+    ],
+    [
+      1029,
+      131
+    ],
+    [
+      1198,
+      261
+    ],
+    [
+      1352,
+      415
+    ],
+    [
+      1398,
+      737
+    ],
+    [
+      1352,
+      1091
+    ],
+    [
+      1213,
+      1290
+    ],
+    [
+      983,
+      1382
+    ],
+    [
+      599,
+      1382
+    ],
+    [
+      369,
+      1260
+    ],
+    [
+      215,
+      1044
+    ],
+    [
+      154,
+      691
+    ],
+    [
+      200,
+      399
+    ]
+  ],
+  "cornerCreekAvoidPolygon": [
+    [
+      1321,
+      0
+    ],
+    [
+      1536,
+      0
+    ],
+    [
+      1536,
+      338
+    ],
+    [
+      1413,
+      292
+    ],
+    [
+      1290,
+      200
+    ]
+  ],
+  "pathWaypoints": [
+    [
+      783,
+      1475
+    ],
+    [
+      722,
+      1290
+    ],
+    [
+      783,
+      1075
+    ],
+    [
+      614,
+      891
+    ],
+    [
+      415,
+      737
+    ],
+    [
+      369,
+      568
+    ],
+    [
+      445,
+      430
+    ],
+    [
+      599,
+      307
+    ],
+    [
+      737,
+      215
+    ],
+    [
+      783,
+      115
+    ]
+  ],
+  "placementGuidance": "The pictured low stone fragments are walkable decoration. Solid tree/foreground colliders belong to separate entity layers. Keep the central rectangle clear of new static obstacles; add only a shallow corner-water exclusion if needed. Suggested boundaries are art-derived guidance, not implemented navigation.",
+  "rectangleFormat": "[xMin,yMin,xMax,yMax]"
+}

@@ -1,0 +1,292 @@
+{
+  "image": "supplement.webp",
+  "sourcePNG": "supplement.png",
+  "originalGenerationPNG": "supplement-source.png",
+  "size": [
+    1776,
+    888
+  ],
+  "columns": 4,
+  "rows": 2,
+  "cell": [
+    444,
+    444
+  ],
+  "referenceHeight": 396,
+  "recommendedBodyHeightCSS": 62,
+  "recommendedScale": 0.15656565656565657,
+  "scaling": "One scale=62/396 for all supplement frames; main atlas remains at62/314. Do not stretch individual poses.",
+  "anchorUnits": "pixel coordinates inside source cell; boot-ground center",
+  "alphaBoundsThreshold": 32,
+  "frames": [
+    {
+      "index": 0,
+      "name": "walk-opposite-front",
+      "action": "walk-opposite",
+      "direction": "front",
+      "rect": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "anchor": [
+        238.5,
+        431
+      ],
+      "sourceHeight": 396,
+      "alphaBounds": [
+        77,
+        35,
+        263,
+        396
+      ]
+    },
+    {
+      "index": 1,
+      "name": "walk-opposite-back",
+      "action": "walk-opposite",
+      "direction": "back",
+      "rect": [
+        444,
+        0,
+        444,
+        444
+      ],
+      "anchor": [
+        218,
+        429
+      ],
+      "sourceHeight": 391,
+      "alphaBounds": [
+        124,
+        38,
+        257,
+        391
+      ]
+    },
+    {
+      "index": 2,
+      "name": "walk-opposite-left",
+      "action": "walk-opposite",
+      "direction": "left",
+      "rect": [
+        888,
+        0,
+        444,
+        444
+      ],
+      "anchor": [
+        210,
+        427
+      ],
+      "sourceHeight": 392,
+      "alphaBounds": [
+        63,
+        35,
+        271,
+        392
+      ]
+    },
+    {
+      "index": 3,
+      "name": "walk-opposite-right",
+      "action": "walk-opposite",
+      "direction": "right",
+      "rect": [
+        1332,
+        0,
+        444,
+        444
+      ],
+      "anchor": [
+        235,
+        427
+      ],
+      "sourceHeight": 391,
+      "alphaBounds": [
+        120,
+        36,
+        220,
+        391
+      ]
+    },
+    {
+      "index": 4,
+      "name": "windup-front",
+      "action": "windup",
+      "direction": "front",
+      "rect": [
+        0,
+        444,
+        444,
+        444
+      ],
+      "anchor": [
+        235.5,
+        419
+      ],
+      "sourceHeight": 392,
+      "alphaBounds": [
+        106,
+        27,
+        252,
+        392
+      ]
+    },
+    {
+      "index": 5,
+      "name": "windup-back",
+      "action": "windup",
+      "direction": "back",
+      "rect": [
+        444,
+        444,
+        444,
+        444
+      ],
+      "anchor": [
+        218,
+        418
+      ],
+      "sourceHeight": 391,
+      "alphaBounds": [
+        71,
+        27,
+        276,
+        391
+      ]
+    },
+    {
+      "index": 6,
+      "name": "windup-left",
+      "action": "windup",
+      "direction": "left",
+      "rect": [
+        888,
+        444,
+        444,
+        444
+      ],
+      "anchor": [
+        215.5,
+        416
+      ],
+      "sourceHeight": 387,
+      "alphaBounds": [
+        75,
+        29,
+        283,
+        387
+      ]
+    },
+    {
+      "index": 7,
+      "name": "windup-right",
+      "action": "windup",
+      "direction": "right",
+      "rect": [
+        1332,
+        444,
+        444,
+        444
+      ],
+      "anchor": [
+        223.5,
+        418
+      ],
+      "sourceHeight": 392,
+      "alphaBounds": [
+        86,
+        26,
+        275,
+        392
+      ]
+    }
+  ],
+  "animations": {
+    "walk-opposite": {
+      "front": [
+        0
+      ],
+      "back": [
+        1
+      ],
+      "left": [
+        2
+      ],
+      "right": [
+        3
+      ]
+    },
+    "windup": {
+      "front": [
+        4
+      ],
+      "back": [
+        5
+      ],
+      "left": [
+        6
+      ],
+      "right": [
+        7
+      ]
+    }
+  },
+  "mainAtlasCompatibility": {
+    "image": "atlas.webp",
+    "metadata": "atlas.json",
+    "referenceHeight": 314,
+    "walkPairs": {
+      "front": [
+        {
+          "sheet": "atlas",
+          "index": 4
+        },
+        {
+          "sheet": "supplement",
+          "index": 0
+        }
+      ],
+      "back": [
+        {
+          "sheet": "atlas",
+          "index": 5
+        },
+        {
+          "sheet": "supplement",
+          "index": 1
+        }
+      ],
+      "left": [
+        {
+          "sheet": "atlas",
+          "index": 6
+        },
+        {
+          "sheet": "supplement",
+          "index": 2
+        }
+      ],
+      "right": [
+        {
+          "sheet": "atlas",
+          "index": 7
+        },
+        {
+          "sheet": "supplement",
+          "index": 3
+        }
+      ]
+    }
+  },
+  "keyposesOnly": true,
+  "sourceRecord": "supplement-source.json",
+  "qualityNotes": [
+    "Same original male/outfit; no mirrored whole-character replacement.",
+    "Front/back show switched lead boot; profiles use a distinctly lifted trailing boot and changed leg spacing.",
+    "Windup keeps physical right hand/sword away from torso and prepares the existing attack keyposes.",
+    "Normal62px game animation timing remains a runtime review, not asserted from this asset contact sheet."
+  ]
+}

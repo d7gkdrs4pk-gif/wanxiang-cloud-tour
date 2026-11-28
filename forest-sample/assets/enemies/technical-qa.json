@@ -1,0 +1,32 @@
+{
+  "sourceDimensions": [
+    1774,
+    887
+  ],
+  "runtimeDimensions": [
+    1024,
+    512
+  ],
+  "frames": 8,
+  "transparentGuardPixels": 8,
+  "allCellsUnclipped": true,
+  "losslessWebPMatchesPNG": true,
+  "files": {
+    "source.png": {
+      "bytes": 1372776,
+      "sha256": "a0695f1aba85430cfda338e61db777f9f6a40cb23d355584c5136508b35d257d"
+    },
+    "atlas.png": {
+      "bytes": 550087,
+      "sha256": "05d192952e9c864b56110061e98de877cd3ca2ac43b330d4b4cdcb327d6dc1da"
+    },
+    "atlas.webp": {
+      "bytes": 416072,
+      "sha256": "36de754138f093bd3bb1fb1e2cc6d158ff14f5040f76dcd89e6dbeb779ed0272"
+    },
+    "atlas.json": {
+      "bytes": 7815,
+      "sha256": "d153237cef8aaa773a8bb2ae85489d347fcd288b618f31af1ab324d615425739"
+    }
+  }
+}

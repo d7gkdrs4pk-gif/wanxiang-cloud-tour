@@ -1,0 +1,31 @@
+{
+  "asset": "Original forest clearing ground backplate",
+  "creation": "Project-owned original artwork generated directly with OpenAI image_gen; not copied from RO Survivors or another game",
+  "generatorTool": "image_gen.imagegen",
+  "generationID": "exec-085cf089-630c-46a1-bc6f-80c22ceea57d",
+  "sourceFile": "forest-ground-source.png",
+  "runtimeFile": "forest-ground.webp",
+  "pixelDimensions": [
+    1254,
+    1254
+  ],
+  "recommendedWorldDimensions": [
+    1536,
+    1536
+  ],
+  "sourceResized": false,
+  "encoding": {
+    "runtimeFormat": "WebP lossless",
+    "method": 6,
+    "decodedRGBPixelIdenticalToSource": true
+  },
+  "sourceSHA256": "b24ecad8be24b467e664eef9ae2940e257c8c27c52b2c9d44c7ac1c74cf87a39",
+  "runtimeSHA256": "80f53295610078d8b843402dbabd44d7927f9757522d276acb759d4bebc1bf96",
+  "sourceBytes": 2638723,
+  "runtimeBytes": 1888350,
+  "camera": "Painted fixed orthographic oblique overhead, approximately55 degrees downward; no horizon/perspective convergence",
+  "lighting": "Baked terrain-only top-left warm daylight plus cool green/cyan offscreen leaf shadows; entity layers should follow the same direction",
+  "inspection": "Generated first, then inspected at its actual native size. Central playfield is quiet and open; no tree trunks/crowns, characters, buildings or UI. Shallow creek stays upper-right and never crosses the path.",
+  "navigation": "See ground-layout.json for suggested world polygon/spawn/path; no game code or collision modified",
+  "promptFile": "generation-prompt.txt"
+}

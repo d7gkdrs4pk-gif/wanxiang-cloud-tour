@@ -1,0 +1,484 @@
+{
+  "image": "atlas.webp",
+  "pngSource": "atlas.png",
+  "width": 1774,
+  "height": 887,
+  "layout": {
+    "columns": 4,
+    "rows": 2,
+    "xEdges": [
+      0,
+      444,
+      887,
+      1330,
+      1774
+    ],
+    "yEdges": [
+      0,
+      444,
+      887
+    ],
+    "note": "Native generation has 1px alternating cell width/height; use per-frame rect, not a hardcoded uniform integer cell."
+  },
+  "rectSpace": "absolute atlas pixels; anchor is relative to its rect",
+  "alphaMode": "straight RGBA",
+  "recommendedAlphaCutoff": 0.45,
+  "alphaNote": "ImageGen generated very-low-alpha coloured fringe; alpha-cutoff .45 removes the fringe in GPU sprites. Canvas uses original RGBA; do not apply additive or screen blend. Main painted pixels are mostly alpha 236–253.",
+  "camera": {
+    "projection": "orthographic illustration",
+    "downAngleDegrees": 55,
+    "light": "warm upper-left sunlight; cool lower-right self-shadows"
+  },
+  "frames": {
+    "broadleaf": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 444,
+        "h": 444
+      },
+      "anchor": {
+        "x": 226,
+        "y": 408
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 226,
+        "y": 408
+      },
+      "alphaBounds": {
+        "x": 50,
+        "y": 61,
+        "w": 363,
+        "h": 353
+      },
+      "recommendedWorldHeight": 320,
+      "recommendedScale": 0.906516,
+      "recommendedDrawSize": {
+        "w": 402.493,
+        "h": 402.493
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 329.065,
+        "h": 320
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "circle",
+        "radius": 22
+      },
+      "groundContacts": [
+        {
+          "x": 226,
+          "y": 408
+        }
+      ],
+      "occlusion": "foot-anchor depth sort; canopy crop may soften when actor overlaps, lower trunk stays opaque",
+      "layers": [
+        {
+          "name": "canopy",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 444,
+            "h": 328
+          },
+          "anchor": {
+            "x": 226,
+            "y": 408
+          },
+          "fadeEligible": true
+        },
+        {
+          "name": "trunk",
+          "rect": {
+            "x": 0,
+            "y": 328,
+            "w": 444,
+            "h": 116
+          },
+          "anchor": {
+            "x": 226,
+            "y": 80
+          },
+          "fadeEligible": false
+        }
+      ],
+      "layerNote": "Lossless non-overlapping source row crops; canopy includes its original upper branches/trunk. This is not a separately painted hidden-trunk reconstruction. Both crops share exactly one world foot-anchor."
+    },
+    "pine": {
+      "rect": {
+        "x": 444,
+        "y": 0,
+        "w": 443,
+        "h": 444
+      },
+      "anchor": {
+        "x": 225,
+        "y": 407
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 669,
+        "y": 407
+      },
+      "alphaBounds": {
+        "x": 48,
+        "y": 69,
+        "w": 356,
+        "h": 343
+      },
+      "recommendedWorldHeight": 310,
+      "recommendedScale": 0.90379,
+      "recommendedDrawSize": {
+        "w": 400.379,
+        "h": 401.283
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 321.749,
+        "h": 310
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "circle",
+        "radius": 20
+      },
+      "groundContacts": [
+        {
+          "x": 225,
+          "y": 407
+        }
+      ],
+      "occlusion": "foot-anchor depth sort; canopy crop may soften when actor overlaps, lower trunk stays opaque",
+      "layers": [
+        {
+          "name": "canopy",
+          "rect": {
+            "x": 444,
+            "y": 0,
+            "w": 443,
+            "h": 326
+          },
+          "anchor": {
+            "x": 225,
+            "y": 407
+          },
+          "fadeEligible": true
+        },
+        {
+          "name": "trunk",
+          "rect": {
+            "x": 444,
+            "y": 326,
+            "w": 443,
+            "h": 118
+          },
+          "anchor": {
+            "x": 225,
+            "y": 81
+          },
+          "fadeEligible": false
+        }
+      ],
+      "layerNote": "Lossless non-overlapping source row crops; canopy includes its original upper branches/trunk. This is not a separately painted hidden-trunk reconstruction. Both crops share exactly one world foot-anchor."
+    },
+    "stele": {
+      "rect": {
+        "x": 887,
+        "y": 0,
+        "w": 443,
+        "h": 444
+      },
+      "anchor": {
+        "x": 220,
+        "y": 412
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 1107,
+        "y": 412
+      },
+      "alphaBounds": {
+        "x": 97,
+        "y": 71,
+        "w": 243,
+        "h": 346
+      },
+      "recommendedWorldHeight": 100,
+      "recommendedScale": 0.289017,
+      "recommendedDrawSize": {
+        "w": 128.035,
+        "h": 128.324
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 70.231,
+        "h": 100
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "circle",
+        "radius": 19
+      },
+      "groundContacts": [
+        {
+          "x": 220,
+          "y": 412
+        }
+      ],
+      "occlusion": "solid depth-sorted prop"
+    },
+    "fern": {
+      "rect": {
+        "x": 1330,
+        "y": 0,
+        "w": 444,
+        "h": 444
+      },
+      "anchor": {
+        "x": 225,
+        "y": 404
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 1555,
+        "y": 404
+      },
+      "alphaBounds": {
+        "x": 39,
+        "y": 142,
+        "w": 353,
+        "h": 272
+      },
+      "recommendedWorldHeight": 80,
+      "recommendedScale": 0.294118,
+      "recommendedDrawSize": {
+        "w": 130.588,
+        "h": 130.588
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 103.824,
+        "h": 80
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "none",
+        "radius": 0
+      },
+      "groundContacts": [
+        {
+          "x": 225,
+          "y": 404
+        }
+      ],
+      "occlusion": "low decorative foot overlap"
+    },
+    "roots": {
+      "rect": {
+        "x": 0,
+        "y": 444,
+        "w": 444,
+        "h": 443
+      },
+      "anchor": {
+        "x": 225,
+        "y": 352
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 225,
+        "y": 796
+      },
+      "alphaBounds": {
+        "x": 47,
+        "y": 107,
+        "w": 360,
+        "h": 255
+      },
+      "recommendedWorldHeight": 100,
+      "recommendedScale": 0.392157,
+      "recommendedDrawSize": {
+        "w": 174.118,
+        "h": 173.725
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 141.176,
+        "h": 100
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "circle",
+        "radius": 24
+      },
+      "groundContacts": [
+        {
+          "x": 225,
+          "y": 352
+        }
+      ],
+      "occlusion": "solid depth-sorted prop"
+    },
+    "arch": {
+      "rect": {
+        "x": 444,
+        "y": 444,
+        "w": 443,
+        "h": 443
+      },
+      "anchor": {
+        "x": 229,
+        "y": 348
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 673,
+        "y": 792
+      },
+      "alphaBounds": {
+        "x": 34,
+        "y": 105,
+        "w": 391,
+        "h": 249
+      },
+      "recommendedWorldHeight": 118,
+      "recommendedScale": 0.473896,
+      "recommendedDrawSize": {
+        "w": 209.936,
+        "h": 209.936
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 185.293,
+        "h": 118
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "two-circles",
+        "localCentersWorld": [
+          {
+            "x": -60.185,
+            "y": -0.474,
+            "radius": 15
+          },
+          {
+            "x": 62.554,
+            "y": -0.948,
+            "radius": 15
+          }
+        ]
+      },
+      "groundContacts": [
+        {
+          "x": 102,
+          "y": 347
+        },
+        {
+          "x": 361,
+          "y": 346
+        }
+      ],
+      "occlusion": "depth-sorted timber; central arch opening stays transparent; collide only with two feet"
+    },
+    "rock": {
+      "rect": {
+        "x": 887,
+        "y": 444,
+        "w": 443,
+        "h": 443
+      },
+      "anchor": {
+        "x": 224,
+        "y": 352
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 1111,
+        "y": 796
+      },
+      "alphaBounds": {
+        "x": 54,
+        "y": 159,
+        "w": 342,
+        "h": 202
+      },
+      "recommendedWorldHeight": 60,
+      "recommendedScale": 0.29703,
+      "recommendedDrawSize": {
+        "w": 131.584,
+        "h": 131.584
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 101.584,
+        "h": 60
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "circle",
+        "radius": 21
+      },
+      "groundContacts": [
+        {
+          "x": 224,
+          "y": 352
+        }
+      ],
+      "occlusion": "solid depth-sorted prop"
+    },
+    "flowers": {
+      "rect": {
+        "x": 1330,
+        "y": 444,
+        "w": 444,
+        "h": 443
+      },
+      "anchor": {
+        "x": 225,
+        "y": 352
+      },
+      "anchorSpace": "cell local source pixels",
+      "atlasAnchor": {
+        "x": 1555,
+        "y": 796
+      },
+      "alphaBounds": {
+        "x": 53,
+        "y": 119,
+        "w": 330,
+        "h": 246
+      },
+      "recommendedWorldHeight": 58,
+      "recommendedScale": 0.235772,
+      "recommendedDrawSize": {
+        "w": 104.683,
+        "h": 104.447
+      },
+      "recommendedVisibleWorldSize": {
+        "w": 77.805,
+        "h": 58
+      },
+      "depthSort": "world foot-anchor Y, never sprite top",
+      "collision": {
+        "kind": "none",
+        "radius": 0
+      },
+      "groundContacts": [
+        {
+          "x": 225,
+          "y": 352
+        }
+      ],
+      "occlusion": "low decorative foot overlap"
+    }
+  },
+  "source": {
+    "kind": "original imagegen authored asset, not a game screenshot or licensed third-party sprite",
+    "generation": "2026-11-28",
+    "firstGeneration": "exec-87a1aee5-048c-446e-a76c-ac9df97ab312.png",
+    "registrationEdit": "exec-a161ab85-e5d4-4a64-adab-3c8abd6e093a.png",
+    "privateReferenceUsed": false,
+    "backgroundBaked": false,
+    "imageProcessing": "lossless WebP encoding only; source RGBA artwork/alpha unchanged"
+  },
+  "sha256": {
+    "atlas.png": "37c19a76bc6352cd0d9d54731276da749d7df7d708fff2e66ecc6d392d2d0f9c",
+    "atlas.webp": "2baeb1dd89882a8932e7dbd3693db7f00858c40b24d511a4c3d3ce5b3b71f7c1"
+  }
+}

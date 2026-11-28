@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "image": "atlas.webp",
+  "png": "atlas.png",
+  "width": 1024,
+  "height": 512,
+  "columns": 4,
+  "rows": 2,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "coordinates": "top-left source texture pixels; anchor and bounds are relative to its 256x256 cell",
+  "alpha": true,
+  "frames": [
+    {
+      "name": "seed-idle",
+      "x": 0,
+      "y": 0,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 25,
+        "y": 44,
+        "w": 207,
+        "h": 187
+      },
+      "facing": "down-left",
+      "pose": "idle",
+      "source": {
+        "cellRect": [
+          0,
+          0,
+          444,
+          444
+        ],
+        "trimRect": [
+          89,
+          118,
+          372,
+          373
+        ]
+      },
+      "sourceScale": 0.7392739273927392
+    },
+    {
+      "name": "moth-idle",
+      "x": 256,
+      "y": 0,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 256,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 25,
+        "y": 53,
+        "w": 205,
+        "h": 178
+      },
+      "facing": "down-left",
+      "pose": "idle",
+      "source": {
+        "cellRect": [
+          444,
+          0,
+          443,
+          444
+        ],
+        "trimRect": [
+          70,
+          91,
+          390,
+          369
+        ]
+      },
+      "sourceScale": 0.6463414634146342
+    },
+    {
+      "name": "shroom-idle",
+      "x": 512,
+      "y": 0,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 512,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 43,
+        "y": 68,
+        "w": 171,
+        "h": 163
+      },
+      "facing": "down-left",
+      "pose": "idle",
+      "source": {
+        "cellRect": [
+          887,
+          0,
+          443,
+          444
+        ],
+        "trimRect": [
+          82,
+          117,
+          353,
+          375
+        ]
+      },
+      "sourceScale": 0.64
+    },
+    {
+      "name": "boss-idle",
+      "x": 768,
+      "y": 0,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 29,
+        "y": 21,
+        "w": 198,
+        "h": 210
+      },
+      "facing": "down-left",
+      "pose": "idle",
+      "source": {
+        "cellRect": [
+          1330,
+          0,
+          444,
+          444
+        ],
+        "trimRect": [
+          61,
+          44,
+          385,
+          387
+        ]
+      },
+      "sourceScale": 0.6180758017492711
+    },
+    {
+      "name": "seed-attack",
+      "x": 0,
+      "y": 256,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 0,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 17,
+        "y": 40,
+        "w": 222,
+        "h": 191
+      },
+      "facing": "down-left",
+      "pose": "attack",
+      "source": {
+        "cellRect": [
+          0,
+          444,
+          444,
+          443
+        ],
+        "trimRect": [
+          82,
+          105,
+          385,
+          366
+        ]
+      },
+      "sourceScale": 0.7392739273927392
+    },
+    {
+      "name": "moth-attack",
+      "x": 256,
+      "y": 256,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 256,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 27,
+        "y": 21,
+        "w": 203,
+        "h": 210
+      },
+      "facing": "down-left",
+      "pose": "attack",
+      "source": {
+        "cellRect": [
+          444,
+          444,
+          443,
+          443
+        ],
+        "trimRect": [
+          67,
+          57,
+          384,
+          385
+        ]
+      },
+      "sourceScale": 0.6463414634146342
+    },
+    {
+      "name": "shroom-attack",
+      "x": 512,
+      "y": 256,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 512,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 17,
+        "y": 59,
+        "w": 222,
+        "h": 172
+      },
+      "facing": "down-left",
+      "pose": "attack",
+      "source": {
+        "cellRect": [
+          887,
+          444,
+          443,
+          443
+        ],
+        "trimRect": [
+          30,
+          91,
+          380,
+          363
+        ]
+      },
+      "sourceScale": 0.64
+    },
+    {
+      "name": "boss-attack",
+      "x": 768,
+      "y": 256,
+      "w": 256,
+      "h": 256,
+      "rect": {
+        "x": 768,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "anchor": {
+        "x": 128,
+        "y": 232
+      },
+      "bounds": {
+        "x": 19,
+        "y": 33,
+        "w": 217,
+        "h": 198
+      },
+      "facing": "down-left",
+      "pose": "attack",
+      "source": {
+        "cellRect": [
+          1330,
+          444,
+          444,
+          443
+        ],
+        "trimRect": [
+          39,
+          57,
+          393,
+          381
+        ]
+      },
+      "sourceScale": 0.6180758017492711
+    }
+  ],
+  "species": {
+    "seed": {
+      "idle": "seed-idle",
+      "attack": "seed-attack",
+      "nominalBodyHeightPixels": 187,
+      "recommendedVisibleHeightCSS": 50,
+      "recommendedCellDrawHeightCSS": 68.449,
+      "groundAnchor": {
+        "x": 128,
+        "y": 232
+      },
+      "mirrorForRight": true,
+      "flying": false,
+      "animationScaleRule": "Use one constant cell draw scale for both poses; do not normalize each frame independently."
+    },
+    "moth": {
+      "idle": "moth-idle",
+      "attack": "moth-attack",
+      "nominalBodyHeightPixels": 178,
+      "recommendedVisibleHeightCSS": 50,
+      "recommendedCellDrawHeightCSS": 71.91,
+      "groundAnchor": {
+        "x": 128,
+        "y": 232
+      },
+      "mirrorForRight": true,
+      "flying": true,
+      "animationScaleRule": "Use one constant cell draw scale for both poses; do not normalize each frame independently."
+    },
+    "shroom": {
+      "idle": "shroom-idle",
+      "attack": "shroom-attack",
+      "nominalBodyHeightPixels": 163,
+      "recommendedVisibleHeightCSS": 52,
+      "recommendedCellDrawHeightCSS": 81.669,
+      "groundAnchor": {
+        "x": 128,
+        "y": 232
+      },
+      "mirrorForRight": true,
+      "flying": false,
+      "animationScaleRule": "Use one constant cell draw scale for both poses; do not normalize each frame independently."
+    },
+    "boss": {
+      "idle": "boss-idle",
+      "attack": "boss-attack",
+      "nominalBodyHeightPixels": 210,
+      "recommendedVisibleHeightCSS": 120,
+      "recommendedCellDrawHeightCSS": 146.286,
+      "groundAnchor": {
+        "x": 128,
+        "y": 232
+      },
+      "mirrorForRight": true,
+      "flying": false,
+      "animationScaleRule": "Use one constant cell draw scale for both poses; do not normalize each frame independently."
+    }
+  },
+  "aliases": {
+    "seed-walk": "seed-attack",
+    "moth-walk": "moth-attack",
+    "shroom-walk": "shroom-attack",
+    "boss-walk": "boss-attack"
+  },
+  "source": "Original OpenAI ImageGen text-generated creature artwork, revised for safe margins and transparent cutouts. No third-party Ragnarok Online assets.",
+  "technicalProcessing": "Per-species constant-scale cell packing, near-zero alpha noise cleanup, lossless WebP conversion. No floor/shadow painted into sprites."
+}

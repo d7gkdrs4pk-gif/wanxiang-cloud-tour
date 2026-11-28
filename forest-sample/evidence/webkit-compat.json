@@ -1,0 +1,354 @@
+{
+  "environment": "Cloud Linux WebKit26.5/WPE software rendering, native touch emulation, 390x844 DPR2 and 844x390 DPR2",
+  "device": "NOT physical iPhone/WeChat",
+  "pauseResumeRestart": true,
+  "touchAttackWindupAndPulse": true,
+  "resize": true,
+  "measuredFPS": 16.247542171168373,
+  "snapshot": {
+    "version": "雾林试炼 F.1",
+    "ready": true,
+    "paused": true,
+    "viewport": [
+      390,
+      844
+    ],
+    "DPR": 2,
+    "zoom": 1,
+    "camera": {
+      "x": 768,
+      "y": 940
+    },
+    "phase": "play",
+    "time": 11.131000000000116,
+    "kills": 3,
+    "level": 1,
+    "player": {
+      "x": 768,
+      "y": 940,
+      "r": 15,
+      "hp": 100,
+      "maxHp": 100,
+      "level": 1,
+      "xp": 2,
+      "nextXp": 8,
+      "dirX": 0.8930711354337338,
+      "dirY": 0.44991548879217474,
+      "moving": false,
+      "attackT": 0.41766666666666663,
+      "attackPhase": "recover",
+      "attackDirX": 0.8930711354337338,
+      "attackDirY": 0.44991548879217474,
+      "attackCooldown": 0.6323333333333323,
+      "pulseT": 0,
+      "pulseCooldown": 0,
+      "invuln": 0,
+      "hurtT": 0,
+      "speed": 188,
+      "walkT": 0
+    },
+    "bossSpawned": false,
+    "boss": null,
+    "levelChoices": [],
+    "upgradeTitle": "",
+    "upgradeSource": null,
+    "chestOpened": false,
+    "cooldowns": {
+      "attack": 0.6323333333333323,
+      "pulse": 0,
+      "pulseMax": 8
+    },
+    "notice": null,
+    "result": null,
+    "seed": 15734582,
+    "rngState": 2223371277,
+    "world": {
+      "width": 1536,
+      "height": 1536
+    },
+    "stats": {
+      "damage": 2,
+      "interval": 1.05,
+      "range": 106,
+      "pulseDamage": 3,
+      "pulseRadius": 188,
+      "pulseInterval": 8,
+      "armor": 0,
+      "regen": 0,
+      "magnet": 124
+    },
+    "chestSpawned": false,
+    "enemies": [
+      {
+        "id": 13,
+        "type": "seed",
+        "name": "苔芽",
+        "x": 755.7116229811271,
+        "y": 744.4263714392287,
+        "r": 13,
+        "hp": 2,
+        "maxHp": 2,
+        "speed": 61,
+        "dirX": 0.06270882186350134,
+        "dirY": 0.9980318650526604,
+        "moving": true,
+        "mode": "chase",
+        "attackT": 0,
+        "attackCooldown": 0,
+        "hurtT": 0,
+        "spawnT": 0,
+        "animT": 3.4053190126990223,
+        "dead": false
+      },
+      {
+        "id": 20,
+        "type": "seed",
+        "name": "苔芽",
+        "x": 455.39908145996145,
+        "y": 637.8580126866116,
+        "r": 13,
+        "hp": 2,
+        "maxHp": 2,
+        "speed": 61,
+        "dirX": 0.7190330877356744,
+        "dirY": 0.6949758404011624,
+        "moving": true,
+        "mode": "chase",
+        "attackT": 0,
+        "attackCooldown": 0,
+        "hurtT": 0,
+        "spawnT": 0,
+        "animT": 4.60635501635509,
+        "dead": false
+      }
+    ],
+    "projectiles": [],
+    "drops": [
+      {
+        "id": 11,
+        "type": "xp",
+        "x": 749.6551773446992,
+        "y": 812.2773830136373,
+        "r": 6,
+        "amount": 2,
+        "value": 2,
+        "t": 3.2289999999999948,
+        "bob": 2.089517225396706
+      },
+      {
+        "id": 26,
+        "type": "xp",
+        "x": 882.7347409250896,
+        "y": 997.8015960841507,
+        "r": 6,
+        "amount": 2,
+        "value": 2,
+        "t": 0.2043333333333333,
+        "bob": 1.6823759355391852
+      }
+    ],
+    "effects": [
+      {
+        "id": 22,
+        "type": "slash",
+        "x": 768,
+        "y": 940,
+        "r": 106,
+        "t": 0.41766666666666663,
+        "duration": 0.56,
+        "dirX": 0.8930711354337338,
+        "dirY": 0.44991548879217474,
+        "angle": 0.46667070691873597,
+        "followPlayer": true,
+        "sounded": true
+      },
+      {
+        "id": 24,
+        "type": "impact",
+        "x": 869.3386738935835,
+        "y": 991.0528637522681,
+        "r": 21,
+        "t": 0.18766666666666665,
+        "duration": 0.2,
+        "enemyType": "seed",
+        "sounded": true
+      },
+      {
+        "id": 25,
+        "type": "death",
+        "x": 882.7347409250896,
+        "y": 997.8015960841507,
+        "r": 20.8,
+        "t": 0.18766666666666665,
+        "duration": 0.45,
+        "enemyType": "seed"
+      }
+    ],
+    "numbers": [
+      {
+        "id": 23,
+        "x": 869.3386738935835,
+        "y": 969.0528637522681,
+        "text": "2",
+        "color": "#fff0c9",
+        "t": 0.18766666666666665,
+        "duration": 0.72
+      }
+    ],
+    "obstacles": [
+      {
+        "x": 430,
+        "y": 480,
+        "r": 23
+      },
+      {
+        "x": 800,
+        "y": 470,
+        "r": 23
+      },
+      {
+        "x": 1240,
+        "y": 460,
+        "r": 23
+      },
+      {
+        "x": 1120,
+        "y": 680,
+        "r": 23
+      },
+      {
+        "x": 465,
+        "y": 800,
+        "r": 23
+      },
+      {
+        "x": 1055,
+        "y": 1000,
+        "r": 23
+      },
+      {
+        "x": 520,
+        "y": 1195,
+        "r": 23
+      },
+      {
+        "x": 1130,
+        "y": 1380,
+        "r": 23
+      },
+      {
+        "x": 265,
+        "y": 1355,
+        "r": 23
+      },
+      {
+        "x": 275,
+        "y": 390,
+        "r": 23
+      },
+      {
+        "x": 1395,
+        "y": 1080,
+        "r": 23
+      },
+      {
+        "x": 1385,
+        "y": 740,
+        "r": 23
+      },
+      {
+        "x": 631,
+        "y": 778,
+        "r": 20
+      },
+      {
+        "x": 950,
+        "y": 500,
+        "r": 18
+      },
+      {
+        "x": 357,
+        "y": 1030,
+        "r": 21
+      },
+      {
+        "x": 1095,
+        "y": 1210,
+        "r": 17
+      },
+      {
+        "x": 865,
+        "y": 1190,
+        "r": 17
+      },
+      {
+        "x": 1245,
+        "y": 560,
+        "r": 17
+      },
+      {
+        "x": 1050,
+        "y": 275,
+        "r": 21
+      },
+      {
+        "x": 1480,
+        "y": 80,
+        "r": 200
+      }
+    ],
+    "telemetry": {
+      "version": "雾林试炼 F.1",
+      "ready": true,
+      "errors": [],
+      "inputEvents": 2,
+      "assets": {
+        "hero": {
+          "width": 1448,
+          "height": 1086,
+          "frames": 12
+        },
+        "enemies": {
+          "width": 1024,
+          "height": 512,
+          "frames": 8
+        },
+        "heroExtra": {
+          "width": 1776,
+          "height": 888,
+          "frames": 8
+        },
+        "props": {
+          "width": 1774,
+          "height": 887,
+          "frames": 8
+        },
+        "ground": {
+          "width": 1254,
+          "height": 1254
+        }
+      },
+      "frames": null,
+      "occlusionFrames": 0,
+      "heroFrames": {
+        "idle-front": 228,
+        "windup-front": 2,
+        "attack-front": 9,
+        "windup-back": 4,
+        "attack-back": 9,
+        "idle-back": 10,
+        "windup-left": 4,
+        "attack-left": 8,
+        "idle-left": 31,
+        "windup-right": 3,
+        "attack-right": 7
+      },
+      "started": 172,
+      "language": "zh-CN",
+      "runStarted": 8011,
+      "loadedAt": 644
+    }
+  },
+  "errors": [],
+  "failed": []
+}

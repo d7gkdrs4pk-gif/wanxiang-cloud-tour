@@ -1,0 +1,1384 @@
+{
+  "scope": "CPU-only checks of unmodified production ForestRun; no browser/GPU; no direct writes to HP, coordinates, enemies or stats",
+  "source": {
+    "simulationSHA256": "7214e941a5ef51bf0872b235233e1d51b3497182097f7ad22a799d9c650d6a39",
+    "mainSHA256": "5676a693cedcac5c57ed3f5ea34730cca8cdaa33c1efbdc3fd83608fe23b1ef0"
+  },
+  "obstacleSource": "Extracted the actual const props mapping and extra circle from main.js restart()",
+  "obstacles": [
+    {
+      "x": 430,
+      "y": 480,
+      "r": 23
+    },
+    {
+      "x": 800,
+      "y": 470,
+      "r": 23
+    },
+    {
+      "x": 1240,
+      "y": 460,
+      "r": 23
+    },
+    {
+      "x": 1120,
+      "y": 680,
+      "r": 23
+    },
+    {
+      "x": 465,
+      "y": 800,
+      "r": 23
+    },
+    {
+      "x": 1055,
+      "y": 1000,
+      "r": 23
+    },
+    {
+      "x": 520,
+      "y": 1195,
+      "r": 23
+    },
+    {
+      "x": 1130,
+      "y": 1380,
+      "r": 23
+    },
+    {
+      "x": 265,
+      "y": 1355,
+      "r": 23
+    },
+    {
+      "x": 275,
+      "y": 390,
+      "r": 23
+    },
+    {
+      "x": 1395,
+      "y": 1080,
+      "r": 23
+    },
+    {
+      "x": 1385,
+      "y": 740,
+      "r": 23
+    },
+    {
+      "x": 631,
+      "y": 778,
+      "r": 20
+    },
+    {
+      "x": 950,
+      "y": 500,
+      "r": 18
+    },
+    {
+      "x": 357,
+      "y": 1030,
+      "r": 21
+    },
+    {
+      "x": 1095,
+      "y": 1210,
+      "r": 17
+    },
+    {
+      "x": 865,
+      "y": 1190,
+      "r": 17
+    },
+    {
+      "x": 1245,
+      "y": 560,
+      "r": 17
+    },
+    {
+      "x": 1050,
+      "y": 275,
+      "r": 21
+    },
+    {
+      "x": 1480,
+      "y": 80,
+      "r": 200
+    }
+  ],
+  "checks": [
+    {
+      "name": "same seed, inputs and public actions reproduce complete state",
+      "passed": true,
+      "wallMs": 80.32,
+      "inputFrames": 7200,
+      "checkpoints": [
+        {
+          "inputFrame": 0,
+          "phase": "play",
+          "time": 0.016666666666666666,
+          "stateSHA256": "1ccae899396c7820847ff22dab49de2b39c9fbd44172a621942bd9dfafb3f5e5"
+        },
+        {
+          "inputFrame": 600,
+          "phase": "play",
+          "time": 10.016666666666744,
+          "stateSHA256": "e0b3cd2bbb8b6af62c72b3800e1986ffd950375a2c1c052714037d174d24693b"
+        },
+        {
+          "inputFrame": 1200,
+          "phase": "play",
+          "time": 20.01666666666681,
+          "stateSHA256": "463d87e9a75bc9acd3c12ef8162c86a5fb1bf0421d7d798e7c82e2ff484f3085"
+        },
+        {
+          "inputFrame": 1800,
+          "phase": "play",
+          "time": 30.016666666666243,
+          "stateSHA256": "a7aff7bc1cdd1188b099a9ab194379842cd8af3a88ff667955a662d629529af0"
+        },
+        {
+          "inputFrame": 2400,
+          "phase": "play",
+          "time": 40.01666666666568,
+          "stateSHA256": "10b795072d2a4fd7b93e6ab0e1ca729229e9f8820f9e8f92b72cba6de8d6e723"
+        },
+        {
+          "inputFrame": 3000,
+          "phase": "play",
+          "time": 50.01666666666511,
+          "stateSHA256": "b1d56236c2ab0529aa16a052e3edff8d9bfd9e56c5a86c7e447486db572fc9fa"
+        },
+        {
+          "inputFrame": 3600,
+          "phase": "play",
+          "time": 60.01666666666454,
+          "stateSHA256": "eac5b0656feae0dcd9c7a867d94d7f6877c4335950df037c9a08d6727e2a28e1"
+        },
+        {
+          "inputFrame": 4200,
+          "phase": "play",
+          "time": 70.01666666666398,
+          "stateSHA256": "1a44bae8b47485d76d1f7eefd553530e53dd2675c609f6713022236460be36fb"
+        },
+        {
+          "inputFrame": 4800,
+          "phase": "play",
+          "time": 80.01666666666341,
+          "stateSHA256": "0f730680812879fa52ebf794e0b76014415322ca72d0f8354cc586e8ba93a97a"
+        },
+        {
+          "inputFrame": 5400,
+          "phase": "lost",
+          "time": 81.9166666666633,
+          "stateSHA256": "b01c905016505d9929ba382aabedb1922c54c849b119b3dab6d8be13d5628c4f"
+        },
+        {
+          "inputFrame": 6000,
+          "phase": "lost",
+          "time": 81.9166666666633,
+          "stateSHA256": "b01c905016505d9929ba382aabedb1922c54c849b119b3dab6d8be13d5628c4f"
+        },
+        {
+          "inputFrame": 6600,
+          "phase": "lost",
+          "time": 81.9166666666633,
+          "stateSHA256": "b01c905016505d9929ba382aabedb1922c54c849b119b3dab6d8be13d5628c4f"
+        }
+      ],
+      "finalPhase": "lost"
+    },
+    {
+      "name": "real twenty obstacles: random and deliberately blocked foot movement",
+      "passed": true,
+      "wallMs": 279.29,
+      "samples": 36000,
+      "minWorldClearance": 8.132666666650266,
+      "minRootClearance": 0.0005732141186527429,
+      "rootContacts": [
+        3,
+        2,
+        16,
+        7,
+        5,
+        12,
+        1,
+        4,
+        6,
+        8,
+        13,
+        15,
+        17
+      ],
+      "maxEnemies": 12,
+      "randomInputFrames": 12000,
+      "restarts": 2
+    },
+    {
+      "name": "natural melee windup: no damage before .22, damage after it",
+      "passed": true,
+      "wallMs": 1.75,
+      "attackStartTime": 7.191666666666814,
+      "pre": {
+        "time": 7.410666666666809,
+        "attackT": 0.219,
+        "kills": 0
+      },
+      "post": {
+        "time": 7.412666666666809,
+        "attackT": 0.221,
+        "kills": 0
+      },
+      "damaged": [
+        {
+          "id": 1,
+          "before": 4,
+          "after": 2
+        }
+      ],
+      "setup": "normal spawn, obstacles and approaching live enemy; no fixture/HP/position edits"
+    },
+    {
+      "name": "manual melee and pulse cannot bypass their cooldowns",
+      "passed": true,
+      "wallMs": 1.22,
+      "meleeInterval": 1.05,
+      "pulseInterval": 8,
+      "pulseRemainingBeforeEight": 0.010000000000000172,
+      "immediateRepeatRejected": true
+    },
+    {
+      "name": "upgrade freezes all simulation state and applies an actual offered card",
+      "passed": true,
+      "wallMs": 6.03,
+      "atTime": 6.883333333333314,
+      "choices": [
+        {
+          "id": "power",
+          "title": "锋芒",
+          "description": "近战与灵息伤害各加1",
+          "kind": "damage"
+        },
+        {
+          "id": "renew",
+          "title": "生息",
+          "description": "恢复32生命，并持续缓慢恢复",
+          "kind": "recovery"
+        },
+        {
+          "id": "guard",
+          "title": "护身",
+          "description": "受到伤害减少1，恢复16生命",
+          "kind": "armor"
+        }
+      ],
+      "selected": "power",
+      "fullSnapshotFrozen": true,
+      "publicActionsBlocked": true,
+      "phaseAfter": "play"
+    },
+    {
+      "name": "all six upgrade types apply their advertised stat changes",
+      "passed": true,
+      "wallMs": 33.99,
+      "covered": [
+        "flow",
+        "renew",
+        "power",
+        "guard",
+        "vitality",
+        "quick"
+      ],
+      "examples": [
+        {
+          "seed": 1,
+          "atTime": 7.383333333333312,
+          "offered": [
+            "flow",
+            "guard",
+            "renew"
+          ],
+          "selected": "flow",
+          "before": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          },
+          "after": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 152
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 206.8
+          }
+        },
+        {
+          "seed": 2,
+          "atTime": 11.183333333333469,
+          "offered": [
+            "flow",
+            "renew",
+            "vitality"
+          ],
+          "selected": "renew",
+          "before": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          },
+          "after": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0.55,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          }
+        },
+        {
+          "seed": 3,
+          "atTime": 7.616666666666645,
+          "offered": [
+            "power",
+            "flow",
+            "vitality"
+          ],
+          "selected": "power",
+          "before": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          },
+          "after": {
+            "stats": {
+              "damage": 3,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 4,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          }
+        },
+        {
+          "seed": 4,
+          "atTime": 7.416666666666646,
+          "offered": [
+            "guard",
+            "power",
+            "quick"
+          ],
+          "selected": "guard",
+          "before": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          },
+          "after": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 1,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          }
+        },
+        {
+          "seed": 7,
+          "atTime": 9.450000000000049,
+          "offered": [
+            "vitality",
+            "flow",
+            "renew"
+          ],
+          "selected": "vitality",
+          "before": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          },
+          "after": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 118,
+            "maxHp": 118,
+            "speed": 188
+          }
+        },
+        {
+          "seed": 8,
+          "atTime": 8.04999999999998,
+          "offered": [
+            "vitality",
+            "renew",
+            "quick"
+          ],
+          "selected": "quick",
+          "before": {
+            "stats": {
+              "damage": 2,
+              "interval": 1.05,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          },
+          "after": {
+            "stats": {
+              "damage": 2,
+              "interval": 0.8925,
+              "range": 106,
+              "pulseDamage": 3,
+              "pulseRadius": 188,
+              "pulseInterval": 8,
+              "armor": 0,
+              "regen": 0,
+              "magnet": 124
+            },
+            "hp": 100,
+            "maxHp": 100,
+            "speed": 188
+          }
+        }
+      ],
+      "setup": "all menus earned by input/XP; no direct level, XP, HP, stats or choices edits"
+    },
+    {
+      "name": "actual contact damage gives a real invulnerability window",
+      "passed": true,
+      "wallMs": 0.8,
+      "initialHit": {
+        "time": 3.3166666666666598,
+        "hp": 86,
+        "invuln": 0.85
+      },
+      "after": {
+        "time": 3.516666666666659,
+        "hp": 86,
+        "invuln": 0.6499999999999994
+      },
+      "genuineOverlaps": 8,
+      "setup": "input-only approach to a naturally spawned enemy"
+    },
+    {
+      "name": "public-API movement, XP collection and skills reach the actual boss ending",
+      "passed": true,
+      "wallMs": 149.91,
+      "runs": [
+        {
+          "seed": 15734582,
+          "phase": "won",
+          "time": 69.483,
+          "hp": 100,
+          "level": 5,
+          "kills": 50,
+          "bossAt": 54.01666666666488,
+          "boss": null,
+          "chestOpened": true,
+          "chestIds": [
+            114
+          ],
+          "counters": {
+            "manualAttacks": 0,
+            "pulses": 6,
+            "choices": 5,
+            "chestMenus": 1,
+            "bossWarnings": 4,
+            "bossCirclesAvoided": 4
+          },
+          "foot": {
+            "samples": 4169,
+            "minWorldClearance": 241.35975658783127,
+            "minRootClearance": 0.20631194190182356,
+            "rootContacts": [
+              5,
+              12
+            ],
+            "maxEnemies": 9
+          }
+        },
+        {
+          "seed": 36,
+          "phase": "won",
+          "time": 71.2,
+          "hp": 100,
+          "level": 6,
+          "kills": 51,
+          "bossAt": 54.01666666666488,
+          "boss": null,
+          "chestOpened": true,
+          "chestIds": [
+            116
+          ],
+          "counters": {
+            "manualAttacks": 0,
+            "pulses": 5,
+            "choices": 6,
+            "chestMenus": 1,
+            "bossWarnings": 5,
+            "bossCirclesAvoided": 5
+          },
+          "foot": {
+            "samples": 4272,
+            "minWorldClearance": 80.56528609336729,
+            "minRootClearance": 0.8204255093444175,
+            "rootContacts": [],
+            "maxEnemies": 8
+          }
+        },
+        {
+          "seed": 1827,
+          "phase": "won",
+          "time": 71.15,
+          "hp": 100,
+          "level": 6,
+          "kills": 47,
+          "bossAt": 54.01666666666488,
+          "boss": null,
+          "chestOpened": true,
+          "chestIds": [
+            115
+          ],
+          "counters": {
+            "manualAttacks": 0,
+            "pulses": 4,
+            "choices": 6,
+            "chestMenus": 1,
+            "bossWarnings": 5,
+            "bossCirclesAvoided": 5
+          },
+          "foot": {
+            "samples": 4269,
+            "minWorldClearance": 89.87177503292764,
+            "minRootClearance": 1.0550509864160205,
+            "rootContacts": [],
+            "maxEnemies": 7
+          }
+        }
+      ],
+      "strategy": "15Hz intent decisions: seek XP/health/one chest; approach boss to120; on windup retreat beyond202; legal direction steering from actual obstacles; use melee/pulse/choose public APIs only",
+      "stateCheats": false
+    },
+    {
+      "name": "restart clears the run and retains the exact environment",
+      "passed": true,
+      "wallMs": 37.16,
+      "previousPhase": "won",
+      "fullStateMatchesFreshSameSeed": true,
+      "obstaclesRetained": 20
+    }
+  ],
+  "publicGameplayRuns": [
+    {
+      "seed": 15734582,
+      "phase": "won",
+      "time": 69.483,
+      "hp": 100,
+      "level": 5,
+      "kills": 50,
+      "bossAt": 54.01666666666488,
+      "boss": null,
+      "chestOpened": true,
+      "chestIds": [
+        114
+      ],
+      "counters": {
+        "manualAttacks": 0,
+        "pulses": 6,
+        "choices": 5,
+        "chestMenus": 1,
+        "bossWarnings": 4,
+        "bossCirclesAvoided": 4
+      },
+      "choices": [
+        {
+          "time": 9.483,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 19.9,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 28.383,
+          "source": "chest",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 32.667,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 45.983,
+          "source": "level",
+          "choice": "quick",
+          "hpBefore": 100,
+          "hpAfter": 100
+        }
+      ],
+      "foot": {
+        "samples": 4169,
+        "minWorldClearance": 241.35975658783127,
+        "minRootClearance": 0.20631194190182356,
+        "rootContacts": [
+          5,
+          12
+        ],
+        "maxEnemies": 9
+      },
+      "trajectory": [
+        {
+          "time": 0.02,
+          "phase": "play",
+          "x": 768,
+          "y": 940,
+          "hp": 100,
+          "level": 1,
+          "kills": 0,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 5.02,
+          "phase": "play",
+          "x": 776.48,
+          "y": 830.57,
+          "hp": 100,
+          "level": 1,
+          "kills": 1,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 10,
+          "phase": "play",
+          "x": 1222.34,
+          "y": 1034.66,
+          "hp": 100,
+          "level": 2,
+          "kills": 4,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 15,
+          "phase": "play",
+          "x": 911.81,
+          "y": 1045.26,
+          "hp": 100,
+          "level": 2,
+          "kills": 6,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 20,
+          "phase": "play",
+          "x": 738.57,
+          "y": 682.01,
+          "hp": 100,
+          "level": 3,
+          "kills": 10,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 25.02,
+          "phase": "play",
+          "x": 719.18,
+          "y": 794.71,
+          "hp": 100,
+          "level": 3,
+          "kills": 13,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 30.02,
+          "phase": "play",
+          "x": 594.25,
+          "y": 736.22,
+          "hp": 100,
+          "level": 3,
+          "kills": 16,
+          "enemies": 3,
+          "bossHP": null
+        },
+        {
+          "time": 35.02,
+          "phase": "play",
+          "x": 1185.98,
+          "y": 450.54,
+          "hp": 100,
+          "level": 4,
+          "kills": 20,
+          "enemies": 4,
+          "bossHP": null
+        },
+        {
+          "time": 40.02,
+          "phase": "play",
+          "x": 734.36,
+          "y": 386.03,
+          "hp": 100,
+          "level": 4,
+          "kills": 25,
+          "enemies": 7,
+          "bossHP": null
+        },
+        {
+          "time": 45.02,
+          "phase": "play",
+          "x": 788.26,
+          "y": 355.54,
+          "hp": 100,
+          "level": 4,
+          "kills": 30,
+          "enemies": 8,
+          "bossHP": null
+        },
+        {
+          "time": 50.02,
+          "phase": "play",
+          "x": 620.49,
+          "y": 424.27,
+          "hp": 100,
+          "level": 5,
+          "kills": 36,
+          "enemies": 8,
+          "bossHP": null
+        },
+        {
+          "time": 55.02,
+          "phase": "play",
+          "x": 891.72,
+          "y": 587.57,
+          "hp": 100,
+          "level": 5,
+          "kills": 46,
+          "enemies": 4,
+          "bossHP": 90
+        },
+        {
+          "time": 60.02,
+          "phase": "play",
+          "x": 864.86,
+          "y": 684.03,
+          "hp": 100,
+          "level": 5,
+          "kills": 46,
+          "enemies": 4,
+          "bossHP": 66
+        },
+        {
+          "time": 65.02,
+          "phase": "play",
+          "x": 806.75,
+          "y": 708.76,
+          "hp": 100,
+          "level": 5,
+          "kills": 48,
+          "enemies": 2,
+          "bossHP": 35
+        }
+      ]
+    },
+    {
+      "seed": 36,
+      "phase": "won",
+      "time": 71.2,
+      "hp": 100,
+      "level": 6,
+      "kills": 51,
+      "bossAt": 54.01666666666488,
+      "boss": null,
+      "chestOpened": true,
+      "chestIds": [
+        116
+      ],
+      "counters": {
+        "manualAttacks": 0,
+        "pulses": 5,
+        "choices": 6,
+        "chestMenus": 1,
+        "bossWarnings": 5,
+        "bossCirclesAvoided": 5
+      },
+      "choices": [
+        {
+          "time": 6.883,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 16.733,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 28.367,
+          "source": "chest",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 29.617,
+          "source": "level",
+          "choice": "quick",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 42.783,
+          "source": "level",
+          "choice": "quick",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 53.467,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        }
+      ],
+      "foot": {
+        "samples": 4272,
+        "minWorldClearance": 80.56528609336729,
+        "minRootClearance": 0.8204255093444175,
+        "rootContacts": [],
+        "maxEnemies": 8
+      },
+      "trajectory": [
+        {
+          "time": 0.02,
+          "phase": "play",
+          "x": 768,
+          "y": 940,
+          "hp": 100,
+          "level": 1,
+          "kills": 0,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 5.02,
+          "phase": "play",
+          "x": 1053.19,
+          "y": 745.4,
+          "hp": 100,
+          "level": 1,
+          "kills": 1,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 10,
+          "phase": "play",
+          "x": 1018.23,
+          "y": 1045.09,
+          "hp": 100,
+          "level": 2,
+          "kills": 4,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 15,
+          "phase": "play",
+          "x": 1439.02,
+          "y": 891.19,
+          "hp": 100,
+          "level": 2,
+          "kills": 7,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 20,
+          "phase": "play",
+          "x": 1303.11,
+          "y": 662.9,
+          "hp": 100,
+          "level": 3,
+          "kills": 10,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 25.02,
+          "phase": "play",
+          "x": 1006.69,
+          "y": 359.91,
+          "hp": 100,
+          "level": 3,
+          "kills": 13,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 30.02,
+          "phase": "play",
+          "x": 1005.72,
+          "y": 419.15,
+          "hp": 100,
+          "level": 4,
+          "kills": 16,
+          "enemies": 3,
+          "bossHP": null
+        },
+        {
+          "time": 35.02,
+          "phase": "play",
+          "x": 972.65,
+          "y": 474.42,
+          "hp": 100,
+          "level": 4,
+          "kills": 20,
+          "enemies": 4,
+          "bossHP": null
+        },
+        {
+          "time": 40.02,
+          "phase": "play",
+          "x": 1081.19,
+          "y": 439.09,
+          "hp": 100,
+          "level": 4,
+          "kills": 25,
+          "enemies": 7,
+          "bossHP": null
+        },
+        {
+          "time": 45.02,
+          "phase": "play",
+          "x": 954.46,
+          "y": 164.88,
+          "hp": 100,
+          "level": 5,
+          "kills": 32,
+          "enemies": 6,
+          "bossHP": null
+        },
+        {
+          "time": 50.02,
+          "phase": "play",
+          "x": 1059.9,
+          "y": 408.64,
+          "hp": 100,
+          "level": 5,
+          "kills": 37,
+          "enemies": 7,
+          "bossHP": null
+        },
+        {
+          "time": 55.02,
+          "phase": "play",
+          "x": 883.34,
+          "y": 230.97,
+          "hp": 100,
+          "level": 6,
+          "kills": 47,
+          "enemies": 4,
+          "bossHP": 90
+        },
+        {
+          "time": 60.02,
+          "phase": "play",
+          "x": 758.36,
+          "y": 462.32,
+          "hp": 100,
+          "level": 6,
+          "kills": 50,
+          "enemies": 1,
+          "bossHP": 65
+        },
+        {
+          "time": 65.02,
+          "phase": "play",
+          "x": 732.63,
+          "y": 513.15,
+          "hp": 100,
+          "level": 6,
+          "kills": 50,
+          "enemies": 1,
+          "bossHP": 41
+        },
+        {
+          "time": 70.02,
+          "phase": "play",
+          "x": 785.12,
+          "y": 741.56,
+          "hp": 100,
+          "level": 6,
+          "kills": 50,
+          "enemies": 1,
+          "bossHP": 4
+        }
+      ]
+    },
+    {
+      "seed": 1827,
+      "phase": "won",
+      "time": 71.15,
+      "hp": 100,
+      "level": 6,
+      "kills": 47,
+      "bossAt": 54.01666666666488,
+      "boss": null,
+      "chestOpened": true,
+      "chestIds": [
+        115
+      ],
+      "counters": {
+        "manualAttacks": 0,
+        "pulses": 4,
+        "choices": 6,
+        "chestMenus": 1,
+        "bossWarnings": 5,
+        "bossCirclesAvoided": 5
+      },
+      "choices": [
+        {
+          "time": 8.117,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 19.6,
+          "source": "level",
+          "choice": "quick",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 28.4,
+          "source": "chest",
+          "choice": "quick",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 30.45,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 42.383,
+          "source": "level",
+          "choice": "quick",
+          "hpBefore": 100,
+          "hpAfter": 100
+        },
+        {
+          "time": 60.267,
+          "source": "level",
+          "choice": "power",
+          "hpBefore": 90,
+          "hpAfter": 90
+        }
+      ],
+      "foot": {
+        "samples": 4269,
+        "minWorldClearance": 89.87177503292764,
+        "minRootClearance": 1.0550509864160205,
+        "rootContacts": [],
+        "maxEnemies": 7
+      },
+      "trajectory": [
+        {
+          "time": 0.02,
+          "phase": "play",
+          "x": 768,
+          "y": 940,
+          "hp": 100,
+          "level": 1,
+          "kills": 0,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 5.02,
+          "phase": "play",
+          "x": 871.11,
+          "y": 748.02,
+          "hp": 100,
+          "level": 1,
+          "kills": 1,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 10,
+          "phase": "play",
+          "x": 549.8,
+          "y": 917.96,
+          "hp": 100,
+          "level": 2,
+          "kills": 4,
+          "enemies": 0,
+          "bossHP": null
+        },
+        {
+          "time": 15,
+          "phase": "play",
+          "x": 879.65,
+          "y": 1408.98,
+          "hp": 100,
+          "level": 2,
+          "kills": 6,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 20,
+          "phase": "play",
+          "x": 809.15,
+          "y": 1091.64,
+          "hp": 100,
+          "level": 3,
+          "kills": 9,
+          "enemies": 2,
+          "bossHP": null
+        },
+        {
+          "time": 25.02,
+          "phase": "play",
+          "x": 931.91,
+          "y": 940.93,
+          "hp": 100,
+          "level": 3,
+          "kills": 13,
+          "enemies": 1,
+          "bossHP": null
+        },
+        {
+          "time": 30.02,
+          "phase": "play",
+          "x": 1158.96,
+          "y": 931.31,
+          "hp": 100,
+          "level": 3,
+          "kills": 15,
+          "enemies": 3,
+          "bossHP": null
+        },
+        {
+          "time": 35.02,
+          "phase": "play",
+          "x": 893.62,
+          "y": 839.48,
+          "hp": 100,
+          "level": 4,
+          "kills": 20,
+          "enemies": 2,
+          "bossHP": null
+        },
+        {
+          "time": 40.02,
+          "phase": "play",
+          "x": 400.92,
+          "y": 793.33,
+          "hp": 100,
+          "level": 4,
+          "kills": 25,
+          "enemies": 3,
+          "bossHP": null
+        },
+        {
+          "time": 45.02,
+          "phase": "play",
+          "x": 612.31,
+          "y": 1158.78,
+          "hp": 100,
+          "level": 5,
+          "kills": 30,
+          "enemies": 5,
+          "bossHP": null
+        },
+        {
+          "time": 50.02,
+          "phase": "play",
+          "x": 667.95,
+          "y": 907.13,
+          "hp": 100,
+          "level": 5,
+          "kills": 35,
+          "enemies": 4,
+          "bossHP": null
+        },
+        {
+          "time": 55.02,
+          "phase": "play",
+          "x": 805.92,
+          "y": 1168.1,
+          "hp": 100,
+          "level": 5,
+          "kills": 42,
+          "enemies": 5,
+          "bossHP": 90
+        },
+        {
+          "time": 60.02,
+          "phase": "play",
+          "x": 789.03,
+          "y": 1008.75,
+          "hp": 90,
+          "level": 5,
+          "kills": 46,
+          "enemies": 1,
+          "bossHP": 74
+        },
+        {
+          "time": 65.02,
+          "phase": "play",
+          "x": 803.09,
+          "y": 939.74,
+          "hp": 100,
+          "level": 6,
+          "kills": 46,
+          "enemies": 1,
+          "bossHP": 43
+        },
+        {
+          "time": 70.02,
+          "phase": "play",
+          "x": 831.97,
+          "y": 685.78,
+          "hp": 100,
+          "level": 6,
+          "kills": 46,
+          "enemies": 1,
+          "bossHP": 2
+        }
+      ]
+    }
+  ],
+  "productionSimulationUnchanged": true,
+  "wallMs": 593.87,
+  "passed": true
+}

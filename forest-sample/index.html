@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#142c2a">
+<title>雾林试炼 · 森林样关</title>
+<link rel="stylesheet" href="style.css?v=f1">
+</head>
+<body>
+<canvas id="scene" aria-label="雾林试炼可操作游戏场景"></canvas>
+<header id="hud" aria-label="玩家状态">
+ <div class="head-row"><div class="crest" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 21 11 29 15 21 18 16 29 11 18 3 15 11 11Z"/><path d="M16 9V22M10 15H22"/></svg></div><div class="identity"><span class="chapter">林海初境</span><h1>雾林试炼<span id="level">壹阶</span></h1></div><div class="timer"><span id="clock">00:00</span><small id="kills">斩妖 0</small></div><button id="pause" class="icon-button" aria-label="暂停游戏"><svg viewBox="0 0 24 24"><path d="M8 5V19M16 5V19"/></svg></button></div>
+ <div class="vitals"><div class="hp-track"><i id="hp-fill"></i><span id="hp-text">100 / 100</span></div><div class="xp-track"><i id="xp-fill"></i></div><span class="xp-label">修为</span></div>
+</header>
+<div id="boss" hidden><div><b>古木灵鹿</b><small>林海守护者</small></div><div class="boss-track"><i id="boss-fill"></i></div></div>
+<div id="objective"><span class="ornament">◆</span><span id="objective-text">循着古径，破除林间封印</span><span class="ornament">◆</span></div>
+<div id="notice" role="status"></div>
+<div id="controls">
+ <div id="joystick" aria-label="按住并拖动移动角色"><div class="joy-rim"></div><div id="joy-knob"><svg viewBox="0 0 30 30"><path d="M15 5 19 12 25 15 19 18 15 25 11 18 5 15 11 12Z"/></svg></div><span>移动</span></div>
+ <div class="skills"><button id="pulse" class="skill pulse" aria-label="施放清霜破范围技能"><svg viewBox="0 0 48 48"><path d="M24 3V45M5.8 13.5 42.2 34.5M5.8 34.5 42.2 13.5M17 7 24 13 31 7M17 41 24 35 31 41M7 19 15 19 12 11M41 29 33 29 36 37M7 29 15 29 12 37M41 19 33 19 36 11"/></svg><span>清霜破</span><i id="pulse-cd"></i></button><button id="attack" class="skill attack" aria-label="挥剑攻击"><svg viewBox="0 0 48 48"><path class="blade" d="M13 33 35 5 40 6 39 12 18 36Z"/><path d="M9 28 23 41M15 35 7 43M9 40 12 43"/></svg><span>拔剑</span></button></div>
+</div>
+<div id="hint">左侧移动 · 右侧出剑<br><small>靠近妖物时，剑招会自动施放</small></div>
+<section id="choice-panel" class="modal" hidden aria-label="选择修为提升"><div class="choice-wrap"><small class="eyebrow">林间有灵 · 助君前行</small><h2 id="choice-title">林间赐福</h2><p>择一修行，即刻生效</p><div id="choices"></div></div></section>
+<section id="pause-panel" class="modal" hidden><div class="paper"><small class="eyebrow">且听风吟</small><h2>暂歇片刻</h2><p>左侧拖动走位，右侧按钮出剑或施法。<br>拾取灵光提升修为，击败古木灵鹿。</p><button id="resume" class="primary">继续试炼</button><button id="restart-pause" class="secondary">重新开始</button></div></section>
+<section id="result-panel" class="modal" hidden><div class="paper"><small class="eyebrow">雾林试炼 · 壹</small><h2 id="result-title">林海复明</h2><p id="result-copy"></p><div id="result-stats"></div><button id="restart" class="primary">再入林海</button></div></section>
+<section id="loading"><div><svg class="loading-mark" viewBox="0 0 48 48"><path d="M24 3 30 17 45 24 30 30 24 45 18 30 3 24 18 17Z"/></svg><p class="eyebrow">林海初境</p><h2>雾林试炼</h2><p id="load-status">正在铺开林间古径…</p><div class="load-track"><i id="load-progress"></i></div><button id="retry" class="secondary" hidden>重新载入</button></div></section>
+<script type="module" src="main.js?v=f1"></script>
+</body></html>

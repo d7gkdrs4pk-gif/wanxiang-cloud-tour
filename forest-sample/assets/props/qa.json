@@ -1,0 +1,108 @@
+{
+  "pngWebpRGBAIdentical": true,
+  "dimensions": [
+    1774,
+    887
+  ],
+  "transparentPixels": 960334,
+  "veryLowAlphaPixels1to6": 143756,
+  "frameReports": [
+    {
+      "name": "broadleaf",
+      "safeMarginsPxAtAlpha128": [
+        50,
+        61,
+        31,
+        30
+      ],
+      "paintClipped": false,
+      "layerRegistrationExact": true
+    },
+    {
+      "name": "pine",
+      "safeMarginsPxAtAlpha128": [
+        48,
+        69,
+        39,
+        32
+      ],
+      "paintClipped": false,
+      "layerRegistrationExact": true
+    },
+    {
+      "name": "stele",
+      "safeMarginsPxAtAlpha128": [
+        97,
+        71,
+        103,
+        27
+      ],
+      "paintClipped": false
+    },
+    {
+      "name": "fern",
+      "safeMarginsPxAtAlpha128": [
+        39,
+        142,
+        52,
+        30
+      ],
+      "paintClipped": false
+    },
+    {
+      "name": "roots",
+      "safeMarginsPxAtAlpha128": [
+        47,
+        107,
+        37,
+        81
+      ],
+      "paintClipped": false
+    },
+    {
+      "name": "arch",
+      "safeMarginsPxAtAlpha128": [
+        34,
+        105,
+        18,
+        89
+      ],
+      "paintClipped": false
+    },
+    {
+      "name": "rock",
+      "safeMarginsPxAtAlpha128": [
+        54,
+        159,
+        47,
+        82
+      ],
+      "paintClipped": false
+    },
+    {
+      "name": "flowers",
+      "safeMarginsPxAtAlpha128": [
+        53,
+        119,
+        61,
+        78
+      ],
+      "paintClipped": false
+    }
+  ],
+  "archOpeningSourcePixel": {
+    "local": [
+      228,
+      300
+    ],
+    "rgba": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "independentReview": "bark_source visually confirmed 8 complete props, no cross-cell silhouettes; visible neon fringe is alpha1\u20136",
+  "layerScope": "Two tree layers are actual source-row crop rectangles sharing an exact foot-anchor, not separately redrawn hidden branches. True actor/environment depth sorting must be performed by runtime.",
+  "gpuOrGameplayTestPerformed": false
+}

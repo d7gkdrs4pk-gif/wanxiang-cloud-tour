@@ -1,0 +1,22 @@
+{
+  "asset": "Original forest enemy and ancient stag boss sprite atlas",
+  "date": "2026-11-28",
+  "creationTool": "OpenAI image_gen__imagegen",
+  "creationMethod": "Original text-to-image 4x2 creature sheet, same-tool edit for complete antler/limb margins, same-tool cutout edit for true transparent background.",
+  "thirdPartyGameAssets": false,
+  "RagnarokOnlineAssets": false,
+  "externalArtworkDownloads": false,
+  "sourceBrief": "Cool jade/moss daytime forest, upper-left warm-gold light, 45 degree three-quarter top-down Japanese hand-painted volumetric RPG creatures. Ochre moss-armour beast; violet/indigo thorn moth; blue-grey mushroom mage; ancient tree-antler stag boss. Each idle and attack.",
+  "sourceGeneratedFile": "exec-d9f5dadc-45b1-4c88-a133-0e1fcfeba6a2.png",
+  "sourceSHA256": "a0695f1aba85430cfda338e61db777f9f6a40cb23d355584c5136508b35d257d",
+  "technicalProcessing": "Pillow crop and constant per-species cell scale; low-alpha noise cleanup; lossless WebP packing. No design repaint, gameplay code, or background plane.",
+  "runtimeFiles": [
+    "atlas.webp",
+    "atlas.json"
+  ],
+  "sourceFiles": [
+    "source.png",
+    "atlas.png",
+    "build-atlas.py"
+  ]
+}

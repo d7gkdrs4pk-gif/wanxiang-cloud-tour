@@ -1,0 +1,74 @@
+{
+  "asset": "Forest sample original male swordsman direction/state atlas",
+  "createdUTC": "2026-11-28",
+  "tool": "OpenAI image_gen.imagegen",
+  "exactModelIdentifier": "not exposed by tool",
+  "generationId": "exec-73492736-ccd7-432e-844c-c8f6626a7890",
+  "originalGeneratedFile": "/workspace/generated_images/exec-73492736-ccd7-432e-844c-c8f6626a7890.png",
+  "sourceImage": "atlas.png",
+  "runtimeImage": "atlas.webp",
+  "transparentBackgroundRequested": true,
+  "referencesProvided": [],
+  "thirdPartyGameAssetsUsed": false,
+  "ROAssetsUsed": false,
+  "authorship": "New image generation from this project’s original character specification. No downloaded sprites, game screenshots or existing character images were supplied.",
+  "designBrief": "Adult male hand-painted miniature 2.5D RPG swordsman; ink-black tied hair; ivory cross-collar tunic, indigo narrow sleeves and split coat; short crimson cape and sash; dark boots; independent readable right-hand longsword; warm upper-left daylight and cool teal shadow. Front/back/left/right columns; idle/walk/contact-slash rows; no scenery or ground shadows.",
+  "requestedLayout": {
+    "columns": 4,
+    "rows": 3,
+    "preferredPixels": [
+      1536,
+      1152
+    ]
+  },
+  "actualLayout": {
+    "pixels": [
+      1448,
+      1086
+    ],
+    "cellPixels": [
+      362,
+      362
+    ],
+    "columns": 4,
+    "rows": 3
+  },
+  "technicalProcessing": [
+    "Copied original PNG unchanged into atlas.png.",
+    "Encoded RGBA-identical lossless WebP with exact=True; no repaint, retouch, alpha cleanup or per-frame scale changes.",
+    "Measured visible alpha bounds at threshold32 because near-transparent generation-edge pixels exist.",
+    "Reviewed individual feet/stance and stored pixel anchors inside each unchanged cell.",
+    "Made an explicitly diagnostic 62px contact sheet on a flat forest-colored background; not a game capture."
+  ],
+  "frameKind": "12 direction/state keyposes, not a complete inbetweened animation sequence",
+  "referenceHeightPixels": 314,
+  "recommendedCSSBodyHeight": 62,
+  "losslessRGBAExact": true,
+  "files": [
+    {
+      "name": "atlas.png",
+      "bytes": 1386202,
+      "sha256": "1b351c70547d051c8f7e9093a0a1ca22d3e857dc2dd6f7a6824fdda2c8ecf131"
+    },
+    {
+      "name": "atlas.webp",
+      "bytes": 848750,
+      "sha256": "5d74d1558f2c56eea00b96aa285ca94229a4e2b6bf5ace40da717332af65b84f"
+    },
+    {
+      "name": "atlas.json",
+      "bytes": 5872,
+      "sha256": "700e5a39b3947157b636fa7bebb6c28a70dee72359f592a74dc8158f9d9b1ea8"
+    },
+    {
+      "name": "build-atlas.py",
+      "bytes": 3541,
+      "sha256": "fea3b5bfb5c1beb8c12a5e28b06288573b9cdde92567d8af20895f21bd9173d2"
+    },
+    {
+      "name": "preview-62px.png",
+      "bytes": 44909,
+      "sha256": "225381b63200997eeccd0fb41bd88750fee50366d728be9dd4f93dec79865239"
+    }
+  ]
+}
