@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:3000/forest-sample/?v=f1",
+  "environment": "Cloud Chromium CPU Canvas2D phone touch emulation",
+  "blockedDependency": "simulation.js HTTP503",
+  "retryVisibleSeconds": 0.1959596109991253,
+  "actualTouchRetry": true,
+  "restoredReady": true,
+  "errorsAfterReload": []
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 390,
+        "height": 844,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "21.960000"
+    },
+    "file": "touch-play-22s.mp4",
+    "source": "actual production URL native CDP touch recording",
+    "clipStart": 1.4558725580009195,
+    "timeScaleChanged": false,
+    "interpolatedFrames": false,
+    "measuredActiveGameFPS": 59.82238291512,
+    "encodingFPSIsNotGameFPS": true,
+    "audioTrack": "browser screen recorder does not capture system audio",
+    "bytes": 3892129,
+    "SHA256": "a6b6cb6c437196795a3c3a73ef233ee0cca8dd5435c278fe0d9b7b72c5c1f9fc"
+  },
+  {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 390,
+        "height": 844,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "15.960000"
+    },
+    "file": "boss-play-16s.mp4",
+    "source": "actual production URL native CDP touch recording",
+    "clipStart": 68.32352247000017,
+    "timeScaleChanged": false,
+    "interpolatedFrames": false,
+    "measuredActiveGameFPS": 59.82238291512,
+    "encodingFPSIsNotGameFPS": true,
+    "audioTrack": "browser screen recorder does not capture system audio",
+    "bytes": 4288568,
+    "SHA256": "f798b73c16ff35af70b74273925a31b1fe1ffaa849db937ae35c4ea9d3429414"
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "sourceCommit": "f8de685",
+  "runtimeFiles": [
+    {
+      "path": "index.html",
+      "bytes": 4276,
+      "SHA256": "7fc4539440db4e6e3a176201ecd64e2a32a4e7f69e521d79d72e85145181efe0",
+      "matches": true
+    },
+    {
+      "path": "style.css",
+      "bytes": 10979,
+      "SHA256": "30ce97fc26a79e98eeb16626421b89fabbe0502ef63a015583665d57b0729d1f",
+      "matches": true
+    },
+    {
+      "path": "main.js",
+      "bytes": 22921,
+      "SHA256": "991c22e06fdaefce44e82217bcddfcfa748b000dbb8e092160d674f5e2a9e98f",
+      "matches": true
+    },
+    {
+      "path": "simulation.js",
+      "bytes": 20536,
+      "SHA256": "7214e941a5ef51bf0872b235233e1d51b3497182097f7ad22a799d9c650d6a39",
+      "matches": true
+    },
+    {
+      "path": "assets/ground/forest-ground.webp",
+      "bytes": 1888350,
+      "SHA256": "80f53295610078d8b843402dbabd44d7927f9757522d276acb759d4bebc1bf96",
+      "matches": true
+    },
+    {
+      "path": "assets/hero/atlas.webp",
+      "bytes": 848750,
+      "SHA256": "5d74d1558f2c56eea00b96aa285ca94229a4e2b6bf5ace40da717332af65b84f",
+      "matches": true
+    },
+    {
+      "path": "assets/hero/atlas.json",
+      "bytes": 5872,
+      "SHA256": "700e5a39b3947157b636fa7bebb6c28a70dee72359f592a74dc8158f9d9b1ea8",
+      "matches": true
+    },
+    {
+      "path": "assets/hero/supplement.webp",
+      "bytes": 823162,
+      "SHA256": "592e22a72ac250a4e088bc87faa42d2a252252bde9b46fe1feabfaa9755cd761",
+      "matches": true
+    },
+    {
+      "path": "assets/hero/supplement.json",
+      "bytes": 5091,
+      "SHA256": "54f5cb225bdd025af58cd4db4d8f246d1c379e6f36618177785c84ccc361cb74",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/atlas.webp",
+      "bytes": 416072,
+      "SHA256": "36de754138f093bd3bb1fb1e2cc6d158ff14f5040f76dcd89e6dbeb779ed0272",
+      "matches": true
+    },
+    {
+      "path": "assets/enemies/atlas.json",
+      "bytes": 7815,
+      "SHA256": "d153237cef8aaa773a8bb2ae85489d347fcd288b618f31af1ab324d615425739",
+      "matches": true
+    },
+    {
+      "path": "assets/props/atlas.webp",
+      "bytes": 1118036,
+      "SHA256": "2baeb1dd89882a8932e7dbd3693db7f00858c40b24d511a4c3d3ce5b3b71f7c1",
+      "matches": true
+    },
+    {
+      "path": "assets/props/atlas.json",
+      "bytes": 11013,
+      "SHA256": "60790bc8463b1956a500148e4390c38b096a347f9a215bba3fa34efd1589251a",
+      "matches": true
+    }
+  ]
+}

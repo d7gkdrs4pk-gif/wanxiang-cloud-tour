@@ -1,0 +1,77 @@
+{
+  "url": "https://wanxiang-cloud-tour.pages.dev/forest-sample/?v=f1",
+  "environment": "Cloud Chromium CPU Canvas2D native touchscreen,390x844 DPR1",
+  "input": "native CDP touch joystick, no position/stat edits",
+  "inside": {
+    "p": {
+      "x": 963.3111111111139,
+      "y": 940,
+      "r": 15,
+      "hp": 100,
+      "maxHp": 100,
+      "level": 1,
+      "xp": 0,
+      "nextXp": 8,
+      "dirX": 0.9444444444444444,
+      "dirY": 0,
+      "moving": false,
+      "attackT": -1,
+      "attackPhase": "idle",
+      "attackDirX": 0,
+      "attackDirY": -1,
+      "attackCooldown": 0,
+      "pulseT": 0,
+      "pulseCooldown": 0,
+      "invuln": 0,
+      "hurtT": 0,
+      "speed": 188,
+      "walkT": 1.1
+    },
+    "tree": {
+      "id": 5,
+      "type": "pine",
+      "x": 1055,
+      "y": 1000,
+      "h": 300,
+      "fade": 0.36011628708276655,
+      "r": 23
+    }
+  },
+  "outside": {
+    "p": {
+      "x": 963.3111111111139,
+      "y": 1102.7474222222206,
+      "r": 15,
+      "hp": 100,
+      "maxHp": 100,
+      "level": 1,
+      "xp": 0,
+      "nextXp": 8,
+      "dirX": 0,
+      "dirY": 0.9444444444444444,
+      "moving": false,
+      "attackT": -1,
+      "attackPhase": "idle",
+      "attackDirX": 0,
+      "attackDirY": -1,
+      "attackCooldown": 0,
+      "pulseT": 0,
+      "pulseCooldown": 0,
+      "invuln": 0,
+      "hurtT": 0,
+      "speed": 188,
+      "walkT": 2.0165999999999973
+    },
+    "tree": {
+      "id": 5,
+      "type": "pine",
+      "x": 1055,
+      "y": 1000,
+      "h": 300,
+      "fade": 0.9999805333743148,
+      "r": 23
+    }
+  },
+  "partialCanopyFade": true,
+  "fullOpacityRestored": true
+}

@@ -2,7 +2,7 @@
   "scope": "CPU-only checks of unmodified production ForestRun; no browser/GPU; no direct writes to HP, coordinates, enemies or stats",
   "source": {
     "simulationSHA256": "7214e941a5ef51bf0872b235233e1d51b3497182097f7ad22a799d9c650d6a39",
-    "mainSHA256": "5676a693cedcac5c57ed3f5ea34730cca8cdaa33c1efbdc3fd83608fe23b1ef0"
+    "mainSHA256": "991c22e06fdaefce44e82217bcddfcfa748b000dbb8e092160d674f5e2a9e98f"
   },
   "obstacleSource": "Extracted the actual const props mapping and extra circle from main.js restart()",
   "obstacles": [
@@ -111,7 +111,7 @@
     {
       "name": "same seed, inputs and public actions reproduce complete state",
       "passed": true,
-      "wallMs": 80.32,
+      "wallMs": 86.65,
       "inputFrames": 7200,
       "checkpoints": [
         {
@@ -192,7 +192,7 @@
     {
       "name": "real twenty obstacles: random and deliberately blocked foot movement",
       "passed": true,
-      "wallMs": 279.29,
+      "wallMs": 273.44,
       "samples": 36000,
       "minWorldClearance": 8.132666666650266,
       "minRootClearance": 0.0005732141186527429,
@@ -218,7 +218,7 @@
     {
       "name": "natural melee windup: no damage before .22, damage after it",
       "passed": true,
-      "wallMs": 1.75,
+      "wallMs": 2.5,
       "attackStartTime": 7.191666666666814,
       "pre": {
         "time": 7.410666666666809,
@@ -242,7 +242,7 @@
     {
       "name": "manual melee and pulse cannot bypass their cooldowns",
       "passed": true,
-      "wallMs": 1.22,
+      "wallMs": 1.24,
       "meleeInterval": 1.05,
       "pulseInterval": 8,
       "pulseRemainingBeforeEight": 0.010000000000000172,
@@ -251,7 +251,7 @@
     {
       "name": "upgrade freezes all simulation state and applies an actual offered card",
       "passed": true,
-      "wallMs": 6.03,
+      "wallMs": 5.79,
       "atTime": 6.883333333333314,
       "choices": [
         {
@@ -281,7 +281,7 @@
     {
       "name": "all six upgrade types apply their advertised stat changes",
       "passed": true,
-      "wallMs": 33.99,
+      "wallMs": 31.4,
       "covered": [
         "flow",
         "renew",
@@ -549,7 +549,7 @@
     {
       "name": "actual contact damage gives a real invulnerability window",
       "passed": true,
-      "wallMs": 0.8,
+      "wallMs": 1.59,
       "initialHit": {
         "time": 3.3166666666666598,
         "hp": 86,
@@ -566,7 +566,7 @@
     {
       "name": "public-API movement, XP collection and skills reach the actual boss ending",
       "passed": true,
-      "wallMs": 149.91,
+      "wallMs": 138.5,
       "runs": [
         {
           "seed": 15734582,
@@ -665,7 +665,7 @@
     {
       "name": "restart clears the run and retains the exact environment",
       "passed": true,
-      "wallMs": 37.16,
+      "wallMs": 39.41,
       "previousPhase": "won",
       "fullStateMatchesFreshSameSeed": true,
       "obstaclesRetained": 20
@@ -1379,6 +1379,6 @@
     }
   ],
   "productionSimulationUnchanged": true,
-  "wallMs": 593.87,
+  "wallMs": 582.85,
   "passed": true
 }
