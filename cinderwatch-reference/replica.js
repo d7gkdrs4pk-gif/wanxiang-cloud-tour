@@ -7,7 +7,7 @@
 (async()=>{
  'use strict';
  const $=id=>document.getElementById(id),game=$('game'),fit=$('fit'),cover=$('loading'),phase=$('phase'),bar=$('progress'),params=new URLSearchParams(location.hash.slice(1));
- const state={version:'Cinderwatch reference 8313bb2 / R1',status:'loading',sourceCommit:'8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5',sourceSHA256:'ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532',sourceVerified:false,seed:4,startFrame:5131,currentFrame:0,step:1/60,virtualViewport:[1920,1080],DPR:1,errors:[],started:performance.now(),renderedFrames:0,simulationSteps:0,interactions:0,screen:null};
+ const state={version:'Cinderwatch reference 8313bb2 / R1 中文',status:'loading',sourceCommit:'8313bb2f3eace68f8eb3c1e3c53ffa7e4663dcd5',sourceSHA256:'ee14f3c172685a4bcf4e90ca83b99080b06c99548c0e198b009cfa0827e4e532',sourceVerified:false,seed:4,startFrame:5131,currentFrame:0,step:1/60,virtualViewport:[1920,1080],DPR:1,errors:[],started:performance.now(),renderedFrames:0,simulationSteps:0,interactions:0,screen:null};
  let cw=null,last=0,acc=0,live=false,raf=0,failed=false,scale=1,ignoreElapsed=false;const frames=[];
  const pause=()=>{live=false;state.paused=true;};const resume=()=>{if(state.status!=='ready')return;live=true;last=performance.now();acc=0;state.paused=false;};
  function layout(){const w=innerWidth,h=innerHeight;scale=Math.min(w/1920,h/1080);fit.style.width=1920*scale+'px';fit.style.height=1080*scale+'px';game.style.transform='scale('+scale+')';state.screen={width:w,height:h,scale,letterboxed:true};}
@@ -22,8 +22,9 @@
   bar.value=.10;phase.textContent='正在生成原作的模型、纹理和光照';
   // Generated engine.html preserves the upstream game code and adds only the
   // DPR1 host prelude. A real same-origin URL preserves original hash parsing.
-  game.src='./engine.html#seed=4&manual=1&noscale=1';
+  game.src='./engine.html?v=zh1#seed=4&manual=1&noscale=1';
   await new Promise((resolve,reject)=>{let attempts=0;const probe=()=>{if(failed)return reject(Error('原作初始化失败'));try{const w=game.contentWindow;if(w&&w.__cw){cw=w.__cw;return resolve();}}catch(e){}if(++attempts>1800)return reject(Error('等待原作初始化超时'));setTimeout(probe,20);};probe();});
+  phase.textContent='正在载入中文字体';const zh=game.contentWindow.__CW_ZH;if(!zh)throw Error('中文界面未载入，请刷新');await zh.fontReady;state.language='zh-CN';
   if(cw.R.dw!==1920||cw.R.dh!==1080)throw Error('原作虚拟画幅错误：'+cw.R.dw+'×'+cw.R.dh);
   state.generatedAt=performance.now();bar.value=.18;phase.textContent='正在还原视频开场战局';
   while(state.currentFrame<state.startFrame&&!failed){const end=Math.min(state.startFrame,state.currentFrame+90);for(;state.currentFrame<end;){state.currentFrame++;cw.tick(1/60,state.currentFrame===state.startFrame);state.simulationSteps++;}bar.value=.18+.81*state.currentFrame/state.startFrame;phase.textContent='正在还原视频开场战局 · '+Math.round(state.currentFrame/state.startFrame*100)+'%';await new Promise(r=>setTimeout(r,0));}

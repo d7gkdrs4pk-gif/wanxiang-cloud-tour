@@ -1,0 +1,12 @@
+{
+  "family": "Noto Sans CJK SC Bold",
+  "version": "2.004",
+  "copyright": "© 2014-2021 Adobe (http://www.adobe.com/).",
+  "license": "SIL Open Font License 1.1",
+  "upstream": "https://github.com/notofonts/noto-cjk",
+  "source_sha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb",
+  "font_number": 2,
+  "subset_cmap_characters": 231,
+  "output_bytes": 55176,
+  "sha256": "8e18d35fec73a9db204282f0566ae2803d775c0abc182827b9e2cebfb9a70a46"
+}

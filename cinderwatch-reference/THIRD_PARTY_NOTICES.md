@@ -63,3 +63,8 @@ THE SOFTWARE.
 ## Distribution scope
 
 The pinned `upstream/` files are byte-identical to the original commit, excluding its `media/` demonstration files. No private reference recording is included or loaded by this entry. The local host adds deterministic starting-state replay, a fixed 16:9 viewport, loading/recovery and input adaptation; it does not claim original authorship of Cinderwatch or its generated assets. File-level checksums are listed in [UPSTREAM.json](UPSTREAM.json).
+
+
+## 中文界面字体
+
+Noto Sans CJK SC Bold 2.004（© 2014–2021 Adobe），按SIL Open Font License 1.1提取所需字形并自托管。完整许可见[fonts/OFL.txt](fonts/OFL.txt)，来源、原字体/子集SHA与大小见[fonts/SOURCE.json](fonts/SOURCE.json)。无运行时字体CDN依赖。

@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head><script id="reference-host-viewport">Object.defineProperty(window,'devicePixelRatio',{get:function(){return 1},configurable:true});window.addEventListener('error',function(e){if(parent.__referenceSourceError)parent.__referenceSourceError(e.message)});</script>
+<style>@font-face{font-family:CinderwatchZh;src:url('fonts/noto-sans-cjk-sc-zh.woff?v=zh1') format('woff');font-weight:700;font-style:normal;font-display:swap}</style>
 
 <meta charset="utf-8">
-<title>Cinderwatch</title>
-<meta name="description" content="Cinderwatch: a self-playing 3D isometric tower defense in a single HTML file.">
+<title>守烽堡 · 中文试玩</title>
+<meta name="description" content="守烽堡：自动迎敌、随时接管的三维俯视塔防。">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <style>
 html,body{margin:0;height:100%;background:#020308;overflow:hidden}
@@ -3615,6 +3616,64 @@ const PX = (() => {
   return { LINE, CAP, measure, text, icon, iconSize, icons: Object.keys(ICONS), palette: PAL };
 })();
 
+
+/* Chinese HUD adapter. Original Cinderwatch scene/game source stays intact. */
+(() => {
+  'use strict';
+  const messages = {"Cinderwatch": "守烽堡", "Cinderwatch: a self-playing 3D isometric tower defense in a single HTML file.": "守烽堡：自动迎敌、随时接管的三维俯视塔防。", "Archer tower": "弓箭塔", "Archers": "弓手", "Bombard": "重炮", "Storm spire": "雷电塔", "Spire": "雷塔", "Guard post": "卫兵岗哨", "Guards": "卫兵", "Fast flaming arrows.": "快速发射火焰箭。", "Can hit flyers.": "可攻击飞行敌人。", "Slow shells that burst.": "慢速爆炸炮弹。", "Ground targets only.": "仅攻击地面目标。", "Chain lightning that slows.": "连锁闪电，减速敌人。", "Footmen who block": "步兵拦截敌人", "and duel on the road.": "在路上近身作战。", "Skeleton": "骷髅兵", "Giant rat": "巨鼠", "Slime": "史莱姆", "Slimelet": "小史莱姆", "Skeleton knight": "骷髅骑士", "Bat": "蝙蝠", "Bone Giant": "骸骨巨人", "Ogre": "食人魔", "The pass holds": "守住关隘", "The beacon is out": "烽火已熄", "The fire has died": "烽火已熄", "Boss defeated": "首领已败", "A new pass awaits": "新关隘待守", "You command": "你来指挥", "AI commander": "自动指挥", "Click a pad to take over": "点建造位接管", "Sound off": "声音关闭", "Sound on": "声音开启", "Click for sound": "点击开启声音", "Click a pad to build · 1-4 pick a tower · Space calls the next wave": "点塔位建塔 · 点塔楼升级或出售", "Choose a tower": "选择防御塔", "Hover or press 1 to 4": "选塔型或按1-4", "to see what each does.": "查看防御塔能力。", "Build here": "在此建造", "Max level": "已满级", "Hold the beacon. The commander plays by itself.": "守住烽火，指挥官自动迎敌。"};
+  const family = '"CinderwatchZh","PingFang SC","Noto Sans CJK SC",sans-serif';
+  const hasHan = /[\u2e80-\u9fff]/;
+  const metrics = document.createElement('canvas').getContext('2d');
+  const originalMeasure = PX.measure, originalText = PX.text;
+  const seen = new Map(), missing = new Set();
+  function translate(value) {
+    const source = String(value);
+    if (Object.prototype.hasOwnProperty.call(messages, source)) return messages[source];
+    let m;
+    if ((m = /^Wave (\d+)(?: · (.+))?$/.exec(source))) return '第' + m[1] + '波' + (m[2] ? ' · ' + translate(m[2]) : '');
+    if ((m = /^Next wave in (\d+)$/.exec(source))) return '下波倒计时 ' + m[1] + '秒';
+    if ((m = /^(\d+) on the road$/.exec(source))) return '剩余敌人 ' + m[1];
+    if ((m = /^AI resumes in (\d+)$/.exec(source))) return m[1] + '秒后自动指挥';
+    if ((m = /^Upgrade (\d+)$/.exec(source))) return '升级 ' + m[1];
+    if ((m = /^Sell \+(\d+)$/.exec(source))) return '出售 +' + m[1];
+    if ((m = /^(\d+) footmen · (\d+) health$/.exec(source))) return '步兵 ' + m[1] + ' · 生命 ' + m[2];
+    if ((m = /^Range ([\d.]+) · Damage ([\d.]+)$/.exec(source))) return '射程 ' + m[1] + ' · 伤害 ' + m[2];
+    if ((m = /^(.+): click a pad$/.exec(source))) return translate(m[1]) + '：点选塔位';
+    if ((m = /^(\d+) fps\s+(\d+)x(\d+)\s+calls (\d+)\s+mons (\d+)$/.exec(source))) return m[1] + '帧/秒 ' + m[2] + '×' + m[3] + ' 绘制 ' + m[4] + ' 敌人 ' + m[5];
+    if (/[A-Za-z]{2}/.test(source)) missing.add(source);
+    return source;
+  }
+  function measure(value) {
+    if (!hasHan.test(value)) return originalMeasure(value);
+    metrics.font = '700 9px ' + family;
+    return metrics.measureText(value).width;
+  }
+  PX.measure = value => measure(translate(value));
+  PX.text = function(ctx, value, x, y, scale, color, options) {
+    const source = String(value), text = translate(source);
+    if (seen.size < 512) seen.set(source, text);
+    if (!hasHan.test(text)) return originalText(ctx, text, x, y, scale, color, options);
+    const s = Math.max(1, Math.round(scale || 1)), o = options || {}, width = measure(text) * s;
+    let left = x;
+    if (o.align === 'c') left -= width / 2;
+    else if (o.align === 'r') left -= width;
+    ctx.save();
+    ctx.font = '700 ' + (9 * s) + 'px ' + family;
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.lineJoin = 'round';
+    ctx.globalAlpha *= o.alpha === undefined ? 1 : o.alpha;
+    const bx = Math.round(left), by = Math.round(y + 7.6 * s);
+    if (o.shadow) { ctx.fillStyle = o.shadow; ctx.fillText(text, bx + s, by + s); }
+    if (o.outline) { ctx.strokeStyle = o.outline; ctx.lineWidth = 2 * s; ctx.strokeText(text, bx, by); }
+    ctx.fillStyle = color || '#ffffff'; ctx.fillText(text, bx, by);
+    ctx.restore();
+    return width;
+  };
+  window.__CW_ZH = {
+    language: 'zh-CN', translate, measure: value => PX.measure(value),
+    fontReady: document.fonts.load('700 9px "CinderwatchZh"'),
+    seen: () => Object.fromEntries(seen), missing: () => Array.from(missing),
+  };
+})();
 
 const UI = (() => {
   const U = {

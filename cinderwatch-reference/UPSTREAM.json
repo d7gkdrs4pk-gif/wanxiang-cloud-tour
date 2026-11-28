@@ -51,18 +51,21 @@
   "derived_engine": {
     "path": "engine.html",
     "source": "upstream/index.html",
-    "changes": "One 261-byte script inserted after the head opening; fixes devicePixelRatio to 1 and forwards window errors to the host. No upstream game bytes removed or changed.",
-    "insertion_offset_bytes": 39,
-    "inserted_bytes": 261,
-    "removed_bytes": 0,
-    "original_game_bytes_preserved": true,
-    "sha256_at_verification": "a3dc7229ea3e447a065191f7d54c46293704c2f2721a6a45cb9c73b97b00618a",
+    "changes": "Adds the DPR/error bridge, an OFL Chinese font face and a Chinese PX text/measure adapter. Localizes document language/title/description. The original 3D scene, game code, and vendored Three.js script are preserved. The upstream snapshot is untouched.",
+    "language": "zh-CN",
+    "original_game_script_bytes_preserved": true,
+    "original_game_script_SHA256": "3c9c87bffcfe9e10b295c891a3b6a27c463b8924357b63b00aaa1c7eb9269a56",
+    "sha256_at_verification": "79030630824cd3787a66769b86286588a2db7d9f816e19ac7842e55d0fd09a26",
+    "font_source": "fonts/SOURCE.json",
+    "font_license": "fonts/OFL.txt",
     "host_files": [
       "index.html",
       "replica.css",
-      "replica.js"
-    ],
-    "host_boundary": "Local loading/recovery, viewport scaling, deterministic starting-state replay and host input adaptation. No claim of original authorship for the upstream scene, art, audio or game."
+      "replica.js",
+      "locale/zh-CN.js",
+      "locale/zh-CN.json",
+      "build-host.py"
+    ]
   },
   "files": [
     {

@@ -1,0 +1,18 @@
+from playwright.sync_api import sync_playwright
+from pathlib import Path
+import json,ast,sys,time
+ROOT=Path('/workspace/wanxiang-cloud-tour/cinderwatch-reference');OUT=Path('/workspace/qa-cinderwatch/zh');OUT.mkdir(exist_ok=True);BASE=sys.argv[1]if len(sys.argv)>1 else 'http://127.0.0.1:3000/cinderwatch-reference/?v=zh1'
+menujs=next(ast.literal_eval(n.value)for n in ast.parse(Path('/workspace/qa-cinderwatch/qa-touch.py').read_text()).body if isinstance(n,ast.Assign)and any(isinstance(t,ast.Name)and t.id=='menujs'for t in n.targets))
+with sync_playwright()as p:
+ b=p.webkit.launch(headless=True);c=b.new_context(viewport={'width':844,'height':390},device_scale_factor=1,is_mobile=True,has_touch=True);q=c.new_page();errors=[];failed=[];q.on('pageerror',lambda e:errors.append(str(e)));q.on('requestfailed',lambda r:failed.append([r.url,r.failure]));t=time.monotonic();q.goto(BASE+'#still=1',wait_until='domcontentloaded',timeout=60000);q.wait_for_function('window.__REFERENCE?.state.status==="ready"||window.__REFERENCE?.state.status==="failed"',timeout=120000);s=q.evaluate('__REFERENCE.snapshot()');print('ready',s['state']['status'],flush=True);assert s['state']['status']=='ready',s;child=q.frames[1];assert child.evaluate('document.fonts.check(\'700 9px "CinderwatchZh"\')');q.screenshot(path=str(OUT/'first.png'));child.evaluate("window.__QA_PX={LINE:9,measure:__CW_ZH.measure};window.__QA_TOWER=Object.fromEntries(__cw.G.towers.map(t=>[t.kind,t.def]));window.__QA_KINDS=['archer','bombard','spire','guard']")
+ def pause():q.evaluate('__REFERENCE.pause()')
+ def tapworld(i):
+  pt=q.evaluate('(i)=>{const c=document.getElementById("game").contentWindow.__cw,p=c.G.B.pads[i];return __REFERENCE.project(p.x,p.y+(p.tower?1:.1),p.z)}',i);q.touchscreen.tap(*pt);q.wait_for_timeout(450);pause()
+ def tapbutton(name):
+  m=child.evaluate(menujs);r=next(x for x in m['buttons']if x['id']==name);pt=q.evaluate('(p)=>{const r=document.getElementById("fit").getBoundingClientRect(),s=__REFERENCE.state.screen.scale;return[r.left+p.x*s,r.top+p.y*s]}',r);q.touchscreen.tap(*pt);q.wait_for_timeout(450);pause()
+ tapworld(1);q.screenshot(path=str(OUT/'tower-menu.png'));tapbutton('sell');assert child.evaluate('__cw.G.towers.length')==5;tapworld(1);q.screenshot(path=str(OUT/'build-menu.png'));tapbutton('barcher');assert child.evaluate('__cw.G.B.pads[1].tower.kind')=='archer';assert child.evaluate('__cw.G.towers.length')==6
+ # Inspect every original tower menu, and draw alternate HUD states without
+ # advancing/replacing gameplay; this catches untranslated conditional labels.
+ for i in [3,4,5]:tapworld(i)
+ child.evaluate("()=>{const c=__cw,dt=c.R.frameDt,phase=c.G.phase;c.R.frameDt=0;for(const p of ['clear','defeat','rise']){c.G.phase=p;c.UI.draw()}c.G.phase=phase;c.UI.menu=null;c.UI.banner('Wave 5 · Bone Giant',4,true);c.UI.msg.t=1;c.UI.draw();c.R.frameDt=dt}")
+ q.screenshot(path=str(OUT/'boss-banner.png'));audit=child.evaluate('({language:__CW_ZH.language,seen:__CW_ZH.seen(),missing:__CW_ZH.missing()})');assert not audit['missing'],audit['missing'];end=q.evaluate('__REFERENCE.snapshot()');report={'url':BASE,'environment':'Cloud Linux WebKit26.5/WPE, 844x390 native touch emulation; not physical iPhone','startupSeconds':s['state']['startupMs']/1000,'elapsedTestSeconds':time.monotonic()-t,'sourceStart':s,'end':end,'fontReady':True,'nativeSellAndBuildPassed':True,'audit':audit,'errors':errors,'failedRequests':failed};(OUT/'test.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print('PASS',len(audit['seen']),'rendered translations',errors,failed,flush=True);b.close()
